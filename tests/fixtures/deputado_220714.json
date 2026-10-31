@@ -1,0 +1,51 @@
+{
+    "dados": {
+        "id": 220714,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/220714",
+        "nomeCivil": "ADAIL JOSÉ FIGUEIREDO PINHEIRO",
+        "ultimoStatus": {
+            "id": 220714,
+            "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/220714",
+            "nome": "Adail Filho",
+            "siglaPartido": "MDB",
+            "uriPartido": null,
+            "siglaUf": "AM",
+            "idLegislatura": 57,
+            "urlFoto": "https://www.camara.leg.br/internet/deputado/bandep/220714.jpg",
+            "email": null,
+            "data": "2023-02-01",
+            "nomeEleitoral": "Adail Filho",
+            "gabinete": {
+                "nome": "531",
+                "predio": "4",
+                "sala": "531",
+                "andar": "5",
+                "telefone": "3215-5531",
+                "email": "dep.adailfilho@camara.leg.br"
+            },
+            "situacao": "Exercício",
+            "condicaoEleitoral": "Titular",
+            "descricaoStatus": null
+        },
+        "cpf": "77267796249",
+        "sexo": "M",
+        "urlWebsite": null,
+        "redeSocial": [
+            "https://twitter.com/adailfilhoam?s=21&t=O_eoTX0q1QfS6vmySI7biQ",
+            "https://www.facebook.com/AdailFilhoAM",
+            "https://www.instagram.com/adailfilho/",
+            "https://www.youtube.com/@AdailFilho"
+        ],
+        "dataNascimento": "1992-02-16",
+        "dataFalecimento": null,
+        "ufNascimento": "AM",
+        "municipioNascimento": "Manaus",
+        "escolaridade": "Superior Incompleto"
+    },
+    "links": [
+        {
+            "rel": "self",
+            "href": "https://dadosabertos.camara.leg.br/api/v2/deputados/220714"
+        }
+    ]
+}

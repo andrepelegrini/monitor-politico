@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "monitor-politico"
+version = "0.1.0"
+description = "Painel público de acompanhamento de parlamentares a partir de dados abertos oficiais."
+requires-python = ">=3.9"
+dependencies = ["httpx>=0.27", "jinja2>=3.1"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+monitor_politico = ["templates/*.html", "static/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

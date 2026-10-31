@@ -1,0 +1,63 @@
+:root {
+  --fundo: #f7f7f5;
+  --superficie: #ffffff;
+  --texto: #1c1c1a;
+  --suave: #5f5f5a;
+  --borda: #deded8;
+  --destaque: #1f5fbf;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fundo: #141413;
+    --superficie: #1f1f1d;
+    --texto: #ececea;
+    --suave: #a3a39d;
+    --borda: #33332f;
+    --destaque: #7aa7ec;
+  }
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--fundo);
+  color: var(--texto);
+  font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+a { color: var(--destaque); }
+main, .topo, .rodape { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+.topo { padding-top: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--borda); display: flex; flex-wrap: wrap; gap: 4px 16px; align-items: baseline; }
+.marca { font-weight: 700; font-size: 1.15rem; color: var(--texto); text-decoration: none; }
+.sub { color: var(--suave); font-size: .9rem; }
+h1 { font-size: 1.6rem; margin: 24px 0 12px; }
+h2 { font-size: 1.1rem; margin: 24px 0 8px; }
+
+.filtros { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 8px; }
+.filtros label { display: flex; flex-direction: column; font-size: .85rem; color: var(--suave); gap: 4px; }
+.filtros input, .filtros select {
+  font: inherit; color: var(--texto); background: var(--superficie);
+  border: 1px solid var(--borda); border-radius: 6px; padding: 6px 10px; min-width: 140px;
+}
+.filtros input { min-width: 240px; }
+.contagem, .vazio { color: var(--suave); font-size: .9rem; }
+
+.grade { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+.grade li[hidden] { display: none; }
+.grade a {
+  display: grid; grid-template-columns: 48px 1fr; grid-template-rows: auto auto; column-gap: 12px;
+  align-items: center; padding: 10px; background: var(--superficie); border: 1px solid var(--borda);
+  border-radius: 8px; text-decoration: none; color: var(--texto);
+}
+.grade a:hover, .grade a:focus-visible { border-color: var(--destaque); }
+.grade img { grid-row: span 2; width: 48px; height: 64px; object-fit: cover; border-radius: 4px; background: var(--borda); }
+.grade .nome { font-weight: 600; }
+.grade .meta { color: var(--suave); font-size: .85rem; }
+
+.perfil { display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start; }
+.perfil img { border-radius: 8px; background: var(--borda); max-width: 100%; height: auto; }
+.perfil h1 { margin-top: 0; }
+dl { display: grid; grid-template-columns: max-content 1fr; gap: 4px 16px; margin: 0; }
+dt { color: var(--suave); }
+dd { margin: 0; overflow-wrap: anywhere; }
+
+.rodape { margin-top: 40px; padding-top: 12px; padding-bottom: 24px; border-top: 1px solid var(--borda); color: var(--suave); font-size: .85rem; }

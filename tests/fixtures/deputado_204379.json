@@ -1,0 +1,50 @@
+{
+    "dados": {
+        "id": 204379,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/204379",
+        "nomeCivil": "ACÁCIO DA SILVA FAVACHO NETO",
+        "ultimoStatus": {
+            "id": 204379,
+            "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/204379",
+            "nome": "Acácio Favacho",
+            "siglaPartido": "MDB",
+            "uriPartido": null,
+            "siglaUf": "AP",
+            "idLegislatura": 57,
+            "urlFoto": "https://www.camara.leg.br/internet/deputado/bandep/204379.jpg",
+            "email": null,
+            "data": "2023-02-01",
+            "nomeEleitoral": "Acácio Favacho",
+            "gabinete": {
+                "nome": "414",
+                "predio": "4",
+                "sala": "414",
+                "andar": "4",
+                "telefone": "3215-5414",
+                "email": "dep.acaciofavacho@camara.leg.br"
+            },
+            "situacao": "Exercício",
+            "condicaoEleitoral": "Titular",
+            "descricaoStatus": null
+        },
+        "cpf": "74287028287",
+        "sexo": "M",
+        "urlWebsite": null,
+        "redeSocial": [
+            "https://twitter.com/acaciofavacho",
+            "https://www.facebook.com/deputadofederalacaciofavacho",
+            "https://youtube.com/channel/UCWNbptIjAriL2pt8H3W6CGw"
+        ],
+        "dataNascimento": "1983-09-28",
+        "dataFalecimento": null,
+        "ufNascimento": "AP",
+        "municipioNascimento": "Macapá",
+        "escolaridade": "Superior"
+    },
+    "links": [
+        {
+            "rel": "self",
+            "href": "https://dadosabertos.camara.leg.br/api/v2/deputados/204379"
+        }
+    ]
+}

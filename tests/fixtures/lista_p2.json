@@ -1,0 +1,44 @@
+{
+  "dados": [
+    {
+      "id": 221328,
+      "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/221328",
+      "nome": "Adilson Barroso",
+      "siglaPartido": "PL",
+      "uriPartido": "https://dadosabertos.camara.leg.br/api/v2/partidos/37906",
+      "siglaUf": "SP",
+      "idLegislatura": 57,
+      "urlFoto": "https://www.camara.leg.br/internet/deputado/bandep/221328.jpg",
+      "email": "dep.adilsonbarroso@camara.leg.br"
+    },
+    {
+      "id": 204560,
+      "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/204560",
+      "nome": "Adolfo Viana",
+      "siglaPartido": "PSDB",
+      "uriPartido": "https://dadosabertos.camara.leg.br/api/v2/partidos/36835",
+      "siglaUf": "BA",
+      "idLegislatura": 57,
+      "urlFoto": "https://www.camara.leg.br/internet/deputado/bandep/204560.jpg",
+      "email": "dep.adolfoviana@camara.leg.br"
+    }
+  ],
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://dadosabertos.camara.leg.br/api/v2/deputados?itens=2&pagina=2"
+    },
+    {
+      "rel": "first",
+      "href": "https://dadosabertos.camara.leg.br/api/v2/deputados?pagina=1&itens=2"
+    },
+    {
+      "rel": "last",
+      "href": "https://dadosabertos.camara.leg.br/api/v2/deputados?pagina=257&itens=2"
+    },
+    {
+      "rel": "previous",
+      "href": "https://dadosabertos.camara.leg.br/api/v2/deputados?pagina=1&itens=2"
+    }
+  ]
+}

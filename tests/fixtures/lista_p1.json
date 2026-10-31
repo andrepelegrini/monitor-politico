@@ -1,0 +1,44 @@
+{
+  "dados": [
+    {
+      "id": 204379,
+      "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/204379",
+      "nome": "Acácio Favacho",
+      "siglaPartido": "MDB",
+      "uriPartido": "https://dadosabertos.camara.leg.br/api/v2/partidos/36899",
+      "siglaUf": "AP",
+      "idLegislatura": 57,
+      "urlFoto": "https://www.camara.leg.br/internet/deputado/bandep/204379.jpg",
+      "email": "dep.acaciofavacho@camara.leg.br"
+    },
+    {
+      "id": 220714,
+      "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/220714",
+      "nome": "Adail Filho",
+      "siglaPartido": "MDB",
+      "uriPartido": "https://dadosabertos.camara.leg.br/api/v2/partidos/36899",
+      "siglaUf": "AM",
+      "idLegislatura": 57,
+      "urlFoto": "https://www.camara.leg.br/internet/deputado/bandep/220714.jpg",
+      "email": "dep.adailfilho@camara.leg.br"
+    }
+  ],
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://dadosabertos.camara.leg.br/api/v2/deputados?itens=2&pagina=1"
+    },
+    {
+      "rel": "next",
+      "href": "https://dadosabertos.camara.leg.br/api/v2/deputados?pagina=2&itens=2"
+    },
+    {
+      "rel": "first",
+      "href": "https://dadosabertos.camara.leg.br/api/v2/deputados?pagina=1&itens=2"
+    },
+    {
+      "rel": "last",
+      "href": "https://dadosabertos.camara.leg.br/api/v2/deputados?pagina=257&itens=2"
+    }
+  ]
+}

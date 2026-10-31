@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block titulo %}Monitor Político{% endblock %}</title>
+  <link rel="stylesheet" href="{{ raiz }}/static/estilo.css">
+</head>
+<body>
+  <header class="topo">
+    <a class="marca" href="{{ raiz }}/index.html">Monitor Político</a>
+    <span class="sub">Deputados federais em exercício · dados oficiais da Câmara</span>
+  </header>
+  <main>
+    {% block conteudo %}{% endblock %}
+  </main>
+  <footer class="rodape">
+    <p>Dados atualizados em {{ atualizado_em }}.</p>
+    <p>Fonte: <a href="https://dadosabertos.camara.leg.br/">Dados Abertos da Câmara dos Deputados</a>. Este site reproduz informações públicas oficiais, sem avaliação ou opinião.</p>
+  </footer>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,46 @@
+{
+    "dados": {
+        "id": 221328,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/221328",
+        "nomeCivil": "ADILSON BARROSO OLIVEIRA",
+        "ultimoStatus": {
+            "id": 221328,
+            "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/221328",
+            "nome": "Adilson Barroso",
+            "siglaPartido": "PL",
+            "uriPartido": null,
+            "siglaUf": "SP",
+            "idLegislatura": 57,
+            "urlFoto": "https://www.camara.leg.br/internet/deputado/bandep/221328.jpg",
+            "email": null,
+            "data": "2025-12-14",
+            "nomeEleitoral": "Adilson Barroso",
+            "gabinete": {
+                "nome": "603",
+                "predio": "4",
+                "sala": "603",
+                "andar": "6",
+                "telefone": "3215-5603",
+                "email": "dep.adilsonbarroso@camara.leg.br"
+            },
+            "situacao": "Exercício",
+            "condicaoEleitoral": "Efetivado",
+            "descricaoStatus": null
+        },
+        "cpf": "05585378805",
+        "sexo": "M",
+        "urlWebsite": null,
+        "redeSocial": [],
+        "dataNascimento": "1964-06-14",
+        "dataFalecimento": null,
+        "ufNascimento": "MG",
+        "municipioNascimento": "Minas Novas",
+        "escolaridade": "Superior"
+    },
+    "links": [
+        {
+            "rel": "self",
+            "href": "https://dadosabertos.camara.leg.br/api/v2/deputados/221328"
+        }
+    ]
+}

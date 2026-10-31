@@ -1,0 +1,46 @@
+{
+    "dados": {
+        "id": 204560,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/204560",
+        "nomeCivil": "ADOLFO VIANA DE CASTRO NETO",
+        "ultimoStatus": {
+            "id": 204560,
+            "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/204560",
+            "nome": "Adolfo Viana",
+            "siglaPartido": "PSDB",
+            "uriPartido": null,
+            "siglaUf": "BA",
+            "idLegislatura": 57,
+            "urlFoto": "https://www.camara.leg.br/internet/deputado/bandep/204560.jpg",
+            "email": null,
+            "data": "2023-02-01",
+            "nomeEleitoral": "Adolfo Viana",
+            "gabinete": {
+                "nome": "911",
+                "predio": "4",
+                "sala": "911",
+                "andar": "9",
+                "telefone": "3215-5911",
+                "email": "dep.adolfoviana@camara.leg.br"
+            },
+            "situacao": "Exercício",
+            "condicaoEleitoral": "Titular",
+            "descricaoStatus": null
+        },
+        "cpf": "80123848504",
+        "sexo": "M",
+        "urlWebsite": null,
+        "redeSocial": [],
+        "dataNascimento": "1981-02-02",
+        "dataFalecimento": null,
+        "ufNascimento": "BA",
+        "municipioNascimento": "Salvador",
+        "escolaridade": "Superior"
+    },
+    "links": [
+        {
+            "rel": "self",
+            "href": "https://dadosabertos.camara.leg.br/api/v2/deputados/204560"
+        }
+    ]
+}

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block titulo %}{{ d.nome }} ({{ d.partido }}-{{ d.uf }}) · Monitor Político{% endblock %}
+{% block conteudo %}
+<p><a href="{{ raiz }}/index.html">← Todos os deputados</a></p>
+
+<article class="perfil">
+  {% if d.url_foto %}<img src="{{ d.url_foto }}" alt="Foto oficial de {{ d.nome }}" width="150" height="200">{% endif %}
+  <div>
+    <h1>{{ d.nome }}</h1>
+    <dl>
+      <dt>Partido</dt><dd>{{ d.partido }}</dd>
+      <dt>UF</dt><dd>{{ d.uf }}</dd>
+      {% if d.situacao %}<dt>Situação</dt><dd>{{ d.situacao }}</dd>{% endif %}
+      {% if d.condicao_eleitoral %}<dt>Condição</dt><dd>{{ d.condicao_eleitoral }}</dd>{% endif %}
+    </dl>
+
+    <h2>Contato oficial do gabinete</h2>
+    <dl>
+      {% if d.gabinete.email %}<dt>E-mail</dt><dd><a href="mailto:{{ d.gabinete.email }}">{{ d.gabinete.email }}</a></dd>{% endif %}
+      {% if d.gabinete.telefone %}<dt>Telefone</dt><dd>(61) {{ d.gabinete.telefone }}</dd>{% endif %}
+      {% if d.gabinete.sala %}<dt>Gabinete</dt><dd>Sala {{ d.gabinete.sala }}{% if d.gabinete.andar %}, {{ d.gabinete.andar }}º andar{% endif %}{% if d.gabinete.predio %}, Anexo {{ d.gabinete.predio }}{% endif %}</dd>{% endif %}
+    </dl>
+
+    <h2>Fonte</h2>
+    <ul>
+      <li><a href="{{ d.url_site }}">Página oficial na Câmara</a></li>
+      <li><a href="{{ d.uri_api }}">Registro na API de Dados Abertos</a></li>
+    </ul>
+  </div>
+</article>
+{% endblock %}
