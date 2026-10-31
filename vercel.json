@@ -1,0 +1,7 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "python3 -m pip install .",
+  "buildCommand": "python3 -m monitor_politico.camara && python3 -m monitor_politico.build",
+  "outputDirectory": "site"
+}
