@@ -18,7 +18,7 @@ from monitor_politico.models import Deputado
 
 API_BASE = "https://dadosabertos.camara.leg.br/api/v2"
 SAIDA_PADRAO = Path("data/deputados.json")
-TENTATIVAS = 4
+TENTATIVAS = 6  # espera até 1+2+4+8+16 = 31s; a API dá 504 esporádicos
 ATRASO_ENTRE_CHAMADAS = 0.1  # segundos; cortesia com a API pública
 
 
