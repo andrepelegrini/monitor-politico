@@ -1,4 +1,9 @@
-name: Atualizar dados e publicar site
+name: Testar e atualizar dados
+
+# O site é publicado pela Vercel a cada push na main. Este workflow só testa
+# e, uma vez por dia, coleta os dados e faz commit do JSON, o que dispara o
+# deploy. Se a API da Câmara falhar, nada é commitado e o site segue no ar
+# com os dados anteriores.
 
 on:
   schedule:
@@ -6,18 +11,17 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
+  pull_request:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
-  group: pages
+  group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
-  build:
+  testar:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -26,21 +30,25 @@ jobs:
           python-version: "3.12"
       - run: pip install -e ".[dev]"
       - run: pytest
+
+  coletar:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    needs: testar
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e .
       - name: Coletar dados da Câmara
         run: python -m monitor_politico.camara
-      - name: Gerar site
-        run: python -m monitor_politico.build
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: site
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
-    steps:
-      - id: deploy
-        uses: actions/deploy-pages@v4
+      - name: Commit dos dados
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/deputados.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Atualiza dados da Câmara ($(date -u +%F))"
+          git pull --rebase
+          git push

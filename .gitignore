@@ -3,6 +3,5 @@ __pycache__/
 *.egg-info/
 .pytest_cache/
 
-# Gerados no CI
-data/
+# Gerado no build (Vercel)
 site/
