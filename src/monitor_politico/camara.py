@@ -20,6 +20,11 @@ API_BASE = "https://dadosabertos.camara.leg.br/api/v2"
 SAIDA_PADRAO = Path("data/deputados.json")
 TENTATIVAS = 6  # espera até 1+2+4+8+16 = 31s; a API dá 504 esporádicos
 ATRASO_ENTRE_CHAMADAS = 0.1  # segundos; cortesia com a API pública
+LIMITE_FALHAS = 0.1  # fração de perfis que pode falhar antes de abortar a coleta
+
+
+class ColetaIncompleta(RuntimeError):
+    pass
 
 
 class ClienteCamara:
@@ -64,16 +69,35 @@ class ClienteCamara:
     def deputado(self, id_: int) -> Deputado:
         return Deputado.da_api(self._get(f"/deputados/{id_}")["dados"])
 
-    def deputados(self) -> list[Deputado]:
-        resultado = []
-        for id_ in self.ids_em_exercicio():
-            resultado.append(self.deputado(id_))
+    def deputados(self, anteriores: Optional[dict[int, Deputado]] = None) -> list[Deputado]:
+        """Se um perfil falhar mesmo após as tentativas, reaproveita o da coleta
+        anterior (ou o omite, se não houver). Aborta se falharem demais."""
+        anteriores = anteriores or {}
+        ids = list(self.ids_em_exercicio())
+        resultado, falhas = [], []
+        for id_ in ids:
+            try:
+                resultado.append(self.deputado(id_))
+            except httpx.HTTPError as erro:
+                falhas.append(id_)
+                print(f"aviso: deputado {id_} falhou ({erro})", file=sys.stderr)
+                if id_ in anteriores:
+                    resultado.append(anteriores[id_])
             self.dormir(ATRASO_ENTRE_CHAMADAS)
+        if len(falhas) > LIMITE_FALHAS * len(ids):
+            raise ColetaIncompleta(f"{len(falhas)} de {len(ids)} perfis falharam")
         return resultado
 
 
+def ler_anteriores(caminho: Path) -> dict[int, Deputado]:
+    if not caminho.exists():
+        return {}
+    doc = json.loads(caminho.read_text(encoding="utf-8"))
+    return {d["id"]: Deputado.de_dict(d) for d in doc["deputados"]}
+
+
 def coletar(cliente: ClienteCamara, saida: Path = SAIDA_PADRAO) -> dict[str, Any]:
-    deputados = cliente.deputados()
+    deputados = cliente.deputados(ler_anteriores(saida))
     doc = {
         "coletado_em": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "fonte": API_BASE,

@@ -2,9 +2,10 @@ import json
 from dataclasses import fields
 
 import httpx
+import pytest
 
 from conftest import carregar, cliente_falso, responder_com_fixtures
-from monitor_politico.camara import coletar
+from monitor_politico.camara import ColetaIncompleta, coletar
 from monitor_politico.models import Deputado, Gabinete
 
 CAMPOS_PROIBIDOS = {"cpf", "dataNascimento", "nomeCivil", "redeSocial", "sexo", "municipioNascimento", "escolaridade"}
@@ -62,3 +63,38 @@ def test_retry_em_erro_do_servidor():
 def test_ida_e_volta_dict():
     d = Deputado.da_api(carregar("deputado_204379.json")["dados"])
     assert Deputado.de_dict(d.para_dict()) == d
+
+
+def _falha_perfis(*ids):
+    def handler(request: httpx.Request) -> httpx.Response:
+        if any(request.url.path.endswith(f"/{i}") for i in ids):
+            return httpx.Response(504)
+        return responder_com_fixtures(request)
+
+    return handler
+
+
+def test_perfil_que_falha_reaproveita_coleta_anterior(tmp_path, monkeypatch):
+    monkeypatch.setattr("monitor_politico.camara.LIMITE_FALHAS", 0.5)
+    saida = tmp_path / "d.json"
+    coletar(cliente_falso(), saida)
+
+    doc = coletar(cliente_falso(_falha_perfis(220714)), saida)
+    assert [d["id"] for d in doc["deputados"]] == [204379, 220714, 221328, 204560]
+    assert doc["deputados"][1]["nome"] == "Adail Filho"
+
+
+def test_perfil_sem_coleta_anterior_e_omitido(tmp_path, monkeypatch):
+    monkeypatch.setattr("monitor_politico.camara.LIMITE_FALHAS", 0.5)
+    doc = coletar(cliente_falso(_falha_perfis(220714)), tmp_path / "d.json")
+    assert 220714 not in [d["id"] for d in doc["deputados"]]
+
+
+def test_muitas_falhas_abortam_sem_sobrescrever(tmp_path):
+    saida = tmp_path / "d.json"
+    coletar(cliente_falso(), saida)
+    antes = saida.read_text(encoding="utf-8")
+
+    with pytest.raises(ColetaIncompleta):
+        coletar(cliente_falso(_falha_perfis(220714)), saida)
+    assert saida.read_text(encoding="utf-8") == antes
