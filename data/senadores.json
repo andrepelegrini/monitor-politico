@@ -1,0 +1,1370 @@
+{
+  "coletado_em": "2026-11-02T14:54:09+00:00",
+  "fonte": "https://legis.senado.leg.br/dadosabertos",
+  "senadores": [
+    {
+      "id": 5672,
+      "nome": "Alan Rick",
+      "partido": "REPUBLICANOS",
+      "uf": "AC",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5672.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Aliança",
+      "fim_mandato": "2031-01-31",
+      "email": "sen.alanrick@senado.leg.br",
+      "telefones": [
+        "3303-6333"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/5672",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5672"
+    },
+    {
+      "id": 5982,
+      "nome": "Alessandro Vieira",
+      "partido": "MDB",
+      "uf": "SE",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5982.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Democracia",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.alessandrovieira@senado.leg.br",
+      "telefones": [
+        "3303-9011",
+        "3303-9014"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/5982",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5982"
+    },
+    {
+      "id": 6358,
+      "nome": "Ana Paula Lobato",
+      "partido": "PSB",
+      "uf": "MA",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador6358.jpg",
+      "condicao": "1º Suplente",
+      "bloco": "Bloco Parlamentar da Resistência Democrática",
+      "fim_mandato": "2031-01-31",
+      "email": "sen.anapaulalobato@senado.leg.br",
+      "telefones": [
+        "3303-2967"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/6358",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/6358"
+    },
+    {
+      "id": 5967,
+      "nome": "Angelo Coronel",
+      "partido": "REPUBLICANOS",
+      "uf": "BA",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5967.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Aliança",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.angelocoronel@senado.leg.br",
+      "telefones": [
+        "3303-6103",
+        "3303-6105"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/5967",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5967"
+    },
+    {
+      "id": 6009,
+      "nome": "Astronauta Marcos Pontes",
+      "partido": "PL",
+      "uf": "SP",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador6009.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Vanguarda",
+      "fim_mandato": "2031-01-31",
+      "email": "sen.astronautamarcospontes@senado.leg.br",
+      "telefones": [
+        "3303-1177",
+        "3303-1797"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/6009",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/6009"
+    },
+    {
+      "id": 4639,
+      "nome": "Beto Faro",
+      "partido": "PT",
+      "uf": "PA",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador4639.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Pelo Brasil",
+      "fim_mandato": "2031-01-31",
+      "email": "sen.betofaro@senado.leg.br",
+      "telefones": [
+        "3303-5220"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/4639",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/4639"
+    },
+    {
+      "id": 6336,
+      "nome": "Camilo Santana",
+      "partido": "PT",
+      "uf": "CE",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador6336.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Pelo Brasil",
+      "fim_mandato": "2031-01-31",
+      "email": "sen.camilosantana@senado.leg.br",
+      "telefones": [
+        "3303-5940"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/6336",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/6336"
+    },
+    {
+      "id": 6295,
+      "nome": "Carlos Fávaro",
+      "partido": "PSD",
+      "uf": "MT",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador6295.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar da Resistência Democrática",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.carlosfavaro@senado.leg.br",
+      "telefones": [
+        "3303-6408"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/6295",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/6295"
+    },
+    {
+      "id": 5936,
+      "nome": "Carlos Portinho",
+      "partido": "PL",
+      "uf": "RJ",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5936.jpg",
+      "condicao": "1º Suplente",
+      "bloco": "Bloco Parlamentar Vanguarda",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.carlosportinho@senado.leg.br",
+      "telefones": [
+        "3303-6640",
+        "3303-6613"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/5936",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5936"
+    },
+    {
+      "id": 5990,
+      "nome": "Carlos Viana",
+      "partido": "PSD",
+      "uf": "MG",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5990.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar da Resistência Democrática",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.carlosviana@senado.leg.br",
+      "telefones": [
+        "3303-3100",
+        "3303-3116"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/5990",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5990"
+    },
+    {
+      "id": 470,
+      "nome": "Chico Rodrigues",
+      "partido": "PSB",
+      "uf": "RR",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador470.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar da Resistência Democrática",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.chicorodrigues@senado.leg.br",
+      "telefones": [
+        "3303-2281"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/470",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/470"
+    },
+    {
+      "id": 5973,
+      "nome": "Cid Gomes",
+      "partido": "PSB",
+      "uf": "CE",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5973.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar da Resistência Democrática",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.cidgomes@senado.leg.br",
+      "telefones": [
+        "3303-6460",
+        "3303-6399"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/5973",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5973"
+    },
+    {
+      "id": 739,
+      "nome": "Ciro Nogueira",
+      "partido": "PP",
+      "uf": "PI",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador739.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Aliança",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.cironogueira@senado.leg.br",
+      "telefones": [
+        "3303-6187",
+        "3303-6188",
+        "3303-6183"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/739",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/739"
+    },
+    {
+      "id": 6337,
+      "nome": "Cleitinho",
+      "partido": "REPUBLICANOS",
+      "uf": "MG",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador6337.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Aliança",
+      "fim_mandato": "2031-01-31",
+      "email": "sen.cleitinho@senado.leg.br",
+      "telefones": [
+        "3303-3811"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/6337",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/6337"
+    },
+    {
+      "id": 475,
+      "nome": "Confúcio Moura",
+      "partido": "MDB",
+      "uf": "RO",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador475.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Democracia",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.confuciomoura@senado.leg.br",
+      "telefones": [
+        "3303-2470",
+        "3303-2163"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/475",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/475"
+    },
+    {
+      "id": 6335,
+      "nome": "Damares Alves",
+      "partido": "REPUBLICANOS",
+      "uf": "DF",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador6335.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Aliança",
+      "fim_mandato": "2031-01-31",
+      "email": "sen.damaresalves@senado.leg.br",
+      "telefones": [
+        "3303-3265"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/6335",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/6335"
+    },
+    {
+      "id": 5998,
+      "nome": "Daniella Ribeiro",
+      "partido": "PP",
+      "uf": "PB",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5998.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Aliança",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.daniellaribeiro@senado.leg.br",
+      "telefones": [
+        "3303-6788",
+        "3303-6790"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/5998",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5998"
+    },
+    {
+      "id": 3830,
+      "nome": "Davi Alcolumbre",
+      "partido": "UNIÃO",
+      "uf": "AP",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador3830.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Democracia",
+      "fim_mandato": "2031-01-31",
+      "email": "sen.davialcolumbre@senado.leg.br",
+      "telefones": [
+        "3303-6717",
+        "3303-6720"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/3830",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/3830"
+    },
+    {
+      "id": 5793,
+      "nome": "Dr. Hiran",
+      "partido": "PP",
+      "uf": "RR",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5793.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Aliança",
+      "fim_mandato": "2031-01-31",
+      "email": "sen.drhiran@senado.leg.br",
+      "telefones": [
+        "3303-6251"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/5793",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5793"
+    },
+    {
+      "id": 5906,
+      "nome": "Dra. Eudócia",
+      "partido": "PSDB",
+      "uf": "AL",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5906.jpg",
+      "condicao": "1º Suplente",
+      "bloco": "Bloco Parlamentar Democracia",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.draeudocia@senado.leg.br",
+      "telefones": [
+        "3303-6083"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/5906",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5906"
+    },
+    {
+      "id": 4994,
+      "nome": "Eduardo Braga",
+      "partido": "MDB",
+      "uf": "AM",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador4994.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Democracia",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.eduardobraga@senado.leg.br",
+      "telefones": [
+        "3303-6230"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/4994",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/4994"
+    },
+    {
+      "id": 3777,
+      "nome": "Eduardo Gomes",
+      "partido": "PL",
+      "uf": "TO",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador3777.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Vanguarda",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.eduardogomes@senado.leg.br",
+      "telefones": [
+        "3303-6349",
+        "3303-6352"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/3777",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/3777"
+    },
+    {
+      "id": 4642,
+      "nome": "Efraim Filho",
+      "partido": "PL",
+      "uf": "PB",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador4642.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Vanguarda",
+      "fim_mandato": "2031-01-31",
+      "email": "sen.efraimfilho@senado.leg.br",
+      "telefones": [
+        "3303-5934",
+        "3303-5931"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/4642",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/4642"
+    },
+    {
+      "id": 5718,
+      "nome": "Eliziane Gama",
+      "partido": "PSD",
+      "uf": "MA",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5718.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar da Resistência Democrática",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.elizianegama@senado.leg.br",
+      "telefones": [
+        "3303-6741"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/5718",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5718"
+    },
+    {
+      "id": 22,
+      "nome": "Esperidião Amin",
+      "partido": "PP",
+      "uf": "SC",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador22.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Aliança",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.esperidiaoamin@senado.leg.br",
+      "telefones": [
+        "3303-6446",
+        "3303-6447",
+        "3303-6454"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/22",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/22"
+    },
+    {
+      "id": 5953,
+      "nome": "Fabiano Contarato",
+      "partido": "PT",
+      "uf": "ES",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5953.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Pelo Brasil",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.fabianocontarato@senado.leg.br",
+      "telefones": [
+        "3303-9054",
+        "3303-6743"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/5953",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5953"
+    },
+    {
+      "id": 5917,
+      "nome": "Fernando Dueire",
+      "partido": "PSD",
+      "uf": "PE",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5917.jpg",
+      "condicao": "1º Suplente",
+      "bloco": "Bloco Parlamentar da Resistência Democrática",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.fernandodueire@senado.leg.br",
+      "telefones": [
+        "3303-3522"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/5917",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5917"
+    },
+    {
+      "id": 345,
+      "nome": "Flávio Arns",
+      "partido": "PSB",
+      "uf": "PR",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador345.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar da Resistência Democrática",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.flavioarns@senado.leg.br",
+      "telefones": [
+        "3303-6301"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/345",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/345"
+    },
+    {
+      "id": 5894,
+      "nome": "Flávio Bolsonaro",
+      "partido": "PL",
+      "uf": "RJ",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5894.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Vanguarda",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.flaviobolsonaro@senado.leg.br",
+      "telefones": [
+        "3303-1717",
+        "3303-1718"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/5894",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5894"
+    },
+    {
+      "id": 6008,
+      "nome": "Giordano",
+      "partido": "PODE",
+      "uf": "SP",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador6008.jpg",
+      "condicao": "1º Suplente",
+      "bloco": "Bloco Parlamentar Democracia",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.giordano@senado.leg.br",
+      "telefones": [
+        "3303-4177"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/6008",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/6008"
+    },
+    {
+      "id": 6341,
+      "nome": "Hamilton Mourão",
+      "partido": "REPUBLICANOS",
+      "uf": "RS",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador6341.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Aliança",
+      "fim_mandato": "2031-01-31",
+      "email": "sen.hamiltonmourao@senado.leg.br",
+      "telefones": [
+        "3303-1837"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/6341",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/6341"
+    },
+    {
+      "id": 5008,
+      "nome": "Humberto Costa",
+      "partido": "PT",
+      "uf": "PE",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5008.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Pelo Brasil",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.humbertocosta@senado.leg.br",
+      "telefones": [
+        "3303-6285",
+        "3303-6286"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/5008",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5008"
+    },
+    {
+      "id": 5385,
+      "nome": "Irajá",
+      "partido": "PSD",
+      "uf": "TO",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5385.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar da Resistência Democrática",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.iraja@senado.leg.br",
+      "telefones": [
+        "3303-6469",
+        "3303-6474"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/5385",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5385"
+    },
+    {
+      "id": 6010,
+      "nome": "Ivete da Silveira",
+      "partido": "MDB",
+      "uf": "SC",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador6010.jpg",
+      "condicao": "1º Suplente",
+      "bloco": "Bloco Parlamentar Democracia",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.ivetedasilveira@senado.leg.br",
+      "telefones": [
+        "3303-2200"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/6010",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/6010"
+    },
+    {
+      "id": 4770,
+      "nome": "Izalci Lucas",
+      "partido": "PL",
+      "uf": "DF",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador4770.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Vanguarda",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.izalcilucas@senado.leg.br",
+      "telefones": [
+        "3303-6049",
+        "3303-6050"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/4770",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/4770"
+    },
+    {
+      "id": 35,
+      "nome": "Jader Barbalho",
+      "partido": "MDB",
+      "uf": "PA",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador35.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Democracia",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.jaderbarbalho@senado.leg.br",
+      "telefones": [
+        "3303-9831",
+        "3303-9827",
+        "3303-9832",
+        "3303-9828"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/35",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/35"
+    },
+    {
+      "id": 6340,
+      "nome": "Jaime Bagattoli",
+      "partido": "PL",
+      "uf": "RO",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador6340.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Vanguarda",
+      "fim_mandato": "2031-01-31",
+      "email": "sen.jaimebagattoli@senado.leg.br",
+      "telefones": [
+        "3303-2714"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/6340",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/6340"
+    },
+    {
+      "id": 581,
+      "nome": "Jaques Wagner",
+      "partido": "PT",
+      "uf": "BA",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador581.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Pelo Brasil",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.jaqueswagner@senado.leg.br",
+      "telefones": [
+        "3303-6390",
+        "3303-6391"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/581",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/581"
+    },
+    {
+      "id": 4531,
+      "nome": "Jayme Campos",
+      "partido": "UNIÃO",
+      "uf": "MT",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador4531.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Democracia",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.jaymecampos@senado.leg.br",
+      "telefones": [
+        "3303-2390",
+        "3303-2384",
+        "3303-2394"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/4531",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/4531"
+    },
+    {
+      "id": 5895,
+      "nome": "Jorge Kajuru",
+      "partido": "PSB",
+      "uf": "GO",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5895.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar da Resistência Democrática",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.jorgekajuru@senado.leg.br",
+      "telefones": [
+        "3303-2844",
+        "3303-2031"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/5895",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5895"
+    },
+    {
+      "id": 6342,
+      "nome": "Jorge Seif",
+      "partido": "PL",
+      "uf": "SC",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador6342.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Vanguarda",
+      "fim_mandato": "2031-01-31",
+      "email": "sen.jorgeseif@senado.leg.br",
+      "telefones": [
+        "3303-3784",
+        "3303-3756"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/6342",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/6342"
+    },
+    {
+      "id": 6369,
+      "nome": "Jussara Lima",
+      "partido": "PSD",
+      "uf": "PI",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador6369.jpg",
+      "condicao": "1º Suplente",
+      "bloco": "Bloco Parlamentar da Resistência Democrática",
+      "fim_mandato": "2031-01-31",
+      "email": "sen.jussaralima@senado.leg.br",
+      "telefones": [
+        "3303-5800"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/6369",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/6369"
+    },
+    {
+      "id": 4811,
+      "nome": "Laércio Oliveira",
+      "partido": "PP",
+      "uf": "SE",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador4811.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Aliança",
+      "fim_mandato": "2031-01-31",
+      "email": "sen.laerciooliveira@senado.leg.br",
+      "telefones": [
+        "3303-1763",
+        "3303-1764"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/4811",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/4811"
+    },
+    {
+      "id": 5977,
+      "nome": "Leany Lemos",
+      "partido": "PSB",
+      "uf": "DF",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5977.jpg",
+      "condicao": "1º Suplente",
+      "bloco": "Bloco Parlamentar da Resistência Democrática",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.leanylemos@senado.leg.br\n\n",
+      "telefones": [
+        "3303-6427"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/5977",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5977"
+    },
+    {
+      "id": 5926,
+      "nome": "Lucas Barreto",
+      "partido": "PSD",
+      "uf": "AP",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5926.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar da Resistência Democrática",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.lucasbarreto@senado.leg.br",
+      "telefones": [
+        "3303-4851"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/5926",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5926"
+    },
+    {
+      "id": 1186,
+      "nome": "Luis Carlos Heinze",
+      "partido": "PP",
+      "uf": "RS",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador1186.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Aliança",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.luiscarlosheinze@senado.leg.br",
+      "telefones": [
+        "3303-4124",
+        "3303-4127",
+        "3303-4129",
+        "3303-4132"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/1186",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/1186"
+    },
+    {
+      "id": 631,
+      "nome": "Magno Malta",
+      "partido": "PL",
+      "uf": "ES",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador631.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Vanguarda",
+      "fim_mandato": "2031-01-31",
+      "email": "sen.magnomalta@senado.leg.br",
+      "telefones": [
+        "3303-6370"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/631",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/631"
+    },
+    {
+      "id": 5376,
+      "nome": "Mara Gabrilli",
+      "partido": "PSD",
+      "uf": "SP",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5376.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar da Resistência Democrática",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.maragabrilli@senado.leg.br",
+      "telefones": [
+        "3303-2191"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/5376",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5376"
+    },
+    {
+      "id": 742,
+      "nome": "Marcelo Castro",
+      "partido": "MDB",
+      "uf": "PI",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador742.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Democracia",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.marcelocastro@senado.leg.br",
+      "telefones": [
+        "3303-4078",
+        "3303-6130"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/742",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/742"
+    },
+    {
+      "id": 285,
+      "nome": "Marcio Bittar",
+      "partido": "PL",
+      "uf": "AC",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador285.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Vanguarda",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.marciobittar@senado.leg.br",
+      "telefones": [
+        "3303-2115",
+        "3303-2119",
+        "3303-1652"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/285",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/285"
+    },
+    {
+      "id": 5422,
+      "nome": "Marcos Rogério",
+      "partido": "PL",
+      "uf": "RO",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5422.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Vanguarda",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.marcosrogerio@senado.leg.br",
+      "telefones": [
+        "3303-6148"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/5422",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5422"
+    },
+    {
+      "id": 5942,
+      "nome": "Marcos do Val",
+      "partido": "AVANTE",
+      "uf": "ES",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5942.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Vanguarda",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.marcosdoval@senado.leg.br",
+      "telefones": [
+        "3303-6747",
+        "3303-6753"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/5942",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5942"
+    },
+    {
+      "id": 5985,
+      "nome": "Nelsinho Trad",
+      "partido": "PSD",
+      "uf": "MS",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5985.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar da Resistência Democrática",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.nelsinhotrad@senado.leg.br",
+      "telefones": [
+        "3303-6767",
+        "3303-6768"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/5985",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5985"
+    },
+    {
+      "id": 5525,
+      "nome": "Omar Aziz",
+      "partido": "PSD",
+      "uf": "AM",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5525.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar da Resistência Democrática",
+      "fim_mandato": "2031-01-31",
+      "email": "sen.omaraziz@senado.leg.br",
+      "telefones": [
+        "3303-6579",
+        "3303-6581"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/5525",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5525"
+    },
+    {
+      "id": 5924,
+      "nome": "Oriovisto Guimarães",
+      "partido": "PSDB",
+      "uf": "PR",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5924.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Democracia",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.oriovistoguimaraes@senado.leg.br",
+      "telefones": [
+        "3303-1635"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/5924",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5924"
+    },
+    {
+      "id": 5523,
+      "nome": "Otto Alencar",
+      "partido": "PSD",
+      "uf": "BA",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5523.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar da Resistência Democrática",
+      "fim_mandato": "2031-01-31",
+      "email": "sen.ottoalencar@senado.leg.br",
+      "telefones": [
+        "3303-3172",
+        "3303-1464",
+        "3303-1467"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/5523",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5523"
+    },
+    {
+      "id": 825,
+      "nome": "Paulo Paim",
+      "partido": "PT",
+      "uf": "RS",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador825.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Pelo Brasil",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.paulopaim@senado.leg.br",
+      "telefones": [
+        "3303-5232",
+        "3303-5231",
+        "3303-5230",
+        "3303-5235"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/825",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/825"
+    },
+    {
+      "id": 5502,
+      "nome": "Plínio Valério",
+      "partido": "PSDB",
+      "uf": "AM",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5502.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Democracia",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.pliniovalerio@senado.leg.br",
+      "telefones": [
+        "3303-2898",
+        "3303-2800"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/5502",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5502"
+    },
+    {
+      "id": 5386,
+      "nome": "Professora Dorinha Seabra",
+      "partido": "UNIÃO",
+      "uf": "TO",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5386.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Democracia",
+      "fim_mandato": "2031-01-31",
+      "email": "sen.professoradorinhaseabra@senado.leg.br",
+      "telefones": [
+        "3303-5990",
+        "3303-5995",
+        "3303-5900"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/5386",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5386"
+    },
+    {
+      "id": 5012,
+      "nome": "Randolfe Rodrigues",
+      "partido": "PT",
+      "uf": "AP",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5012.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Pelo Brasil",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.randolferodrigues@senado.leg.br",
+      "telefones": [
+        "3303-6777",
+        "3303-6568"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/5012",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5012"
+    },
+    {
+      "id": 70,
+      "nome": "Renan Calheiros",
+      "partido": "MDB",
+      "uf": "AL",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador70.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Democracia",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.renancalheiros@senado.leg.br",
+      "telefones": [
+        "3303-2261",
+        "3303-2262",
+        "3303-2265",
+        "3303-2268"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/70",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/70"
+    },
+    {
+      "id": 5207,
+      "nome": "Renan Filho",
+      "partido": "MDB",
+      "uf": "AL",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5207.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Democracia",
+      "fim_mandato": "2031-01-31",
+      "email": "sen.renanfilho@senado.leg.br",
+      "telefones": [
+        "3303-6266",
+        "3303-6273"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/5207",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5207"
+    },
+    {
+      "id": 5257,
+      "nome": "Renzo Braz",
+      "partido": "PP",
+      "uf": "MG",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5257.jpg",
+      "condicao": "1º Suplente",
+      "bloco": "Bloco Parlamentar Aliança",
+      "fim_mandato": "2027-01-31",
+      "email": null,
+      "telefones": [
+        "3303-2794"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/5257",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5257"
+    },
+    {
+      "id": 6025,
+      "nome": "Roberta Acioly",
+      "partido": "REPUBLICANOS",
+      "uf": "RR",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador6025.jpg",
+      "condicao": "1º Suplente",
+      "bloco": "Bloco Parlamentar Aliança",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.robertaacioly@senado.leg.br",
+      "telefones": [
+        "3303-5291",
+        "3303-5292"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/6025",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/6025"
+    },
+    {
+      "id": 4694,
+      "nome": "Rogerio Marinho",
+      "partido": "PL",
+      "uf": "RN",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador4694.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Vanguarda",
+      "fim_mandato": "2031-01-31",
+      "email": "sen.rogeriomarinho@senado.leg.br",
+      "telefones": [
+        "3303-1826"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/4694",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/4694"
+    },
+    {
+      "id": 5352,
+      "nome": "Rogério Carvalho",
+      "partido": "PT",
+      "uf": "SE",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5352.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Pelo Brasil",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.rogeriocarvalho@senado.leg.br",
+      "telefones": [
+        "3303-2201",
+        "3303-2203"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/5352",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5352"
+    },
+    {
+      "id": 5322,
+      "nome": "Romário",
+      "partido": "S/Partido",
+      "uf": "RJ",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5322.jpg",
+      "condicao": "Titular",
+      "bloco": null,
+      "fim_mandato": "2031-01-31",
+      "email": "sen.romario@senado.leg.br",
+      "telefones": [
+        "3303-6519",
+        "3303-6517",
+        "3303-6520"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/5322",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5322"
+    },
+    {
+      "id": 5974,
+      "nome": "Sargento Reginauro",
+      "partido": "PSDB",
+      "uf": "CE",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5974.jpg",
+      "condicao": "1º Suplente",
+      "bloco": "Bloco Parlamentar Democracia",
+      "fim_mandato": "2027-01-31",
+      "email": null,
+      "telefones": [
+        "3303-6677",
+        "3303-6678",
+        "3303-6679"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/5974",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5974"
+    },
+    {
+      "id": 6331,
+      "nome": "Sergio Moro",
+      "partido": "PL",
+      "uf": "PR",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador6331.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Vanguarda",
+      "fim_mandato": "2031-01-31",
+      "email": "sen.sergiomoro@senado.leg.br",
+      "telefones": [
+        "3303-6202"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/6331",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/6331"
+    },
+    {
+      "id": 5988,
+      "nome": "Soraya Thronicke",
+      "partido": "PSB",
+      "uf": "MS",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5988.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar da Resistência Democrática",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.sorayathronicke@senado.leg.br",
+      "telefones": [
+        "3303-1775"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/5988",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5988"
+    },
+    {
+      "id": 5959,
+      "nome": "Styvenson Valentim",
+      "partido": "PODE",
+      "uf": "RN",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5959.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Democracia",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.styvensonvalentim@senado.leg.br",
+      "telefones": [
+        "3303-1148"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/5959",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5959"
+    },
+    {
+      "id": 4560,
+      "nome": "Sérgio Petecão",
+      "partido": "PSD",
+      "uf": "AC",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador4560.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar da Resistência Democrática",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.sergiopetecao@senado.leg.br",
+      "telefones": [
+        "3303-4086",
+        "3303-6708",
+        "3303-6709"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/4560",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/4560"
+    },
+    {
+      "id": 6338,
+      "nome": "Teresa Leitão",
+      "partido": "PT",
+      "uf": "PE",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador6338.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Pelo Brasil",
+      "fim_mandato": "2031-01-31",
+      "email": "sen.teresaleitao@senado.leg.br",
+      "telefones": [
+        "3303-2423"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/6338",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/6338"
+    },
+    {
+      "id": 5736,
+      "nome": "Tereza Cristina",
+      "partido": "PP",
+      "uf": "MS",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5736.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Aliança",
+      "fim_mandato": "2031-01-31",
+      "email": "sen.terezacristina@senado.leg.br",
+      "telefones": [
+        "3303-2431"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/5736",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5736"
+    },
+    {
+      "id": 5899,
+      "nome": "Vanderlan Cardoso",
+      "partido": "PSD",
+      "uf": "GO",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5899.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar da Resistência Democrática",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.vanderlancardoso@senado.leg.br",
+      "telefones": [
+        "3303-2092",
+        "3303-2099"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/5899",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5899"
+    },
+    {
+      "id": 5748,
+      "nome": "Veneziano Vital do Rêgo",
+      "partido": "MDB",
+      "uf": "PB",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5748.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Democracia",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.venezianovitaldorego@senado.leg.br",
+      "telefones": [
+        "3303-2252",
+        "3303-2481"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/5748",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5748"
+    },
+    {
+      "id": 1173,
+      "nome": "Wellington Fagundes",
+      "partido": "PL",
+      "uf": "MT",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador1173.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Vanguarda",
+      "fim_mandato": "2031-01-31",
+      "email": "sen.wellingtonfagundes@senado.leg.br",
+      "telefones": [
+        "3303-6219",
+        "3303-3778",
+        "3303-6209",
+        "3303-6213",
+        "3303-3775"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/1173",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/1173"
+    },
+    {
+      "id": 5411,
+      "nome": "Weverton",
+      "partido": "PDT",
+      "uf": "MA",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5411.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Pelo Brasil",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.wevertonrocha@senado.leg.br",
+      "telefones": [
+        "3303-4161",
+        "3303-1655"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/5411",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5411"
+    },
+    {
+      "id": 5070,
+      "nome": "Wilder Morais",
+      "partido": "PL",
+      "uf": "GO",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5070.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Vanguarda",
+      "fim_mandato": "2031-01-31",
+      "email": "sen.wildermorais@senado.leg.br",
+      "telefones": [
+        "3303-6440"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/5070",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5070"
+    },
+    {
+      "id": 5783,
+      "nome": "Zenaide Maia",
+      "partido": "PSD",
+      "uf": "RN",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5783.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar da Resistência Democrática",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.zenaidemaia@senado.leg.br",
+      "telefones": [
+        "3303-2371",
+        "3303-2372",
+        "3303-2358"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/5783",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5783"
+    },
+    {
+      "id": 3806,
+      "nome": "Zequinha Marinho",
+      "partido": "PODE",
+      "uf": "PA",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador3806.jpg",
+      "condicao": "Titular",
+      "bloco": "Bloco Parlamentar Democracia",
+      "fim_mandato": "2027-01-31",
+      "email": "sen.zequinhamarinho@senado.leg.br",
+      "telefones": [
+        "3303-6623"
+      ],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/3806",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/3806"
+    }
+  ]
+}

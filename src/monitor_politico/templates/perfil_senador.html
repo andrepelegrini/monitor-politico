@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block titulo %}{{ s.nome }} ({{ s.partido }}-{{ s.uf }}) · Monitor Político{% endblock %}
+{% block conteudo %}
+<p><a href="index.html">← Todos os senadores</a></p>
+
+<article class="perfil">
+  {% if s.url_foto %}<img src="{{ s.url_foto }}" alt="Foto oficial de {{ s.nome }}" width="150" height="200">{% endif %}
+  <div>
+    <h1>{{ s.nome }}</h1>
+    <dl>
+      <dt>Partido</dt><dd>{{ s.partido }}</dd>
+      <dt>UF</dt><dd>{{ s.uf }}</dd>
+      {% if s.condicao %}<dt>Condição</dt><dd>{{ s.condicao }}</dd>{% endif %}
+      {% if s.bloco %}<dt>Bloco</dt><dd>{{ s.bloco }}</dd>{% endif %}
+      {% if s.fim_mandato %}<dt>Mandato até</dt><dd>{{ s.fim_mandato|data_br }}</dd>{% endif %}
+    </dl>
+
+    <h2>Contato oficial do gabinete</h2>
+    <dl>
+      {% if s.email %}<dt>E-mail</dt><dd><a href="mailto:{{ s.email }}">{{ s.email }}</a></dd>{% endif %}
+      {% if s.telefones %}<dt>Telefone{% if s.telefones|length > 1 %}s{% endif %}</dt><dd>{% for t in s.telefones %}(61) {{ t }}{% if not loop.last %}<br>{% endif %}{% endfor %}</dd>{% endif %}
+    </dl>
+
+    <h2>Fonte</h2>
+    <ul>
+      <li><a href="{{ s.url_site }}">Página oficial no Senado</a></li>
+      <li><a href="{{ s.uri_api }}">Registro na API de Dados Abertos</a></li>
+    </ul>
+  </div>
+</article>
+{% endblock %}

@@ -5,6 +5,7 @@ import httpx
 import pytest
 
 from monitor_politico.camara import API_BASE, ClienteCamara
+from monitor_politico.senado import API_BASE as SENADO_API_BASE, ClienteSenado
 
 FIXTURES = Path(__file__).parent / "fixtures"
 
@@ -30,3 +31,16 @@ def cliente_falso(handler=responder_com_fixtures) -> ClienteCamara:
 @pytest.fixture
 def cliente() -> ClienteCamara:
     return cliente_falso()
+
+
+def senado_falso(handler=None) -> ClienteSenado:
+    def padrao(request: httpx.Request) -> httpx.Response:
+        return httpx.Response(200, json=carregar("senado_lista.json"))
+
+    http = httpx.Client(base_url=SENADO_API_BASE, transport=httpx.MockTransport(handler or padrao))
+    return ClienteSenado(http=http, dormir=lambda _s: None)
+
+
+@pytest.fixture
+def senado() -> ClienteSenado:
+    return senado_falso()

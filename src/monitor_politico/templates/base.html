@@ -9,14 +9,19 @@
 <body>
   <header class="topo">
     <a class="marca" href="{{ raiz }}/index.html">Monitor Político</a>
-    <span class="sub">Deputados federais em exercício · dados oficiais da Câmara</span>
+    <nav class="casas">
+      <a href="{{ raiz }}/deputados/index.html"{% if casa == "camara" %} aria-current="page"{% endif %}>Deputados</a>
+      <a href="{{ raiz }}/senadores/index.html"{% if casa == "senado" %} aria-current="page"{% endif %}>Senadores</a>
+    </nav>
   </header>
   <main>
     {% block conteudo %}{% endblock %}
   </main>
   <footer class="rodape">
+    {% block rodape %}
     <p>Dados atualizados em {{ atualizado_em }}.</p>
-    <p>Fonte: <a href="https://dadosabertos.camara.leg.br/">Dados Abertos da Câmara dos Deputados</a>. Este site reproduz informações públicas oficiais, sem avaliação ou opinião.</p>
+    <p>Fonte: <a href="{{ fonte_url }}">{{ fonte_nome }}</a>. Este site reproduz informações públicas oficiais, sem avaliação ou opinião.</p>
+    {% endblock %}
   </footer>
   {% block scripts %}{% endblock %}
 </body>

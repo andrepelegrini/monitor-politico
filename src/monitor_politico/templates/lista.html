@@ -1,7 +1,7 @@
 {% extends "base.html" %}
-{% block titulo %}Deputados federais · Monitor Político{% endblock %}
+{% block titulo %}{{ titulo }} · Monitor Político{% endblock %}
 {% block conteudo %}
-<h1>Deputados federais</h1>
+<h1>{{ titulo }}</h1>
 
 <form class="filtros" role="search" onsubmit="return false">
   <label>Nome
@@ -21,12 +21,12 @@
   </label>
 </form>
 
-<p class="contagem" aria-live="polite"><span id="contagem">{{ deputados|length }}</span> de {{ deputados|length }} deputados</p>
+<p class="contagem" aria-live="polite"><span id="contagem">{{ parlamentares|length }}</span> de {{ parlamentares|length }} {{ plural }}</p>
 
 <ul class="grade" id="lista">
-  {% for d in deputados %}
+  {% for d in parlamentares %}
   <li data-nome="{{ d.nome|lower }}" data-partido="{{ d.partido }}" data-uf="{{ d.uf }}">
-    <a href="{{ raiz }}/deputados/{{ d.id }}.html">
+    <a href="{{ d.id }}.html">
       {% if d.url_foto %}<img src="{{ d.url_foto }}" alt="" loading="lazy" width="64" height="85">{% endif %}
       <span class="nome">{{ d.nome }}</span>
       <span class="meta">{{ d.partido }} · {{ d.uf }}</span>
@@ -34,6 +34,6 @@
   </li>
   {% endfor %}
 </ul>
-<p id="vazio" class="vazio" hidden>Nenhum deputado encontrado com esses filtros.</p>
+<p id="vazio" class="vazio" hidden>Nenhum {{ singular }} encontrado com esses filtros.</p>
 {% endblock %}
 {% block scripts %}<script src="{{ raiz }}/static/filtro.js"></script>{% endblock %}

@@ -14,11 +14,11 @@ from typing import Any, Callable, Iterator, Optional
 
 import httpx
 
+from monitor_politico.api import ClienteJSON
 from monitor_politico.models import Deputado
 
 API_BASE = "https://dadosabertos.camara.leg.br/api/v2"
 SAIDA_PADRAO = Path("data/deputados.json")
-TENTATIVAS = 6  # espera até 1+2+4+8+16 = 31s; a API dá 504 esporádicos
 ATRASO_ENTRE_CHAMADAS = 0.1  # segundos; cortesia com a API pública
 LIMITE_FALHAS = 0.1  # fração de perfis que pode falhar antes de abortar a coleta
 
@@ -27,33 +27,9 @@ class ColetaIncompleta(RuntimeError):
     pass
 
 
-class ClienteCamara:
-    def __init__(
-        self,
-        http: Optional[httpx.Client] = None,
-        dormir: Callable[[float], None] = time.sleep,
-    ) -> None:
-        self.http = http or httpx.Client(
-            base_url=API_BASE,
-            headers={"Accept": "application/json"},
-            timeout=30,
-        )
-        self.dormir = dormir
-
-    def _get(self, url: str, params: Optional[dict[str, Any]] = None) -> dict[str, Any]:
-        for tentativa in range(TENTATIVAS):
-            try:
-                resp = self.http.get(url, params=params)
-                if resp.status_code != 429 and resp.status_code < 500:
-                    resp.raise_for_status()
-                    return resp.json()
-            except httpx.TransportError:
-                if tentativa == TENTATIVAS - 1:
-                    raise
-            if tentativa < TENTATIVAS - 1:
-                self.dormir(2**tentativa)
-        resp.raise_for_status()
-        raise RuntimeError("inalcançável")
+class ClienteCamara(ClienteJSON):
+    def __init__(self, http: Optional[httpx.Client] = None, dormir: Callable[[float], None] = time.sleep) -> None:
+        super().__init__(API_BASE, http, dormir)
 
     def ids_em_exercicio(self) -> Iterator[int]:
         """Sem `idLegislatura`, a API lista só quem está em exercício."""

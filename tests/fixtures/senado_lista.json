@@ -1,0 +1,394 @@
+{
+ "ListaParlamentarEmExercicio": {
+  "noNamespaceSchemaLocation": "https://legis.senado.leg.br/dadosabertos/dados/ListaParlamentarEmExerciciov4.xsd",
+  "Metadados": {
+   "Versao": "02/11/2026 11:46:20",
+   "VersaoServico": "4",
+   "DataVersaoServico": "2020-07-15",
+   "DescricaoDataSet": "Lista dos Parlamentares que estão atualmente em Exercício. Informações atuais sobre o Parlamentar."
+  },
+  "Parlamentares": {
+   "Parlamentar": [
+    {
+     "IdentificacaoParlamentar": {
+      "CodigoParlamentar": "5672",
+      "CodigoPublicoNaLegAtual": "800",
+      "NomeParlamentar": "Alan Rick",
+      "NomeCompletoParlamentar": "Alan Rick Miranda",
+      "SexoParlamentar": "Masculino",
+      "FormaTratamento": "Senador ",
+      "UrlFotoParlamentar": "http://www.senado.leg.br/senadores/img/fotos-oficiais/senador5672.jpg",
+      "UrlPaginaParlamentar": "http://www25.senado.leg.br/web/senadores/senador/-/perfil/5672",
+      "EmailParlamentar": "sen.alanrick@senado.leg.br",
+      "Telefones": {
+       "Telefone": [
+        {
+         "NumeroTelefone": "33036333",
+         "OrdemPublicacao": "1",
+         "IndicadorFax": "Não"
+        }
+       ]
+      },
+      "SiglaPartidoParlamentar": "REPUBLICANOS",
+      "UfParlamentar": "AC",
+      "Bloco": {
+       "CodigoBloco": "346",
+       "NomeBloco": "Bloco Parlamentar Aliança",
+       "NomeApelido": "BLALIANÇA",
+       "DataCriacao": "2023-03-20"
+      },
+      "MembroMesa": "Não",
+      "MembroLideranca": "Sim"
+     },
+     "Mandato": {
+      "CodigoMandato": "596",
+      "UfParlamentar": "AC",
+      "PrimeiraLegislaturaDoMandato": {
+       "NumeroLegislatura": "57",
+       "DataInicio": "2023-02-01",
+       "DataFim": "2027-01-31"
+      },
+      "SegundaLegislaturaDoMandato": {
+       "NumeroLegislatura": "58",
+       "DataInicio": "2027-02-01",
+       "DataFim": "2031-01-31"
+      },
+      "DescricaoParticipacao": "Titular",
+      "Suplentes": {
+       "Suplente": [
+        {
+         "DescricaoParticipacao": "1º Suplente",
+         "CodigoParlamentar": "6343",
+         "NomeParlamentar": "Gemil Junior"
+        },
+        {
+         "DescricaoParticipacao": "2º Suplente",
+         "CodigoParlamentar": "6344",
+         "NomeParlamentar": "Coronel Casagrande"
+        }
+       ]
+      },
+      "Exercicios": {
+       "Exercicio": [
+        {
+         "CodigoExercicio": "3028",
+         "DataInicio": "2023-02-01"
+        }
+       ]
+      }
+     }
+    },
+    {
+     "IdentificacaoParlamentar": {
+      "CodigoParlamentar": "5936",
+      "CodigoPublicoNaLegAtual": "949",
+      "NomeParlamentar": "Carlos Portinho",
+      "NomeCompletoParlamentar": "Carlos Francisco Portinho",
+      "SexoParlamentar": "Masculino",
+      "FormaTratamento": "Senador ",
+      "UrlFotoParlamentar": "http://www.senado.leg.br/senadores/img/fotos-oficiais/senador5936.jpg",
+      "UrlPaginaParlamentar": "http://www25.senado.leg.br/web/senadores/senador/-/perfil/5936",
+      "EmailParlamentar": "sen.carlosportinho@senado.leg.br",
+      "Telefones": {
+       "Telefone": [
+        {
+         "NumeroTelefone": "33036640",
+         "OrdemPublicacao": "1",
+         "IndicadorFax": "Não"
+        },
+        {
+         "NumeroTelefone": "33036613",
+         "OrdemPublicacao": "2",
+         "IndicadorFax": "Não"
+        }
+       ]
+      },
+      "SiglaPartidoParlamentar": "PL",
+      "UfParlamentar": "RJ",
+      "Bloco": {
+       "CodigoBloco": "357",
+       "NomeBloco": "Bloco Parlamentar Vanguarda",
+       "NomeApelido": "BLVANG",
+       "DataCriacao": "2025-02-03"
+      },
+      "MembroMesa": "Não",
+      "MembroLideranca": "Sim"
+     },
+     "Mandato": {
+      "CodigoMandato": "545",
+      "UfParlamentar": "RJ",
+      "PrimeiraLegislaturaDoMandato": {
+       "NumeroLegislatura": "56",
+       "DataInicio": "2019-02-01",
+       "DataFim": "2023-01-31"
+      },
+      "SegundaLegislaturaDoMandato": {
+       "NumeroLegislatura": "57",
+       "DataInicio": "2023-02-01",
+       "DataFim": "2027-01-31"
+      },
+      "DescricaoParticipacao": "1º Suplente",
+      "Titular": {
+       "DescricaoParticipacao": "Titular",
+       "CodigoParlamentar": "751",
+       "NomeParlamentar": "Arolde de Oliveira"
+      },
+      "Suplentes": {
+       "Suplente": [
+        {
+         "DescricaoParticipacao": "2º Suplente",
+         "CodigoParlamentar": "5934",
+         "NomeParlamentar": "Renata Guerra"
+        }
+       ]
+      },
+      "Exercicios": {
+       "Exercicio": [
+        {
+         "CodigoExercicio": "2959",
+         "DataInicio": "2020-11-03"
+        }
+       ]
+      }
+     }
+    },
+    {
+     "IdentificacaoParlamentar": {
+      "CodigoParlamentar": "739",
+      "CodigoPublicoNaLegAtual": "811",
+      "NomeParlamentar": "Ciro Nogueira",
+      "NomeCompletoParlamentar": "Ciro Nogueira Lima Filho",
+      "SexoParlamentar": "Masculino",
+      "FormaTratamento": "Senador ",
+      "UrlFotoParlamentar": "http://www.senado.leg.br/senadores/img/fotos-oficiais/senador739.jpg",
+      "UrlPaginaParlamentar": "http://www25.senado.leg.br/web/senadores/senador/-/perfil/739",
+      "UrlPaginaParticular": "http://cironogueira.com.br",
+      "EmailParlamentar": "sen.cironogueira@senado.leg.br",
+      "Telefones": {
+       "Telefone": [
+        {
+         "NumeroTelefone": "33036187",
+         "OrdemPublicacao": "1",
+         "IndicadorFax": "Não"
+        },
+        {
+         "NumeroTelefone": "33036188",
+         "OrdemPublicacao": "2",
+         "IndicadorFax": "Não"
+        },
+        {
+         "NumeroTelefone": "33036183",
+         "OrdemPublicacao": "3",
+         "IndicadorFax": "Não"
+        }
+       ]
+      },
+      "SiglaPartidoParlamentar": "PP",
+      "UfParlamentar": "PI",
+      "Bloco": {
+       "CodigoBloco": "346",
+       "NomeBloco": "Bloco Parlamentar Aliança",
+       "NomeApelido": "BLALIANÇA",
+       "DataCriacao": "2023-03-20"
+      },
+      "MembroMesa": "Não",
+      "MembroLideranca": "Sim"
+     },
+     "Mandato": {
+      "CodigoMandato": "524",
+      "UfParlamentar": "PI",
+      "PrimeiraLegislaturaDoMandato": {
+       "NumeroLegislatura": "56",
+       "DataInicio": "2019-02-01",
+       "DataFim": "2023-01-31"
+      },
+      "SegundaLegislaturaDoMandato": {
+       "NumeroLegislatura": "57",
+       "DataInicio": "2023-02-01",
+       "DataFim": "2027-01-31"
+      },
+      "DescricaoParticipacao": "Titular",
+      "Suplentes": {
+       "Suplente": [
+        {
+         "DescricaoParticipacao": "1º Suplente",
+         "CodigoParlamentar": "5898",
+         "NomeParlamentar": "Eliane Nogueira"
+        },
+        {
+         "DescricaoParticipacao": "2º Suplente",
+         "CodigoParlamentar": "5900",
+         "NomeParlamentar": "Gil Paraibano"
+        }
+       ]
+      },
+      "Exercicios": {
+       "Exercicio": [
+        {
+         "CodigoExercicio": "3004",
+         "DataInicio": "2022-12-30"
+        },
+        {
+         "CodigoExercicio": "2896",
+         "DataInicio": "2019-02-01",
+         "DataFim": "2021-07-27",
+         "SiglaCausaAfastamento": "AFO",
+         "DescricaoCausaAfastamento": "Afastamento do exercício"
+        }
+       ]
+      }
+     }
+    },
+    {
+     "IdentificacaoParlamentar": {
+      "CodigoParlamentar": "5257",
+      "CodigoPublicoNaLegAtual": "898",
+      "NomeParlamentar": "Renzo Braz",
+      "NomeCompletoParlamentar": "Renzo do Amaral Braz",
+      "SexoParlamentar": "Masculino",
+      "FormaTratamento": "Senador ",
+      "UrlFotoParlamentar": "http://www.senado.leg.br/senadores/img/fotos-oficiais/senador5257.jpg",
+      "UrlPaginaParlamentar": "http://www25.senado.leg.br/web/senadores/senador/-/perfil/5257",
+      "Telefones": {
+       "Telefone": [
+        {
+         "NumeroTelefone": "33032794",
+         "OrdemPublicacao": "1",
+         "IndicadorFax": "Não"
+        }
+       ]
+      },
+      "SiglaPartidoParlamentar": "PP",
+      "UfParlamentar": "MG",
+      "Bloco": {
+       "CodigoBloco": "346",
+       "NomeBloco": "Bloco Parlamentar Aliança",
+       "NomeApelido": "BLALIANÇA",
+       "DataCriacao": "2023-03-20"
+      },
+      "MembroMesa": "Não",
+      "MembroLideranca": "Não"
+     },
+     "Mandato": {
+      "CodigoMandato": "562",
+      "UfParlamentar": "MG",
+      "PrimeiraLegislaturaDoMandato": {
+       "NumeroLegislatura": "56",
+       "DataInicio": "2019-02-01",
+       "DataFim": "2023-01-31"
+      },
+      "SegundaLegislaturaDoMandato": {
+       "NumeroLegislatura": "57",
+       "DataInicio": "2023-02-01",
+       "DataFim": "2027-01-31"
+      },
+      "DescricaoParticipacao": "1º Suplente",
+      "Titular": {
+       "DescricaoParticipacao": "Titular",
+       "CodigoParlamentar": "5732",
+       "NomeParlamentar": "Rodrigo Pacheco"
+      },
+      "Suplentes": {
+       "Suplente": [
+        {
+         "DescricaoParticipacao": "2º Suplente",
+         "CodigoParlamentar": "5989",
+         "NomeParlamentar": "Ana Maria"
+        }
+       ]
+      },
+      "Exercicios": {
+       "Exercicio": [
+        {
+         "CodigoExercicio": "3110",
+         "DataInicio": "2026-09-30"
+        }
+       ]
+      }
+     }
+    },
+    {
+     "IdentificacaoParlamentar": {
+      "CodigoParlamentar": "5322",
+      "CodigoPublicoNaLegAtual": "840",
+      "NomeParlamentar": "Romário",
+      "NomeCompletoParlamentar": "Romario de Souza Faria",
+      "SexoParlamentar": "Masculino",
+      "FormaTratamento": "Senador ",
+      "UrlFotoParlamentar": "http://www.senado.leg.br/senadores/img/fotos-oficiais/senador5322.jpg",
+      "UrlPaginaParlamentar": "http://www25.senado.leg.br/web/senadores/senador/-/perfil/5322",
+      "UrlPaginaParticular": "http://romario.org/",
+      "EmailParlamentar": "sen.romario@senado.leg.br",
+      "Telefones": {
+       "Telefone": [
+        {
+         "NumeroTelefone": "33036519",
+         "OrdemPublicacao": "1",
+         "IndicadorFax": "Não"
+        },
+        {
+         "NumeroTelefone": "33036517",
+         "OrdemPublicacao": "2",
+         "IndicadorFax": "Não"
+        },
+        {
+         "NumeroTelefone": "33036520",
+         "OrdemPublicacao": "3",
+         "IndicadorFax": "Não"
+        }
+       ]
+      },
+      "SiglaPartidoParlamentar": "S/Partido",
+      "UfParlamentar": "RJ",
+      "MembroMesa": "Não",
+      "MembroLideranca": "Não"
+     },
+     "Mandato": {
+      "CodigoMandato": "620",
+      "UfParlamentar": "RJ",
+      "PrimeiraLegislaturaDoMandato": {
+       "NumeroLegislatura": "57",
+       "DataInicio": "2023-02-01",
+       "DataFim": "2027-01-31"
+      },
+      "SegundaLegislaturaDoMandato": {
+       "NumeroLegislatura": "58",
+       "DataInicio": "2027-02-01",
+       "DataFim": "2031-01-31"
+      },
+      "DescricaoParticipacao": "Titular",
+      "Suplentes": {
+       "Suplente": [
+        {
+         "DescricaoParticipacao": "1º Suplente",
+         "CodigoParlamentar": "6372",
+         "NomeParlamentar": "Bruno Bonetti"
+        },
+        {
+         "DescricaoParticipacao": "2º Suplente",
+         "CodigoParlamentar": "6373",
+         "NomeParlamentar": "Andrea Fontes"
+        }
+       ]
+      },
+      "Exercicios": {
+       "Exercicio": [
+        {
+         "CodigoExercicio": "3103",
+         "DataInicio": "2026-04-10"
+        },
+        {
+         "CodigoExercicio": "3029",
+         "DataInicio": "2023-02-01",
+         "DataFim": "2025-12-09",
+         "SiglaCausaAfastamento": "LCS",
+         "DescricaoCausaAfastamento": "Licença com convocação de suplente (sup 120 dias)"
+        }
+       ]
+      }
+     }
+    }
+   ]
+  }
+ }
+}

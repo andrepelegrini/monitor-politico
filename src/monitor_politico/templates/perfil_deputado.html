@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block titulo %}{{ d.nome }} ({{ d.partido }}-{{ d.uf }}) · Monitor Político{% endblock %}
 {% block conteudo %}
-<p><a href="{{ raiz }}/index.html">← Todos os deputados</a></p>
+<p><a href="index.html">← Todos os deputados</a></p>
 
 <article class="perfil">
   {% if d.url_foto %}<img src="{{ d.url_foto }}" alt="Foto oficial de {{ d.nome }}" width="150" height="200">{% endif %}

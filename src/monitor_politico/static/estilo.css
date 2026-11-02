@@ -28,7 +28,9 @@ a { color: var(--destaque); }
 main, .topo, .rodape { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
 .topo { padding-top: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--borda); display: flex; flex-wrap: wrap; gap: 4px 16px; align-items: baseline; }
 .marca { font-weight: 700; font-size: 1.15rem; color: var(--texto); text-decoration: none; }
-.sub { color: var(--suave); font-size: .9rem; }
+.casas { display: flex; gap: 16px; }
+.casas a { color: var(--suave); text-decoration: none; padding-bottom: 2px; }
+.casas a:hover, .casas a[aria-current="page"] { color: var(--texto); border-bottom: 2px solid var(--destaque); }
 h1 { font-size: 1.6rem; margin: 24px 0 12px; }
 h2 { font-size: 1.1rem; margin: 24px 0 8px; }
 
@@ -52,6 +54,15 @@ h2 { font-size: 1.1rem; margin: 24px 0 8px; }
 .grade img { grid-row: span 2; width: 48px; height: 64px; object-fit: cover; border-radius: 4px; background: var(--borda); }
 .grade .nome { font-weight: 600; }
 .grade .meta { color: var(--suave); font-size: .85rem; }
+
+.casas-inicio { list-style: none; padding: 0; display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+.casas-inicio a {
+  display: flex; flex-direction: column; gap: 4px; padding: 20px; background: var(--superficie);
+  border: 1px solid var(--borda); border-radius: 8px; text-decoration: none; color: var(--texto);
+}
+.casas-inicio a:hover, .casas-inicio a:focus-visible { border-color: var(--destaque); }
+.casas-inicio .nome { font-weight: 600; font-size: 1.1rem; }
+.casas-inicio .meta { color: var(--suave); }
 
 .perfil { display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start; }
 .perfil img { border-radius: 8px; background: var(--borda); max-width: 100%; height: auto; }

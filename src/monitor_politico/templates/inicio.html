@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block conteudo %}
+<h1>Parlamentares federais em exercício</h1>
+<p>Perfis e contatos oficiais de deputados e senadores, a partir dos dados abertos da Câmara e do Senado.</p>
+
+<ul class="casas-inicio">
+  <li>
+    <a href="{{ raiz }}/deputados/index.html">
+      <span class="nome">Câmara dos Deputados</span>
+      <span class="meta">{{ total_deputados }} deputados</span>
+    </a>
+  </li>
+  <li>
+    <a href="{{ raiz }}/senadores/index.html">
+      <span class="nome">Senado Federal</span>
+      <span class="meta">{{ total_senadores }} senadores</span>
+    </a>
+  </li>
+</ul>
+{% endblock %}
+{% block rodape %}
+<p>Deputados atualizados em {{ atualizado_camara }}. Senadores atualizados em {{ atualizado_senado }}.</p>
+<p>Fontes: <a href="https://dadosabertos.camara.leg.br/">Dados Abertos da Câmara dos Deputados</a> e <a href="https://www12.senado.leg.br/dados-abertos">Dados Abertos do Senado Federal</a>. Este site reproduz informações públicas oficiais, sem avaliação ou opinião.</p>
+{% endblock %}
