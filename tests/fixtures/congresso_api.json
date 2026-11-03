@@ -1,0 +1,1870 @@
+{
+ "https://dadosabertos.camara.leg.br/api/v2/votacoes?idOrgao=180&dataInicio=2026-10-03&dataFim=2026-11-02&itens=200&ordem=ASC&ordenarPor=dataHoraRegistro": {
+  "dados": [
+   {
+    "id": "2635476-23",
+    "uri": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2635476-23",
+    "data": "2026-10-14",
+    "dataHoraRegistro": "2026-10-14T17:20:23",
+    "siglaOrgao": "PLEN",
+    "uriOrgao": "https://dadosabertos.camara.leg.br/api/v2/orgaos/180",
+    "uriEvento": "https://dadosabertos.camara.leg.br/api/v2/eventos/83057",
+    "proposicaoObjeto": null,
+    "uriProposicaoObjeto": null,
+    "descricao": "Rejeitado o Requerimento. Sim: 11; Não: 387; Total: 398.",
+    "aprovacao": 0
+   },
+   {
+    "id": "2635476-36",
+    "uri": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2635476-36",
+    "data": "2026-10-14",
+    "dataHoraRegistro": "2026-10-14T19:42:50",
+    "siglaOrgao": "PLEN",
+    "uriOrgao": "https://dadosabertos.camara.leg.br/api/v2/orgaos/180",
+    "uriEvento": "https://dadosabertos.camara.leg.br/api/v2/eventos/83057",
+    "proposicaoObjeto": null,
+    "uriProposicaoObjeto": null,
+    "descricao": "Aprovada a Subemenda Substitutiva Global ao Projeto de Lei Complementar nº 186, de 2026, adotada pelo relator da Comissão de Indústria, Comércio e Serviços, ressalvados os destaques. Sim: 461; Não: 4; Total: 465.",
+    "aprovacao": 1
+   },
+   {
+    "id": "2635476-40",
+    "uri": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2635476-40",
+    "data": "2026-10-14",
+    "dataHoraRegistro": "2026-10-14T19:44:45",
+    "siglaOrgao": "PLEN",
+    "uriOrgao": "https://dadosabertos.camara.leg.br/api/v2/orgaos/180",
+    "uriEvento": "https://dadosabertos.camara.leg.br/api/v2/eventos/83057",
+    "proposicaoObjeto": null,
+    "uriProposicaoObjeto": null,
+    "descricao": "Aprovada a Redação Final assinada pelo relator, Dep. Rubens Pereira Júnior (PT/MA).",
+    "aprovacao": 1
+   },
+   {
+    "id": "2645996-7",
+    "uri": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2645996-7",
+    "data": "2026-10-28",
+    "dataHoraRegistro": "2026-10-28T16:09:54",
+    "siglaOrgao": "PLEN",
+    "uriOrgao": "https://dadosabertos.camara.leg.br/api/v2/orgaos/180",
+    "uriEvento": "https://dadosabertos.camara.leg.br/api/v2/eventos/83108",
+    "proposicaoObjeto": "REQ 4194/2026",
+    "uriProposicaoObjeto": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2645996",
+    "descricao": "Aprovado, por unanimidade, o Requerimento de Urgência (Art. 155 do RICD).",
+    "aprovacao": 1
+   },
+   {
+    "id": "2620905-48",
+    "uri": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2620905-48",
+    "data": "2026-10-28",
+    "dataHoraRegistro": "2026-10-28T16:24:51",
+    "siglaOrgao": "PLEN",
+    "uriOrgao": "https://dadosabertos.camara.leg.br/api/v2/orgaos/180",
+    "uriEvento": "https://dadosabertos.camara.leg.br/api/v2/eventos/83108",
+    "proposicaoObjeto": null,
+    "uriProposicaoObjeto": null,
+    "descricao": "Rejeitado o Requerimento.",
+    "aprovacao": 0
+   },
+   {
+    "id": "2620905-53",
+    "uri": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2620905-53",
+    "data": "2026-10-28",
+    "dataHoraRegistro": "2026-10-28T16:52:36",
+    "siglaOrgao": "PLEN",
+    "uriOrgao": "https://dadosabertos.camara.leg.br/api/v2/orgaos/180",
+    "uriEvento": "https://dadosabertos.camara.leg.br/api/v2/eventos/83108",
+    "proposicaoObjeto": null,
+    "uriProposicaoObjeto": null,
+    "descricao": "Aprovado o Substitutivo ao Projeto de Decreto Legislativo nº 274, de 2026, adotado pela relatora da Comissão de Relações Exteriores e de Defesa Nacional.",
+    "aprovacao": 1
+   },
+   {
+    "id": "2620905-56",
+    "uri": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2620905-56",
+    "data": "2026-10-28",
+    "dataHoraRegistro": "2026-10-28T16:54:09",
+    "siglaOrgao": "PLEN",
+    "uriOrgao": "https://dadosabertos.camara.leg.br/api/v2/orgaos/180",
+    "uriEvento": "https://dadosabertos.camara.leg.br/api/v2/eventos/83108",
+    "proposicaoObjeto": null,
+    "uriProposicaoObjeto": null,
+    "descricao": "Aprovada a Redação Final, assinada pela relatora, Dep. Benedita da Silva (PT/RJ).",
+    "aprovacao": 1
+   }
+  ],
+  "links": [
+   {
+    "rel": "self",
+    "href": "https://dadosabertos.camara.leg.br/api/v2/votacoes?idOrgao=180&dataInicio=2026-10-03&dataFim=2026-11-02&itens=200&ordem=ASC&ordenarPor=dataHoraRegistro"
+   },
+   {
+    "rel": "first",
+    "href": "https://dadosabertos.camara.leg.br/api/v2/votacoes?idOrgao=180&dataInicio=2026-10-03&dataFim=2026-11-02&ordem=ASC&ordenarPor=dataHoraRegistro&pagina=1&itens=100"
+   },
+   {
+    "rel": "last",
+    "href": "https://dadosabertos.camara.leg.br/api/v2/votacoes?idOrgao=180&dataInicio=2026-10-03&dataFim=2026-11-02&ordem=ASC&ordenarPor=dataHoraRegistro&pagina=1&itens=100"
+   }
+  ]
+ },
+ "https://legis.senado.leg.br/dadosabertos/votacao?dataInicio=2026-10-03&dataFim=2026-11-02": [
+  {
+   "ano": 2019,
+   "casaSessao": "SF",
+   "codigoMateria": 174386,
+   "codigoSessao": 591267,
+   "codigoSessaoLegislativa": 874,
+   "codigoSessaoVotacao": 7106,
+   "dataApresentacao": "2026-05-28",
+   "dataSessao": "2026-10-14",
+   "descricaoVotacao": "Votação nominal da Proposta de Emenda à Constituição nº 221, de 2019, em primeiro turno.",
+   "ementa": "Altera o art. 7º da Constituição Federal para reduzir a duração máxima semanal do trabalho e prever 2 (dois) dias de repouso semanal remunerado, sem qualquer redução salarial; e dá outras providências.",
+   "idProcesso": 9056435,
+   "identificacao": "PEC 221/2019",
+   "numero": "221",
+   "numeroSessao": 134,
+   "resultadoVotacao": "A",
+   "sequencialSessao": 1,
+   "sequencialVotacao": 4420,
+   "sigla": "PEC",
+   "siglaTipoSessao": "DOR",
+   "totalVotosAbstencao": null,
+   "totalVotosNao": null,
+   "totalVotosSim": null,
+   "votacaoSecreta": "N",
+   "votos": [
+    {
+     "codigoParlamentar": 5672,
+     "descricaoVotoParlamentar": null,
+     "nomeParlamentar": "Alan Rick",
+     "sexoParlamentar": "M",
+     "siglaPartidoParlamentar": "REPUBLICANOS",
+     "siglaUFParlamentar": "AC",
+     "siglaVotoParlamentar": "Sim"
+    },
+    {
+     "codigoParlamentar": 5982,
+     "descricaoVotoParlamentar": null,
+     "nomeParlamentar": "Alessandro Vieira",
+     "sexoParlamentar": "M",
+     "siglaPartidoParlamentar": "MDB",
+     "siglaUFParlamentar": "SE",
+     "siglaVotoParlamentar": "Sim"
+    },
+    {
+     "codigoParlamentar": 6358,
+     "descricaoVotoParlamentar": null,
+     "nomeParlamentar": "Ana Paula Lobato",
+     "sexoParlamentar": "F",
+     "siglaPartidoParlamentar": "PSB",
+     "siglaUFParlamentar": "MA",
+     "siglaVotoParlamentar": "Sim"
+    },
+    {
+     "codigoParlamentar": 5967,
+     "descricaoVotoParlamentar": null,
+     "nomeParlamentar": "Angelo Coronel",
+     "sexoParlamentar": "M",
+     "siglaPartidoParlamentar": "REPUBLICANOS",
+     "siglaUFParlamentar": "BA",
+     "siglaVotoParlamentar": "Sim"
+    },
+    {
+     "codigoParlamentar": 6009,
+     "descricaoVotoParlamentar": null,
+     "nomeParlamentar": "Astronauta Marcos Pontes",
+     "sexoParlamentar": "M",
+     "siglaPartidoParlamentar": "PL",
+     "siglaUFParlamentar": "SP",
+     "siglaVotoParlamentar": "Sim"
+    },
+    {
+     "codigoParlamentar": 739,
+     "descricaoVotoParlamentar": "Presente – Não registrou voto",
+     "nomeParlamentar": "Ciro Nogueira",
+     "sexoParlamentar": "M",
+     "siglaPartidoParlamentar": "PP",
+     "siglaUFParlamentar": "PI",
+     "siglaVotoParlamentar": "P-NRV"
+    },
+    {
+     "codigoParlamentar": 6331,
+     "descricaoVotoParlamentar": "Presente – Não registrou voto",
+     "nomeParlamentar": "Sergio Moro",
+     "sexoParlamentar": "M",
+     "siglaPartidoParlamentar": "PL",
+     "siglaUFParlamentar": "PR",
+     "siglaVotoParlamentar": "P-NRV"
+    },
+    {
+     "codigoParlamentar": 3830,
+     "descricaoVotoParlamentar": null,
+     "nomeParlamentar": "Davi Alcolumbre",
+     "sexoParlamentar": "M",
+     "siglaPartidoParlamentar": "UNIÃO",
+     "siglaUFParlamentar": "AP",
+     "siglaVotoParlamentar": "Presidente (art. 51 RISF)"
+    },
+    {
+     "codigoParlamentar": 6341,
+     "descricaoVotoParlamentar": null,
+     "nomeParlamentar": "Hamilton Mourão",
+     "sexoParlamentar": "M",
+     "siglaPartidoParlamentar": "REPUBLICANOS",
+     "siglaUFParlamentar": "RS",
+     "siglaVotoParlamentar": "Não"
+    },
+    {
+     "codigoParlamentar": 285,
+     "descricaoVotoParlamentar": "Atividade parlamentar",
+     "nomeParlamentar": "Marcio Bittar",
+     "sexoParlamentar": "M",
+     "siglaPartidoParlamentar": "PL",
+     "siglaUFParlamentar": "AC",
+     "siglaVotoParlamentar": "AP"
+    },
+    {
+     "codigoParlamentar": 4694,
+     "descricaoVotoParlamentar": "Licença saúde",
+     "nomeParlamentar": "Rogerio Marinho",
+     "sexoParlamentar": "M",
+     "siglaPartidoParlamentar": "PL",
+     "siglaUFParlamentar": "RN",
+     "siglaVotoParlamentar": "LS"
+    }
+   ]
+  },
+  {
+   "ano": 2026,
+   "casaSessao": "SF",
+   "codigoMateria": 175969,
+   "codigoSessao": 591273,
+   "codigoSessaoLegislativa": 874,
+   "codigoSessaoVotacao": 7108,
+   "dataApresentacao": "2026-10-14",
+   "dataSessao": "2026-10-15",
+   "descricaoVotacao": "Votação nominal do Projeto de Lei Complementar nº 186, de 2026, nos termos do parecer.",
+   "ementa": "Altera a Lei Complementar nº 123, de 14 de dezembro de 2006, para atualizar o limite de receita bruta anual e o número de empregados do Microempreendedor Individual (MEI), conceder remissão de créditos de titularidade da União de sua responsabilidade e dispor sobre a aplicação da medida.",
+   "idProcesso": 9114338,
+   "identificacao": "PLP 186/2026",
+   "numero": "186",
+   "numeroSessao": 135,
+   "resultadoVotacao": "A",
+   "sequencialSessao": 1,
+   "sequencialVotacao": 4422,
+   "sigla": "PLP",
+   "siglaTipoSessao": "DOR",
+   "totalVotosAbstencao": null,
+   "totalVotosNao": null,
+   "totalVotosSim": null,
+   "votacaoSecreta": "N",
+   "votos": [
+    {
+     "codigoParlamentar": 5672,
+     "descricaoVotoParlamentar": null,
+     "nomeParlamentar": "Alan Rick",
+     "sexoParlamentar": "M",
+     "siglaPartidoParlamentar": "REPUBLICANOS",
+     "siglaUFParlamentar": "AC",
+     "siglaVotoParlamentar": "Sim"
+    },
+    {
+     "codigoParlamentar": 5982,
+     "descricaoVotoParlamentar": null,
+     "nomeParlamentar": "Alessandro Vieira",
+     "sexoParlamentar": "M",
+     "siglaPartidoParlamentar": "MDB",
+     "siglaUFParlamentar": "SE",
+     "siglaVotoParlamentar": "Sim"
+    },
+    {
+     "codigoParlamentar": 6358,
+     "descricaoVotoParlamentar": null,
+     "nomeParlamentar": "Ana Paula Lobato",
+     "sexoParlamentar": "F",
+     "siglaPartidoParlamentar": "PSB",
+     "siglaUFParlamentar": "MA",
+     "siglaVotoParlamentar": "Sim"
+    },
+    {
+     "codigoParlamentar": 5967,
+     "descricaoVotoParlamentar": null,
+     "nomeParlamentar": "Angelo Coronel",
+     "sexoParlamentar": "M",
+     "siglaPartidoParlamentar": "REPUBLICANOS",
+     "siglaUFParlamentar": "BA",
+     "siglaVotoParlamentar": "Sim"
+    },
+    {
+     "codigoParlamentar": 6009,
+     "descricaoVotoParlamentar": null,
+     "nomeParlamentar": "Astronauta Marcos Pontes",
+     "sexoParlamentar": "M",
+     "siglaPartidoParlamentar": "PL",
+     "siglaUFParlamentar": "SP",
+     "siglaVotoParlamentar": "Sim"
+    },
+    {
+     "codigoParlamentar": 5973,
+     "descricaoVotoParlamentar": "Não Compareceu",
+     "nomeParlamentar": "Cid Gomes",
+     "sexoParlamentar": "M",
+     "siglaPartidoParlamentar": "PSB",
+     "siglaUFParlamentar": "CE",
+     "siglaVotoParlamentar": "NCom"
+    },
+    {
+     "codigoParlamentar": 3830,
+     "descricaoVotoParlamentar": null,
+     "nomeParlamentar": "Davi Alcolumbre",
+     "sexoParlamentar": "M",
+     "siglaPartidoParlamentar": "UNIÃO",
+     "siglaUFParlamentar": "AP",
+     "siglaVotoParlamentar": "Presidente (art. 51 RISF)"
+    },
+    {
+     "codigoParlamentar": 4694,
+     "descricaoVotoParlamentar": "Atividade parlamentar",
+     "nomeParlamentar": "Rogerio Marinho",
+     "sexoParlamentar": "M",
+     "siglaPartidoParlamentar": "PL",
+     "siglaUFParlamentar": "RN",
+     "siglaVotoParlamentar": "AP"
+    }
+   ]
+  }
+ ],
+ "https://dadosabertos.camara.leg.br/api/v2/eventos?idOrgao=180&dataInicio=2026-11-02&dataFim=2026-11-08&itens=100": {
+  "dados": [
+   {
+    "id": 83108,
+    "dataHoraInicio": "2026-11-03T13:55",
+    "descricaoTipo": "Sessão Deliberativa Extraordinária",
+    "situacao": "Agendada"
+   }
+  ],
+  "links": []
+ },
+ "https://dadosabertos.camara.leg.br/api/v2/eventos/83108/pauta": {
+  "dados": [
+   {
+    "ordem": 1,
+    "topico": "Requerimentos de Urgência Art. 155",
+    "regime": "Matéria Sobre a Mesa",
+    "codRegime": 99,
+    "titulo": "REQ 4194/2026",
+    "proposicao_": {
+     "id": 2645996,
+     "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2645996",
+     "siglaTipo": "REQ",
+     "codTipo": 392,
+     "numero": 4194,
+     "ano": 2026,
+     "ementa": "Requer regime de urgência urgentíssima para a apreciação do Substitutivo do Senado Federal ao Projeto de Lei nº 3.099, de 2019, que institui o Dia Nacional do Autocuidado e altera a Lei nº 8.080, de 19 de setembro de 1990, para prever o estímulo ao autocuidado responsável no âmbito do Sistema Único de Saúde – SUS.",
+     "dataApresentacao": "2026-09-04T12:46"
+    },
+    "relator": null,
+    "textoParecer": null,
+    "proposicaoRelacionada_": {
+     "id": 2204495,
+     "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2204495",
+     "siglaTipo": "PL",
+     "codTipo": "139",
+     "numero": "3099",
+     "ano": "2019",
+     "ementa": "Institui no calendário nacional o \"Dia Nacional do Autocuidado\".",
+     "dataApresentacao": null
+    },
+    "uriVotacao": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2645996-7/",
+    "situacaoItem": "Matéria sobre a Mesa. Aprovado, por unanimidade, o Requerimento de Urgência (Art. 155 do RICD)."
+   },
+   {
+    "ordem": 6,
+    "topico": "Discussão",
+    "regime": "Urgência (Art. 151, I \"j\", RICD)",
+    "codRegime": 101,
+    "titulo": "PDL 274/2026",
+    "proposicao_": {
+     "id": 2649363,
+     "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2649363",
+     "siglaTipo": "PPP",
+     "codTipo": 192,
+     "numero": 1,
+     "ano": 0,
+     "ementa": "Parecer proferido em Plenário pela Relatora, Dep. Benedita da Silva (PT-RJ) pela: • Comissão de Relações Exteriores e de Defesa Nacional, que conclui pela aprovação do Projeto de Decreto Legislativo nº 274, de 2026, nos termos do Substitutivo adotado. • Comissão de Constituição e Justiça e de Cidadania, que conclui pela constitucionalidade, juridicidade e boa técnica legislativa; e, no mérito, pela aprovação do Projeto de Decreto Legislativo nº 274, de 2026, e do Substitutivo adotado pela relatora da Comissão de Relações Exteriores e de Defesa Nacional.",
+     "dataApresentacao": "2026-05-04T18:00"
+    },
+    "relator": {
+     "id": 73701,
+     "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/73701",
+     "nome": "Benedita da Silva",
+     "siglaPartido": "PT",
+     "uriPartido": "https://dadosabertos.camara.leg.br/api/v2/partidos/36844",
+     "siglaUf": "RJ",
+     "idLegislatura": 57,
+     "urlFoto": "https://www.camara.leg.br/internet/deputado/bandep/73701.jpg",
+     "email": "dep.beneditadasilva@camara.leg.br"
+    },
+    "textoParecer": "Parecer proferido em Plenário pela Relatora, Dep. Benedita da Silva (PT-RJ) pela:\r\n• Comissão de Relações Exteriores e de Defesa Nacional, que conclui pela aprovação do Projeto de Decreto Legislativo nº 274, de 2026, nos termos do Substitutivo adotado.\r\n• Comissão de Constituição e Justiça e de Cidadania, que conclui pela constitucionalidade, juridicidade e boa técnica legislativa; e, no mérito, pela aprovação do Projeto de Decreto Legislativo nº 274, de 2026, e do Substitutivo adotado pela relatora da Comissão de Relações Exteriores e de Defesa Nacional.",
+    "proposicaoRelacionada_": {
+     "id": 2620905,
+     "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2620905",
+     "siglaTipo": "PDL",
+     "codTipo": "554",
+     "numero": "274",
+     "ano": "2026",
+     "ementa": "Aprova o texto do Acordo sobre o Reconhecimento Mútuo de Medidas de Proteção às Mulheres em Situações de Violência de Gênero entre os Estados Partes do MERCOSUL e Estados Associados, assinado na cidade de Assunção, República do Paraguai, em 20 de julho de 2022",
+     "dataApresentacao": null
+    },
+    "uriVotacao": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2620905-48/",
+    "situacaoItem": "Discussão em turno único. Votação do Requerimento do Dep. Sóstenes Cavalcante, que solicita a retirada de pauta deste Projeto de Decreto Legislativo. Rejeitado o Requerimento. Parecer proferido em Plenário pela Relatora, Dep. Benedita da Silva (PT-RJ) pela:• Comissão de Relações Exteriores e de Defesa Nacional, que conclui pela aprovação do Projeto de Decreto Legislativo nº 274, de 2026, nos termos do Substitutivo adotado.• Comissão de Constituição e Justiça e de Cidadania, que conclui pela constitucionalidade, juridicidade e boa técnica legislativa; e, no mérito, pela aprovação do Projeto de Decreto Legislativo nº 274, de 2026, nos termos do Substitutivo adotado pela relatora da Comissão de Relações Exteriores e de Defesa Nacional.  Discutiram a Matéria: Dep. Alice Portugal (PCdoB-BA) e Dep. Erika Kokay (PT-DF). Encerrada a discussão.  Votação em turno único. Aprovado o Substitutivo ao Projeto de Decreto Legislativo nº 274, de 2026, adotado pela relatora da Comissão de Relações Exteriores e de Defesa Nacional. Em consequência, fica prejudicada a proposição inicial. Votação da Redação Final. Aprovada a Redação Final, assinada pela relatora, Dep. Benedita da Silva (PT/RJ). A matéria vai ao Senado Federal (PDL 274-B/2026)."
+   },
+   {
+    "ordem": 6,
+    "topico": "Discussão",
+    "regime": "Urgência (Art. 151, I \"j\", RICD)",
+    "codRegime": 101,
+    "titulo": "PDL 274/2026",
+    "proposicao_": {
+     "id": 2649363,
+     "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2649363",
+     "siglaTipo": "PPP",
+     "codTipo": 192,
+     "numero": 1,
+     "ano": 0,
+     "ementa": "Parecer proferido em Plenário pela Relatora, Dep. Benedita da Silva (PT-RJ) pela: • Comissão de Relações Exteriores e de Defesa Nacional, que conclui pela aprovação do Projeto de Decreto Legislativo nº 274, de 2026, nos termos do Substitutivo adotado. • Comissão de Constituição e Justiça e de Cidadania, que conclui pela constitucionalidade, juridicidade e boa técnica legislativa; e, no mérito, pela aprovação do Projeto de Decreto Legislativo nº 274, de 2026, e do Substitutivo adotado pela relatora da Comissão de Relações Exteriores e de Defesa Nacional.",
+     "dataApresentacao": "2026-05-04T18:00"
+    },
+    "relator": {
+     "id": 73701,
+     "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/73701",
+     "nome": "Benedita da Silva",
+     "siglaPartido": "PT",
+     "uriPartido": "https://dadosabertos.camara.leg.br/api/v2/partidos/36844",
+     "siglaUf": "RJ",
+     "idLegislatura": 57,
+     "urlFoto": "https://www.camara.leg.br/internet/deputado/bandep/73701.jpg",
+     "email": "dep.beneditadasilva@camara.leg.br"
+    },
+    "textoParecer": "Parecer proferido em Plenário pela Relatora, Dep. Benedita da Silva (PT-RJ) pela:\r\n• Comissão de Relações Exteriores e de Defesa Nacional, que conclui pela aprovação do Projeto de Decreto Legislativo nº 274, de 2026, nos termos do Substitutivo adotado.\r\n• Comissão de Constituição e Justiça e de Cidadania, que conclui pela constitucionalidade, juridicidade e boa técnica legislativa; e, no mérito, pela aprovação do Projeto de Decreto Legislativo nº 274, de 2026, e do Substitutivo adotado pela relatora da Comissão de Relações Exteriores e de Defesa Nacional.",
+    "proposicaoRelacionada_": {
+     "id": 2620905,
+     "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2620905",
+     "siglaTipo": "PDL",
+     "codTipo": "554",
+     "numero": "274",
+     "ano": "2026",
+     "ementa": "Aprova o texto do Acordo sobre o Reconhecimento Mútuo de Medidas de Proteção às Mulheres em Situações de Violência de Gênero entre os Estados Partes do MERCOSUL e Estados Associados, assinado na cidade de Assunção, República do Paraguai, em 20 de julho de 2022",
+     "dataApresentacao": null
+    },
+    "uriVotacao": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2620905-53/",
+    "situacaoItem": "Discussão em turno único. Votação do Requerimento do Dep. Sóstenes Cavalcante, que solicita a retirada de pauta deste Projeto de Decreto Legislativo. Rejeitado o Requerimento. Parecer proferido em Plenário pela Relatora, Dep. Benedita da Silva (PT-RJ) pela:• Comissão de Relações Exteriores e de Defesa Nacional, que conclui pela aprovação do Projeto de Decreto Legislativo nº 274, de 2026, nos termos do Substitutivo adotado.• Comissão de Constituição e Justiça e de Cidadania, que conclui pela constitucionalidade, juridicidade e boa técnica legislativa; e, no mérito, pela aprovação do Projeto de Decreto Legislativo nº 274, de 2026, nos termos do Substitutivo adotado pela relatora da Comissão de Relações Exteriores e de Defesa Nacional.  Discutiram a Matéria: Dep. Alice Portugal (PCdoB-BA) e Dep. Erika Kokay (PT-DF). Encerrada a discussão.  Votação em turno único. Aprovado o Substitutivo ao Projeto de Decreto Legislativo nº 274, de 2026, adotado pela relatora da Comissão de Relações Exteriores e de Defesa Nacional. Em consequência, fica prejudicada a proposição inicial. Votação da Redação Final. Aprovada a Redação Final, assinada pela relatora, Dep. Benedita da Silva (PT/RJ). A matéria vai ao Senado Federal (PDL 274-B/2026)."
+   },
+   {
+    "ordem": 6,
+    "topico": "Discussão",
+    "regime": "Urgência (Art. 151, I \"j\", RICD)",
+    "codRegime": 101,
+    "titulo": "PDL 274/2026",
+    "proposicao_": {
+     "id": 2649363,
+     "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2649363",
+     "siglaTipo": "PPP",
+     "codTipo": 192,
+     "numero": 1,
+     "ano": 0,
+     "ementa": "Parecer proferido em Plenário pela Relatora, Dep. Benedita da Silva (PT-RJ) pela: • Comissão de Relações Exteriores e de Defesa Nacional, que conclui pela aprovação do Projeto de Decreto Legislativo nº 274, de 2026, nos termos do Substitutivo adotado. • Comissão de Constituição e Justiça e de Cidadania, que conclui pela constitucionalidade, juridicidade e boa técnica legislativa; e, no mérito, pela aprovação do Projeto de Decreto Legislativo nº 274, de 2026, e do Substitutivo adotado pela relatora da Comissão de Relações Exteriores e de Defesa Nacional.",
+     "dataApresentacao": "2026-05-04T18:00"
+    },
+    "relator": {
+     "id": 73701,
+     "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/73701",
+     "nome": "Benedita da Silva",
+     "siglaPartido": "PT",
+     "uriPartido": "https://dadosabertos.camara.leg.br/api/v2/partidos/36844",
+     "siglaUf": "RJ",
+     "idLegislatura": 57,
+     "urlFoto": "https://www.camara.leg.br/internet/deputado/bandep/73701.jpg",
+     "email": "dep.beneditadasilva@camara.leg.br"
+    },
+    "textoParecer": "Parecer proferido em Plenário pela Relatora, Dep. Benedita da Silva (PT-RJ) pela:\r\n• Comissão de Relações Exteriores e de Defesa Nacional, que conclui pela aprovação do Projeto de Decreto Legislativo nº 274, de 2026, nos termos do Substitutivo adotado.\r\n• Comissão de Constituição e Justiça e de Cidadania, que conclui pela constitucionalidade, juridicidade e boa técnica legislativa; e, no mérito, pela aprovação do Projeto de Decreto Legislativo nº 274, de 2026, e do Substitutivo adotado pela relatora da Comissão de Relações Exteriores e de Defesa Nacional.",
+    "proposicaoRelacionada_": {
+     "id": 2620905,
+     "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2620905",
+     "siglaTipo": "PDL",
+     "codTipo": "554",
+     "numero": "274",
+     "ano": "2026",
+     "ementa": "Aprova o texto do Acordo sobre o Reconhecimento Mútuo de Medidas de Proteção às Mulheres em Situações de Violência de Gênero entre os Estados Partes do MERCOSUL e Estados Associados, assinado na cidade de Assunção, República do Paraguai, em 20 de julho de 2022",
+     "dataApresentacao": null
+    },
+    "uriVotacao": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2620905-56/",
+    "situacaoItem": "Discussão em turno único. Votação do Requerimento do Dep. Sóstenes Cavalcante, que solicita a retirada de pauta deste Projeto de Decreto Legislativo. Rejeitado o Requerimento. Parecer proferido em Plenário pela Relatora, Dep. Benedita da Silva (PT-RJ) pela:• Comissão de Relações Exteriores e de Defesa Nacional, que conclui pela aprovação do Projeto de Decreto Legislativo nº 274, de 2026, nos termos do Substitutivo adotado.• Comissão de Constituição e Justiça e de Cidadania, que conclui pela constitucionalidade, juridicidade e boa técnica legislativa; e, no mérito, pela aprovação do Projeto de Decreto Legislativo nº 274, de 2026, nos termos do Substitutivo adotado pela relatora da Comissão de Relações Exteriores e de Defesa Nacional.  Discutiram a Matéria: Dep. Alice Portugal (PCdoB-BA) e Dep. Erika Kokay (PT-DF). Encerrada a discussão.  Votação em turno único. Aprovado o Substitutivo ao Projeto de Decreto Legislativo nº 274, de 2026, adotado pela relatora da Comissão de Relações Exteriores e de Defesa Nacional. Em consequência, fica prejudicada a proposição inicial. Votação da Redação Final. Aprovada a Redação Final, assinada pela relatora, Dep. Benedita da Silva (PT/RJ). A matéria vai ao Senado Federal (PDL 274-B/2026)."
+   }
+  ],
+  "links": [
+   {
+    "rel": "self",
+    "href": "https://dadosabertos.camara.leg.br/api/v2/eventos/83108/pauta"
+   }
+  ]
+ },
+ "https://legis.senado.leg.br/dadosabertos/plenario/agenda/mes/20261102": {
+  "AgendaPlenario": {
+   "noNamespaceSchemaLocation": "https://legis.senado.leg.br/dadosabertos/dados/AgendaPlenariov2.xsd",
+   "Metadados": {
+    "Versao": "02/11/2026 23:32:08",
+    "VersaoServico": "2",
+    "DataVersaoServico": "2019-10-15",
+    "DescricaoDataSet": "Retorna a Agenda do mês nos Plenários do Senado Federal e Congresso Nacional (a partir da data informada até o fim do mês."
+   },
+   "Sessoes": {
+    "Sessao": [
+     {
+      "DiaUtil": "03",
+      "Data": "2026-11-03",
+      "DiaSemana": "terça-feira",
+      "Mes": "Novembro",
+      "Horario": "14 horas ",
+      "Hora": "14:00",
+      "TipoSessao": "SESSÃO DELIBERATIVA ORDINÁRIA ",
+      "LocalSessao": "Plenário do Senado Federal",
+      "CodigoSessao": "594169",
+      "Casa": "SF",
+      "SessaoLegislativa": "4",
+      "Legislatura": "57",
+      "CodigoSituacaoSessao": "30",
+      "SituacaoSessao": "Agendada",
+      "Realizada": {
+       "Status": "Não"
+      },
+      "PautaConfirmada": "Sim",
+      "TipoPresenca": "S",
+      "DescricaoTipoPresenca": "Semipresencial",
+      "Oradores": {
+       "TipoOrador": [
+        {
+         "DescricaoTipoOrador": "Oradores Inscritos",
+         "CodigoTipoOrador": "13",
+         "OradorSessao": {
+          "Orador": [
+           {
+            "Ordem": "1",
+            "Parlamentar": "Senador Sargento Reginauro",
+            "IndicadorCancelado": "N"
+           },
+           {
+            "Ordem": "2",
+            "Parlamentar": "Senador Esperidião Amin",
+            "IndicadorCancelado": "N"
+           },
+           {
+            "Ordem": "3",
+            "Parlamentar": "Senador Paulo Paim",
+            "IndicadorCancelado": "N"
+           },
+           {
+            "Ordem": "4",
+            "Parlamentar": "Senador Humberto Costa",
+            "IndicadorCancelado": "N"
+           },
+           {
+            "Ordem": "5",
+            "Parlamentar": "Senador Veneziano Vital do Rêgo",
+            "IndicadorCancelado": "N"
+           },
+           {
+            "Ordem": "6",
+            "Parlamentar": "Senador Marcio Bittar",
+            "IndicadorCancelado": "N"
+           },
+           {
+            "Ordem": "7",
+            "Parlamentar": "Senador Zequinha Marinho",
+            "IndicadorCancelado": "N"
+           }
+          ]
+         }
+        }
+       ]
+      },
+      "Materias": {
+       "Materia": [
+        {
+         "CodigoMateria": "172997",
+         "Identificacao": "PROPOSTA DE EMENDA À CONSTITUIÇÃO Nº 18, DE 2025\n\n",
+         "SiglaMateria": "PEC",
+         "NumeroMateria": "00018",
+         "AnoMateria": "2025",
+         "DescricaoObjetivoProcesso": "Revisora",
+         "DescricaoIdentificacaoMateria": "PEC 18/2025",
+         "SiglaCasaIniciadora": "CD",
+         "Ementa": "Altera os arts. 5º, 15, 22, 23, 24, 40, 49, 84, 103-B, 130-A e 144 da Constituição Federal e o art.76 do Ato das Disposições Constitucionais Transitórias; acrescenta os arts. 144-A e 144-B à Constituição Federal e os arts. 139, 140 e 141 ao Ato das Disposições Constitucionais Transitórias; e dá outras providências.",
+         "Parecer": "Parecer nº 61, de 2026, da Comissão de Constituição, Justiça e Cidadania, Relator: Senador Rogério Carvalho, favorável à proposta e às Emendas nºs 22, 39, 55 e 64, pelo acolhimento parcial das Emendas nºs 58 e 63, com as Emendas nºs 82 e 83, de redação, que apresenta, e pela rejeição das demais emendas.\n\nPendente de parecer sobre as emendas de Plenário.\n(Aprovado o Requerimento nº 713, de 2026, de calendário especial para a matéria, na Sessão Plenária de 14/10/2026).",
+         "Apreciacao": "Primeira sessão de discussão, em primeiro turno",
+         "ApreciacaoPapeleta": "Primeira sessão de discussão, em primeiro turno, da Proposta de Emenda À Constituição nº 18, de 2025, da Presidência da República, que ",
+         "EmentaPapeleta": "altera os arts. 5º, 15, 22, 23, 24, 40, 49, 84, 103-B, 130-A e 144 da Constituição Federal e o art.76 do Ato das Disposições Constitucionais Transitórias; acrescenta os arts. 144-A e 144-B à Constituição Federal e os arts. 139, 140 e 141 ao Ato das Disposições Constitucionais Transitórias; e dá outras providências.",
+         "Cabecalho": "PEC da Segurança Pública",
+         "NomeAutor": "Presidência da República",
+         "TipoPauta": "O",
+         "DescricaoTipoPauta": "Pauta",
+         "SequenciaOrdem": "1"
+        },
+        {
+         "CodigoMateria": "102633",
+         "Identificacao": "PROJETO DE DECRETO LEGISLATIVO Nº 240, DE 2011\n\n",
+         "SiglaMateria": "PDS",
+         "NumeroMateria": "00240",
+         "AnoMateria": "2011",
+         "DescricaoObjetivoProcesso": "Revisora",
+         "DescricaoIdentificacaoMateria": "PDS 240/2011",
+         "SiglaCasaIniciadora": "CD",
+         "Ementa": "Aprova o texto do Acordo entre o Governo da República Federativa do Brasil e o Governo da República da Guiana sobre Cooperação em Matéria de Defesa, assinado em Bonfim-RR, em 14 de setembro de 2009.",
+         "Parecer": "Parecer favorável nº 35, de 2026, da Comissão de Relações Exteriores e de Defesa Nacional, Relator: Senador Chico Rodrigues, Relator \"ad hoc\": Senador Hamilton Mourão. ",
+         "Apreciacao": "Discussão, em turno único",
+         "ApreciacaoPapeleta": "Discussão, em turno único, do Projeto de Decreto Legislativo nº 240, de 2011, da Comissão de Relações Exteriores e Defesa Nacional da Câmara dos Deputados, que ",
+         "EmentaPapeleta": "aprova o texto do Acordo entre o Governo da República Federativa do Brasil e o Governo da República da Guiana sobre Cooperação em Matéria de Defesa, assinado em Bonfim-RR, em 14 de setembro de 2009.",
+         "NomeAutor": "Comissão de Relações Exteriores e de Defesa Nacional",
+         "TipoPauta": "O",
+         "DescricaoTipoPauta": "Pauta",
+         "SequenciaOrdem": "4"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ },
+ "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2635476": {
+  "dados": {
+   "id": 2635476,
+   "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2635476",
+   "siglaTipo": "PLP",
+   "codTipo": 140,
+   "numero": 186,
+   "ano": 2026,
+   "ementa": "Altera a Lei Complementar nº 123, de 14 de dezembro de 2006, para dispor sobre o limite de receita bruta anual e o número de empregados do Microempreendedor Individual.",
+   "dataApresentacao": "2026-06-29T18:10",
+   "uriOrgaoNumerador": "https://dadosabertos.camara.leg.br/api/v2/orgaos/4",
+   "statusProposicao": {
+    "dataHora": "2026-10-21T00:00",
+    "sequencia": 58,
+    "siglaOrgao": "MESA",
+    "uriOrgao": "https://dadosabertos.camara.leg.br/api/v2/orgaos/4",
+    "uriUltimoRelator": "https://dadosabertos.camara.leg.br/api/v2/deputados/178887",
+    "regime": "Urgência (Art. 64, CF)",
+    "descricaoTramitacao": "Transformação em Norma Jurídica",
+    "codTipoTramitacao": "251",
+    "descricaoSituacao": "Transformado em Norma Jurídica",
+    "codSituacao": 1140,
+    "despacho": "Transformado na Lei Complementar 238/2026. DOU 21/10/2026 PÁG 01 COL 01 - Edição Extra A.",
+    "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3185607",
+    "ambito": "Regimental",
+    "apreciacao": "Proposição Sujeita à Apreciação do Plenário"
+   },
+   "uriAutores": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2635476/autores",
+   "descricaoTipo": "Projeto de Lei Complementar",
+   "ementaDetalhada": null,
+   "keywords": "Alteração,Estatuto Nacional da Microempresa e da Empresa de Pequeno Porte (2006),aumento,limite máximo,Receita bruta,enquadramento,Microempreendedor Individual (MEI),quantidade,empregado,Microempresa,Empreendimento rural,Tributação,Benefício Fiscal",
+   "uriPropPrincipal": null,
+   "uriPropAnterior": null,
+   "uriPropPosterior": null,
+   "urlInteiroTeor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3153934",
+   "urnFinal": null,
+   "texto": null,
+   "justificativa": null
+  },
+  "links": [
+   {
+    "rel": "self",
+    "href": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2635476"
+   }
+  ]
+ },
+ "https://dadosabertos.camara.leg.br/api/v2/votacoes/2635476-23/votos": {
+  "dados": [
+   {
+    "tipoVoto": "Não",
+    "dataRegistroVoto": "2026-10-14T17:20:08",
+    "deputado_": {
+     "id": 220665,
+     "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/220665",
+     "nome": "Clarissa Tércio",
+     "siglaPartido": "PP",
+     "uriPartido": "https://dadosabertos.camara.leg.br/api/v2/partidos/37903",
+     "siglaUf": "PE",
+     "idLegislatura": 57,
+     "urlFoto": "https://www.camara.leg.br/internet/deputado/bandep/220665.jpg",
+     "email": "dep.clarissatercio@camara.leg.br"
+    }
+   },
+   {
+    "tipoVoto": "Não",
+    "dataRegistroVoto": "2026-10-14T17:20:06",
+    "deputado_": {
+     "id": 204367,
+     "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/204367",
+     "nome": "Daniel Freitas",
+     "siglaPartido": "PL",
+     "uriPartido": "https://dadosabertos.camara.leg.br/api/v2/partidos/37906",
+     "siglaUf": "SC",
+     "idLegislatura": 57,
+     "urlFoto": "https://www.camara.leg.br/internet/deputado/bandep/204367.jpg",
+     "email": "dep.danielfreitas@camara.leg.br"
+    }
+   },
+   {
+    "tipoVoto": "Não",
+    "dataRegistroVoto": "2026-10-14T17:20:00",
+    "deputado_": {
+     "id": 204361,
+     "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/204361",
+     "nome": "Carlos Chiodini",
+     "siglaPartido": "MDB",
+     "uriPartido": "https://dadosabertos.camara.leg.br/api/v2/partidos/36899",
+     "siglaUf": "SC",
+     "idLegislatura": 57,
+     "urlFoto": "https://www.camara.leg.br/internet/deputado/bandep/204361.jpg",
+     "email": "dep.carloschiodini@camara.leg.br"
+    }
+   },
+   {
+    "tipoVoto": "Não",
+    "dataRegistroVoto": "2026-10-14T17:19:58",
+    "deputado_": {
+     "id": 160642,
+     "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/160642",
+     "nome": "Pastor Eurico",
+     "siglaPartido": "PSDB",
+     "uriPartido": "https://dadosabertos.camara.leg.br/api/v2/partidos/36835",
+     "siglaUf": "PE",
+     "idLegislatura": 57,
+     "urlFoto": "https://www.camara.leg.br/internet/deputado/bandep/160642.jpg",
+     "email": "dep.pastoreurico@camara.leg.br"
+    }
+   },
+   {
+    "tipoVoto": "Não",
+    "dataRegistroVoto": "2026-10-14T17:19:46",
+    "deputado_": {
+     "id": 220651,
+     "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/220651",
+     "nome": "Simone Marquetto",
+     "siglaPartido": "PP",
+     "uriPartido": "https://dadosabertos.camara.leg.br/api/v2/partidos/37903",
+     "siglaUf": "SP",
+     "idLegislatura": 57,
+     "urlFoto": "https://www.camara.leg.br/internet/deputado/bandep/220651.jpg",
+     "email": "dep.simonemarquetto@camara.leg.br"
+    }
+   },
+   {
+    "tipoVoto": "Sim",
+    "dataRegistroVoto": "2026-10-14T17:16:32",
+    "deputado_": {
+     "id": 204481,
+     "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/204481",
+     "nome": "Dr. Jaziel",
+     "siglaPartido": "PL",
+     "uriPartido": "https://dadosabertos.camara.leg.br/api/v2/partidos/37906",
+     "siglaUf": "CE",
+     "idLegislatura": 57,
+     "urlFoto": "https://www.camara.leg.br/internet/deputado/bandep/204481.jpg",
+     "email": "dep.dr.jaziel@camara.leg.br"
+    }
+   },
+   {
+    "tipoVoto": "Sim",
+    "dataRegistroVoto": "2026-10-14T17:16:14",
+    "deputado_": {
+     "id": 204472,
+     "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/204472",
+     "nome": "José Medeiros",
+     "siglaPartido": "PL",
+     "uriPartido": "https://dadosabertos.camara.leg.br/api/v2/partidos/37906",
+     "siglaUf": "MT",
+     "idLegislatura": 57,
+     "urlFoto": "https://www.camara.leg.br/internet/deputado/bandep/204472.jpg",
+     "email": "dep.josemedeiros@camara.leg.br"
+    }
+   },
+   {
+    "tipoVoto": "Sim",
+    "dataRegistroVoto": "2026-10-14T17:14:42",
+    "deputado_": {
+     "id": 154700,
+     "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/154700",
+     "nome": "Paulo Soares",
+     "siglaPartido": "PODE",
+     "uriPartido": "https://dadosabertos.camara.leg.br/api/v2/partidos/36896",
+     "siglaUf": "SP",
+     "idLegislatura": 57,
+     "urlFoto": "https://www.camara.leg.br/internet/deputado/bandep/154700.jpg",
+     "email": null
+    }
+   },
+   {
+    "tipoVoto": "Sim",
+    "dataRegistroVoto": "2026-10-14T17:14:27",
+    "deputado_": {
+     "id": 74317,
+     "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/74317",
+     "nome": "Júlio Cesar",
+     "siglaPartido": "PSD",
+     "uriPartido": "https://dadosabertos.camara.leg.br/api/v2/partidos/36834",
+     "siglaUf": "PI",
+     "idLegislatura": 57,
+     "urlFoto": "https://www.camara.leg.br/internet/deputado/bandep/74317.jpg",
+     "email": "dep.juliocesar@camara.leg.br"
+    }
+   },
+   {
+    "tipoVoto": "Sim",
+    "dataRegistroVoto": "2026-10-14T17:14:27",
+    "deputado_": {
+     "id": 204398,
+     "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/204398",
+     "nome": "Felipe Francischini",
+     "siglaPartido": "PODE",
+     "uriPartido": "https://dadosabertos.camara.leg.br/api/v2/partidos/36896",
+     "siglaUf": "PR",
+     "idLegislatura": 57,
+     "urlFoto": "https://www.camara.leg.br/internet/deputado/bandep/204398.jpg",
+     "email": "dep.felipefrancischini@camara.leg.br"
+    }
+   },
+   {
+    "tipoVoto": "Artigo 17",
+    "dataRegistroVoto": "2026-10-14T17:10:39",
+    "deputado_": {
+     "id": 160674,
+     "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/160674",
+     "nome": "Hugo Motta",
+     "siglaPartido": "REPUBLICANOS",
+     "uriPartido": "https://dadosabertos.camara.leg.br/api/v2/partidos/37908",
+     "siglaUf": "PB",
+     "idLegislatura": 57,
+     "urlFoto": "https://www.camara.leg.br/internet/deputado/bandep/160674.jpg",
+     "email": "dep.hugomotta@camara.leg.br"
+    }
+   }
+  ],
+  "links": [
+   {
+    "rel": "self",
+    "href": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2635476-23/votos"
+   }
+  ]
+ },
+ "https://dadosabertos.camara.leg.br/api/v2/votacoes/2635476-23/orientacoes": {
+  "dados": [
+   {
+    "orientacaoVoto": "Não",
+    "codTipoLideranca": "B",
+    "siglaPartidoBloco": "Fdr PSOL-REDE",
+    "codPartidoBloco": null,
+    "uriPartidoBloco": null
+   },
+   {
+    "orientacaoVoto": "",
+    "codTipoLideranca": "P",
+    "siglaPartidoBloco": "PSB",
+    "codPartidoBloco": 36832,
+    "uriPartidoBloco": "https://dadosabertos.camara.leg.br/api/v2/partidos/36832"
+   },
+   {
+    "orientacaoVoto": "Não",
+    "codTipoLideranca": "B",
+    "siglaPartidoBloco": "Maioria",
+    "codPartidoBloco": null,
+    "uriPartidoBloco": null
+   },
+   {
+    "orientacaoVoto": "Não",
+    "codTipoLideranca": "B",
+    "siglaPartidoBloco": "Fdr PT-PCdoB-PV",
+    "codPartidoBloco": null,
+    "uriPartidoBloco": null
+   },
+   {
+    "orientacaoVoto": "Sim",
+    "codTipoLideranca": "P",
+    "siglaPartidoBloco": "MISSÃO",
+    "codPartidoBloco": 38011,
+    "uriPartidoBloco": "https://dadosabertos.camara.leg.br/api/v2/partidos/38011"
+   },
+   {
+    "orientacaoVoto": "Não",
+    "codTipoLideranca": "B",
+    "siglaPartidoBloco": "Oposição",
+    "codPartidoBloco": null,
+    "uriPartidoBloco": null
+   },
+   {
+    "orientacaoVoto": "Não",
+    "codTipoLideranca": "P",
+    "siglaPartidoBloco": "NOVO",
+    "codPartidoBloco": 37901,
+    "uriPartidoBloco": "https://dadosabertos.camara.leg.br/api/v2/partidos/37901"
+   },
+   {
+    "orientacaoVoto": "",
+    "codTipoLideranca": "P",
+    "siglaPartidoBloco": "SOLIDARIEDADE",
+    "codPartidoBloco": 37904,
+    "uriPartidoBloco": "https://dadosabertos.camara.leg.br/api/v2/partidos/37904"
+   },
+   {
+    "orientacaoVoto": "Não",
+    "codTipoLideranca": "B",
+    "siglaPartidoBloco": "Minoria",
+    "codPartidoBloco": null,
+    "uriPartidoBloco": null
+   },
+   {
+    "orientacaoVoto": "",
+    "codTipoLideranca": "P",
+    "siglaPartidoBloco": "PRD",
+    "codPartidoBloco": 38010,
+    "uriPartidoBloco": "https://dadosabertos.camara.leg.br/api/v2/partidos/38010"
+   },
+   {
+    "orientacaoVoto": "Não",
+    "codTipoLideranca": "B",
+    "siglaPartidoBloco": "Bl UniPpPsd...",
+    "codPartidoBloco": null,
+    "uriPartidoBloco": null
+   },
+   {
+    "orientacaoVoto": "",
+    "codTipoLideranca": "P",
+    "siglaPartidoBloco": "PL",
+    "codPartidoBloco": 37906,
+    "uriPartidoBloco": "https://dadosabertos.camara.leg.br/api/v2/partidos/37906"
+   },
+   {
+    "orientacaoVoto": "Não",
+    "codTipoLideranca": "B",
+    "siglaPartidoBloco": "Governo",
+    "codPartidoBloco": null,
+    "uriPartidoBloco": null
+   },
+   {
+    "orientacaoVoto": "Não",
+    "codTipoLideranca": "P",
+    "siglaPartidoBloco": "AVANTE",
+    "codPartidoBloco": 36898,
+    "uriPartidoBloco": "https://dadosabertos.camara.leg.br/api/v2/partidos/36898"
+   },
+   {
+    "orientacaoVoto": "Não",
+    "codTipoLideranca": "P",
+    "siglaPartidoBloco": "PDT",
+    "codPartidoBloco": 36786,
+    "uriPartidoBloco": "https://dadosabertos.camara.leg.br/api/v2/partidos/36786"
+   }
+  ],
+  "links": [
+   {
+    "rel": "self",
+    "href": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2635476-23/orientacoes"
+   }
+  ]
+ },
+ "https://dadosabertos.camara.leg.br/api/v2/votacoes/2635476-36/votos": {
+  "dados": [
+   {
+    "tipoVoto": "Sim",
+    "dataRegistroVoto": "2026-10-14T19:41:40",
+    "deputado_": {
+     "id": 178843,
+     "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/178843",
+     "nome": "Marx Beltrão",
+     "siglaPartido": "UNIÃO",
+     "uriPartido": "https://dadosabertos.camara.leg.br/api/v2/partidos/38009",
+     "siglaUf": "AL",
+     "idLegislatura": 57,
+     "urlFoto": "https://www.camara.leg.br/internet/deputado/bandep/178843.jpg",
+     "email": "dep.marxbeltrao@camara.leg.br"
+    }
+   },
+   {
+    "tipoVoto": "Sim",
+    "dataRegistroVoto": "2026-10-14T19:40:58",
+    "deputado_": {
+     "id": 220602,
+     "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/220602",
+     "nome": "Dimas Gadelha",
+     "siglaPartido": "PT",
+     "uriPartido": "https://dadosabertos.camara.leg.br/api/v2/partidos/36844",
+     "siglaUf": "RJ",
+     "idLegislatura": 57,
+     "urlFoto": "https://www.camara.leg.br/internet/deputado/bandep/220602.jpg",
+     "email": "dep.dimasgadelha@camara.leg.br"
+    }
+   },
+   {
+    "tipoVoto": "Sim",
+    "dataRegistroVoto": "2026-10-14T19:38:50",
+    "deputado_": {
+     "id": 220615,
+     "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/220615",
+     "nome": "Pastor Henrique Vieira",
+     "siglaPartido": "PSOL",
+     "uriPartido": "https://dadosabertos.camara.leg.br/api/v2/partidos/36839",
+     "siglaUf": "RJ",
+     "idLegislatura": 57,
+     "urlFoto": "https://www.camara.leg.br/internet/deputado/bandep/220615.jpg",
+     "email": "dep.pastorhenriquevieira@camara.leg.br"
+    }
+   },
+   {
+    "tipoVoto": "Sim",
+    "dataRegistroVoto": "2026-10-14T19:38:27",
+    "deputado_": {
+     "id": 204364,
+     "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/204364",
+     "nome": "Eli Borges",
+     "siglaPartido": "REPUBLICANOS",
+     "uriPartido": "https://dadosabertos.camara.leg.br/api/v2/partidos/37908",
+     "siglaUf": "TO",
+     "idLegislatura": 57,
+     "urlFoto": "https://www.camara.leg.br/internet/deputado/bandep/204364.jpg",
+     "email": "dep.eliborges@camara.leg.br"
+    }
+   },
+   {
+    "tipoVoto": "Sim",
+    "dataRegistroVoto": "2026-10-14T19:38:03",
+    "deputado_": {
+     "id": 204353,
+     "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/204353",
+     "nome": "Aline Gurgel",
+     "siglaPartido": "UNIÃO",
+     "uriPartido": "https://dadosabertos.camara.leg.br/api/v2/partidos/38009",
+     "siglaUf": "AP",
+     "idLegislatura": 57,
+     "urlFoto": "https://www.camara.leg.br/internet/deputado/bandep/204353.jpg",
+     "email": "dep.alinegurgel@camara.leg.br"
+    }
+   },
+   {
+    "tipoVoto": "Não",
+    "dataRegistroVoto": "2026-10-14T19:19:33",
+    "deputado_": {
+     "id": 204536,
+     "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/204536",
+     "nome": "Kim Kataguiri",
+     "siglaPartido": "MISSÃO",
+     "uriPartido": "https://dadosabertos.camara.leg.br/api/v2/partidos/38011",
+     "siglaUf": "SP",
+     "idLegislatura": 57,
+     "urlFoto": "https://www.camara.leg.br/internet/deputado/bandep/204536.jpg",
+     "email": "dep.kimkataguiri@camara.leg.br"
+    }
+   },
+   {
+    "tipoVoto": "Não",
+    "dataRegistroVoto": "2026-10-14T19:19:18",
+    "deputado_": {
+     "id": 220618,
+     "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/220618",
+     "nome": "Sargento Portugal",
+     "siglaPartido": "PODE",
+     "uriPartido": "https://dadosabertos.camara.leg.br/api/v2/partidos/36896",
+     "siglaUf": "RJ",
+     "idLegislatura": 57,
+     "urlFoto": "https://www.camara.leg.br/internet/deputado/bandep/220618.jpg",
+     "email": "dep.sargentoportugal@camara.leg.br"
+    }
+   },
+   {
+    "tipoVoto": "Não",
+    "dataRegistroVoto": "2026-10-14T19:19:12",
+    "deputado_": {
+     "id": 220544,
+     "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/220544",
+     "nome": "Antonio Andrade",
+     "siglaPartido": "PSDB",
+     "uriPartido": "https://dadosabertos.camara.leg.br/api/v2/partidos/36835",
+     "siglaUf": "TO",
+     "idLegislatura": 57,
+     "urlFoto": "https://www.camara.leg.br/internet/deputado/bandep/220544.jpg",
+     "email": "dep.antonioandrade@camara.leg.br"
+    }
+   },
+   {
+    "tipoVoto": "Não",
+    "dataRegistroVoto": "2026-10-14T19:18:54",
+    "deputado_": {
+     "id": 74646,
+     "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/74646",
+     "nome": "Aécio Neves",
+     "siglaPartido": "PSDB",
+     "uriPartido": "https://dadosabertos.camara.leg.br/api/v2/partidos/36835",
+     "siglaUf": "MG",
+     "idLegislatura": 57,
+     "urlFoto": "https://www.camara.leg.br/internet/deputado/bandep/74646.jpg",
+     "email": "dep.aecioneves@camara.leg.br"
+    }
+   },
+   {
+    "tipoVoto": "Artigo 17",
+    "dataRegistroVoto": "2026-10-14T19:17:35",
+    "deputado_": {
+     "id": 160674,
+     "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/160674",
+     "nome": "Hugo Motta",
+     "siglaPartido": "REPUBLICANOS",
+     "uriPartido": "https://dadosabertos.camara.leg.br/api/v2/partidos/37908",
+     "siglaUf": "PB",
+     "idLegislatura": 57,
+     "urlFoto": "https://www.camara.leg.br/internet/deputado/bandep/160674.jpg",
+     "email": "dep.hugomotta@camara.leg.br"
+    }
+   }
+  ],
+  "links": [
+   {
+    "rel": "self",
+    "href": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2635476-36/votos"
+   }
+  ]
+ },
+ "https://dadosabertos.camara.leg.br/api/v2/votacoes/2635476-36/orientacoes": {
+  "dados": [
+   {
+    "orientacaoVoto": "Não",
+    "codTipoLideranca": "P",
+    "siglaPartidoBloco": "MISSÃO",
+    "codPartidoBloco": 38011,
+    "uriPartidoBloco": "https://dadosabertos.camara.leg.br/api/v2/partidos/38011"
+   },
+   {
+    "orientacaoVoto": "Sim",
+    "codTipoLideranca": "B",
+    "siglaPartidoBloco": "Oposição",
+    "codPartidoBloco": null,
+    "uriPartidoBloco": null
+   },
+   {
+    "orientacaoVoto": "Sim",
+    "codTipoLideranca": "B",
+    "siglaPartidoBloco": "Maioria",
+    "codPartidoBloco": null,
+    "uriPartidoBloco": null
+   },
+   {
+    "orientacaoVoto": "",
+    "codTipoLideranca": "P",
+    "siglaPartidoBloco": "AVANTE",
+    "codPartidoBloco": 36898,
+    "uriPartidoBloco": "https://dadosabertos.camara.leg.br/api/v2/partidos/36898"
+   },
+   {
+    "orientacaoVoto": "Sim",
+    "codTipoLideranca": "B",
+    "siglaPartidoBloco": "Governo",
+    "codPartidoBloco": null,
+    "uriPartidoBloco": null
+   },
+   {
+    "orientacaoVoto": "",
+    "codTipoLideranca": "P",
+    "siglaPartidoBloco": "PRD",
+    "codPartidoBloco": 38010,
+    "uriPartidoBloco": "https://dadosabertos.camara.leg.br/api/v2/partidos/38010"
+   },
+   {
+    "orientacaoVoto": "",
+    "codTipoLideranca": "P",
+    "siglaPartidoBloco": "PSB",
+    "codPartidoBloco": 36832,
+    "uriPartidoBloco": "https://dadosabertos.camara.leg.br/api/v2/partidos/36832"
+   },
+   {
+    "orientacaoVoto": "Sim",
+    "codTipoLideranca": "B",
+    "siglaPartidoBloco": "Fdr PT-PCdoB-PV",
+    "codPartidoBloco": null,
+    "uriPartidoBloco": null
+   },
+   {
+    "orientacaoVoto": "Sim",
+    "codTipoLideranca": "B",
+    "siglaPartidoBloco": "Bl UniPpPsd...",
+    "codPartidoBloco": null,
+    "uriPartidoBloco": null
+   },
+   {
+    "orientacaoVoto": "Sim",
+    "codTipoLideranca": "B",
+    "siglaPartidoBloco": "Fdr PSOL-REDE",
+    "codPartidoBloco": null,
+    "uriPartidoBloco": null
+   },
+   {
+    "orientacaoVoto": "Sim",
+    "codTipoLideranca": "P",
+    "siglaPartidoBloco": "PL",
+    "codPartidoBloco": 37906,
+    "uriPartidoBloco": "https://dadosabertos.camara.leg.br/api/v2/partidos/37906"
+   },
+   {
+    "orientacaoVoto": "Sim",
+    "codTipoLideranca": "B",
+    "siglaPartidoBloco": "Minoria",
+    "codPartidoBloco": null,
+    "uriPartidoBloco": null
+   },
+   {
+    "orientacaoVoto": "Sim",
+    "codTipoLideranca": "P",
+    "siglaPartidoBloco": "NOVO",
+    "codPartidoBloco": 37901,
+    "uriPartidoBloco": "https://dadosabertos.camara.leg.br/api/v2/partidos/37901"
+   },
+   {
+    "orientacaoVoto": "",
+    "codTipoLideranca": "P",
+    "siglaPartidoBloco": "SOLIDARIEDADE",
+    "codPartidoBloco": 37904,
+    "uriPartidoBloco": "https://dadosabertos.camara.leg.br/api/v2/partidos/37904"
+   },
+   {
+    "orientacaoVoto": "Sim",
+    "codTipoLideranca": "P",
+    "siglaPartidoBloco": "PDT",
+    "codPartidoBloco": 36786,
+    "uriPartidoBloco": "https://dadosabertos.camara.leg.br/api/v2/partidos/36786"
+   }
+  ],
+  "links": [
+   {
+    "rel": "self",
+    "href": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2635476-36/orientacoes"
+   }
+  ]
+ },
+ "https://dadosabertos.camara.leg.br/api/v2/votacoes/2635476-40/votos": {
+  "dados": [],
+  "links": [
+   {
+    "rel": "self",
+    "href": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2635476-40/votos"
+   }
+  ]
+ },
+ "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2620905": {
+  "dados": {
+   "id": 2620905,
+   "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2620905",
+   "siglaTipo": "PDL",
+   "codTipo": 554,
+   "numero": 274,
+   "ano": 2026,
+   "ementa": "Aprova o texto do Acordo sobre o Reconhecimento Mútuo de Medidas de Proteção às Mulheres em Situações de Violência de Gênero entre os Estados Partes do MERCOSUL e Estados Associados, assinado na cidade de Assunção, República do Paraguai, em 20 de julho de 2022",
+   "dataApresentacao": "2026-05-04T18:00",
+   "uriOrgaoNumerador": "https://dadosabertos.camara.leg.br/api/v2/orgaos/537870",
+   "statusProposicao": {
+    "dataHora": "2026-10-29T00:00",
+    "sequencia": 64,
+    "siglaOrgao": "MESA",
+    "uriOrgao": "https://dadosabertos.camara.leg.br/api/v2/orgaos/4",
+    "uriUltimoRelator": "https://dadosabertos.camara.leg.br/api/v2/deputados/73701",
+    "regime": "Urgência (Art. 151, I \"j\", RICD)",
+    "descricaoTramitacao": "Expedição de Documento",
+    "codTipoTramitacao": "190",
+    "descricaoSituacao": "Aguardando Apreciação pelo Senado Federal",
+    "codSituacao": 926,
+    "despacho": "Remessa ao Senado Federal por meio do Of. nº 241/2026/SGM-P.",
+    "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3187471",
+    "ambito": "Regimental",
+    "apreciacao": "Proposição Sujeita à Apreciação do Plenário"
+   },
+   "uriAutores": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2620905/autores",
+   "descricaoTipo": "Projeto de Decreto Legislativo de Acordos, tratados ou atos internacionais",
+   "ementaDetalhada": "",
+   "keywords": "Aprovação, ato internacional, Acordo sobre o Reconhecimento Mútuo de Medidas de Proteção às Mulheres em Situações de Violência de Gênero entre Estados Partes do MERCOSUL e Estados Associados (2022), Brasil, estado parte, Mercado Comum do Sul (Mercosul), Bolívia, Chile, Equador, cooperação jurídica internacional, violência de gênero, violência contra a mulher, proteção, mulher.",
+   "uriPropPrincipal": null,
+   "uriPropAnterior": null,
+   "uriPropPosterior": null,
+   "urlInteiroTeor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3122361",
+   "urnFinal": null,
+   "texto": null,
+   "justificativa": null
+  },
+  "links": [
+   {
+    "rel": "self",
+    "href": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2620905"
+   }
+  ]
+ },
+ "https://dadosabertos.camara.leg.br/api/v2/votacoes/2620905-48/votos": {
+  "dados": [],
+  "links": [
+   {
+    "rel": "self",
+    "href": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2620905-48/votos"
+   }
+  ]
+ },
+ "https://dadosabertos.camara.leg.br/api/v2/votacoes/2620905-53/votos": {
+  "dados": [],
+  "links": [
+   {
+    "rel": "self",
+    "href": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2620905-53/votos"
+   }
+  ]
+ },
+ "https://dadosabertos.camara.leg.br/api/v2/votacoes/2620905-56/votos": {
+  "dados": [],
+  "links": [
+   {
+    "rel": "self",
+    "href": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2620905-56/votos"
+   }
+  ]
+ },
+ "https://legis.senado.leg.br/dadosabertos/processo?sigla=PLP&numero=186&ano=2026": [
+  {
+   "autoria": "Câmara dos Deputados",
+   "casaIdentificadora": "SF",
+   "codigoMateria": 175969,
+   "dataApresentacao": "2026-10-14",
+   "dataDeliberacao": "2026-10-15",
+   "dataSituacaoAtual": "2026-10-21",
+   "dataUltimaAtualizacao": "2026-10-29T19:00:07.438",
+   "ementa": "Altera a Lei Complementar nº 123, de 14 de dezembro de 2006, para atualizar o limite de receita bruta anual e o número de empregados do Microempreendedor Individual (MEI), conceder remissão de créditos de titularidade da União de sua responsabilidade e dispor sobre a aplicação da medida.",
+   "enteIdentificador": "SF",
+   "id": 9114338,
+   "identificacao": "PLP 186/2026",
+   "normaGerada": "Lei Complementar nº 238 de 21/10/2026",
+   "objetivo": "Revisora",
+   "siglaTipoDeliberacao": "APROVADA_NO_PLENARIO",
+   "situacaoAtual": "TRANSFORMADA EM NORMA JURÍDICA",
+   "tipoConteudo": "Norma Geral",
+   "tipoDocumento": "Projeto de Lei Complementar",
+   "tramitando": "Não",
+   "ultimaInformacaoAtualizada": "PUBLICACAO_OFICIAL",
+   "urlDocumento": "https://legis.senado.gov.br/sdleg-getter/dadosabertos/documento/6cf0faec-583f-44ef-9228-41107724b559"
+  }
+ ],
+ "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2635476/temas": {
+  "dados": [
+   {
+    "codTema": 64,
+    "tema": "Agricultura, Pecuária, Pesca e Extrativismo",
+    "relevancia": 0
+   },
+   {
+    "codTema": 66,
+    "tema": "Indústria, Comércio e Serviços",
+    "relevancia": 0
+   },
+   {
+    "codTema": 70,
+    "tema": "Finanças Públicas e Orçamento",
+    "relevancia": 0
+   },
+   {
+    "codTema": 58,
+    "tema": "Trabalho e Emprego",
+    "relevancia": 0
+   }
+  ],
+  "links": [
+   {
+    "rel": "self",
+    "href": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2635476/temas"
+   }
+  ]
+ },
+ "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2635476/autores": {
+  "dados": [
+   {
+    "uri": "https://dadosabertos.camara.leg.br/api/v2/orgaos/253",
+    "nome": "Poder Executivo",
+    "codTipo": 30000,
+    "tipo": "Órgão do Poder Executivo",
+    "ordemAssinatura": 1,
+    "proponente": 1
+   }
+  ],
+  "links": [
+   {
+    "rel": "self",
+    "href": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2635476/autores"
+   }
+  ]
+ },
+ "https://legis.senado.leg.br/dadosabertos/processo?sigla=PDL&numero=274&ano=2026": [
+  {
+   "autoria": "Câmara dos Deputados",
+   "casaIdentificadora": "SF",
+   "codigoMateria": 176152,
+   "dataApresentacao": "2026-10-29",
+   "dataSituacaoAtual": "2026-10-29",
+   "dataUltimaAtualizacao": "2026-10-29T16:43:12.982",
+   "ementa": "Aprova o texto do Acordo sobre o Reconhecimento Mútuo de Medidas de Proteção às Mulheres em Situações de Violência de Gênero entre Estados Partes do Mercosul e Estados Associados, assinado em Assunção, em 20 de julho de 2022.",
+   "enteIdentificador": "SF",
+   "id": 9118955,
+   "identificacao": "PDL 274/2026",
+   "objetivo": "Revisora",
+   "situacaoAtual": "AGUARDANDO RECEBIMENTO DE EMENDAS",
+   "tipoConteudo": "Apreciação de Atos/tratados/acordos internacionais",
+   "tipoDocumento": "Projeto de Decreto Legislativo",
+   "tramitando": "Sim",
+   "ultimaInformacaoAtualizada": "EVENTO_LEGISLATIVO",
+   "urlDocumento": "https://legis.senado.gov.br/sdleg-getter/dadosabertos/documento/5fb9395c-908b-4cc4-9ad2-643eccc74547"
+  }
+ ],
+ "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2620905/temas": {
+  "dados": [
+   {
+    "codTema": 44,
+    "tema": "Direitos Humanos e Minorias",
+    "relevancia": 0
+   },
+   {
+    "codTema": 55,
+    "tema": "Relações Internacionais e Comércio Exterior",
+    "relevancia": 0
+   }
+  ],
+  "links": [
+   {
+    "rel": "self",
+    "href": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2620905/temas"
+   }
+  ]
+ },
+ "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2620905/autores": {
+  "dados": [
+   {
+    "uri": "https://dadosabertos.camara.leg.br/api/v2/orgaos/5973",
+    "nome": "Representação Brasileira no Parlamento do Mercosul",
+    "codTipo": 6,
+    "tipo": "COMISSÃO MISTA PERMANENTE",
+    "ordemAssinatura": 1,
+    "proponente": 1
+   }
+  ],
+  "links": [
+   {
+    "rel": "self",
+    "href": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2620905/autores"
+   }
+  ]
+ },
+ "https://dadosabertos.camara.leg.br/api/v2/proposicoes?siglaTipo=PEC&numero=221&ano=2019": {
+  "dados": [
+   {
+    "id": 2233802,
+    "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2233802",
+    "siglaTipo": "PEC",
+    "codTipo": 136,
+    "numero": 221,
+    "ano": 2019,
+    "ementa": "Altera o Art. 7º inciso XII da constituição Federal, reduzindo a jornada de trabalho a 36 horas semanais em 10 anos.",
+    "dataApresentacao": "2019-12-11T17:37"
+   }
+  ],
+  "links": [
+   {
+    "rel": "self",
+    "href": "https://dadosabertos.camara.leg.br/api/v2/proposicoes?siglaTipo=PEC&numero=221&ano=2019"
+   },
+   {
+    "rel": "first",
+    "href": "https://dadosabertos.camara.leg.br/api/v2/proposicoes?siglaTipo=PEC&numero=221&ano=2019&pagina=1&itens=15"
+   },
+   {
+    "rel": "last",
+    "href": "https://dadosabertos.camara.leg.br/api/v2/proposicoes?siglaTipo=PEC&numero=221&ano=2019&pagina=1&itens=15"
+   }
+  ]
+ },
+ "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2233802": {
+  "dados": {
+   "id": 2233802,
+   "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2233802",
+   "siglaTipo": "PEC",
+   "codTipo": 136,
+   "numero": 221,
+   "ano": 2019,
+   "ementa": "Altera o Art. 7º inciso XII da constituição Federal, reduzindo a jornada de trabalho a 36 horas semanais em 10 anos.",
+   "dataApresentacao": "2019-12-11T17:37",
+   "uriOrgaoNumerador": "https://dadosabertos.camara.leg.br/api/v2/orgaos/2003",
+   "statusProposicao": {
+    "dataHora": "2026-10-16T00:00",
+    "sequencia": 453,
+    "siglaOrgao": "MESA",
+    "uriOrgao": "https://dadosabertos.camara.leg.br/api/v2/orgaos/4",
+    "uriUltimoRelator": "https://dadosabertos.camara.leg.br/api/v2/deputados/80815",
+    "regime": "Especial (Art. 202 c/c 191, I, RICD)",
+    "descricaoTramitacao": "Transformação em Norma Jurídica",
+    "codTipoTramitacao": "251",
+    "descricaoSituacao": "Transformado em Norma Jurídica",
+    "codSituacao": 1140,
+    "despacho": "Transformado na Emenda Constitucional 141/2026. DOU 16/10/2026 PÁG 02 COL 02 - Edição Extra A.",
+    "url": null,
+    "ambito": "Regimental",
+    "apreciacao": "Proposição Sujeita à Apreciação do Plenário"
+   },
+   "uriAutores": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2233802/autores",
+   "descricaoTipo": "Proposta de Emenda à Constituição",
+   "ementaDetalhada": "",
+   "keywords": "Alteração, Constituição Federal (1988), Direitos sociais, redução, jornada de trabalho.",
+   "uriPropPrincipal": null,
+   "uriPropAnterior": null,
+   "uriPropPosterior": null,
+   "urlInteiroTeor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1845483",
+   "urnFinal": null,
+   "texto": null,
+   "justificativa": null
+  },
+  "links": [
+   {
+    "rel": "self",
+    "href": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2233802"
+   }
+  ]
+ },
+ "https://legis.senado.leg.br/dadosabertos/processo?sigla=PEC&numero=221&ano=2019": [
+  {
+   "apelido": "Fim da escala 6x1",
+   "autoria": "Câmara dos Deputados",
+   "casaIdentificadora": "SF",
+   "codigoMateria": 174386,
+   "dataApresentacao": "2026-05-28",
+   "dataDeliberacao": "2026-10-14",
+   "dataSituacaoAtual": "2026-10-16",
+   "dataUltimaAtualizacao": "2026-10-22T15:15:38.131",
+   "ementa": "Altera o art. 7º da Constituição Federal para reduzir a duração máxima semanal do trabalho e prever 2 (dois) dias de repouso semanal remunerado, sem qualquer redução salarial; e dá outras providências.",
+   "enteIdentificador": "SF",
+   "id": 9056435,
+   "identificacao": "PEC 221/2019",
+   "normaGerada": "Emenda Constitucional nº 141 de 16/10/2026",
+   "objetivo": "Revisora",
+   "siglaTipoDeliberacao": "APROVADA_NO_PLENARIO",
+   "situacaoAtual": "TRANSFORMADA EM NORMA JURÍDICA",
+   "tipoConteudo": "Norma Geral",
+   "tipoDocumento": "Proposta de Emenda à Constituição",
+   "tramitando": "Não",
+   "ultimaInformacaoAtualizada": "PUBLICACAO_OFICIAL",
+   "urlDocumento": "https://legis.senado.gov.br/sdleg-getter/dadosabertos/documento/d11bdbc4-b414-4842-bf97-882601e75cbe"
+  }
+ ],
+ "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2233802/temas": {
+  "dados": [
+   {
+    "codTema": 68,
+    "tema": "Direito Constitucional",
+    "relevancia": 0
+   },
+   {
+    "codTema": 58,
+    "tema": "Trabalho e Emprego",
+    "relevancia": 0
+   }
+  ],
+  "links": [
+   {
+    "rel": "self",
+    "href": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2233802/temas"
+   }
+  ]
+ },
+ "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2233802/autores": {
+  "dados": [
+   {
+    "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/74161",
+    "nome": "Reginaldo Lopes",
+    "codTipo": 10000,
+    "tipo": "Deputado(a)",
+    "ordemAssinatura": 1,
+    "proponente": 1
+   }
+  ],
+  "links": [
+   {
+    "rel": "self",
+    "href": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2233802/autores"
+   }
+  ]
+ },
+ "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2204495": {
+  "dados": {
+   "id": 2204495,
+   "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2204495",
+   "siglaTipo": "PL",
+   "codTipo": 139,
+   "numero": 3099,
+   "ano": 2019,
+   "ementa": "Institui no calendário nacional o \"Dia Nacional do Autocuidado\".",
+   "dataApresentacao": "2019-05-22T19:59",
+   "uriOrgaoNumerador": "https://dadosabertos.camara.leg.br/api/v2/orgaos/2014",
+   "statusProposicao": {
+    "dataHora": "2026-10-28T13:55",
+    "sequencia": 85,
+    "siglaOrgao": "PLEN",
+    "uriOrgao": "https://dadosabertos.camara.leg.br/api/v2/orgaos/180",
+    "uriUltimoRelator": "https://dadosabertos.camara.leg.br/api/v2/deputados/225730",
+    "regime": "Urgência (Art. 155, RICD)",
+    "descricaoTramitacao": "Aprovação de Urgência (154, 155 ou 64 CF)",
+    "codTipoTramitacao": "196",
+    "descricaoSituacao": "Pronta para Pauta",
+    "codSituacao": 924,
+    "despacho": "Alteração do Regime de Tramitação desta proposição em virtude da Aprovação do REQ 4194/2026.",
+    "url": null,
+    "ambito": "Regimental",
+    "apreciacao": "Proposição Sujeita à Apreciação do Plenário"
+   },
+   "uriAutores": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2204495/autores",
+   "descricaoTipo": "Projeto de Lei",
+   "ementaDetalhada": "",
+   "keywords": "Criação, Dia Nacional do Autocuidado, data comemorativa, julho, ações.",
+   "uriPropPrincipal": null,
+   "uriPropAnterior": null,
+   "uriPropPosterior": null,
+   "urlInteiroTeor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1751589",
+   "urnFinal": null,
+   "texto": null,
+   "justificativa": null
+  },
+  "links": [
+   {
+    "rel": "self",
+    "href": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2204495"
+   }
+  ]
+ },
+ "https://legis.senado.leg.br/dadosabertos/processo?sigla=PL&numero=3099&ano=2019": [
+  {
+   "autoria": "Câmara dos Deputados",
+   "casaIdentificadora": "SF",
+   "codigoMateria": 170101,
+   "dataApresentacao": "2025-08-26",
+   "dataDeliberacao": "2026-08-12",
+   "dataSituacaoAtual": "2026-08-14",
+   "dataUltimaAtualizacao": "2026-10-06T09:30:31.601",
+   "ementa": "Altera a Lei nº 8.080, de 19 de setembro de 1990 (Lei Orgânica da Saúde), para prever o estímulo ao autocuidado responsável na assistência às pessoas no âmbito do Sistema Único de Saúde (SUS); cria a Política Nacional de Autocuidado; e institui o Dia Nacional do Autocuidado.",
+   "enteIdentificador": "SF",
+   "id": 8892344,
+   "identificacao": "PL 3099/2019",
+   "objetivo": "Revisora",
+   "siglaTipoDeliberacao": "APROVADA_NO_PLENARIO",
+   "situacaoAtual": "REMETIDA À CÂMARA DOS DEPUTADOS",
+   "tipoConteudo": "Norma Geral",
+   "tipoDocumento": "Projeto de Lei Ordinária",
+   "tramitando": "Não",
+   "ultimaInformacaoAtualizada": "PUBLICACAO_OFICIAL",
+   "urlDocumento": "https://legis.senado.gov.br/sdleg-getter/dadosabertos/documento/4f0cf72a-d298-40bb-b275-af5b9f7104d3"
+  }
+ ],
+ "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2204495/temas": {
+  "dados": [
+   {
+    "codTema": 72,
+    "tema": "Homenagens e Datas Comemorativas",
+    "relevancia": 0
+   }
+  ],
+  "links": [
+   {
+    "rel": "self",
+    "href": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2204495/temas"
+   }
+  ]
+ },
+ "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2204495/autores": {
+  "dados": [
+   {
+    "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/204457",
+    "nome": "Juninho do Pneu",
+    "codTipo": 10000,
+    "tipo": "Deputado(a)",
+    "ordemAssinatura": 1,
+    "proponente": 1
+   }
+  ],
+  "links": [
+   {
+    "rel": "self",
+    "href": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2204495/autores"
+   }
+  ]
+ },
+ "https://dadosabertos.camara.leg.br/api/v2/proposicoes?siglaTipo=PEC&numero=18&ano=2025": {
+  "dados": [
+   {
+    "id": 2500080,
+    "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2500080",
+    "siglaTipo": "PEC",
+    "codTipo": 136,
+    "numero": 18,
+    "ano": 2025,
+    "ementa": "Altera os art. 21, art. 22, art. 23, art. 24 e art. 144 da Constituição, para dispor sobre competências da União, dos Estados, do Distrito Federal e dos Municípios relativas à segurança pública.",
+    "dataApresentacao": "2025-04-24T08:51"
+   }
+  ],
+  "links": [
+   {
+    "rel": "self",
+    "href": "https://dadosabertos.camara.leg.br/api/v2/proposicoes?siglaTipo=PEC&numero=18&ano=2025"
+   },
+   {
+    "rel": "first",
+    "href": "https://dadosabertos.camara.leg.br/api/v2/proposicoes?siglaTipo=PEC&numero=18&ano=2025&pagina=1&itens=15"
+   },
+   {
+    "rel": "last",
+    "href": "https://dadosabertos.camara.leg.br/api/v2/proposicoes?siglaTipo=PEC&numero=18&ano=2025&pagina=1&itens=15"
+   }
+  ]
+ },
+ "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2500080": {
+  "dados": {
+   "id": 2500080,
+   "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2500080",
+   "siglaTipo": "PEC",
+   "codTipo": 136,
+   "numero": 18,
+   "ano": 2025,
+   "ementa": "Altera os art. 21, art. 22, art. 23, art. 24 e art. 144 da Constituição, para dispor sobre competências da União, dos Estados, do Distrito Federal e dos Municípios relativas à segurança pública.",
+   "dataApresentacao": "2025-04-24T08:51",
+   "uriOrgaoNumerador": "https://dadosabertos.camara.leg.br/api/v2/orgaos/2003",
+   "statusProposicao": {
+    "dataHora": "2026-03-10T00:00",
+    "sequencia": 354,
+    "siglaOrgao": "MESA",
+    "uriOrgao": "https://dadosabertos.camara.leg.br/api/v2/orgaos/4",
+    "uriUltimoRelator": "https://dadosabertos.camara.leg.br/api/v2/deputados/74428",
+    "regime": "Especial (Art. 202 c/c 191, I, RICD)",
+    "descricaoTramitacao": "Expedição de Documento",
+    "codTipoTramitacao": "190",
+    "descricaoSituacao": "Aguardando Apreciação pelo Senado Federal",
+    "codSituacao": 926,
+    "despacho": "Remessa ao Senado Federal por meio do Of. nº 35/2023/SGM-P.umento",
+    "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3093898",
+    "ambito": "Regimental",
+    "apreciacao": "Proposição Sujeita à Apreciação do Plenário"
+   },
+   "uriAutores": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2500080/autores",
+   "descricaoTipo": "Proposta de Emenda à Constituição",
+   "ementaDetalhada": "",
+   "keywords": "Alteração, Constituição Federal (1988), reformulação, atuação, Órgão de segurança pública. _Competência da União, Política Nacional de Segurança Pública e Defesa Social (PNSPDS), Sistema Único de Segurança Pública (Susp). _Competência privativa, União, Polícia Viária Federal, Polícia penal federal, norma geral, segurança pública, defesa social, sistema carcerário. _Competência federativa, competência comum, manutenção, segurança pública, defesa social. _Competência concorrente, poder de legislar, segurança pública, defesa social. _Inclusão, Órgão de segurança pública, polícia viária federal, guarda municipal. _Polícia Federal (PF), competência, apuração, infração penal, Meio ambiente, Organização criminosa, Milícia privada. _Polícia Viária Federal, competência, patrulhamento, rodovia federal, ferrovia federal, hidrovia.",
+   "uriPropPrincipal": null,
+   "uriPropAnterior": null,
+   "uriPropPosterior": null,
+   "urlInteiroTeor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2891161",
+   "urnFinal": null,
+   "texto": null,
+   "justificativa": null
+  },
+  "links": [
+   {
+    "rel": "self",
+    "href": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2500080"
+   }
+  ]
+ },
+ "https://legis.senado.leg.br/dadosabertos/processo?sigla=PEC&numero=18&ano=2025": [
+  {
+   "apelido": "PEC da Segurança Pública",
+   "autoria": "Câmara dos Deputados",
+   "casaIdentificadora": "SF",
+   "codigoMateria": 172997,
+   "dataApresentacao": "2026-03-10",
+   "dataSituacaoAtual": "2026-10-15",
+   "dataUltimaAtualizacao": "2026-10-22T15:15:36.675",
+   "ementa": "Altera os arts. 5º, 15, 22, 23, 24, 40, 49, 84, 103-B, 130-A e 144 da Constituição Federal e o art.76 do Ato das Disposições Constitucionais Transitórias; acrescenta os arts. 144-A e 144-B à Constituição Federal e os arts. 139, 140 e 141 ao Ato das Disposições Constitucionais Transitórias; e dá outras providências.",
+   "enteIdentificador": "SF",
+   "id": 9006525,
+   "identificacao": "PEC 18/2025",
+   "objetivo": "Revisora",
+   "situacaoAtual": "PRONTO PARA DELIBERAÇÃO DO PLENÁRIO",
+   "tipoConteudo": "Norma Geral",
+   "tipoDocumento": "Proposta de Emenda à Constituição",
+   "tramitando": "Sim",
+   "ultimaInformacaoAtualizada": "PUBLICACAO_OFICIAL",
+   "urlDocumento": "https://legis.senado.gov.br/sdleg-getter/dadosabertos/documento/e6034c8c-f874-487c-9bd7-62c549e49253"
+  }
+ ],
+ "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2500080/temas": {
+  "dados": [
+   {
+    "codTema": 34,
+    "tema": "Administração Pública",
+    "relevancia": 0
+   },
+   {
+    "codTema": 57,
+    "tema": "Defesa e Segurança",
+    "relevancia": 0
+   }
+  ],
+  "links": [
+   {
+    "rel": "self",
+    "href": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2500080/temas"
+   }
+  ]
+ },
+ "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2500080/autores": {
+  "dados": [
+   {
+    "uri": "https://dadosabertos.camara.leg.br/api/v2/orgaos/253",
+    "nome": "Poder Executivo",
+    "codTipo": 30000,
+    "tipo": "Órgão do Poder Executivo",
+    "ordemAssinatura": 1,
+    "proponente": 1
+   }
+  ],
+  "links": [
+   {
+    "rel": "self",
+    "href": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2500080/autores"
+   }
+  ]
+ },
+ "https://dadosabertos.camara.leg.br/api/v2/proposicoes?siglaTipo=PDS&numero=240&ano=2011": {
+  "dados": [],
+  "links": [
+   {
+    "rel": "self",
+    "href": "https://dadosabertos.camara.leg.br/api/v2/proposicoes?siglaTipo=PDS&numero=240&ano=2011"
+   }
+  ]
+ },
+ "https://legis.senado.leg.br/dadosabertos/processo?sigla=PDS&numero=240&ano=2011": [
+  {
+   "autoria": "Câmara dos Deputados",
+   "casaIdentificadora": "SF",
+   "codigoMateria": 102633,
+   "dataApresentacao": "2011-10-03",
+   "dataSituacaoAtual": "2026-10-15",
+   "dataUltimaAtualizacao": "2026-10-16T17:14:04.406",
+   "ementa": "Aprova o texto do Acordo entre o Governo da República Federativa do Brasil e o Governo da República da Guiana sobre Cooperação em Matéria de Defesa, assinado em Bonfim-RR, em 14 de setembro de 2009.",
+   "enteIdentificador": "SF",
+   "id": 3018173,
+   "identificacao": "PDS 240/2011",
+   "objetivo": "Revisora",
+   "situacaoAtual": "PRONTO PARA DELIBERAÇÃO DO PLENÁRIO",
+   "tipoConteudo": "Apreciação de Atos/tratados/acordos internacionais",
+   "tipoDocumento": "Projeto de Decreto Legislativo",
+   "tramitando": "Sim",
+   "ultimaInformacaoAtualizada": "EVENTO_LEGISLATIVO",
+   "urlDocumento": "https://legis.senado.gov.br/sdleg-getter/dadosabertos/documento/b4f7de0a-a847-41f5-a26d-c1ec7e0a91a3"
+  }
+ ],
+ "https://legis.senado.leg.br/dadosabertos/processo/3018173": {
+  "id": 3018173
+ }
+}

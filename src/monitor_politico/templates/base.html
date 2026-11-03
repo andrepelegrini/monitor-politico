@@ -10,6 +10,7 @@
   <header class="topo">
     <a class="marca" href="{{ raiz }}/index.html">Monitor Político</a>
     <nav class="casas">
+      <a href="{{ raiz }}/index.html"{% if casa == "inicio" %} aria-current="page"{% endif %}>Início</a>
       <a href="{{ raiz }}/deputados/index.html"{% if casa == "camara" %} aria-current="page"{% endif %}>Deputados</a>
       <a href="{{ raiz }}/senadores/index.html"{% if casa == "senado" %} aria-current="page"{% endif %}>Senadores</a>
     </nav>

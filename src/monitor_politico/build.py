@@ -1,6 +1,6 @@
 """Gera o site estático a partir dos JSON coletados.
 
-Uso: python -m monitor_politico.build [deputados.json] [senadores.json] [pasta_saida]
+Uso: python -m monitor_politico.build [deputados.json] [senadores.json] [congresso.json] [pasta_saida]
 """
 
 from __future__ import annotations
@@ -9,17 +9,19 @@ import json
 import shutil
 import sys
 import unicodedata
-from datetime import date, datetime
+from datetime import datetime
 from pathlib import Path
 from typing import Any, Sequence, Union
 from zoneinfo import ZoneInfo
 
 from jinja2 import Environment, PackageLoader, select_autoescape
 
+from monitor_politico import painel
 from monitor_politico.models import Deputado, Senador
 
 DEPUTADOS_PADRAO = Path("data/deputados.json")
 SENADORES_PADRAO = Path("data/senadores.json")
+CONGRESSO_PADRAO = Path("data/congresso.json")
 SAIDA_PADRAO = Path("site")
 FUSO = ZoneInfo("America/Sao_Paulo")
 PACOTE = Path(__file__).parent
@@ -36,10 +38,6 @@ def chave_alfabetica(texto: str) -> str:
 
 def _formatar_data(iso: str) -> str:
     return datetime.fromisoformat(iso).astimezone(FUSO).strftime("%d/%m/%Y às %H:%M (horário de Brasília)")
-
-
-def _data_br(iso: str) -> str:
-    return date.fromisoformat(iso).strftime("%d/%m/%Y")
 
 
 def _gerar_casa(
@@ -65,12 +63,17 @@ def _gerar_casa(
         (pasta / f"{p.id}.html").write_text(modelo.render(**contexto, **{variavel: p}), encoding="utf-8")
 
 
-def construir(doc_deputados: dict[str, Any], doc_senadores: dict[str, Any], saida: Path = SAIDA_PADRAO) -> None:
+def construir(
+    doc_deputados: dict[str, Any],
+    doc_senadores: dict[str, Any],
+    doc_congresso: dict[str, Any],
+    saida: Path = SAIDA_PADRAO,
+) -> None:
     env = Environment(
         loader=PackageLoader("monitor_politico", "templates"),
         autoescape=select_autoescape(),
     )
-    env.filters["data_br"] = _data_br
+    env.filters["data_br"] = painel.data_br
     deputados = sorted((Deputado.de_dict(d) for d in doc_deputados["deputados"]), key=lambda d: chave_alfabetica(d.nome))
     senadores = sorted((Senador.de_dict(s) for s in doc_senadores["senadores"]), key=lambda s: chave_alfabetica(s.nome))
     atualizado_camara = _formatar_data(doc_deputados["coletado_em"])
@@ -81,17 +84,29 @@ def construir(doc_deputados: dict[str, Any], doc_senadores: dict[str, Any], said
     saida.mkdir(parents=True)
     shutil.copytree(PACOTE / "static", saida / "static")
 
+    atualizado_congresso = _formatar_data(doc_congresso["coletado_em"])
     (saida / "index.html").write_text(
         env.get_template("inicio.html").render(
-            raiz=".",
-            casa=None,
-            total_deputados=len(deputados),
-            total_senadores=len(senadores),
-            atualizado_camara=atualizado_camara,
-            atualizado_senado=atualizado_senado,
+            raiz=".", casa="inicio", atualizado_congresso=atualizado_congresso, **painel.inicio(doc_congresso)
         ),
         encoding="utf-8",
     )
+    (saida / "proposicoes").mkdir()
+    modelo = env.get_template("proposicao.html")
+    ids_deputados = {d.id for d in deputados}
+    ids_senadores = {s.id for s in senadores}
+    for prop in doc_congresso["proposicoes"].values():
+        (saida / "proposicoes" / f"{prop['slug']}.html").write_text(
+            modelo.render(
+                raiz="..",
+                casa=None,
+                atualizado_congresso=atualizado_congresso,
+                p=prop,
+                etapas=painel.etapas(prop, doc_congresso["pauta"]),
+                votacoes=painel.votacoes_da_pagina(prop, ids_deputados, ids_senadores),
+            ),
+            encoding="utf-8",
+        )
     _gerar_casa(
         env, saida / "deputados", deputados, "perfil_deputado.html", "d",
         {"raiz": "..", "casa": "camara", "titulo": "Deputados federais", "singular": "deputado", "plural": "deputados",
@@ -108,8 +123,13 @@ if __name__ == "__main__":
     args = sys.argv[1:]
     entrada_dep = Path(args[0]) if len(args) > 0 else DEPUTADOS_PADRAO
     entrada_sen = Path(args[1]) if len(args) > 1 else SENADORES_PADRAO
-    destino = Path(args[2]) if len(args) > 2 else SAIDA_PADRAO
+    entrada_con = Path(args[2]) if len(args) > 2 else CONGRESSO_PADRAO
+    destino = Path(args[3]) if len(args) > 3 else SAIDA_PADRAO
     doc_dep = json.loads(entrada_dep.read_text(encoding="utf-8"))
     doc_sen = json.loads(entrada_sen.read_text(encoding="utf-8"))
-    construir(doc_dep, doc_sen, destino)
-    print(f"Site gerado em {destino}/ ({len(doc_dep['deputados'])} deputados, {len(doc_sen['senadores'])} senadores)")
+    doc_con = json.loads(entrada_con.read_text(encoding="utf-8"))
+    construir(doc_dep, doc_sen, doc_con, destino)
+    print(
+        f"Site gerado em {destino}/ ({len(doc_dep['deputados'])} deputados, {len(doc_sen['senadores'])} senadores, "
+        f"{len(doc_con['proposicoes'])} proposições)"
+    )

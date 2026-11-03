@@ -44,3 +44,23 @@ def senado_falso(handler=None) -> ClienteSenado:
 @pytest.fixture
 def senado() -> ClienteSenado:
     return senado_falso()
+
+
+def congresso_falso(falhar=()):
+    """Clientes da Câmara e do Senado servidos por respostas reais gravadas
+    (tests/fixtures/congresso_api.json) para um cenário com hoje = 2026-11-02.
+    URLs que contêm algum trecho de `falhar` respondem 504."""
+    respostas = carregar("congresso_api.json")
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        url = str(request.url)
+        if any(trecho in url for trecho in falhar):
+            return httpx.Response(504)
+        if url not in respostas:
+            pytest.fail(f"URL fora da fixture: {url}")
+        return httpx.Response(200, json=respostas[url])
+
+    transporte = httpx.MockTransport(handler)
+    camara = ClienteCamara(http=httpx.Client(base_url=API_BASE, transport=transporte), dormir=lambda _s: None)
+    senado = ClienteSenado(http=httpx.Client(base_url=SENADO_API_BASE, transport=transporte), dormir=lambda _s: None)
+    return camara, senado

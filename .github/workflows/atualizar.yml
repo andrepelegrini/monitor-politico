@@ -2,13 +2,14 @@ name: Testar e atualizar dados
 
 # O site é publicado pela Vercel a cada push na main. Este workflow só testa
 # e, uma vez por dia, coleta os dados e faz commit do JSON, o que dispara o
-# deploy. As coletas da Câmara e do Senado são independentes: se uma falhar,
-# a outra ainda é commitada, e o site segue com os dados anteriores da que
-# falhou. O job termina em erro para que a falha apareça no Actions.
+# deploy. As coletas (deputados, senadores e votações/pauta do Congresso) são
+# independentes: se uma falhar, as outras ainda são commitadas, e o site segue
+# com os dados anteriores da que falhou. O job termina em erro para que a
+# falha apareça no Actions.
 
 on:
   schedule:
-    - cron: "0 9 * * *" # 06:00 em Brasília
+    - cron: "0 9 * * 1-5" # 06:00 em Brasília, dias úteis
   workflow_dispatch:
   push:
     branches: [main]
@@ -50,17 +51,21 @@ jobs:
         id: senado
         continue-on-error: true
         run: python -m monitor_politico.senado
+      - name: Coletar votações e pauta do Congresso
+        id: congresso
+        continue-on-error: true
+        run: python -m monitor_politico.congresso
       - name: Commit dos dados
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/deputados.json data/senadores.json
+          git add data/deputados.json data/senadores.json data/congresso.json
           git diff --cached --quiet && exit 0
           git commit -m "Atualiza dados abertos ($(date -u +%F))"
           git pull --rebase
           git push
       - name: Falhar se alguma coleta falhou
-        if: steps.camara.outcome == 'failure' || steps.senado.outcome == 'failure'
+        if: steps.camara.outcome == 'failure' || steps.senado.outcome == 'failure' || steps.congresso.outcome == 'failure'
         run: |
-          echo "Câmara: ${{ steps.camara.outcome }} · Senado: ${{ steps.senado.outcome }}"
+          echo "Câmara: ${{ steps.camara.outcome }} · Senado: ${{ steps.senado.outcome }} · Congresso: ${{ steps.congresso.outcome }}"
           exit 1

@@ -7,9 +7,9 @@ from __future__ import annotations
 
 import json
 import sys
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from pathlib import Path
-from typing import Any
+from typing import Any, Optional
 
 from monitor_politico.api import ClienteJSON
 from monitor_politico.models import Senador, como_lista
@@ -32,6 +32,24 @@ class ClienteSenado(ClienteJSON):
         corpo = self._get("/senador/lista/atual")
         itens = como_lista(corpo["ListaParlamentarEmExercicio"]["Parlamentares"]["Parlamentar"])
         return [Senador.da_api(p) for p in itens]
+
+    # Plenário: votações, pauta e proposições
+
+    def votacoes(self, inicio: date, fim: date) -> list[dict[str, Any]]:
+        """Só votações nominais; cada uma já traz os votos."""
+        return self._get("/votacao", {"dataInicio": inicio.isoformat(), "dataFim": fim.isoformat()})
+
+    def agenda_do_mes(self, a_partir_de: date) -> list[dict[str, Any]]:
+        """Sessões do plenário de `a_partir_de` até o fim do mês."""
+        corpo = self._get(f"/plenario/agenda/mes/{a_partir_de:%Y%m%d}")
+        return como_lista(((corpo.get("AgendaPlenario") or {}).get("Sessoes") or {}).get("Sessao"))
+
+    def processo(self, sigla: str, numero: int, ano: int) -> Optional[dict[str, Any]]:
+        encontrados = self._get("/processo", {"sigla": sigla, "numero": numero, "ano": ano})
+        return encontrados[0] if encontrados else None
+
+    def processo_detalhe(self, id_: int) -> dict[str, Any]:
+        return self._get(f"/processo/{id_}")
 
 
 def coletar(cliente: ClienteSenado, saida: Path = SAIDA_PADRAO, minimo: int = MINIMO_ESPERADO) -> dict[str, Any]:

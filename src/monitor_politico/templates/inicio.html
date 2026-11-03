@@ -1,24 +1,111 @@
 {% extends "base.html" %}
+{% block titulo %}O que está em discussão no Congresso · Monitor Político{% endblock %}
 {% block conteudo %}
-<h1>Parlamentares federais em exercício</h1>
-<p>Perfis e contatos oficiais de deputados e senadores, a partir dos dados abertos da Câmara e do Senado.</p>
+<section class="abertura">
+  <h1>O que está em discussão no Congresso</h1>
+  <p class="suave">Pauta dos próximos dias e votações dos últimos 30 dias nos plenários da Câmara e do Senado. Atualizado em {{ atualizado_congresso }}.</p>
+</section>
 
-<ul class="casas-inicio">
-  <li>
-    <a href="{{ raiz }}/deputados/index.html">
-      <span class="nome">Câmara dos Deputados</span>
-      <span class="meta">{{ total_deputados }} deputados</span>
-    </a>
-  </li>
-  <li>
-    <a href="{{ raiz }}/senadores/index.html">
-      <span class="nome">Senado Federal</span>
-      <span class="meta">{{ total_senadores }} senadores</span>
-    </a>
-  </li>
-</ul>
+{% if temas %}
+<section class="bloco">
+  <h2>Temas em destaque</h2>
+  <p class="suave nota">Temas oficiais das proposições em pauta ou votadas no período. Clique para filtrar as votações.</p>
+  <div class="chips">
+    {% for nome, qtd in temas %}
+    <button type="button" class="chip" data-tema="{{ nome }}">{{ nome }} <span class="qtd">{{ qtd }}</span></button>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+<section class="bloco">
+  <h2>Em pauta nos próximos dias</h2>
+  <div class="colunas">
+    {% for casa, nome_casa in (("Senado", "Senado Federal"), ("Câmara", "Câmara dos Deputados")) %}
+    <div class="cartao">
+      <div class="cartao-topo">
+        <h3>{{ nome_casa }}</h3>
+        {% set n = pauta[casa]|sum(attribute="itens", start=[])|length %}
+        <span class="suave nota">Plenário{% if n %} · {{ n }} {{ "item" if n == 1 else "itens" }}{% endif %}</span>
+      </div>
+      {% for sessao in pauta[casa] %}
+      <div class="sessao">
+        <p class="sessao-data">{{ sessao.rotulo }}</p>
+        <ul class="itens-pauta">
+          {% for i in sessao["itens"] %}
+          <li>
+            {% if i.slug %}<a href="proposicoes/{{ i.slug }}.html">{% else %}<div>{% endif %}
+              <span class="titulo-item">{{ i.titulo }}</span>
+              <span class="suave nota">{{ i.chave }}{% if i.fase %} · {{ i.fase }}{% endif %}</span>
+            {% if i.slug %}</a>{% else %}</div>{% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% else %}
+      <p class="vazio-caixa">{% if casa == "Câmara" %}A Câmara ainda não publicou sessões de votação para os próximos dias. A pauta costuma sair na véspera ou no próprio dia.{% else %}O Senado não tem sessões de votação com matérias na agenda dos próximos dias.{% endif %}</p>
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="bloco" id="votadas">
+  <h2>Votado nos últimos 30 dias</h2>
+  <p class="suave nota">Uma linha por proposição, com a votação de mérito mais recente em cada casa. Votações de rito (requerimentos, redação final) ficam na página de cada uma.</p>
+
+  <form class="filtros" onsubmit="return false">
+    <label>Casa
+      <select id="f-casa">
+        <option value="">Câmara e Senado</option>
+        <option>Câmara</option>
+        <option>Senado</option>
+      </select>
+    </label>
+    <label>Tema
+      <select id="f-tema">
+        <option value="">Todos</option>
+        {% for t in todos_temas %}<option>{{ t }}</option>{% endfor %}
+      </select>
+    </label>
+    <label>Resultado
+      <select id="f-resultado">
+        <option value="">Todos</option>
+        <option value="aprovada">Aprovadas</option>
+        <option value="rejeitada">Rejeitadas</option>
+      </select>
+    </label>
+    <label class="caixa"><input type="checkbox" id="f-nominal"> Só com o voto de cada parlamentar</label>
+  </form>
+
+  <p class="contagem" aria-live="polite"><span id="contagem">{{ votadas|length }}</span> de {{ votadas|length }} proposições</p>
+  <ul class="votadas" id="lista-votadas">
+    {% for v in votadas %}
+    <li data-casas="{{ v.casas|join('|') }}" data-temas="|{{ v.temas|join('|') }}|" data-resultados="{{ v.resultados|join('|') }}" data-nominal="{{ 1 if v.nominal else 0 }}">
+      <a href="proposicoes/{{ v.slug }}.html">
+        <div class="votada-texto">
+          <span class="suave nota">{{ v.sigla }}{% if v.temas %} · {{ v.temas[:3]|join(" · ") }}{% endif %}</span>
+          <span class="titulo-item">{{ v.titulo }}</span>
+          {% if v.situacao %}<span class="suave nota">Situação: {{ v.situacao }}</span>{% endif %}
+        </div>
+        <div class="votada-votos">
+          {% for x in v.votos %}
+          <div>
+            <span class="suave nota">{{ x.casa }} · {{ x.data }}</span>
+            {% if x.resultado %}<span class="selo selo-{{ x.resultado }}">{{ x.resultado|capitalize }}</span>{% endif %}
+            <span class="placar">{{ x.placar }}</span>
+          </div>
+          {% endfor %}
+        </div>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+  <p id="vazio" class="vazio" hidden>Nenhuma proposição encontrada com esses filtros.</p>
+</section>
 {% endblock %}
 {% block rodape %}
-<p>Deputados atualizados em {{ atualizado_camara }}. Senadores atualizados em {{ atualizado_senado }}.</p>
+<p>Votações e pauta atualizadas em {{ atualizado_congresso }}.</p>
 <p>Fontes: <a href="https://dadosabertos.camara.leg.br/">Dados Abertos da Câmara dos Deputados</a> e <a href="https://www12.senado.leg.br/dados-abertos">Dados Abertos do Senado Federal</a>. Este site reproduz informações públicas oficiais, sem avaliação ou opinião.</p>
 {% endblock %}
+{% block scripts %}<script src="{{ raiz }}/static/painel.js"></script>{% endblock %}

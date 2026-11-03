@@ -8,7 +8,7 @@ from __future__ import annotations
 import json
 import sys
 import time
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Any, Callable, Iterator, Optional
 
@@ -19,6 +19,7 @@ from monitor_politico.models import Deputado
 
 API_BASE = "https://dadosabertos.camara.leg.br/api/v2"
 SAIDA_PADRAO = Path("data/deputados.json")
+ID_PLENARIO = 180
 ATRASO_ENTRE_CHAMADAS = 0.1  # segundos; cortesia com a API pública
 LIMITE_FALHAS = 0.1  # fração de perfis que pode falhar antes de abortar a coleta
 
@@ -31,16 +32,53 @@ class ClienteCamara(ClienteJSON):
     def __init__(self, http: Optional[httpx.Client] = None, dormir: Callable[[float], None] = time.sleep) -> None:
         super().__init__(API_BASE, http, dormir)
 
+    def _paginar(self, url: str, params: Optional[dict[str, Any]]) -> Iterator[dict[str, Any]]:
+        proxima: Optional[str] = url
+        while proxima:
+            corpo = self._get(proxima, params)
+            yield from corpo["dados"]
+            proxima = next((l["href"] for l in corpo["links"] if l["rel"] == "next"), None)
+            params = None  # o link "next" já carrega os parâmetros
+
     def ids_em_exercicio(self) -> Iterator[int]:
         """Sem `idLegislatura`, a API lista só quem está em exercício."""
-        url: Optional[str] = "/deputados"
-        params: Optional[dict[str, Any]] = {"itens": 100, "pagina": 1, "ordem": "ASC", "ordenarPor": "nome"}
-        while url:
-            corpo = self._get(url, params)
-            for d in corpo["dados"]:
-                yield d["id"]
-            url = next((l["href"] for l in corpo["links"] if l["rel"] == "next"), None)
-            params = None  # o link "next" já carrega os parâmetros
+        params = {"itens": 100, "pagina": 1, "ordem": "ASC", "ordenarPor": "nome"}
+        for d in self._paginar("/deputados", params):
+            yield d["id"]
+
+    # Plenário: votações, pauta e proposições
+
+    def votacoes_plenario(self, inicio: date, fim: date) -> list[dict[str, Any]]:
+        params = {"idOrgao": ID_PLENARIO, "dataInicio": inicio.isoformat(), "dataFim": fim.isoformat(),
+                  "itens": 200, "ordem": "ASC", "ordenarPor": "dataHoraRegistro"}
+        return list(self._paginar("/votacoes", params))
+
+    def votos(self, id_votacao: str) -> list[dict[str, Any]]:
+        return self._get(f"/votacoes/{id_votacao}/votos")["dados"]
+
+    def orientacoes(self, id_votacao: str) -> list[dict[str, Any]]:
+        return self._get(f"/votacoes/{id_votacao}/orientacoes")["dados"]
+
+    def proposicao(self, id_: int) -> dict[str, Any]:
+        return self._get(f"/proposicoes/{id_}")["dados"]
+
+    def temas(self, id_: int) -> list[str]:
+        return [t["tema"] for t in self._get(f"/proposicoes/{id_}/temas")["dados"]]
+
+    def autores(self, id_: int) -> list[str]:
+        return [a["nome"] for a in self._get(f"/proposicoes/{id_}/autores")["dados"]]
+
+    def buscar_proposicao(self, sigla: str, numero: int, ano: int) -> Optional[int]:
+        dados = self._get("/proposicoes", {"siglaTipo": sigla, "numero": numero, "ano": ano})["dados"]
+        return dados[0]["id"] if dados else None
+
+    def sessoes_deliberativas(self, inicio: date, fim: date) -> list[dict[str, Any]]:
+        params = {"idOrgao": ID_PLENARIO, "dataInicio": inicio.isoformat(), "dataFim": fim.isoformat(), "itens": 100}
+        eventos = self._paginar("/eventos", params)
+        return [e for e in eventos if "Deliberativa" in e["descricaoTipo"] and "Não Deliberativa" not in e["descricaoTipo"]]
+
+    def pauta(self, id_evento: int) -> list[dict[str, Any]]:
+        return self._get(f"/eventos/{id_evento}/pauta")["dados"]
 
     def deputado(self, id_: int) -> Deputado:
         return Deputado.da_api(self._get(f"/deputados/{id_}")["dados"])
