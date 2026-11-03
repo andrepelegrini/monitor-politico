@@ -14,8 +14,10 @@ from typing import Any, Callable, Iterator, Optional
 
 import httpx
 
+from monitor_politico import composicao
 from monitor_politico.api import ClienteJSON
 from monitor_politico.models import Deputado
+from monitor_politico.senado import ClienteSenado
 
 API_BASE = "https://dadosabertos.camara.leg.br/api/v2"
 SAIDA_PADRAO = Path("data/deputados.json")
@@ -45,6 +47,14 @@ class ClienteCamara(ClienteJSON):
         params = {"itens": 100, "pagina": 1, "ordem": "ASC", "ordenarPor": "nome"}
         for d in self._paginar("/deputados", params):
             yield d["id"]
+
+    def ids_mulheres(self) -> set[int]:
+        """Só para a contagem do resumo: o gênero não é guardado por deputado."""
+        return {d["id"] for d in self._paginar("/deputados", {"siglaSexo": "F", "itens": 100, "pagina": 1})}
+
+    def mesa_atual(self) -> list[dict[str, Any]]:
+        legislaturas = self._get("/legislaturas", {"itens": 1, "ordem": "DESC", "ordenarPor": "id"})["dados"]
+        return self._get(f"/legislaturas/{legislaturas[0]['id']}/mesa")["dados"]
 
     # Plenário: votações, pauta e proposições
 
@@ -110,11 +120,36 @@ def ler_anteriores(caminho: Path) -> dict[int, Deputado]:
     return {d["id"]: Deputado.de_dict(d) for d in doc["deputados"]}
 
 
-def coletar(cliente: ClienteCamara, saida: Path = SAIDA_PADRAO) -> dict[str, Any]:
+def coletar(
+    cliente: ClienteCamara,
+    saida: Path = SAIDA_PADRAO,
+    senado: Optional[ClienteSenado] = None,
+    avisar: Callable[[str], None] = lambda msg: print(f"aviso: {msg}", file=sys.stderr),
+) -> dict[str, Any]:
     deputados = cliente.deputados(ler_anteriores(saida))
+    # O resumo é complementar: se uma dessas consultas falhar, o bloco correspondente some da página.
+    sexo = presidente = None
+    lideres: Optional[list[dict[str, Any]]] = None
+    try:
+        presidente = composicao.presidente_da_camara(cliente.mesa_atual())
+    except httpx.HTTPError as erro:
+        avisar(f"Mesa da Câmara falhou ({erro})")
+    try:
+        mulheres = cliente.ids_mulheres()
+        sexo = composicao.contar_sexo((d.partido, d.id in mulheres) for d in deputados)
+    except httpx.HTTPError as erro:
+        avisar(f"contagem de mulheres falhou ({erro})")
+    if senado is not None:
+        try:
+            lideres = composicao.lideres(senado.liderancas(), "CD")
+        except httpx.HTTPError as erro:
+            avisar(f"lideranças da Câmara falharam ({erro})")
+    if presidente:
+        lideres = [presidente] + (lideres or [])
     doc = {
         "coletado_em": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "fonte": API_BASE,
+        "resumo": {"sexo": sexo, "lideres": lideres},
         "deputados": [d.para_dict() for d in deputados],
     }
     saida.parent.mkdir(parents=True, exist_ok=True)
@@ -124,5 +159,5 @@ def coletar(cliente: ClienteCamara, saida: Path = SAIDA_PADRAO) -> dict[str, Any
 
 if __name__ == "__main__":
     destino = Path(sys.argv[1]) if len(sys.argv) > 1 else SAIDA_PADRAO
-    doc = coletar(ClienteCamara(), destino)
+    doc = coletar(ClienteCamara(), destino, senado=ClienteSenado())
     print(f"{len(doc['deputados'])} deputados salvos em {destino}")

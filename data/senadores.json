@@ -1,6 +1,66 @@
 {
-  "coletado_em": "2026-11-02T19:16:12+00:00",
+  "coletado_em": "2026-11-03T03:16:13+00:00",
   "fonte": "https://legis.senado.leg.br/dadosabertos",
+  "resumo": {
+    "sexo": {
+      "mulheres": 15,
+      "homens": 66,
+      "mulheres_por_partido": {
+        "PSD": 4,
+        "PSB": 3,
+        "PP": 2,
+        "REPUBLICANOS": 2,
+        "MDB": 1,
+        "PSDB": 1,
+        "PT": 1,
+        "UNIÃO": 1
+      }
+    },
+    "lideres": [
+      {
+        "cargo": "Presidente",
+        "id": 3830,
+        "nome": "Davi Alcolumbre",
+        "partido": "UNIÃO",
+        "uf": "AP"
+      },
+      {
+        "cargo": "Líder do Governo",
+        "id": 6338,
+        "nome": "Teresa Leitão",
+        "partido": "PT",
+        "uf": "PE"
+      },
+      {
+        "cargo": "Líder da Oposição",
+        "id": 4694,
+        "nome": "Rogerio Marinho",
+        "partido": "PL",
+        "uf": "RN"
+      },
+      {
+        "cargo": "Líder da Maioria",
+        "id": 5748,
+        "nome": "Veneziano Vital do Rêgo",
+        "partido": "MDB",
+        "uf": "PB"
+      },
+      {
+        "cargo": "Líder da Minoria",
+        "id": 739,
+        "nome": "Ciro Nogueira",
+        "partido": "PP",
+        "uf": "PI"
+      },
+      {
+        "cargo": "Líder da Bancada Feminina",
+        "id": 5386,
+        "nome": "Professora Dorinha Seabra",
+        "partido": "UNIÃO",
+        "uf": "TO"
+      }
+    ]
+  },
   "senadores": [
     {
       "id": 5672,

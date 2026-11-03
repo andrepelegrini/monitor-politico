@@ -16,7 +16,7 @@ from zoneinfo import ZoneInfo
 
 from jinja2 import Environment, PackageLoader, select_autoescape
 
-from monitor_politico import painel
+from monitor_politico import painel, resumo
 from monitor_politico.models import Deputado, Senador
 
 DEPUTADOS_PADRAO = Path("data/deputados.json")
@@ -110,11 +110,13 @@ def construir(
     _gerar_casa(
         env, saida / "deputados", deputados, "perfil_deputado.html", "d",
         {"raiz": "..", "casa": "camara", "titulo": "Deputados federais", "singular": "deputado", "plural": "deputados",
+         "nome_casa": "Câmara dos Deputados", "resumo": resumo.da_camara(deputados, doc_deputados.get("resumo") or {}),
          "atualizado_em": atualizado_camara, "fonte_nome": FONTE_CAMARA[0], "fonte_url": FONTE_CAMARA[1]},
     )
     _gerar_casa(
         env, saida / "senadores", senadores, "perfil_senador.html", "s",
         {"raiz": "..", "casa": "senado", "titulo": "Senadores", "singular": "senador", "plural": "senadores",
+         "nome_casa": "Senado Federal", "resumo": resumo.do_senado(senadores, doc_senadores.get("resumo") or {}),
          "atualizado_em": atualizado_senado, "fonte_nome": FONTE_SENADO[0], "fonte_url": FONTE_SENADO[1]},
     )
 

@@ -16,6 +16,13 @@ def carregar(nome: str) -> dict:
 
 def responder_com_fixtures(request: httpx.Request) -> httpx.Response:
     caminho = request.url.path.removeprefix("/api/v2")
+    if caminho == "/deputados" and request.url.params.get("siglaSexo") == "F":
+        # Nenhum dos 4 deputados da fixture é mulher; o ID abaixo não está na lista.
+        return httpx.Response(200, json={"dados": [{"id": 999999}], "links": []})
+    if caminho == "/legislaturas":
+        return httpx.Response(200, json={"dados": [{"id": 57}], "links": []})
+    if caminho == "/legislaturas/57/mesa":
+        return httpx.Response(200, json=carregar("camara_mesa.json"))
     if caminho == "/deputados":
         pagina = request.url.params.get("pagina", "1")
         return httpx.Response(200, json=carregar(f"lista_p{pagina}.json"))
@@ -33,9 +40,16 @@ def cliente() -> ClienteCamara:
     return cliente_falso()
 
 
+ROTAS_SENADO = {
+    "/dadosabertos/senador/lista/atual": "senado_lista.json",
+    "/dadosabertos/composicao/lideranca": "senado_liderancas.json",
+    "/dadosabertos/composicao/mesaSF": "senado_mesa.json",
+}
+
+
 def senado_falso(handler=None) -> ClienteSenado:
     def padrao(request: httpx.Request) -> httpx.Response:
-        return httpx.Response(200, json=carregar("senado_lista.json"))
+        return httpx.Response(200, json=carregar(ROTAS_SENADO[request.url.path]))
 
     http = httpx.Client(base_url=SENADO_API_BASE, transport=httpx.MockTransport(handler or padrao))
     return ClienteSenado(http=http, dormir=lambda _s: None)

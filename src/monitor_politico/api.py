@@ -21,6 +21,7 @@ class ClienteJSON:
             base_url=base_url,
             headers={"Accept": "application/json"},
             timeout=30,
+            follow_redirects=True,  # alguns endpoints do Senado redirecionam
         )
         self.dormir = dormir
 

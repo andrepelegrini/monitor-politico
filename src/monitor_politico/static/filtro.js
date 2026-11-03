@@ -27,4 +27,17 @@
   }
 
   [nome, partido, uf].forEach(function (el) { el.addEventListener("input", aplicar); });
+
+  // Botões do resumo (partido, estado): aplicam o filtro e levam à lista; clicar de novo limpa.
+  var titulo = document.getElementById("lista-titulo");
+  [["data-filtro-partido", partido], ["data-filtro-uf", uf]].forEach(function (par) {
+    Array.prototype.forEach.call(document.querySelectorAll("[" + par[0] + "]"), function (botao) {
+      botao.addEventListener("click", function () {
+        var valor = botao.getAttribute(par[0]);
+        par[1].value = par[1].value === valor ? "" : valor;
+        aplicar();
+        if (titulo) titulo.scrollIntoView({ behavior: "smooth" });
+      });
+    });
+  });
 })();

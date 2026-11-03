@@ -1,0 +1,70 @@
+{
+ "dados": [
+  {
+   "id": 160674,
+   "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/160674",
+   "nome": "Hugo Motta",
+   "siglaPartido": "REPUBLICANOS",
+   "uriPartido": "https://dadosabertos.camara.leg.br/api/v2/partidos/37908",
+   "siglaUf": "PB",
+   "idLegislatura": 57,
+   "urlFoto": "https://www.camara.leg.br/internet/deputado/bandep/160674.jpg",
+   "email": null,
+   "dataInicio": "2025-02-01",
+   "dataFim": null,
+   "titulo": "Presidente",
+   "codTitulo": "1"
+  },
+  {
+   "id": 160541,
+   "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/160541",
+   "nome": "Arthur Lira",
+   "siglaPartido": "PP",
+   "uriPartido": "https://dadosabertos.camara.leg.br/api/v2/partidos/37903",
+   "siglaUf": "AL",
+   "idLegislatura": 57,
+   "urlFoto": "https://www.camara.leg.br/internet/deputado/bandep/160541.jpg",
+   "email": null,
+   "dataInicio": "2023-02-01",
+   "dataFim": "2025-02-01",
+   "titulo": "Presidente",
+   "codTitulo": "1"
+  },
+  {
+   "id": 204506,
+   "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/204506",
+   "nome": "Marcos Pereira",
+   "siglaPartido": "REPUBLICANOS",
+   "uriPartido": "https://dadosabertos.camara.leg.br/api/v2/partidos/37908",
+   "siglaUf": "SP",
+   "idLegislatura": 57,
+   "urlFoto": "https://www.camara.leg.br/internet/deputado/bandep/204506.jpg",
+   "email": null,
+   "dataInicio": "2023-02-01",
+   "dataFim": "2025-02-01",
+   "titulo": "1º Vice-Presidente",
+   "codTitulo": "2"
+  },
+  {
+   "id": 178937,
+   "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/178937",
+   "nome": "Altineu Côrtes",
+   "siglaPartido": "PL",
+   "uriPartido": "https://dadosabertos.camara.leg.br/api/v2/partidos/37906",
+   "siglaUf": "RJ",
+   "idLegislatura": 57,
+   "urlFoto": "https://www.camara.leg.br/internet/deputado/bandep/178937.jpg",
+   "email": null,
+   "dataInicio": "2025-02-01",
+   "dataFim": null,
+   "titulo": "1º Vice-Presidente",
+   "codTitulo": "2"
+  }
+ ],
+ "links": [
+  {
+   "rel": "self",
+   "href": "https://dadosabertos.camara.leg.br/api/v2/legislaturas/57/mesa"
+  }
+ ]
+}

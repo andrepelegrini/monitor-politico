@@ -17,7 +17,7 @@ def test_ordem_alfabetica_ignora_acentos_e_maiusculas():
 @pytest.fixture
 def site(tmp_path, cliente, senado):
     docs = (
-        coletar_camara(cliente, tmp_path / "d.json"),
+        coletar_camara(cliente, tmp_path / "d.json", senado=senado),
         coletar_senado(senado, tmp_path / "s.json", minimo=1),
         coletar_congresso(*congresso_falso(), tmp_path / "c.json", hoje=date(2026, 11, 2)),
     )
@@ -103,3 +103,21 @@ def test_pagina_da_proposicao(site):
     assert "Votação simbólica" in pdl
     assert "Nenhuma votação desta proposição no período foi nominal" in pdl
     assert "Na pauta do Plenário" in pdl  # volta à pauta da Câmara em 03/11
+
+
+def test_resumo_nas_paginas_das_casas(site):
+    pasta, _ = site
+    deputados = (pasta / "deputados" / "index.html").read_text(encoding="utf-8")
+    assert "<h1>Câmara dos Deputados</h1>" in deputados
+    assert "Deputados por partido" in deputados
+    assert 'data-filtro-partido="MDB"' in deputados
+    assert 'data-filtro-uf="SP"' in deputados
+    assert "Quem conduz a Câmara" in deputados and "Hugo Motta" in deputados
+    assert "Titulares e suplentes" in deputados
+    assert deputados.index("Deputados por partido") < deputados.index('id="lista"')  # resumo antes dos nomes
+
+    senadores = (pasta / "senadores" / "index.html").read_text(encoding="utf-8")
+    assert "Blocos parlamentares" in senadores and "Mandatos" in senadores
+    assert "Mulheres e homens" in senadores
+    assert 'href="739.html">Ciro Nogueira</a>' in senadores  # líder com perfil no site
+    assert "Bancadas por estado" not in senadores

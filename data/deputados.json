@@ -1,6 +1,57 @@
 {
-  "coletado_em": "2026-11-02T19:16:10+00:00",
+  "coletado_em": "2026-11-03T03:18:19+00:00",
   "fonte": "https://dadosabertos.camara.leg.br/api/v2",
+  "resumo": {
+    "sexo": {
+      "mulheres": 89,
+      "homens": 424,
+      "mulheres_por_partido": {
+        "PL": 18,
+        "PT": 16,
+        "PSOL": 9,
+        "REPUBLICANOS": 8,
+        "PP": 7,
+        "MDB": 5,
+        "PCdoB": 5,
+        "PSD": 5,
+        "UNIÃO": 5,
+        "PODE": 4,
+        "PSB": 4,
+        "REDE": 2,
+        "NOVO": 1
+      }
+    },
+    "lideres": [
+      {
+        "cargo": "Presidente",
+        "id": 160674,
+        "nome": "Hugo Motta",
+        "partido": "REPUBLICANOS",
+        "uf": "PB"
+      },
+      {
+        "cargo": "Líder do Governo",
+        "id": 74400,
+        "nome": "Paulo Pimenta",
+        "partido": "PT",
+        "uf": "RS"
+      },
+      {
+        "cargo": "Líder da Maioria",
+        "id": 204425,
+        "nome": "Silvio Costa Filho",
+        "partido": "REPUBLICANOS",
+        "uf": "PE"
+      },
+      {
+        "cargo": "Líder da Minoria",
+        "id": 220568,
+        "nome": "Gustavo Gayer",
+        "partido": "PL",
+        "uf": "GO"
+      }
+    ]
+  },
   "deputados": [
     {
       "id": 204379,

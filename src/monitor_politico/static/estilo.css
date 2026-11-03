@@ -165,3 +165,51 @@ dd { margin: 0; overflow-wrap: anywhere; }
 .tabela-votos td { padding: 8px 16px; border-bottom: 1px solid var(--borda); }
 .tabela-votos tr[hidden] { display: none; }
 .voto-sim, .voto-não, .voto-outros { font-weight: 600; }
+
+/* Resumo da Casa (páginas de deputados e senadores) */
+:root { --serie-a: #c2611c; --serie-b: #1f5fbf; }
+@media (prefers-color-scheme: dark) {
+  :root { --serie-a: #d9782f; --serie-b: #5b8ee0; --sim: #5b8ee0; --nao: #d9782f; }
+}
+.cartoes-numeros { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); margin: 24px 0 16px; }
+.cartao-numero { display: flex; flex-direction: column; gap: 2px; padding: 16px 18px; background: var(--superficie); border: 1px solid var(--borda); border-radius: 8px; }
+.cartao-numero .valor { font-size: 2rem; font-weight: 700; line-height: 1.1; }
+.cartao-numero .rotulo { font-weight: 600; }
+.resumo-colunas { margin-bottom: 16px; }
+.resumo-colunas h2, section.cartao h2 { margin: 0 0 2px; font-size: 1.15rem; }
+section.cartao { margin-bottom: 16px; }
+.pilha { display: flex; flex-direction: column; gap: 16px; }
+.barras { list-style: none; margin: 12px 0 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
+.barras button {
+  width: 100%; min-height: 32px; display: grid; grid-template-columns: 130px minmax(0, 1fr) 96px; gap: 10px; align-items: center;
+  padding: 2px 4px; border: 0; border-radius: 4px; background: none; font: inherit; color: var(--texto); text-align: left; cursor: pointer;
+}
+.barras button:hover, .barras button:focus-visible { background: var(--fundo); }
+.barra-rotulo { font-size: .9rem; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.barra-trilho { display: block; height: 14px; background: var(--borda); border-radius: 0 4px 4px 0; }
+.barra-valor { display: block; height: 100%; background: var(--serie-b); border-radius: 0 4px 4px 0; }
+.barra-numero { font-size: .9rem; text-align: right; }
+.barra-dividida { display: flex; gap: 2px; height: 20px; margin: 12px 0 8px; }
+.barra-dividida > span:first-child { border-radius: 4px 0 0 4px; }
+.barra-dividida > span:last-child { border-radius: 0 4px 4px 0; }
+.parte-a { background: var(--serie-a); }
+.parte-b { background: var(--serie-b); }
+.marca-a, .marca-b { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; }
+.marca-a { background: var(--serie-a); }
+.marca-b { background: var(--serie-b); }
+.legenda { display: flex; flex-wrap: wrap; gap: 4px 20px; margin: 0 0 8px; }
+.legenda-lista { list-style: none; margin: 0 0 8px; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+.cartao p { margin: 0 0 6px; }
+.lideres { margin-top: 12px; }
+.lideres dd { margin: 0; }
+.blocos { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 12px 24px; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); }
+.blocos li { display: flex; flex-direction: column; gap: 4px; }
+.bloco-topo { display: flex; justify-content: space-between; gap: 8px; }
+.blocos .barra-trilho { height: 10px; }
+.ufs { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 8px; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); }
+.ufs button {
+  width: 100%; min-height: 64px; display: flex; flex-direction: column; align-items: flex-start; padding: 8px 10px;
+  border: 1px solid var(--borda); border-radius: 6px; background: var(--fundo); font: inherit; color: var(--texto); text-align: left; cursor: pointer;
+}
+.ufs button:hover, .ufs button:focus-visible { border-color: var(--destaque); }
+.titulo-lista { margin: 32px 0 12px; padding-top: 24px; border-top: 1px solid var(--borda); font-size: 1.25rem; }

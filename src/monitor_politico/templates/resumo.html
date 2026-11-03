@@ -1,0 +1,115 @@
+{# Resumo da Casa, no topo das listas de deputados e senadores. #}
+<section class="cartoes-numeros" aria-label="Números gerais">
+  {% for c in resumo.cartoes %}
+  <div class="cartao-numero">
+    <span class="valor">{{ c.valor }}</span>
+    <span class="rotulo">{{ c.rotulo }}</span>
+    {% if c.detalhe %}<span class="suave nota">{{ c.detalhe }}</span>{% endif %}
+  </div>
+  {% endfor %}
+</section>
+
+<section class="colunas resumo-colunas">
+  <div class="cartao">
+    <h2>{{ plural|capitalize }} por partido</h2>
+    <p class="suave nota">Clique num partido para filtrar a lista abaixo.</p>
+    <ul class="barras">
+      {% for p in resumo.partidos %}
+      <li>
+        <button type="button" data-filtro-partido="{{ p.sigla }}" aria-label="{{ p.sigla }}: {{ p.n }} ({{ p.pct }}). Filtrar a lista">
+          <span class="barra-rotulo">{{ p.sigla }}</span>
+          <span class="barra-trilho"><span class="barra-valor" style="width: {{ p.largura }}"></span></span>
+          <span class="barra-numero"><strong>{{ p.n }}</strong> <span class="suave">{{ p.pct }}</span></span>
+        </button>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="pilha">
+    {% if resumo.sexo %}
+    <div class="cartao">
+      <h2>Mulheres e homens</h2>
+      <div class="barra-dividida" role="img" aria-label="{{ resumo.sexo.mulheres }} mulheres ({{ resumo.sexo.pct_mulheres }}) e {{ resumo.sexo.homens }} homens ({{ resumo.sexo.pct_homens }})">
+        <span class="parte-a" style="width: {{ resumo.sexo.largura_mulheres }}"></span>
+        <span class="parte-b" style="width: {{ resumo.sexo.largura_homens }}"></span>
+      </div>
+      <p class="legenda">
+        <span><span class="marca-a" aria-hidden="true"></span><strong>{{ resumo.sexo.mulheres }}</strong> mulheres ({{ resumo.sexo.pct_mulheres }})</span>
+        <span><span class="marca-b" aria-hidden="true"></span><strong>{{ resumo.sexo.homens }}</strong> homens ({{ resumo.sexo.pct_homens }})</span>
+      </p>
+      {% if resumo.sexo.mulheres_por_partido %}
+      <p class="nota"><strong>Mulheres por partido:</strong> {% for p, n in resumo.sexo.mulheres_por_partido.items() %}{{ p }} {{ n }}{% if not loop.last %} · {% endif %}{% endfor %}</p>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    {% if resumo.lideres %}
+    <div class="cartao">
+      <h2>Quem conduz {{ "o Senado" if casa == "senado" else "a Câmara" }}</h2>
+      <dl class="lideres">
+        {% for l in resumo.lideres %}
+        <dt>{{ l.cargo }}</dt>
+        <dd>{% if l.tem_perfil %}<a href="{{ l.id }}.html">{{ l.nome }}</a>{% else %}{{ l.nome }}{% endif %}{% if l.partido %} <span class="suave">{{ l.partido }}{% if l.uf %}-{{ l.uf }}{% endif %}</span>{% endif %}</dd>
+        {% endfor %}
+      </dl>
+    </div>
+    {% endif %}
+
+    {% if casa == "senado" and resumo.mandatos %}
+    <div class="cartao">
+      <h2>Mandatos</h2>
+      <div class="barra-dividida" role="img" aria-label="{% for m in resumo.mandatos %}{{ m.n }} mandatos terminam em {{ m.fim }}{% if not loop.last %}; {% endif %}{% endfor %}">
+        {% for m in resumo.mandatos %}<span class="{{ loop.cycle('parte-b', 'parte-a') }}" style="width: {{ m.largura }}"></span>{% endfor %}
+      </div>
+      <ul class="legenda-lista">
+        {% for m in resumo.mandatos %}
+        <li><span class="{{ loop.cycle('marca-b', 'marca-a') }}" aria-hidden="true"></span><strong>{{ m.n }}</strong> terminam em {{ m.fim }} <span class="suave">(cadeiras em disputa na eleição de {{ m.ano|int - 1 }})</span></li>
+        {% endfor %}
+      </ul>
+      {% if resumo.suplentes %}<p class="suave nota">{{ resumo.suplentes }} senadores em exercício são suplentes, no lugar do titular.</p>{% endif %}
+    </div>
+    {% endif %}
+
+    {% if casa == "camara" %}
+    <div class="cartao">
+      <h2>Titulares e suplentes</h2>
+      <p><strong>{{ resumo.titulares }}</strong> titulares eleitos · <strong>{{ resumo.efetivados }}</strong> suplentes efetivados · <strong>{{ resumo.suplentes }}</strong> suplentes em exercício temporário</p>
+      <p class="suave nota">Suplente efetivado assumiu a vaga de vez (por exemplo, quando o titular renuncia); suplente em exercício temporário substitui um titular afastado.</p>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+{% if casa == "senado" and resumo.blocos %}
+<section class="cartao">
+  <h2>Blocos parlamentares</h2>
+  <p class="suave nota">Partidos se reúnem em blocos para atuar juntos no plenário e nas comissões.</p>
+  <ul class="blocos">
+    {% for b in resumo.blocos %}
+    <li>
+      <div class="bloco-topo"><span class="titulo-item" title="{{ b.nome_completo }}">{{ b.nome }}</span><span><strong>{{ b.n }}</strong> <span class="suave">{{ "senador" if b.n == 1 else "senadores" }}</span></span></div>
+      <span class="barra-trilho"><span class="barra-valor" style="width: {{ b.largura }}"></span></span>
+      <span class="suave nota">{{ b.partidos }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+{% if casa == "camara" and resumo.bancadas %}
+<section class="cartao">
+  <h2>Bancadas por estado</h2>
+  <p class="suave nota">Número de deputados de cada estado e o partido com mais cadeiras nele. Clique para filtrar a lista.</p>
+  <ul class="ufs">
+    {% for b in resumo.bancadas %}
+    <li>
+      <button type="button" data-filtro-uf="{{ b.uf }}" aria-label="{{ b.uf }}: {{ b.n }} deputados; maior partido {{ b.maior }}. Filtrar a lista">
+        <span><strong>{{ b.uf }}</strong> <span class="suave">· {{ b.n }}</span></span>
+        <span class="suave nota">{{ b.maior }}</span>
+      </button>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}

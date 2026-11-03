@@ -1,7 +1,14 @@
 {% extends "base.html" %}
 {% block titulo %}{{ titulo }} · Monitor Político{% endblock %}
 {% block conteudo %}
-<h1>{{ titulo }}</h1>
+<section class="abertura">
+  <h1>{{ nome_casa }}</h1>
+  <p class="suave">Composição atual dos {{ parlamentares|length }} {{ plural }} em exercício. Dados oficiais, atualizados em {{ atualizado_em }}.</p>
+</section>
+
+{% if resumo %}{% include "resumo.html" %}{% endif %}
+
+<h2 class="titulo-lista" id="lista-titulo">Todos os {{ plural }}</h2>
 
 <form class="filtros" role="search" onsubmit="return false">
   <label>Nome
