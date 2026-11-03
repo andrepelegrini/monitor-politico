@@ -3,8 +3,8 @@
 {% block conteudo %}
 <section class="abertura">
   <p><a href="../index.html">← Voltar ao início</a></p>
-  <p class="suave nota">{{ p.chave }}{% if p.tipo %} · {{ p.tipo }}{% endif %}{% if p.autores %} · Autoria: {{ p.autores[:3]|join(", ") }}{% if p.autores|length > 3 %} e outros{% endif %}{% endif %}{% if p.data_apresentacao %} · Apresentada em {{ p.data_apresentacao|data_br }}{% endif %}</p>
-  <h1>{{ p.apelido or p.chave }}</h1>
+  <p class="suave nota">{{ p.chave }}{% if p.tipo %} · {{ p.tipo }}{% endif %}{% if p.apelido and p.resumo %} · Conhecida como “{{ p.apelido }}”{% endif %}{% if p.autores %} · Autoria: {{ p.autores[:3]|join(", ") }}{% if p.autores|length > 3 %} e outros{% endif %}{% endif %}{% if p.data_apresentacao %} · Apresentada em {{ p.data_apresentacao|data_br }}{% endif %}</p>
+  <h1>{{ (p.resumo and p.resumo.titulo) or p.apelido or p.chave }}</h1>
   <div class="chips">
     {% if p.situacao and p.situacao.norma %}
     <span class="selo selo-norma">Virou {{ p.situacao.norma }}</span>
@@ -15,14 +15,24 @@
   </div>
 </section>
 
-<section class="bloco cartao">
-  <h2>Ementa oficial</h2>
-  <p>{{ p.ementa or "Ementa não informada." }}</p>
-  <ul class="links">
-    {% if p.url_inteiro_teor %}<li><a href="{{ p.url_inteiro_teor }}">Texto integral</a></li>{% endif %}
-    {% if p.url_camara %}<li><a href="{{ p.url_camara }}">Página oficial na Câmara</a></li>{% endif %}
-    {% if p.url_senado %}<li><a href="{{ p.url_senado }}">Página oficial no Senado</a></li>{% endif %}
-  </ul>
+<section class="bloco colunas">
+  {% if p.resumo %}
+  <div class="cartao">
+    <h2>Resumo</h2>
+    <p class="suave nota aviso-ia">Gerado automaticamente por IA a partir {{ "do texto oficial" if p.resumo.fonte == "texto integral" else "da ementa oficial" }}. Pode conter imprecisões; confira a ementa e o texto integral.</p>
+    <p><strong>O que muda.</strong> {{ p.resumo.o_que_muda }}</p>
+    <p><strong>Quem é afetado.</strong> {{ p.resumo.quem_e_afetado }}</p>
+  </div>
+  {% endif %}
+  <div class="cartao">
+    <h2>Ementa oficial</h2>
+    <p>{{ p.ementa or "Ementa não informada." }}</p>
+    <ul class="links">
+      {% if p.url_inteiro_teor %}<li><a href="{{ p.url_inteiro_teor }}">Texto integral</a></li>{% endif %}
+      {% if p.url_camara %}<li><a href="{{ p.url_camara }}">Página oficial na Câmara</a></li>{% endif %}
+      {% if p.url_senado %}<li><a href="{{ p.url_senado }}">Página oficial no Senado</a></li>{% endif %}
+    </ul>
+  </div>
 </section>
 
 <section class="bloco">

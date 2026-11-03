@@ -106,6 +106,6 @@
 {% endblock %}
 {% block rodape %}
 <p>Votações e pauta atualizadas em {{ atualizado_congresso }}.</p>
-<p>Fontes: <a href="https://dadosabertos.camara.leg.br/">Dados Abertos da Câmara dos Deputados</a> e <a href="https://www12.senado.leg.br/dados-abertos">Dados Abertos do Senado Federal</a>. Este site reproduz informações públicas oficiais, sem avaliação ou opinião.</p>
+<p>Fontes: <a href="https://dadosabertos.camara.leg.br/">Dados Abertos da Câmara dos Deputados</a> e <a href="https://www12.senado.leg.br/dados-abertos">Dados Abertos do Senado Federal</a>.{% if tem_resumos %} Títulos e resumos em linguagem simples são gerados automaticamente por IA a partir do texto oficial; a ementa oficial está sempre na página de cada proposição.{% endif %} Este site reproduz informações públicas oficiais, sem avaliação ou opinião.</p>
 {% endblock %}
 {% block scripts %}<script src="{{ raiz }}/static/painel.js"></script>{% endblock %}

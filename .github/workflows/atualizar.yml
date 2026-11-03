@@ -5,7 +5,9 @@ name: Testar e atualizar dados
 # deploy. As coletas (deputados, senadores e votações/pauta do Congresso) são
 # independentes: se uma falhar, as outras ainda são commitadas, e o site segue
 # com os dados anteriores da que falhou. O job termina em erro para que a
-# falha apareça no Actions.
+# falha apareça no Actions. Os resumos por IA só rodam com o secret
+# ANTHROPIC_API_KEY configurado e só geram resumos de proposições novas ou
+# alteradas.
 
 on:
   schedule:
@@ -55,17 +57,29 @@ jobs:
         id: congresso
         continue-on-error: true
         run: python -m monitor_politico.congresso
+      - name: Gerar resumos por IA das proposições novas
+        id: resumos
+        continue-on-error: true
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "Secret ANTHROPIC_API_KEY não configurado: resumos não gerados."
+            exit 0
+          fi
+          pip install -e ".[ia]"
+          python -m monitor_politico.resumos_ia
       - name: Commit dos dados
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/deputados.json data/senadores.json data/congresso.json
+          git add data/
           git diff --cached --quiet && exit 0
           git commit -m "Atualiza dados abertos ($(date -u +%F))"
           git pull --rebase
           git push
       - name: Falhar se alguma coleta falhou
-        if: steps.camara.outcome == 'failure' || steps.senado.outcome == 'failure' || steps.congresso.outcome == 'failure'
+        if: steps.camara.outcome == 'failure' || steps.senado.outcome == 'failure' || steps.congresso.outcome == 'failure' || steps.resumos.outcome == 'failure'
         run: |
-          echo "Câmara: ${{ steps.camara.outcome }} · Senado: ${{ steps.senado.outcome }} · Congresso: ${{ steps.congresso.outcome }}"
+          echo "Câmara: ${{ steps.camara.outcome }} · Senado: ${{ steps.senado.outcome }} · Congresso: ${{ steps.congresso.outcome }} · Resumos: ${{ steps.resumos.outcome }}"
           exit 1

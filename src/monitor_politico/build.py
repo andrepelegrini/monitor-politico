@@ -11,7 +11,7 @@ import sys
 import unicodedata
 from datetime import datetime
 from pathlib import Path
-from typing import Any, Sequence, Union
+from typing import Any, Optional, Sequence, Union
 from zoneinfo import ZoneInfo
 
 from jinja2 import Environment, PackageLoader, select_autoescape
@@ -22,6 +22,7 @@ from monitor_politico.models import Deputado, Senador
 DEPUTADOS_PADRAO = Path("data/deputados.json")
 SENADORES_PADRAO = Path("data/senadores.json")
 CONGRESSO_PADRAO = Path("data/congresso.json")
+RESUMOS_PADRAO = Path("data/resumos.json")
 SAIDA_PADRAO = Path("site")
 FUSO = ZoneInfo("America/Sao_Paulo")
 PACOTE = Path(__file__).parent
@@ -68,6 +69,7 @@ def construir(
     doc_senadores: dict[str, Any],
     doc_congresso: dict[str, Any],
     saida: Path = SAIDA_PADRAO,
+    doc_resumos: Optional[dict[str, Any]] = None,
 ) -> None:
     env = Environment(
         loader=PackageLoader("monitor_politico", "templates"),
@@ -85,6 +87,11 @@ def construir(
     shutil.copytree(PACOTE / "static", saida / "static")
 
     atualizado_congresso = _formatar_data(doc_congresso["coletado_em"])
+    resumos = (doc_resumos or {}).get("resumos", {})
+    doc_congresso = {
+        **doc_congresso,
+        "proposicoes": {k: {**p, "resumo": resumos.get(k)} for k, p in doc_congresso["proposicoes"].items()},
+    }
     (saida / "index.html").write_text(
         env.get_template("inicio.html").render(
             raiz=".", casa="inicio", atualizado_congresso=atualizado_congresso, **painel.inicio(doc_congresso)
@@ -130,7 +137,9 @@ if __name__ == "__main__":
     doc_dep = json.loads(entrada_dep.read_text(encoding="utf-8"))
     doc_sen = json.loads(entrada_sen.read_text(encoding="utf-8"))
     doc_con = json.loads(entrada_con.read_text(encoding="utf-8"))
-    construir(doc_dep, doc_sen, doc_con, destino)
+    # Os resumos por IA são opcionais: sem o arquivo, as páginas mostram só a ementa oficial.
+    doc_res = json.loads(RESUMOS_PADRAO.read_text(encoding="utf-8")) if RESUMOS_PADRAO.exists() else None
+    construir(doc_dep, doc_sen, doc_con, destino, doc_res)
     print(
         f"Site gerado em {destino}/ ({len(doc_dep['deputados'])} deputados, {len(doc_sen['senadores'])} senadores, "
         f"{len(doc_con['proposicoes'])} proposições)"

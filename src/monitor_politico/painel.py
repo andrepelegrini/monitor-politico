@@ -32,7 +32,8 @@ def rotulo_sessao(data_hora: str) -> str:
 
 
 def titulo(prop: dict[str, Any]) -> str:
-    return prop.get("apelido") or prop.get("ementa") or prop["chave"]
+    """Título curto do resumo por IA; sem ele, o apelido oficial do Senado ou a ementa."""
+    return (prop.get("resumo") or {}).get("titulo") or prop.get("apelido") or prop.get("ementa") or prop["chave"]
 
 
 def texto_placar(votacao: dict[str, Any]) -> str:
@@ -131,6 +132,7 @@ def inicio(doc: dict[str, Any]) -> dict[str, Any]:
         "votadas": linhas,
         "temas": temas_em_destaque(doc, linhas),
         "todos_temas": sorted({t for l in linhas for t in l["temas"]}),
+        "tem_resumos": any(p.get("resumo") for p in doc["proposicoes"].values()),
     }
 
 

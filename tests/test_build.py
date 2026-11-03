@@ -121,3 +121,29 @@ def test_resumo_nas_paginas_das_casas(site):
     assert "Mulheres e homens" in senadores
     assert 'href="739.html">Ciro Nogueira</a>' in senadores  # líder com perfil no site
     assert "Bancadas por estado" not in senadores
+
+
+def test_resumo_por_ia_quando_existe(tmp_path, cliente, senado):
+    docs = (
+        coletar_camara(cliente, tmp_path / "d.json"),
+        coletar_senado(senado, tmp_path / "s.json", minimo=1),
+        coletar_congresso(*congresso_falso(), tmp_path / "c.json", hoje=date(2026, 11, 2)),
+    )
+    resumos = {"resumos": {"PLP 186/2026": {
+        "titulo": "Novo limite de faturamento do MEI", "o_que_muda": "Aumenta o limite.",
+        "quem_e_afetado": "Microempreendedores.", "fonte": "texto integral",
+    }}}
+    construir(*docs, tmp_path / "com", resumos)
+    construir(*docs, tmp_path / "sem")
+
+    inicio = (tmp_path / "com" / "index.html").read_text(encoding="utf-8")
+    assert "Novo limite de faturamento do MEI" in inicio
+    assert "gerados automaticamente por IA" in inicio
+    plp = (tmp_path / "com" / "proposicoes" / "plp-186-2026.html").read_text(encoding="utf-8")
+    assert "<h1>Novo limite de faturamento do MEI</h1>" in plp
+    assert "Gerado automaticamente por IA a partir do texto oficial" in plp
+    assert "Ementa oficial" in plp
+
+    sem = (tmp_path / "sem" / "proposicoes" / "plp-186-2026.html").read_text(encoding="utf-8")
+    assert "Gerado automaticamente" not in sem and "<h1>PLP 186/2026</h1>" in sem
+    assert "gerados automaticamente por IA" not in (tmp_path / "sem" / "index.html").read_text(encoding="utf-8")

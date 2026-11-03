@@ -213,3 +213,4 @@ section.cartao { margin-bottom: 16px; }
 }
 .ufs button:hover, .ufs button:focus-visible { border-color: var(--destaque); }
 .titulo-lista { margin: 32px 0 12px; padding-top: 24px; border-top: 1px solid var(--borda); font-size: 1.25rem; }
+.cartao .aviso-ia { margin-bottom: 10px; }
