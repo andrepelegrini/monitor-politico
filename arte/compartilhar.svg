@@ -1,21 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <!-- Imagem padrão de compartilhamento (og:image). Gerar o PNG com:
-       rsvg-convert -w 1200 -h 630 arte/compartilhar.svg -o src/monitor_politico/static/compartilhar.png -->
-  <rect width="1200" height="630" fill="#1f5fbf"/>
-  <g fill="#ffffff" opacity="0.07">
-    <rect x="0" y="110" width="1200" height="2"/><rect x="0" y="160" width="1200" height="2"/>
-    <rect x="0" y="210" width="1200" height="2"/><rect x="0" y="260" width="1200" height="2"/>
-    <rect x="0" y="310" width="1200" height="2"/><rect x="0" y="360" width="1200" height="2"/>
-    <rect x="0" y="410" width="1200" height="2"/><rect x="0" y="460" width="1200" height="2"/>
-    <rect x="0" y="510" width="1200" height="2"/>
-  </g>
+  <!-- Imagem padrão de compartilhamento (og:image), na identidade Civic Editorial.
+       As fontes vêm do Google Fonts, então o PNG precisa ser gerado por um navegador:
+       abrir este arquivo no Chromium (por exemplo, com "playwright screenshot"), em janela
+       de 1200x630, esperar as fontes carregarem e salvar em src/monitor_politico/static/compartilhar.png. -->
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,480&amp;family=Instrument+Sans:wght@400;500&amp;display=swap");
+    .titulo { font-family: Fraunces, Georgia, serif; font-weight: 480; letter-spacing: -3px; }
+    .texto { font-family: "Instrument Sans", system-ui, sans-serif; }
+  </style>
+  <rect width="1200" height="630" fill="#FAF8F4"/>
   <!-- Plenário estilizado: semicírculo de assentos -->
-  <g fill="#ffffff" opacity="0.18">
+  <g fill="#F0EBE2">
     <path d="M760 520 a300 300 0 0 1 600 0 h-60 a240 240 0 0 0 -480 0 z"/>
     <path d="M880 520 a180 180 0 0 1 360 0 h-60 a120 120 0 0 0 -240 0 z"/>
   </g>
-  <text x="80" y="250" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="92" font-weight="700" fill="#ffffff">Monitor Político</text>
-  <text x="80" y="330" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="40" fill="#ffffff" opacity="0.88">Pauta, votações e parlamentares</text>
-  <text x="80" y="384" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="40" fill="#ffffff" opacity="0.88">da Câmara e do Senado</text>
-  <text x="80" y="540" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="28" fill="#ffffff" opacity="0.7">Dados abertos oficiais, atualizados todo dia útil</text>
+  <rect x="80" y="520" width="1040" height="1" fill="#D9D2C8"/>
+  <text class="titulo" x="80" y="240" font-size="104" fill="#26221E">Monitor Político</text>
+  <text class="texto" x="80" y="326" font-size="40" fill="#62594F">Pauta, votações e parlamentares</text>
+  <text class="texto" x="80" y="380" font-size="40" fill="#62594F">da Câmara e do Senado</text>
+  <text class="texto" x="80" y="568" font-size="28" font-weight="500" fill="#513C2D">Dados abertos oficiais, atualizados todo dia útil</text>
 </svg>

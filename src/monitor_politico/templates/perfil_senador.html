@@ -3,13 +3,22 @@
 {% block og_titulo %}{{ s.nome }} ({{ s.partido }}-{{ s.uf }}) · Senado Federal{% endblock %}
 {% block descricao %}Partido, estado, mandato e contato oficial do gabinete de {{ s.nome }} no Senado Federal, com dados abertos oficiais.{% endblock %}
 {% block conteudo %}
-<p><a href="index.html">← Todos os senadores</a></p>
+<nav class="ce-breadcrumb" aria-label="Trilha de navegação">
+  <ol>
+    <li><a href="../index.html">Início</a></li>
+    <li><a href="index.html">Senadores</a></li>
+    <li aria-current="page">{{ s.nome }}</li>
+  </ol>
+</nav>
 
-<article class="perfil">
-  {% if s.url_foto %}<img src="{{ s.url_foto }}" alt="Foto oficial de {{ s.nome }}" width="150" height="200">{% endif %}
-  <div>
-    <h1>{{ s.nome }}</h1>
-    <dl>
+<article class="ce-profile">
+  {% if s.url_foto %}<img src="{{ s.url_foto }}" alt="Foto oficial de {{ s.nome }}" width="150" height="200">{% else %}<span class="ce-photo-empty" aria-hidden="true"></span>{% endif %}
+  <div class="ce-profile-body">
+    <header class="ce-page-head">
+      <p class="ce-eyebrow">Senado Federal</p>
+      <h1>{{ s.nome }}</h1>
+    </header>
+    <dl class="ce-dl">
       <dt>Partido</dt><dd>{{ s.partido }}</dd>
       <dt>UF</dt><dd>{{ s.uf }}</dd>
       {% if s.condicao %}<dt>Condição</dt><dd>{{ s.condicao }}</dd>{% endif %}
@@ -17,14 +26,14 @@
       {% if s.fim_mandato %}<dt>Mandato até</dt><dd>{{ s.fim_mandato|data_br }}</dd>{% endif %}
     </dl>
 
-    <h2>Contato oficial do gabinete</h2>
-    <dl>
+    <h2 class="ce-display ce-section-title ce-profile-title">Contato oficial do gabinete</h2>
+    <dl class="ce-dl">
       {% if s.email %}<dt>E-mail</dt><dd><a href="mailto:{{ s.email }}">{{ s.email }}</a></dd>{% endif %}
       {% if s.telefones %}<dt>Telefone{% if s.telefones|length > 1 %}s{% endif %}</dt><dd>{% for t in s.telefones %}(61) {{ t }}{% if not loop.last %}<br>{% endif %}{% endfor %}</dd>{% endif %}
     </dl>
 
-    <h2>Fonte</h2>
-    <ul>
+    <h2 class="ce-display ce-section-title ce-profile-title">Fonte</h2>
+    <ul class="ce-links">
       <li><a href="{{ s.url_site }}">Página oficial no Senado</a></li>
       <li><a href="{{ s.uri_api }}">Registro na API de Dados Abertos</a></li>
     </ul>

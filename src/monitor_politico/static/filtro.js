@@ -36,8 +36,17 @@
         var valor = botao.getAttribute(par[0]);
         par[1].value = par[1].value === valor ? "" : valor;
         aplicar();
-        if (titulo) titulo.scrollIntoView({ behavior: "smooth" });
+        if (titulo) titulo.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
       });
     });
   });
+
+  var limpar = document.querySelector("[data-limpar-filtros]");
+  if (limpar) {
+    limpar.addEventListener("click", function () {
+      nome.value = partido.value = uf.value = "";
+      aplicar();
+      nome.focus();
+    });
+  }
 })();

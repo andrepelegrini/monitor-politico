@@ -40,4 +40,5 @@ Fora do escopo por enquanto: deputados estaduais e governadores (27 assembleias 
 
 - Repositório: `github.com/andrepelegrini/monitor-politico` (público). Neste computador, o push usa o alias SSH `github.com-personal`.
 - Hospedagem: Vercel, com deploy a cada push na `main`. A coleta diária roda no GitHub Actions e faz commit dos arquivos em `data/`. Faça `git pull` antes de começar, porque o robô de coleta envia commits todo dia útil.
+- Visual: design system Civic Editorial em `design-system/` (leia `design-system/ai/AGENT_INSTRUCTIONS.md` antes de mexer no frontend). `static/ce-*.css` são cópias exatas do pacote, e um teste confere isso: para alterá-los, mude em `design-system/` e copie. O que é só deste site fica em `static/estilo.css`, usando os tokens `--ce-*`.
 - Rodar localmente: `python3 -m venv .venv && .venv/bin/pip install -e '.[dev]'`, depois `.venv/bin/python -m pytest` e `.venv/bin/python -m monitor_politico.build` (gera o site em `site/`).

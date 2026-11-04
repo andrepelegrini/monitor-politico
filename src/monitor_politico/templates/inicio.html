@@ -2,99 +2,140 @@
 {% block titulo %}O que está em discussão no Congresso · Monitor Político{% endblock %}
 {% block og_titulo %}O que está em discussão no Congresso{% endblock %}
 {% block conteudo %}
-<section class="abertura">
+{% set itens_senado = pauta["Senado"]|sum(attribute="itens", start=[])|length %}
+{% set itens_camara = pauta["Câmara"]|sum(attribute="itens", start=[])|length %}
+{% set com_voto_nominal = votadas|selectattr("nominal")|list|length %}
+<header class="ce-page-head ce-page-head--editorial">
+  <p class="ce-eyebrow">Plenários da Câmara e do Senado</p>
   <h1>O que está em discussão no Congresso</h1>
-  <p class="suave">Pauta dos próximos dias e votações dos últimos 30 dias nos plenários da Câmara e do Senado. Atualizado em {{ atualizado_congresso }}.</p>
-</section>
+  <p class="ce-deck">Pauta dos próximos dias e votações dos últimos 30 dias nos plenários da Câmara e do Senado.</p>
+</header>
 
-{% if temas %}
-<section class="bloco">
-  <h2>Temas em destaque</h2>
-  <p class="suave nota">Temas oficiais das proposições em pauta ou votadas no período. Clique para filtrar as votações.</p>
-  <div class="chips">
-    {% for nome, qtd in temas %}
-    <button type="button" class="chip" data-tema="{{ nome }}">{{ nome }} <span class="qtd">{{ qtd }}</span></button>
-    {% endfor %}
+<section class="ce-kpis" aria-label="Números do período">
+  <div class="ce-kpi-grid">
+    <div class="ce-kpi">
+      <div class="ce-kpi-value">{{ itens_senado + itens_camara }}</div>
+      <div class="ce-kpi-label">{{ "item" if itens_senado + itens_camara == 1 else "itens" }} na pauta publicada</div>
+      <div class="ce-meta">Próximos dias · {{ itens_senado }} no Senado, {{ itens_camara }} na Câmara</div>
+    </div>
+    <div class="ce-kpi">
+      <div class="ce-kpi-value">{{ votadas|length }}</div>
+      <div class="ce-kpi-label">{{ "proposição votada" if votadas|length == 1 else "proposições votadas" }}</div>
+      <div class="ce-meta">Votações de mérito · últimos 30 dias</div>
+    </div>
+    <div class="ce-kpi">
+      <div class="ce-kpi-value">{{ com_voto_nominal }}</div>
+      <div class="ce-kpi-label">com o voto de cada parlamentar</div>
+      <div class="ce-meta">Entre as {{ votadas|length }} votadas · <a href="entenda.html#nominal">votação nominal</a></div>
+    </div>
   </div>
 </section>
-{% endif %}
 
-<section class="bloco">
-  <h2>Em pauta nos próximos dias</h2>
-  <div class="colunas">
-    {% for casa, nome_casa in (("Senado", "Senado Federal"), ("Câmara", "Câmara dos Deputados")) %}
-    <div class="cartao">
-      <div class="cartao-topo">
-        <h3>{{ nome_casa }}</h3>
-        {% set n = pauta[casa]|sum(attribute="itens", start=[])|length %}
-        <span class="suave nota">Plenário{% if n %} · {{ n }} {{ "item" if n == 1 else "itens" }}{% endif %}</span>
+<div class="ce-grid-main ce-section">
+  <section id="pauta" aria-labelledby="pauta-titulo">
+    <div class="ce-section-header">
+      <h2 class="ce-display ce-section-title" id="pauta-titulo">Em pauta nos próximos dias</h2>
+    </div>
+    <p class="ce-section-note">Evento programado. A agenda pode mudar.</p>
+    <div class="ce-duo">
+      {% for casa, nome_casa in (("Senado", "Senado Federal"), ("Câmara", "Câmara dos Deputados")) %}
+      <div>
+        <div class="ce-house-head">
+          <h3 class="ce-subtitle">{{ nome_casa }}</h3>
+          {% set n = pauta[casa]|sum(attribute="itens", start=[])|length %}
+          <span class="ce-meta">Plenário{% if n %} · {{ n }} {{ "item" if n == 1 else "itens" }}{% endif %}</span>
+        </div>
+        {% for sessao in pauta[casa] %}
+        <div class="ce-session">
+          <p class="ce-eyebrow">{{ sessao.rotulo }}</p>
+          <ul class="ce-items">
+            {% for i in sessao["itens"] %}
+            <li>
+              {% if i.slug %}<a href="proposicoes/{{ i.slug }}.html">{% else %}<div>{% endif %}
+                <span class="ce-item-title">{{ i.titulo }}</span>
+                <span class="ce-meta">{{ i.chave }}{% if i.fase %} · {{ i.fase }}{% endif %}</span>
+              {% if i.slug %}</a>{% else %}</div>{% endif %}
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% else %}
+        <p class="ce-state-box ce-muted">{% if casa == "Câmara" %}A Câmara ainda não publicou sessões de votação para os próximos dias. A pauta costuma sair na véspera ou no próprio dia.{% else %}O Senado não tem sessões de votação com matérias na agenda dos próximos dias.{% endif %}</p>
+        {% endfor %}
       </div>
-      {% for sessao in pauta[casa] %}
-      <div class="sessao">
-        <p class="sessao-data">{{ sessao.rotulo }}</p>
-        <ul class="itens-pauta">
-          {% for i in sessao["itens"] %}
-          <li>
-            {% if i.slug %}<a href="proposicoes/{{ i.slug }}.html">{% else %}<div>{% endif %}
-              <span class="titulo-item">{{ i.titulo }}</span>
-              <span class="suave nota">{{ i.chave }}{% if i.fase %} · {{ i.fase }}{% endif %}</span>
-            {% if i.slug %}</a>{% else %}</div>{% endif %}
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
-      {% else %}
-      <p class="vazio-caixa">{% if casa == "Câmara" %}A Câmara ainda não publicou sessões de votação para os próximos dias. A pauta costuma sair na véspera ou no próprio dia.{% else %}O Senado não tem sessões de votação com matérias na agenda dos próximos dias.{% endif %}</p>
       {% endfor %}
     </div>
-    {% endfor %}
+  </section>
+
+  <aside class="ce-stack">
+    {% if temas %}
+    <section aria-labelledby="temas-titulo">
+      <div class="ce-section-header">
+        <h2 class="ce-display ce-section-title" id="temas-titulo">Temas em destaque</h2>
+      </div>
+      <p class="ce-section-note">Temas oficiais das proposições em pauta ou votadas no período. Clique para filtrar as votações.</p>
+      <div class="chips">
+        {% for nome, qtd in temas %}
+        <button type="button" class="chip" data-tema="{{ nome }}">{{ nome }} <span class="qtd">{{ qtd }}</span></button>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+    <div class="ce-card">
+      <p class="ce-eyebrow">Procedência</p>
+      <h2 class="ce-subtitle ce-card-title">Verifique a fonte</h2>
+      <p class="ce-muted ce-text-sm">Dados atualizados em {{ atualizado_congresso }}. Cada proposição traz os links para a página oficial na Câmara ou no Senado.</p>
+      <p class="ce-text-sm ce-card-link"><a href="entenda.html">De onde vêm os dados e o que cada termo quer dizer</a></p>
+    </div>
+  </aside>
+</div>
+
+<section class="ce-section" id="votadas" aria-labelledby="votadas-titulo">
+  <div class="ce-section-header">
+    <h2 class="ce-display ce-section-title" id="votadas-titulo">Votado nos últimos 30 dias</h2>
   </div>
-</section>
+  <p class="ce-section-note">Uma linha por proposição, com a votação de mérito mais recente em cada casa. Votações de rito (requerimentos, redação final) ficam na página de cada uma. <a href="entenda.html#rito">O que é votação de rito?</a></p>
 
-<section class="bloco" id="votadas">
-  <h2>Votado nos últimos 30 dias</h2>
-  <p class="suave nota">Uma linha por proposição, com a votação de mérito mais recente em cada casa. Votações de rito (requerimentos, redação final) ficam na página de cada uma. <a href="entenda.html#rito">O que é votação de rito?</a></p>
-
-  <form class="filtros" onsubmit="return false">
-    <label>Casa
-      <select id="f-casa">
+  <form class="ce-filters" aria-label="Filtrar votações" onsubmit="return false">
+    <label class="ce-field"><span class="ce-control-label">Casa</span>
+      <select class="ce-select" id="f-casa">
         <option value="">Câmara e Senado</option>
         <option>Câmara</option>
         <option>Senado</option>
       </select>
     </label>
-    <label>Tema
-      <select id="f-tema">
+    <label class="ce-field"><span class="ce-control-label">Tema</span>
+      <select class="ce-select" id="f-tema">
         <option value="">Todos</option>
         {% for t in todos_temas %}<option>{{ t }}</option>{% endfor %}
       </select>
     </label>
-    <label>Resultado
-      <select id="f-resultado">
+    <label class="ce-field"><span class="ce-control-label">Resultado</span>
+      <select class="ce-select" id="f-resultado">
         <option value="">Todos</option>
         <option value="aprovada">Aprovadas</option>
         <option value="rejeitada">Rejeitadas</option>
       </select>
     </label>
-    <label class="caixa"><input type="checkbox" id="f-nominal"> Só com o voto de cada parlamentar</label>
+    <label class="ce-check"><input type="checkbox" id="f-nominal"> Só com o voto de cada parlamentar</label>
   </form>
 
-  <p class="contagem" aria-live="polite"><span id="contagem">{{ votadas|length }}</span> de {{ votadas|length }} proposições</p>
-  <ul class="votadas" id="lista-votadas">
+  <p class="ce-count" aria-live="polite"><span id="contagem">{{ votadas|length }}</span> de {{ votadas|length }} proposições</p>
+  <ul class="ce-vote-list" id="lista-votadas">
     {% for v in votadas %}
     <li data-casas="{{ v.casas|join('|') }}" data-temas="|{{ v.temas|join('|') }}|" data-resultados="{{ v.resultados|join('|') }}" data-nominal="{{ 1 if v.nominal else 0 }}">
       <a href="proposicoes/{{ v.slug }}.html">
-        <div class="votada-texto">
-          <span class="suave nota">{{ v.sigla }}{% if v.temas %} · {{ v.temas[:3]|join(" · ") }}{% endif %}</span>
-          <span class="titulo-item">{{ v.titulo }}</span>
-          {% if v.situacao %}<span class="suave nota">Situação: {{ v.situacao }}</span>{% endif %}
+        <div class="ce-vote-text">
+          <span class="ce-meta">{{ v.sigla }}{% if v.temas %} · {{ v.temas[:3]|join(" · ") }}{% endif %}</span>
+          <span class="ce-item-title ce-item-title--lg">{{ v.titulo }}</span>
+          {% if v.situacao %}<span class="ce-meta">Situação: {{ v.situacao }}</span>{% endif %}
         </div>
-        <div class="votada-votos">
+        <div class="ce-vote-results">
           {% for x in v.votos %}
           <div>
-            <span class="suave nota">{{ x.casa }} · {{ x.data }}</span>
-            {% if x.resultado %}<span class="selo selo-{{ x.resultado }}">{{ x.resultado|capitalize }}</span>{% endif %}
-            <span class="placar">{{ x.placar }}</span>
+            <span class="ce-meta">{{ x.casa }} · {{ x.data }}</span>
+            {% if x.resultado %}<span class="ce-badge">{{ x.resultado|capitalize }}</span>{% endif %}
+            <span class="ce-score">{{ x.placar }}</span>
           </div>
           {% endfor %}
         </div>
@@ -102,7 +143,19 @@
     </li>
     {% endfor %}
   </ul>
-  <p id="vazio" class="vazio" hidden>Nenhuma proposição encontrada com esses filtros.</p>
+  <div id="vazio" class="ce-state-box" hidden>
+    <p>Nenhuma proposição encontrada com esses filtros.</p>
+    <button type="button" class="ce-button ce-button--secondary" data-limpar-filtros>Limpar filtros</button>
+  </div>
+</section>
+
+<section class="ce-section ce-cta" aria-labelledby="cta-titulo">
+  <h2 class="ce-display ce-section-title" id="cta-titulo">Procure um parlamentar ou uma proposição</h2>
+  <p class="ce-muted">Use a busca no topo da página ou veja a composição de cada Casa.</p>
+  <div class="ce-actions">
+    <a class="ce-button" href="deputados/index.html">Ver deputados</a>
+    <a class="ce-button ce-button--secondary" href="senadores/index.html">Ver senadores</a>
+  </div>
 </section>
 {% endblock %}
 {% block rodape %}

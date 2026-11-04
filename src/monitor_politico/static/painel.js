@@ -3,6 +3,10 @@
     return s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().trim();
   }
 
+  function rolagem() {
+    return window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
+  }
+
   // Página principal: filtros das votações recentes e chips de tema.
   var lista = document.getElementById("lista-votadas");
   if (lista) {
@@ -33,7 +37,16 @@
       chip.addEventListener("click", function () {
         tema.value = tema.value === chip.dataset.tema ? "" : chip.dataset.tema;
         aplicar();
-        document.getElementById("votadas").scrollIntoView({ behavior: "smooth" });
+        document.getElementById("votadas").scrollIntoView({ behavior: rolagem() });
+      });
+    });
+
+    Array.prototype.forEach.call(document.querySelectorAll("[data-limpar-filtros]"), function (botao) {
+      botao.addEventListener("click", function () {
+        casa.value = tema.value = resultado.value = "";
+        nominal.checked = false;
+        aplicar();
+        casa.focus();
       });
     });
   }
@@ -63,6 +76,8 @@
     var voto = painel.querySelector(".v-voto");
     var linhas = Array.prototype.slice.call(painel.querySelectorAll("tbody tr"));
     var contagem = painel.querySelector(".v-contagem");
+    var tabela = painel.querySelector(".ce-table-scroll");
+    var vazio = painel.querySelector(".v-vazio");
     linhas.forEach(function (tr) { tr.dataset.busca = normalizar(tr.dataset.nome); });
 
     var aplicar = function () {
@@ -77,7 +92,14 @@
         if (ok) visiveis++;
       });
       contagem.textContent = visiveis;
+      tabela.hidden = visiveis === 0;
+      vazio.hidden = visiveis !== 0;
     };
     [nome, partido, uf, voto].forEach(function (el) { el.addEventListener("input", aplicar); });
+    painel.querySelector(".v-limpar").addEventListener("click", function () {
+      nome.value = partido.value = uf.value = voto.value = "";
+      aplicar();
+      nome.focus();
+    });
   });
 })();

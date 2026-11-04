@@ -3,13 +3,21 @@
 {% block og_titulo %}Entenda os dados do Monitor Político{% endblock %}
 {% block descricao %}De onde vêm as informações do Monitor Político, quando são atualizadas e o que significa votação simbólica, nominal, de mérito e de rito.{% endblock %}
 {% block conteudo %}
-<article class="entenda">
-  <section class="abertura">
-    <h1>Entenda os dados</h1>
-    <p class="suave">De onde vêm as informações deste site, quando são atualizadas e o que cada termo quer dizer.</p>
-  </section>
+<nav class="ce-breadcrumb" aria-label="Trilha de navegação">
+  <ol>
+    <li><a href="index.html">Início</a></li>
+    <li aria-current="page">Entenda os dados</li>
+  </ol>
+</nav>
 
-  <h2>De onde vêm</h2>
+<article class="ce-prose">
+  <header class="ce-page-head">
+    <p class="ce-eyebrow">Metodologia e fontes</p>
+    <h1>Entenda os dados</h1>
+    <p class="ce-deck">De onde vêm as informações deste site, quando são atualizadas e o que cada termo quer dizer.</p>
+  </header>
+
+  <h2 class="ce-display ce-section-title">De onde vêm</h2>
   <p>Tudo vem das APIs oficiais de dados abertos das duas Casas. Nada é digitado à mão, e o site não avalia nem dá opinião sobre ninguém.</p>
   <ul>
     <li><a href="https://dadosabertos.camara.leg.br/">Dados Abertos da Câmara dos Deputados</a>: deputados, pauta do plenário, votações, orientação dos partidos e votos.</li>
@@ -17,14 +25,15 @@
   </ul>
   {% if tem_resumos %}<p>Os títulos e resumos em linguagem simples das proposições são gerados automaticamente por IA a partir do texto oficial e vêm sempre rotulados. A ementa oficial aparece ao lado.</p>{% endif %}
 
-  <h2>Quando são atualizados</h2>
+  <h2 class="ce-display ce-section-title">Quando são atualizados</h2>
   <p>Uma vez por dia, às 6h (horário de Brasília), de segunda a sexta. A data da última coleta aparece no rodapé de cada página. Uma votação feita à tarde aparece no site na manhã seguinte.</p>
-  <p class="suave nota">Última coleta: {{ atualizado_congresso }}.</p>
+  <p class="ce-section-note">Última coleta: {{ atualizado_congresso }}.</p>
 
-  <h2>O que cada Casa publica</h2>
-  <div class="tabela-rolagem">
-    <table class="tabela-votos">
-      <thead><tr><th scope="col"><span class="visualmente-oculto">Informação</span></th><th scope="col">Câmara</th><th scope="col">Senado</th></tr></thead>
+  <h2 class="ce-display ce-section-title">O que cada Casa publica</h2>
+  <div class="ce-table-scroll" role="region" aria-label="O que cada Casa publica" tabindex="0">
+    <table class="ce-table ce-table--wrap">
+      <caption class="ce-sr-only">O que a Câmara e o Senado publicam em dados abertos</caption>
+      <thead><tr><th scope="col"><span class="ce-sr-only">Informação</span></th><th scope="col">Câmara</th><th scope="col">Senado</th></tr></thead>
       <tbody>
         <tr><th scope="row">Votações de plenário</th><td>Todas, simbólicas e nominais</td><td>Só as nominais</td></tr>
         <tr><th scope="row">Orientação dos partidos</th><td>Sim</td><td>Não é publicada</td></tr>
@@ -34,11 +43,11 @@
     </table>
   </div>
   {% if numeros.votacoes %}
-  <p class="suave nota">No período atual (desde {{ numeros.desde }}): {{ numeros.votacoes }} {{ "votação registrada" if numeros.votacoes == 1 else "votações registradas" }} em {{ numeros.proposicoes }} {{ "proposição" if numeros.proposicoes == 1 else "proposições" }}, {{ numeros.nominais }} delas com o voto de cada parlamentar.</p>
+  <p class="ce-section-note">No período atual (desde {{ numeros.desde }}): {{ numeros.votacoes }} {{ "votação registrada" if numeros.votacoes == 1 else "votações registradas" }} em {{ numeros.proposicoes }} {{ "proposição" if numeros.proposicoes == 1 else "proposições" }}, {{ numeros.nominais }} delas com o voto de cada parlamentar.</p>
   {% endif %}
 
-  <h2>Termos</h2>
-  <dl class="termos">
+  <h2 class="ce-display ce-section-title">Termos</h2>
+  <dl class="ce-terms">
     <div id="simbolica"><dt>Votação simbólica</dt><dd>O presidente da sessão pede que quem concorda permaneça como está e anuncia o resultado. Não existe registro de como cada um votou.</dd></div>
     <div id="nominal"><dt>Votação nominal</dt><dd>Cada parlamentar vota no painel eletrônico e o voto fica registrado com o nome. Só nesses casos o site mostra o voto de cada um.</dd></div>
     <div id="merito"><dt>Votação de mérito</dt><dd>Decide sobre o conteúdo da proposta: o texto principal, uma emenda ou um destaque.</dd></div>
@@ -46,7 +55,7 @@
     <div id="orientacao"><dt>Orientação do partido</dt><dd>Como o líder recomenda que a bancada vote. É uma recomendação: o voto de cada parlamentar pode ser diferente.</dd></div>
   </dl>
 
-  <h2>Limites</h2>
+  <h2 class="ce-display ce-section-title">Limites</h2>
   <ul>
     <li>Mostramos o plenário. Comissões ficam de fora por enquanto.</li>
     <li>Se a fonte oficial corrigir um dado, a correção chega aqui na coleta seguinte.</li>

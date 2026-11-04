@@ -1,96 +1,100 @@
 {# Resumo da Casa, no topo das listas de deputados e senadores. #}
-<section class="cartoes-numeros" aria-label="Números gerais">
-  {% for c in resumo.cartoes %}
-  <div class="cartao-numero">
-    <span class="valor">{{ c.valor }}</span>
-    <span class="rotulo">{{ c.rotulo }}</span>
-    {% if c.detalhe %}<span class="suave nota">{{ c.detalhe }}</span>{% endif %}
+<section class="ce-kpis" aria-label="Números gerais">
+  <div class="ce-kpi-grid ce-kpi-grid--4">
+    {% for c in resumo.cartoes %}
+    <div class="ce-kpi">
+      <div class="ce-kpi-value">{{ c.valor }}</div>
+      <div class="ce-kpi-label">{{ c.rotulo }}</div>
+      {% if c.detalhe %}<div class="ce-meta">{{ c.detalhe }}</div>{% endif %}
+    </div>
+    {% endfor %}
   </div>
-  {% endfor %}
 </section>
 
-<section class="colunas resumo-colunas">
-  <div class="cartao">
-    <h2>{{ plural|capitalize }} por partido</h2>
-    <p class="suave nota">Clique num partido para filtrar a lista abaixo.</p>
-    <ul class="barras">
+<div class="ce-grid-main ce-section">
+  <section aria-labelledby="partidos-titulo">
+    <div class="ce-section-header">
+      <h2 class="ce-display ce-section-title" id="partidos-titulo">{{ plural|capitalize }} por partido</h2>
+    </div>
+    <p class="ce-section-note">Clique num partido para filtrar a lista abaixo.</p>
+    <ul class="ce-bars">
       {% for p in resumo.partidos %}
       <li>
         <button type="button" data-filtro-partido="{{ p.sigla }}" aria-label="{{ p.sigla }}: {{ p.n }} ({{ p.pct }}). Filtrar a lista">
-          <span class="barra-rotulo">{{ p.sigla }}</span>
-          <span class="barra-trilho"><span class="barra-valor" style="width: {{ p.largura }}"></span></span>
-          <span class="barra-numero"><strong>{{ p.n }}</strong> <span class="suave">{{ p.pct }}</span></span>
+          <span class="ce-bar-label">{{ p.sigla }}</span>
+          <span class="ce-bar-track"><span class="ce-bar-value" style="width: {{ p.largura }}"></span></span>
+          <span class="ce-bar-number"><strong>{{ p.n }}</strong> <span class="ce-muted">{{ p.pct }}</span></span>
         </button>
       </li>
       {% endfor %}
     </ul>
-  </div>
+  </section>
 
-  <div class="pilha">
+  <div class="ce-stack">
     {% if resumo.sexo %}
-    <div class="cartao">
-      <h2>Mulheres e homens</h2>
-      <div class="barra-dividida" role="img" aria-label="{{ resumo.sexo.mulheres }} mulheres ({{ resumo.sexo.pct_mulheres }}) e {{ resumo.sexo.homens }} homens ({{ resumo.sexo.pct_homens }})">
-        <span class="parte-a" style="width: {{ resumo.sexo.largura_mulheres }}"></span>
-        <span class="parte-b" style="width: {{ resumo.sexo.largura_homens }}"></span>
+    <section aria-labelledby="sexo-titulo">
+      <div class="ce-section-header"><h2 class="ce-display ce-section-title" id="sexo-titulo">Mulheres e homens</h2></div>
+      <div class="ce-split" role="img" aria-label="{{ resumo.sexo.mulheres }} mulheres ({{ resumo.sexo.pct_mulheres }}) e {{ resumo.sexo.homens }} homens ({{ resumo.sexo.pct_homens }})">
+        <span class="ce-series-a" style="width: {{ resumo.sexo.largura_mulheres }}"></span>
+        <span class="ce-series-b" style="width: {{ resumo.sexo.largura_homens }}"></span>
       </div>
-      <p class="legenda">
-        <span><span class="marca-a" aria-hidden="true"></span><strong>{{ resumo.sexo.mulheres }}</strong> mulheres ({{ resumo.sexo.pct_mulheres }})</span>
-        <span><span class="marca-b" aria-hidden="true"></span><strong>{{ resumo.sexo.homens }}</strong> homens ({{ resumo.sexo.pct_homens }})</span>
-      </p>
+      <ul class="ce-legend">
+        <li><span class="ce-dot ce-series-a" aria-hidden="true"></span><strong>{{ resumo.sexo.mulheres }}</strong> mulheres ({{ resumo.sexo.pct_mulheres }})</li>
+        <li><span class="ce-dot ce-series-b" aria-hidden="true"></span><strong>{{ resumo.sexo.homens }}</strong> homens ({{ resumo.sexo.pct_homens }})</li>
+      </ul>
       {% if resumo.sexo.mulheres_por_partido %}
-      <p class="nota"><strong>Mulheres por partido:</strong> {% for p, n in resumo.sexo.mulheres_por_partido.items() %}{{ p }} {{ n }}{% if not loop.last %} · {% endif %}{% endfor %}</p>
+      <p class="ce-section-note"><strong>Mulheres por partido:</strong> {% for p, n in resumo.sexo.mulheres_por_partido.items() %}{{ p }} {{ n }}{% if not loop.last %} · {% endif %}{% endfor %}</p>
       {% endif %}
-    </div>
+    </section>
     {% endif %}
 
     {% if resumo.lideres %}
-    <div class="cartao">
-      <h2>Quem conduz {{ "o Senado" if casa == "senado" else "a Câmara" }}</h2>
-      <dl class="lideres">
+    <section aria-labelledby="lideres-titulo">
+      <div class="ce-section-header"><h2 class="ce-display ce-section-title" id="lideres-titulo">Quem conduz {{ "o Senado" if casa == "senado" else "a Câmara" }}</h2></div>
+      <dl class="ce-dl ce-dl--stack">
         {% for l in resumo.lideres %}
         <dt>{{ l.cargo }}</dt>
-        <dd>{% if l.tem_perfil %}<a href="{{ l.id }}.html">{{ l.nome }}</a>{% else %}{{ l.nome }}{% endif %}{% if l.partido %} <span class="suave">{{ l.partido }}{% if l.uf %}-{{ l.uf }}{% endif %}</span>{% endif %}</dd>
+        <dd>{% if l.tem_perfil %}<a href="{{ l.id }}.html">{{ l.nome }}</a>{% else %}{{ l.nome }}{% endif %}{% if l.partido %} <span class="ce-muted">{{ l.partido }}{% if l.uf %}-{{ l.uf }}{% endif %}</span>{% endif %}</dd>
         {% endfor %}
       </dl>
-    </div>
+    </section>
     {% endif %}
 
     {% if casa == "senado" and resumo.mandatos %}
-    <div class="cartao">
-      <h2>Mandatos</h2>
-      <div class="barra-dividida" role="img" aria-label="{% for m in resumo.mandatos %}{{ m.n }} mandatos terminam em {{ m.fim }}{% if not loop.last %}; {% endif %}{% endfor %}">
-        {% for m in resumo.mandatos %}<span class="{{ loop.cycle('parte-b', 'parte-a') }}" style="width: {{ m.largura }}"></span>{% endfor %}
+    <section aria-labelledby="mandatos-titulo">
+      <div class="ce-section-header"><h2 class="ce-display ce-section-title" id="mandatos-titulo">Mandatos</h2></div>
+      <div class="ce-split" role="img" aria-label="{% for m in resumo.mandatos %}{{ m.n }} mandatos terminam em {{ m.fim }}{% if not loop.last %}; {% endif %}{% endfor %}">
+        {% for m in resumo.mandatos %}<span class="{{ loop.cycle('ce-series-a', 'ce-series-b') }}" style="width: {{ m.largura }}"></span>{% endfor %}
       </div>
-      <ul class="legenda-lista">
+      <ul class="ce-legend ce-legend--stack">
         {% for m in resumo.mandatos %}
-        <li><span class="{{ loop.cycle('marca-b', 'marca-a') }}" aria-hidden="true"></span><strong>{{ m.n }}</strong> terminam em {{ m.fim }} <span class="suave">(cadeiras em disputa na eleição de {{ m.ano|int - 1 }})</span></li>
+        <li><span class="ce-dot {{ loop.cycle('ce-series-a', 'ce-series-b') }}" aria-hidden="true"></span><strong>{{ m.n }}</strong> terminam em {{ m.fim }} <span class="ce-muted">(cadeiras em disputa na eleição de {{ m.ano|int - 1 }})</span></li>
         {% endfor %}
       </ul>
-      {% if resumo.suplentes %}<p class="suave nota">{{ resumo.suplentes }} senadores em exercício são suplentes, no lugar do titular.</p>{% endif %}
-    </div>
+      {% if resumo.suplentes %}<p class="ce-section-note">{{ resumo.suplentes }} senadores em exercício são suplentes, no lugar do titular.</p>{% endif %}
+    </section>
     {% endif %}
 
     {% if casa == "camara" %}
-    <div class="cartao">
-      <h2>Titulares e suplentes</h2>
-      <p><strong>{{ resumo.titulares }}</strong> titulares eleitos · <strong>{{ resumo.efetivados }}</strong> suplentes efetivados · <strong>{{ resumo.suplentes }}</strong> suplentes em exercício temporário</p>
-      <p class="suave nota">Suplente efetivado assumiu a vaga de vez (por exemplo, quando o titular renuncia); suplente em exercício temporário substitui um titular afastado.</p>
-    </div>
+    <section aria-labelledby="titulares-titulo">
+      <div class="ce-section-header"><h2 class="ce-display ce-section-title" id="titulares-titulo">Titulares e suplentes</h2></div>
+      <p class="ce-after-note"><strong>{{ resumo.titulares }}</strong> titulares eleitos · <strong>{{ resumo.efetivados }}</strong> suplentes efetivados · <strong>{{ resumo.suplentes }}</strong> suplentes em exercício temporário</p>
+      <p class="ce-section-note">Suplente efetivado assumiu a vaga de vez (por exemplo, quando o titular renuncia); suplente em exercício temporário substitui um titular afastado.</p>
+    </section>
     {% endif %}
   </div>
-</section>
+</div>
 
 {% if casa == "senado" and resumo.blocos %}
-<section class="cartao">
-  <h2>Blocos parlamentares</h2>
-  <p class="suave nota">Partidos se reúnem em blocos para atuar juntos no plenário e nas comissões.</p>
-  <ul class="blocos">
+<section class="ce-section" aria-labelledby="blocos-titulo">
+  <div class="ce-section-header"><h2 class="ce-display ce-section-title" id="blocos-titulo">Blocos parlamentares</h2></div>
+  <p class="ce-section-note">Partidos se reúnem em blocos para atuar juntos no plenário e nas comissões.</p>
+  <ul class="ce-blocks">
     {% for b in resumo.blocos %}
     <li>
-      <div class="bloco-topo"><span class="titulo-item" title="{{ b.nome_completo }}">{{ b.nome }}</span><span><strong>{{ b.n }}</strong> <span class="suave">{{ "senador" if b.n == 1 else "senadores" }}</span></span></div>
-      <span class="barra-trilho"><span class="barra-valor" style="width: {{ b.largura }}"></span></span>
-      <span class="suave nota">{{ b.partidos }}</span>
+      <div class="ce-block-head"><span class="ce-people-name" title="{{ b.nome_completo }}">{{ b.nome }}</span><span><strong>{{ b.n }}</strong> <span class="ce-muted">{{ "senador" if b.n == 1 else "senadores" }}</span></span></div>
+      <span class="ce-bar-track"><span class="ce-bar-value" style="width: {{ b.largura }}"></span></span>
+      <span class="ce-meta">{{ b.partidos }}</span>
     </li>
     {% endfor %}
   </ul>
@@ -98,15 +102,15 @@
 {% endif %}
 
 {% if casa == "camara" and resumo.bancadas %}
-<section class="cartao">
-  <h2>Bancadas por estado</h2>
-  <p class="suave nota">Número de deputados de cada estado e o partido com mais cadeiras nele. Clique para filtrar a lista.</p>
-  <ul class="ufs">
+<section class="ce-section" aria-labelledby="bancadas-titulo">
+  <div class="ce-section-header"><h2 class="ce-display ce-section-title" id="bancadas-titulo">Bancadas por estado</h2></div>
+  <p class="ce-section-note">Número de deputados de cada estado e o partido com mais cadeiras nele. Clique para filtrar a lista.</p>
+  <ul class="ce-ufs">
     {% for b in resumo.bancadas %}
     <li>
       <button type="button" data-filtro-uf="{{ b.uf }}" aria-label="{{ b.uf }}: {{ b.n }} deputados; maior partido {{ b.maior }}. Filtrar a lista">
-        <span><strong>{{ b.uf }}</strong> <span class="suave">· {{ b.n }}</span></span>
-        <span class="suave nota">{{ b.maior }}</span>
+        <span><strong>{{ b.uf }}</strong> <span class="ce-muted">· {{ b.n }}</span></span>
+        <span class="ce-meta">{{ b.maior }}</span>
       </button>
     </li>
     {% endfor %}

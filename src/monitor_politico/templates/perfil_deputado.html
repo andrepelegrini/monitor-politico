@@ -3,28 +3,37 @@
 {% block og_titulo %}{{ d.nome }} ({{ d.partido }}-{{ d.uf }}) · Câmara dos Deputados{% endblock %}
 {% block descricao %}Partido, estado e contato oficial do gabinete de {{ d.nome }} na Câmara dos Deputados, com dados abertos oficiais.{% endblock %}
 {% block conteudo %}
-<p><a href="index.html">← Todos os deputados</a></p>
+<nav class="ce-breadcrumb" aria-label="Trilha de navegação">
+  <ol>
+    <li><a href="../index.html">Início</a></li>
+    <li><a href="index.html">Deputados</a></li>
+    <li aria-current="page">{{ d.nome }}</li>
+  </ol>
+</nav>
 
-<article class="perfil">
-  {% if d.url_foto %}<img src="{{ d.url_foto }}" alt="Foto oficial de {{ d.nome }}" width="150" height="200">{% endif %}
-  <div>
-    <h1>{{ d.nome }}</h1>
-    <dl>
+<article class="ce-profile">
+  {% if d.url_foto %}<img src="{{ d.url_foto }}" alt="Foto oficial de {{ d.nome }}" width="150" height="200">{% else %}<span class="ce-photo-empty" aria-hidden="true"></span>{% endif %}
+  <div class="ce-profile-body">
+    <header class="ce-page-head">
+      <p class="ce-eyebrow">Câmara dos Deputados</p>
+      <h1>{{ d.nome }}</h1>
+    </header>
+    <dl class="ce-dl">
       <dt>Partido</dt><dd>{{ d.partido }}</dd>
       <dt>UF</dt><dd>{{ d.uf }}</dd>
       {% if d.situacao %}<dt>Situação</dt><dd>{{ d.situacao }}</dd>{% endif %}
       {% if d.condicao_eleitoral %}<dt>Condição</dt><dd>{{ d.condicao_eleitoral }}</dd>{% endif %}
     </dl>
 
-    <h2>Contato oficial do gabinete</h2>
-    <dl>
+    <h2 class="ce-display ce-section-title ce-profile-title">Contato oficial do gabinete</h2>
+    <dl class="ce-dl">
       {% if d.gabinete.email %}<dt>E-mail</dt><dd><a href="mailto:{{ d.gabinete.email }}">{{ d.gabinete.email }}</a></dd>{% endif %}
       {% if d.gabinete.telefone %}<dt>Telefone</dt><dd>(61) {{ d.gabinete.telefone }}</dd>{% endif %}
       {% if d.gabinete.sala %}<dt>Gabinete</dt><dd>Sala {{ d.gabinete.sala }}{% if d.gabinete.andar %}, {{ d.gabinete.andar }}º andar{% endif %}{% if d.gabinete.predio %}, Anexo {{ d.gabinete.predio }}{% endif %}</dd>{% endif %}
     </dl>
 
-    <h2>Fonte</h2>
-    <ul>
+    <h2 class="ce-display ce-section-title ce-profile-title">Fonte</h2>
+    <ul class="ce-links">
       <li><a href="{{ d.url_site }}">Página oficial na Câmara</a></li>
       <li><a href="{{ d.uri_api }}">Registro na API de Dados Abertos</a></li>
     </ul>

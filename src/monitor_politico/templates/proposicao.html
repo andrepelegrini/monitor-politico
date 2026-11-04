@@ -3,86 +3,115 @@
 {% block og_titulo %}{{ p.chave }}{% set t = (p.resumo and p.resumo.titulo) or p.apelido %}{% if t %} · {{ t }}{% endif %}{% endblock %}
 {% block descricao %}{% if p.situacao and p.situacao.norma %}Virou {{ p.situacao.norma }}. {% elif p.situacao %}Situação: {{ p.situacao.descricao }}. {% endif %}Tramitação, votações em plenário e voto de cada parlamentar, com dados oficiais da Câmara e do Senado.{% endblock %}
 {% block conteudo %}
-<section class="abertura">
-  <p><a href="../index.html">← Voltar ao início</a></p>
-  <p class="suave nota">{{ p.chave }}{% if p.tipo %} · {{ p.tipo }}{% endif %}{% if p.apelido and p.resumo %} · Conhecida como “{{ p.apelido }}”{% endif %}{% if p.autores %} · Autoria: {{ p.autores[:3]|join(", ") }}{% if p.autores|length > 3 %} e outros{% endif %}{% endif %}{% if p.data_apresentacao %} · Apresentada em {{ p.data_apresentacao|data_br }}{% endif %}</p>
-  <h1>{{ (p.resumo and p.resumo.titulo) or p.apelido or p.chave }}</h1>
-  <div class="chips">
-    {% if p.situacao and p.situacao.norma %}
-    <span class="selo selo-norma">Virou {{ p.situacao.norma }}</span>
-    {% elif p.situacao %}
-    <span class="selo selo-situacao">{{ p.situacao.descricao }} · {{ p.situacao.casa }}</span>
-    {% endif %}
-    {% for t in p.temas %}<span class="chip chip-estatico">{{ t }}</span>{% endfor %}
-  </div>
-</section>
+<nav class="ce-breadcrumb" aria-label="Trilha de navegação">
+  <ol>
+    <li><a href="../index.html">Início</a></li>
+    <li aria-current="page">{{ p.chave }}</li>
+  </ol>
+</nav>
 
-<section class="bloco colunas">
-  {% if p.resumo %}
-  <div class="cartao">
-    <h2>Resumo</h2>
-    <p class="suave nota aviso-ia">Gerado automaticamente por IA a partir {{ "do texto oficial" if p.resumo.fonte == "texto integral" else "da ementa oficial" }}. Pode conter imprecisões; confira a ementa e o texto integral.</p>
-    <p><strong>O que muda.</strong> {{ p.resumo.o_que_muda }}</p>
-    <p><strong>Quem é afetado.</strong> {{ p.resumo.quem_e_afetado }}</p>
-  </div>
+<header class="ce-page-head">
+  <p class="ce-eyebrow">{{ p.chave }}{% if p.tipo %} · {{ p.tipo }}{% endif %}</p>
+  <h1>{{ (p.resumo and p.resumo.titulo) or p.apelido or p.chave }}</h1>
+  {% if (p.apelido and p.resumo) or p.autores or p.data_apresentacao %}
+  <p class="ce-muted ce-text-sm">{% if p.apelido and p.resumo %}Conhecida como “{{ p.apelido }}” · {% endif %}{% if p.autores %}Autoria: {{ p.autores[:3]|join(", ") }}{% if p.autores|length > 3 %} e outros{% endif %}{% endif %}{% if p.autores and p.data_apresentacao %} · {% endif %}{% if p.data_apresentacao %}Apresentada em {{ p.data_apresentacao|data_br }}{% endif %}</p>
   {% endif %}
-  <div class="cartao">
-    <h2>Ementa oficial</h2>
-    <p>{{ p.ementa or "Ementa não informada." }}</p>
-    <ul class="links">
+  <div class="ce-tags">
+    {% if p.situacao and p.situacao.norma %}
+    <span class="ce-badge">Virou {{ p.situacao.norma }}</span>
+    {% elif p.situacao %}
+    <span class="ce-badge">{{ p.situacao.descricao }} · {{ p.situacao.casa }}</span>
+    {% endif %}
+    {% for t in p.temas %}<span class="ce-badge ce-badge--outline">{{ t }}</span>{% endfor %}
+  </div>
+  {% if p.situacao and p.situacao.data %}<p class="ce-meta">Situação na fonte desde {{ p.situacao.data|data_br }}.</p>{% endif %}
+</header>
+
+<div class="ce-grid-main">
+  <div class="ce-stack">
+    <section aria-labelledby="ementa-titulo">
+      <div class="ce-section-header">
+        <h2 class="ce-display ce-section-title" id="ementa-titulo">Ementa oficial</h2>
+      </div>
+      <p class="ce-official-text">{{ p.ementa or "Ementa não informada." }}</p>
+    </section>
+    {% if p.resumo %}
+    <section class="ce-ai" aria-labelledby="resumo-titulo">
+      <span class="ce-badge">Explicação gerada por IA</span>
+      <h2 class="ce-subtitle" id="resumo-titulo">Resumo</h2>
+      <p class="ce-meta">Gerado automaticamente por IA a partir {{ "do texto oficial" if p.resumo.fonte == "texto integral" else "da ementa oficial" }}{% if p.resumo.gerado_em %}, em {{ p.resumo.gerado_em|data_br }}{% endif %}. Pode conter imprecisões; confira a ementa e o texto integral.</p>
+      <p><strong>O que muda.</strong> {{ p.resumo.o_que_muda }}</p>
+      <p><strong>Quem é afetado.</strong> {{ p.resumo.quem_e_afetado }}</p>
+    </section>
+    {% endif %}
+  </div>
+  {% if p.url_inteiro_teor or p.url_camara or p.url_senado %}
+  <aside class="ce-card ce-source" aria-labelledby="fonte-titulo">
+    <p class="ce-eyebrow" id="fonte-titulo">Fonte oficial</p>
+    <ul>
       {% if p.url_inteiro_teor %}<li><a href="{{ p.url_inteiro_teor }}">Texto integral</a></li>{% endif %}
       {% if p.url_camara %}<li><a href="{{ p.url_camara }}">Página oficial na Câmara</a></li>{% endif %}
       {% if p.url_senado %}<li><a href="{{ p.url_senado }}">Página oficial no Senado</a></li>{% endif %}
     </ul>
-  </div>
-</section>
+    <p class="ce-meta">Dados atualizados em {{ atualizado_congresso }}.</p>
+  </aside>
+  {% endif %}
+</div>
 
-<section class="bloco">
-  <h2>Em que pé está</h2>
-  <ol class="etapas">
+<section class="ce-section" aria-labelledby="etapas-titulo">
+  <div class="ce-section-header">
+    <h2 class="ce-display ce-section-title" id="etapas-titulo">Em que pé está</h2>
+  </div>
+  <ol class="ce-timeline ce-timeline--spaced">
     {% for e in etapas %}
     <li class="{{ 'futura' if e.futuro }}">
-      <span class="suave nota">{{ e.data|data_br }}{% if e.casa %} · {{ e.casa }}{% endif %}</span>
-      <span class="titulo-item">{{ e.titulo }}</span>
-      {% if e.detalhe %}<span class="suave nota">{{ e.detalhe }}</span>{% endif %}
+      <span class="ce-meta">{{ e.data|data_br }}{% if e.casa %} · {{ e.casa }}{% endif %}</span>
+      <span class="ce-timeline-title">{{ e.titulo }}{% if e.futuro %} <span class="ce-badge ce-badge--outline">Previsto</span>{% endif %}</span>
+      {% if e.detalhe %}<span class="ce-muted ce-text-sm">{{ e.detalhe }}</span>{% endif %}
+      {% if e.futuro %}<span class="ce-meta">Evento programado. A agenda pode mudar.</span>{% endif %}
     </li>
     {% endfor %}
   </ol>
-  <p class="nota">Tramitação completa: {% if p.url_camara %}<a href="{{ p.url_camara }}">Câmara</a>{% endif %}{% if p.url_camara and p.url_senado %} · {% endif %}{% if p.url_senado %}<a href="{{ p.url_senado }}">Senado</a>{% endif %}</p>
+  <p class="ce-text-sm">Tramitação completa: {% if p.url_camara %}<a href="{{ p.url_camara }}">Câmara</a>{% endif %}{% if p.url_camara and p.url_senado %} · {% endif %}{% if p.url_senado %}<a href="{{ p.url_senado }}">Senado</a>{% endif %}</p>
 </section>
 
 {% if votacoes.principais or votacoes.rito %}
-<section class="bloco">
-  <h2>Votações no plenário</h2>
-  <div class="colunas">
+<section class="ce-section" aria-labelledby="votacoes-titulo">
+  <div class="ce-section-header">
+    <h2 class="ce-display ce-section-title" id="votacoes-titulo">Votações no plenário</h2>
+  </div>
+  <div class="ce-cards">
     {% for v in votacoes.principais %}
-    <article class="cartao">
-      <div class="cartao-topo">
-        <h3>{{ v.casa }} · {{ v.data }}</h3>
-        {% if v.resultado %}<span class="selo selo-{{ v.resultado }}">{{ v.resultado|capitalize }}</span>{% endif %}
+    <article class="ce-card ce-vote-card">
+      <div class="ce-house-head">
+        <h3 class="ce-subtitle">{{ v.casa }} · {{ v.data }}</h3>
+        {% if v.resultado %}<span class="ce-badge">{{ v.resultado|capitalize }}</span>{% endif %}
       </div>
-      <p class="suave nota">{{ v.descricao }}</p>
+      <p class="ce-muted ce-text-sm">{{ v.descricao }}</p>
       {% if v.nominal %}
-      <div class="barra" role="img" aria-label="{{ v.placar.sim }} votos sim, {{ v.placar.nao }} votos não">
-        <div class="barra-sim" style="width: {{ v.p_sim }}"></div>
-        <div class="barra-nao" style="width: {{ v.p_nao }}"></div>
+      <div class="ce-vote-bar" role="img" aria-label="{{ v.placar.sim }} votos sim, {{ v.placar.nao }} votos não{% if v.placar.abstencao %}, {{ v.placar.abstencao }} abstenções{% endif %}{% if v.outros_texto %}; também: {{ v.outros_texto }}{% endif %}. Base: {{ v.total_votos }} registros nominais">
+        <span class="ce-vote-yes" style="width: {{ v.p_sim }}"></span>
+        <span class="ce-vote-no" style="width: {{ v.p_nao }}"></span>
+        {% if v.placar.abstencao %}<span class="ce-vote-abstention" style="width: {{ v.p_abstencao }}"></span>{% endif %}
+        {% if v.outros_texto %}<span class="ce-vote-other" style="width: {{ v.p_outros }}"></span>{% endif %}
       </div>
-      <p class="placar-linha">
-        <span><span class="marca-sim" aria-hidden="true"></span><strong>{{ v.placar.sim }}</strong> sim</span>
-        <span><span class="marca-nao" aria-hidden="true"></span><strong>{{ v.placar.nao }}</strong> não</span>
-        {% if v.placar.abstencao %}<span><strong>{{ v.placar.abstencao }}</strong> abstenção</span>{% endif %}
-      </p>
-      {% if v.outros_texto %}<p class="suave nota">Também: {{ v.outros_texto }}</p>{% endif %}
+      <ul class="ce-legend">
+        <li><span class="ce-dot ce-vote-yes" aria-hidden="true"></span><strong>{{ v.placar.sim }}</strong> sim</li>
+        <li><span class="ce-dot ce-vote-no" aria-hidden="true"></span><strong>{{ v.placar.nao }}</strong> não</li>
+        {% if v.placar.abstencao %}<li><span class="ce-dot ce-vote-abstention" aria-hidden="true"></span><strong>{{ v.placar.abstencao }}</strong> abstenção</li>{% endif %}
+        {% if v.outros_texto %}<li><span class="ce-dot ce-vote-other" aria-hidden="true"></span>Também: {{ v.outros_texto }}</li>{% endif %}
+      </ul>
+      <p class="ce-meta">Base: {{ v.total_votos }} registros nominais nesta votação.</p>
       {% if v.orientacoes %}
-      <div class="orientacoes">
+      <div class="ce-guidance">
         <h4>Orientação dos partidos e blocos</h4>
         {% if v.orientacao_sim %}<p><strong>Sim:</strong> {{ v.orientacao_sim|join(", ") }}</p>{% endif %}
         {% if v.orientacao_nao %}<p><strong>Não:</strong> {{ v.orientacao_nao|join(", ") }}</p>{% endif %}
         {% if v.orientacao_outras %}<p><strong>Outras:</strong> {{ v.orientacao_outras|join(", ") }}</p>{% endif %}
-        {% if v.sem_orientacao %}<p class="suave">Não orientaram: {{ v.sem_orientacao|join(", ") }}</p>{% endif %}
+        {% if v.sem_orientacao %}<p class="ce-muted">Não orientaram: {{ v.sem_orientacao|join(", ") }}</p>{% endif %}
       </div>
       {% elif v.casa == "Senado" %}
-      <p class="suave nota">O Senado não publica a orientação dos partidos nos dados abertos.</p>
+      <p class="ce-muted ce-text-sm">O Senado não publica a orientação dos partidos nos dados abertos.</p>
       {% endif %}
       {% else %}
       <p><strong>Votação simbólica</strong>: o resultado foi registrado, mas não o voto de cada parlamentar.</p>
@@ -91,18 +120,20 @@
     {% endfor %}
   </div>
   {% if votacoes.rito %}
-  <h3 class="subtitulo">Votações de rito</h3>
-  <ul class="rito">
+  <h3 class="ce-subtitle ce-subsection">Votações de rito</h3>
+  <ul class="ce-rito">
     {% for v in votacoes.rito %}
-    <li><span class="suave">{{ v.casa }} · {{ v.data }}</span> — {{ v.descricao }}{% if v.nominal %} <strong>({{ v.texto_placar }})</strong>{% endif %}</li>
+    <li><span class="ce-meta">{{ v.casa }} · {{ v.data }}</span> {{ v.descricao }}{% if v.nominal %} <strong>({{ v.texto_placar }})</strong>{% endif %}</li>
     {% endfor %}
   </ul>
   {% endif %}
 </section>
 {% endif %}
 
-<section class="bloco">
-  <h2>Como cada parlamentar votou</h2>
+<section class="ce-section" aria-labelledby="votos-titulo">
+  <div class="ce-section-header">
+    <h2 class="ce-display ce-section-title" id="votos-titulo">Como cada parlamentar votou</h2>
+  </div>
   {% if votacoes.nominais %}
   <div role="tablist" class="abas" aria-label="Votações nominais">
     {% for n in votacoes.nominais %}
@@ -111,41 +142,46 @@
   </div>
   {% for n in votacoes.nominais %}
   <div role="tabpanel" class="painel-votos" id="painel-{{ n.id }}" aria-labelledby="aba-{{ n.id }}"{% if not loop.first %} hidden{% endif %}>
-    <p class="suave nota">{{ n.descricao }}</p>
-    <form class="filtros" onsubmit="return false">
-      <label>Nome <input type="search" class="v-nome" placeholder="Buscar por nome" autocomplete="off"></label>
-      <label>Partido
-        <select class="v-partido"><option value="">Todos</option>{% for x in n.partidos %}<option>{{ x }}</option>{% endfor %}</select>
+    <p class="ce-muted ce-text-sm">{{ n.descricao }}</p>
+    <form class="ce-filters" aria-label="Filtrar votos: {{ n.rotulo }}" onsubmit="return false">
+      <label class="ce-field"><span class="ce-control-label">Nome</span><input class="ce-input v-nome" type="search" placeholder="Buscar por nome" autocomplete="off"></label>
+      <label class="ce-field"><span class="ce-control-label">Partido</span>
+        <select class="ce-select v-partido"><option value="">Todos</option>{% for x in n.partidos %}<option>{{ x }}</option>{% endfor %}</select>
       </label>
-      <label>UF
-        <select class="v-uf"><option value="">Todas</option>{% for x in n.ufs %}<option>{{ x }}</option>{% endfor %}</select>
+      <label class="ce-field"><span class="ce-control-label">UF</span>
+        <select class="ce-select v-uf"><option value="">Todas</option>{% for x in n.ufs %}<option>{{ x }}</option>{% endfor %}</select>
       </label>
-      <label>Voto
-        <select class="v-voto"><option value="">Todos</option><option>Sim</option><option>Não</option><option>Outros</option></select>
+      <label class="ce-field"><span class="ce-control-label">Voto</span>
+        <select class="ce-select v-voto"><option value="">Todos</option><option>Sim</option><option>Não</option><option>Outros</option></select>
       </label>
     </form>
-    <p class="contagem" aria-live="polite">Mostrando <span class="v-contagem">{{ n.total }}</span> de {{ n.total }}</p>
-    <div class="tabela-rolagem">
-      <table class="tabela-votos">
-        <thead><tr><th>Nome</th><th>Partido-UF</th><th>Voto</th>{% if n.tem_orientacao %}<th>Orientação do partido</th>{% endif %}</tr></thead>
+    <p class="ce-count" aria-live="polite">Mostrando <span class="v-contagem">{{ n.total }}</span> de {{ n.total }}</p>
+    <div class="ce-table-scroll" role="region" aria-label="Tabela de votos: {{ n.rotulo }}. Role para ver todas as colunas." tabindex="0">
+      <table class="ce-table">
+        <caption class="ce-sr-only">Voto de cada parlamentar: {{ n.rotulo }}. {{ n.total }} registros nominais.</caption>
+        <thead><tr><th scope="col">Nome</th><th scope="col">Partido-UF</th><th scope="col">Voto</th>{% if n.tem_orientacao %}<th scope="col">Orientação do partido</th>{% endif %}</tr></thead>
         <tbody>
           {% for x in n.votos %}
           <tr data-nome="{{ x.nome|lower }}" data-partido="{{ x.partido }}" data-uf="{{ x.uf }}" data-voto="{{ x.grupo }}">
             <td>{% if x.url %}<a href="{{ x.url }}">{{ x.nome }}</a>{% else %}{{ x.nome }}{% endif %}</td>
             <td>{{ x.partido }}-{{ x.uf }}</td>
-            <td class="voto-{{ x.grupo|lower }}">{{ x.voto }}</td>
-            {% if n.tem_orientacao %}<td class="suave">{{ x.orientacao or "—" }}</td>{% endif %}
+            <td><span class="ce-dot {{ {'Sim': 'ce-vote-yes', 'Não': 'ce-vote-no', 'Abstenção': 'ce-vote-abstention'}.get(x.voto, 'ce-vote-other') }}" aria-hidden="true"></span>{{ x.voto }}</td>
+            {% if n.tem_orientacao %}<td class="ce-muted">{{ x.orientacao or "—" }}</td>{% endif %}
           </tr>
           {% endfor %}
         </tbody>
       </table>
     </div>
+    <div class="ce-state-box v-vazio" hidden>
+      <p>Nenhum voto encontrado com esses filtros.</p>
+      <button type="button" class="ce-button ce-button--secondary v-limpar">Limpar filtros</button>
+    </div>
   </div>
   {% endfor %}
   {% else %}
-  <p class="vazio-caixa">Nenhuma votação desta proposição no período foi nominal, então não há registro do voto de cada parlamentar. <a href="../entenda.html#nominal">Entenda</a></p>
+  <p class="ce-state-box ce-muted ce-after-header">Nenhuma votação desta proposição no período foi nominal, então não há registro do voto de cada parlamentar. <a href="../entenda.html#nominal">Entenda</a></p>
   {% endif %}
-  {% if votacoes.tem_simbolica and votacoes.nominais %}<p class="suave nota">Votações simbólicas não registram o voto de cada parlamentar e por isso não aparecem aqui. <a href="../entenda.html#simbolica">Entenda</a></p>{% endif %}
+  {% if votacoes.tem_simbolica and votacoes.nominais %}<p class="ce-section-note">Votações simbólicas não registram o voto de cada parlamentar e por isso não aparecem aqui. <a href="../entenda.html#simbolica">Entenda</a></p>{% endif %}
 </section>
 {% endblock %}
 {% block rodape %}

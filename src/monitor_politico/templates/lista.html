@@ -2,46 +2,54 @@
 {% block titulo %}{{ titulo }} · Monitor Político{% endblock %}
 {% block descricao %}Todos os {{ plural }} em exercício {{ "na" if casa == "camara" else "no" }} {{ nome_casa }}: partido, estado e contato oficial, com dados abertos oficiais.{% endblock %}
 {% block conteudo %}
-<section class="abertura">
+<header class="ce-page-head">
+  <p class="ce-eyebrow">Composição atual</p>
   <h1>{{ nome_casa }}</h1>
-  <p class="suave">Composição atual dos {{ parlamentares|length }} {{ plural }} em exercício. Dados oficiais, atualizados em {{ atualizado_em }}.</p>
-</section>
+  <p class="ce-deck">Composição atual dos {{ parlamentares|length }} {{ plural }} em exercício. Dados oficiais, atualizados em {{ atualizado_em }}.</p>
+</header>
 
 {% if resumo %}{% include "resumo.html" %}{% endif %}
 
-<h2 class="titulo-lista" id="lista-titulo">Todos os {{ plural }}</h2>
+<section class="ce-section" aria-labelledby="lista-titulo">
+  <div class="ce-section-header">
+    <h2 class="ce-display ce-section-title" id="lista-titulo">Todos os {{ plural }}</h2>
+  </div>
 
-<form class="filtros" role="search" onsubmit="return false">
-  <label>Nome
-    <input type="search" id="f-nome" placeholder="Buscar por nome" autocomplete="off">
-  </label>
-  <label>Partido
-    <select id="f-partido">
-      <option value="">Todos</option>
-      {% for p in partidos %}<option>{{ p }}</option>{% endfor %}
-    </select>
-  </label>
-  <label>UF
-    <select id="f-uf">
-      <option value="">Todas</option>
-      {% for u in ufs %}<option>{{ u }}</option>{% endfor %}
-    </select>
-  </label>
-</form>
+  <form class="ce-filters" role="search" aria-label="Filtrar {{ plural }}" onsubmit="return false">
+    <label class="ce-field"><span class="ce-control-label">Nome</span>
+      <input class="ce-input" type="search" id="f-nome" placeholder="Buscar por nome" autocomplete="off">
+    </label>
+    <label class="ce-field"><span class="ce-control-label">Partido</span>
+      <select class="ce-select" id="f-partido">
+        <option value="">Todos</option>
+        {% for p in partidos %}<option>{{ p }}</option>{% endfor %}
+      </select>
+    </label>
+    <label class="ce-field"><span class="ce-control-label">UF</span>
+      <select class="ce-select" id="f-uf">
+        <option value="">Todas</option>
+        {% for u in ufs %}<option>{{ u }}</option>{% endfor %}
+      </select>
+    </label>
+  </form>
 
-<p class="contagem" aria-live="polite"><span id="contagem">{{ parlamentares|length }}</span> de {{ parlamentares|length }} {{ plural }}</p>
+  <p class="ce-count" aria-live="polite"><span id="contagem">{{ parlamentares|length }}</span> de {{ parlamentares|length }} {{ plural }}</p>
 
-<ul class="grade" id="lista">
-  {% for d in parlamentares %}
-  <li data-nome="{{ d.nome|lower }}" data-partido="{{ d.partido }}" data-uf="{{ d.uf }}">
-    <a href="{{ d.id }}.html">
-      {% if d.url_foto %}<img src="{{ d.url_foto }}" alt="" loading="lazy" width="64" height="85">{% endif %}
-      <span class="nome">{{ d.nome }}</span>
-      <span class="meta">{{ d.partido }} · {{ d.uf }}</span>
-    </a>
-  </li>
-  {% endfor %}
-</ul>
-<p id="vazio" class="vazio" hidden>Nenhum {{ singular }} encontrado com esses filtros.</p>
+  <ul class="ce-people" id="lista">
+    {% for d in parlamentares %}
+    <li data-nome="{{ d.nome|lower }}" data-partido="{{ d.partido }}" data-uf="{{ d.uf }}">
+      <a href="{{ d.id }}.html">
+        {% if d.url_foto %}<img src="{{ d.url_foto }}" alt="" loading="lazy" width="64" height="85">{% else %}<span class="ce-photo-empty" aria-hidden="true"></span>{% endif %}
+        <span class="ce-people-name">{{ d.nome }}</span>
+        <span class="ce-meta">{{ d.partido }} · {{ d.uf }}</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+  <div id="vazio" class="ce-state-box" hidden>
+    <p>Nenhum {{ singular }} encontrado com esses filtros.</p>
+    <button type="button" class="ce-button ce-button--secondary" data-limpar-filtros>Limpar filtros</button>
+  </div>
+</section>
 {% endblock %}
 {% block scripts %}<script src="{{ raiz }}/static/filtro.js"></script>{% endblock %}

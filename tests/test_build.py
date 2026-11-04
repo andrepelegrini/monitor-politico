@@ -1,5 +1,6 @@
 import json
 from datetime import date
+from pathlib import Path
 
 import pytest
 
@@ -207,3 +208,55 @@ def test_url_do_site():
     assert url_do_site({}) == ""
     assert url_do_site({"VERCEL_PROJECT_PRODUCTION_URL": "monitor-politico.vercel.app"}) == "https://monitor-politico.vercel.app"
     assert url_do_site({"SITE_URL": "https://meu.dominio.br/", "VERCEL_PROJECT_PRODUCTION_URL": "x.vercel.app"}) == "https://meu.dominio.br"
+
+
+def test_design_system_aplicado_em_todas_as_paginas(site):
+    pasta, _ = site
+    for pagina in pasta.rglob("*.html"):
+        html = pagina.read_text(encoding="utf-8")
+        assert '<body class="ce-app">' in html, pagina
+        assert 'href="#conteudo"' in html and 'id="conteudo"' in html, pagina
+        # Tokens, base e componentes antes da camada da aplicação.
+        ordem = [html.index(f"/static/{css}") for css in ("ce-tokens.css", "ce-base.css", "ce-components.css", "estilo.css")]
+        assert ordem == sorted(ordem), pagina
+    for css in ("ce-tokens.css", "ce-base.css", "ce-components.css"):
+        assert (pasta / "static" / css).exists()
+
+
+def test_css_do_design_system_e_copia_exata_do_pacote():
+    raiz = Path(__file__).parent.parent
+    estaticos = raiz / "src" / "monitor_politico" / "static"
+    for copia, original in (
+        ("ce-tokens.css", "tokens/design-tokens.css"),
+        ("ce-base.css", "tokens/base.css"),
+        ("ce-components.css", "components/components.css"),
+    ):
+        assert (estaticos / copia).read_bytes() == (raiz / "design-system" / original).read_bytes(), copia
+
+
+def test_paginas_sem_dados_de_demonstracao(site):
+    pasta, _ = site
+    for pagina in pasta.rglob("*.html"):
+        html = pagina.read_text(encoding="utf-8")
+        for demo in ("fictíci", "Observatório", "Parlamentar A<", "PL 1234/2026", "PEC 99/2026"):
+            assert demo not in html, (pagina, demo)
+
+
+def test_resultado_e_voto_sem_julgamento_por_cor(site):
+    pasta, _ = site
+    plp = (pasta / "proposicoes" / "plp-186-2026.html").read_text(encoding="utf-8")
+    assert '<span class="ce-badge">Aprovada</span>' in plp
+    assert "selo-aprovada" not in plp and "selo-rejeitada" not in plp
+    assert 'class="ce-vote-yes"' in plp and 'class="ce-vote-no"' in plp
+    assert "registros nominais nesta votação" in plp  # denominador explícito
+    assert "<caption" in plp and '<th scope="col">Voto</th>' in plp
+    estilo = (pasta / "static" / "estilo.css").read_text(encoding="utf-8")
+    assert "prefers-color-scheme" not in estilo
+
+
+def test_estados_previsto_e_vazio(site):
+    pasta, _ = site
+    pdl = (pasta / "proposicoes" / "pdl-274-2026.html").read_text(encoding="utf-8")
+    assert "Previsto" in pdl and "Evento programado. A agenda pode mudar." in pdl
+    for pagina in ("index.html", "deputados/index.html", "senadores/index.html"):
+        assert "data-limpar-filtros" in (pasta / pagina).read_text(encoding="utf-8"), pagina

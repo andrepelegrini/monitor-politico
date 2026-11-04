@@ -57,3 +57,14 @@ def test_etapas_terminam_na_pauta_futura(doc):
     etapas = painel.etapas(doc["proposicoes"]["PDL 274/2026"], doc["pauta"])
     assert etapas[0]["titulo"] == "Apresentada"
     assert etapas[-1] == {"data": "2026-11-03", "casa": "Câmara", "titulo": "Na pauta do Plenário", "detalhe": "Terça, 03/11 · 13h55", "futuro": True}
+
+
+def test_barra_da_votacao_soma_todas_as_categorias():
+    votacao = {
+        "id": "v1", "casa": "Câmara", "data_hora": "2026-10-14T18:00", "descricao": "", "nominal": True, "procedimento": False,
+        "resultado": "aprovada", "votos": [], "orientacoes": None,
+        "placar": {"sim": 6, "nao": 2, "abstencao": 1, "outros": [["Obstrução", 1]]},
+    }
+    card = painel.votacoes_da_pagina({"votacoes": [votacao]}, set(), set())["principais"][0]
+    assert card["total_votos"] == 10
+    assert (card["p_sim"], card["p_nao"], card["p_abstencao"], card["p_outros"]) == ("60.0%", "20.0%", "10.0%", "10.0%")

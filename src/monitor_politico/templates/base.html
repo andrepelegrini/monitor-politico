@@ -18,32 +18,43 @@
   <link rel="canonical" href="{{ site_url }}/{{ caminho }}">
   {% endif %}
   <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Instrument+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="{{ raiz }}/static/ce-tokens.css">
+  <link rel="stylesheet" href="{{ raiz }}/static/ce-base.css">
+  <link rel="stylesheet" href="{{ raiz }}/static/ce-components.css">
   <link rel="stylesheet" href="{{ raiz }}/static/estilo.css">
 </head>
-<body>
-  <header class="topo">
-    <a class="marca" href="{{ raiz }}/index.html">Monitor Político</a>
-    <nav class="casas">
-      <a href="{{ raiz }}/index.html"{% if casa == "inicio" %} aria-current="page"{% endif %}>Início</a>
-      <a href="{{ raiz }}/deputados/index.html"{% if casa == "camara" %} aria-current="page"{% endif %}>Deputados</a>
-      <a href="{{ raiz }}/senadores/index.html"{% if casa == "senado" %} aria-current="page"{% endif %}>Senadores</a>
-    </nav>
-    <div class="busca" id="busca" data-raiz="{{ raiz }}">
-      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="6"/><path d="M13 13l5 5"/></svg>
-      <input id="busca-q" type="search" autocomplete="off" placeholder="Buscar parlamentar ou proposição"
-        aria-label="Buscar parlamentar ou proposição" role="combobox" aria-expanded="false" aria-controls="busca-res" aria-autocomplete="list">
-      <ul class="busca-res" id="busca-res" role="listbox" hidden></ul>
+<body class="ce-app">
+  <a class="ce-skip" href="#conteudo">Pular para o conteúdo</a>
+  <header class="ce-topbar">
+    <div class="ce-container ce-topbar-inner">
+      <a class="ce-brand" href="{{ raiz }}/index.html">Monitor Político</a>
+      <nav class="ce-nav" aria-label="Navegação principal">
+        <a href="{{ raiz }}/index.html"{% if casa == "inicio" %} aria-current="page"{% endif %}>Início</a>
+        <a href="{{ raiz }}/deputados/index.html"{% if casa == "camara" %} aria-current="page"{% endif %}>Deputados</a>
+        <a href="{{ raiz }}/senadores/index.html"{% if casa == "senado" %} aria-current="page"{% endif %}>Senadores</a>
+      </nav>
+      <div class="busca" id="busca" role="search" aria-label="Busca no site" data-raiz="{{ raiz }}">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="6"/><path d="M13 13l5 5"/></svg>
+        <input class="ce-input" id="busca-q" type="search" autocomplete="off" placeholder="Buscar parlamentar ou proposição"
+          aria-label="Buscar parlamentar ou proposição" role="combobox" aria-expanded="false" aria-controls="busca-res" aria-autocomplete="list">
+        <ul class="busca-res" id="busca-res" role="listbox" aria-label="Resultados da busca" hidden></ul>
+      </div>
     </div>
   </header>
-  <main>
+  <main class="ce-container" id="conteudo" tabindex="-1">
     {% block conteudo %}{% endblock %}
   </main>
-  <footer class="rodape">
-    {% block rodape %}
-    <p>Dados atualizados em {{ atualizado_em }}.</p>
-    <p>Fonte: <a href="{{ fonte_url }}">{{ fonte_nome }}</a>. Este site reproduz informações públicas oficiais, sem avaliação ou opinião.</p>
-    {% endblock %}
-    {% if caminho != "entenda.html" %}<p><a href="{{ raiz }}/entenda.html">Entenda os dados</a>: de onde vêm, quando são atualizados e o que cada termo quer dizer.</p>{% endif %}
+  <footer class="ce-footer">
+    <div class="ce-container">
+      {% block rodape %}
+      <p>Dados atualizados em {{ atualizado_em }}.</p>
+      <p>Fonte: <a href="{{ fonte_url }}">{{ fonte_nome }}</a>. Este site reproduz informações públicas oficiais, sem avaliação ou opinião.</p>
+      {% endblock %}
+      {% if caminho != "entenda.html" %}<p><a href="{{ raiz }}/entenda.html">Entenda os dados</a>: de onde vêm, quando são atualizados e o que cada termo quer dizer.</p>{% endif %}
+    </div>
   </footer>
   <script src="{{ raiz }}/static/busca.js" defer></script>
   {% block scripts %}{% endblock %}
