@@ -1,0 +1,30 @@
+{
+  "name": "civic-editorial-design-system",
+  "version": "1.0.0",
+  "language": "pt-BR",
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "ai/AGENT_INSTRUCTIONS.md",
+    "ai/PROMPT_MIGRATION.md",
+    "ai/ROOT_AGENTS_SNIPPET.md",
+    "assets/fonts.md",
+    "components/components.css",
+    "docs/01-visual-direction.md",
+    "docs/02-typography-layout.md",
+    "docs/03-components.md",
+    "docs/04-data-visualization.md",
+    "docs/05-editorial-trust.md",
+    "docs/06-states.md",
+    "docs/07-accessibility.md",
+    "docs/08-information-architecture.md",
+    "examples/index.html",
+    "templates/homepage.md",
+    "templates/parliamentarian.md",
+    "templates/proposition.md",
+    "templates/search-and-agenda.md",
+    "templates/vote.md",
+    "tokens/base.css",
+    "tokens/design-tokens.css"
+  ]
+}

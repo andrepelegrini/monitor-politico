@@ -1,0 +1,60 @@
+/* Civic Editorial Design System v1.0 — importar globalmente uma única vez. */
+:root {
+  color-scheme: light;
+  --ce-paper: #FAF8F4;
+  --ce-ink: #26221E;
+  --ce-espresso: #513C2D;
+  --ce-sand: #F0EBE2;
+  --ce-olive: #6A7542;
+  --ce-terracotta: #B75131;
+  --ce-surface: #FFFFFF;
+  --ce-muted-surface: #F6F2EC;
+  --ce-text-secondary: #62594F;
+  --ce-text-muted: #766B5F;
+  --ce-border: #D9D2C8;
+  --ce-border-soft: #E7E1D8;
+  --ce-link: #513C2D;
+  --ce-focus: #2F647C;
+  /* Cores de categorias de voto NÃO significam bom/ruim.
+     Preferir cores frias/neutras para distinguir posições legislativas. */
+  --ce-vote-yes: #356BB3;
+  --ce-vote-no: #A66B16;
+  --ce-vote-abstention: #697788;
+  --ce-vote-other: #8B7F73;
+  --ce-state-info: #315F8A;
+  --ce-state-success: #3D6C5A;
+  --ce-state-warning: #805C24;
+  --ce-state-error: #A44336;
+  --ce-font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --ce-font-ui: 'Instrument Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --ce-text-xs: .75rem;
+  --ce-text-sm: .875rem;
+  --ce-text-md: 1rem;
+  --ce-text-lg: 1.125rem;
+  --ce-title-sm: clamp(1.5rem, 2vw, 1.875rem);
+  --ce-title-md: clamp(2rem, 3vw, 2.625rem);
+  --ce-title-lg: clamp(2.625rem, 5vw, 4.5rem);
+  --ce-space-1: .25rem;
+  --ce-space-2: .5rem;
+  --ce-space-3: .75rem;
+  --ce-space-4: 1rem;
+  --ce-space-5: 1.25rem;
+  --ce-space-6: 1.5rem;
+  --ce-space-8: 2rem;
+  --ce-space-10: 2.5rem;
+  --ce-space-12: 3rem;
+  --ce-space-16: 4rem;
+  --ce-radius-xs: .25rem;
+  --ce-radius-sm: .375rem;
+  --ce-radius-md: .5rem;
+  --ce-radius-lg: .625rem;
+  --ce-container: 80rem;
+  --ce-sidebar: 15.5rem;
+  --ce-shadow-float: 0 8px 26px rgb(38 34 30 / .09);
+  --ce-duration-fast: 150ms;
+  --ce-duration-default: 200ms;
+  --ce-ease: cubic-bezier(.2,.8,.2,1);
+}
+@media (prefers-reduced-motion: reduce) {
+  :root { --ce-duration-fast: 0ms; --ce-duration-default: 0ms; }
+}

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Prévia fictícia do Design System Civic Editorial.">
+  <title>Civic Editorial — Demonstração</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../tokens/design-tokens.css">
+  <link rel="stylesheet" href="../tokens/base.css">
+  <link rel="stylesheet" href="../components/components.css">
+  <style>
+    body{margin:0} .ce-app .ce-hero{padding:4.5rem 0 3.5rem} .ce-app .ce-hero p{max-width:53ch}
+    .ce-app .ce-demo-note{padding:.75rem 1rem;border-left:3px solid var(--ce-terracotta);background:var(--ce-sand);font-size:.8125rem}
+    .ce-app .ce-stack{display:grid;gap:1.2rem}.ce-app .ce-gap-lg{margin-top:3rem}.ce-app .ce-footer{margin-top:5rem;padding:1.5rem 0;border-top:1px solid var(--ce-border)}
+    .ce-app .ce-agenda-item{display:flex;align-items:center;gap:1rem;padding:1rem 0;border-bottom:1px solid var(--ce-border-soft)}
+    .ce-app .ce-agenda-date{min-width:3rem;padding:.5rem;background:var(--ce-sand);border-radius:5px;text-align:center;font-size:.75rem;font-weight:700}
+    @media(max-width:640px){.ce-app .ce-hero{padding:2.5rem 0}.ce-app .ce-section-title{font-size:1.65rem}}
+  </style>
+</head>
+<body>
+<div class="ce-app">
+  <a class="ce-sr-only" href="#main" onfocus="this.style.cssText='position:fixed;top:8px;left:8px;z-index:100;padding:8px;background:white;width:auto;height:auto;clip:auto'" onblur="this.style.cssText=''">Pular para o conteúdo</a>
+  <header class="ce-topbar"><div class="ce-container ce-topbar-inner"><a class="ce-brand" href="#inicio"><span aria-hidden="true">◈</span> Observatório</a>
+    <nav class="ce-nav" aria-label="Navegação principal"><a href="#inicio" aria-current="page">Início</a><a href="#pautas">Pautas</a><a href="#agenda">Agenda</a><a href="#votacao">Votações</a></nav></div></header>
+  <main class="ce-container" id="main"><section class="ce-hero" id="inicio" aria-labelledby="hero-title"><p class="ce-eyebrow">Semana legislativa · demonstração</p>
+    <h1 class="ce-display ce-page-title" id="hero-title" style="margin:.8rem 0 1rem">O Congresso,<br>sem entrelinhas.</h1>
+    <p class="ce-muted" style="font-size:1.1rem">Entenda as pautas da semana, acompanhe decisões e conheça a atuação dos representantes — com dados, fontes e contexto.</p>
+    <div style="display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.75rem"><a class="ce-button" href="#pautas">Explorar pautas <span aria-hidden="true">↗</span></a><a class="ce-button ce-button--secondary" href="#votacao">Ver votação</a></div>
+    <p class="ce-demo-note" style="margin-top:2rem"><strong>Exemplo fictício:</strong> os números, eventos, proposições e parlamentares desta página são inventados apenas para demonstrar o design. Não representam a agenda real.</p>
+  </section>
+  <section aria-labelledby="numbers"><div class="ce-section-header"><h2 id="numbers" class="ce-section-title ce-display">A semana em números</h2><span class="ce-meta">Dados de exemplo</span></div>
+    <div class="ce-kpi-grid" style="padding:1.5rem 0 2.5rem"><div><div class="ce-kpi-value">12</div><div class="ce-kpi-label">Pautas</div></div><div><div class="ce-kpi-value">08</div><div class="ce-kpi-label">Votações</div></div><div><div class="ce-kpi-value">05</div><div class="ce-kpi-label">Sessões</div></div></div>
+  </section>
+  <div class="ce-grid-main"><section id="pautas" aria-labelledby="pautas-title"><div class="ce-section-header"><h2 class="ce-display ce-section-title" id="pautas-title">Em destaque</h2><span class="ce-eyebrow">01 / Pautas</span></div>
+      <article class="ce-article"><div style="display:flex;gap:.5rem;align-items:center;margin-bottom:.9rem"><span class="ce-badge">PL 1234/2026</span><span class="ce-meta">Câmara · fictício</span></div><h3 class="ce-article-title">Transparência pública entra em discussão</h3><p class="ce-muted" style="margin-top:.65rem">Proposta fictícia sobre regras de divulgação de dados administrativos para ilustrar um card editorial.</p><p class="ce-meta" style="margin-top:1rem">Discussão prevista · Quarta, 14h · Somente demonstração</p></article>
+      <article class="ce-article"><div style="display:flex;gap:.5rem;align-items:center;margin-bottom:.9rem"><span class="ce-badge">PEC 99/2026</span><span class="ce-meta">Senado · fictício</span></div><h3 class="ce-article-title">Audiência pública sobre processo legislativo</h3><p class="ce-muted" style="margin-top:.65rem">Outro exemplo inventado, sem correspondência com documentos oficiais.</p><p class="ce-meta" style="margin-top:1rem">Previsto · Quinta, 10h</p></article>
+    </section><aside id="agenda" aria-labelledby="agenda-title"><div class="ce-section-header"><h2 class="ce-display ce-section-title" id="agenda-title">Agenda</h2><span class="ce-eyebrow">02 / Semana</span></div>
+      <div class="ce-agenda-item"><span class="ce-agenda-date">SEG</span><div><strong>Sessão deliberativa</strong><div class="ce-meta">10h · Câmara · Fictício</div></div></div>
+      <div class="ce-agenda-item"><span class="ce-agenda-date">TER</span><div><strong>Reunião de comissão</strong><div class="ce-meta">14h30 · Senado · Fictício</div></div></div>
+      <div class="ce-agenda-item"><span class="ce-agenda-date">QUA</span><div><strong>Discussão de proposição</strong><div class="ce-meta">16h · Câmara · Fictício</div></div></div>
+      <div class="ce-card" style="margin-top:2rem"><p class="ce-eyebrow">Transparência de dados</p><h3 class="ce-display" style="font-size:1.6rem;margin:.4rem 0">Verifique a fonte</h3><p class="ce-muted" style="font-size:.875rem">Na aplicação real, cada pauta deve vincular o texto e o registro oficial, além da última sincronização.</p></div>
+    </aside></div>
+  <section class="ce-gap-lg" id="votacao" aria-labelledby="vote-title"><div class="ce-section-header"><h2 class="ce-display ce-section-title" id="vote-title">Como votaram</h2><span class="ce-eyebrow">03 / Votações</span></div><div class="ce-card" style="margin-top:1.5rem"><p class="ce-meta">Votação nominal demonstrativa · 500 registros fictícios</p><h3 class="ce-display" style="font-size:1.6rem;margin:.5rem 0 1.5rem">Distribuição por posição</h3>
+    <div class="ce-vote-bar" role="img" aria-label="Sim 278, Não 195, Abstenção 27, entre 500 votos fictícios registrados"><span class="ce-vote-yes" style="flex:278"></span><span class="ce-vote-no" style="flex:195"></span><span class="ce-vote-abstention" style="flex:27"></span></div>
+    <ul class="ce-legend"><li><span class="ce-dot ce-vote-yes"></span>Sim · 278</li><li><span class="ce-dot ce-vote-no"></span>Não · 195</li><li><span class="ce-dot ce-vote-abstention"></span>Abstenção · 27</li></ul>
+    <div style="margin-top:1.5rem"><label class="ce-control-label" for="search">Buscar parlamentar</label><input class="ce-input" id="search" type="search" placeholder="Nome ou partido (exemplo visual)" aria-describedby="searchhint"><p class="ce-meta" id="searchhint" style="margin-top:.35rem">Campo de demonstração; não realiza buscas.</p></div>
+    <div class="ce-table-scroll" role="region" aria-label="Tabela demonstrativa de votos" tabindex="0" style="margin-top:1.25rem"><table class="ce-table"><caption>Exemplos fictícios de votos individuais</caption><thead><tr><th scope="col">Parlamentar</th><th scope="col">Partido/UF</th><th scope="col">Voto</th></tr></thead><tbody><tr><td>Parlamentar A</td><td>Partido/SP</td><td><span class="ce-dot ce-vote-yes"></span>Sim</td></tr><tr><td>Parlamentar B</td><td>Partido/RJ</td><td><span class="ce-dot ce-vote-no"></span>Não</td></tr><tr><td>Parlamentar C</td><td>Partido/MG</td><td><span class="ce-dot ce-vote-abstention"></span>Abstenção</td></tr></tbody></table></div>
+    </div></section>
+  </main><footer class="ce-footer"><div class="ce-container"><p class="ce-meta">Civic Editorial v1.0 · Interface demonstrativa, sem conexão com dados oficiais · Fontes e atualizações devem ser visíveis em produção.</p></div></footer>
+</div>
+</body></html>
