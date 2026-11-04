@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block titulo %}O que está em discussão no Congresso · Monitor Político{% endblock %}
+{% block og_titulo %}O que está em discussão no Congresso{% endblock %}
 {% block conteudo %}
 <section class="abertura">
   <h1>O que está em discussão no Congresso</h1>
@@ -52,7 +53,7 @@
 
 <section class="bloco" id="votadas">
   <h2>Votado nos últimos 30 dias</h2>
-  <p class="suave nota">Uma linha por proposição, com a votação de mérito mais recente em cada casa. Votações de rito (requerimentos, redação final) ficam na página de cada uma.</p>
+  <p class="suave nota">Uma linha por proposição, com a votação de mérito mais recente em cada casa. Votações de rito (requerimentos, redação final) ficam na página de cada uma. <a href="entenda.html#rito">O que é votação de rito?</a></p>
 
   <form class="filtros" onsubmit="return false">
     <label>Casa

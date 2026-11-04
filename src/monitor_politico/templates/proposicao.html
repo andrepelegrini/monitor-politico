@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 {% block titulo %}{{ p.chave }}{% if p.apelido %} — {{ p.apelido }}{% endif %} · Monitor Político{% endblock %}
+{% block og_titulo %}{{ p.chave }}{% set t = (p.resumo and p.resumo.titulo) or p.apelido %}{% if t %} · {{ t }}{% endif %}{% endblock %}
+{% block descricao %}{% if p.situacao and p.situacao.norma %}Virou {{ p.situacao.norma }}. {% elif p.situacao %}Situação: {{ p.situacao.descricao }}. {% endif %}Tramitação, votações em plenário e voto de cada parlamentar, com dados oficiais da Câmara e do Senado.{% endblock %}
 {% block conteudo %}
 <section class="abertura">
   <p><a href="../index.html">← Voltar ao início</a></p>
@@ -141,9 +143,9 @@
   </div>
   {% endfor %}
   {% else %}
-  <p class="vazio-caixa">Nenhuma votação desta proposição no período foi nominal, então não há registro do voto de cada parlamentar.</p>
+  <p class="vazio-caixa">Nenhuma votação desta proposição no período foi nominal, então não há registro do voto de cada parlamentar. <a href="../entenda.html#nominal">Entenda</a></p>
   {% endif %}
-  {% if votacoes.tem_simbolica and votacoes.nominais %}<p class="suave nota">Votações simbólicas não registram o voto de cada parlamentar e por isso não aparecem aqui.</p>{% endif %}
+  {% if votacoes.tem_simbolica and votacoes.nominais %}<p class="suave nota">Votações simbólicas não registram o voto de cada parlamentar e por isso não aparecem aqui. <a href="../entenda.html#simbolica">Entenda</a></p>{% endif %}
 </section>
 {% endblock %}
 {% block rodape %}

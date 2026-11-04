@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block titulo %}{{ titulo }} · Monitor Político{% endblock %}
+{% block descricao %}Todos os {{ plural }} em exercício {{ "na" if casa == "camara" else "no" }} {{ nome_casa }}: partido, estado e contato oficial, com dados abertos oficiais.{% endblock %}
 {% block conteudo %}
 <section class="abertura">
   <h1>{{ nome_casa }}</h1>

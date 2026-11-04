@@ -6,6 +6,7 @@ Uso: python -m monitor_politico.build [deputados.json] [senadores.json] [congres
 from __future__ import annotations
 
 import json
+import os
 import shutil
 import sys
 import unicodedata
@@ -31,6 +32,44 @@ FONTE_CAMARA = ("Dados Abertos da Câmara dos Deputados", "https://dadosabertos.
 FONTE_SENADO = ("Dados Abertos do Senado Federal", "https://www12.senado.leg.br/dados-abertos")
 
 
+def url_do_site(ambiente: Optional[dict[str, str]] = None) -> str:
+    """Endereço público do site, usado nas tags de compartilhamento (Open Graph).
+
+    SITE_URL tem prioridade; na Vercel, VERCEL_PROJECT_PRODUCTION_URL traz o domínio de produção
+    sem o esquema. Sem nenhum dos dois (build local, testes), as tags com endereço absoluto ficam de fora.
+    """
+    ambiente = os.environ if ambiente is None else ambiente
+    url = (ambiente.get("SITE_URL") or ambiente.get("VERCEL_PROJECT_PRODUCTION_URL") or "").strip().rstrip("/")
+    if url and not url.startswith(("http://", "https://")):
+        url = "https://" + url
+    return url
+
+
+def indice_de_busca(
+    deputados: Sequence[Deputado], senadores: Sequence[Senador], proposicoes: dict[str, dict[str, Any]]
+) -> dict[str, list[list[str]]]:
+    """Índice compacto para a busca do topo: listas em vez de objetos, para o arquivo ficar pequeno."""
+    pessoas = [[d.nome, "D", d.partido, d.uf, f"deputados/{d.id}.html"] for d in deputados]
+    pessoas += [[s.nome, "S", s.partido, s.uf, f"senadores/{s.id}.html"] for s in senadores]
+    pessoas.sort(key=lambda p: chave_alfabetica(p[0]))
+    props = [
+        [p["chave"], (p.get("resumo") or {}).get("titulo") or p.get("apelido") or p.get("ementa") or "", f"proposicoes/{p['slug']}.html"]
+        for p in proposicoes.values()
+    ]
+    return {"parlamentares": pessoas, "proposicoes": props}
+
+
+def numeros_do_periodo(doc_congresso: dict[str, Any]) -> dict[str, Any]:
+    votacoes = [v for p in doc_congresso["proposicoes"].values() for v in p.get("votacoes", [])]
+    desde = (doc_congresso.get("periodo") or {}).get("votacoes_desde")
+    return {
+        "votacoes": len(votacoes),
+        "nominais": sum(1 for v in votacoes if v.get("nominal")),
+        "proposicoes": sum(1 for p in doc_congresso["proposicoes"].values() if p.get("votacoes")),
+        "desde": painel.data_br(desde) if desde else "",
+    }
+
+
 def chave_alfabetica(texto: str) -> str:
     """Ordem alfabética ignorando acentos e maiúsculas ("Acácio" antes de "AJ")."""
     sem_acento = unicodedata.normalize("NFD", texto).encode("ascii", "ignore").decode()
@@ -53,6 +92,7 @@ def _gerar_casa(
     (pasta / "index.html").write_text(
         env.get_template("lista.html").render(
             **contexto,
+            caminho=f"{pasta.name}/index.html",
             parlamentares=parlamentares,
             partidos=sorted({p.partido for p in parlamentares}),
             ufs=sorted({p.uf for p in parlamentares}),
@@ -61,7 +101,10 @@ def _gerar_casa(
     )
     modelo = env.get_template(perfil)
     for p in parlamentares:
-        (pasta / f"{p.id}.html").write_text(modelo.render(**contexto, **{variavel: p}), encoding="utf-8")
+        caminho = f"{pasta.name}/{p.id}.html"
+        (pasta / f"{p.id}.html").write_text(
+            modelo.render(**contexto, caminho=caminho, **{variavel: p}), encoding="utf-8"
+        )
 
 
 def construir(
@@ -70,12 +113,14 @@ def construir(
     doc_congresso: dict[str, Any],
     saida: Path = SAIDA_PADRAO,
     doc_resumos: Optional[dict[str, Any]] = None,
+    site_url: Optional[str] = None,
 ) -> None:
     env = Environment(
         loader=PackageLoader("monitor_politico", "templates"),
         autoescape=select_autoescape(),
     )
     env.filters["data_br"] = painel.data_br
+    env.globals["site_url"] = url_do_site() if site_url is None else site_url.rstrip("/")
     deputados = sorted((Deputado.de_dict(d) for d in doc_deputados["deputados"]), key=lambda d: chave_alfabetica(d.nome))
     senadores = sorted((Senador.de_dict(s) for s in doc_senadores["senadores"]), key=lambda s: chave_alfabetica(s.nome))
     atualizado_camara = _formatar_data(doc_deputados["coletado_em"])
@@ -94,7 +139,7 @@ def construir(
     }
     (saida / "index.html").write_text(
         env.get_template("inicio.html").render(
-            raiz=".", casa="inicio", atualizado_congresso=atualizado_congresso, **painel.inicio(doc_congresso)
+            raiz=".", casa="inicio", caminho="index.html", atualizado_congresso=atualizado_congresso, **painel.inicio(doc_congresso)
         ),
         encoding="utf-8",
     )
@@ -107,6 +152,7 @@ def construir(
             modelo.render(
                 raiz="..",
                 casa=None,
+                caminho=f"proposicoes/{prop['slug']}.html",
                 atualizado_congresso=atualizado_congresso,
                 p=prop,
                 etapas=painel.etapas(prop, doc_congresso["pauta"]),
@@ -114,6 +160,17 @@ def construir(
             ),
             encoding="utf-8",
         )
+    (saida / "entenda.html").write_text(
+        env.get_template("entenda.html").render(
+            raiz=".", casa=None, caminho="entenda.html", atualizado_congresso=atualizado_congresso,
+            numeros=numeros_do_periodo(doc_congresso), tem_resumos=bool(resumos),
+        ),
+        encoding="utf-8",
+    )
+    (saida / "static" / "busca.json").write_text(
+        json.dumps(indice_de_busca(deputados, senadores, doc_congresso["proposicoes"]), ensure_ascii=False, separators=(",", ":")),
+        encoding="utf-8",
+    )
     _gerar_casa(
         env, saida / "deputados", deputados, "perfil_deputado.html", "d",
         {"raiz": "..", "casa": "camara", "titulo": "Deputados federais", "singular": "deputado", "plural": "deputados",

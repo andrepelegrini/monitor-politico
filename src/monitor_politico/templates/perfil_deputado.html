@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 {% block titulo %}{{ d.nome }} ({{ d.partido }}-{{ d.uf }}) · Monitor Político{% endblock %}
+{% block og_titulo %}{{ d.nome }} ({{ d.partido }}-{{ d.uf }}) · Câmara dos Deputados{% endblock %}
+{% block descricao %}Partido, estado e contato oficial do gabinete de {{ d.nome }} na Câmara dos Deputados, com dados abertos oficiais.{% endblock %}
 {% block conteudo %}
 <p><a href="index.html">← Todos os deputados</a></p>
 

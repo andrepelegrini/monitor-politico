@@ -4,6 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block titulo %}Monitor Político{% endblock %}</title>
+  <meta name="description" content="{% block descricao %}Pauta, votações e parlamentares da Câmara e do Senado, a partir dos dados abertos oficiais.{% endblock %}">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Monitor Político">
+  <meta property="og:title" content="{% block og_titulo %}{{ self.titulo() }}{% endblock %}">
+  <meta property="og:description" content="{{ self.descricao() }}">
+  {% if site_url %}
+  <meta property="og:url" content="{{ site_url }}/{{ caminho }}">
+  <meta property="og:image" content="{{ site_url }}/static/compartilhar.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <link rel="canonical" href="{{ site_url }}/{{ caminho }}">
+  {% endif %}
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="{{ raiz }}/static/estilo.css">
 </head>
 <body>
@@ -14,6 +28,12 @@
       <a href="{{ raiz }}/deputados/index.html"{% if casa == "camara" %} aria-current="page"{% endif %}>Deputados</a>
       <a href="{{ raiz }}/senadores/index.html"{% if casa == "senado" %} aria-current="page"{% endif %}>Senadores</a>
     </nav>
+    <div class="busca" id="busca" data-raiz="{{ raiz }}">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="6"/><path d="M13 13l5 5"/></svg>
+      <input id="busca-q" type="search" autocomplete="off" placeholder="Buscar parlamentar ou proposição"
+        aria-label="Buscar parlamentar ou proposição" role="combobox" aria-expanded="false" aria-controls="busca-res" aria-autocomplete="list">
+      <ul class="busca-res" id="busca-res" role="listbox" hidden></ul>
+    </div>
   </header>
   <main>
     {% block conteudo %}{% endblock %}
@@ -23,7 +43,9 @@
     <p>Dados atualizados em {{ atualizado_em }}.</p>
     <p>Fonte: <a href="{{ fonte_url }}">{{ fonte_nome }}</a>. Este site reproduz informações públicas oficiais, sem avaliação ou opinião.</p>
     {% endblock %}
+    {% if caminho != "entenda.html" %}<p><a href="{{ raiz }}/entenda.html">Entenda os dados</a>: de onde vêm, quando são atualizados e o que cada termo quer dizer.</p>{% endif %}
   </footer>
+  <script src="{{ raiz }}/static/busca.js" defer></script>
   {% block scripts %}{% endblock %}
 </body>
 </html>

@@ -1,9 +1,10 @@
+import json
 from datetime import date
 
 import pytest
 
 from conftest import congresso_falso
-from monitor_politico.build import chave_alfabetica, construir
+from monitor_politico.build import chave_alfabetica, construir, url_do_site
 from monitor_politico.camara import coletar as coletar_camara
 from monitor_politico.congresso import coletar as coletar_congresso
 from monitor_politico.senado import coletar as coletar_senado
@@ -147,3 +148,62 @@ def test_resumo_por_ia_quando_existe(tmp_path, cliente, senado):
     sem = (tmp_path / "sem" / "proposicoes" / "plp-186-2026.html").read_text(encoding="utf-8")
     assert "Gerado automaticamente" not in sem and "<h1>PLP 186/2026</h1>" in sem
     assert "gerados automaticamente por IA" not in (tmp_path / "sem" / "index.html").read_text(encoding="utf-8")
+
+
+def test_busca_unica_no_topo_e_indice(site):
+    pasta, (doc_dep, doc_sen, doc_con) = site
+    for pagina in ("index.html", "deputados/index.html", "deputados/204379.html", "entenda.html"):
+        html = (pasta / pagina).read_text(encoding="utf-8")
+        assert 'id="busca-q"' in html
+        assert "/static/busca.js" in html
+    perfil = (pasta / "deputados" / "204379.html").read_text(encoding="utf-8")
+    assert 'data-raiz=".."' in perfil
+
+    indice = json.loads((pasta / "static" / "busca.json").read_text(encoding="utf-8"))
+    assert len(indice["parlamentares"]) == len(doc_dep["deputados"]) + len(doc_sen["senadores"])
+    assert ["Acácio Favacho", "D", "MDB", "AP", "deputados/204379.html"] in indice["parlamentares"]
+    assert any(p[1] == "S" and p[4] == "senadores/739.html" for p in indice["parlamentares"])
+    nomes = [p[0] for p in indice["parlamentares"]]
+    assert nomes == sorted(nomes, key=chave_alfabetica)  # Câmara e Senado misturados em ordem alfabética
+    assert sorted(p[2] for p in indice["proposicoes"]) == sorted(f"proposicoes/{p['slug']}.html" for p in doc_con["proposicoes"].values())
+    assert all(p[1] for p in indice["proposicoes"])  # sempre há um texto para mostrar
+
+
+def test_pagina_entenda_os_dados(site):
+    pasta, _ = site
+    entenda = (pasta / "entenda.html").read_text(encoding="utf-8")
+    assert "<h1>Entenda os dados</h1>" in entenda
+    assert 'id="simbolica"' in entenda and 'id="rito"' in entenda
+    assert "Não é publicada" in entenda  # orientação dos partidos no Senado
+    assert "votações registradas" in entenda and "com o voto de cada parlamentar" in entenda
+    assert entenda.count('href="./entenda.html"') == 0  # sem link para si mesma no rodapé
+    inicio = (pasta / "index.html").read_text(encoding="utf-8")
+    assert 'href="./entenda.html"' in inicio
+    assert 'href="entenda.html#rito"' in inicio
+
+
+def test_sem_endereco_do_site_nao_gera_tags_absolutas(site):
+    pasta, _ = site
+    perfil = (pasta / "deputados" / "204379.html").read_text(encoding="utf-8")
+    assert '<meta property="og:title" content="Acácio Favacho (MDB-AP) · Câmara dos Deputados">' in perfil
+    assert "og:image" not in perfil and "og:url" not in perfil
+
+
+def test_tags_de_compartilhamento_com_endereco(tmp_path, site):
+    _, docs = site
+    construir(*docs, tmp_path / "site2", site_url="https://monitor.exemplo.br/")
+    pasta = tmp_path / "site2"
+    plp = (pasta / "proposicoes" / "plp-186-2026.html").read_text(encoding="utf-8")
+    assert '<meta property="og:url" content="https://monitor.exemplo.br/proposicoes/plp-186-2026.html">' in plp
+    assert '<meta property="og:image" content="https://monitor.exemplo.br/static/compartilhar.png">' in plp
+    assert '<meta property="og:description" content="Virou Lei Complementar 238/2026.' in plp
+    inicio = (pasta / "index.html").read_text(encoding="utf-8")
+    assert '<meta property="og:url" content="https://monitor.exemplo.br/index.html">' in inicio
+    assert '<meta property="og:title" content="O que está em discussão no Congresso">' in inicio
+    assert (pasta / "static" / "compartilhar.png").exists()
+
+
+def test_url_do_site():
+    assert url_do_site({}) == ""
+    assert url_do_site({"VERCEL_PROJECT_PRODUCTION_URL": "monitor-politico.vercel.app"}) == "https://monitor-politico.vercel.app"
+    assert url_do_site({"SITE_URL": "https://meu.dominio.br/", "VERCEL_PROJECT_PRODUCTION_URL": "x.vercel.app"}) == "https://meu.dominio.br"
