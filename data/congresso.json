@@ -1,13 +1,45 @@
 {
- "coletado_em": "2026-11-03T16:57:21+00:00",
+ "coletado_em": "2026-11-04T18:19:30+00:00",
  "periodo": {
-  "votacoes_desde": "2026-10-04",
-  "pauta_ate": "2026-11-09"
+  "votacoes_desde": "2026-10-05",
+  "pauta_ate": "2026-11-10"
  },
  "pauta": [
   {
+   "casa": "Senado",
+   "data_hora": "2026-11-04T14:00",
+   "sessao": "Sessão deliberativa ordinária",
+   "itens": [
+    {
+     "chave": "PL 6461/2019",
+     "ementa": "Institui o Estatuto do Aprendiz; e altera a Consolidação das Leis do Trabalho, aprovada pelo Decreto-Lei nº 5.452, de 1º de maio de 1943 (CLT), e as Leis nºs 6.019, de 3 de janeiro de 1974, e 14.601, de 19 de junho de 2023.",
+     "fase": null
+    },
+    {
+     "chave": "PL 2234/2024",
+     "ementa": "Altera a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), para adequar a obrigatoriedade à educação básica à forma disposta na Constituição Federal.",
+     "fase": "Discussão, em turno único"
+    },
+    {
+     "chave": "PDL 344/2024",
+     "ementa": "Aprova o texto do Acordo entre o Governo da República Federativa do Brasil e o Governo da República da Croácia sobre Cooperação na Área de Educação, assinado em Zagreb, em 14 de fevereiro de 2023.",
+     "fase": "Discussão, em turno único"
+    },
+    {
+     "chave": "PDL 359/2024",
+     "ementa": "Aprova o texto do Protocolo, de 30 de novembro de 1972, para Alterar a Convenção Assinada em Paris em 22 de novembro de 1928 sobre Exposições Internacionais, alterado pelas Emendas de 24 de junho de 1982 e de 31 de maio de 1988.",
+     "fase": "Discussão, em turno único"
+    },
+    {
+     "chave": "PDL 618/2026",
+     "ementa": "Aprova o texto do Protocolo de Montevidéu sobre Compromisso com a Democracia no Mercosul (Ushuaia II), assinado em Montevidéu, em 20 de dezembro de 2011, durante a XLII Reunião Ordinária do Conselho do Mercado Comum.",
+     "fase": "Discussão, em turno único"
+    }
+   ]
+  },
+  {
    "casa": "Câmara",
-   "data_hora": "2026-11-03T13:55",
+   "data_hora": "2026-11-04T14:44",
    "sessao": "Sessão Deliberativa",
    "itens": [
     {
@@ -21,33 +53,23 @@
      "fase": "Redações Finais (RICD, art. 83, I)"
     },
     {
-     "chave": "PL 504/2021",
-     "ementa": "Cria a Política Nacional de Residência em Área Profissional da Saúde.",
-     "fase": "Requerimentos de Urgência Art. 155"
-    },
-    {
-     "chave": "PL 3507/2026",
-     "ementa": "Reconhece o artesanato tradicional do Estado do Maranhão como manifestação da cultura nacional.",
-     "fase": "Requerimentos de Urgência Art. 155"
-    },
-    {
      "chave": "PL 5086/2026",
      "ementa": "Dispõe sobre o regime jurídico específico das associações civis sem fins lucrativos de utilidade pública que instituam sistemas de beneficência e assistência mútua de interesse social.",
      "fase": "Requerimentos de Urgência Art. 155"
     },
     {
-     "chave": "PL 2334/2019",
-     "ementa": "Permite a celebração de convênios ou parcerias pelo Instituto Nacional de Propriedade Intelectual",
-     "fase": "Recursos"
-    },
-    {
-     "chave": "PL 3083/2019",
-     "ementa": "Altera os arts. 642-A e 883 da Consolidação das Leis do Trabalho (CLT), aprovada pelo Decreto-lei nº 5.452, de 1º de maio de 1943, para dispor sobre a penhora sobre o faturamento da empresa.",
-     "fase": "Recursos"
+     "chave": "PL 2167/2026",
+     "ementa": "Altera a Lei nº 10.260, de 12 de julho de 2001, que dispõe sobre o Fundo de Financiamento ao Estudante do Ensino Superior – FIES, para instituir modalidade setorial de financiamento com contrapartida de serviço em saúde mental no âmbito do Sistema Único de Saúde – SUS, e dá outras providências.",
+     "fase": "Requerimentos de Urgência Art. 155"
     },
     {
      "chave": "PL 3099/2019",
      "ementa": "Institui no calendário nacional o \"Dia Nacional do Autocuidado\".",
+     "fase": "Discussão"
+    },
+    {
+     "chave": "PL 3220/2019",
+     "ementa": "Dispõe sobre o compartilhamento de infraestrutura física aérea de titularidade de prestadoras de serviços de distribuição de energia elétrica com prestadoras de serviços de telecomunicações, altera a Lei nº 9.427, de 26 de dezembro de 1996, a Lei nº 9.472, de 16 de julho de 1997, e a Lei nº 14.947, de 2 de agosto de 2024, e dá outras providências.",
      "fase": "Discussão"
     },
     {
@@ -73,11 +95,6 @@
     {
      "chave": "PL 5902/2023",
      "ementa": "Altera o Decreto-Lei nº 2848, de 07 de dezembro de 1940 – Código Penal, para dispor sobre o uso de drones no espaço aéreo dos presídios.",
-     "fase": "Discussão"
-    },
-    {
-     "chave": "PL 4674/2024",
-     "ementa": "“Dispõe sobre a disponibilização de exames de ultrassonografia morfológica na rede pública de saúde e dá outras providências.”",
      "fase": "Discussão"
     },
     {
@@ -114,70 +131,6 @@
      "chave": "PL 5974/2023",
      "ementa": "Dispõe sobre a permissão de reprodução adaptada de obras para pessoas com deficiência intelectual.",
      "fase": "Discussão"
-    }
-   ]
-  },
-  {
-   "casa": "Senado",
-   "data_hora": "2026-11-03T14:00",
-   "sessao": "Sessão deliberativa ordinária",
-   "itens": [
-    {
-     "chave": "PEC 18/2025",
-     "ementa": "Altera os arts. 5º, 15, 22, 23, 24, 40, 49, 84, 103-B, 130-A e 144 da Constituição Federal e o art.76 do Ato das Disposições Constitucionais Transitórias; acrescenta os arts. 144-A e 144-B à Constituição Federal e os arts. 139, 140 e 141 ao Ato das Disposições Constitucionais Transitórias; e dá outras providências.",
-     "fase": "Primeira sessão de discussão, em primeiro turno"
-    },
-    {
-     "chave": "PL 186/2025",
-     "ementa": "Altera a Lei nº 14.826, de 20 de março de 2024, para incluir entre as ações destinadas à promoção da parentalidade positiva a realização de cursos, de campanhas e de palestras embasados em evidências científicas.",
-     "fase": "Discussão, em turno único"
-    },
-    {
-     "chave": "PL 5782/2023",
-     "ementa": "Institui a campanha Setembro em Flor, destinada à conscientização sobre os tumores ginecológicos.",
-     "fase": "Discussão, em turno único"
-    },
-    {
-     "chave": "PDS 240/2011",
-     "ementa": "Aprova o texto do Acordo entre o Governo da República Federativa do Brasil e o Governo da República da Guiana sobre Cooperação em Matéria de Defesa, assinado em Bonfim-RR, em 14 de setembro de 2009.",
-     "fase": "Discussão, em turno único"
-    },
-    {
-     "chave": "PDL 575/2026",
-     "ementa": "Aprova o texto do Acordo-Quadro de Cooperação em Ciência e Tecnologia Espacial entre o Governo da República Federativa do Brasil e o Governo da República Bolivariana da Venezuela, assinado em Caracas, em 27 de junho de 2008.",
-     "fase": "Discussão, em turno único"
-    }
-   ]
-  },
-  {
-   "casa": "Senado",
-   "data_hora": "2026-11-04T14:00",
-   "sessao": "Sessão deliberativa ordinária",
-   "itens": [
-    {
-     "chave": "PL 6461/2019",
-     "ementa": "Institui o Estatuto do Aprendiz; e altera a Consolidação das Leis do Trabalho, aprovada pelo Decreto-Lei nº 5.452, de 1º de maio de 1943 (CLT), e as Leis nºs 6.019, de 3 de janeiro de 1974, e 14.601, de 19 de junho de 2023.",
-     "fase": null
-    },
-    {
-     "chave": "PL 2234/2024",
-     "ementa": "Altera a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), para adequar a obrigatoriedade à educação básica à forma disposta na Constituição Federal.",
-     "fase": "Discussão, em turno único"
-    },
-    {
-     "chave": "PDL 344/2024",
-     "ementa": "Aprova o texto do Acordo entre o Governo da República Federativa do Brasil e o Governo da República da Croácia sobre Cooperação na Área de Educação, assinado em Zagreb, em 14 de fevereiro de 2023.",
-     "fase": "Discussão, em turno único"
-    },
-    {
-     "chave": "PDL 359/2024",
-     "ementa": "Aprova o texto do Protocolo, de 30 de novembro de 1972, para Alterar a Convenção Assinada em Paris em 22 de novembro de 1928 sobre Exposições Internacionais, alterado pelas Emendas de 24 de junho de 1982 e de 31 de maio de 1988.",
-     "fase": "Discussão, em turno único"
-    },
-    {
-     "chave": "PDL 618/2026",
-     "ementa": "Aprova o texto do Protocolo de Montevidéu sobre Compromisso com a Democracia no Mercosul (Ushuaia II), assinado em Montevidéu, em 20 de dezembro de 2011, durante a XLII Reunião Ordinária do Conselho do Mercado Comum.",
-     "fase": "Discussão, em turno único"
     }
    ]
   }
@@ -360,8 +313,8 @@
     "Relações Internacionais e Comércio Exterior"
    ],
    "situacao": {
-    "descricao": "Aguardando recebimento de emendas",
-    "data": "2026-11-03",
+    "descricao": "Matéria com a relatoria",
+    "data": "2026-11-04",
     "casa": "Senado",
     "norma": null
    },
@@ -465,35 +418,6 @@
    "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2484555",
    "votacoes": []
   },
-  "PDL 575/2026": {
-   "chave": "PDL 575/2026",
-   "slug": "pdl-575-2026",
-   "sigla": "PDL",
-   "numero": 575,
-   "ano": 2026,
-   "tipo": "Projeto de Decreto Legislativo",
-   "ementa": "Aprova o texto do Acordo-Quadro de Cooperação em Ciência e Tecnologia Espacial entre o Governo da República Federativa do Brasil e o Governo da República Bolivariana da Venezuela, assinado em Caracas, em 27 de junho de 2008.",
-   "apelido": null,
-   "autores": [
-    "Câmara dos Deputados"
-   ],
-   "data_apresentacao": "2026-06-09",
-   "casa_inicial": "Senado",
-   "temas": [
-    "Ciência, Tecnologia e Informática",
-    "Relações Internacionais"
-   ],
-   "situacao": {
-    "descricao": "Incluída em ordem do dia",
-    "data": "2026-11-03",
-    "casa": "Senado",
-    "norma": null
-   },
-   "url_camara": null,
-   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174513",
-   "url_inteiro_teor": "https://legis.senado.gov.br/sdleg-getter/dadosabertos/documento/ad4cf496-e81c-4ae6-af0c-cf951d6a204e",
-   "votacoes": []
-  },
   "PDL 618/2026": {
    "chave": "PDL 618/2026",
    "slug": "pdl-618-2026",
@@ -523,32 +447,6 @@
    "url_inteiro_teor": "https://legis.senado.gov.br/sdleg-getter/dadosabertos/documento/2b6120aa-b2d0-4910-b7d0-515d39671063",
    "votacoes": []
   },
-  "PDS 240/2011": {
-   "chave": "PDS 240/2011",
-   "slug": "pds-240-2011",
-   "sigla": "PDS",
-   "numero": 240,
-   "ano": 2011,
-   "tipo": "Projeto de Decreto Legislativo",
-   "ementa": "Aprova o texto do Acordo entre o Governo da República Federativa do Brasil e o Governo da República da Guiana sobre Cooperação em Matéria de Defesa, assinado em Bonfim-RR, em 14 de setembro de 2009.",
-   "apelido": null,
-   "autores": [
-    "Câmara dos Deputados"
-   ],
-   "data_apresentacao": "2011-10-03",
-   "casa_inicial": "Senado",
-   "temas": [],
-   "situacao": {
-    "descricao": "Incluída em ordem do dia",
-    "data": "2026-11-03",
-    "casa": "Senado",
-    "norma": null
-   },
-   "url_camara": null,
-   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/102633",
-   "url_inteiro_teor": "https://legis.senado.gov.br/sdleg-getter/dadosabertos/documento/b4f7de0a-a847-41f5-a26d-c1ec7e0a91a3",
-   "votacoes": []
-  },
   "PEC 18/2025": {
    "chave": "PEC 18/2025",
    "slug": "pec-18-2025",
@@ -568,7 +466,7 @@
     "Defesa e Segurança"
    ],
    "situacao": {
-    "descricao": "Incluída em ordem do dia",
+    "descricao": "Aprovada",
     "data": "2026-11-03",
     "casa": "Senado",
     "norma": null
@@ -576,7 +474,2400 @@
    "url_camara": "https://www.camara.leg.br/propostas-legislativas/2500080",
    "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172997",
    "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2891161",
-   "votacoes": []
+   "votacoes": [
+    {
+     "id": "SF-7109",
+     "casa": "Senado",
+     "data_hora": "2026-11-03",
+     "descricao": "Votação nominal dos Requerimentos nºs 741 e 742, de 2026, do Relator, para que as Emendas nºs 84 e 87 passem a constituir proposições em separado.",
+     "resultado": "aprovada",
+     "procedimento": true,
+     "nominal": true,
+     "placar": {
+      "sim": 38,
+      "nao": 36,
+      "abstencao": 1,
+      "outros": [
+       [
+        "Presente – Não registrou voto",
+        4
+       ],
+       [
+        "Presidente (art. 51 RISF)",
+        1
+       ],
+       [
+        "Atividade parlamentar",
+        1
+       ]
+      ]
+     },
+     "orientacoes": null,
+     "votos": [
+      {
+       "id": 5672,
+       "nome": "Alan Rick",
+       "partido": "REPUBLICANOS",
+       "uf": "AC",
+       "voto": "Não"
+      },
+      {
+       "id": 5982,
+       "nome": "Alessandro Vieira",
+       "partido": "MDB",
+       "uf": "SE",
+       "voto": "Não"
+      },
+      {
+       "id": 6358,
+       "nome": "Ana Paula Lobato",
+       "partido": "PSB",
+       "uf": "MA",
+       "voto": "Sim"
+      },
+      {
+       "id": 5967,
+       "nome": "Angelo Coronel",
+       "partido": "REPUBLICANOS",
+       "uf": "BA",
+       "voto": "Não"
+      },
+      {
+       "id": 6009,
+       "nome": "Astronauta Marcos Pontes",
+       "partido": "PL",
+       "uf": "SP",
+       "voto": "Não"
+      },
+      {
+       "id": 4639,
+       "nome": "Beto Faro",
+       "partido": "PT",
+       "uf": "PA",
+       "voto": "Sim"
+      },
+      {
+       "id": 6336,
+       "nome": "Camilo Santana",
+       "partido": "PT",
+       "uf": "CE",
+       "voto": "Sim"
+      },
+      {
+       "id": 6295,
+       "nome": "Carlos Fávaro",
+       "partido": "PSD",
+       "uf": "MT",
+       "voto": "Sim"
+      },
+      {
+       "id": 5936,
+       "nome": "Carlos Portinho",
+       "partido": "PL",
+       "uf": "RJ",
+       "voto": "Abstenção"
+      },
+      {
+       "id": 5990,
+       "nome": "Carlos Viana",
+       "partido": "PSD",
+       "uf": "MG",
+       "voto": "Não"
+      },
+      {
+       "id": 470,
+       "nome": "Chico Rodrigues",
+       "partido": "PSB",
+       "uf": "RR",
+       "voto": "Sim"
+      },
+      {
+       "id": 5973,
+       "nome": "Cid Gomes",
+       "partido": "PSB",
+       "uf": "CE",
+       "voto": "Sim"
+      },
+      {
+       "id": 739,
+       "nome": "Ciro Nogueira",
+       "partido": "PP",
+       "uf": "PI",
+       "voto": "Não"
+      },
+      {
+       "id": 6337,
+       "nome": "Cleitinho",
+       "partido": "REPUBLICANOS",
+       "uf": "MG",
+       "voto": "Não"
+      },
+      {
+       "id": 475,
+       "nome": "Confúcio Moura",
+       "partido": "MDB",
+       "uf": "RO",
+       "voto": "Sim"
+      },
+      {
+       "id": 6335,
+       "nome": "Damares Alves",
+       "partido": "REPUBLICANOS",
+       "uf": "DF",
+       "voto": "Não"
+      },
+      {
+       "id": 5998,
+       "nome": "Daniella Ribeiro",
+       "partido": "PP",
+       "uf": "PB",
+       "voto": "Sim"
+      },
+      {
+       "id": 3830,
+       "nome": "Davi Alcolumbre",
+       "partido": "UNIÃO",
+       "uf": "AP",
+       "voto": "Presidente (art. 51 RISF)"
+      },
+      {
+       "id": 5793,
+       "nome": "Dr. Hiran",
+       "partido": "PP",
+       "uf": "RR",
+       "voto": "Não"
+      },
+      {
+       "id": 5906,
+       "nome": "Dra. Eudócia",
+       "partido": "PSDB",
+       "uf": "AL",
+       "voto": "Sim"
+      },
+      {
+       "id": 4994,
+       "nome": "Eduardo Braga",
+       "partido": "MDB",
+       "uf": "AM",
+       "voto": "Sim"
+      },
+      {
+       "id": 3777,
+       "nome": "Eduardo Gomes",
+       "partido": "PL",
+       "uf": "TO",
+       "voto": "Não"
+      },
+      {
+       "id": 4642,
+       "nome": "Efraim Filho",
+       "partido": "PL",
+       "uf": "PB",
+       "voto": "Não"
+      },
+      {
+       "id": 5718,
+       "nome": "Eliziane Gama",
+       "partido": "PSD",
+       "uf": "MA",
+       "voto": "Sim"
+      },
+      {
+       "id": 22,
+       "nome": "Esperidião Amin",
+       "partido": "PP",
+       "uf": "SC",
+       "voto": "Não"
+      },
+      {
+       "id": 5953,
+       "nome": "Fabiano Contarato",
+       "partido": "PT",
+       "uf": "ES",
+       "voto": "Sim"
+      },
+      {
+       "id": 5917,
+       "nome": "Fernando Dueire",
+       "partido": "PSD",
+       "uf": "PE",
+       "voto": "Sim"
+      },
+      {
+       "id": 345,
+       "nome": "Flávio Arns",
+       "partido": "PSB",
+       "uf": "PR",
+       "voto": "Sim"
+      },
+      {
+       "id": 5894,
+       "nome": "Flávio Bolsonaro",
+       "partido": "PL",
+       "uf": "RJ",
+       "voto": "Não"
+      },
+      {
+       "id": 6008,
+       "nome": "Giordano",
+       "partido": "PODE",
+       "uf": "SP",
+       "voto": "Sim"
+      },
+      {
+       "id": 6341,
+       "nome": "Hamilton Mourão",
+       "partido": "REPUBLICANOS",
+       "uf": "RS",
+       "voto": "Não"
+      },
+      {
+       "id": 5008,
+       "nome": "Humberto Costa",
+       "partido": "PT",
+       "uf": "PE",
+       "voto": "Sim"
+      },
+      {
+       "id": 5385,
+       "nome": "Irajá",
+       "partido": "PSD",
+       "uf": "TO",
+       "voto": "Presente – Não registrou voto"
+      },
+      {
+       "id": 6010,
+       "nome": "Ivete da Silveira",
+       "partido": "MDB",
+       "uf": "SC",
+       "voto": "Não"
+      },
+      {
+       "id": 4770,
+       "nome": "Izalci Lucas",
+       "partido": "PL",
+       "uf": "DF",
+       "voto": "Não"
+      },
+      {
+       "id": 35,
+       "nome": "Jader Barbalho",
+       "partido": "MDB",
+       "uf": "PA",
+       "voto": "Sim"
+      },
+      {
+       "id": 6340,
+       "nome": "Jaime Bagattoli",
+       "partido": "PL",
+       "uf": "RO",
+       "voto": "Não"
+      },
+      {
+       "id": 581,
+       "nome": "Jaques Wagner",
+       "partido": "PT",
+       "uf": "BA",
+       "voto": "Sim"
+      },
+      {
+       "id": 4531,
+       "nome": "Jayme Campos",
+       "partido": "UNIÃO",
+       "uf": "MT",
+       "voto": "Sim"
+      },
+      {
+       "id": 5895,
+       "nome": "Jorge Kajuru",
+       "partido": "PSB",
+       "uf": "GO",
+       "voto": "Sim"
+      },
+      {
+       "id": 6342,
+       "nome": "Jorge Seif",
+       "partido": "PL",
+       "uf": "SC",
+       "voto": "Atividade parlamentar"
+      },
+      {
+       "id": 6369,
+       "nome": "Jussara Lima",
+       "partido": "PSD",
+       "uf": "PI",
+       "voto": "Sim"
+      },
+      {
+       "id": 4811,
+       "nome": "Laércio Oliveira",
+       "partido": "PP",
+       "uf": "SE",
+       "voto": "Não"
+      },
+      {
+       "id": 5977,
+       "nome": "Leany Lemos",
+       "partido": "PSB",
+       "uf": "DF",
+       "voto": "Sim"
+      },
+      {
+       "id": 5926,
+       "nome": "Lucas Barreto",
+       "partido": "PSD",
+       "uf": "AP",
+       "voto": "Não"
+      },
+      {
+       "id": 1186,
+       "nome": "Luis Carlos Heinze",
+       "partido": "PP",
+       "uf": "RS",
+       "voto": "Não"
+      },
+      {
+       "id": 631,
+       "nome": "Magno Malta",
+       "partido": "PL",
+       "uf": "ES",
+       "voto": "Presente – Não registrou voto"
+      },
+      {
+       "id": 5376,
+       "nome": "Mara Gabrilli",
+       "partido": "PSD",
+       "uf": "SP",
+       "voto": "Sim"
+      },
+      {
+       "id": 742,
+       "nome": "Marcelo Castro",
+       "partido": "MDB",
+       "uf": "PI",
+       "voto": "Sim"
+      },
+      {
+       "id": 285,
+       "nome": "Marcio Bittar",
+       "partido": "PL",
+       "uf": "AC",
+       "voto": "Não"
+      },
+      {
+       "id": 5422,
+       "nome": "Marcos Rogério",
+       "partido": "PL",
+       "uf": "RO",
+       "voto": "Não"
+      },
+      {
+       "id": 5942,
+       "nome": "Marcos do Val",
+       "partido": "AVANTE",
+       "uf": "ES",
+       "voto": "Não"
+      },
+      {
+       "id": 5985,
+       "nome": "Nelsinho Trad",
+       "partido": "PSD",
+       "uf": "MS",
+       "voto": "Sim"
+      },
+      {
+       "id": 5525,
+       "nome": "Omar Aziz",
+       "partido": "PSD",
+       "uf": "AM",
+       "voto": "Sim"
+      },
+      {
+       "id": 5924,
+       "nome": "Oriovisto Guimarães",
+       "partido": "PSDB",
+       "uf": "PR",
+       "voto": "Não"
+      },
+      {
+       "id": 5523,
+       "nome": "Otto Alencar",
+       "partido": "PSD",
+       "uf": "BA",
+       "voto": "Sim"
+      },
+      {
+       "id": 825,
+       "nome": "Paulo Paim",
+       "partido": "PT",
+       "uf": "RS",
+       "voto": "Sim"
+      },
+      {
+       "id": 5502,
+       "nome": "Plínio Valério",
+       "partido": "PSDB",
+       "uf": "AM",
+       "voto": "Não"
+      },
+      {
+       "id": 5386,
+       "nome": "Professora Dorinha Seabra",
+       "partido": "UNIÃO",
+       "uf": "TO",
+       "voto": "Presente – Não registrou voto"
+      },
+      {
+       "id": 5012,
+       "nome": "Randolfe Rodrigues",
+       "partido": "PT",
+       "uf": "AP",
+       "voto": "Sim"
+      },
+      {
+       "id": 70,
+       "nome": "Renan Calheiros",
+       "partido": "MDB",
+       "uf": "AL",
+       "voto": "Sim"
+      },
+      {
+       "id": 5207,
+       "nome": "Renan Filho",
+       "partido": "MDB",
+       "uf": "AL",
+       "voto": "Sim"
+      },
+      {
+       "id": 5257,
+       "nome": "Renzo Braz",
+       "partido": "PP",
+       "uf": "MG",
+       "voto": "Não"
+      },
+      {
+       "id": 6025,
+       "nome": "Roberta Acioly",
+       "partido": "REPUBLICANOS",
+       "uf": "RR",
+       "voto": "Não"
+      },
+      {
+       "id": 4694,
+       "nome": "Rogerio Marinho",
+       "partido": "PL",
+       "uf": "RN",
+       "voto": "Não"
+      },
+      {
+       "id": 5352,
+       "nome": "Rogério Carvalho",
+       "partido": "PT",
+       "uf": "SE",
+       "voto": "Sim"
+      },
+      {
+       "id": 5322,
+       "nome": "Romário",
+       "partido": "S/Partido",
+       "uf": "RJ",
+       "voto": "Presente – Não registrou voto"
+      },
+      {
+       "id": 5974,
+       "nome": "Sargento Reginauro",
+       "partido": "PSDB",
+       "uf": "CE",
+       "voto": "Não"
+      },
+      {
+       "id": 6331,
+       "nome": "Sergio Moro",
+       "partido": "PL",
+       "uf": "PR",
+       "voto": "Não"
+      },
+      {
+       "id": 5988,
+       "nome": "Soraya Thronicke",
+       "partido": "PSB",
+       "uf": "MS",
+       "voto": "Sim"
+      },
+      {
+       "id": 5959,
+       "nome": "Styvenson Valentim",
+       "partido": "PODE",
+       "uf": "RN",
+       "voto": "Não"
+      },
+      {
+       "id": 4560,
+       "nome": "Sérgio Petecão",
+       "partido": "PSD",
+       "uf": "AC",
+       "voto": "Sim"
+      },
+      {
+       "id": 6338,
+       "nome": "Teresa Leitão",
+       "partido": "PT",
+       "uf": "PE",
+       "voto": "Sim"
+      },
+      {
+       "id": 5736,
+       "nome": "Tereza Cristina",
+       "partido": "PP",
+       "uf": "MS",
+       "voto": "Não"
+      },
+      {
+       "id": 5899,
+       "nome": "Vanderlan Cardoso",
+       "partido": "PSD",
+       "uf": "GO",
+       "voto": "Não"
+      },
+      {
+       "id": 5748,
+       "nome": "Veneziano Vital do Rêgo",
+       "partido": "MDB",
+       "uf": "PB",
+       "voto": "Sim"
+      },
+      {
+       "id": 1173,
+       "nome": "Wellington Fagundes",
+       "partido": "PL",
+       "uf": "MT",
+       "voto": "Não"
+      },
+      {
+       "id": 5411,
+       "nome": "Weverton",
+       "partido": "PDT",
+       "uf": "MA",
+       "voto": "Sim"
+      },
+      {
+       "id": 5070,
+       "nome": "Wilder Morais",
+       "partido": "PL",
+       "uf": "GO",
+       "voto": "Não"
+      },
+      {
+       "id": 5783,
+       "nome": "Zenaide Maia",
+       "partido": "PSD",
+       "uf": "RN",
+       "voto": "Sim"
+      },
+      {
+       "id": 3806,
+       "nome": "Zequinha Marinho",
+       "partido": "PODE",
+       "uf": "PA",
+       "voto": "Não"
+      }
+     ]
+    },
+    {
+     "id": "SF-7110",
+     "casa": "Senado",
+     "data_hora": "2026-11-03",
+     "descricao": "Votação nominal da Proposta de Emenda à Constituição nº 18, de 2025, nos termos dos pareceres, ressalvado o destaque (1º Turno).",
+     "resultado": "aprovada",
+     "procedimento": false,
+     "nominal": true,
+     "placar": {
+      "sim": 73,
+      "nao": 0,
+      "abstencao": 0,
+      "outros": [
+       [
+        "Presente – Não registrou voto",
+        6
+       ],
+       [
+        "Presidente (art. 51 RISF)",
+        1
+       ],
+       [
+        "Atividade parlamentar",
+        1
+       ]
+      ]
+     },
+     "orientacoes": null,
+     "votos": [
+      {
+       "id": 5672,
+       "nome": "Alan Rick",
+       "partido": "REPUBLICANOS",
+       "uf": "AC",
+       "voto": "Sim"
+      },
+      {
+       "id": 5982,
+       "nome": "Alessandro Vieira",
+       "partido": "MDB",
+       "uf": "SE",
+       "voto": "Sim"
+      },
+      {
+       "id": 6358,
+       "nome": "Ana Paula Lobato",
+       "partido": "PSB",
+       "uf": "MA",
+       "voto": "Sim"
+      },
+      {
+       "id": 5967,
+       "nome": "Angelo Coronel",
+       "partido": "REPUBLICANOS",
+       "uf": "BA",
+       "voto": "Sim"
+      },
+      {
+       "id": 6009,
+       "nome": "Astronauta Marcos Pontes",
+       "partido": "PL",
+       "uf": "SP",
+       "voto": "Sim"
+      },
+      {
+       "id": 4639,
+       "nome": "Beto Faro",
+       "partido": "PT",
+       "uf": "PA",
+       "voto": "Sim"
+      },
+      {
+       "id": 6336,
+       "nome": "Camilo Santana",
+       "partido": "PT",
+       "uf": "CE",
+       "voto": "Sim"
+      },
+      {
+       "id": 6295,
+       "nome": "Carlos Fávaro",
+       "partido": "PSD",
+       "uf": "MT",
+       "voto": "Sim"
+      },
+      {
+       "id": 5936,
+       "nome": "Carlos Portinho",
+       "partido": "PL",
+       "uf": "RJ",
+       "voto": "Presente – Não registrou voto"
+      },
+      {
+       "id": 5990,
+       "nome": "Carlos Viana",
+       "partido": "PSD",
+       "uf": "MG",
+       "voto": "Sim"
+      },
+      {
+       "id": 470,
+       "nome": "Chico Rodrigues",
+       "partido": "PSB",
+       "uf": "RR",
+       "voto": "Sim"
+      },
+      {
+       "id": 5973,
+       "nome": "Cid Gomes",
+       "partido": "PSB",
+       "uf": "CE",
+       "voto": "Sim"
+      },
+      {
+       "id": 739,
+       "nome": "Ciro Nogueira",
+       "partido": "PP",
+       "uf": "PI",
+       "voto": "Sim"
+      },
+      {
+       "id": 6337,
+       "nome": "Cleitinho",
+       "partido": "REPUBLICANOS",
+       "uf": "MG",
+       "voto": "Sim"
+      },
+      {
+       "id": 475,
+       "nome": "Confúcio Moura",
+       "partido": "MDB",
+       "uf": "RO",
+       "voto": "Sim"
+      },
+      {
+       "id": 6335,
+       "nome": "Damares Alves",
+       "partido": "REPUBLICANOS",
+       "uf": "DF",
+       "voto": "Sim"
+      },
+      {
+       "id": 5998,
+       "nome": "Daniella Ribeiro",
+       "partido": "PP",
+       "uf": "PB",
+       "voto": "Sim"
+      },
+      {
+       "id": 3830,
+       "nome": "Davi Alcolumbre",
+       "partido": "UNIÃO",
+       "uf": "AP",
+       "voto": "Presidente (art. 51 RISF)"
+      },
+      {
+       "id": 5793,
+       "nome": "Dr. Hiran",
+       "partido": "PP",
+       "uf": "RR",
+       "voto": "Sim"
+      },
+      {
+       "id": 5906,
+       "nome": "Dra. Eudócia",
+       "partido": "PSDB",
+       "uf": "AL",
+       "voto": "Sim"
+      },
+      {
+       "id": 4994,
+       "nome": "Eduardo Braga",
+       "partido": "MDB",
+       "uf": "AM",
+       "voto": "Sim"
+      },
+      {
+       "id": 3777,
+       "nome": "Eduardo Gomes",
+       "partido": "PL",
+       "uf": "TO",
+       "voto": "Sim"
+      },
+      {
+       "id": 4642,
+       "nome": "Efraim Filho",
+       "partido": "PL",
+       "uf": "PB",
+       "voto": "Sim"
+      },
+      {
+       "id": 5718,
+       "nome": "Eliziane Gama",
+       "partido": "PSD",
+       "uf": "MA",
+       "voto": "Sim"
+      },
+      {
+       "id": 22,
+       "nome": "Esperidião Amin",
+       "partido": "PP",
+       "uf": "SC",
+       "voto": "Sim"
+      },
+      {
+       "id": 5953,
+       "nome": "Fabiano Contarato",
+       "partido": "PT",
+       "uf": "ES",
+       "voto": "Sim"
+      },
+      {
+       "id": 5917,
+       "nome": "Fernando Dueire",
+       "partido": "PSD",
+       "uf": "PE",
+       "voto": "Sim"
+      },
+      {
+       "id": 345,
+       "nome": "Flávio Arns",
+       "partido": "PSB",
+       "uf": "PR",
+       "voto": "Sim"
+      },
+      {
+       "id": 5894,
+       "nome": "Flávio Bolsonaro",
+       "partido": "PL",
+       "uf": "RJ",
+       "voto": "Sim"
+      },
+      {
+       "id": 6008,
+       "nome": "Giordano",
+       "partido": "PODE",
+       "uf": "SP",
+       "voto": "Presente – Não registrou voto"
+      },
+      {
+       "id": 6341,
+       "nome": "Hamilton Mourão",
+       "partido": "REPUBLICANOS",
+       "uf": "RS",
+       "voto": "Sim"
+      },
+      {
+       "id": 5008,
+       "nome": "Humberto Costa",
+       "partido": "PT",
+       "uf": "PE",
+       "voto": "Sim"
+      },
+      {
+       "id": 5385,
+       "nome": "Irajá",
+       "partido": "PSD",
+       "uf": "TO",
+       "voto": "Sim"
+      },
+      {
+       "id": 6010,
+       "nome": "Ivete da Silveira",
+       "partido": "MDB",
+       "uf": "SC",
+       "voto": "Sim"
+      },
+      {
+       "id": 4770,
+       "nome": "Izalci Lucas",
+       "partido": "PL",
+       "uf": "DF",
+       "voto": "Sim"
+      },
+      {
+       "id": 35,
+       "nome": "Jader Barbalho",
+       "partido": "MDB",
+       "uf": "PA",
+       "voto": "Sim"
+      },
+      {
+       "id": 6340,
+       "nome": "Jaime Bagattoli",
+       "partido": "PL",
+       "uf": "RO",
+       "voto": "Sim"
+      },
+      {
+       "id": 581,
+       "nome": "Jaques Wagner",
+       "partido": "PT",
+       "uf": "BA",
+       "voto": "Sim"
+      },
+      {
+       "id": 4531,
+       "nome": "Jayme Campos",
+       "partido": "UNIÃO",
+       "uf": "MT",
+       "voto": "Sim"
+      },
+      {
+       "id": 5895,
+       "nome": "Jorge Kajuru",
+       "partido": "PSB",
+       "uf": "GO",
+       "voto": "Sim"
+      },
+      {
+       "id": 6342,
+       "nome": "Jorge Seif",
+       "partido": "PL",
+       "uf": "SC",
+       "voto": "Atividade parlamentar"
+      },
+      {
+       "id": 6369,
+       "nome": "Jussara Lima",
+       "partido": "PSD",
+       "uf": "PI",
+       "voto": "Sim"
+      },
+      {
+       "id": 4811,
+       "nome": "Laércio Oliveira",
+       "partido": "PP",
+       "uf": "SE",
+       "voto": "Sim"
+      },
+      {
+       "id": 5977,
+       "nome": "Leany Lemos",
+       "partido": "PSB",
+       "uf": "DF",
+       "voto": "Sim"
+      },
+      {
+       "id": 5926,
+       "nome": "Lucas Barreto",
+       "partido": "PSD",
+       "uf": "AP",
+       "voto": "Sim"
+      },
+      {
+       "id": 1186,
+       "nome": "Luis Carlos Heinze",
+       "partido": "PP",
+       "uf": "RS",
+       "voto": "Sim"
+      },
+      {
+       "id": 631,
+       "nome": "Magno Malta",
+       "partido": "PL",
+       "uf": "ES",
+       "voto": "Presente – Não registrou voto"
+      },
+      {
+       "id": 5376,
+       "nome": "Mara Gabrilli",
+       "partido": "PSD",
+       "uf": "SP",
+       "voto": "Sim"
+      },
+      {
+       "id": 742,
+       "nome": "Marcelo Castro",
+       "partido": "MDB",
+       "uf": "PI",
+       "voto": "Sim"
+      },
+      {
+       "id": 285,
+       "nome": "Marcio Bittar",
+       "partido": "PL",
+       "uf": "AC",
+       "voto": "Sim"
+      },
+      {
+       "id": 5422,
+       "nome": "Marcos Rogério",
+       "partido": "PL",
+       "uf": "RO",
+       "voto": "Sim"
+      },
+      {
+       "id": 5942,
+       "nome": "Marcos do Val",
+       "partido": "AVANTE",
+       "uf": "ES",
+       "voto": "Presente – Não registrou voto"
+      },
+      {
+       "id": 5985,
+       "nome": "Nelsinho Trad",
+       "partido": "PSD",
+       "uf": "MS",
+       "voto": "Sim"
+      },
+      {
+       "id": 5525,
+       "nome": "Omar Aziz",
+       "partido": "PSD",
+       "uf": "AM",
+       "voto": "Presente – Não registrou voto"
+      },
+      {
+       "id": 5924,
+       "nome": "Oriovisto Guimarães",
+       "partido": "PSDB",
+       "uf": "PR",
+       "voto": "Sim"
+      },
+      {
+       "id": 5523,
+       "nome": "Otto Alencar",
+       "partido": "PSD",
+       "uf": "BA",
+       "voto": "Sim"
+      },
+      {
+       "id": 825,
+       "nome": "Paulo Paim",
+       "partido": "PT",
+       "uf": "RS",
+       "voto": "Sim"
+      },
+      {
+       "id": 5502,
+       "nome": "Plínio Valério",
+       "partido": "PSDB",
+       "uf": "AM",
+       "voto": "Sim"
+      },
+      {
+       "id": 5386,
+       "nome": "Professora Dorinha Seabra",
+       "partido": "UNIÃO",
+       "uf": "TO",
+       "voto": "Sim"
+      },
+      {
+       "id": 5012,
+       "nome": "Randolfe Rodrigues",
+       "partido": "PT",
+       "uf": "AP",
+       "voto": "Sim"
+      },
+      {
+       "id": 70,
+       "nome": "Renan Calheiros",
+       "partido": "MDB",
+       "uf": "AL",
+       "voto": "Sim"
+      },
+      {
+       "id": 5207,
+       "nome": "Renan Filho",
+       "partido": "MDB",
+       "uf": "AL",
+       "voto": "Sim"
+      },
+      {
+       "id": 5257,
+       "nome": "Renzo Braz",
+       "partido": "PP",
+       "uf": "MG",
+       "voto": "Sim"
+      },
+      {
+       "id": 6025,
+       "nome": "Roberta Acioly",
+       "partido": "REPUBLICANOS",
+       "uf": "RR",
+       "voto": "Sim"
+      },
+      {
+       "id": 4694,
+       "nome": "Rogerio Marinho",
+       "partido": "PL",
+       "uf": "RN",
+       "voto": "Presente – Não registrou voto"
+      },
+      {
+       "id": 5352,
+       "nome": "Rogério Carvalho",
+       "partido": "PT",
+       "uf": "SE",
+       "voto": "Sim"
+      },
+      {
+       "id": 5322,
+       "nome": "Romário",
+       "partido": "S/Partido",
+       "uf": "RJ",
+       "voto": "Sim"
+      },
+      {
+       "id": 5974,
+       "nome": "Sargento Reginauro",
+       "partido": "PSDB",
+       "uf": "CE",
+       "voto": "Sim"
+      },
+      {
+       "id": 6331,
+       "nome": "Sergio Moro",
+       "partido": "PL",
+       "uf": "PR",
+       "voto": "Sim"
+      },
+      {
+       "id": 5988,
+       "nome": "Soraya Thronicke",
+       "partido": "PSB",
+       "uf": "MS",
+       "voto": "Sim"
+      },
+      {
+       "id": 5959,
+       "nome": "Styvenson Valentim",
+       "partido": "PODE",
+       "uf": "RN",
+       "voto": "Sim"
+      },
+      {
+       "id": 4560,
+       "nome": "Sérgio Petecão",
+       "partido": "PSD",
+       "uf": "AC",
+       "voto": "Sim"
+      },
+      {
+       "id": 6338,
+       "nome": "Teresa Leitão",
+       "partido": "PT",
+       "uf": "PE",
+       "voto": "Sim"
+      },
+      {
+       "id": 5736,
+       "nome": "Tereza Cristina",
+       "partido": "PP",
+       "uf": "MS",
+       "voto": "Sim"
+      },
+      {
+       "id": 5899,
+       "nome": "Vanderlan Cardoso",
+       "partido": "PSD",
+       "uf": "GO",
+       "voto": "Sim"
+      },
+      {
+       "id": 5748,
+       "nome": "Veneziano Vital do Rêgo",
+       "partido": "MDB",
+       "uf": "PB",
+       "voto": "Sim"
+      },
+      {
+       "id": 1173,
+       "nome": "Wellington Fagundes",
+       "partido": "PL",
+       "uf": "MT",
+       "voto": "Sim"
+      },
+      {
+       "id": 5411,
+       "nome": "Weverton",
+       "partido": "PDT",
+       "uf": "MA",
+       "voto": "Sim"
+      },
+      {
+       "id": 5070,
+       "nome": "Wilder Morais",
+       "partido": "PL",
+       "uf": "GO",
+       "voto": "Sim"
+      },
+      {
+       "id": 5783,
+       "nome": "Zenaide Maia",
+       "partido": "PSD",
+       "uf": "RN",
+       "voto": "Sim"
+      },
+      {
+       "id": 3806,
+       "nome": "Zequinha Marinho",
+       "partido": "PODE",
+       "uf": "PA",
+       "voto": "Sim"
+      }
+     ]
+    },
+    {
+     "id": "SF-7111",
+     "casa": "Senado",
+     "data_hora": "2026-11-03",
+     "descricao": "Votação nominal da Emenda nº 85 à Proposta de Emenda à Constituição nº 18, de 2025, nos termos do acordo de Plenário.",
+     "resultado": "aprovada",
+     "procedimento": false,
+     "nominal": true,
+     "placar": {
+      "sim": 67,
+      "nao": 0,
+      "abstencao": 0,
+      "outros": [
+       [
+        "Presente – Não registrou voto",
+        12
+       ],
+       [
+        "Presidente (art. 51 RISF)",
+        1
+       ],
+       [
+        "Atividade parlamentar",
+        1
+       ]
+      ]
+     },
+     "orientacoes": null,
+     "votos": [
+      {
+       "id": 5672,
+       "nome": "Alan Rick",
+       "partido": "REPUBLICANOS",
+       "uf": "AC",
+       "voto": "Presente – Não registrou voto"
+      },
+      {
+       "id": 5982,
+       "nome": "Alessandro Vieira",
+       "partido": "MDB",
+       "uf": "SE",
+       "voto": "Sim"
+      },
+      {
+       "id": 6358,
+       "nome": "Ana Paula Lobato",
+       "partido": "PSB",
+       "uf": "MA",
+       "voto": "Sim"
+      },
+      {
+       "id": 5967,
+       "nome": "Angelo Coronel",
+       "partido": "REPUBLICANOS",
+       "uf": "BA",
+       "voto": "Sim"
+      },
+      {
+       "id": 6009,
+       "nome": "Astronauta Marcos Pontes",
+       "partido": "PL",
+       "uf": "SP",
+       "voto": "Presente – Não registrou voto"
+      },
+      {
+       "id": 4639,
+       "nome": "Beto Faro",
+       "partido": "PT",
+       "uf": "PA",
+       "voto": "Sim"
+      },
+      {
+       "id": 6336,
+       "nome": "Camilo Santana",
+       "partido": "PT",
+       "uf": "CE",
+       "voto": "Sim"
+      },
+      {
+       "id": 6295,
+       "nome": "Carlos Fávaro",
+       "partido": "PSD",
+       "uf": "MT",
+       "voto": "Sim"
+      },
+      {
+       "id": 5936,
+       "nome": "Carlos Portinho",
+       "partido": "PL",
+       "uf": "RJ",
+       "voto": "Sim"
+      },
+      {
+       "id": 5990,
+       "nome": "Carlos Viana",
+       "partido": "PSD",
+       "uf": "MG",
+       "voto": "Sim"
+      },
+      {
+       "id": 470,
+       "nome": "Chico Rodrigues",
+       "partido": "PSB",
+       "uf": "RR",
+       "voto": "Sim"
+      },
+      {
+       "id": 5973,
+       "nome": "Cid Gomes",
+       "partido": "PSB",
+       "uf": "CE",
+       "voto": "Sim"
+      },
+      {
+       "id": 739,
+       "nome": "Ciro Nogueira",
+       "partido": "PP",
+       "uf": "PI",
+       "voto": "Sim"
+      },
+      {
+       "id": 6337,
+       "nome": "Cleitinho",
+       "partido": "REPUBLICANOS",
+       "uf": "MG",
+       "voto": "Sim"
+      },
+      {
+       "id": 475,
+       "nome": "Confúcio Moura",
+       "partido": "MDB",
+       "uf": "RO",
+       "voto": "Sim"
+      },
+      {
+       "id": 6335,
+       "nome": "Damares Alves",
+       "partido": "REPUBLICANOS",
+       "uf": "DF",
+       "voto": "Presente – Não registrou voto"
+      },
+      {
+       "id": 5998,
+       "nome": "Daniella Ribeiro",
+       "partido": "PP",
+       "uf": "PB",
+       "voto": "Sim"
+      },
+      {
+       "id": 3830,
+       "nome": "Davi Alcolumbre",
+       "partido": "UNIÃO",
+       "uf": "AP",
+       "voto": "Presidente (art. 51 RISF)"
+      },
+      {
+       "id": 5793,
+       "nome": "Dr. Hiran",
+       "partido": "PP",
+       "uf": "RR",
+       "voto": "Sim"
+      },
+      {
+       "id": 5906,
+       "nome": "Dra. Eudócia",
+       "partido": "PSDB",
+       "uf": "AL",
+       "voto": "Presente – Não registrou voto"
+      },
+      {
+       "id": 4994,
+       "nome": "Eduardo Braga",
+       "partido": "MDB",
+       "uf": "AM",
+       "voto": "Sim"
+      },
+      {
+       "id": 3777,
+       "nome": "Eduardo Gomes",
+       "partido": "PL",
+       "uf": "TO",
+       "voto": "Sim"
+      },
+      {
+       "id": 4642,
+       "nome": "Efraim Filho",
+       "partido": "PL",
+       "uf": "PB",
+       "voto": "Sim"
+      },
+      {
+       "id": 5718,
+       "nome": "Eliziane Gama",
+       "partido": "PSD",
+       "uf": "MA",
+       "voto": "Presente – Não registrou voto"
+      },
+      {
+       "id": 22,
+       "nome": "Esperidião Amin",
+       "partido": "PP",
+       "uf": "SC",
+       "voto": "Sim"
+      },
+      {
+       "id": 5953,
+       "nome": "Fabiano Contarato",
+       "partido": "PT",
+       "uf": "ES",
+       "voto": "Sim"
+      },
+      {
+       "id": 5917,
+       "nome": "Fernando Dueire",
+       "partido": "PSD",
+       "uf": "PE",
+       "voto": "Sim"
+      },
+      {
+       "id": 345,
+       "nome": "Flávio Arns",
+       "partido": "PSB",
+       "uf": "PR",
+       "voto": "Sim"
+      },
+      {
+       "id": 5894,
+       "nome": "Flávio Bolsonaro",
+       "partido": "PL",
+       "uf": "RJ",
+       "voto": "Sim"
+      },
+      {
+       "id": 6008,
+       "nome": "Giordano",
+       "partido": "PODE",
+       "uf": "SP",
+       "voto": "Sim"
+      },
+      {
+       "id": 6341,
+       "nome": "Hamilton Mourão",
+       "partido": "REPUBLICANOS",
+       "uf": "RS",
+       "voto": "Sim"
+      },
+      {
+       "id": 5008,
+       "nome": "Humberto Costa",
+       "partido": "PT",
+       "uf": "PE",
+       "voto": "Sim"
+      },
+      {
+       "id": 5385,
+       "nome": "Irajá",
+       "partido": "PSD",
+       "uf": "TO",
+       "voto": "Presente – Não registrou voto"
+      },
+      {
+       "id": 6010,
+       "nome": "Ivete da Silveira",
+       "partido": "MDB",
+       "uf": "SC",
+       "voto": "Sim"
+      },
+      {
+       "id": 4770,
+       "nome": "Izalci Lucas",
+       "partido": "PL",
+       "uf": "DF",
+       "voto": "Sim"
+      },
+      {
+       "id": 35,
+       "nome": "Jader Barbalho",
+       "partido": "MDB",
+       "uf": "PA",
+       "voto": "Presente – Não registrou voto"
+      },
+      {
+       "id": 6340,
+       "nome": "Jaime Bagattoli",
+       "partido": "PL",
+       "uf": "RO",
+       "voto": "Sim"
+      },
+      {
+       "id": 581,
+       "nome": "Jaques Wagner",
+       "partido": "PT",
+       "uf": "BA",
+       "voto": "Sim"
+      },
+      {
+       "id": 4531,
+       "nome": "Jayme Campos",
+       "partido": "UNIÃO",
+       "uf": "MT",
+       "voto": "Sim"
+      },
+      {
+       "id": 5895,
+       "nome": "Jorge Kajuru",
+       "partido": "PSB",
+       "uf": "GO",
+       "voto": "Sim"
+      },
+      {
+       "id": 6342,
+       "nome": "Jorge Seif",
+       "partido": "PL",
+       "uf": "SC",
+       "voto": "Atividade parlamentar"
+      },
+      {
+       "id": 6369,
+       "nome": "Jussara Lima",
+       "partido": "PSD",
+       "uf": "PI",
+       "voto": "Sim"
+      },
+      {
+       "id": 4811,
+       "nome": "Laércio Oliveira",
+       "partido": "PP",
+       "uf": "SE",
+       "voto": "Sim"
+      },
+      {
+       "id": 5977,
+       "nome": "Leany Lemos",
+       "partido": "PSB",
+       "uf": "DF",
+       "voto": "Sim"
+      },
+      {
+       "id": 5926,
+       "nome": "Lucas Barreto",
+       "partido": "PSD",
+       "uf": "AP",
+       "voto": "Sim"
+      },
+      {
+       "id": 1186,
+       "nome": "Luis Carlos Heinze",
+       "partido": "PP",
+       "uf": "RS",
+       "voto": "Presente – Não registrou voto"
+      },
+      {
+       "id": 631,
+       "nome": "Magno Malta",
+       "partido": "PL",
+       "uf": "ES",
+       "voto": "Sim"
+      },
+      {
+       "id": 5376,
+       "nome": "Mara Gabrilli",
+       "partido": "PSD",
+       "uf": "SP",
+       "voto": "Sim"
+      },
+      {
+       "id": 742,
+       "nome": "Marcelo Castro",
+       "partido": "MDB",
+       "uf": "PI",
+       "voto": "Sim"
+      },
+      {
+       "id": 285,
+       "nome": "Marcio Bittar",
+       "partido": "PL",
+       "uf": "AC",
+       "voto": "Sim"
+      },
+      {
+       "id": 5422,
+       "nome": "Marcos Rogério",
+       "partido": "PL",
+       "uf": "RO",
+       "voto": "Sim"
+      },
+      {
+       "id": 5942,
+       "nome": "Marcos do Val",
+       "partido": "AVANTE",
+       "uf": "ES",
+       "voto": "Presente – Não registrou voto"
+      },
+      {
+       "id": 5985,
+       "nome": "Nelsinho Trad",
+       "partido": "PSD",
+       "uf": "MS",
+       "voto": "Sim"
+      },
+      {
+       "id": 5525,
+       "nome": "Omar Aziz",
+       "partido": "PSD",
+       "uf": "AM",
+       "voto": "Sim"
+      },
+      {
+       "id": 5924,
+       "nome": "Oriovisto Guimarães",
+       "partido": "PSDB",
+       "uf": "PR",
+       "voto": "Sim"
+      },
+      {
+       "id": 5523,
+       "nome": "Otto Alencar",
+       "partido": "PSD",
+       "uf": "BA",
+       "voto": "Sim"
+      },
+      {
+       "id": 825,
+       "nome": "Paulo Paim",
+       "partido": "PT",
+       "uf": "RS",
+       "voto": "Sim"
+      },
+      {
+       "id": 5502,
+       "nome": "Plínio Valério",
+       "partido": "PSDB",
+       "uf": "AM",
+       "voto": "Sim"
+      },
+      {
+       "id": 5386,
+       "nome": "Professora Dorinha Seabra",
+       "partido": "UNIÃO",
+       "uf": "TO",
+       "voto": "Sim"
+      },
+      {
+       "id": 5012,
+       "nome": "Randolfe Rodrigues",
+       "partido": "PT",
+       "uf": "AP",
+       "voto": "Sim"
+      },
+      {
+       "id": 70,
+       "nome": "Renan Calheiros",
+       "partido": "MDB",
+       "uf": "AL",
+       "voto": "Sim"
+      },
+      {
+       "id": 5207,
+       "nome": "Renan Filho",
+       "partido": "MDB",
+       "uf": "AL",
+       "voto": "Presente – Não registrou voto"
+      },
+      {
+       "id": 5257,
+       "nome": "Renzo Braz",
+       "partido": "PP",
+       "uf": "MG",
+       "voto": "Sim"
+      },
+      {
+       "id": 6025,
+       "nome": "Roberta Acioly",
+       "partido": "REPUBLICANOS",
+       "uf": "RR",
+       "voto": "Sim"
+      },
+      {
+       "id": 4694,
+       "nome": "Rogerio Marinho",
+       "partido": "PL",
+       "uf": "RN",
+       "voto": "Sim"
+      },
+      {
+       "id": 5352,
+       "nome": "Rogério Carvalho",
+       "partido": "PT",
+       "uf": "SE",
+       "voto": "Sim"
+      },
+      {
+       "id": 5322,
+       "nome": "Romário",
+       "partido": "S/Partido",
+       "uf": "RJ",
+       "voto": "Sim"
+      },
+      {
+       "id": 5974,
+       "nome": "Sargento Reginauro",
+       "partido": "PSDB",
+       "uf": "CE",
+       "voto": "Sim"
+      },
+      {
+       "id": 6331,
+       "nome": "Sergio Moro",
+       "partido": "PL",
+       "uf": "PR",
+       "voto": "Sim"
+      },
+      {
+       "id": 5988,
+       "nome": "Soraya Thronicke",
+       "partido": "PSB",
+       "uf": "MS",
+       "voto": "Presente – Não registrou voto"
+      },
+      {
+       "id": 5959,
+       "nome": "Styvenson Valentim",
+       "partido": "PODE",
+       "uf": "RN",
+       "voto": "Sim"
+      },
+      {
+       "id": 4560,
+       "nome": "Sérgio Petecão",
+       "partido": "PSD",
+       "uf": "AC",
+       "voto": "Sim"
+      },
+      {
+       "id": 6338,
+       "nome": "Teresa Leitão",
+       "partido": "PT",
+       "uf": "PE",
+       "voto": "Sim"
+      },
+      {
+       "id": 5736,
+       "nome": "Tereza Cristina",
+       "partido": "PP",
+       "uf": "MS",
+       "voto": "Sim"
+      },
+      {
+       "id": 5899,
+       "nome": "Vanderlan Cardoso",
+       "partido": "PSD",
+       "uf": "GO",
+       "voto": "Sim"
+      },
+      {
+       "id": 5748,
+       "nome": "Veneziano Vital do Rêgo",
+       "partido": "MDB",
+       "uf": "PB",
+       "voto": "Sim"
+      },
+      {
+       "id": 1173,
+       "nome": "Wellington Fagundes",
+       "partido": "PL",
+       "uf": "MT",
+       "voto": "Sim"
+      },
+      {
+       "id": 5411,
+       "nome": "Weverton",
+       "partido": "PDT",
+       "uf": "MA",
+       "voto": "Sim"
+      },
+      {
+       "id": 5070,
+       "nome": "Wilder Morais",
+       "partido": "PL",
+       "uf": "GO",
+       "voto": "Presente – Não registrou voto"
+      },
+      {
+       "id": 5783,
+       "nome": "Zenaide Maia",
+       "partido": "PSD",
+       "uf": "RN",
+       "voto": "Sim"
+      },
+      {
+       "id": 3806,
+       "nome": "Zequinha Marinho",
+       "partido": "PODE",
+       "uf": "PA",
+       "voto": "Sim"
+      }
+     ]
+    },
+    {
+     "id": "SF-7112",
+     "casa": "Senado",
+     "data_hora": "2026-11-03",
+     "descricao": "Votação nominal da Proposta de Emenda à Constituição nº 18, de 2025, nos termos do parecer da Comissão Diretora (2º Turno).",
+     "resultado": "aprovada",
+     "procedimento": false,
+     "nominal": true,
+     "placar": {
+      "sim": 75,
+      "nao": 0,
+      "abstencao": 0,
+      "outros": [
+       [
+        "Presente – Não registrou voto",
+        4
+       ],
+       [
+        "Presidente (art. 51 RISF)",
+        1
+       ],
+       [
+        "Atividade parlamentar",
+        1
+       ]
+      ]
+     },
+     "orientacoes": null,
+     "votos": [
+      {
+       "id": 5672,
+       "nome": "Alan Rick",
+       "partido": "REPUBLICANOS",
+       "uf": "AC",
+       "voto": "Sim"
+      },
+      {
+       "id": 5982,
+       "nome": "Alessandro Vieira",
+       "partido": "MDB",
+       "uf": "SE",
+       "voto": "Sim"
+      },
+      {
+       "id": 6358,
+       "nome": "Ana Paula Lobato",
+       "partido": "PSB",
+       "uf": "MA",
+       "voto": "Sim"
+      },
+      {
+       "id": 5967,
+       "nome": "Angelo Coronel",
+       "partido": "REPUBLICANOS",
+       "uf": "BA",
+       "voto": "Sim"
+      },
+      {
+       "id": 6009,
+       "nome": "Astronauta Marcos Pontes",
+       "partido": "PL",
+       "uf": "SP",
+       "voto": "Presente – Não registrou voto"
+      },
+      {
+       "id": 4639,
+       "nome": "Beto Faro",
+       "partido": "PT",
+       "uf": "PA",
+       "voto": "Sim"
+      },
+      {
+       "id": 6336,
+       "nome": "Camilo Santana",
+       "partido": "PT",
+       "uf": "CE",
+       "voto": "Sim"
+      },
+      {
+       "id": 6295,
+       "nome": "Carlos Fávaro",
+       "partido": "PSD",
+       "uf": "MT",
+       "voto": "Sim"
+      },
+      {
+       "id": 5936,
+       "nome": "Carlos Portinho",
+       "partido": "PL",
+       "uf": "RJ",
+       "voto": "Sim"
+      },
+      {
+       "id": 5990,
+       "nome": "Carlos Viana",
+       "partido": "PSD",
+       "uf": "MG",
+       "voto": "Sim"
+      },
+      {
+       "id": 470,
+       "nome": "Chico Rodrigues",
+       "partido": "PSB",
+       "uf": "RR",
+       "voto": "Sim"
+      },
+      {
+       "id": 5973,
+       "nome": "Cid Gomes",
+       "partido": "PSB",
+       "uf": "CE",
+       "voto": "Sim"
+      },
+      {
+       "id": 739,
+       "nome": "Ciro Nogueira",
+       "partido": "PP",
+       "uf": "PI",
+       "voto": "Sim"
+      },
+      {
+       "id": 6337,
+       "nome": "Cleitinho",
+       "partido": "REPUBLICANOS",
+       "uf": "MG",
+       "voto": "Sim"
+      },
+      {
+       "id": 475,
+       "nome": "Confúcio Moura",
+       "partido": "MDB",
+       "uf": "RO",
+       "voto": "Sim"
+      },
+      {
+       "id": 6335,
+       "nome": "Damares Alves",
+       "partido": "REPUBLICANOS",
+       "uf": "DF",
+       "voto": "Sim"
+      },
+      {
+       "id": 5998,
+       "nome": "Daniella Ribeiro",
+       "partido": "PP",
+       "uf": "PB",
+       "voto": "Sim"
+      },
+      {
+       "id": 3830,
+       "nome": "Davi Alcolumbre",
+       "partido": "UNIÃO",
+       "uf": "AP",
+       "voto": "Presidente (art. 51 RISF)"
+      },
+      {
+       "id": 5793,
+       "nome": "Dr. Hiran",
+       "partido": "PP",
+       "uf": "RR",
+       "voto": "Sim"
+      },
+      {
+       "id": 5906,
+       "nome": "Dra. Eudócia",
+       "partido": "PSDB",
+       "uf": "AL",
+       "voto": "Presente – Não registrou voto"
+      },
+      {
+       "id": 4994,
+       "nome": "Eduardo Braga",
+       "partido": "MDB",
+       "uf": "AM",
+       "voto": "Sim"
+      },
+      {
+       "id": 3777,
+       "nome": "Eduardo Gomes",
+       "partido": "PL",
+       "uf": "TO",
+       "voto": "Sim"
+      },
+      {
+       "id": 4642,
+       "nome": "Efraim Filho",
+       "partido": "PL",
+       "uf": "PB",
+       "voto": "Sim"
+      },
+      {
+       "id": 5718,
+       "nome": "Eliziane Gama",
+       "partido": "PSD",
+       "uf": "MA",
+       "voto": "Sim"
+      },
+      {
+       "id": 22,
+       "nome": "Esperidião Amin",
+       "partido": "PP",
+       "uf": "SC",
+       "voto": "Sim"
+      },
+      {
+       "id": 5953,
+       "nome": "Fabiano Contarato",
+       "partido": "PT",
+       "uf": "ES",
+       "voto": "Sim"
+      },
+      {
+       "id": 5917,
+       "nome": "Fernando Dueire",
+       "partido": "PSD",
+       "uf": "PE",
+       "voto": "Sim"
+      },
+      {
+       "id": 345,
+       "nome": "Flávio Arns",
+       "partido": "PSB",
+       "uf": "PR",
+       "voto": "Sim"
+      },
+      {
+       "id": 5894,
+       "nome": "Flávio Bolsonaro",
+       "partido": "PL",
+       "uf": "RJ",
+       "voto": "Sim"
+      },
+      {
+       "id": 6008,
+       "nome": "Giordano",
+       "partido": "PODE",
+       "uf": "SP",
+       "voto": "Sim"
+      },
+      {
+       "id": 6341,
+       "nome": "Hamilton Mourão",
+       "partido": "REPUBLICANOS",
+       "uf": "RS",
+       "voto": "Sim"
+      },
+      {
+       "id": 5008,
+       "nome": "Humberto Costa",
+       "partido": "PT",
+       "uf": "PE",
+       "voto": "Sim"
+      },
+      {
+       "id": 5385,
+       "nome": "Irajá",
+       "partido": "PSD",
+       "uf": "TO",
+       "voto": "Sim"
+      },
+      {
+       "id": 6010,
+       "nome": "Ivete da Silveira",
+       "partido": "MDB",
+       "uf": "SC",
+       "voto": "Sim"
+      },
+      {
+       "id": 4770,
+       "nome": "Izalci Lucas",
+       "partido": "PL",
+       "uf": "DF",
+       "voto": "Sim"
+      },
+      {
+       "id": 35,
+       "nome": "Jader Barbalho",
+       "partido": "MDB",
+       "uf": "PA",
+       "voto": "Sim"
+      },
+      {
+       "id": 6340,
+       "nome": "Jaime Bagattoli",
+       "partido": "PL",
+       "uf": "RO",
+       "voto": "Sim"
+      },
+      {
+       "id": 581,
+       "nome": "Jaques Wagner",
+       "partido": "PT",
+       "uf": "BA",
+       "voto": "Sim"
+      },
+      {
+       "id": 4531,
+       "nome": "Jayme Campos",
+       "partido": "UNIÃO",
+       "uf": "MT",
+       "voto": "Sim"
+      },
+      {
+       "id": 5895,
+       "nome": "Jorge Kajuru",
+       "partido": "PSB",
+       "uf": "GO",
+       "voto": "Sim"
+      },
+      {
+       "id": 6342,
+       "nome": "Jorge Seif",
+       "partido": "PL",
+       "uf": "SC",
+       "voto": "Atividade parlamentar"
+      },
+      {
+       "id": 6369,
+       "nome": "Jussara Lima",
+       "partido": "PSD",
+       "uf": "PI",
+       "voto": "Sim"
+      },
+      {
+       "id": 4811,
+       "nome": "Laércio Oliveira",
+       "partido": "PP",
+       "uf": "SE",
+       "voto": "Sim"
+      },
+      {
+       "id": 5977,
+       "nome": "Leany Lemos",
+       "partido": "PSB",
+       "uf": "DF",
+       "voto": "Sim"
+      },
+      {
+       "id": 5926,
+       "nome": "Lucas Barreto",
+       "partido": "PSD",
+       "uf": "AP",
+       "voto": "Sim"
+      },
+      {
+       "id": 1186,
+       "nome": "Luis Carlos Heinze",
+       "partido": "PP",
+       "uf": "RS",
+       "voto": "Presente – Não registrou voto"
+      },
+      {
+       "id": 631,
+       "nome": "Magno Malta",
+       "partido": "PL",
+       "uf": "ES",
+       "voto": "Sim"
+      },
+      {
+       "id": 5376,
+       "nome": "Mara Gabrilli",
+       "partido": "PSD",
+       "uf": "SP",
+       "voto": "Sim"
+      },
+      {
+       "id": 742,
+       "nome": "Marcelo Castro",
+       "partido": "MDB",
+       "uf": "PI",
+       "voto": "Sim"
+      },
+      {
+       "id": 285,
+       "nome": "Marcio Bittar",
+       "partido": "PL",
+       "uf": "AC",
+       "voto": "Sim"
+      },
+      {
+       "id": 5422,
+       "nome": "Marcos Rogério",
+       "partido": "PL",
+       "uf": "RO",
+       "voto": "Sim"
+      },
+      {
+       "id": 5942,
+       "nome": "Marcos do Val",
+       "partido": "AVANTE",
+       "uf": "ES",
+       "voto": "Sim"
+      },
+      {
+       "id": 5985,
+       "nome": "Nelsinho Trad",
+       "partido": "PSD",
+       "uf": "MS",
+       "voto": "Sim"
+      },
+      {
+       "id": 5525,
+       "nome": "Omar Aziz",
+       "partido": "PSD",
+       "uf": "AM",
+       "voto": "Sim"
+      },
+      {
+       "id": 5924,
+       "nome": "Oriovisto Guimarães",
+       "partido": "PSDB",
+       "uf": "PR",
+       "voto": "Sim"
+      },
+      {
+       "id": 5523,
+       "nome": "Otto Alencar",
+       "partido": "PSD",
+       "uf": "BA",
+       "voto": "Sim"
+      },
+      {
+       "id": 825,
+       "nome": "Paulo Paim",
+       "partido": "PT",
+       "uf": "RS",
+       "voto": "Sim"
+      },
+      {
+       "id": 5502,
+       "nome": "Plínio Valério",
+       "partido": "PSDB",
+       "uf": "AM",
+       "voto": "Sim"
+      },
+      {
+       "id": 5386,
+       "nome": "Professora Dorinha Seabra",
+       "partido": "UNIÃO",
+       "uf": "TO",
+       "voto": "Sim"
+      },
+      {
+       "id": 5012,
+       "nome": "Randolfe Rodrigues",
+       "partido": "PT",
+       "uf": "AP",
+       "voto": "Sim"
+      },
+      {
+       "id": 70,
+       "nome": "Renan Calheiros",
+       "partido": "MDB",
+       "uf": "AL",
+       "voto": "Sim"
+      },
+      {
+       "id": 5207,
+       "nome": "Renan Filho",
+       "partido": "MDB",
+       "uf": "AL",
+       "voto": "Sim"
+      },
+      {
+       "id": 5257,
+       "nome": "Renzo Braz",
+       "partido": "PP",
+       "uf": "MG",
+       "voto": "Sim"
+      },
+      {
+       "id": 6025,
+       "nome": "Roberta Acioly",
+       "partido": "REPUBLICANOS",
+       "uf": "RR",
+       "voto": "Sim"
+      },
+      {
+       "id": 4694,
+       "nome": "Rogerio Marinho",
+       "partido": "PL",
+       "uf": "RN",
+       "voto": "Presente – Não registrou voto"
+      },
+      {
+       "id": 5352,
+       "nome": "Rogério Carvalho",
+       "partido": "PT",
+       "uf": "SE",
+       "voto": "Sim"
+      },
+      {
+       "id": 5322,
+       "nome": "Romário",
+       "partido": "S/Partido",
+       "uf": "RJ",
+       "voto": "Sim"
+      },
+      {
+       "id": 5974,
+       "nome": "Sargento Reginauro",
+       "partido": "PSDB",
+       "uf": "CE",
+       "voto": "Sim"
+      },
+      {
+       "id": 6331,
+       "nome": "Sergio Moro",
+       "partido": "PL",
+       "uf": "PR",
+       "voto": "Sim"
+      },
+      {
+       "id": 5988,
+       "nome": "Soraya Thronicke",
+       "partido": "PSB",
+       "uf": "MS",
+       "voto": "Sim"
+      },
+      {
+       "id": 5959,
+       "nome": "Styvenson Valentim",
+       "partido": "PODE",
+       "uf": "RN",
+       "voto": "Sim"
+      },
+      {
+       "id": 4560,
+       "nome": "Sérgio Petecão",
+       "partido": "PSD",
+       "uf": "AC",
+       "voto": "Sim"
+      },
+      {
+       "id": 6338,
+       "nome": "Teresa Leitão",
+       "partido": "PT",
+       "uf": "PE",
+       "voto": "Sim"
+      },
+      {
+       "id": 5736,
+       "nome": "Tereza Cristina",
+       "partido": "PP",
+       "uf": "MS",
+       "voto": "Sim"
+      },
+      {
+       "id": 5899,
+       "nome": "Vanderlan Cardoso",
+       "partido": "PSD",
+       "uf": "GO",
+       "voto": "Sim"
+      },
+      {
+       "id": 5748,
+       "nome": "Veneziano Vital do Rêgo",
+       "partido": "MDB",
+       "uf": "PB",
+       "voto": "Sim"
+      },
+      {
+       "id": 1173,
+       "nome": "Wellington Fagundes",
+       "partido": "PL",
+       "uf": "MT",
+       "voto": "Sim"
+      },
+      {
+       "id": 5411,
+       "nome": "Weverton",
+       "partido": "PDT",
+       "uf": "MA",
+       "voto": "Sim"
+      },
+      {
+       "id": 5070,
+       "nome": "Wilder Morais",
+       "partido": "PL",
+       "uf": "GO",
+       "voto": "Sim"
+      },
+      {
+       "id": 5783,
+       "nome": "Zenaide Maia",
+       "partido": "PSD",
+       "uf": "RN",
+       "voto": "Sim"
+      },
+      {
+       "id": 3806,
+       "nome": "Zequinha Marinho",
+       "partido": "PODE",
+       "uf": "PA",
+       "voto": "Sim"
+      }
+     ]
+    }
+   ]
   },
   "PEC 221/2019": {
    "chave": "PEC 221/2019",
@@ -1920,37 +4211,6 @@
     }
    ]
   },
-  "PL 186/2025": {
-   "chave": "PL 186/2025",
-   "slug": "pl-186-2025",
-   "sigla": "PL",
-   "numero": 186,
-   "ano": 2025,
-   "tipo": "Projeto de Lei",
-   "ementa": "Altera a Lei nº 14.826, de 20 de março de 2024, com o objetivo de incluir, dentre as ações a serem levadas a efeito para a promoção da parentalidade positiva, a promoção de cursos, campanhas e palestras embasados em evidências científicas.",
-   "apelido": null,
-   "autores": [
-    "Laura Carneiro"
-   ],
-   "data_apresentacao": "2025-02-04",
-   "casa_inicial": "Câmara",
-   "temas": [
-    "Defesa e Segurança",
-    "Direito Civil e Processual Civil",
-    "Direitos Humanos e Minorias",
-    "Educação"
-   ],
-   "situacao": {
-    "descricao": "Incluída em ordem do dia",
-    "data": "2026-11-03",
-    "casa": "Senado",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2482636",
-   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/173226",
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2850434",
-   "votacoes": []
-  },
   "PL 1932/2021": {
    "chave": "PL 1932/2021",
    "slug": "pl-1932-2021",
@@ -1970,13 +4230,43 @@
    ],
    "situacao": {
     "descricao": "Aguardando Deliberação",
-    "data": "2026-09-16",
+    "data": "2026-11-03",
     "casa": "Câmara",
     "norma": null
    },
    "url_camara": "https://www.camara.leg.br/propostas-legislativas/2305879",
    "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/148567",
    "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2100771",
+   "votacoes": []
+  },
+  "PL 2167/2026": {
+   "chave": "PL 2167/2026",
+   "slug": "pl-2167-2026",
+   "sigla": "PL",
+   "numero": 2167,
+   "ano": 2026,
+   "tipo": "Projeto de Lei",
+   "ementa": "Altera a Lei nº 10.260, de 12 de julho de 2001, que dispõe sobre o Fundo de Financiamento ao Estudante do Ensino Superior – FIES, para instituir modalidade setorial de financiamento com contrapartida de serviço em saúde mental no âmbito do Sistema Único de Saúde – SUS, e dá outras providências.",
+   "apelido": null,
+   "autores": [
+    "Rodrigo Gambale"
+   ],
+   "data_apresentacao": "2026-05-05",
+   "casa_inicial": "Câmara",
+   "temas": [
+    "Educação",
+    "Finanças Públicas e Orçamento",
+    "Saúde"
+   ],
+   "situacao": {
+    "descricao": "Aguardando Designação de Relator(a)",
+    "data": "2026-11-03",
+    "casa": "Câmara",
+    "norma": null
+   },
+   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2621088",
+   "url_senado": null,
+   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3122830",
    "votacoes": []
   },
   "PL 2234/2024": {
@@ -2008,34 +4298,6 @@
    "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2433747",
    "votacoes": []
   },
-  "PL 2334/2019": {
-   "chave": "PL 2334/2019",
-   "slug": "pl-2334-2019",
-   "sigla": "PL",
-   "numero": 2334,
-   "ano": 2019,
-   "tipo": "Projeto de Lei",
-   "ementa": "Permite a celebração de convênios ou parcerias pelo Instituto Nacional de Propriedade Intelectual",
-   "apelido": null,
-   "autores": [
-    "Marcos Pereira"
-   ],
-   "data_apresentacao": "2019-04-16",
-   "casa_inicial": "Câmara",
-   "temas": [
-    "Administração Pública"
-   ],
-   "situacao": {
-    "descricao": "Aguardando Deliberação de Recurso",
-    "data": "2019-12-10",
-    "casa": "Câmara",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2198408",
-   "url_senado": null,
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1733798",
-   "votacoes": []
-  },
   "PL 2374/2023": {
    "chave": "PL 2374/2023",
    "slug": "pl-2374-2023",
@@ -2055,8 +4317,8 @@
     "Finanças Públicas e Orçamento"
    ],
    "situacao": {
-    "descricao": "Aguardando Designação de Relator(a)",
-    "data": "2025-07-28",
+    "descricao": "Aguardando Deliberação",
+    "data": "2026-11-03",
     "casa": "Câmara",
     "norma": null
    },
@@ -2090,7 +4352,7 @@
    ],
    "situacao": {
     "descricao": "Aguardando Deliberação",
-    "data": "2026-07-13",
+    "data": "2026-11-03",
     "casa": "Câmara",
     "norma": null
    },
@@ -2119,8 +4381,8 @@
     "Direitos Humanos e Minorias"
    ],
    "situacao": {
-    "descricao": "Aguardando Designação de Relator(a)",
-    "data": "2026-08-17",
+    "descricao": "Aguardando Deliberação",
+    "data": "2026-11-03",
     "casa": "Câmara",
     "norma": null
    },
@@ -2148,7 +4410,7 @@
    ],
    "situacao": {
     "descricao": "Aguardando Deliberação",
-    "data": "2026-09-16",
+    "data": "2026-11-03",
     "casa": "Câmara",
     "norma": null
    },
@@ -2178,42 +4440,14 @@
     "Turismo"
    ],
    "situacao": {
-    "descricao": "Aguardando Parecer",
-    "data": "2026-07-06",
+    "descricao": "Aguardando Deliberação",
+    "data": "2026-11-03",
     "casa": "Câmara",
     "norma": null
    },
    "url_camara": "https://www.camara.leg.br/propostas-legislativas/2254065",
    "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/157078",
    "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1899178",
-   "votacoes": []
-  },
-  "PL 3083/2019": {
-   "chave": "PL 3083/2019",
-   "slug": "pl-3083-2019",
-   "sigla": "PL",
-   "numero": 3083,
-   "ano": 2019,
-   "tipo": "Projeto de Lei",
-   "ementa": "Altera os arts. 642-A e 883 da Consolidação das Leis do Trabalho (CLT), aprovada pelo Decreto-lei nº 5.452, de 1º de maio de 1943, para dispor sobre a penhora sobre o faturamento da empresa.",
-   "apelido": null,
-   "autores": [
-    "Marcos Pereira"
-   ],
-   "data_apresentacao": "2019-05-22",
-   "casa_inicial": "Câmara",
-   "temas": [
-    "Trabalho e Emprego"
-   ],
-   "situacao": {
-    "descricao": "Aguardando Deliberação de Recurso",
-    "data": "2022-10-10",
-    "casa": "Câmara",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2204445",
-   "url_senado": null,
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1751360",
    "votacoes": []
   },
   "PL 3099/2019": {
@@ -2234,14 +4468,46 @@
     "Homenagens e Datas Comemorativas"
    ],
    "situacao": {
-    "descricao": "Aguardando Deliberação",
-    "data": "2026-10-28",
+    "descricao": "Aguardando Encaminhamento",
+    "data": "2026-11-03",
     "casa": "Câmara",
     "norma": null
    },
    "url_camara": "https://www.camara.leg.br/propostas-legislativas/2204495",
    "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/170101",
    "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1751589",
+   "votacoes": []
+  },
+  "PL 3220/2019": {
+   "chave": "PL 3220/2019",
+   "slug": "pl-3220-2019",
+   "sigla": "PL",
+   "numero": 3220,
+   "ano": 2019,
+   "tipo": "Projeto de Lei",
+   "ementa": "Dispõe sobre o compartilhamento de infraestrutura física aérea de titularidade de prestadoras de serviços de distribuição de energia elétrica com prestadoras de serviços de telecomunicações, altera a Lei nº 9.427, de 26 de dezembro de 1996, a Lei nº 9.472, de 16 de julho de 1997, e a Lei nº 14.947, de 2 de agosto de 2024, e dá outras providências.",
+   "apelido": null,
+   "autores": [
+    "Senado Federal - Senador Weverton"
+   ],
+   "data_apresentacao": "2019-05-29",
+   "casa_inicial": "Senado",
+   "temas": [
+    "Cidades e Desenvolvimento Urbano",
+    "Comunicações",
+    "Energia, Recursos Hídricos e Minerais",
+    "Indústria, Comércio e Serviços",
+    "Viação, Transporte e Mobilidade"
+   ],
+   "situacao": {
+    "descricao": "Aguardando Deliberação",
+    "data": "2026-11-03",
+    "casa": "Câmara",
+    "norma": null
+   },
+   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2617269",
+   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/137047",
+   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3115561",
    "votacoes": []
   },
   "PL 3220/2025": {
@@ -2262,7 +4528,7 @@
     "Homenagens e Datas Comemorativas"
    ],
    "situacao": {
-    "descricao": "Aguardando Deliberação",
+    "descricao": "Aguardando Encaminhamento",
     "data": "2026-11-03",
     "casa": "Câmara",
     "norma": null
@@ -2270,35 +4536,6 @@
    "url_camara": "https://www.camara.leg.br/propostas-legislativas/2531613",
    "url_senado": null,
    "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2948514",
-   "votacoes": []
-  },
-  "PL 3507/2026": {
-   "chave": "PL 3507/2026",
-   "slug": "pl-3507-2026",
-   "sigla": "PL",
-   "numero": 3507,
-   "ano": 2026,
-   "tipo": "Projeto de Lei",
-   "ementa": "Reconhece o artesanato tradicional do Estado do Maranhão como manifestação da cultura nacional.",
-   "apelido": null,
-   "autores": [
-    "Pedro Lucas Fernandes"
-   ],
-   "data_apresentacao": "2026-07-07",
-   "casa_inicial": "Câmara",
-   "temas": [
-    "Arte, Cultura e Religião",
-    "Homenagens e Datas Comemorativas"
-   ],
-   "situacao": {
-    "descricao": "Aguardando Designação de Relator(a)",
-    "data": "2026-09-08",
-    "casa": "Câmara",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2637478",
-   "url_senado": null,
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3157723",
    "votacoes": []
   },
   "PL 4159/2025": {
@@ -2321,8 +4558,8 @@
     "Homenagens e Datas Comemorativas"
    ],
    "situacao": {
-    "descricao": "Aguardando Encaminhamento",
-    "data": "2026-09-02",
+    "descricao": "Aguardando Deliberação",
+    "data": "2026-11-03",
     "casa": "Câmara",
     "norma": null
    },
@@ -2350,45 +4587,40 @@
     "Saúde"
    ],
    "situacao": {
-    "descricao": "Aguardando Encaminhamento",
-    "data": "2026-10-28",
+    "descricao": "Aguardando Envio ao Senado Federal",
+    "data": "2026-11-03",
     "casa": "Câmara",
     "norma": null
    },
    "url_camara": "https://www.camara.leg.br/propostas-legislativas/2475487",
    "url_senado": null,
    "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2833133",
-   "votacoes": []
-  },
-  "PL 504/2021": {
-   "chave": "PL 504/2021",
-   "slug": "pl-504-2021",
-   "sigla": "PL",
-   "numero": 504,
-   "ano": 2021,
-   "tipo": "Projeto de Lei",
-   "ementa": "Cria a Política Nacional de Residência em Área Profissional da Saúde.",
-   "apelido": null,
-   "autores": [
-    "Alexandre Padilha"
-   ],
-   "data_apresentacao": "2021-02-19",
-   "casa_inicial": "Câmara",
-   "temas": [
-    "Educação",
-    "Saúde",
-    "Trabalho e Emprego"
-   ],
-   "situacao": {
-    "descricao": "Pronta para Pauta",
-    "data": "2026-07-08",
-    "casa": "Câmara",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2270540",
-   "url_senado": null,
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1964794",
-   "votacoes": []
+   "votacoes": [
+    {
+     "id": "2475487-76",
+     "casa": "Câmara",
+     "data_hora": "2026-11-03T16:58:42",
+     "descricao": "Aprovado o Substitutivo ao Projeto de Lei nº 4.674, de 2024, adotado pela relatora da Comissão de Saúde.",
+     "resultado": "aprovada",
+     "procedimento": false,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    },
+    {
+     "id": "2475487-79",
+     "casa": "Câmara",
+     "data_hora": "2026-11-03T16:59:50",
+     "descricao": "Aprovada a Redação Final assinada pela relatora, Dep. Laura Carneiro (PSD-RJ).",
+     "resultado": "aprovada",
+     "procedimento": true,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    }
+   ]
   },
   "PL 5086/2026": {
    "chave": "PL 5086/2026",
@@ -2412,7 +4644,7 @@
    ],
    "situacao": {
     "descricao": "Aguardando Encaminhamento",
-    "data": "2026-10-29",
+    "data": "2026-11-03",
     "casa": "Câmara",
     "norma": null
    },
@@ -2549,8 +4781,8 @@
     "Direito Penal e Processual Penal"
    ],
    "situacao": {
-    "descricao": "Aguardando Deliberação",
-    "data": "2026-10-28",
+    "descricao": "Aguardando Encaminhamento",
+    "data": "2026-11-03",
     "casa": "Câmara",
     "norma": null
    },
@@ -2632,44 +4864,14 @@
     "Saúde"
    ],
    "situacao": {
-    "descricao": "Aguardando Encaminhamento",
-    "data": "2023-06-30",
+    "descricao": "Aguardando Deliberação",
+    "data": "2026-11-03",
     "casa": "Câmara",
     "norma": null
    },
    "url_camara": "https://www.camara.leg.br/propostas-legislativas/2238560",
    "url_senado": null,
    "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1864114",
-   "votacoes": []
-  },
-  "PL 5782/2023": {
-   "chave": "PL 5782/2023",
-   "slug": "pl-5782-2023",
-   "sigla": "PL",
-   "numero": 5782,
-   "ano": 2023,
-   "tipo": "Projeto de Lei",
-   "ementa": "Institui o “Setembro em Flor”, campanha para conscientização sobre os tumores ginecológicos durante o mês de setembro.",
-   "apelido": null,
-   "autores": [
-    "Renilce Nicodemos"
-   ],
-   "data_apresentacao": "2023-11-29",
-   "casa_inicial": "Câmara",
-   "temas": [
-    "Direitos Humanos e Minorias",
-    "Homenagens e Datas Comemorativas",
-    "Saúde"
-   ],
-   "situacao": {
-    "descricao": "Incluída em ordem do dia",
-    "data": "2026-11-03",
-    "casa": "Senado",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2408247",
-   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/171335",
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2367105",
    "votacoes": []
   },
   "PL 5815/2025": {
@@ -2693,7 +4895,7 @@
    ],
    "situacao": {
     "descricao": "Aguardando Deliberação",
-    "data": "2026-07-13",
+    "data": "2026-11-04",
     "casa": "Câmara",
     "norma": null
    },
@@ -2750,8 +4952,8 @@
     "Direitos Humanos e Minorias"
    ],
    "situacao": {
-    "descricao": "Aguardando Encaminhamento",
-    "data": "2025-11-10",
+    "descricao": "Aguardando Deliberação",
+    "data": "2026-11-03",
     "casa": "Câmara",
     "norma": null
    },
@@ -12836,6 +15038,139 @@
        "voto": "Sim"
       }
      ]
+    }
+   ]
+  },
+  "REC 19/2022": {
+   "chave": "REC 19/2022",
+   "slug": "rec-19-2022",
+   "sigla": "REC",
+   "numero": 19,
+   "ano": 2022,
+   "tipo": "Recurso contra apreciação conclusiva de comissão (Art. 58, § 1º c/c art. 132, § 2º, RICD)",
+   "ementa": "Recurso contra poder conclusivo das comissões do Projeto de Lei nº 3.083, de 2019, de autoria do Deputado Marcos Pereira - REPUBLICANOS/SP, que “altera os arts. 642- A e 883 da Consolidação das Leis do Trabalho (CLT), aprovada pelo Decreto-lei nº 5.452, de 1º de maio de 1943, para dispor sobre a penhora sobre o faturamento da empresa.”",
+   "apelido": null,
+   "autores": [
+    "Afonso Florence",
+    "Alencar Santana",
+    "Alexandre Padilha",
+    "Alice Portugal",
+    "André Figueiredo",
+    "Áurea Carolina",
+    "Bira do Pindaré",
+    "Bohn Gass",
+    "Camilo Capiberibe",
+    "Carlos Veras",
+    "Célio Moura",
+    "Daniel Almeida",
+    "Denis Bezerra",
+    "Enio Verri",
+    "Fábio Trad",
+    "Fernanda Melchionna",
+    "Frei Anastacio Ribeiro",
+    "Gervásio Maia",
+    "Glauber Braga",
+    "Ivan Valente",
+    "Jandira Feghali",
+    "Joenia Wapichana",
+    "Jorge Solla",
+    "José Airton Félix Cirilo",
+    "José Guimarães",
+    "José Ricardo",
+    "Leo de Brito",
+    "Leonardo Monteiro",
+    "Luiza Erundina",
+    "Marcelo Ramos",
+    "Merlong Solano",
+    "Nilto Tatto",
+    "Patrus Ananias",
+    "Paulão",
+    "Professora Marcivania",
+    "Professora Rosa Neide",
+    "Reginaldo Lopes",
+    "Rejane Dias",
+    "Renildo Calheiros",
+    "Rodrigo Agostinho",
+    "Rogério Correia",
+    "Rubens Otoni",
+    "Rubens Pereira Júnior",
+    "Sâmia Bomfim",
+    "Tadeu Alencar",
+    "Talíria Petrone",
+    "Tereza Nelma",
+    "Túlio Gadêlha",
+    "Valmir Assunção",
+    "Vander Loubet",
+    "Vicentinho",
+    "Vilson da Fetaemg",
+    "Vivi Reis",
+    "Waldenor Pereira",
+    "Zé Carlos",
+    "Zeca Dirceu"
+   ],
+   "data_apresentacao": "2022-07-15",
+   "casa_inicial": "Câmara",
+   "temas": [],
+   "situacao": {
+    "descricao": "Tramitação Finalizada",
+    "data": "2026-11-03",
+    "casa": "Câmara",
+    "norma": null
+   },
+   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2332871",
+   "url_senado": null,
+   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2199053",
+   "votacoes": [
+    {
+     "id": "2332871-17",
+     "casa": "Câmara",
+     "data_hora": "2026-11-03T16:48:43",
+     "descricao": "Rejeitado o Recurso nº 19/2022 (art. 58, § 1º c/c art. 132, § 2º, RICD).",
+     "resultado": "rejeitada",
+     "procedimento": false,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    }
+   ]
+  },
+  "REC 68/2019": {
+   "chave": "REC 68/2019",
+   "slug": "rec-68-2019",
+   "sigla": "REC",
+   "numero": 68,
+   "ano": 2019,
+   "tipo": "Recurso contra apreciação conclusiva de comissão (Art. 58, § 1º c/c art. 132, § 2º, RICD)",
+   "ementa": "Recurso contra apreciação conclusiva das Comissões sobre o Projeto de Lei n° 2334 de 2019 que \"Permite a celebração de convênios ou parcerias pelo Instituto Nacional de Propriedade Intelectual\".",
+   "apelido": null,
+   "autores": [
+    "Alexandre Padilha"
+   ],
+   "data_apresentacao": "2019-12-10",
+   "casa_inicial": "Câmara",
+   "temas": [],
+   "situacao": {
+    "descricao": "Tramitação Finalizada",
+    "data": "2026-11-03",
+    "casa": "Câmara",
+    "norma": null
+   },
+   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2233203",
+   "url_senado": null,
+   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1844316",
+   "votacoes": [
+    {
+     "id": "2233203-16",
+     "casa": "Câmara",
+     "data_hora": "2026-11-03T16:45:20",
+     "descricao": "Rejeitado o Recurso nº 68/2019 (art. 58, § 1º c/c art. 132, § 2º, RICD).",
+     "resultado": "rejeitada",
+     "procedimento": false,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
     }
    ]
   }
