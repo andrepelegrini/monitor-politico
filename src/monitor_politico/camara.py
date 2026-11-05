@@ -21,6 +21,7 @@ from monitor_politico.senado import ClienteSenado
 
 API_BASE = "https://dadosabertos.camara.leg.br/api/v2"
 SAIDA_PADRAO = Path("data/deputados.json")
+ARQUIVO_PADRAO = Path("data/arquivo_deputados.json")
 ID_PLENARIO = 180
 ATRASO_ENTRE_CHAMADAS = 0.1  # segundos; cortesia com a API pública
 LIMITE_FALHAS = 0.1  # fração de perfis que pode falhar antes de abortar a coleta
@@ -120,13 +121,32 @@ def ler_anteriores(caminho: Path) -> dict[int, Deputado]:
     return {d["id"]: Deputado.de_dict(d) for d in doc["deputados"]}
 
 
+def arquivar_saidas(caminho: Path, anteriores: dict[int, Deputado], atuais: list[Deputado], hoje: date) -> None:
+    """Quem saiu da lista de exercício continua no site: a página fica, com os dados do último dia.
+
+    Quem volta ao exercício sai do arquivo. Sem o arquivo criado pela carga inicial, nada é feito.
+    """
+    if not caminho.exists():
+        return
+    doc = json.loads(caminho.read_text(encoding="utf-8"))
+    ids_atuais = {d.id for d in atuais}
+    guardados = {d["id"]: d for d in doc["deputados"] if d["id"] not in ids_atuais}
+    for id_, deputado in anteriores.items():
+        if id_ not in ids_atuais and id_ not in guardados:
+            guardados[id_] = {**deputado.para_dict(), "saiu_em": hoje.isoformat()}
+    doc["deputados"] = sorted(guardados.values(), key=lambda d: d["nome"])
+    caminho.write_text(json.dumps(doc, ensure_ascii=False, indent=1), encoding="utf-8")
+
+
 def coletar(
     cliente: ClienteCamara,
     saida: Path = SAIDA_PADRAO,
     senado: Optional[ClienteSenado] = None,
     avisar: Callable[[str], None] = lambda msg: print(f"aviso: {msg}", file=sys.stderr),
 ) -> dict[str, Any]:
-    deputados = cliente.deputados(ler_anteriores(saida))
+    anteriores = ler_anteriores(saida)
+    deputados = cliente.deputados(anteriores)
+    arquivar_saidas(saida.parent / ARQUIVO_PADRAO.name, anteriores, deputados, date.today())
     # O resumo é complementar: se uma dessas consultas falhar, o bloco correspondente some da página.
     sexo = presidente = None
     lideres: Optional[list[dict[str, Any]]] = None

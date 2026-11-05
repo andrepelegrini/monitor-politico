@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block titulo %}Fora de exercício · Monitor Político{% endblock %}
+{% block descricao %}Quem exerceu mandato de deputado federal nesta legislatura e não está mais em exercício, com a situação oficial e o resultado de {{ legislatura.ano_da_eleicao }}.{% endblock %}
+{% block conteudo %}
+<nav class="ce-breadcrumb" aria-label="Trilha de navegação">
+  <ol>
+    <li><a href="{{ raiz }}/index.html">Início</a></li>
+    <li><a href="index.html">Deputados</a></li>
+    <li aria-current="page">Fora de exercício</li>
+  </ol>
+</nav>
+<header class="ce-page-head">
+  <p class="ce-eyebrow">Legislatura {{ legislatura.legislatura_atual }}</p>
+  <h1>Fora de exercício</h1>
+  <p class="ce-deck">Quem exerceu mandato nesta legislatura e não está em exercício hoje. Inclui suplentes que assumiram por um período, quem se licenciou e quem deixou o cargo.</p>
+</header>
+<section class="ce-section" aria-labelledby="lista-titulo">
+  <div class="ce-section-header"><h2 class="ce-display ce-section-title" id="lista-titulo">{{ arquivo|length }} pessoas</h2></div>
+  <form class="ce-filters" role="search" aria-label="Filtrar" onsubmit="return false">
+    <label class="ce-field"><span class="ce-control-label">Nome</span><input class="ce-input" type="search" id="f-nome" placeholder="Buscar por nome" autocomplete="off"></label>
+    <label class="ce-field"><span class="ce-control-label">Partido</span><select class="ce-select" id="f-partido"><option value="">Todos</option>{% for p in partidos %}<option>{{ p }}</option>{% endfor %}</select></label>
+    <label class="ce-field"><span class="ce-control-label">UF</span><select class="ce-select" id="f-uf"><option value="">Todas</option>{% for u in ufs %}<option>{{ u }}</option>{% endfor %}</select></label>
+  </form>
+  <p class="ce-count" aria-live="polite"><span id="contagem">{{ arquivo|length }}</span> de {{ arquivo|length }} pessoas</p>
+  <ul class="ce-people ce-people--leis" id="lista">
+    {% for d in arquivo %}
+    <li data-nome="{{ d.nome|lower }}" data-partido="{{ d.partido }}" data-uf="{{ d.uf }}">
+      <a href="{{ d.id }}.html">
+        {% if d.url_foto %}<img src="{{ d.url_foto }}" alt="" loading="lazy" width="64" height="85">{% else %}<span class="ce-photo-empty" aria-hidden="true"></span>{% endif %}
+        <span class="ce-people-name">{{ d.nome }}</span>
+        <span class="ce-meta">{{ d.partido }} · {{ d.uf }}{% if d.situacao %} · {{ d.situacao }}{% endif %}</span>
+        {% if situacoes_eleitorais.get(d.id|string) %}<span class="ce-people-leis"><span class="ce-badge ce-badge--outline">{{ situacoes_eleitorais[d.id|string].rotulo }}</span></span>{% endif %}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+  <div id="vazio" class="ce-state-box" hidden>
+    <p>Nenhum nome encontrado com esses filtros.</p>
+    <button type="button" class="ce-button ce-button--secondary" data-limpar-filtros>Limpar filtros</button>
+  </div>
+</section>
+{% endblock %}
+{% block scripts %}<script src="{{ raiz }}/static/filtro.js"></script>{% endblock %}

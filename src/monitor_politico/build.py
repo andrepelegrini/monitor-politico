@@ -17,7 +17,7 @@ from zoneinfo import ZoneInfo
 
 from jinja2 import Environment, PackageLoader, select_autoescape
 
-from monitor_politico import metricas as modulo_metricas, painel, perfis, resumo
+from monitor_politico import legislatura as modulo_legislatura, metricas as modulo_metricas, painel, perfis, resumo
 from monitor_politico.models import Deputado, Senador
 
 DEPUTADOS_PADRAO = Path("data/deputados.json")
@@ -26,6 +26,8 @@ CONGRESSO_PADRAO = Path("data/congresso.json")
 RESUMOS_PADRAO = Path("data/resumos.json")
 PERFIS_PADRAO = Path("data/perfis")
 METRICAS_PADRAO = Path("data/metricas_deputados.json")
+LEGISLATURA_PADRAO = Path("data/legislatura.json")
+ARQUIVO_PADRAO = Path("data/arquivo_deputados.json")
 NOME_DA_IMAGEM = "{id}-compartilhar.png"
 SAIDA_PADRAO = Path("site")
 FUSO = ZoneInfo("America/Sao_Paulo")
@@ -49,10 +51,12 @@ def url_do_site(ambiente: Optional[dict[str, str]] = None) -> str:
 
 
 def indice_de_busca(
-    deputados: Sequence[Deputado], senadores: Sequence[Senador], proposicoes: dict[str, dict[str, Any]]
+    deputados: Sequence[Deputado], senadores: Sequence[Senador], proposicoes: dict[str, dict[str, Any]],
+    outros_deputados: Sequence[Deputado] = (), eleitos: Sequence[dict[str, Any]] = (),
 ) -> dict[str, list[list[str]]]:
     """Índice compacto para a busca do topo: listas em vez de objetos, para o arquivo ficar pequeno."""
-    pessoas = [[d.nome, "D", d.partido, d.uf, f"deputados/{d.id}.html"] for d in deputados]
+    pessoas = [[d.nome, "D", d.partido, d.uf, f"deputados/{d.id}.html"] for d in list(deputados) + list(outros_deputados)]
+    pessoas += [[perfis.nome_proprio(e["nome"]), "D", e["partido"], e["uf"], f"deputados/eleitos/{e['sq']}.html"] for e in eleitos]
     pessoas += [[s.nome, "S", s.partido, s.uf, f"senadores/{s.id}.html"] for s in senadores]
     pessoas.sort(key=lambda p: chave_alfabetica(p[0]))
     props = [
@@ -117,6 +121,44 @@ def _gerar_casa(
         (pasta / f"{p.id}.html").write_text(pagina, encoding="utf-8")
 
 
+def _gerar_legislatura(
+    env: Environment, pasta: Path, anteriores: Sequence[Deputado], saidas: dict[int, Optional[str]], legislatura: dict[str, Any],
+    situacoes_eleitorais: dict[str, Any], contexto: dict[str, Any],
+) -> None:
+    """Páginas de quem saiu do exercício e de quem chega em 2027."""
+    coleta = datetime.fromisoformat(legislatura["coletado_em"]).astimezone(FUSO).date().isoformat()
+    comum = {**contexto, "legislatura": legislatura, "coleta_legislatura": coleta, "situacoes_eleitorais": situacoes_eleitorais}
+    modelo = env.get_template("perfil_deputado.html")
+    for d in anteriores:
+        (pasta / f"{d.id}.html").write_text(
+            modelo.render(**comum, raiz="..", caminho=f"deputados/{d.id}.html", d=d, fora_de_exercicio=True, saiu_em=saidas.get(d.id)),
+            encoding="utf-8",
+        )
+    (pasta / "anteriores.html").write_text(
+        env.get_template("deputados_anteriores.html").render(
+            **comum, raiz="..", caminho="deputados/anteriores.html", arquivo=anteriores,
+            partidos=sorted({d.partido for d in anteriores}), ufs=sorted({d.uf for d in anteriores}),
+        ),
+        encoding="utf-8",
+    )
+    eleitos = legislatura["eleitos_novos"]
+    pasta_eleitos = pasta / "eleitos"
+    pasta_eleitos.mkdir()
+    (pasta_eleitos / "index.html").write_text(
+        env.get_template("eleitos.html").render(
+            **comum, raiz="../..", caminho="deputados/eleitos/index.html", eleitos=eleitos,
+            resumo_legislatura=modulo_legislatura.resumo(legislatura),
+            partidos=sorted({e["partido"] for e in eleitos}), ufs=sorted({e["uf"] for e in eleitos}),
+        ),
+        encoding="utf-8",
+    )
+    modelo_eleito = env.get_template("perfil_eleito.html")
+    for e in eleitos:
+        (pasta_eleitos / f"{e['sq']}.html").write_text(
+            modelo_eleito.render(**comum, raiz="../..", caminho=f"deputados/eleitos/{e['sq']}.html", e=e), encoding="utf-8"
+        )
+
+
 def construir(
     doc_deputados: dict[str, Any],
     doc_senadores: dict[str, Any],
@@ -126,6 +168,8 @@ def construir(
     site_url: Optional[str] = None,
     perfis_ampliados: Optional[dict[int, dict[str, Any]]] = None,
     metricas: Optional[dict[str, Any]] = None,
+    legislatura: Optional[dict[str, Any]] = None,
+    arquivo_deputados: Optional[list[dict[str, Any]]] = None,
 ) -> None:
     env = Environment(
         loader=PackageLoader("monitor_politico", "templates"),
@@ -159,7 +203,16 @@ def construir(
     )
     (saida / "proposicoes").mkdir()
     modelo = env.get_template("proposicao.html")
-    ids_deputados = {d.id for d in deputados}
+    # Quem saiu mantém a página, então o voto continua ligado ao perfil na página da proposição.
+    saidas = {d["id"]: d.get("saiu_em") for d in (arquivo_deputados or [])}
+    ids_em_exercicio = {d.id for d in deputados}
+    anteriores = sorted(
+        (Deputado.de_dict({k: v for k, v in d.items() if k != "saiu_em"}) for d in (arquivo_deputados or []) if d["id"] not in ids_em_exercicio),
+        key=lambda d: chave_alfabetica(d.nome),
+    )
+    eleitos = (legislatura or {}).get("eleitos_novos", [])
+    situacoes_eleitorais = (legislatura or {}).get("situacoes", {})
+    ids_deputados = ids_em_exercicio | {d.id for d in anteriores}
     ids_senadores = {s.id for s in senadores}
     for prop in doc_congresso["proposicoes"].values():
         (saida / "proposicoes" / f"{prop['slug']}.html").write_text(
@@ -182,7 +235,7 @@ def construir(
         encoding="utf-8",
     )
     (saida / "static" / "busca.json").write_text(
-        json.dumps(indice_de_busca(deputados, senadores, doc_congresso["proposicoes"]), ensure_ascii=False, separators=(",", ":")),
+        json.dumps(indice_de_busca(deputados, senadores, doc_congresso["proposicoes"], anteriores, eleitos), ensure_ascii=False, separators=(",", ":")),
         encoding="utf-8",
     )
     slugs = {p["chave"]: p["slug"] for p in doc_congresso["proposicoes"].values()}
@@ -207,9 +260,15 @@ def construir(
         {"raiz": "..", "casa": "camara", "titulo": "Deputados federais", "singular": "deputado", "plural": "deputados",
          "nome_casa": "Câmara dos Deputados", "resumo": resumo.da_camara(deputados, doc_deputados.get("resumo") or {}),
          "atualizado_em": atualizado_camara, "fonte_nome": FONTE_CAMARA[0], "fonte_url": FONTE_CAMARA[1],
-         "leis_na_lista": leis_na_lista, "metricas": metricas},
+         "leis_na_lista": leis_na_lista, "metricas": metricas, "situacoes_eleitorais": situacoes_eleitorais,
+         "tem_legislatura": bool(legislatura), "total_anteriores": len(anteriores), "total_eleitos_novos": len(eleitos)},
         visoes_ampliadas,
     )
+    if legislatura:
+        _gerar_legislatura(
+            env, saida / "deputados", anteriores, saidas, legislatura, situacoes_eleitorais,
+            {"casa": "camara", "atualizado_em": atualizado_camara, "fonte_nome": FONTE_CAMARA[0], "fonte_url": FONTE_CAMARA[1], "singular": "deputado", "plural": "deputados", "nome_casa": "Câmara dos Deputados"},
+        )
     _gerar_casa(
         env, saida / "senadores", senadores, "perfil_senador.html", "s",
         {"raiz": "..", "casa": "senado", "titulo": "Senadores", "singular": "senador", "plural": "senadores",
@@ -229,7 +288,12 @@ if __name__ == "__main__":
     doc_con = json.loads(entrada_con.read_text(encoding="utf-8"))
     # Os resumos por IA são opcionais: sem o arquivo, as páginas mostram só a ementa oficial.
     doc_res = json.loads(RESUMOS_PADRAO.read_text(encoding="utf-8")) if RESUMOS_PADRAO.exists() else None
-    construir(doc_dep, doc_sen, doc_con, destino, doc_res, perfis_ampliados=perfis.ler_perfis(PERFIS_PADRAO), metricas=modulo_metricas.ler(METRICAS_PADRAO))
+    construir(
+        doc_dep, doc_sen, doc_con, destino, doc_res, perfis_ampliados=perfis.ler_perfis(PERFIS_PADRAO),
+        metricas=modulo_metricas.ler(METRICAS_PADRAO),
+        legislatura=modulo_legislatura.ler(LEGISLATURA_PADRAO),
+        arquivo_deputados=(modulo_legislatura.ler(ARQUIVO_PADRAO) or {}).get("deputados"),
+    )
     print(
         f"Site gerado em {destino}/ ({len(doc_dep['deputados'])} deputados, {len(doc_sen['senadores'])} senadores, "
         f"{len(doc_con['proposicoes'])} proposições)"

@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block titulo %}Eleitos para 2027 · Monitor Político{% endblock %}
+{% block descricao %}Os {{ resumo_legislatura.total_eleitos }} deputados federais eleitos em {{ legislatura.ano_da_eleicao }}: quem volta, quem chega pela primeira vez e o que aconteceu com quem está no mandato atual.{% endblock %}
+{% block conteudo %}
+<nav class="ce-breadcrumb" aria-label="Trilha de navegação">
+  <ol>
+    <li><a href="{{ raiz }}/index.html">Início</a></li>
+    <li><a href="{{ raiz }}/deputados/index.html">Deputados</a></li>
+    <li aria-current="page">Eleitos para 2027</li>
+  </ol>
+</nav>
+<header class="ce-page-head">
+  <p class="ce-eyebrow">Próxima legislatura</p>
+  <h1>Eleitos para a Câmara em {{ legislatura.ano_da_eleicao }}</h1>
+  <p class="ce-deck">Posse prevista para {{ legislatura.posse|data_br }}. Dados do TSE e da Câmara, coletados em {{ coleta_legislatura|data_br }}.</p>
+</header>
+
+<section class="ce-section" aria-labelledby="renovacao-titulo">
+  <div class="ce-section-header"><h2 class="ce-display ce-section-title" id="renovacao-titulo">Quem são os {{ resumo_legislatura.total_eleitos }} eleitos</h2></div>
+  <div class="pf-caminho-barra pf-renovacao" aria-hidden="true">
+    {% for c in resumo_legislatura.chegam %}<span class="pf-eleito-{{ c.chave }}" style="width: {{ c.largura }}%"></span>{% endfor %}
+  </div>
+  <ul class="ce-legend">
+    {% for c in resumo_legislatura.chegam %}<li><span class="ce-dot pf-eleito-{{ c.chave }}"></span>{{ c.rotulo }} <strong>{{ c.valor|numero }}</strong></li>{% endfor %}
+  </ul>
+  <p class="ce-section-note">Reeleição inclui quem exerceu mandato nesta legislatura, mesmo como suplente. Retorno é quem já foi deputado em legislaturas anteriores. A Câmara ainda não cadastrou a nova legislatura, por isso quem chega agora não tem foto oficial nem página na Câmara.</p>
+</section>
+
+<section class="ce-section" aria-labelledby="saem-titulo">
+  <div class="ce-section-header"><h2 class="ce-display ce-section-title" id="saem-titulo">Quem exerceu mandato nesta legislatura e não tem vaga em 2027</h2></div>
+  <ul class="pf-barras pf-espaco">
+    {% for c in resumo_legislatura.saem %}
+    <li><span>{{ c.rotulo }}</span><span class="ce-bar-track" aria-hidden="true"><span class="ce-bar-value" style="width: {{ c.largura }}%"></span></span><span class="pf-barra-numero">{{ c.valor|numero }}</span></li>
+    {% endfor %}
+  </ul>
+  <p class="ce-section-note">A conta inclui suplentes que assumiram por um período e quem deixou o cargo antes do fim do mandato. Suplência significa que a pessoa disputou a vaga e pode assumir durante o mandato.</p>
+</section>
+
+<section class="ce-section" aria-labelledby="novos-titulo">
+  <div class="ce-section-header"><h2 class="ce-display ce-section-title" id="novos-titulo">Quem chega à Câmara em 2027</h2></div>
+  <form class="ce-filters" role="search" aria-label="Filtrar eleitos" onsubmit="return false">
+    <label class="ce-field"><span class="ce-control-label">Nome</span><input class="ce-input" type="search" id="f-nome" placeholder="Buscar por nome" autocomplete="off"></label>
+    <label class="ce-field"><span class="ce-control-label">Partido</span><select class="ce-select" id="f-partido"><option value="">Todos</option>{% for p in partidos %}<option>{{ p }}</option>{% endfor %}</select></label>
+    <label class="ce-field"><span class="ce-control-label">UF</span><select class="ce-select" id="f-uf"><option value="">Todas</option>{% for u in ufs %}<option>{{ u }}</option>{% endfor %}</select></label>
+    <label class="ce-field"><span class="ce-control-label">Situação</span><select class="ce-select" id="f-situacao"><option value="">Todas</option><option>Primeiro mandato</option><option>Retorno à Câmara</option></select></label>
+  </form>
+  <p class="ce-count" aria-live="polite"><span id="contagem">{{ eleitos|length }}</span> de {{ eleitos|length }} novos nomes. Quem se reelegeu continua na <a href="{{ raiz }}/deputados/index.html">lista de deputados</a>.</p>
+  <ul class="ce-people ce-people--leis" id="lista">
+    {% for e in eleitos %}
+    <li data-nome="{{ e.nome|lower }}" data-partido="{{ e.partido }}" data-uf="{{ e.uf }}" data-situacao="{{ e.rotulo }}">
+      <a href="{{ e.sq }}.html">
+        <span class="ce-photo-empty" aria-hidden="true"></span>
+        <span class="ce-people-name">{{ e.nome|nome_proprio }}</span>
+        <span class="ce-meta">{{ e.partido }} · {{ e.uf }}</span>
+        <span class="ce-people-leis"><span class="ce-badge ce-badge--outline">{{ e.rotulo }}</span></span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+  <div id="vazio" class="ce-state-box" hidden>
+    <p>Nenhum nome encontrado com esses filtros.</p>
+    <button type="button" class="ce-button ce-button--secondary" data-limpar-filtros>Limpar filtros</button>
+  </div>
+</section>
+{% endblock %}
+{% block rodape %}
+<p>Fontes: <a href="https://dadosabertos.tse.jus.br/dataset/candidatos-2026">TSE</a> e <a href="https://dadosabertos.camara.leg.br/">Dados Abertos da Câmara dos Deputados</a>. Este site reproduz informações públicas oficiais, sem avaliação ou opinião.</p>
+{% endblock %}
+{% block scripts %}<script src="{{ raiz }}/static/filtro.js"></script>{% endblock %}
