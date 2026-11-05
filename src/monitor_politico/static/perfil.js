@@ -1,33 +1,22 @@
-// Filtros e paginação das votações no perfil do parlamentar.
-// Sem JavaScript, todas as votações ficam visíveis.
-(function () {
-  var lista = document.getElementById("v-lista");
+// Filtros e paginação das listas do perfil do parlamentar (votações e propostas).
+// Sem JavaScript, todos os itens ficam visíveis.
+function listaFiltravel(prefixo, controles, passa, padroes) {
+  var lista = document.getElementById(prefixo + "-lista");
   if (!lista) return;
 
   var POR_VEZ = 15;
   var itens = Array.prototype.slice.call(lista.children);
-  var classe = document.getElementById("v-classe");
-  var tema = document.getElementById("v-tema");
-  var voto = document.getElementById("v-voto");
-  var contra = document.getElementById("v-contra");
-  var difere = document.getElementById("v-difere");
-  var contagem = document.getElementById("v-contagem");
-  var vazio = document.getElementById("v-vazio");
-  var mais = document.getElementById("v-mais");
+  var contagem = document.getElementById(prefixo + "-contagem");
+  var vazio = document.getElementById(prefixo + "-vazio");
+  var mais = document.getElementById(prefixo + "-mais");
+  var campos = {};
+  controles.forEach(function (nome) { campos[nome] = document.getElementById(prefixo + "-" + nome); });
   var limite = POR_VEZ;
-
-  function passa(li) {
-    return (!classe.value || li.dataset.classe === classe.value) &&
-      (!tema.value || li.dataset.temas.split("|").indexOf(tema.value) !== -1) &&
-      (!voto.value || li.dataset.voto === voto.value) &&
-      (!contra.checked || li.dataset.contra === "1") &&
-      (!difere.checked || li.dataset.difere === "1");
-  }
 
   function aplicar() {
     var total = 0;
     itens.forEach(function (li) {
-      var ok = passa(li);
+      var ok = passa(li, campos);
       if (ok) total++;
       li.hidden = !ok || total > limite;
     });
@@ -36,33 +25,50 @@
     mais.hidden = total <= limite;
   }
 
-  [classe, tema, voto, contra, difere].forEach(function (controle) {
-    controle.addEventListener("change", function () {
+  controles.forEach(function (nome) {
+    campos[nome].addEventListener("change", function () {
       limite = POR_VEZ;
       aplicar();
     });
   });
 
   mais.addEventListener("click", function () {
-    // Leva o foco para a primeira votação nova, para quem navega pelo teclado não voltar ao topo da lista.
-    var ocultos = itens.filter(function (li) { return li.hidden && passa(li); });
+    // Leva o foco para o primeiro item novo, para quem navega pelo teclado não voltar ao topo da lista.
+    var ocultos = itens.filter(function (li) { return li.hidden && passa(li, campos); });
     limite += POR_VEZ;
     aplicar();
     var primeiro = ocultos[0] && ocultos[0].querySelector("a");
     if (primeiro) primeiro.focus();
   });
 
-  document.getElementById("v-limpar").addEventListener("click", function () {
-    classe.value = "texto";
-    tema.value = voto.value = "";
-    contra.checked = difere.checked = false;
+  document.getElementById(prefixo + "-limpar").addEventListener("click", function () {
+    controles.forEach(function (nome) {
+      var campo = campos[nome];
+      if (campo.type === "checkbox") campo.checked = false;
+      else campo.value = (padroes && padroes[nome]) || "";
+    });
     limite = POR_VEZ;
     aplicar();
-    classe.focus();
+    campos[controles[0]].focus();
   });
 
   aplicar();
-})();
+}
+
+listaFiltravel("v", ["classe", "tema", "voto", "contra", "difere"], function (li, c) {
+  return (!c.classe.value || li.dataset.classe === c.classe.value) &&
+    (!c.tema.value || li.dataset.temas.split("|").indexOf(c.tema.value) !== -1) &&
+    (!c.voto.value || li.dataset.voto === c.voto.value) &&
+    (!c.contra.checked || li.dataset.contra === "1") &&
+    (!c.difere.checked || li.dataset.difere === "1");
+}, { classe: "texto" });
+
+listaFiltravel("p", ["tipo", "tema", "participacao", "situacao"], function (li, c) {
+  return (!c.tipo.value || li.dataset.tipo === c.tipo.value) &&
+    (!c.tema.value || li.dataset.temas.split("|").indexOf(c.tema.value) !== -1) &&
+    (!c.participacao.value || li.dataset.participacao === c.participacao.value) &&
+    (!c.situacao.value || li.dataset.situacao === c.situacao.value);
+});
 
 // Comprovantes da cota: a lista completa só é baixada quando alguém vai usá-la.
 // Sem JavaScript, ficam os maiores comprovantes, que já vêm na página.

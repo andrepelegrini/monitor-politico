@@ -1,6 +1,6 @@
 {
   "id": 204534,
-  "coletado_em": "2026-11-05T10:42:47+00:00",
+  "coletado_em": "2026-11-05T10:54:38+00:00",
   "legislatura_atual": {
     "id": 57,
     "inicio": "2023-02-01",
@@ -19565,5 +19565,1929 @@
       "total_recebido": 107730192.63,
       "arquivo_em": "2026-10-29"
     }
+  },
+  "propostas": {
+    "inicio": "2023-02-01",
+    "por_ano": [
+      {
+        "ano": 2023,
+        "autoria": 344,
+        "relatadas": 12
+      },
+      {
+        "ano": 2024,
+        "autoria": 220,
+        "relatadas": 14
+      },
+      {
+        "ano": 2025,
+        "autoria": 382,
+        "relatadas": 11
+      },
+      {
+        "ano": 2026,
+        "autoria": 103,
+        "relatadas": 15
+      }
+    ],
+    "propostas": [
+      {
+        "id": "2649648",
+        "sigla": "PLP 278/2026",
+        "tipo": "PLP",
+        "data": "2026-10-30",
+        "ementa": "Altera a Lei Complementar nº 64, de 18 de maio de 1990 (Lei de Inelegibilidades), para incluir, entre as causas de inelegibilidade decorrentes de condenação criminal, a lesão corporal praticada contra a mulher por razões da condição do sexo feminino.",
+        "situacao": "",
+        "data_situacao": "2026-10-30",
+        "participacao": "coautoria",
+        "temas": [],
+        "norma": null
+      },
+      {
+        "id": "2647228",
+        "sigla": "PL 5498/2026",
+        "tipo": "PL",
+        "data": "2026-09-30",
+        "ementa": "Dispõe sobre medidas complementares de proteção de crianças e adolescentes no uso de redes sociais e altera a Lei nº 15.211, de 17 de setembro de 2025 (Estatuto Digital da Criança e do Adolescente).",
+        "situacao": "",
+        "data_situacao": "2026-09-30",
+        "participacao": "primeira",
+        "temas": [
+          "Comunicações",
+          "Direitos Humanos e Minorias",
+          "Educação"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2641441",
+        "sigla": "PL 4739/2026",
+        "tipo": "PL",
+        "data": "2026-07-21",
+        "ementa": "Altera a Lei nº 14.133, de 1º de abril de 2021 (Lei de Licitações e Contratos Administrativos), a Lei nº 8.987, de 13 de fevereiro de 1995 (Lei de Concessões e Permissões de Serviços Públicos), a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), e a Lei nº 8.078, de 11 de setembro de 1990 (Código de Defesa do Consumidor), para estabelecer normas de proteção à infância e à adolescência mediante a vedação da publicidade de plataformas de conteúdo adulto e de serviços de natureza sexual em bens públicos e em espaços cuja exploração econômica dependa de delegação, incentivo ou benefício fiscal do Poder Público, e dá outras providências.",
+        "situacao": "",
+        "data_situacao": "2026-10-26",
+        "participacao": "primeira",
+        "temas": [
+          "Administração Pública",
+          "Direito Civil e Processual Civil",
+          "Direitos Humanos e Minorias",
+          "Finanças Públicas e Orçamento"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2641425",
+        "sigla": "PL 4730/2026",
+        "tipo": "PL",
+        "data": "2026-07-20",
+        "ementa": "Institui o Programa Envelhecer nos Territórios e o Programa Viva Mais Cidadania, voltados à promoção e proteção dos direitos humanos das pessoas idosas, e dá outras providências.",
+        "situacao": "",
+        "data_situacao": "2026-10-26",
+        "participacao": "coautoria",
+        "temas": [
+          "Administração Pública",
+          "Direitos Humanos e Minorias"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2634428",
+        "sigla": "PL 3228/2026",
+        "tipo": "PL",
+        "data": "2026-06-19",
+        "ementa": "Altera a Lei nº 11.947, de 16 de junho de 2009, para fixar limites máximos de aquisição de alimentos processados e ultraprocessados e limites mínimos de aquisição de alimentos in natura ou minimamente processados no âmbito do Programa Nacional de Alimentação Escolar – PNAE, estabelecer padrão mínimo de qualidade das compras alimentares, instituir obrigações de transparência e monitoramento, e dar outras providências.",
+        "situacao": "Aguardando Designação de Relator(a)",
+        "data_situacao": "2026-08-21",
+        "participacao": "primeira",
+        "temas": [
+          "Educação",
+          "Finanças Públicas e Orçamento",
+          "Saúde"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2634427",
+        "sigla": "PL 3227/2026",
+        "tipo": "PL",
+        "data": "2026-06-19",
+        "ementa": "Altera a Lei nº 9.394, de 20 de dezembro de 1996, para adequar o Exame Nacional do Ensino Médio (Enem) à organização curricular do ensino médio e articular a aferição da formação técnica e profissional ao processo nacional de avaliação da educação profissional técnica e tecnológica.",
+        "situacao": "Aguardando Designação de Relator(a)",
+        "data_situacao": "2026-08-21",
+        "participacao": "primeira",
+        "temas": [
+          "Educação",
+          "Trabalho e Emprego"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2631190",
+        "sigla": "PEC 13/2026",
+        "tipo": "PEC",
+        "data": "2026-06-10",
+        "ementa": "Altera o art. 9º da Emenda Constitucional nº 132, de 20 de dezembro de 2023, para permitir a concessão de créditos do Imposto sobre Bens e Serviços através de fomento indireto a doadores e patrocinadores de projetos culturais e esportivos.",
+        "situacao": "Pronta para Pauta",
+        "data_situacao": "2026-07-20",
+        "participacao": "apoio",
+        "temas": [
+          "Arte, Cultura e Religião",
+          "Esporte e Lazer",
+          "Finanças Públicas e Orçamento"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2627303",
+        "sigla": "PL 2563/2026",
+        "tipo": "PL",
+        "data": "2026-05-22",
+        "ementa": "Altera a Lei nº 12.527, de 18 de novembro de 2011, para estabelecer a obrigatoriedade de divulgação de estatísticas de ocupação de cargos, funções e empregos por homens e mulheres na administração pública.",
+        "situacao": "Aguardando Designação de Relator(a)",
+        "data_situacao": "2026-08-03",
+        "participacao": "primeira",
+        "temas": [
+          "Administração Pública",
+          "Direitos Humanos e Minorias",
+          "Trabalho e Emprego"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2625893",
+        "sigla": "PL 2478/2026",
+        "tipo": "PL",
+        "data": "2026-05-19",
+        "ementa": "Altera a Lei nº 14.790, de 29 de dezembro de 2023, para dispor sobre a proteção da saúde mental, do consumidor e da economia familiar no ambiente de apostas de quota fixa e jogos online, com ênfase na prevenção e redução de danos, e dá outras providências.",
+        "situacao": "",
+        "data_situacao": "2026-10-27",
+        "participacao": "coautoria",
+        "temas": [
+          "Comunicações",
+          "Direitos Humanos e Minorias",
+          "Esporte e Lazer"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2621041",
+        "sigla": "PL 2162/2026",
+        "tipo": "PL",
+        "data": "2026-05-05",
+        "ementa": "Altera o Código de Processo Civil para autorizar a intimação por meio eletrônico do devedor de alimentos.",
+        "situacao": "Aguardando Designação de Relator(a)",
+        "data_situacao": "2026-06-17",
+        "participacao": "coautoria",
+        "temas": [
+          "Direito Civil e Processual Civil",
+          "Direitos Humanos e Minorias"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2616055",
+        "sigla": "PL 1827/2026",
+        "tipo": "PL",
+        "data": "2026-04-14",
+        "ementa": "Altera a Lei nº 15.211, de 17 de setembro de 2025, para instituir a Política Nacional de Parentalidade Digital e, estabelecer restrições ao acesso de menores de 16 anos a redes sociais.",
+        "situacao": "Aguardando Designação de Relator(a)",
+        "data_situacao": "2026-05-26",
+        "participacao": "primeira",
+        "temas": [
+          "Comunicações",
+          "Direitos Humanos e Minorias",
+          "Educação"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2612588",
+        "sigla": "PL 1460/2026",
+        "tipo": "PL",
+        "data": "2026-03-27",
+        "ementa": "Dispõe sobre a proteção da identidade pessoal contra a criação e a difusão não autorizadas de réplicas digitais.",
+        "situacao": "Tramitando em Conjunto",
+        "data_situacao": "2026-06-03",
+        "participacao": "primeira",
+        "temas": [
+          "Comunicações",
+          "Direito e Justiça"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2612340",
+        "sigla": "PL 1425/2026",
+        "tipo": "PL",
+        "data": "2026-03-26",
+        "ementa": "Altera a Lei nº 11.340, de 7 de agosto de 2006 (Lei Maria da Penha) para aprimorar os procedimentos nela previstos e ampliar a disponibilidade de dados para formulação de políticas públicas para coibir a violência doméstica e familiar contra a mulher.",
+        "situacao": "Aguardando Designação de Relator(a)",
+        "data_situacao": "2026-07-17",
+        "participacao": "primeira",
+        "temas": [
+          "Administração Pública",
+          "Direito e Justiça",
+          "Direitos Humanos e Minorias"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2612333",
+        "sigla": "PL 1424/2026",
+        "tipo": "PL",
+        "data": "2026-03-26",
+        "ementa": "Define antissemitismo com a finalidade de instruir as políticas públicas nacionais.",
+        "situacao": "Aguardando Designação de Relator(a)",
+        "data_situacao": "2026-05-25",
+        "participacao": "primeira",
+        "temas": [
+          "Defesa e Segurança",
+          "Direito Penal e Processual Penal",
+          "Direitos Humanos e Minorias"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2608992",
+        "sigla": "PL 1172/2026",
+        "tipo": "PL",
+        "data": "2026-03-16",
+        "ementa": "Altera a Lei nº 14.790, de 29 de dezembro de 2023, que dispõe sobre a modalidade lotérica denominada apostas de quota fixa, para tratar sobre publicidade e propaganda de apostas em ambiente digital.",
+        "situacao": "Tramitando em Conjunto",
+        "data_situacao": "2026-10-27",
+        "participacao": "primeira",
+        "temas": [
+          "Comunicações",
+          "Direitos Humanos e Minorias",
+          "Esporte e Lazer"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2608238",
+        "sigla": "PL 1107/2026",
+        "tipo": "PL",
+        "data": "2026-03-11",
+        "ementa": "Institui pensão especial para pessoas com deficiência decorrente de violência doméstica e familiar; altera a Lei nº 8.213, de 24 de julho de 1991, para dispensar do cumprimento de carência o requerente de auxílio por incapacidade temporária e aposentadoria por incapacidade permanente decorrente de violência doméstica e familiar; e altera a Lei nº 11.340, de 7 de agosto de 2006, a fim de dispor sobre determinação judicial de avaliação médica, para fins de instrução do pedido de pensão especial, em caso de violência doméstica e familiar que resulte em aquisição de deficiência permanente pela ofendida ou pelo ofendido.",
+        "situacao": "Pronta para Pauta",
+        "data_situacao": "2026-09-01",
+        "participacao": "coautoria",
+        "temas": [
+          "Direitos Humanos e Minorias",
+          "Previdência e Assistência Social"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2607582",
+        "sigla": "PL 1042/2026",
+        "tipo": "PL",
+        "data": "2026-03-09",
+        "ementa": "Institui a Política de Atenção Integral e Proteção às Mulheres Sobreviventes de Tentativas de Feminicídio",
+        "situacao": "Aguardando Parecer",
+        "data_situacao": "2026-05-13",
+        "participacao": "coautoria",
+        "temas": [
+          "Defesa e Segurança",
+          "Direitos Humanos e Minorias",
+          "Previdência e Assistência Social"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2606313",
+        "sigla": "PLP 41/2026",
+        "tipo": "PLP",
+        "data": "2026-03-03",
+        "ementa": "Dispõe sobre o Sistema Nacional de Enfrentamento da Violência contra Meninas e Mulheres e a destinação de recursos às ações de enfrentamento ao feminicídio e de garantia da vida de meninas e mulheres.",
+        "situacao": "Aguardando Apreciação pelo Senado Federal",
+        "data_situacao": "2026-07-15",
+        "participacao": "coautoria",
+        "temas": [
+          "Defesa e Segurança",
+          "Direitos Humanos e Minorias",
+          "Finanças Públicas e Orçamento"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2605145",
+        "sigla": "PL 805/2026",
+        "tipo": "PL",
+        "data": "2026-02-26",
+        "ementa": "Dispõe sobre o enfrentamento à violência digital contra as mulheres por sua condição de mulher, com base na Lei Modelo Interamericana para Prevenir, Punir e Erradicar a Violência Digital de Gênero contra as Mulheres, elaborada no âmbito da Organização dos Estados Americanos (OEA).",
+        "situacao": "Aguardando Parecer",
+        "data_situacao": "2026-05-05",
+        "participacao": "coautoria",
+        "temas": [
+          "Comunicações",
+          "Defesa e Segurança",
+          "Direito Penal e Processual Penal",
+          "Direitos Humanos e Minorias",
+          "Política, Partidos e Eleições"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2604664",
+        "sigla": "PL 746/2026",
+        "tipo": "PL",
+        "data": "2026-02-25",
+        "ementa": "Altera as Leis nºs 7.492, de 16 de junho de 1986, 9.613, de 3 de março de 1998, e 12.850, de 2 de agosto de 2013, para disciplinar a responsabilidade penal na gestão de instituições financeiras e a evasão de divisas mediante ativos virtuais, instituir causas de aumento de pena no crime de lavagem de dinheiro e dispor sobre o acesso a dados cadastrais e o compartilhamento de relatórios de inteligência financeira.",
+        "situacao": "Aguardando Parecer",
+        "data_situacao": "2026-03-26",
+        "participacao": "primeira",
+        "temas": [
+          "Administração Pública",
+          "Defesa e Segurança",
+          "Direito Penal e Processual Penal",
+          "Economia",
+          "Finanças Públicas e Orçamento"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2600644",
+        "sigla": "PL 225/2026",
+        "tipo": "PL",
+        "data": "2026-02-03",
+        "ementa": "Institui a Política Nacional de Despoluição Sonora e dispõe sobre seus princípios, objetivos e instrumentos, bem como sobre as diretrizes relativas à gestão da qualidade acústica no território nacional.",
+        "situacao": "Aguardando Designação de Relator(a)",
+        "data_situacao": "2026-03-11",
+        "participacao": "primeira",
+        "temas": [
+          "Administração Pública",
+          "Cidades e Desenvolvimento Urbano"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2598127",
+        "sigla": "PL 6489/2025",
+        "tipo": "PL",
+        "data": "2025-12-17",
+        "ementa": "Institui o “Dia Nacional da Mulher com Deficiência” e a “Semana de Luta e Visibilidade da Mulher com Deficiência”, em homenagem à Professora Izabel de Loureiro Maior, e dá outras providências.",
+        "situacao": "Aguardando Parecer",
+        "data_situacao": "2026-04-14",
+        "participacao": "primeira",
+        "temas": [
+          "Direitos Humanos e Minorias",
+          "Homenagens e Datas Comemorativas"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2596372",
+        "sigla": "PEC 49/2025",
+        "tipo": "PEC",
+        "data": "2025-12-12",
+        "ementa": "Altera o § 4º do art. 220 da Constituição Federal para dispor sobre restrições legais à propaganda de qualquer modalidade lotérica.",
+        "situacao": "Aguardando Despacho do Presidente da Câmara dos Deputados (Chancela)",
+        "data_situacao": "2025-12-12",
+        "participacao": "coautoria",
+        "temas": [
+          "Comunicações",
+          "Direito Constitucional",
+          "Indústria, Comércio e Serviços"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2578344",
+        "sigla": "PL 5462/2025",
+        "tipo": "PL",
+        "data": "2025-10-28",
+        "ementa": "Institui a Plataforma Escola Cuidada e dispõe sobre a transparência e o planejamento da adaptação das escolas da educação básica às mudanças climáticas.",
+        "situacao": "Tramitando em Conjunto",
+        "data_situacao": "2026-02-02",
+        "participacao": "coautoria",
+        "temas": [
+          "Administração Pública",
+          "Educação",
+          "Meio Ambiente e Desenvolvimento Sustentável"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2574020",
+        "sigla": "PL 5319/2025",
+        "tipo": "PL",
+        "data": "2025-10-21",
+        "ementa": "Aperfeiçoa a legislação sanitária e de defesa do consumidor para coibir fraudes, adulterações e irregularidades na comercialização de suplementos alimentares e dá outras providências.",
+        "situacao": "Tramitando em Conjunto",
+        "data_situacao": "2026-06-02",
+        "participacao": "primeira",
+        "temas": [
+          "Direito e Defesa do Consumidor",
+          "Indústria, Comércio e Serviços",
+          "Saúde"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2560757",
+        "sigla": "PL 4553/2025",
+        "tipo": "PL",
+        "data": "2025-09-12",
+        "ementa": "Institui o Portal Nacional de Informações Estratégicas Socioambientais, Climáticas e Territoriais - “INFOCLIMA-TERRA-BRASIL”, e dá outras providências.",
+        "situacao": "Pronta para Pauta",
+        "data_situacao": "2026-10-28",
+        "participacao": "primeira",
+        "temas": [
+          "Administração Pública",
+          "Agricultura, Pecuária, Pesca e Extrativismo",
+          "Energia, Recursos Hídricos e Minerais",
+          "Meio Ambiente e Desenvolvimento Sustentável"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2559965",
+        "sigla": "PL 4522/2025",
+        "tipo": "PL",
+        "data": "2025-09-10",
+        "ementa": "Dispõe sobre diretrizes e critérios para o cumprimento dos protocolos do Conselho Federal de Psicologia no âmbito do uso de sistemas de inteligência artificial generativa de uso conversacional (IAg-C).",
+        "situacao": "",
+        "data_situacao": "2026-05-07",
+        "participacao": "coautoria",
+        "temas": [
+          "Ciência, Tecnologia e Inovação",
+          "Saúde"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2558525",
+        "sigla": "PL 4492/2025",
+        "tipo": "PL",
+        "data": "2025-09-09",
+        "ementa": "Altera a Lei nº 13.185, de 6 de novembro de 2015, para criar o Sistema Nacional de Monitoramento e instituir metas nacionais de redução da intimidação sistemática (bullying).",
+        "situacao": "Aguardando Parecer",
+        "data_situacao": "2026-03-19",
+        "participacao": "coautoria",
+        "temas": [
+          "Direitos Humanos e Minorias",
+          "Educação"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2554642",
+        "sigla": "PL 4311/2025",
+        "tipo": "PL",
+        "data": "2025-08-28",
+        "ementa": "Altera a Lei nº 13.536, de 2017, para dispor sobre a prorrogação de prazo regulamentar para conclusão de curso e de duração de bolsas, para estudante de educação superior e pesquisador, sempre que pai de criança nascida ou que adotar ou obtiver guarda judicial para fins de adoção.",
+        "situacao": "Pronta para Pauta",
+        "data_situacao": "2026-10-29",
+        "participacao": "primeira",
+        "temas": [
+          "Direitos Humanos e Minorias",
+          "Educação"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2546038",
+        "sigla": "PL 4020/2025",
+        "tipo": "PL",
+        "data": "2025-08-15",
+        "ementa": "Altera a Lei nº 14.790, de 29 de dezembro de 2023, para dispor sobre a disponibilidade dos prêmios mantidos em carteira virtual para novas apostas.",
+        "situacao": "Pronta para Pauta",
+        "data_situacao": "2026-02-09",
+        "participacao": "primeira",
+        "temas": [
+          "Esporte e Lazer",
+          "Indústria, Comércio e Serviços"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2545793",
+        "sigla": "PL 3999/2025",
+        "tipo": "PL",
+        "data": "2025-08-14",
+        "ementa": "Altera a Lei nº 14.790, de 29 de dezembro de 2023, para determinar a necessidade de comprovação de idoneidade para concessão de autorização para exploração comercial da modalidade lotérica de apostas de quota fixa.",
+        "situacao": "Aguardando Designação de Relator(a)",
+        "data_situacao": "2025-09-12",
+        "participacao": "coautoria",
+        "temas": [
+          "Economia",
+          "Esporte e Lazer",
+          "Finanças Públicas e Orçamento"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2543145",
+        "sigla": "PEC 30/2025",
+        "tipo": "PEC",
+        "data": "2025-08-12",
+        "ementa": "Altera a Constituição Federal e o Ato das Disposições Constitucionais Transitórias para estabelecer regras antiprivilégios para agentes públicos.",
+        "situacao": "Aguardando Despacho do Presidente da Câmara dos Deputados (Chancela)",
+        "data_situacao": "2025-11-19",
+        "participacao": "coautoria",
+        "temas": [
+          "Administração Pública",
+          "Trabalho e Emprego"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2542388",
+        "sigla": "PL 3886/2025",
+        "tipo": "PL",
+        "data": "2025-08-11",
+        "ementa": "Proíbe a monetização de conteúdos digitais com a participação de crianças e adolescentes e altera a Lei nº 8.069, de 13 de julho de 1990 – Estatuto da Criança e do Adolescente, a Lei nº 12.965, de 23 de abril de 2014 – Marco Civil da Internet, e a Lei nº 13.709, de 14 de agosto de 2018 – Lei Geral de Proteção de Dados Pessoais, para reforçar a proteção de crianças e adolescentes.",
+        "situacao": "Aguardando Despacho do Presidente da Câmara dos Deputados (Análise)",
+        "data_situacao": "2025-10-09",
+        "participacao": "primeira",
+        "temas": [
+          "Comunicações",
+          "Direito Penal e Processual Penal",
+          "Direitos Humanos e Minorias"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2539206",
+        "sigla": "PL 3672/2025",
+        "tipo": "PL",
+        "data": "2025-08-01",
+        "ementa": "Institui incentivo financeiro, na modalidade bolsa, com o objetivo de promover a capacitação profissional e o empreendedorismo de jovens egressos do ensino médio público em situação de vulnerabilidade socioeconômica.",
+        "situacao": "Aguardando Parecer",
+        "data_situacao": "2026-04-28",
+        "participacao": "primeira",
+        "temas": [
+          "Direitos Humanos e Minorias",
+          "Educação"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2539198",
+        "sigla": "PL 3670/2025",
+        "tipo": "PL",
+        "data": "2025-07-31",
+        "ementa": "Altera a Lei nº 8.429, de 2 de junho de 1992, que dispõe sobre improbidade administrativa, para incluir nova hipótese de conduta que atenta contra os princípios da administração pública.",
+        "situacao": "Aguardando Parecer",
+        "data_situacao": "2026-03-26",
+        "participacao": "primeira",
+        "temas": [
+          "Administração Pública"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2538380",
+        "sigla": "PLP 156/2025",
+        "tipo": "PLP",
+        "data": "2025-07-21",
+        "ementa": "Altera a Lei Complementar nº 210, de 25 de novembro de 2024 para dispor sobre os limites das emendas parlamentares aos projetos de lei orçamentária anual.",
+        "situacao": "Pronta para Pauta",
+        "data_situacao": "2026-07-06",
+        "participacao": "primeira",
+        "temas": [
+          "Finanças Públicas e Orçamento"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2534271",
+        "sigla": "PL 3328/2025",
+        "tipo": "PL",
+        "data": "2025-07-09",
+        "ementa": "Dispõe sobre verbas indenizatórias para fins do teto remuneratório e do aprimoramento da fiscalização financeira da Administração Pública e do controle do gasto público, conforme o previsto respectivamente nos artigos 37, XI, § 11, e 163, V, da Constituição Federal",
+        "situacao": "Tramitando em Conjunto",
+        "data_situacao": "2025-11-24",
+        "participacao": "primeira",
+        "temas": [
+          "Administração Pública",
+          "Finanças Públicas e Orçamento"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2528444",
+        "sigla": "PL 3069/2025",
+        "tipo": "PL",
+        "data": "2025-06-25",
+        "ementa": "Dispõe sobre as normas gerais de contratação de agentes públicos especiais, nos termos do inciso IX do art. 37 da Constituição Federal.",
+        "situacao": "Aguardando Despacho do Presidente da Câmara dos Deputados (Autorização)",
+        "data_situacao": "2025-06-25",
+        "participacao": "primeira",
+        "temas": [
+          "Administração Pública",
+          "Trabalho e Emprego"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2517109",
+        "sigla": "PL 2581/2025",
+        "tipo": "PL",
+        "data": "2025-05-27",
+        "ementa": "Altera a legislação do imposto sobre a renda para instituir a redução do imposto devido nas bases de cálculo mensal e anual e a tributação mínima para as pessoas físicas que auferem altas rendas, e dá outras providências.",
+        "situacao": "Aguardando Designação de Relator(a)",
+        "data_situacao": "2025-07-18",
+        "participacao": "primeira",
+        "temas": [
+          "Finanças Públicas e Orçamento"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2508480",
+        "sigla": "PL 2280/2025",
+        "tipo": "PL",
+        "data": "2025-05-13",
+        "ementa": "Dispõe sobre a destinação de percentual dos recursos depositados em plataformas digitais de operação financeira para contas de poupança de titularidade do usuário, e dá outras providências.",
+        "situacao": "Aguardando Parecer",
+        "data_situacao": "2026-06-02",
+        "participacao": "primeira",
+        "temas": [
+          "Economia",
+          "Esporte e Lazer"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2508479",
+        "sigla": "PL 2279/2025",
+        "tipo": "PL",
+        "data": "2025-05-13",
+        "ementa": "Altera a Lei nº 14.790, de 29 de dezembro de 2023, que dispõe sobre a modalidade lotérica denominada apostas de quota fixa.",
+        "situacao": "Aguardando Designação de Relator(a)",
+        "data_situacao": "2025-06-10",
+        "participacao": "coautoria",
+        "temas": [
+          "Administração Pública",
+          "Esporte e Lazer",
+          "Indústria, Comércio e Serviços",
+          "Trabalho e Emprego"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2508461",
+        "sigla": "PL 2278/2025",
+        "tipo": "PL",
+        "data": "2025-05-13",
+        "ementa": "Altera a Lei nº 14.790, de 29 de dezembro de 2023, para determinar a limitação das apostas nos casos que especifica.",
+        "situacao": "Aguardando Designação de Relator(a)",
+        "data_situacao": "2025-06-10",
+        "participacao": "coautoria",
+        "temas": [
+          "Esporte e Lazer",
+          "Indústria, Comércio e Serviços",
+          "Previdência e Assistência Social"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2508313",
+        "sigla": "PL 2269/2025",
+        "tipo": "PL",
+        "data": "2025-05-13",
+        "ementa": "Altera a Lei nº 14.790, de 29 de dezembro de 2023, que dispõe sobre a modalidade lotérica denominada apostas de quota fixa, para tratar sobre publicidade e propaganda comercial de apostas, de produtos, serviços ou arranjos a eles assemelhados.",
+        "situacao": "Pronta para Pauta",
+        "data_situacao": "2026-04-15",
+        "participacao": "coautoria",
+        "temas": [
+          "Direitos Humanos e Minorias",
+          "Esporte e Lazer",
+          "Saúde"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2504516",
+        "sigla": "PEC 21/2025",
+        "tipo": "PEC",
+        "data": "2025-05-06",
+        "ementa": "Acrescenta o inciso LXXX ao artigo 5º da Constituição Federal para tornar imprescritível os crimes sexuais quando cometidos contra menores de doze anos de idade.",
+        "situacao": "Aguardando Criação de Comissão Temporária",
+        "data_situacao": "2026-07-21",
+        "participacao": "apoio",
+        "temas": [
+          "Direito Constitucional",
+          "Direito Penal e Processual Penal",
+          "Direitos Humanos e Minorias"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2500205",
+        "sigla": "PL 1849/2025",
+        "tipo": "PL",
+        "data": "2025-04-24",
+        "ementa": "Autoriza e estabelece diretrizes para criação do Programa Acesso Livre e cria campanhas de conscientização acerca do sistema de free flow.",
+        "situacao": "Tramitando em Conjunto",
+        "data_situacao": "2026-03-10",
+        "participacao": "primeira",
+        "temas": [
+          "Direito e Defesa do Consumidor",
+          "Direitos Humanos e Minorias",
+          "Viação, Transporte e Mobilidade"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2486860",
+        "sigla": "PL 982/2025",
+        "tipo": "PL",
+        "data": "2025-03-13",
+        "ementa": "Altera a Lei nº 11.340, de 7 de agosto de 2006 (Lei Maria da Penha) para dispensar o exame de corpo de delito nos crimes cometidos no contexto de violência doméstica e dá outras providências.",
+        "situacao": "Pronta para Pauta",
+        "data_situacao": "2025-12-16",
+        "participacao": "primeira",
+        "temas": [
+          "Defesa e Segurança",
+          "Direito Penal e Processual Penal",
+          "Direitos Humanos e Minorias"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2486802",
+        "sigla": "PL 973/2025",
+        "tipo": "PL",
+        "data": "2025-03-12",
+        "ementa": "Altera a Lei nº 14.937, de 26 de julho de 2024, para criar a Letra de Crédito de Desenvolvimento Educacional (LCD-e) e a Letra de Crédito de Desenvolvimento da Inovação (LCD-i).",
+        "situacao": "Aguardando Parecer",
+        "data_situacao": "2025-10-23",
+        "participacao": "coautoria",
+        "temas": [
+          "Ciência, Tecnologia e Inovação",
+          "Economia",
+          "Educação",
+          "Indústria, Comércio e Serviços"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2486052",
+        "sigla": "PL 787/2025",
+        "tipo": "PL",
+        "data": "2025-03-07",
+        "ementa": "Institui o dia 7 de abril como Dia Nacional da Avaliação de Políticas Públicas.",
+        "situacao": "Pronta para Pauta",
+        "data_situacao": "2026-10-28",
+        "participacao": "primeira",
+        "temas": [
+          "Administração Pública",
+          "Homenagens e Datas Comemorativas"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2485341",
+        "sigla": "PEC 8/2025",
+        "tipo": "PEC",
+        "data": "2025-02-25",
+        "ementa": "Dá nova redação ao inciso XIII, do artigo 7° da Constituição Federal para dispor sobre a redução da jornada de trabalho para quatro dias por semana no Brasil.",
+        "situacao": "Arquivada",
+        "data_situacao": "2026-05-27",
+        "participacao": "apoio",
+        "temas": [
+          "Direito Constitucional",
+          "Indústria, Comércio e Serviços",
+          "Trabalho e Emprego"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2479306",
+        "sigla": "PL 4841/2024",
+        "tipo": "PL",
+        "data": "2024-12-11",
+        "ementa": "Altera as Leis nº 6.880, de 9 de dezembro de 1980 (Estatuto dos Militares), 3.765, de 4 de maio de 1960, e 13.954, de 16 de dezembro de 2019, para dispor sobre os proventos dos militares inativos, as pensões militares e a transferência para a reserva remunerada.",
+        "situacao": "Retirado pelo(a) Autor(a)",
+        "data_situacao": "2025-04-02",
+        "participacao": "coautoria",
+        "temas": [
+          "Defesa e Segurança",
+          "Finanças Públicas e Orçamento",
+          "Previdência e Assistência Social"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2479282",
+        "sigla": "PL 4840/2024",
+        "tipo": "PL",
+        "data": "2024-12-11",
+        "ementa": "Eleva os valores de referência do desconto simplificado do IRPF e institui tributação mínima da alta renda.",
+        "situacao": "Aguardando Designação de Relator(a)",
+        "data_situacao": "2025-03-10",
+        "participacao": "coautoria",
+        "temas": [
+          "Finanças Públicas e Orçamento"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2479279",
+        "sigla": "PL 4839/2024",
+        "tipo": "PL",
+        "data": "2024-12-11",
+        "ementa": "Dispõe sobre o teto remuneratório estabelecido no inciso XI do caput e no § 9º do art. 37 da Constituição Federal e dá outras providências.",
+        "situacao": "Tramitando em Conjunto",
+        "data_situacao": "2025-03-14",
+        "participacao": "primeira",
+        "temas": [
+          "Administração Pública",
+          "Direito Constitucional"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2479263",
+        "sigla": "PLP 227/2024",
+        "tipo": "PLP",
+        "data": "2024-12-11",
+        "ementa": "Dispõe sobre as condições e limites para concessão, ampliação ou prorrogação de incentivo ou benefício de natureza tributária.",
+        "situacao": "Aguardando Despacho do Presidente da Câmara dos Deputados (Chancela)",
+        "data_situacao": "2025-07-07",
+        "participacao": "coautoria",
+        "temas": [
+          "Administração Pública",
+          "Finanças Públicas e Orçamento"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2479121",
+        "sigla": "PL 4835/2024",
+        "tipo": "PL",
+        "data": "2024-12-11",
+        "ementa": "Dispõe sobre a obrigatoriedade de órgãos da Administração Direta e Indireta compartilhar bases de dados sobre remuneração de servidores públicos.",
+        "situacao": "Aguardando Designação de Relator(a)",
+        "data_situacao": "2025-03-10",
+        "participacao": "coautoria",
+        "temas": [
+          "Administração Pública"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2468653",
+        "sigla": "PL 4359/2024",
+        "tipo": "PL",
+        "data": "2024-11-12",
+        "ementa": "Altera e acrescenta disposições à Lei nº 9.394, de 20 de dezembro de 1996, que estabelece as diretrizes e bases da educação nacional.",
+        "situacao": "Tramitando em Conjunto",
+        "data_situacao": "2026-04-08",
+        "participacao": "primeira",
+        "temas": [
+          "Direitos Humanos e Minorias",
+          "Educação"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2468520",
+        "sigla": "PL 4340/2024",
+        "tipo": "PL",
+        "data": "2024-11-12",
+        "ementa": "Altera e acrescenta disposições à Lei nº 12.288, de 20 de julho de 2010, que institui o Estatuto da Igualdade Racial.",
+        "situacao": "Aguardando Parecer",
+        "data_situacao": "2026-04-22",
+        "participacao": "coautoria",
+        "temas": [
+          "Direitos Humanos e Minorias",
+          "Educação",
+          "Esporte e Lazer"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2458742",
+        "sigla": "PEC 34/2024",
+        "tipo": "PEC",
+        "data": "2024-09-19",
+        "ementa": "Inclui a primeira infância como beneficiária de direitos e garantias, no Texto Constitucional.",
+        "situacao": "",
+        "data_situacao": "2026-07-01",
+        "participacao": "apoio",
+        "temas": [
+          "Direitos Humanos e Minorias"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2458654",
+        "sigla": "PL 3628/2024",
+        "tipo": "PL",
+        "data": "2024-09-18",
+        "ementa": "Altera e acrescenta disposições à Lei nº 14.817, de 2024, que estabelece diretrizes para a valorização dos profissionais da educação escolar básica pública.",
+        "situacao": "Aguardando Parecer",
+        "data_situacao": "2026-04-27",
+        "participacao": "coautoria",
+        "temas": [
+          "Administração Pública",
+          "Educação",
+          "Trabalho e Emprego"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2455854",
+        "sigla": "PL 3364/2024",
+        "tipo": "PL",
+        "data": "2024-08-28",
+        "ementa": "Institui normas gerais de contratação por meio de Parceiras Público Populares (PPPopular); altera a Lei nº 9.608, de 18 de Fevereiro de 1998; altera a Lei nº 14.133, de 1º de Abril de 2021 e dá outras providências.",
+        "situacao": "Aguardando Designação de Relator(a)",
+        "data_situacao": "2026-04-08",
+        "participacao": "coautoria",
+        "temas": [
+          "Administração Pública",
+          "Cidades e Desenvolvimento Urbano",
+          "Direitos Humanos e Minorias"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2455751",
+        "sigla": "PL 3346/2024",
+        "tipo": "PL",
+        "data": "2024-08-28",
+        "ementa": "Acrescenta o art. 129-A ao Código Penal a fim de tipificar o crime de violência obstétrica.",
+        "situacao": "",
+        "data_situacao": "2024-12-18",
+        "participacao": "primeira",
+        "temas": [
+          "Direitos Humanos e Minorias",
+          "Saúde"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2454257",
+        "sigla": "PLP 136/2024",
+        "tipo": "PLP",
+        "data": "2024-08-21",
+        "ementa": "Altera a Lei Complementar nº79, de 7 de janeiro de 1994, e a Leinº 13.756, de 12 de dezembro de 2018, para dispor, expressamente, sobre a aplicação de recursos do Fundo Penitenciário Nacional (FUPEN) e do Fundo Nacional de Segurança Pública (FNSP) em órgãos e entidadesque implementam ações de prevenção e enfrentamento da violência contra a mulher nos âmbitos estadual e municipal.",
+        "situacao": "Aguardando Apreciação pelo Senado Federal",
+        "data_situacao": "2024-12-13",
+        "participacao": "coautoria",
+        "temas": [
+          "Defesa e Segurança",
+          "Direitos Humanos e Minorias",
+          "Finanças Públicas e Orçamento"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2452628",
+        "sigla": "PL 3148/2024",
+        "tipo": "PL",
+        "data": "2024-08-13",
+        "ementa": "Inscreve o nome de Eduardo Campos no Livro dos Heróis da Pátria NOVA EMENTA: Inscreve o nome de Eduardo Henrique Accioly Campos no Livro dos Heróis e Heroínas da Pátria.",
+        "situacao": "Transformado em Norma Jurídica",
+        "data_situacao": "2024-10-24",
+        "participacao": "coautoria",
+        "temas": [
+          "Homenagens e Datas Comemorativas"
+        ],
+        "norma": {
+          "nome": "Lei Ordinária 14999/2024",
+          "data": "2024-10-15",
+          "veto_parcial": false
+        }
+      },
+      {
+        "id": "2449804",
+        "sigla": "PL 2947/2024",
+        "tipo": "PL",
+        "data": "2024-07-17",
+        "ementa": "Altera o art. 47 da Lei nº 12.351, de 22 de dezembro de 2010, para incluir a Política Nacional de Cuidados entre os programas e projetos beneficiados pelo Fundo Social.",
+        "situacao": "Aguardando Designação de Relator(a)",
+        "data_situacao": "2025-10-14",
+        "participacao": "coautoria",
+        "temas": [
+          "Administração Pública",
+          "Previdência e Assistência Social"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2448400",
+        "sigla": "PL 2821/2024",
+        "tipo": "PL",
+        "data": "2024-07-10",
+        "ementa": "Dispõe sobre a sanção administrativa para o mau uso de sistemas de alerta para desastres e dá outras providências.",
+        "situacao": "Aguardando Parecer",
+        "data_situacao": "2026-02-25",
+        "participacao": "coautoria",
+        "temas": [
+          "Administração Pública",
+          "Defesa e Segurança"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2448069",
+        "sigla": "PL 2809/2024",
+        "tipo": "PL",
+        "data": "2024-07-09",
+        "ementa": "Altera a Lei nº 7.797, de 10 de julho de 1989, a Lei nº 9.795, de 27 de abril de 1999, e a Lei nº 12.187, de 29 de dezembro de 2009, para incluir a previsão de educação para reação a desastres climáticos.",
+        "situacao": "Aguardando Apreciação pelo Senado Federal",
+        "data_situacao": "2025-11-11",
+        "participacao": "coautoria",
+        "temas": [
+          "Defesa e Segurança",
+          "Educação",
+          "Finanças Públicas e Orçamento",
+          "Meio Ambiente e Desenvolvimento Sustentável"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2442708",
+        "sigla": "PL 2518/2024",
+        "tipo": "PL",
+        "data": "2024-06-20",
+        "ementa": "Dispõe sobre a mensuração do bem-estar subjetivo dos cidadãos e o seu uso na formulação e avaliação de políticas públicas.",
+        "situacao": "Aguardando Designação de Relator(a)",
+        "data_situacao": "2026-05-18",
+        "participacao": "primeira",
+        "temas": [
+          "Administração Pública",
+          "Direitos Humanos e Minorias",
+          "Saúde"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2436619",
+        "sigla": "PEC 23/2024",
+        "tipo": "PEC",
+        "data": "2024-05-27",
+        "ementa": "Acrescenta o §2º no Art. 4º da Constituição para acrescentar a integração dos países de língua portuguesa entre os princípios que regem as relações internacionais da República Federativa do Brasil.",
+        "situacao": "Aguardando Despacho do Presidente da Câmara dos Deputados (Chancela)",
+        "data_situacao": "2024-05-27",
+        "participacao": "coautoria",
+        "temas": [
+          "Relações Internacionais e Comércio Exterior"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2436473",
+        "sigla": "PLP 99/2024",
+        "tipo": "PLP",
+        "data": "2024-05-24",
+        "ementa": "Regulamenta o inciso IV, do § 3º do art. 9º da Emenda Constitucional 132 de 20 de dezembro de 2023, para dispor sobre a redução de alíquotas do IBS e da CBS para atividades de reabilitação urbana de zonas históricas e de áreas críticas de recuperação e reconversão urbanística.",
+        "situacao": "Aguardando Despacho do Presidente da Câmara dos Deputados (Chancela)",
+        "data_situacao": "2024-05-24",
+        "participacao": "primeira",
+        "temas": [
+          "Arte, Cultura e Religião",
+          "Cidades e Desenvolvimento Urbano",
+          "Finanças Públicas e Orçamento"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2436066",
+        "sigla": "PL 2012/2024",
+        "tipo": "PL",
+        "data": "2024-05-22",
+        "ementa": "Altera a Lei nº 14.818, de 16 de janeiro de 2024, para dispensar auferição de frequência dos estudantes matriculados em municípios em situação de calamidade pública reconhecida pelo Poder Executivo federal .",
+        "situacao": "Aguardando Designação de Relator(a)",
+        "data_situacao": "2025-06-02",
+        "participacao": "primeira",
+        "temas": [
+          "Direitos Humanos e Minorias",
+          "Educação",
+          "Finanças Públicas e Orçamento"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2435133",
+        "sigla": "PEC 20/2024",
+        "tipo": "PEC",
+        "data": "2024-05-21",
+        "ementa": "Institui o Regime Extraordinário Fiscal, Financeiro e de Contratações destinado ao enfrentamento de calamidade pública e à reconstrução da infraestrutura física e social no Estado do Rio Grande do Sul, bem como ao suporte direto às famílias afetadas.",
+        "situacao": "Aguardando Parecer",
+        "data_situacao": "2025-04-15",
+        "participacao": "apoio",
+        "temas": [
+          "Administração Pública",
+          "Finanças Públicas e Orçamento"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2434933",
+        "sigla": "PL 1953/2024",
+        "tipo": "PL",
+        "data": "2024-05-21",
+        "ementa": "Altera e acrescenta disposições à Lei nº 10.260, de 2001, que trata do Fundo de Financiamento Estudantil.",
+        "situacao": "Aguardando Designação de Relator(a)",
+        "data_situacao": "2026-07-02",
+        "participacao": "coautoria",
+        "temas": [
+          "Economia",
+          "Educação"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2434704",
+        "sigla": "PL 1922/2024",
+        "tipo": "PL",
+        "data": "2024-05-20",
+        "ementa": "Institui o Protocolo para Atendimento e Cuidado à Saúde Mental de Pessoas Atingidas por Desastres Ambientais, Climáticos ou Tecnológicos.",
+        "situacao": "",
+        "data_situacao": "2026-03-06",
+        "participacao": "coautoria",
+        "temas": [
+          "Administração Pública",
+          "Defesa e Segurança",
+          "Saúde"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2434637",
+        "sigla": "PL 1917/2024",
+        "tipo": "PL",
+        "data": "2024-05-17",
+        "ementa": "Altera e acrescenta disposições à Lei nº 10.260, de 2001, que trata do Fundo de Financiamento Estudantil.",
+        "situacao": "Aguardando Designação de Relator(a)",
+        "data_situacao": "2025-09-10",
+        "participacao": "coautoria",
+        "temas": [
+          "Direitos Humanos e Minorias",
+          "Educação",
+          "Finanças Públicas e Orçamento"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2434636",
+        "sigla": "PLP 93/2024",
+        "tipo": "PLP",
+        "data": "2024-05-17",
+        "ementa": "Altera a Lei Complementar nº 199, de 1° de agosto de 2023, para possibilitar o compartilhamento de informação pelas administrações tributárias da União, dos Estados, do Distrito Federal e dos Munícipios com a instituição financeira pública federal, agente operador, nos termos do inciso II do art. 3° da Lei 10.260, de 12 de julho de 2001, de estudantes beneficiados por financiamento estudantil com recursos do Fundo de Financiamento Estudantil (Fies).",
+        "situacao": "Pronta para Pauta",
+        "data_situacao": "2025-09-24",
+        "participacao": "coautoria",
+        "temas": [
+          "Economia",
+          "Educação",
+          "Finanças Públicas e Orçamento"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2434380",
+        "sigla": "PL 1883/2024",
+        "tipo": "PL",
+        "data": "2024-05-16",
+        "ementa": "Institui a Política Nacional de Resiliência Psicossocial em resposta a desastres ambientais, dispondo de orientações sobre a prevenção, promoção e pósvenção em saúde mental. Altera a Lei 12.608, de 10 de abril de 2012, e a Consolidação das Leis do Trabalho (CLT), aprovada pelo Decreto-Lei nº 5.452, de 1º de maio de 1943 e dá outras providências.",
+        "situacao": "Pronta para Pauta",
+        "data_situacao": "2026-05-05",
+        "participacao": "primeira",
+        "temas": [
+          "Cidades e Desenvolvimento Urbano",
+          "Saúde"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2432694",
+        "sigla": "PL 1720/2024",
+        "tipo": "PL",
+        "data": "2024-05-09",
+        "ementa": "Altera o art. 19-J a Lei nº 8.080, de 19 de setembro de 1990, para dispor sobre o direito da mulher a acompanhante nos atendimentos realizados em serviços de saúde públicos ou privados.",
+        "situacao": "",
+        "data_situacao": "2026-05-25",
+        "participacao": "primeira",
+        "temas": [
+          "Direitos Humanos e Minorias",
+          "Saúde"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2432389",
+        "sigla": "PL 1703/2024",
+        "tipo": "PL",
+        "data": "2024-05-08",
+        "ementa": "Institucionaliza medidas de auxílio quando for reconhecido estado de calamidade pública.",
+        "situacao": "Tramitando em Conjunto",
+        "data_situacao": "2026-03-20",
+        "participacao": "primeira",
+        "temas": [
+          "Direitos Humanos e Minorias",
+          "Finanças Públicas e Orçamento",
+          "Previdência e Assistência Social"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2430185",
+        "sigla": "PL 1457/2024",
+        "tipo": "PL",
+        "data": "2024-04-25",
+        "ementa": "Altera a Lei 9.605, de 12 de fevereiro de 1998 (Lei de Crimes Ambientais) e o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para prever duplicação de prazos prescricionais aplicáveis a este tipo de crimes.",
+        "situacao": "Pronta para Pauta",
+        "data_situacao": "2024-12-19",
+        "participacao": "coautoria",
+        "temas": [
+          "Direito Penal e Processual Penal",
+          "Meio Ambiente e Desenvolvimento Sustentável"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2430184",
+        "sigla": "PL 1456/2024",
+        "tipo": "PL",
+        "data": "2024-04-25",
+        "ementa": "Majora a pena do crime de poluição por uso indevido de substância tóxica, quando aplicada por pulverização aérea sobre área úmida",
+        "situacao": "Aguardando Designação de Relator(a)",
+        "data_situacao": "2025-04-11",
+        "participacao": "coautoria",
+        "temas": [
+          "Direito Penal e Processual Penal",
+          "Meio Ambiente e Desenvolvimento Sustentável"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2430056",
+        "sigla": "PL 1443/2024",
+        "tipo": "PL",
+        "data": "2024-04-24",
+        "ementa": "Dispõe sobre medidas para o bem-estar e prevenção de extravio de animais em viagens aéreas. (Lei Cão Joca)",
+        "situacao": "",
+        "data_situacao": "2025-11-05",
+        "participacao": "primeira",
+        "temas": [
+          "Viação, Transporte e Mobilidade"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2428346",
+        "sigla": "PEC 14/2024",
+        "tipo": "PEC",
+        "data": "2024-04-19",
+        "ementa": "Altera o art. 6º da Constituição Federal, para positivar o direito aos cuidados no rol de direitos sociais.",
+        "situacao": "Aguardando Despacho do Presidente da Câmara dos Deputados (Chancela)",
+        "data_situacao": "2024-12-19",
+        "participacao": "coautoria",
+        "temas": [
+          "Direitos Humanos e Minorias"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2428116",
+        "sigla": "PLP 61/2024",
+        "tipo": "PLP",
+        "data": "2024-04-17",
+        "ementa": "Altera a Lei Complementar nº 187, de 16 de dezembro de 2021, para aprimorar o processo de seleção de bolsistas e a vedação a qualquer forma de discriminação entre alunos bolsistas e pagantes em entidades beneficentes com atuação na área da educação.",
+        "situacao": "Retirado pelo(a) Autor(a)",
+        "data_situacao": "2024-05-21",
+        "participacao": "primeira",
+        "temas": [
+          "Educação"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2428115",
+        "sigla": "PL 1327/2024",
+        "tipo": "PL",
+        "data": "2024-04-17",
+        "ementa": "Dispõe sobre a campanha “Maio Vermelho”, voltada à conscientização sobre os acidentes vasculares cerebrais.",
+        "situacao": "Aguardando Apreciação pelo Senado Federal",
+        "data_situacao": "2025-12-19",
+        "participacao": "primeira",
+        "temas": [
+          "Educação",
+          "Saúde"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2428114",
+        "sigla": "PL 1326/2024",
+        "tipo": "PL",
+        "data": "2024-04-17",
+        "ementa": "Cria o selo Escola Voluntária.",
+        "situacao": "Aguardando Designação de Relator(a)",
+        "data_situacao": "2025-04-11",
+        "participacao": "primeira",
+        "temas": [
+          "Educação"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2427040",
+        "sigla": "PL 1275/2024",
+        "tipo": "PL",
+        "data": "2024-04-16",
+        "ementa": "Altera a Lei nº 12.187, de 29 de dezembro de 2009, que institui a Política Nacional sobre Mudança do Clima - PNMC e dá outras providências, para incluir disposições relativas à emergência climática.",
+        "situacao": "Tramitando em Conjunto",
+        "data_situacao": "2024-07-08",
+        "participacao": "coautoria",
+        "temas": [
+          "Meio Ambiente e Desenvolvimento Sustentável"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2423278",
+        "sigla": "PL 958/2024",
+        "tipo": "PL",
+        "data": "2024-03-25",
+        "ementa": "Estabelece normas gerais sobre abordagens policiais humanizadas a pessoas em situação de crise de saúde mental.",
+        "situacao": "Aguardando Parecer",
+        "data_situacao": "2025-04-09",
+        "participacao": "primeira",
+        "temas": [
+          "Defesa e Segurança",
+          "Saúde"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2421295",
+        "sigla": "PL 777/2024",
+        "tipo": "PL",
+        "data": "2024-03-14",
+        "ementa": "Estabelece ações de promoção da saúde mental da pessoa idosa e de suas cuidadoras no Sistema Único de Saúde (SUS), e altera a Lei nº 8.842, de 4 de janeiro de 1994, que dispõe sobre a política nacional do idoso.",
+        "situacao": "Arquivada",
+        "data_situacao": "2025-04-09",
+        "participacao": "coautoria",
+        "temas": [
+          "Direitos Humanos e Minorias",
+          "Previdência e Assistência Social",
+          "Saúde"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2416711",
+        "sigla": "PL 6228/2023",
+        "tipo": "PL",
+        "data": "2023-12-22",
+        "ementa": "Altera a Lei nº 8.394, de 30 de dezembro de 1991, para aperfeiçoar a preservação, organização e proteção do acervo documental dos presidentes da República e dos vice-presidentes da República.",
+        "situacao": "Aguardando Parecer",
+        "data_situacao": "2025-04-15",
+        "participacao": "primeira",
+        "temas": [
+          "Administração Pública"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2416685",
+        "sigla": "PL 6227/2023",
+        "tipo": "PL",
+        "data": "2023-12-22",
+        "ementa": "Altera a Lei nº 11.343, de 23 de agosto de 2006, para dispor sobre mecanismos de combate a práticas irregulares, abusivas ou violadoras de direitos em Comunidades Terapêuticas Acolhedoras.",
+        "situacao": "Aguardando Parecer",
+        "data_situacao": "2026-05-14",
+        "participacao": "primeira",
+        "temas": [
+          "Direitos Humanos e Minorias",
+          "Saúde"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2416586",
+        "sigla": "PL 6216/2023",
+        "tipo": "PL",
+        "data": "2023-12-22",
+        "ementa": "Dispõe sobre a regulamentação da licença-paternidade prevista no inciso XIX do art. 7º da Constituição Federal e altera as Leis nº 8.212 e nº 8.213, ambas de 24 de julho de 1991, para instituir o benefício do salário-paternidade no âmbito da Previdência Social.",
+        "situacao": "Arquivada",
+        "data_situacao": "2025-11-04",
+        "participacao": "primeira",
+        "temas": [
+          "Previdência e Assistência Social",
+          "Trabalho e Emprego"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2406899",
+        "sigla": "PL 5727/2023",
+        "tipo": "PL",
+        "data": "2023-11-28",
+        "ementa": "Altera a Lei nº 13.005, de 25 de junho de 2014, que aprova o Plano Nacional de Educação, para estabelecer estratégia relativa à ampliação da oferta de serviços de psicologia e de serviço social pelas redes públicas de educação.",
+        "situacao": "Pronta para Pauta",
+        "data_situacao": "2024-02-28",
+        "participacao": "coautoria",
+        "temas": [
+          "Educação"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2406521",
+        "sigla": "PL 5696/2023",
+        "tipo": "PL",
+        "data": "2023-11-24",
+        "ementa": "Altera as Leis nº 9.394, de 20 de dezembro de 1996, e nº 11.947, de 16 de junho de 2009, para garantir o acesso à água potável nas instituições de ensino. NOVA EMENTA: Altera as Leis nºs 9.394, de 20 de dezembro de 1996 (Lei de Diretrizes e Bases da Educação Nacional), e 11.947, de 16 de junho de 2009, para garantir o acesso à água potável nas instituições de ensino.",
+        "situacao": "Transformado em Norma Jurídica",
+        "data_situacao": "2025-11-28",
+        "participacao": "coautoria",
+        "temas": [
+          "Educação",
+          "Energia, Recursos Hídricos e Minerais"
+        ],
+        "norma": {
+          "nome": "Lei Ordinária 15276/2025",
+          "data": "2025-11-28",
+          "veto_parcial": true
+        }
+      },
+      {
+        "id": "2406231",
+        "sigla": "PL 5669/2023",
+        "tipo": "PL",
+        "data": "2023-11-23",
+        "ementa": "Institui Política de Prevenção e Combate à Violência em Âmbito Escolar (Prever).",
+        "situacao": "Aguardando Apreciação pelo Senado Federal",
+        "data_situacao": "2025-10-24",
+        "participacao": "coautoria",
+        "temas": [
+          "Arte, Cultura e Religião",
+          "Defesa e Segurança",
+          "Direitos Humanos e Minorias",
+          "Educação",
+          "Previdência e Assistência Social",
+          "Saúde"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2404706",
+        "sigla": "PEC 62/2023",
+        "tipo": "PEC",
+        "data": "2023-11-21",
+        "ementa": "Altera o artigo 122 do Ato das Disposições Constitucionais Transitórias.",
+        "situacao": "Aguardando Despacho do Presidente da Câmara dos Deputados (Chancela)",
+        "data_situacao": "2023-11-27",
+        "participacao": "coautoria",
+        "temas": [
+          "Finanças Públicas e Orçamento",
+          "Saúde"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2404300",
+        "sigla": "PL 5545/2023",
+        "tipo": "PL",
+        "data": "2023-11-20",
+        "ementa": "Dispõe sobre fornecimento gratuito de água potável em estabelecimentos comerciais e eventos públicos e privados de grande porte, bem como a vedação à proibição do porte de garrafas próprias e individuais de água.",
+        "situacao": "Tramitando em Conjunto",
+        "data_situacao": "2024-03-14",
+        "participacao": "primeira",
+        "temas": [
+          "Arte, Cultura e Religião",
+          "Direito e Defesa do Consumidor",
+          "Esporte e Lazer",
+          "Saúde"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2403726",
+        "sigla": "PL 5492/2023",
+        "tipo": "PL",
+        "data": "2023-11-13",
+        "ementa": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal) para dispor sobre os crimes sexuais virtuais.",
+        "situacao": "",
+        "data_situacao": "2023-12-22",
+        "participacao": "coautoria",
+        "temas": [
+          "Direito Penal e Processual Penal"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2403542",
+        "sigla": "PL 5477/2023",
+        "tipo": "PL",
+        "data": "2023-11-13",
+        "ementa": "Altera a redação do artigo 9º da Lei nº 6.634, de 2 de maio de 1979, quanto ao repasse de recursos destinados ao acolhimento humanitário de pessoas refugiadas, solicitantes de reconhecimento da condição de refugiado, apátridas e outras em situação de vulnerabilidade decorrente de fluxo provocado por crise humanitária para os Municípios sede de Aeroportos Internacionais e Aeródromos Militares, excepcional e temporariamente reconhecidos como faixa de fronteira.",
+        "situacao": "Pronta para Pauta",
+        "data_situacao": "2025-11-26",
+        "participacao": "primeira",
+        "temas": [
+          "Cidades e Desenvolvimento Urbano",
+          "Direitos Humanos e Minorias",
+          "Viação, Transporte e Mobilidade"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2399692",
+        "sigla": "PL 5238/2023",
+        "tipo": "PL",
+        "data": "2023-10-27",
+        "ementa": "Dispõe sobre a regulamentação do direito de acesso dos candidatos ao Exame Nacional do Ensino Médio (ENEM).",
+        "situacao": "",
+        "data_situacao": "2026-02-24",
+        "participacao": "primeira",
+        "temas": [
+          "Direitos Humanos e Minorias",
+          "Educação"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2395783",
+        "sigla": "PL 4978/2023",
+        "tipo": "PL",
+        "data": "2023-10-11",
+        "ementa": "Altera a Lei n° 13.105, de 2015 (Código de Processo Civil) de modo a simplificar a ação alimentícia, criar novo procedimento para o pagamento automático da prestação alimentícia, e permitir a penhora de ativos adicionais, exclusivamente para pagar alimentos. Finalmente, acrescenta itens à Lei n° 11.364, para permitir que a sociedade tenha acesso a estatísticas detalhadas sobre a atividade judiciária, inclusive em relação a ações de alimentos.",
+        "situacao": "Transformado em Norma Jurídica",
+        "data_situacao": "2026-08-04",
+        "participacao": "primeira",
+        "temas": [
+          "Direito e Justiça",
+          "Direitos Humanos e Minorias"
+        ],
+        "norma": {
+          "nome": "Lei Ordinária 15479/2026",
+          "data": "2026-07-29",
+          "veto_parcial": false
+        }
+      },
+      {
+        "id": "2392046",
+        "sigla": "PL 4758/2023",
+        "tipo": "PL",
+        "data": "2023-09-29",
+        "ementa": "Altera o Decreto-Lei nº 2.848, de 7 de setembro de 1940 (Código Penal), para tornar agravante o crime cometido contra pessoas com deficiência.",
+        "situacao": "Tramitando em Conjunto",
+        "data_situacao": "2025-11-06",
+        "participacao": "coautoria",
+        "temas": [
+          "Direito Penal e Processual Penal",
+          "Direitos Humanos e Minorias"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2391490",
+        "sigla": "PL 4724/2023",
+        "tipo": "PL",
+        "data": "2023-09-27",
+        "ementa": "Estabelece políticas públicas de prevenção e promoção de saúde mental voltados aos profissionais de saúde e altera as leis nº 13.819, de 26 de abril de 2019 e nº 8.080, de 19 de setembro de 1990, a Lei Complementar nº 187, de 16 de dezembro de 2021 e o Decreto-Lei nº 5.452, de 1º de maio de 1943.",
+        "situacao": "Tramitando em Conjunto",
+        "data_situacao": "2026-10-29",
+        "participacao": "primeira",
+        "temas": [
+          "Direitos Humanos e Minorias",
+          "Saúde",
+          "Trabalho e Emprego"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2389185",
+        "sigla": "PL 4581/2023",
+        "tipo": "PL",
+        "data": "2023-09-20",
+        "ementa": "Altera a Lei nº 4.737, de 15 de julho de 1965, que Institui o Código Eleitoral, para autorizar a propaganda eleitoral em duas línguas, desde que uma delas seja o português.",
+        "situacao": "Pronta para Pauta",
+        "data_situacao": "2025-10-15",
+        "participacao": "primeira",
+        "temas": [
+          "Administração Pública",
+          "Comunicações",
+          "Direitos Humanos e Minorias",
+          "Política, Partidos e Eleições"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2386413",
+        "sigla": "PL 4374/2023",
+        "tipo": "PL",
+        "data": "2023-09-06",
+        "ementa": "Altera a Lei nº 9.434, de 4 de fevereiro de 1997, que “dispõe sobre a remoção de órgãos, tecidos e partes do corpo humano para fins de transplante e tratamento e dá outras providências”, para dispor sobre transparência ativa de estatísticas relativas ao processo de doação, retirada, distribuição e transplante de órgãos, tecidos, células e partes do corpo humano, e institui a Declaração do Doador Voluntário de Órgãos, Células e Tecidos.",
+        "situacao": "Tramitando em Conjunto",
+        "data_situacao": "2024-11-13",
+        "participacao": "coautoria",
+        "temas": [
+          "Administração Pública",
+          "Saúde"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2382676",
+        "sigla": "PL 4134/2023",
+        "tipo": "PL",
+        "data": "2023-08-24",
+        "ementa": "Altera a Lei nº 14.133, de 1º de abril de 2021, para prever a utilização do poder de compras estatal para a contratação de bens e serviços em setores críticos para a inovação e o desenvolvimento nacional.",
+        "situacao": "Tramitando em Conjunto",
+        "data_situacao": "2023-11-14",
+        "participacao": "coautoria",
+        "temas": [
+          "Administração Pública",
+          "Ciência, Tecnologia e Inovação",
+          "Economia",
+          "Finanças Públicas e Orçamento",
+          "Indústria, Comércio e Serviços"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2382675",
+        "sigla": "PL 4133/2023",
+        "tipo": "PL",
+        "data": "2023-08-24",
+        "ementa": "Dispõe sobre diretrizes para a formulação da política industrial, tecnológica e de comércio exterior brasileira.",
+        "situacao": "Aguardando Apreciação pelo Senado Federal",
+        "data_situacao": "2026-07-15",
+        "participacao": "coautoria",
+        "temas": [
+          "Ciência, Tecnologia e Inovação",
+          "Economia",
+          "Indústria, Comércio e Serviços",
+          "Meio Ambiente e Desenvolvimento Sustentável",
+          "Relações Internacionais e Comércio Exterior"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2380781",
+        "sigla": "PL 4002/2023",
+        "tipo": "PL",
+        "data": "2023-08-18",
+        "ementa": "Altera a Lei nº 12.990, de 9 de junho de 2014, que reserva aos negros 20% (vinte por cento) das vagas oferecidas nos concursos públicos para provimento de cargos efetivos e empregos públicos no âmbito da administração pública federal, das autarquias, das fundações públicas, das empresas públicas e das sociedades de economia mista controladas pela União, para prorrogar o prazo de vigência.",
+        "situacao": "Pronta para Pauta",
+        "data_situacao": "2025-10-01",
+        "participacao": "coautoria",
+        "temas": [
+          "Administração Pública",
+          "Direitos Humanos e Minorias"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2377793",
+        "sigla": "PL 3890/2023",
+        "tipo": "PL",
+        "data": "2023-08-11",
+        "ementa": "Altera a Lei nº 11.445, de 5 de janeiro de 2007, para instituir a Tarifa Social de Água e Esgoto, nas condições que especifica.",
+        "situacao": "Arquivada",
+        "data_situacao": "2024-02-28",
+        "participacao": "primeira",
+        "temas": [
+          "Direitos Humanos e Minorias",
+          "Energia, Recursos Hídricos e Minerais",
+          "Saúde"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2375638",
+        "sigla": "PL 3735/2023",
+        "tipo": "PL",
+        "data": "2023-08-03",
+        "ementa": "Altera a Lei nº 10.046, de 10 de janeiro de 2002, que institui o Código Civil, para proibir o casamento e união civil de menores de 18 (dezoito) anos.",
+        "situacao": "Tramitando em Conjunto",
+        "data_situacao": "2023-09-13",
+        "participacao": "primeira",
+        "temas": [
+          "Direito Civil e Processual Civil",
+          "Direitos Humanos e Minorias"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2374515",
+        "sigla": "PL 3637/2023",
+        "tipo": "PL",
+        "data": "2023-07-28",
+        "ementa": "Altera a Lei nº 10.257, de 10 de julho de 2001, para dispor sobre a inclusão de questões de gênero, raça e etnia na execução da política urbana.",
+        "situacao": "Aguardando Parecer",
+        "data_situacao": "2026-03-17",
+        "participacao": "coautoria",
+        "temas": [
+          "Cidades e Desenvolvimento Urbano",
+          "Direitos Humanos e Minorias"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2374514",
+        "sigla": "PL 3636/2023",
+        "tipo": "PL",
+        "data": "2023-07-28",
+        "ementa": "Altera a Lei nº 9.504, de 30 de setembro de 1997 (Lei das Eleições), para dispor sobre regras da propaganda eleitoral gratuita de candidaturas de mulheres e de pessoas negras.",
+        "situacao": "",
+        "data_situacao": "2025-06-10",
+        "participacao": "coautoria",
+        "temas": [
+          "Direitos Humanos e Minorias",
+          "Política, Partidos e Eleições"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2371632",
+        "sigla": "PL 3279/2023",
+        "tipo": "PL",
+        "data": "2023-06-27",
+        "ementa": "Dispõe sobre diretrizes para o registro de boletim de ocorrência de crimes resultantes de discriminação ou preconceito.",
+        "situacao": "Tramitando em Conjunto",
+        "data_situacao": "2023-08-02",
+        "participacao": "coautoria",
+        "temas": [
+          "Direito Penal e Processual Penal",
+          "Direitos Humanos e Minorias"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2371631",
+        "sigla": "PL 3278/2023",
+        "tipo": "PL",
+        "data": "2023-06-27",
+        "ementa": "Dispõe sobre a criação do Dia Nacional da Visibilidade Lésbica.",
+        "situacao": "Aguardando Deliberação",
+        "data_situacao": "2026-11-04",
+        "participacao": "coautoria",
+        "temas": [
+          "Direitos Humanos e Minorias",
+          "Homenagens e Datas Comemorativas"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2367805",
+        "sigla": "PL 2963/2023",
+        "tipo": "PL",
+        "data": "2023-06-06",
+        "ementa": "Altera a Lei nº 7.797, de 10 de julho de 1989, a Lei nº 9.795, de 27 de abril de 1999, e a Lei nº Lei nº 12.187, de 29 de dezembro de 2009.",
+        "situacao": "Arquivada",
+        "data_situacao": "2026-05-06",
+        "participacao": "coautoria",
+        "temas": [
+          "Educação",
+          "Meio Ambiente e Desenvolvimento Sustentável"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2367803",
+        "sigla": "PL 2962/2023",
+        "tipo": "PL",
+        "data": "2023-06-06",
+        "ementa": "Autoriza e disciplina a instalação de suporte para colocação de bicicletas nos ônibus de transporte urbano e rural de passageiros, coletivo ou individual, público ou privado, e altera a Lei nº 9.503, de 1997, que institui o Código de Trânsito Brasileiro.",
+        "situacao": "Aguardando Designação de Relator(a)",
+        "data_situacao": "2026-07-09",
+        "participacao": "coautoria",
+        "temas": [
+          "Viação, Transporte e Mobilidade"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2363108",
+        "sigla": "PL 2654/2023",
+        "tipo": "PL",
+        "data": "2023-05-17",
+        "ementa": "Dispõe sobre a criação do Dia Nacional do Orgulho Trans.",
+        "situacao": "Aguardando Parecer",
+        "data_situacao": "2026-02-25",
+        "participacao": "coautoria",
+        "temas": [
+          "Direitos Humanos e Minorias",
+          "Homenagens e Datas Comemorativas"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2363037",
+        "sigla": "PL 2644/2023",
+        "tipo": "PL",
+        "data": "2023-05-17",
+        "ementa": "Dispõe sobre o direito do uso do nome social na rede de serviços de saúde pública e privada.",
+        "situacao": "Tramitando em Conjunto",
+        "data_situacao": "2023-07-04",
+        "participacao": "coautoria",
+        "temas": [
+          "Direitos Humanos e Minorias",
+          "Saúde"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2363035",
+        "sigla": "PL 2643/2023",
+        "tipo": "PL",
+        "data": "2023-05-17",
+        "ementa": "Altera a Lei nº 12.662, de 5 de junho de 2012, para permitir o registro de dupla maternidade ou paternidades, além de produzir dados sobre o nascimento de crianças intersexo.",
+        "situacao": "Tramitando em Conjunto",
+        "data_situacao": "2023-07-04",
+        "participacao": "coautoria",
+        "temas": [
+          "Direito Civil e Processual Civil"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2363013",
+        "sigla": "PL 2640/2023",
+        "tipo": "PL",
+        "data": "2023-05-17",
+        "ementa": "Dispõe sobre a criação do Selo Empresa Amiga da Diversidade.",
+        "situacao": "",
+        "data_situacao": "2025-08-08",
+        "participacao": "primeira",
+        "temas": [
+          "Direitos Humanos e Minorias",
+          "Homenagens e Datas Comemorativas",
+          "Indústria, Comércio e Serviços",
+          "Trabalho e Emprego"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2359047",
+        "sigla": "PL 2258/2023",
+        "tipo": "PL",
+        "data": "2023-04-28",
+        "ementa": "Institui o “Desmatamento Zero”, com a finalidade de conter a supressão de vegetação em todo território nacional.",
+        "situacao": "Pronta para Pauta",
+        "data_situacao": "2026-06-03",
+        "participacao": "coautoria",
+        "temas": [
+          "Estrutura Fundiária",
+          "Meio Ambiente e Desenvolvimento Sustentável"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2355935",
+        "sigla": "PL 1847/2023",
+        "tipo": "PL",
+        "data": "2023-04-12",
+        "ementa": "Altera a Lei n.º 12.764/12, que dispõe sobre a Política Nacional de Proteção dos Direitos da Pessoa com Transtorno do Espectro Autista.",
+        "situacao": "Tramitando em Conjunto",
+        "data_situacao": "2023-05-24",
+        "participacao": "primeira",
+        "temas": [
+          "Educação"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2349052",
+        "sigla": "PL 614/2023",
+        "tipo": "PL",
+        "data": "2023-02-22",
+        "ementa": "Altera a Lei nº 8.078, de 11 de setembro de 1990 (Código de Defesa do Consumidor) e a Lei nº 8.137 de 27 de dezembro de 1990 (crimes contra a ordem tributária, econômica e contra as relações de consumo), para dispor sobre o aumento abusivo de preços de produtos e serviços por ocasião de calamidade pública, endemias, epidemias, pandemias e suas consequências.",
+        "situacao": "Tramitando em Conjunto",
+        "data_situacao": "2026-07-07",
+        "participacao": "coautoria",
+        "temas": [
+          "Direito e Defesa do Consumidor",
+          "Direitos Humanos e Minorias",
+          "Finanças Públicas e Orçamento",
+          "Indústria, Comércio e Serviços"
+        ],
+        "norma": null
+      },
+      {
+        "id": "2345625",
+        "sigla": "PL 3/2023",
+        "tipo": "PL",
+        "data": "2023-02-02",
+        "ementa": "Cria o Protocolo Não é Não de atendimento à mulher vítima de violência sexual ou assédio em discotecas ou estabelecimentos noturnos, eventos festivos, bares, restaurantes ou qualquer outro estabelecimento de grande circulação de pessoas. NOVA EMENTA: Cria o protocolo \"Não é Não\", para prevenção ao constrangimento e à violência contra a mulher e para proteção à vítima; institui o selo \"Não é Não - Mulheres Seguras\"; e altera a Lei nº 14.597, de 14 de junho de 2023 (Lei Geral do Esporte).",
+        "situacao": "Transformado em Norma Jurídica",
+        "data_situacao": "2024-02-09",
+        "participacao": "coautoria",
+        "temas": [
+          "Direito Penal e Processual Penal",
+          "Direitos Humanos e Minorias",
+          "Indústria, Comércio e Serviços"
+        ],
+        "norma": {
+          "nome": "Lei Ordinária 14786/2023",
+          "data": "2023-12-28",
+          "veto_parcial": false
+        }
+      }
+    ]
   }
 }

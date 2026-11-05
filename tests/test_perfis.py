@@ -244,6 +244,34 @@ def test_perfil_com_dinheiro_publico(tmp_path, docs, doc):
     assert json.loads((tmp_path / "site" / "static" / "perfis" / f"{alvo}-comprovantes.json").read_text(encoding="utf-8"))[0]["fornecedor"] == "ACME LTDA"
 
 
+PROPOSTAS = {
+    "inicio": "2023-02-01",
+    "por_ano": [{"ano": 2023, "autoria": 344, "relatadas": 12}],
+    "propostas": [
+        {"id": "1", "sigla": "PEC 18/2025", "tipo": "PEC", "data": "2025-04-24", "ementa": "Ementa curta", "situacao": "Transformado em Norma Jurídica",
+         "data_situacao": "2026-01-02", "participacao": "coautoria", "temas": ["Saúde"], "norma": {"nome": "Lei Ordinária 14786/2023", "data": "2023-12-28", "veto_parcial": True}},
+        {"id": "2", "sigla": "PL 9/2024", "tipo": "PL", "data": "2024-01-02", "ementa": "y" * 400, "situacao": "", "data_situacao": "",
+         "participacao": "apoio", "temas": [], "norma": None},
+    ],
+}
+
+
+def test_perfil_com_propostas(tmp_path, docs, doc):
+    alvo = docs[0]["deputados"][0]["id"]
+    construir(*docs, tmp_path / "site", perfis_ampliados={alvo: {**doc, "id": alvo, "propostas": PROPOSTAS}})
+    pagina = (tmp_path / "site" / "deputados" / f"{alvo}.html").read_text(encoding="utf-8")
+    assert 'id="propostas"' in pagina and 'href="#propostas"' in pagina
+    assert "2 projetos e PECs assinados no mandato, 1 virou norma jurídica" in pagina
+    assert "Lei Ordinária 14786/2023, de 28/12/2023" in pagina and "Com veto parcial" in pagina
+    assert 'data-participacao="apoio"' in pagina and 'data-situacao="sem_situacao"' in pagina
+    assert "Situação não informada na fonte" in pagina
+    assert 'href="../proposicoes/pec-18-2025.html"' in pagina
+    assert "y" * 400 not in pagina
+    assert "não pertence a uma pessoa só" in pagina
+    assert "quantidade não mede qualidade" in pagina
+    assert "static/perfil.js" in pagina
+
+
 def test_formato_em_milhoes():
     assert perfis.milhoes(1964701.47) == "R$\u00a01,96\u00a0milhão"
     assert perfis.milhoes(109107000) == "R$\u00a0109,11\u00a0milhões"

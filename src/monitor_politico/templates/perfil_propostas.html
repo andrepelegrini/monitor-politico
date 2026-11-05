@@ -1,0 +1,110 @@
+{% set a = perfil.propostas %}
+<section class="pf-secao" id="propostas">
+  <p class="ce-eyebrow">Propostas e leis</p>
+  <h2 class="pf-h2">{{ a.total|numero }} projetos e PECs assinados no mandato, {{ a.normas|length }} {{ "virou" if a.normas|length == 1 else "viraram" }} norma jurídica</h2>
+
+  <div class="pf-duas">
+    <div>
+      <h3 class="pf-h3">Assuntos das propostas</h3>
+      <ul class="pf-barras">
+        {% for t in a.temas %}
+        <li><span>{{ t.nome }}</span><span class="ce-bar-track" aria-hidden="true"><span class="ce-bar-value" style="width: {{ t.largura }}%"></span></span><span class="pf-barra-numero">{{ t.valor|numero }}</span></li>
+        {% endfor %}
+      </ul>
+      <p class="ce-section-note">Uma proposta pode ter mais de um assunto.</p>
+    </div>
+    <div>
+      <h3 class="pf-h3">O que entra nesta conta</h3>
+      <dl class="ce-dl">
+        {% for tipo, quantos in a.tipos %}<dt>{{ tipo }}</dt><dd>{{ quantos|numero }}</dd>{% endfor %}
+        {% for rotulo, quantos, _ in a.participacoes %}<dt>{{ rotulo }}</dt><dd>{{ quantos|numero }}</dd>{% endfor %}
+      </dl>
+      <p class="ce-section-note">Primeira assinatura é a primeira posição na ordem de assinatura. Apoio é a assinatura em PEC sem ser proponente. Requerimentos, pareceres, emendas e projetos apresentados antes do mandato ficam de fora.</p>
+    </div>
+  </div>
+
+  {% if a.normas %}
+  <h3 class="pf-h3 pf-espaco">{{ "Virou" if a.normas|length == 1 else "Viraram" }} norma jurídica</h3>
+  <ul class="pf-normas">
+    {% for p in a.normas %}
+    <li>
+      <p class="pf-voto-meta">
+        {% if p.slug %}<a href="../proposicoes/{{ p.slug }}.html">{{ p.sigla }}</a>{% else %}<a href="https://www.camara.leg.br/propostas-legislativas/{{ p.id }}">{{ p.sigla }}</a>{% endif %}
+        <span class="ce-badge ce-badge--outline">{{ p.rotulo_participacao }}</span>
+      </p>
+      <p class="pf-norma-nome">{% if p.norma %}{{ p.norma.nome }}, de {{ p.norma.data|data_br }}{% if p.norma.veto_parcial %} · Com veto parcial{% endif %}{% else %}Norma não identificada na tramitação{% endif %}</p>
+      <p class="pf-voto-texto">{{ p.ementa }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+  <p class="ce-section-note">Virar norma é o resultado de um processo legislativo com muitos participantes e não pertence a uma pessoa só.</p>
+  {% endif %}
+
+  <h3 class="pf-h3 pf-espaco" id="lista-propostas">Explorar as propostas</h3>
+  <div class="ce-filters">
+    <label class="ce-field"><span class="ce-control-label">Tipo</span>
+      <select class="ce-select" id="p-tipo">
+        <option value="">Todos</option>
+        {% for tipo, quantos in a.tipos %}<option value="{{ tipo }}">{{ tipo }} ({{ quantos|numero }})</option>{% endfor %}
+      </select></label>
+    <label class="ce-field"><span class="ce-control-label">Assunto</span>
+      <select class="ce-select" id="p-tema">
+        <option value="">Todos os assuntos</option>
+        {% for tema in a.opcoes_temas %}<option>{{ tema }}</option>{% endfor %}
+      </select></label>
+    <label class="ce-field"><span class="ce-control-label">Participação</span>
+      <select class="ce-select" id="p-participacao">
+        <option value="">Todas</option>
+        {% for rotulo, quantos, chave in a.participacoes %}<option value="{{ chave }}">{{ rotulo }} ({{ quantos|numero }})</option>{% endfor %}
+      </select></label>
+    <label class="ce-field"><span class="ce-control-label">Situação</span>
+      <select class="ce-select" id="p-situacao">
+        <option value="">Todas</option>
+        {% for rotulo, quantos, chave in a.situacoes %}<option value="{{ chave }}">{{ rotulo }} ({{ quantos|numero }})</option>{% endfor %}
+      </select></label>
+  </div>
+  <p class="ce-count"><span id="p-contagem">{{ a.total|numero }}</span> propostas, da mais recente para a mais antiga.</p>
+  <ul class="pf-propostas" id="p-lista">
+    {% for p in a.propostas %}
+    <li data-tipo="{{ p.tipo }}" data-temas="{{ p.temas|join('|') }}" data-participacao="{{ p.participacao }}" data-situacao="{{ p.grupo }}">
+      <p class="pf-voto-meta">
+        <span>{{ p.data|data_br }}</span>
+        {% if p.slug %}<a href="../proposicoes/{{ p.slug }}.html">{{ p.sigla }}</a>{% else %}<a href="https://www.camara.leg.br/propostas-legislativas/{{ p.id }}">{{ p.sigla }}</a>{% endif %}
+        <span class="ce-badge ce-badge--outline">{{ p.rotulo_participacao }}</span>
+      </p>
+      <p class="pf-voto-texto">{{ p.ementa|truncate(240, true, "…", 0) }}</p>
+      <p class="pf-nota">{% if p.situacao %}{{ p.situacao }}{% if p.data_situacao %}, em {{ p.data_situacao|data_br }}{% endif %}{% else %}Situação não informada na fonte{% endif %}.</p>
+    </li>
+    {% endfor %}
+  </ul>
+  <div class="ce-state-box pf-espaco" id="p-vazio" hidden>
+    <p>Nenhuma proposta com estes filtros.</p>
+    <button class="ce-button ce-button--ghost" id="p-limpar" type="button">Limpar filtros</button>
+  </div>
+  <button class="ce-button ce-button--ghost pf-mais" id="p-mais" type="button" hidden>Mostrar mais propostas</button>
+
+  <div class="ce-table-scroll pf-espaco" tabindex="0" role="region" aria-label="Autoria e relatoria por ano">
+    <table class="ce-table pf-tabela">
+      <caption>Toda a atividade por ano, segundo a Câmara</caption>
+      <thead><tr><th scope="col">Ano</th><th scope="col" class="pf-num">Propostas de autoria, de todos os tipos</th><th scope="col" class="pf-num">Propostas relatadas</th></tr></thead>
+      <tbody>
+        {% for ano in a.por_ano %}
+        <tr><th scope="row">{{ ano.ano }}</th><td class="pf-num">{{ ano.autoria|numero }}</td><td class="pf-num">{{ ano.relatadas|numero }}</td></tr>
+        {% endfor %}
+        <tr class="pf-total"><th scope="row">Total</th><td class="pf-num">{{ a.total_autoria|numero }}</td><td class="pf-num">{{ a.total_relatadas|numero }}</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="ce-section-note">Esta contagem inclui requerimentos, emendas, pareceres e outros documentos, por isso é maior do que a lista de projetos e PECs. Ela vale como referência de volume, e quantidade não mede qualidade nem resultado.</p>
+
+  <details class="pf-detalhes">
+    <summary>Fonte e método</summary>
+    <p>Autoria conforme a Câmara, incluindo coassinaturas. O número da norma vem da tramitação de cada proposta. Assuntos pela classificação temática oficial. A tabela por ano é a publicada na página do parlamentar. Coleta em {{ perfil.coleta_local|data_br }}.</p>
+    <ul class="ce-links">
+      <li><a href="https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2026.csv">Câmara: autores de proposições</a></li>
+      <li><a href="https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2026.csv">Câmara: proposições</a></li>
+      <li><a href="https://dadosabertos.camara.leg.br/arquivos/proposicoesTemas/csv/proposicoesTemas-2026.csv">Câmara: temas das proposições</a></li>
+      <li><a href="{{ d.url_site }}">Câmara: página do parlamentar</a></li>
+    </ul>
+  </details>
+</section>

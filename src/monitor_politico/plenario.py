@@ -22,6 +22,7 @@ from monitor_politico.congresso import eh_procedimento
 
 URL_ARQUIVO = "https://dadosabertos.camara.leg.br/arquivos/{tipo}/csv/{tipo}-{ano}.csv"
 URL_PRESENCA = "https://www.camara.leg.br/deputados/{id}/presenca-plenario/{ano}"
+URL_PAGINA_DEPUTADO = "https://www.camara.leg.br/deputados/{id}?ano={ano}"
 ORGAO_PLENARIO = "PLEN"
 SESSAO_DELIBERATIVA = "Sessão Deliberativa"
 
@@ -75,9 +76,14 @@ def ler_relatorio_de_presenca(pagina: str) -> dict[str, int]:
     return resultado
 
 
-def _limpar(texto: Optional[str]) -> str:
+def limpar_texto(texto: Optional[str]) -> str:
     """Normaliza espaços e tira CPF: há ementas oficiais que citam o número de uma pessoa."""
     return CPF_NO_TEXTO.sub("[CPF omitido]", re.sub(r"\s+", " ", texto or "")).strip()
+
+
+def ementa_atual(ementa: str) -> str:
+    """A Câmara acrescenta "NOVA EMENTA:" ao texto antigo quando a proposta muda. Vale o trecho final."""
+    return re.split(r"NOVA EMENTA\s*:", ementa, flags=re.IGNORECASE)[-1].strip()
 
 
 def votos_do_mandato(fonte: Any, id_: int, inicio: str, anos: Iterable[int]) -> dict[str, Any]:
@@ -125,7 +131,7 @@ def votos_do_mandato(fonte: Any, id_: int, inicio: str, anos: Iterable[int]) -> 
     votos, procedimento = [], Counter()
     for id_votacao, linha in registrados.items():
         votacao = votacoes[id_votacao]
-        descricao = _limpar(votacao["descricao"])
+        descricao = limpar_texto(votacao["descricao"])
         classe = classe_da_votacao(descricao)
         voto = linha["voto"]
         if classe == "procedimento":
@@ -143,7 +149,7 @@ def votos_do_mandato(fonte: Any, id_: int, inicio: str, anos: Iterable[int]) -> 
             "classe": classe,
             "proposicao_id": id_proposicao,
             "sigla": f"{objeto['proposicao_siglaTipo']} {objeto['proposicao_numero']}/{objeto['proposicao_ano']}" if objeto else "",
-            "ementa": _limpar(objeto.get("proposicao_ementa")),
+            "ementa": limpar_texto(objeto.get("proposicao_ementa")),
             "descricao": descricao,
             "sim": sim,
             "nao": nao,
@@ -199,6 +205,20 @@ class ArquivosCamara:
         resposta = self.http.get(URL_PRESENCA.format(id=id_, ano=ano)).raise_for_status()
         return ler_relatorio_de_presenca(resposta.text)
 
+    def atuacao_oficial(self, id_: int, ano: int) -> dict[str, int]:
+        resposta = self.http.get(URL_PAGINA_DEPUTADO.format(id=id_, ano=ano)).raise_for_status()
+        return ler_atuacao_da_pagina(resposta.text)
+
+
+def ler_atuacao_da_pagina(pagina: str) -> dict[str, int]:
+    """Propostas de autoria (de todos os tipos) e relatadas no ano, como a Câmara publica."""
+    sem_scripts = re.sub(r"<script.*?</script>|<style.*?</style>", "", pagina, flags=re.S)
+    texto = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", sem_scripts)))
+    achado = re.search(r"Propostas legislativas de sua autoria (\d+) relatadas (\d+)", texto)
+    if achado is None:
+        raise RelatorioInvalido("página do deputado sem o quadro de atuação")
+    return {"autoria": int(achado[1]), "relatadas": int(achado[2])}
+
 
 def coletar(fonte: Any, id_: int, inicio: str, hoje: date) -> dict[str, Any]:
     anos = range(int(inicio[:4]), hoje.year + 1)
@@ -240,6 +260,7 @@ def visao(doc: dict[str, Any], slugs: Optional[dict[str, str]] = None) -> dict[s
     for voto in dados["votos"]:
         votos.append({
             **voto,
+            "ementa": ementa_atual(voto["ementa"]),
             "contra": lado_menos_votado(voto),
             "difere": difere_da_orientacao(voto),
             "slug": slugs.get(voto["sigla"]),

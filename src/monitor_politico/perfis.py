@@ -24,7 +24,7 @@ from zoneinfo import ZoneInfo
 
 import httpx
 
-from monitor_politico import dinheiro, plenario
+from monitor_politico import dinheiro, plenario, propostas
 from monitor_politico.camara import ClienteCamara
 
 PILOTO = (204534,)  # Tabata Amaral
@@ -222,6 +222,7 @@ def coletar_perfil(
         "trajetoria": eventos,
         "comissoes": comissoes_atuais(orgaos, hoje),
         "plenario": plenario.coletar(arquivos, id_, legislatura["inicio"], hoje) if arquivos and legislatura else None,
+        "propostas": propostas.coletar(arquivos, camara, id_, legislatura["inicio"], hoje) if arquivos and legislatura else None,
         "dinheiro": (
             dinheiro.coletar(financas, id_, detalhe["ultimoStatus"]["nomeEleitoral"], legislatura["id"], int(legislatura["inicio"][:4]), hoje.year)
             if financas and legislatura else None
@@ -326,6 +327,7 @@ def visao(doc: dict[str, Any], hoje: Optional[date] = None, slugs: Optional[dict
         "proximo_mandato": proximo_mandato(doc, hoje),
         "plenario": plenario.visao(doc["plenario"], slugs) if doc.get("plenario") else None,
         "dinheiro": dinheiro.visao(doc["dinheiro"]) if doc.get("dinheiro") else None,
+        "propostas": propostas.visao(doc["propostas"], slugs) if doc.get("propostas") else None,
     }
 
 

@@ -144,8 +144,8 @@ def test_voto_traz_placar_dos_demais_e_proposicao_certa(doc):
 
 
 def test_tira_cpf_citado_em_texto_oficial():
-    assert plenario._limpar("Prisão de Fulano (CPF no 750.100.207-00), por decisão") == "Prisão de Fulano (CPF no [CPF omitido]), por decisão"
-    assert plenario._limpar("Lei nº 14.786, de 2023; Sim: 123.456") == "Lei nº 14.786, de 2023; Sim: 123.456"
+    assert plenario.limpar_texto("Prisão de Fulano (CPF no 750.100.207-00), por decisão") == "Prisão de Fulano (CPF no [CPF omitido]), por decisão"
+    assert plenario.limpar_texto("Lei nº 14.786, de 2023; Sim: 123.456") == "Lei nº 14.786, de 2023; Sim: 123.456"
 
 
 def test_nao_guarda_voto_individual_de_outros_parlamentares(doc):
