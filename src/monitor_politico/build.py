@@ -26,6 +26,7 @@ CONGRESSO_PADRAO = Path("data/congresso.json")
 RESUMOS_PADRAO = Path("data/resumos.json")
 PERFIS_PADRAO = Path("data/perfis")
 METRICAS_PADRAO = Path("data/metricas_deputados.json")
+NOME_DA_IMAGEM = "{id}-compartilhar.png"
 SAIDA_PADRAO = Path("site")
 FUSO = ZoneInfo("America/Sao_Paulo")
 PACOTE = Path(__file__).parent
@@ -186,6 +187,12 @@ def construir(
     )
     slugs = {p["chave"]: p["slug"] for p in doc_congresso["proposicoes"].values()}
     visoes_ampliadas = {id_: perfis.visao(doc, slugs=slugs) for id_, doc in (perfis_ampliados or {}).items()}
+    for id_, visao in visoes_ampliadas.items():
+        imagem = PERFIS_PADRAO / NOME_DA_IMAGEM.format(id=id_)
+        visao["imagem"] = imagem.exists()
+        if visao["imagem"]:
+            (saida / "static" / "perfis").mkdir(exist_ok=True)
+            shutil.copyfile(imagem, saida / "static" / "perfis" / imagem.name)
     # Deputado sem registro nas métricas é parte da coleta só se ela existir; o template trata a ausência.
     leis_na_lista = {d.id: modulo_metricas.do_deputado(metricas, d.id) for d in deputados} if metricas else None
     for id_, doc in (perfis_ampliados or {}).items():

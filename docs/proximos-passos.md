@@ -25,8 +25,8 @@ Piloto só na página de Tabata Amaral (id 204534). Nenhum outro parlamentar rec
 - [x] Etapa 1: Quem é (eleições, votos por município, bens, trajetória e comissões).
 - [x] Etapa 2: atuação em Plenário (votos e presença).
 - [x] Etapa 3: dinheiro público (cota e emendas).
-- [x] Etapa 4: propostas e leis, desde o primeiro mandato, com o painel "Da autoria à lei". Aguardando validação.
-- [ ] Etapa 5: leitura e compartilhamento.
+- [x] Etapa 4: propostas e leis, desde o primeiro mandato, com o painel "Da autoria à lei".
+- [x] Etapa 5: leitura e compartilhamento. Aguardando validação.
 - [ ] Rollout, com autorização: 6A deputados, 6B senadores, 6C legislatura de 2027. A 6C precisa estar pronta até o início de janeiro, porque a coleta atual lista só quem está em exercício e a nova legislatura começa em 01/02/2027.
 
 Cuidado com a cota: os arquivos abertos da Câmara oscilam. Em 04/11/2026 traziam as passagens aéreas do SIGEPA até julho de 2025; em 05/11/2026, em nenhum ano. Por isso o total vem da página oficial do deputado, e o que falta no arquivo aparece como "sem detalhamento".
@@ -34,6 +34,8 @@ Cuidado com a cota: os arquivos abertos da Câmara oscilam. Em 04/11/2026 trazia
 Autorizado também em 05/11/2026: leis de autoria principal e coautoria na lista de deputados, para todos, com ordenação. Comparar é desejado quando a métrica é objetiva. O número vem de `data/metricas_deputados.json` (coleta manual: `.venv/bin/python -m monitor_politico.metricas`, que leva bastante tempo), e o restante do perfil novo segue só no piloto. Trocar `INICIO_MANDATO` em `metricas.py` na posse de 2027.
 
 Propostas de campanha: o TSE só recebe proposta de governo de candidaturas a presidente, governador e prefeito. Deputados e senadores não registram proposta nenhuma, então essa comparação depende de outra fonte, a definir.
+
+A imagem de compartilhamento do perfil é gerada à parte, depois da coleta: `.venv/bin/python -m monitor_politico.compartilhar` (precisa da CLI do Playwright). Ela guarda os números da data da coleta.
 
 Atualizar os dados do piloto: `.venv/bin/python -m monitor_politico.perfis` (leva alguns minutos e fica fora do robô diário).
 

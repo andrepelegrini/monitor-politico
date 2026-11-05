@@ -282,8 +282,18 @@ def test_formato_em_milhoes():
     assert perfis.milhoes(850000) == "R$\u00a0850\u00a0mil"
 
 
-def test_perfil_sem_plenario_nao_carrega_o_script(tmp_path, docs, doc):
+def test_perfil_sem_plenario_nao_mostra_a_secao(tmp_path, docs, doc):
     alvo = docs[0]["deputados"][0]["id"]
     construir(*docs, tmp_path / "site", perfis_ampliados={alvo: {**doc, "id": alvo}})
     pagina = (tmp_path / "site" / "deputados" / f"{alvo}.html").read_text(encoding="utf-8")
-    assert 'id="plenario"' not in pagina and "perfil.js" not in pagina
+    assert 'id="plenario"' not in pagina
+
+
+def test_compartilhamento_do_perfil(tmp_path, docs, doc):
+    alvo = docs[0]["deputados"][0]["id"]
+    construir(*docs, tmp_path / "site", site_url="https://exemplo.org", perfis_ampliados={alvo: {**doc, "id": alvo}})
+    pagina = (tmp_path / "site" / "deputados" / f"{alvo}.html").read_text(encoding="utf-8")
+    assert 'id="compartilhar"' in pagina and "Copiar link" in pagina and "Compartilhar no WhatsApp" in pagina
+    assert "Dados deste perfil coletados em" in pagina
+    # Sem PNG gerado, fica a imagem padrão do site.
+    assert 'content="https://exemplo.org/static/compartilhar.png"' in pagina

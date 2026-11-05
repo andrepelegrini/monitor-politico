@@ -241,6 +241,8 @@ body { margin: 0; }
 .ce-app .pf-ancoras { position: sticky; top: 0; z-index: 5; display: flex; gap: var(--ce-space-5); overflow-x: auto; margin-top: var(--ce-space-8); background: var(--ce-paper); border-bottom: 1px solid var(--ce-border); scrollbar-width: none; }
 .ce-app .pf-ancoras a { flex: none; padding-block: var(--ce-space-3); color: var(--ce-text-secondary); font-size: var(--ce-text-sm); font-weight: 600; text-decoration: none; }
 .ce-app .pf-ancoras a:hover { color: var(--ce-ink); text-decoration: underline; text-underline-offset: .4em; }
+.ce-app .pf-ancoras a[aria-current] { color: var(--ce-ink); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: .4em; }
+.ce-app .pf-compartilhar { display: flex; flex-wrap: wrap; align-items: center; gap: var(--ce-space-3); margin-top: var(--ce-space-6); }
 .ce-app .pf-secao { padding-top: var(--ce-space-12); scroll-margin-top: 2.5rem; }
 .ce-app .pf-secao > .ce-eyebrow { color: var(--ce-terracotta); margin-bottom: var(--ce-space-2); }
 .ce-app .pf-bloco { margin-top: var(--ce-space-12); padding-top: var(--ce-space-8); border-top: 1px solid var(--ce-border); scroll-margin-top: 3rem; }
@@ -276,7 +278,7 @@ body { margin: 0; }
 .ce-app .pf-numeros { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--ce-space-5); padding-block: var(--ce-space-5); border-block: 1px solid var(--ce-border); }
 .ce-app .pf-numeros a { display: flex; flex-direction: column; gap: var(--ce-space-1); min-width: 0; color: var(--ce-text-secondary); font-size: var(--ce-text-sm); text-decoration: none; }
 .ce-app .pf-numeros a:hover span:last-child { text-decoration: underline; }
-.ce-app .pf-numeros .ce-kpi-value { color: var(--ce-ink); font-size: clamp(1.5rem, 2.3vw, 2.15rem); overflow-wrap: anywhere; }
+.ce-app .pf-numeros .ce-kpi-value { color: var(--ce-ink); font-size: clamp(1.5rem, 2.3vw, 2.15rem); }
 .ce-app .pf-temas { margin: 0; padding: 0; list-style: none; }
 .ce-app .pf-temas li { display: grid; grid-template-columns: minmax(0, 17rem) minmax(4rem, 1fr) 10rem; gap: var(--ce-space-1) var(--ce-space-4); align-items: center; padding-block: var(--ce-space-3); border-bottom: 1px solid var(--ce-border-soft); }
 .ce-app .pf-tema-nome { font-size: .9375rem; overflow-wrap: anywhere; }

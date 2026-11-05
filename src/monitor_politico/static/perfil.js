@@ -166,3 +166,62 @@ listaFiltravel("p", ["participacao", "situacao", "mandato", "tema", "tipo"], fun
   filtros.hidden = false;
   mais.hidden = false;
 })();
+
+// Compartilhar o perfil. Sem JavaScript, os botões não aparecem.
+(function () {
+  var caixa = document.getElementById("compartilhar");
+  if (!caixa) return;
+
+  var endereco = location.origin + location.pathname;
+  var texto = caixa.dataset.texto;
+  var aviso = document.getElementById("s-aviso");
+  var nativo = document.getElementById("s-nativo");
+
+  document.getElementById("s-whatsapp").href = "https://wa.me/?text=" + encodeURIComponent(texto + " " + endereco);
+
+  document.getElementById("s-copiar").addEventListener("click", function () {
+    function falhou() { aviso.textContent = "Não foi possível copiar. Endereço: " + endereco; }
+    if (!navigator.clipboard) return falhou();
+    navigator.clipboard.writeText(endereco).then(function () { aviso.textContent = "Link copiado."; }, falhou);
+  });
+
+  if (navigator.share) {
+    nativo.hidden = false;
+    nativo.addEventListener("click", function () {
+      navigator.share({ title: document.title, text: texto, url: endereco }).catch(function () {});
+    });
+  }
+  caixa.hidden = false;
+})();
+
+// Marca na navegação do perfil a seção que está na tela.
+(function () {
+  var navegacao = document.querySelector(".pf-ancoras");
+  if (!navegacao || !("IntersectionObserver" in window)) return;
+
+  var links = Array.prototype.slice.call(navegacao.querySelectorAll("a"));
+  var porSecao = {};
+  links.forEach(function (link) { porSecao[link.getAttribute("href").slice(1)] = link; });
+
+  function marcar(atual) {
+    links.forEach(function (link) { link.removeAttribute("aria-current"); });
+    atual.setAttribute("aria-current", "true");
+    navegacao.scrollLeft = atual.offsetLeft - navegacao.offsetLeft - 16;
+  }
+
+  var observador = new IntersectionObserver(function (entradas) {
+    entradas.forEach(function (entrada) {
+      if (entrada.isIntersecting) marcar(porSecao[entrada.target.id]);
+    });
+  }, { rootMargin: "-20% 0px -70% 0px" });
+
+  // A última seção é curta e pode nunca chegar à faixa observada: no fim da página, ela é a atual.
+  window.addEventListener("scroll", function () {
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 8) marcar(links[links.length - 1]);
+  }, { passive: true });
+
+  Object.keys(porSecao).forEach(function (id) {
+    var secao = document.getElementById(id);
+    if (secao) observador.observe(secao);
+  });
+})();

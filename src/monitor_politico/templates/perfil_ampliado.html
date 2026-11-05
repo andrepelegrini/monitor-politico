@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 {% block titulo %}{{ d.nome }} ({{ d.partido }}-{{ d.uf }}) · Monitor Político{% endblock %}
 {% block og_titulo %}{{ d.nome }} ({{ d.partido }}-{{ d.uf }}) · Câmara dos Deputados{% endblock %}
-{% block descricao %}Eleições, bens declarados, votos, presença, cota parlamentar, emendas, propostas, comissões e contato oficial de {{ d.nome }} na Câmara dos Deputados, com dados abertos oficiais.{% endblock %}
+{% block descricao %}{{ d.nome }} ({{ d.partido }}-{{ d.uf }}):{% if perfil.plenario %} {{ perfil.plenario.votos_registrados|numero }} votos registrados, presença em {{ perfil.plenario.presenca.total.presencas|numero }} de {{ perfil.plenario.presenca.total.dias|numero }} dias com sessão,{% endif %}{% if perfil.dinheiro %} cota parlamentar, emendas,{% endif %}{% if perfil.propostas %} {{ perfil.propostas.total_autoria_propostas|numero }} propostas de autoria e {{ perfil.propostas.normas|length }} que viraram {{ perfil.propostas.palavra_norma }},{% endif %} com dados abertos oficiais.{% endblock %}
+{% block og_imagem %}{% if perfil.imagem %}perfis/{{ d.id }}-compartilhar.png{% else %}compartilhar.png{% endif %}{% endblock %}
 {% block conteudo %}
 <nav class="ce-breadcrumb" aria-label="Trilha de navegação">
   <ol>
@@ -18,6 +19,7 @@
       <p class="ce-eyebrow">Câmara dos Deputados</p>
       <h1>{{ d.nome }}</h1>
       <p class="pf-deck">{{ d.partido }}-{{ d.uf }}{% if d.situacao %} · {{ d.situacao }}{% endif %}{% if perfil.legislatura_atual %} · Mandato atual: {{ perfil.legislatura_atual.inicio|data_br }} a {{ perfil.legislatura_atual.fim|data_br }}.{% endif %}{% if perfil.proximo_mandato %} Mandato renovado na eleição de {{ perfil.proximo_mandato.ano }}, para {{ perfil.proximo_mandato.inicio_ano }}–{{ perfil.proximo_mandato.fim_ano }}.{% endif %}</p>
+      <p class="pf-nota">Dados deste perfil coletados em {{ perfil.coleta_local|data_br }}, de fontes oficiais.</p>
     </header>
     {% if perfil.plenario or perfil.dinheiro or perfil.propostas %}
     <div class="pf-numeros">
@@ -26,7 +28,7 @@
       <a href="#presenca"><span class="ce-kpi-value">{{ perfil.plenario.presenca.total.presencas|numero }}</span><span>dias com presença, de {{ perfil.plenario.presenca.total.dias|numero }} dias com sessões deliberativas</span></a>
       {% endif %}
       {% if perfil.dinheiro %}
-      <a href="#dinheiro"><span class="ce-kpi-value">{{ perfil.dinheiro.cota.total|milhoes }}</span><span>em cota parlamentar neste mandato</span></a>
+      <a href="#dinheiro"><span class="ce-kpi-value">{{ perfil.dinheiro.cota.total|milhoes|replace("\u00a0", " ") }}</span><span>em cota parlamentar neste mandato</span></a>
       {% endif %}
       {% if perfil.propostas %}
       <a href="#autoria"><span class="ce-kpi-value">{{ perfil.propostas.normas|length|numero }}</span><span>{{ "proposta virou" if perfil.propostas.normas|length == 1 else "propostas viraram" }} {{ perfil.propostas.palavra_norma }} desde {{ perfil.propostas.ano_inicial }}, {{ perfil.propostas.normas_principais|length }} de autoria principal</span></a>
@@ -35,6 +37,13 @@
     {% endif %}
   </div>
 </article>
+
+<div class="pf-compartilhar" id="compartilhar" data-texto="{{ d.nome }} ({{ d.partido }}-{{ d.uf }}): votos, presença, gastos e leis, com dados oficiais, no Monitor Político." hidden>
+  <button class="ce-button ce-button--ghost" id="s-nativo" type="button" hidden>Compartilhar</button>
+  <a class="ce-button ce-button--ghost" id="s-whatsapp" href="https://wa.me/">Compartilhar no WhatsApp</a>
+  <button class="ce-button ce-button--ghost" id="s-copiar" type="button">Copiar link</button>
+  <span class="pf-nota" id="s-aviso" aria-live="polite"></span>
+</div>
 
 <nav class="pf-ancoras" aria-label="Seções do perfil">
   <a href="#quem-e">Quem é</a>
@@ -196,4 +205,4 @@
   </div>
 </section>
 {% endblock %}
-{% block scripts %}{% if perfil.plenario or perfil.dinheiro or perfil.propostas %}<script src="{{ raiz }}/static/perfil.js" defer></script>{% endif %}{% endblock %}
+{% block scripts %}<script src="{{ raiz }}/static/perfil.js" defer></script>{% endblock %}

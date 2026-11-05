@@ -41,7 +41,7 @@
   </form>
 
   <p class="ce-count" aria-live="polite"><span id="contagem">{{ parlamentares|length }}</span> de {{ parlamentares|length }} {{ plural }}</p>{% if leis_na_lista %}
-  <p class="ce-section-note">Leis sancionadas desde {{ metricas.inicio|data_br }} a partir de projetos assinados por cada parlamentar, com o mesmo critério para todos. Autoria principal é a primeira assinatura. A contagem não mede qualidade, não inclui relatorias nem ideias aprovadas dentro de outros projetos, e quem entrou depois do início do mandato ou se licenciou teve menos tempo.</p>{% endif %}
+  <p class="ce-section-note">Leis sancionadas desde {{ metricas.inicio|data_br }} a partir de projetos assinados por cada parlamentar, com o mesmo critério para todos. Autoria principal é a primeira assinatura. A contagem não mede qualidade, não inclui relatorias nem ideias aprovadas dentro de outros projetos, e quem entrou depois do início do mandato ou se licenciou teve menos tempo. <a href="{{ raiz }}/entenda.html#leis-na-lista">Entenda a contagem</a>.</p>{% endif %}
 
   <ul class="ce-people{% if leis_na_lista %} ce-people--leis{% endif %}" id="lista">
     {% for d in parlamentares %}
