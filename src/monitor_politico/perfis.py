@@ -24,7 +24,7 @@ from zoneinfo import ZoneInfo
 
 import httpx
 
-from monitor_politico import plenario
+from monitor_politico import dinheiro, plenario
 from monitor_politico.camara import ClienteCamara
 
 PILOTO = (204534,)  # Tabata Amaral
@@ -202,7 +202,7 @@ def eleicoes_da_pessoa(fonte: Any, cpf: str, anos: Iterable[int] = ELEICOES) -> 
 
 
 def coletar_perfil(
-    id_: int, camara: ClienteCamara, fonte: Any, hoje: Optional[date] = None, arquivos: Any = None
+    id_: int, camara: ClienteCamara, fonte: Any, hoje: Optional[date] = None, arquivos: Any = None, financas: Any = None
 ) -> dict[str, Any]:
     hoje = hoje or date.today()
     detalhe = camara._get(f"/deputados/{id_}")["dados"]
@@ -222,6 +222,10 @@ def coletar_perfil(
         "trajetoria": eventos,
         "comissoes": comissoes_atuais(orgaos, hoje),
         "plenario": plenario.coletar(arquivos, id_, legislatura["inicio"], hoje) if arquivos and legislatura else None,
+        "dinheiro": (
+            dinheiro.coletar(financas, id_, detalhe["ultimoStatus"]["nomeEleitoral"], legislatura["id"], int(legislatura["inicio"][:4]), hoje.year)
+            if financas and legislatura else None
+        ),
     }
 
 
@@ -321,6 +325,7 @@ def visao(doc: dict[str, Any], hoje: Optional[date] = None, slugs: Optional[dict
         "linha_do_tempo": linha_do_tempo(doc, hoje),
         "proximo_mandato": proximo_mandato(doc, hoje),
         "plenario": plenario.visao(doc["plenario"], slugs) if doc.get("plenario") else None,
+        "dinheiro": dinheiro.visao(doc["dinheiro"]) if doc.get("dinheiro") else None,
     }
 
 
@@ -330,6 +335,14 @@ def numero(valor: float) -> str:
 
 def moeda(valor: float) -> str:
     return "R$ " + f"{valor:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
+
+
+def milhoes(valor: float) -> str:
+    """Valor resumido para títulos: "R$ 1,96 milhão", "R$ 109,11 milhões", "R$ 850 mil". Sem quebra de linha no meio."""
+    if abs(valor) < 1_000_000:
+        return f"R$\u00a0{valor / 1000:,.0f}\u00a0mil".replace(",", ".")
+    em_milhoes = valor / 1_000_000
+    return "R$\u00a0" + f"{em_milhoes:.2f}".replace(".", ",") + ("\u00a0milhão" if abs(em_milhoes) < 2 else "\u00a0milhões")
 
 
 def percentual(valor: float) -> str:
@@ -348,8 +361,8 @@ def nome_proprio(texto: str) -> str:
 if __name__ == "__main__":
     destino = Path(sys.argv[1]) if len(sys.argv) > 1 else SAIDA_PADRAO
     destino.mkdir(parents=True, exist_ok=True)
-    camara, tse, arquivos_camara = ClienteCamara(), FonteTSE(), plenario.ArquivosCamara()
+    camara, tse, arquivos_camara, financas_camara = ClienteCamara(), FonteTSE(), plenario.ArquivosCamara(), dinheiro.FonteDinheiro()
     for id_parlamentar in PILOTO:
-        perfil = coletar_perfil(id_parlamentar, camara, tse, arquivos=arquivos_camara)
+        perfil = coletar_perfil(id_parlamentar, camara, tse, arquivos=arquivos_camara, financas=financas_camara)
         (destino / f"{id_parlamentar}.json").write_text(json.dumps(perfil, ensure_ascii=False, indent=2), encoding="utf-8")
         print(f"Perfil {id_parlamentar}: {len(perfil['eleicoes'])} eleições, {len(perfil['comissoes'])} comissões")

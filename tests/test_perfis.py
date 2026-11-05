@@ -215,6 +215,41 @@ def test_perfil_com_plenario(tmp_path, docs, doc):
     assert "nem a intenção do parlamentar" in pagina
 
 
+DINHEIRO = {
+    "cota": {
+        "por_ano": [{"ano": 2023, "total": 1964701.47, "percentual": 99.3, "nao_utilizado": 10.0, "detalhado": 1881485.31}],
+        "categorias": [["Telefonia", 1881485.31]], "fornecedores": [["ACME LTDA", 100.0]], "total_fornecedores": 1,
+        "comprovantes": [{"mes": "2023-03", "categoria": "Telefonia", "fornecedor": "ACME LTDA", "valor": 100.0, "url": "https://www.camara.leg.br/d.pdf"}],
+    },
+    "emendas": {
+        "por_ano": [{"ano": 2023, "empenhado": 200.0, "liquidado": 40.0, "pago": 109000000.0, "restos_pagos": 110000.0}],
+        "funcoes": [["Saúde", 15.0]], "tipos": [["Transferências Especiais", 16.0]], "destinos": [["Nacional", 1.0]],
+        "favorecidos": [{"nome": "FUNDO MUNICIPAL", "municipio": "CAJAMAR", "uf": "SP", "valor": 1500.0}],
+        "total_favorecidos": 1, "total_recebido": 1500.0, "arquivo_em": "2026-10-29",
+    },
+}
+
+
+def test_perfil_com_dinheiro_publico(tmp_path, docs, doc):
+    alvo = docs[0]["deputados"][0]["id"]
+    construir(*docs, tmp_path / "site", perfis_ampliados={alvo: {**doc, "id": alvo, "dinheiro": DINHEIRO}})
+    pagina = (tmp_path / "site" / "deputados" / f"{alvo}.html").read_text(encoding="utf-8")
+    assert 'id="dinheiro"' in pagina and 'id="cota"' in pagina and 'id="emendas"' in pagina and 'href="#dinheiro"' in pagina
+    assert "R$\u00a01,96\u00a0milhão em cota parlamentar e R$\u00a0109,11\u00a0milhões pagos em emendas" in pagina
+    assert "Sem detalhamento nos arquivos abertos" in pagina
+    assert "Usar a cota não indica irregularidade" in pagina
+    assert "Pagamento não comprova a entrega" in pagina
+    assert "Cajamar-SP" in pagina
+    assert "static/perfil.js" in pagina
+    assert json.loads((tmp_path / "site" / "static" / "perfis" / f"{alvo}-comprovantes.json").read_text(encoding="utf-8"))[0]["fornecedor"] == "ACME LTDA"
+
+
+def test_formato_em_milhoes():
+    assert perfis.milhoes(1964701.47) == "R$\u00a01,96\u00a0milhão"
+    assert perfis.milhoes(109107000) == "R$\u00a0109,11\u00a0milhões"
+    assert perfis.milhoes(850000) == "R$\u00a0850\u00a0mil"
+
+
 def test_perfil_sem_plenario_nao_carrega_o_script(tmp_path, docs, doc):
     alvo = docs[0]["deputados"][0]["id"]
     construir(*docs, tmp_path / "site", perfis_ampliados={alvo: {**doc, "id": alvo}})

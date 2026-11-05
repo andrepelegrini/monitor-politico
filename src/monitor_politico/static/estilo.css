@@ -273,7 +273,7 @@ body { margin: 0; }
 .ce-app .pf-composicao ul { margin: 0; padding: 0; list-style: none; font-size: .8125rem; }
 .ce-app .pf-composicao li { display: flex; flex-direction: column; padding-block: var(--ce-space-2); border-bottom: 1px solid var(--ce-border-soft); overflow-wrap: anywhere; }
 .ce-app .pf-composicao strong { color: var(--ce-ink); }
-.ce-app .pf-numeros { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--ce-space-5); max-width: 42rem; padding-block: var(--ce-space-5); border-block: 1px solid var(--ce-border); }
+.ce-app .pf-numeros { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--ce-space-5); padding-block: var(--ce-space-5); border-block: 1px solid var(--ce-border); }
 .ce-app .pf-numeros a { display: flex; flex-direction: column; gap: var(--ce-space-1); min-width: 0; color: var(--ce-text-secondary); font-size: var(--ce-text-sm); text-decoration: none; }
 .ce-app .pf-numeros a:hover span:last-child { text-decoration: underline; }
 .ce-app .pf-numeros .ce-kpi-value { color: var(--ce-ink); font-size: clamp(1.5rem, 2.3vw, 2.15rem); overflow-wrap: anywhere; }
@@ -293,10 +293,20 @@ body { margin: 0; }
 .ce-app .pf-detalhes--voto > p { overflow-wrap: anywhere; }
 .ce-app .pf-mais { margin-top: var(--ce-space-4); }
 .ce-app .pf-total th, .ce-app .pf-total td { font-weight: 700; color: var(--ce-ink); }
+.ce-app .pf-h4 { font: 600 .9375rem/1.35 var(--ce-font-ui); margin-bottom: var(--ce-space-3); }
+.ce-app .pf-barras--moeda li { grid-template-columns: minmax(0, 11rem) minmax(2.5rem, 1fr) 7.5rem; }
+.ce-app .pf-tabela--texto td { white-space: normal; overflow-wrap: anywhere; }
+.ce-app .pf-tabela--texto td.pf-num { white-space: nowrap; }
+.ce-app .pf-comprovantes td:first-child { white-space: nowrap; }
+.ce-app .pf-comprovantes td:nth-child(2) { min-width: 11rem; }
+.ce-app .pf-secao .ce-filters .ce-input, .ce-app .pf-secao .ce-filters .ce-select { height: 46px; }
 @media (max-width: 800px) {
   .ce-app .pf-votos > li, .ce-app .pf-temas li { grid-template-columns: minmax(0, 1fr); }
+  .ce-app .pf-numeros { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .ce-app .pf-duas, .ce-app .pf-composicao { grid-template-columns: minmax(0, 1fr); }
   .ce-app .pf-barras li { grid-template-columns: minmax(0, 8rem) minmax(2rem, 1fr) 4rem; }
   .ce-app .pf-barras--curta li { grid-template-columns: 3rem minmax(2rem, 1fr) 7rem; }
+  .ce-app .pf-barras--moeda li { grid-template-columns: minmax(0, 1fr) 7rem; }
+  .ce-app .pf-barras--moeda .ce-bar-track { grid-column: 1 / -1; grid-row: 2; }
   .ce-app .pf-tabela th, .ce-app .pf-tabela td { padding-inline: var(--ce-space-2); white-space: normal; }
 }

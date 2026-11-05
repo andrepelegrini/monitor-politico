@@ -129,7 +129,7 @@ def construir(
         autoescape=select_autoescape(),
     )
     env.filters["data_br"] = painel.data_br
-    for nome in ("numero", "moeda", "percentual", "diferenca", "nome_proprio"):
+    for nome in ("numero", "moeda", "milhoes", "percentual", "diferenca", "nome_proprio"):
         env.filters[nome] = getattr(perfis, nome)
     env.globals["site_url"] = url_do_site() if site_url is None else site_url.rstrip("/")
     deputados = sorted((Deputado.de_dict(d) for d in doc_deputados["deputados"]), key=lambda d: chave_alfabetica(d.nome))
@@ -184,6 +184,13 @@ def construir(
     )
     slugs = {p["chave"]: p["slug"] for p in doc_congresso["proposicoes"].values()}
     visoes_ampliadas = {id_: perfis.visao(doc, slugs=slugs) for id_, doc in (perfis_ampliados or {}).items()}
+    for id_, doc in (perfis_ampliados or {}).items():
+        if doc.get("dinheiro"):
+            pasta_perfis = saida / "static" / "perfis"
+            pasta_perfis.mkdir(exist_ok=True)
+            (pasta_perfis / f"{id_}-comprovantes.json").write_text(
+                json.dumps(doc["dinheiro"]["cota"]["comprovantes"], ensure_ascii=False, separators=(",", ":")), encoding="utf-8"
+            )
     _gerar_casa(
         env, saida / "deputados", deputados, "perfil_deputado.html", "d",
         {"raiz": "..", "casa": "camara", "titulo": "Deputados federais", "singular": "deputado", "plural": "deputados",
