@@ -102,6 +102,15 @@ def test_fornecedor_com_dois_cnpjs_soma_pelo_nome():
     assert cota["total_fornecedores"] == 1
 
 
+def test_mesmo_cnpj_com_grafias_diferentes_e_um_fornecedor_so():
+    class Fonte(FonteFalsa):
+        def cota(self, ano):
+            return [linha_cota("10.00", fornecedor="POSTO LTDA", doc="11222333000144"), linha_cota("5.00", fornecedor="POSTO LIMITADA", doc="11222333000144")]
+    cota = dinheiro.cota_do_mandato(Fonte(), ID, 57, [2023])
+    assert [valor for _, valor in cota["fornecedores"]] == [15.0]
+    assert cota["total_fornecedores"] == 1
+
+
 def test_comprovante_sem_arquivo_e_ordem_por_valor(doc):
     comprovantes = doc["cota"]["comprovantes"]
     assert [c["valor"] for c in comprovantes] == [100.5, 70.0, 50.0, -20.25]

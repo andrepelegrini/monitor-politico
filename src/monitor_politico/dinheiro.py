@@ -108,10 +108,8 @@ def cota_do_mandato(fonte: Any, id_: int, legislatura: int, anos: Iterable[int])
             categorias[categoria] += valor
             detalhado += valor
             if chave:
-                # Somados por nome: uma mesma empresa individual pode aparecer com mais de um CNPJ.
-                por_nome = _sem_acento(nome)
-                fornecedores[por_nome] += valor
-                nomes[por_nome] = nome
+                fornecedores[chave] += valor
+                nomes[chave] = nome
             comprovantes.append({
                 "mes": f"{linha['numAno']}-{int(linha['numMes']):02d}",
                 "categoria": categoria,
@@ -121,11 +119,19 @@ def cota_do_mandato(fonte: Any, id_: int, legislatura: int, anos: Iterable[int])
             })
         por_ano.append({"ano": ano, **fonte.cota_oficial(id_, ano), "detalhado": round(detalhado, 2)})
     comprovantes.sort(key=lambda c: (-c["valor"], c["mes"]))
+    # Primeiro por CNPJ, porque o mesmo CNPJ vem com grafias diferentes; depois pelo nome, porque uma
+    # empresa individual pode ter mais de um CNPJ.
+    por_nome: Counter[str] = Counter()
+    nome_exibido: dict[str, str] = {}
+    for chave, valor in fornecedores.items():
+        normalizado = _sem_acento(nomes[chave])
+        por_nome[normalizado] += valor
+        nome_exibido[normalizado] = nomes[chave]
     return {
         "por_ano": por_ano,
         "categorias": [[nome, round(valor, 2)] for nome, valor in categorias.most_common()],
-        "fornecedores": [[nomes[chave], round(valor, 2)] for chave, valor in fornecedores.most_common(10)],
-        "total_fornecedores": len(fornecedores),
+        "fornecedores": [[nome_exibido[chave], round(valor, 2)] for chave, valor in por_nome.most_common(10)],
+        "total_fornecedores": len(por_nome),
         "comprovantes": comprovantes,
     }
 

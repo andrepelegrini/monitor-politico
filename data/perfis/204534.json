@@ -1,6 +1,6 @@
 {
   "id": 204534,
-  "coletado_em": "2026-11-05T10:40:47+00:00",
+  "coletado_em": "2026-11-05T10:42:47+00:00",
   "legislatura_atual": {
     "id": 57,
     "inicio": "2023-02-01",
@@ -7071,11 +7071,11 @@
           43810.8
         ],
         [
-          "Guilherme Melles - ME",
-          35000.0
+          "EMVIC TECNOLOGIAS APLICADAS LTDA",
+          36199.2
         ]
       ],
-      "total_fornecedores": 251,
+      "total_fornecedores": 205,
       "comprovantes": [
         {
           "mes": "2024-11",
