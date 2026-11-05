@@ -28,7 +28,9 @@ ROTULOS_SITUACAO = {
     "sem_situacao": "Sem situação informada",
 }
 SITUACOES_ENCERRADAS = re.compile(r"arquivad|retirad|devolvid|rejeitad|prejudicad", re.IGNORECASE)
-NORMA_NO_DESPACHO = re.compile(r"Transformad[oa] n[ao] (.+?)\.(\s|$)")
+NORMA_NO_DESPACHO = re.compile(r"Transformad[oa] n[ao] (.+?)\.(\s|$)", re.IGNORECASE)
+TRAMITACAO_DE_NORMA = re.compile(r"Transforma\w+ em Norma", re.IGNORECASE)
+NORMA_SEM_NUMERO = "Norma sem número informado na tramitação"
 
 
 def participacao(linha_autor: dict[str, str]) -> str:
@@ -49,13 +51,22 @@ def grupo_da_situacao(situacao: str) -> str:
 
 
 def norma_da_tramitacao(tramitacoes: Iterable[dict[str, Any]]) -> Optional[dict[str, Any]]:
-    """Nome da norma, data e se houve veto parcial. A mais recente vale se houver retificação."""
+    """Nome da norma, data e se houve veto parcial. A mais recente vale se houver retificação.
+
+    Há tramitações do tipo "Transformação em Norma Jurídica" com o texto vazio: a norma existe e a data
+    vale, só falta o número.
+    """
     achada = None
     for item in sorted(tramitacoes, key=lambda t: t.get("dataHora") or ""):
         despacho = item.get("despacho") or ""
-        encontrado = NORMA_NO_DESPACHO.match(despacho)
+        encontrado = NORMA_NO_DESPACHO.search(despacho)
         if encontrado:
-            achada = {"nome": encontrado[1], "data": item["dataHora"][:10], "veto_parcial": "vetado parcialmente" in despacho.lower()}
+            nome = re.sub(r"\s+", " ", encontrado[1]).strip()
+        elif TRAMITACAO_DE_NORMA.search(item.get("descricaoTramitacao") or ""):
+            nome = NORMA_SEM_NUMERO
+        else:
+            continue
+        achada = {"nome": nome, "data": item["dataHora"][:10], "veto_parcial": "vetado parcialmente" in despacho.lower()}
     return achada
 
 
@@ -154,7 +165,10 @@ def _caminho(propostas: list[dict[str, Any]], palavra: str) -> list[dict[str, An
     return linhas
 
 
-def visao(doc: dict[str, Any], slugs: Optional[dict[str, str]] = None, mandatos: Optional[list[dict[str, str]]] = None) -> dict[str, Any]:
+def visao(
+    doc: dict[str, Any], slugs: Optional[dict[str, str]] = None, mandatos: Optional[list[dict[str, str]]] = None,
+    inicio_mandato: Optional[str] = None,
+) -> dict[str, Any]:
     slugs, mandatos = slugs or {}, mandatos or []
     propostas = []
     for proposta in doc["propostas"]:
@@ -171,6 +185,7 @@ def visao(doc: dict[str, Any], slugs: Optional[dict[str, str]] = None, mandatos:
     maior = max(assuntos.values(), default=1)
     situacoes = Counter(p["grupo"] for p in propostas)
     palavra = palavra_da_norma(normas)
+    no_mandato = [p for p in normas if inicio_mandato and p["norma"] and p["norma"]["data"] >= inicio_mandato and p["participacao"] != "apoio"]
     por_mandato = []
     for mandato in reversed(mandatos):
         grupo = [p for p in propostas if p["mandato"] == mandato["rotulo"]]
@@ -190,6 +205,12 @@ def visao(doc: dict[str, Any], slugs: Optional[dict[str, str]] = None, mandatos:
         "normas_principais": [p for p in normas if p["participacao"] == "primeira"],
         "normas_coautoria": [p for p in normas if p["participacao"] == "coautoria"],
         "palavra_norma": palavra,
+        "inicio_mandato": inicio_mandato,
+        "sancionadas_no_mandato": {
+            "total": len(no_mandato),
+            "principal": sum(p["participacao"] == "primeira" for p in no_mandato),
+            "coautoria": sum(p["participacao"] == "coautoria" for p in no_mandato),
+        },
         "caminho": _caminho(propostas, palavra),
         "por_mandato": por_mandato,
         "tipos": [(t, sum(p["tipo"] == t for p in propostas)) for t in TIPOS if any(p["tipo"] == t for p in propostas)],

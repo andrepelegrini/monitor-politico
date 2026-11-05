@@ -327,3 +327,8 @@ body { margin: 0; }
   .ce-app .pf-barras--moeda .ce-bar-track { grid-column: 1 / -1; grid-row: 2; }
   .ce-app .pf-tabela th, .ce-app .pf-tabela td { padding-inline: var(--ce-space-2); white-space: normal; }
 }
+
+/* Lista de deputados com as leis de cada um */
+.ce-app .ce-people--leis img, .ce-app .ce-people--leis .ce-photo-empty { grid-row: span 3; }
+.ce-app .ce-people-leis { font-size: .8125rem; line-height: 1.35; color: var(--ce-text-secondary); }
+.ce-app .ce-people-leis strong { color: var(--ce-ink); font-weight: 700; font-variant-numeric: tabular-nums; }

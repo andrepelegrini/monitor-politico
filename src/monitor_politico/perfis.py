@@ -334,7 +334,10 @@ def visao(doc: dict[str, Any], hoje: Optional[date] = None, slugs: Optional[dict
         "proximo_mandato": proximo_mandato(doc, hoje),
         "plenario": plenario.visao(doc["plenario"], slugs) if doc.get("plenario") else None,
         "dinheiro": dinheiro.visao(doc["dinheiro"]) if doc.get("dinheiro") else None,
-        "propostas": propostas.visao(doc["propostas"], slugs, mandatos_da_trajetoria(doc)) if doc.get("propostas") else None,
+        "propostas": (
+            propostas.visao(doc["propostas"], slugs, mandatos_da_trajetoria(doc), (doc.get("legislatura_atual") or {}).get("inicio"))
+            if doc.get("propostas") else None
+        ),
     }
 
 

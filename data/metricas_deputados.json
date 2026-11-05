@@ -1,0 +1,6403 @@
+{
+ "coletado_em": "2026-11-05T11:46:52+00:00",
+ "inicio": "2023-02-01",
+ "ano_mais_antigo": 1995,
+ "candidatas": 718,
+ "sem_norma_identificada": [
+  "PEC 45/2019"
+ ],
+ "normas": [
+  {
+   "id": "2233802",
+   "sigla": "PEC 221/2019",
+   "norma": "Emenda Constitucional 141/2026",
+   "data": "2026-10-16",
+   "principal": [
+    "74161"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2637883",
+   "sigla": "PL 3540/2026",
+   "norma": "Lei Ordinária 15525/2026",
+   "data": "2026-09-28",
+   "principal": [
+    "204436"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2517350",
+   "sigla": "PL 2584/2025",
+   "norma": "Lei Ordinária 15523/2026",
+   "data": "2026-09-28",
+   "principal": [
+    "204372"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2442773",
+   "sigla": "PL 2525/2024",
+   "norma": "Lei Ordinária 15516/2026",
+   "data": "2026-09-22",
+   "principal": [
+    "220595"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2438687",
+   "sigla": "PL 2225/2024",
+   "norma": "Lei Ordinária 15512/2026",
+   "data": "2026-09-22",
+   "principal": [
+    "74856"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2231069",
+   "sigla": "PL 6231/2019",
+   "norma": "Lei Ordinária 15513/2026",
+   "data": "2026-09-22",
+   "principal": [
+    "178933"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2193922",
+   "sigla": "PL 1482/2019",
+   "norma": "Lei Ordinária 15517/2026",
+   "data": "2026-09-22",
+   "principal": [
+    "204457"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2190590",
+   "sigla": "PL 127/2019",
+   "norma": "Lei Ordinária 15514/2026",
+   "data": "2026-09-22",
+   "principal": [
+    "178989"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2456613",
+   "sigla": "PL 3453/2024",
+   "norma": "Lei Ordinária 15509/2026",
+   "data": "2026-09-21",
+   "principal": [
+    "72442"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2432865",
+   "sigla": "PL 1743/2024",
+   "norma": "Lei Ordinária 15511/2026",
+   "data": "2026-09-21",
+   "principal": [
+    "204450"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2349768",
+   "sigla": "PL 780/2023",
+   "norma": "Lei Ordinária 15507/2026",
+   "data": "2026-09-21",
+   "principal": [
+    "74374"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2447259",
+   "sigla": "PL 2780/2024",
+   "norma": "Lei Ordinária 15506/2026",
+   "data": "2026-09-16",
+   "principal": [
+    "160632"
+   ],
+   "coautoria": [
+    "74856",
+    "220677",
+    "220540",
+    "74084",
+    "204517"
+   ]
+  },
+  {
+   "id": "2424208",
+   "sigla": "PL 1036/2024",
+   "norma": "Lei Ordinária 15495/2026",
+   "data": "2026-09-04",
+   "principal": [
+    "160598"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2491956",
+   "sigla": "PL 1376/2025",
+   "norma": "Lei Ordinária 15492/2026",
+   "data": "2026-09-03",
+   "principal": [
+    "220561"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2412400",
+   "sigla": "PL 5972/2023",
+   "norma": "Lei Ordinária 15494/2026",
+   "data": "2026-09-03",
+   "principal": [
+    "220626"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2355750",
+   "sigla": "PL 1799/2023",
+   "norma": "Lei Ordinária 15493/2026",
+   "data": "2026-09-03",
+   "principal": [
+    "220622"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2618177",
+   "sigla": "PLP 114/2026",
+   "norma": "Lei Complementar 235/2026",
+   "data": "2026-08-28",
+   "principal": [
+    "74400"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2625767",
+   "sigla": "PL 2465/2026",
+   "norma": "Lei Ordinária 15486/2026",
+   "data": "2026-08-06",
+   "principal": [
+    "74400"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2528433",
+   "sigla": "PL 3066/2025",
+   "norma": "Lei Ordinária 15487/2026",
+   "data": "2026-08-06",
+   "principal": [
+    "73692"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2270325",
+   "sigla": "PLP 18/2021",
+   "norma": "Lei Complementar 234/2026",
+   "data": "2026-08-06",
+   "principal": [
+    "204531"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2320472",
+   "sigla": "PL 1028/2022",
+   "norma": "Lei Ordinária 15482/2026",
+   "data": "2026-08-04",
+   "principal": [
+    "73692"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2297063",
+   "sigla": "PL 3039/2021",
+   "norma": "Lei Ordinária 15481/2026",
+   "data": "2026-07-31",
+   "principal": [
+    "73701"
+   ],
+   "coautoria": [
+    "74398",
+    "74160",
+    "74156",
+    "141398",
+    "160508",
+    "160610",
+    "160569",
+    "160575",
+    "160556",
+    "160538",
+    "160535",
+    "160604",
+    "204480",
+    "178866",
+    "178986",
+    "204492",
+    "204495",
+    "107283",
+    "204426",
+    "204453",
+    "141488",
+    "178970",
+    "188097"
+   ]
+  },
+  {
+   "id": "2395783",
+   "sigla": "PL 4978/2023",
+   "norma": "Lei Ordinária 15479/2026",
+   "data": "2026-07-29",
+   "principal": [
+    "204534"
+   ],
+   "coautoria": [
+    "160161",
+    "220686",
+    "153423",
+    "220553",
+    "220674",
+    "220569",
+    "220561",
+    "180214",
+    "220595",
+    "220676",
+    "220539",
+    "104552",
+    "220701",
+    "220667",
+    "206018",
+    "220668",
+    "220630",
+    "220715",
+    "220703",
+    "73701",
+    "139285",
+    "74171",
+    "160598",
+    "160632",
+    "69871",
+    "178871",
+    "66828",
+    "178989",
+    "191923",
+    "204412",
+    "204541",
+    "204572",
+    "178987",
+    "224333"
+   ]
+  },
+  {
+   "id": "2086629",
+   "sigla": "PL 5465/2016",
+   "norma": "Lei Ordinária 15478/2026",
+   "data": "2026-07-29",
+   "principal": [
+    "74856"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2160480",
+   "sigla": "PL 2119/2019",
+   "norma": "Lei Ordinária 15476/2026",
+   "data": "2026-07-23",
+   "principal": [
+    "73486"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2252295",
+   "sigla": "PL 2583/2020",
+   "norma": "Lei Ordinária 15471/2026",
+   "data": "2026-07-20",
+   "principal": [
+    "204450"
+   ],
+   "coautoria": [
+    "204412"
+   ]
+  },
+  {
+   "id": "581995",
+   "sigla": "PL 5824/2013",
+   "norma": "Lei Ordinária 15470/2026",
+   "data": "2026-07-16",
+   "principal": [
+    "74374"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "481891",
+   "sigla": "PL 7536/2010",
+   "norma": "Lei Ordinária 15469/2026",
+   "data": "2026-07-15",
+   "principal": [
+    "150418"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "1202922",
+   "sigla": "PL 1108/2015",
+   "norma": "Lei Ordinária 15468/2026",
+   "data": "2026-07-13",
+   "principal": [
+    "178989"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2415323",
+   "sigla": "PL 6113/2023",
+   "norma": "Lei Ordinária 15466/2026",
+   "data": "2026-07-09",
+   "principal": [
+    "220540"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2261048",
+   "sigla": "PL 4368/2020",
+   "norma": "Lei Ordinária 15465/2026",
+   "data": "2026-07-09",
+   "principal": [
+    "204406"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2417054",
+   "sigla": "PL 96/2024",
+   "norma": "Lei Ordinária 15462/2026",
+   "data": "2026-07-08",
+   "principal": [
+    "204533"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2360457",
+   "sigla": "PL 2379/2023",
+   "norma": "Lei Ordinária 15463/2026",
+   "data": "2026-07-08",
+   "principal": [
+    "220629"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "258057",
+   "sigla": "PL 3801/2004",
+   "norma": "Lei Ordinária 15460/2026",
+   "data": "2026-07-07",
+   "principal": [
+    "74400"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2139808",
+   "sigla": "PL 2199/2022",
+   "norma": "Lei Ordinária 15459/2026",
+   "data": "2026-07-07",
+   "principal": [
+    "160512"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2581652",
+   "sigla": "PL 5672/2025",
+   "norma": "Lei Ordinária 15454/2026",
+   "data": "2026-07-01",
+   "principal": [
+    "80815"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2449296",
+   "sigla": "PL 2896/2024",
+   "norma": "Lei Ordinária 15453/2026",
+   "data": "2026-07-01",
+   "principal": [
+    "220685"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2407561",
+   "sigla": "PL 5760/2023",
+   "norma": "Lei Ordinária 15455/2026",
+   "data": "2026-07-01",
+   "principal": [
+    "220606"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2335185",
+   "sigla": "PLP 128/2022",
+   "norma": "Lei Complementar 233/2026",
+   "data": "2026-07-01",
+   "principal": [
+    "204506"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2435544",
+   "sigla": "PL 1986/2024",
+   "norma": "Lei Ordinária 15442/2026",
+   "data": "2026-06-26",
+   "principal": [
+    "74273"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2416611",
+   "sigla": "PL 6223/2023",
+   "norma": "Lei Ordinária 15443/2026",
+   "data": "2026-06-26",
+   "principal": [
+    "220660"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2397693",
+   "sigla": "PL 5057/2023",
+   "norma": "Lei Ordinária 15445/2026",
+   "data": "2026-06-26",
+   "principal": [
+    "220656"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2376024",
+   "sigla": "PL 3758/2023",
+   "norma": "Lei Ordinária 15444/2026",
+   "data": "2026-06-26",
+   "principal": [
+    "220576"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2372814",
+   "sigla": "PL 3428/2023",
+   "norma": "Lei Ordinária 15441/2026",
+   "data": "2026-06-26",
+   "principal": [
+    "141391"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2348306",
+   "sigla": "PL 421/2023",
+   "norma": "Lei Ordinária 15438/2026",
+   "data": "2026-06-18",
+   "principal": [
+    "74856"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2607606",
+   "sigla": "PL 1049/2026",
+   "norma": "Lei Ordinária 15436/2026",
+   "data": "2026-06-17",
+   "principal": [
+    "178946"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2024910",
+   "sigla": "PL 3416/2015",
+   "norma": "Lei Ordinária 15435/2026",
+   "data": "2026-06-17",
+   "principal": [
+    "160673"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2483443",
+   "sigla": "PL 357/2025",
+   "norma": "Lei Ordinária 15433/2026",
+   "data": "2026-06-16",
+   "principal": [
+    "141391"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2482183",
+   "sigla": "PL 37/2025",
+   "norma": "Lei Ordinária 15431/2026",
+   "data": "2026-06-10",
+   "principal": [
+    "220543"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2171627",
+   "sigla": "PL 9999/2018",
+   "norma": "Lei Ordinária 15429/2026",
+   "data": "2026-06-05",
+   "principal": [
+    "178963"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2349657",
+   "sigla": "PL 754/2023",
+   "norma": "Lei Ordinária 15423/2026",
+   "data": "2026-06-03",
+   "principal": [
+    "139285"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2294975",
+   "sigla": "PL 2888/2021",
+   "norma": "Lei Ordinária 15424/2026",
+   "data": "2026-06-03",
+   "principal": [
+    "204372"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2417511",
+   "sigla": "PL 193/2024",
+   "norma": "Lei Ordinária 15420/2026",
+   "data": "2026-05-28",
+   "principal": [
+    "160598"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2488232",
+   "sigla": "PL 1164/2025",
+   "norma": "Lei Ordinária 15417/2026",
+   "data": "2026-05-25",
+   "principal": [
+    "74856"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2486749",
+   "sigla": "PL 958/2025",
+   "norma": "Lei Ordinária 15416/2026",
+   "data": "2026-05-25",
+   "principal": [
+    "220699"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2401286",
+   "sigla": "PL 5357/2023",
+   "norma": "Lei Ordinária 15414/2026",
+   "data": "2026-05-21",
+   "principal": [
+    "220538"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2424751",
+   "sigla": "PL 1099/2024",
+   "norma": "Lei Ordinária 15409/2026",
+   "data": "2026-05-20",
+   "principal": [
+    "220569"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2333334",
+   "sigla": "PL 2120/2022",
+   "norma": "Lei Ordinária 15406/2026",
+   "data": "2026-05-11",
+   "principal": [
+    "160604"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2266116",
+   "sigla": "PL 5391/2020",
+   "norma": "Lei Ordinária 15407/2026",
+   "data": "2026-05-11",
+   "principal": [
+    "204460"
+   ],
+   "coautoria": [
+    "178829"
+   ]
+  },
+  {
+   "id": "2358548",
+   "sigla": "PL 2162/2023",
+   "norma": "Lei Ordinária 15402/2026",
+   "data": "2026-05-08",
+   "principal": [
+    "220599"
+   ],
+   "coautoria": [
+    "220588",
+    "220542",
+    "220544",
+    "220551",
+    "220666",
+    "220552",
+    "220695",
+    "220534",
+    "220539",
+    "220530",
+    "220584",
+    "74044",
+    "141555",
+    "150418",
+    "154178",
+    "160758",
+    "178881",
+    "178929",
+    "178947",
+    "178962",
+    "204356",
+    "204491",
+    "98057",
+    "204408",
+    "205550",
+    "204540",
+    "221328",
+    "224117"
+   ]
+  },
+  {
+   "id": "2159880",
+   "sigla": "PL 8984/2017",
+   "norma": "Lei Ordinária 15403/2026",
+   "data": "2026-05-08",
+   "principal": [
+    "141450"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2376169",
+   "sigla": "PL 3780/2023",
+   "norma": "Lei Ordinária 15397/2026",
+   "data": "2026-04-30",
+   "principal": [
+    "204536"
+   ],
+   "coautoria": [
+    "220547",
+    "220649"
+   ]
+  },
+  {
+   "id": "2282719",
+   "sigla": "PL 1800/2021",
+   "norma": "Lei Ordinária 15394/2026",
+   "data": "2026-04-22",
+   "principal": [
+    "160758"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2423153",
+   "sigla": "PL 941/2024",
+   "norma": "Lei Ordinária 15392/2026",
+   "data": "2026-04-16",
+   "principal": [
+    "74856"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2418774",
+   "sigla": "PLP 6/2024",
+   "norma": "Lei Complementar 230/2026",
+   "data": "2026-04-15",
+   "principal": [
+    "220626"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2503156",
+   "sigla": "PL 2014/2025",
+   "norma": "Lei Ordinária 15386/2026",
+   "data": "2026-04-10",
+   "principal": [
+    "74856"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2462009",
+   "sigla": "PL 3880/2024",
+   "norma": "Lei Ordinária 15384/2026",
+   "data": "2026-04-09",
+   "principal": [
+    "74856"
+   ],
+   "coautoria": [
+    "74398",
+    "204407"
+   ]
+  },
+  {
+   "id": "2449741",
+   "sigla": "PL 2942/2024",
+   "norma": "Lei Ordinária 15383/2026",
+   "data": "2026-04-09",
+   "principal": [
+    "220604"
+   ],
+   "coautoria": [
+    "204407"
+   ]
+  },
+  {
+   "id": "2350615",
+   "sigla": "PL 1020/2023",
+   "norma": "Lei Ordinária 15382/2026",
+   "data": "2026-04-09",
+   "principal": [
+    "206018"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2443487",
+   "sigla": "PL 2587/2024",
+   "norma": "Lei Ordinária 15376/2026",
+   "data": "2026-04-06",
+   "principal": [
+    "72442"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2443485",
+   "sigla": "PL 2586/2024",
+   "norma": "Lei Ordinária 15375/2026",
+   "data": "2026-04-06",
+   "principal": [
+    "72442"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2369900",
+   "sigla": "PL 3112/2023",
+   "norma": "Lei Ordinária 15380/2026",
+   "data": "2026-04-06",
+   "principal": [
+    "74856"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2288670",
+   "sigla": "PL 2371/2021",
+   "norma": "Lei Ordinária 15379/2026",
+   "data": "2026-04-06",
+   "principal": [
+    "204388"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2388794",
+   "sigla": "PL 4553/2023",
+   "norma": "Lei Ordinária 15370/2026",
+   "data": "2026-03-31",
+   "principal": [
+    "157130"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2152118",
+   "sigla": "PL 8618/2017",
+   "norma": "Lei Ordinária 15369/2026",
+   "data": "2026-03-31",
+   "principal": [
+    "74467"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2601040",
+   "sigla": "PLP 14/2026",
+   "norma": "Lei Complementar 228/2026",
+   "data": "2026-03-19",
+   "principal": [
+    "141398"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2437973",
+   "sigla": "PL 2195/2024",
+   "norma": "Lei Ordinária 15353/2026",
+   "data": "2026-03-08",
+   "principal": [
+    "74856"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "125811",
+   "sigla": "PL 1549/2003",
+   "norma": "Lei Ordinária 15345/2026.DOU 13/01/2026 PÁG 01 COL 02",
+   "data": "2026-01-12",
+   "principal": [
+    "73441"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2431055",
+   "sigla": "PL 1572/2024",
+   "norma": "Lei Ordinária 15339/2026",
+   "data": "2026-01-09",
+   "principal": [
+    "220581"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2300349",
+   "sigla": "PL 3315/2021",
+   "norma": "Lei Ordinária 15342/2026",
+   "data": "2026-01-09",
+   "principal": [
+    "141450"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2430953",
+   "sigla": "PL 1546/2024",
+   "norma": "Lei Ordinária 15327/2026",
+   "data": "2026-01-06",
+   "principal": [
+    "220584"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2392925",
+   "sigla": "PL 4816/2023",
+   "norma": "Lei Ordinária 15325/2026",
+   "data": "2026-01-06",
+   "principal": [
+    "220651"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2368763",
+   "sigla": "PL 3037/2023",
+   "norma": "Lei Ordinária 15323/2026",
+   "data": "2026-01-06",
+   "principal": [
+    "214694"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2360537",
+   "sigla": "PL 2387/2023",
+   "norma": "Lei Ordinária 15326/2026",
+   "data": "2026-01-06",
+   "principal": [
+    "221338"
+   ],
+   "coautoria": [
+    "220606"
+   ]
+  },
+  {
+   "id": "2155481",
+   "sigla": "PL 8824/2017",
+   "norma": "Lei Ordinária 15324/2026",
+   "data": "2026-01-06",
+   "principal": [
+    "178871"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2520670",
+   "sigla": "PLP 128/2025",
+   "norma": "Lei Complementar 224/2025",
+   "data": "2025-12-26",
+   "principal": [
+    "204486"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2474069",
+   "sigla": "PL 4635/2024",
+   "norma": "Lei Ordinária 15320/2025",
+   "data": "2025-12-26",
+   "principal": [
+    "178992"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2335365",
+   "sigla": "PL 2577/2022",
+   "norma": "Lei Ordinária 15319/2025",
+   "data": "2025-12-26",
+   "principal": [
+    "204495"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2317622",
+   "sigla": "PL 542/2022",
+   "norma": "Lei Ordinária 15299/2025",
+   "data": "2025-12-23",
+   "principal": [
+    "141555"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2541109",
+   "sigla": "PLP 163/2025",
+   "norma": "Lei Complementar 223/2025",
+   "data": "2025-12-19",
+   "principal": [
+    "204436"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2486461",
+   "sigla": "PL 892/2025",
+   "norma": "Lei Ordinária 15294/2025",
+   "data": "2025-12-19",
+   "principal": [
+    "178835"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2225224",
+   "sigla": "PEC 169/2019",
+   "norma": "Emenda Constitucional 138/2025",
+   "data": "2025-12-19",
+   "principal": [
+    "204572"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "533000",
+   "sigla": "PL 3032/2011",
+   "norma": "Lei Ordinária 15288/2025",
+   "data": "2025-12-18",
+   "principal": [
+    "160527"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2386685",
+   "sigla": "PL 4402/2023",
+   "norma": "Lei Ordinária 15289/2025",
+   "data": "2025-12-18",
+   "principal": [
+    "139285"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2256252",
+   "sigla": "PL 3506/2020",
+   "norma": "Lei Ordinária 15287/2025",
+   "data": "2025-12-18",
+   "principal": [
+    "204372"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2366565",
+   "sigla": "PL 2880/2023",
+   "norma": "Lei Ordinária 15281/2025",
+   "data": "2025-12-05",
+   "principal": [
+    "204572"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2406521",
+   "sigla": "PL 5696/2023",
+   "norma": "Lei Ordinária 15276/2025",
+   "data": "2025-11-28",
+   "principal": [
+    "220623"
+   ],
+   "coautoria": [
+    "220686",
+    "104552",
+    "220667",
+    "220715",
+    "220548",
+    "204534"
+   ]
+  },
+  {
+   "id": "2480979",
+   "sigla": "PLP 234/2024",
+   "norma": "Lei Complementar 222/2025",
+   "data": "2025-11-26",
+   "principal": [
+    "72442"
+   ],
+   "coautoria": [
+    "160161",
+    "220605",
+    "220607",
+    "133439",
+    "122158",
+    "204455",
+    "204372"
+   ]
+  },
+  {
+   "id": "2355563",
+   "sigla": "PL 1779/2023",
+   "norma": "Lei Ordinária 15275/2025",
+   "data": "2025-11-26",
+   "principal": [
+    "220543"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2355560",
+   "sigla": "PL 1778/2023",
+   "norma": "Lei Ordinária 15274/2025",
+   "data": "2025-11-26",
+   "principal": [
+    "220543"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2358217",
+   "sigla": "PL 2133/2023",
+   "norma": "Lei Ordinária 15266/2025",
+   "data": "2025-11-21",
+   "principal": [
+    "220614"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2301541",
+   "sigla": "PL 3436/2021",
+   "norma": "Lei Ordinária 15267/2025",
+   "data": "2025-11-21",
+   "principal": [],
+   "coautoria": [
+    "204540"
+   ]
+  },
+  {
+   "id": "2147344",
+   "sigla": "PL 8251/2017",
+   "norma": "Lei Ordinária 15268/2025",
+   "data": "2025-11-21",
+   "principal": [
+    "74398"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2231632",
+   "sigla": "PL 6256/2019",
+   "norma": "Lei Ordinária 15263/2025",
+   "data": "2025-11-14",
+   "principal": [
+    "160575"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2516804",
+   "sigla": "PL 2562/2025",
+   "norma": "Lei Ordinária 15261/2025",
+   "data": "2025-11-13",
+   "principal": [
+    "178946"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2388514",
+   "sigla": "PL 4540/2023",
+   "norma": "Lei Ordinária 15256/2025",
+   "data": "2025-11-12",
+   "principal": [
+    "220536"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2362323",
+   "sigla": "PL 2578/2023",
+   "norma": "Lei Ordinária 15257/2025",
+   "data": "2025-11-12",
+   "principal": [
+    "220712"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2347139",
+   "sigla": "PL 315/2023",
+   "norma": "Lei Ordinária 15260/2025",
+   "data": "2025-11-12",
+   "principal": [
+    "188097"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2303760",
+   "sigla": "PL 3699/2021",
+   "norma": "Lei Ordinária 15258/2025",
+   "data": "2025-11-12",
+   "principal": [
+    "141398"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2229128",
+   "sigla": "PL 5929/2019",
+   "norma": "Lei Ordinária 15259/2025",
+   "data": "2025-11-12",
+   "principal": [
+    "204372"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2483447",
+   "sigla": "PL 358/2025",
+   "norma": "Lei Ordinária 15251/2025",
+   "data": "2025-11-03",
+   "principal": [
+    "220623"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2464780",
+   "sigla": "PL 4102/2024",
+   "norma": "Lei Ordinária 15249/2025",
+   "data": "2025-11-03",
+   "principal": [
+    "220670"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2359820",
+   "sigla": "PL 2336/2023",
+   "norma": "Lei Ordinária 15250/2025",
+   "data": "2025-11-03",
+   "principal": [
+    "204396"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2359903",
+   "sigla": "PL 2345/2023",
+   "norma": "Lei Ordinária 15244/2025",
+   "data": "2025-10-28",
+   "principal": [
+    "73701"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2427139",
+   "sigla": "PL 1282/2024",
+   "norma": "Lei Ordinária 15236/2025",
+   "data": "2025-10-16",
+   "principal": [
+    "204426"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2423157",
+   "sigla": "PL 942/2024",
+   "norma": "Lei Ordinária 15234/2025",
+   "data": "2025-10-07",
+   "principal": [
+    "74856"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2075821",
+   "sigla": "PL 2205/2022",
+   "norma": "Lei Ordinária 15226/2025",
+   "data": "2025-09-30",
+   "principal": [
+    "178866"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2387067",
+   "sigla": "PLP 192/2023",
+   "norma": "Lei Complementar 219/2025",
+   "data": "2025-09-29",
+   "principal": [
+    "220603"
+   ],
+   "coautoria": [
+    "220542",
+    "220560",
+    "73801",
+    "143632",
+    "160510",
+    "160512",
+    "204436"
+   ]
+  },
+  {
+   "id": "2192288",
+   "sigla": "PL 853/2019",
+   "norma": "Lei Ordinária 15221/2025",
+   "data": "2025-09-29",
+   "principal": [
+    "204535"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2542169",
+   "sigla": "PL 3865/2025",
+   "norma": "Lei Ordinária 15219/2025",
+   "data": "2025-09-24",
+   "principal": [
+    "220651"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "543765",
+   "sigla": "PL 3819/2012",
+   "norma": "Lei Ordinária 15217/2025",
+   "data": "2025-09-22",
+   "principal": [
+    "160673"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2340771",
+   "sigla": "PL 2913/2022",
+   "norma": "Lei Ordinária 15216/2025",
+   "data": "2025-09-22",
+   "principal": [
+    "204557"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2500260",
+   "sigla": "PL 1856/2025",
+   "norma": "Lei Ordinária 15213/2025",
+   "data": "2025-09-18",
+   "principal": [
+    "160553"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2486199",
+   "sigla": "PLP 58/2025",
+   "norma": "Lei Complementar 217/2025",
+   "data": "2025-09-18",
+   "principal": [
+    "204486"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2442994",
+   "sigla": "PL 2549/2024",
+   "norma": "Lei Ordinária 15214/2025",
+   "data": "2025-09-18",
+   "principal": [
+    "220622"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2399305",
+   "sigla": "PL 5178/2023",
+   "norma": "Lei Ordinária 15212/2025",
+   "data": "2025-09-18",
+   "principal": [
+    "74856"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2370182",
+   "sigla": "PL 3148/2023",
+   "norma": "Lei Ordinária 15215/2025",
+   "data": "2025-09-18",
+   "principal": [
+    "206018"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2381362",
+   "sigla": "PL 4047/2023",
+   "norma": "Lei Ordinária 15207/2025",
+   "data": "2025-09-12",
+   "principal": [
+    "160598"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2346769",
+   "sigla": "PL 99/2023",
+   "norma": "Lei Ordinária 15205/2025",
+   "data": "2025-09-12",
+   "principal": [
+    "220648"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2396156",
+   "sigla": "PL 5015/2023",
+   "norma": "Lei Ordinária 15199/2025",
+   "data": "2025-09-08",
+   "principal": [
+    "226075"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2383537",
+   "sigla": "PL 4191/2023",
+   "norma": "Lei Ordinária 15196/2025",
+   "data": "2025-09-05",
+   "principal": [
+    "74057"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2334560",
+   "sigla": "PL 2374/2022",
+   "norma": "Lei Ordinária 15197/2025",
+   "data": "2025-09-05",
+   "principal": [
+    "160600"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2466108",
+   "sigla": "PL 4187/2024",
+   "norma": "Lei Ordinária 15189/2025",
+   "data": "2025-08-06",
+   "principal": [
+    "139285"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2432800",
+   "sigla": "PL 1730/2024",
+   "norma": "Lei Ordinária 15188/2025",
+   "data": "2025-08-06",
+   "principal": [
+    "74856"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2217702",
+   "sigla": "PL 4752/2019",
+   "norma": "Lei Ordinária 15187/2025",
+   "data": "2025-08-04",
+   "principal": [
+    "178986"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2359938",
+   "sigla": "PL 2352/2023",
+   "norma": "Lei Ordinária 15182/2025",
+   "data": "2025-07-30",
+   "principal": [
+    "204504"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2419900",
+   "sigla": "PL 650/2024",
+   "norma": "Lei Ordinária 15193/2025",
+   "data": "2025-07-28",
+   "principal": [
+    "204427"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2398505",
+   "sigla": "PL 5121/2023",
+   "norma": "Lei Ordinária 15195/2025",
+   "data": "2025-07-28",
+   "principal": [
+    "220539"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2346896",
+   "sigla": "PL 170/2023",
+   "norma": "Lei Ordinária 15192/2025",
+   "data": "2025-07-28",
+   "principal": [
+    "204495"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2092056",
+   "sigla": "PL 4872/2024",
+   "norma": "Lei Ordinária 15181/2025",
+   "data": "2025-07-28",
+   "principal": [
+    "160621"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2479834",
+   "sigla": "PL 4870/2024",
+   "norma": "Lei Ordinária 15180/2025",
+   "data": "2025-07-25",
+   "principal": [
+    "157130"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2314303",
+   "sigla": "PL 194/2022",
+   "norma": "Lei Ordinária 15175/2025",
+   "data": "2025-07-23",
+   "principal": [
+    "139285"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2277019",
+   "sigla": "PL 1246/2021",
+   "norma": "Lei Ordinária 15177/2025",
+   "data": "2025-07-23",
+   "principal": [
+    "204534"
+   ],
+   "coautoria": [
+    "160575",
+    "178946"
+   ]
+  },
+  {
+   "id": "2164845",
+   "sigla": "PL 9263/2017",
+   "norma": "Lei Ordinária 15178/2025",
+   "data": "2025-07-23",
+   "principal": [
+    "74160"
+   ],
+   "coautoria": [
+    "74041",
+    "160610",
+    "160556",
+    "160535",
+    "178986",
+    "178970"
+   ]
+  },
+  {
+   "id": "2406422",
+   "sigla": "PL 5688/2023",
+   "norma": "Lei Ordinária 15174/2025",
+   "data": "2025-07-22",
+   "principal": [
+    "74856"
+   ],
+   "coautoria": [
+    "160518"
+   ]
+  },
+  {
+   "id": "2388952",
+   "sigla": "PL 4562/2023",
+   "norma": "Lei Ordinária 15168/2025",
+   "data": "2025-07-17",
+   "principal": [
+    "160598"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2078134",
+   "sigla": "PL 4546/2016",
+   "norma": "Lei Ordinária 15170/2025",
+   "data": "2025-07-17",
+   "principal": [
+    "160588"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2357742",
+   "sigla": "PL 2079/2023",
+   "norma": "Lei Ordinária 15161/2025",
+   "data": "2025-07-03",
+   "principal": [
+    "74041"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2348304",
+   "sigla": "PL 419/2023",
+   "norma": "Lei Ordinária 15160/2025",
+   "data": "2025-07-03",
+   "principal": [
+    "74856"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2263017",
+   "sigla": "PL 4626/2020",
+   "norma": "Lei Ordinária 15163/2025",
+   "data": "2025-07-03",
+   "principal": [
+    "204444"
+   ],
+   "coautoria": [
+    "204404",
+    "204367"
+   ]
+  },
+  {
+   "id": "2260458",
+   "sigla": "PL 4206/2020",
+   "norma": "Lei Ordinária 15150/2025",
+   "data": "2025-06-16",
+   "principal": [
+    "204494"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2288132",
+   "sigla": "PL 2310/2021",
+   "norma": "Lei Ordinária 15149/2025",
+   "data": "2025-06-12",
+   "principal": [
+    "178989"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2333336",
+   "sigla": "PL 2121/2022",
+   "norma": "Lei Ordinária 15148/2025",
+   "data": "2025-06-11",
+   "principal": [
+    "62881"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2312201",
+   "sigla": "PL 4409/2021",
+   "norma": "Lei Ordinária 15146/2025",
+   "data": "2025-06-09",
+   "principal": [
+    "72442"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2237886",
+   "sigla": "PL 394/2020",
+   "norma": "Lei Ordinária 15144/2025",
+   "data": "2025-06-09",
+   "principal": [
+    "204496"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2327814",
+   "sigla": "PL 1640/2022",
+   "norma": "Lei Ordinária 15139/2025",
+   "data": "2025-05-23",
+   "principal": [
+    "178966"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2405287",
+   "sigla": "PL 5616/2023",
+   "norma": "Lei Ordinária 15136/2025",
+   "data": "2025-05-21",
+   "principal": [
+    "220667"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2222726",
+   "sigla": "PL 5307/2019",
+   "norma": "Lei Ordinária 15138/2025",
+   "data": "2025-05-21",
+   "principal": [
+    "160758"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "1212501",
+   "sigla": "PL 3526/2019",
+   "norma": "Lei Ordinária 15133/2025",
+   "data": "2025-05-06",
+   "principal": [
+    "160552"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2260646",
+   "sigla": "PL 4262/2020",
+   "norma": "Lei Ordinária 15131/2025",
+   "data": "2025-04-29",
+   "principal": [
+    "204353"
+   ],
+   "coautoria": [
+    "204540"
+   ]
+  },
+  {
+   "id": "2359667",
+   "sigla": "PL 2314/2023",
+   "norma": "Lei Ordinária 15128/2025",
+   "data": "2025-04-28",
+   "principal": [
+    "178835"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2270947",
+   "sigla": "PL 610/2021",
+   "norma": "Lei Ordinária 15127/2025",
+   "data": "2025-04-28",
+   "principal": [
+    "141555"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2190579",
+   "sigla": "PL 119/2019",
+   "norma": "Lei Ordinária 15126/2025",
+   "data": "2025-04-28",
+   "principal": [
+    "178989"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2418789",
+   "sigla": "PL 475/2024",
+   "norma": "Lei Ordinária 15124/2025",
+   "data": "2025-04-24",
+   "principal": [
+    "220645"
+   ],
+   "coautoria": [
+    "206018",
+    "74784",
+    "204464",
+    "221338"
+   ]
+  },
+  {
+   "id": "2418364",
+   "sigla": "PL 370/2024",
+   "norma": "Lei Ordinária 15123/2025",
+   "data": "2025-04-24",
+   "principal": [
+    "74848"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2402981",
+   "sigla": "PL 5427/2023",
+   "norma": "Lei Ordinária 15125/2025",
+   "data": "2025-04-24",
+   "principal": [
+    "204456"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2351932",
+   "sigla": "PL 1241/2023",
+   "norma": "Lei Ordinária 15120/2025",
+   "data": "2025-04-07",
+   "principal": [
+    "220644"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "338671",
+   "sigla": "PL 7670/2006",
+   "norma": "Lei Ordinária 15117/2025",
+   "data": "2025-04-02",
+   "principal": [
+    "74171"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2470252",
+   "sigla": "PL 4440/2024",
+   "norma": "Lei Ordinária 15116/2025",
+   "data": "2025-04-02",
+   "principal": [
+    "220651"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2380241",
+   "sigla": "PL 3958/2023",
+   "norma": "Lei Ordinária 15115/2025",
+   "data": "2025-03-28",
+   "principal": [
+    "160548"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2158510",
+   "sigla": "PL 4538/2021",
+   "norma": "Lei Ordinária 15109/2025",
+   "data": "2025-03-13",
+   "principal": [
+    "178989"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "945492",
+   "sigla": "PL 104/2015",
+   "norma": "Lei Ordinária 15100/2025",
+   "data": "2025-01-13",
+   "principal": [
+    "160559"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2176877",
+   "sigla": "PL 10314/2018",
+   "norma": "Lei Ordinária 15099/2025",
+   "data": "2025-01-10",
+   "principal": [
+    "178983"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "454376",
+   "sigla": "PL 6184/2009",
+   "norma": "Lei Ordinária 15091/2025",
+   "data": "2025-01-07",
+   "principal": [
+    "74262"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2472038",
+   "sigla": "PL 4537/2024",
+   "norma": "Lei Ordinária 15092/2025",
+   "data": "2025-01-07",
+   "principal": [
+    "133439"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2196486",
+   "sigla": "PL 1970/2019",
+   "norma": "Lei Ordinária 15089/2025",
+   "data": "2025-01-07",
+   "principal": [
+    "204480"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2462452",
+   "sigla": "PL 3944/2024",
+   "norma": "Lei Ordinária 15088/2025",
+   "data": "2025-01-06",
+   "principal": [
+    "178876"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2359201",
+   "sigla": "PL 2285/2023",
+   "norma": "Lei Ordinária 15086/2025",
+   "data": "2025-01-03",
+   "principal": [
+    "160548"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2309579",
+   "sigla": "PL 4214/2021",
+   "norma": "Lei Ordinária 15087/2025",
+   "data": "2025-01-03",
+   "principal": [
+    "204406"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2304907",
+   "sigla": "PL 3793/2021",
+   "norma": "Lei Ordinária 15085/2025",
+   "data": "2025-01-02",
+   "principal": [
+    "178975"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2473389",
+   "sigla": "PLP 210/2024",
+   "norma": "Lei Complementar 211/2024",
+   "data": "2024-12-30",
+   "principal": [],
+   "coautoria": [
+    "220556",
+    "220668",
+    "220581",
+    "73801",
+    "74467",
+    "74161",
+    "133439",
+    "160674",
+    "178835",
+    "69871",
+    "178887",
+    "204436",
+    "204486",
+    "204394",
+    "204501",
+    "198783",
+    "204450",
+    "81055"
+   ]
+  },
+  {
+   "id": "1278998",
+   "sigla": "PL 1552/2015",
+   "norma": "Lei Ordinária 15081/2024",
+   "data": "2024-12-30",
+   "principal": [
+    "178946"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2473375",
+   "sigla": "PL 4614/2024",
+   "norma": "Lei Ordinária 15077/2024",
+   "data": "2024-12-27",
+   "principal": [],
+   "coautoria": [
+    "220556",
+    "220581",
+    "73801",
+    "74467",
+    "74161",
+    "133439",
+    "160674",
+    "178835",
+    "69871",
+    "204486",
+    "204394",
+    "204501",
+    "198783",
+    "204450",
+    "81055"
+   ]
+  },
+  {
+   "id": "2268008",
+   "sigla": "PL 5637/2020",
+   "norma": "Lei Ordinária 15073/2024",
+   "data": "2024-12-26",
+   "principal": [
+    "204541"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "559138",
+   "sigla": "PL 6606/2019",
+   "norma": "Lei Ordinária 15068/2024",
+   "data": "2024-12-23",
+   "principal": [
+    "141488"
+   ],
+   "coautoria": [
+    "74784",
+    "160556",
+    "160538"
+   ]
+  },
+  {
+   "id": "2271161",
+   "sigla": "PL 658/2021",
+   "norma": "Lei Ordinária 15070/2024",
+   "data": "2024-12-23",
+   "principal": [
+    "204517"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2227782",
+   "sigla": "PL 5791/2019",
+   "norma": "Lei Ordinária 15069/2024",
+   "data": "2024-12-23",
+   "principal": [
+    "178832"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2300758",
+   "sigla": "PL 3356/2021",
+   "norma": "Lei Ordinária 15050/2024",
+   "data": "2024-12-20",
+   "principal": [
+    "178993"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2056145",
+   "sigla": "PL 3720/2015",
+   "norma": "Lei Ordinária 15046/2024",
+   "data": "2024-12-17",
+   "principal": [
+    "178962"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2146072",
+   "sigla": "PL 8121/2017",
+   "norma": "Lei Ordinária 15045/2024",
+   "data": "2024-12-16",
+   "principal": [
+    "74400"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2470433",
+   "sigla": "PL 4448/2024",
+   "norma": "Lei Ordinária 15038/2024",
+   "data": "2024-11-29",
+   "principal": [],
+   "coautoria": [
+    "160538"
+   ]
+  },
+  {
+   "id": "510329",
+   "sigla": "PL 1685/2011",
+   "norma": "Lei Ordinária 15033/2024",
+   "data": "2024-11-26",
+   "principal": [
+    "160640"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2466104",
+   "sigla": "PLP 175/2024",
+   "norma": "Lei Complementar 210/2024",
+   "data": "2024-11-26",
+   "principal": [
+    "178887"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2168347",
+   "sigla": "PL 9622/2018",
+   "norma": "Lei Ordinária 15032/2024",
+   "data": "2024-11-21",
+   "principal": [
+    "160575"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "420961",
+   "sigla": "PL 4510/2008",
+   "norma": "Lei Ordinária 15030/2024",
+   "data": "2024-11-18",
+   "principal": [
+    "74161"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2351723",
+   "sigla": "PL 1205/2023",
+   "norma": "Lei Ordinária 15027/2024",
+   "data": "2024-11-18",
+   "principal": [
+    "141421"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2230281",
+   "sigla": "PL 6120/2019",
+   "norma": "PL n.º 15.022/2024 (Of",
+   "data": "2024-11-18",
+   "principal": [
+    "191923"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2115774",
+   "sigla": "PL 6419/2016",
+   "norma": "Lei Ordinária 15029/2024",
+   "data": "2024-11-18",
+   "principal": [
+    "160559"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2317281",
+   "sigla": "PL 454/2022",
+   "norma": "Lei Ordinária 15017/2024",
+   "data": "2024-11-12",
+   "principal": [],
+   "coautoria": [
+    "204528"
+   ]
+  },
+  {
+   "id": "2306074",
+   "sigla": "PL 3931/2021",
+   "norma": "Lei Ordinária 15009/2024",
+   "data": "2024-10-29",
+   "principal": [
+    "204412"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "946006",
+   "sigla": "PL 213/2015",
+   "norma": "Lei Ordinária 15008/2024",
+   "data": "2024-10-17",
+   "principal": [
+    "160673"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "446704",
+   "sigla": "PL 5855/2009",
+   "norma": "Lei Ordinária 15006/2024",
+   "data": "2024-10-17",
+   "principal": [
+    "74262"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2178315",
+   "sigla": "PL 10388/2018",
+   "norma": "Norma sem número informado na tramitação",
+   "data": "2024-10-17",
+   "principal": [
+    "178983"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2132889",
+   "sigla": "PL 7544/2017",
+   "norma": "Lei Ordinária 15005/2024",
+   "data": "2024-10-17",
+   "principal": [
+    "137070"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2336549",
+   "sigla": "PL 2725/2022",
+   "norma": "Lei Ordinária 15001/2024",
+   "data": "2024-10-16",
+   "principal": [
+    "204534"
+   ],
+   "coautoria": [
+    "204528"
+   ]
+  },
+  {
+   "id": "2452628",
+   "sigla": "PL 3148/2024",
+   "norma": "Lei Ordinária 14999/2024",
+   "data": "2024-10-15",
+   "principal": [
+    "72442"
+   ],
+   "coautoria": [
+    "220662",
+    "220663",
+    "220664",
+    "220686",
+    "220605",
+    "91228",
+    "220668",
+    "133439",
+    "160517",
+    "160674",
+    "122158",
+    "160548",
+    "178854",
+    "178931",
+    "178964",
+    "204436",
+    "204560",
+    "204394",
+    "204450",
+    "204426",
+    "204534"
+   ]
+  },
+  {
+   "id": "2369409",
+   "sigla": "PL 3090/2023",
+   "norma": "Lei Ordinária 14998/2024",
+   "data": "2024-10-15",
+   "principal": [
+    "74084"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2236354",
+   "sigla": "PL 24/2020",
+   "norma": "Lei Ordinária 14996/2024",
+   "data": "2024-10-15",
+   "principal": [
+    "73701"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "1732982",
+   "sigla": "PL 3009/2015",
+   "norma": "Lei Ordinária 14997/2024",
+   "data": "2024-10-15",
+   "principal": [
+    "74079"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "1203358",
+   "sigla": "PL 1133/2015",
+   "norma": "Lei Ordinária 15000/2024",
+   "data": "2024-10-15",
+   "principal": [
+    "74057"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2432767",
+   "sigla": "PL 1725/2024",
+   "norma": "Lei Ordinária 14995/2024",
+   "data": "2024-10-10",
+   "principal": [],
+   "coautoria": [
+    "220581",
+    "133439",
+    "160553",
+    "160510",
+    "160512",
+    "178835",
+    "178887",
+    "204436",
+    "204494",
+    "204394",
+    "204501",
+    "81055"
+   ]
+  },
+  {
+   "id": "2408709",
+   "sigla": "PL 5813/2023",
+   "norma": "Lei Ordinária 14992/2024",
+   "data": "2024-10-03",
+   "principal": [
+    "220670"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2121017",
+   "sigla": "PL 6682/2016",
+   "norma": "Lei Ordinária 14991/2024",
+   "data": "2024-09-27",
+   "principal": [],
+   "coautoria": [
+    "74398"
+   ]
+  },
+  {
+   "id": "2355879",
+   "sigla": "PL 1825/2023",
+   "norma": "Lei Ordinária 14988/2024",
+   "data": "2024-09-25",
+   "principal": [
+    "220641"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2351365",
+   "sigla": "PL 1151/2023",
+   "norma": "Lei Ordinária 14987/2024",
+   "data": "2024-09-25",
+   "principal": [
+    "74856"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2238527",
+   "sigla": "PL 557/2020",
+   "norma": "Lei Ordinária 14986/2024",
+   "data": "2024-09-25",
+   "principal": [
+    "204534"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2391720",
+   "sigla": "PL 4746/2023",
+   "norma": "Lei Ordinária 14984/2024",
+   "data": "2024-09-24",
+   "principal": [
+    "74856"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2336481",
+   "sigla": "PEC 26/2022",
+   "norma": "Emenda Constitucional 134/2024",
+   "data": "2024-09-24",
+   "principal": [],
+   "coautoria": [
+    "74090",
+    "74043",
+    "141450",
+    "141459",
+    "141555",
+    "160553",
+    "143632",
+    "160674",
+    "160621",
+    "160601",
+    "160558",
+    "178829",
+    "178895",
+    "178910",
+    "72442",
+    "178945",
+    "178946",
+    "178947",
+    "178963",
+    "66828",
+    "137070",
+    "179000",
+    "204481",
+    "204351",
+    "204482",
+    "204387",
+    "204485",
+    "204436",
+    "204563",
+    "161550",
+    "204423",
+    "204395",
+    "204444",
+    "198783",
+    "204511",
+    "204450",
+    "204368",
+    "204427",
+    "204410",
+    "204517",
+    "204457",
+    "204459",
+    "204460",
+    "204525",
+    "204526",
+    "204372",
+    "205550",
+    "204374",
+    "204473",
+    "204570",
+    "204572",
+    "204378",
+    "204549",
+    "204550",
+    "204388"
+   ]
+  },
+  {
+   "id": "2309874",
+   "sigla": "PL 4240/2021",
+   "norma": "Lei Ordinária 14985/2024",
+   "data": "2024-09-24",
+   "principal": [
+    "178933"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2452037",
+   "sigla": "PL 3117/2024",
+   "norma": "Lei Ordinária 14981/2024",
+   "data": "2024-09-20",
+   "principal": [],
+   "coautoria": [
+    "160535"
+   ]
+  },
+  {
+   "id": "576322",
+   "sigla": "PL 5547/2013",
+   "norma": "Lei Ordinária 14979/2024",
+   "data": "2024-09-18",
+   "principal": [
+    "160598"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2183537",
+   "sigla": "PL 10788/2018",
+   "norma": "Lei Ordinária 14975/2024",
+   "data": "2024-09-18",
+   "principal": [
+    "178871"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2173056",
+   "sigla": "PL 10096/2018",
+   "norma": "Lei Ordinária 14977/2024",
+   "data": "2024-09-18",
+   "principal": [
+    "74856"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2153407",
+   "sigla": "PL 8728/2017",
+   "norma": "Lei Ordinária 14976/2024",
+   "data": "2024-09-18",
+   "principal": [
+    "74856"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2388249",
+   "sigla": "PL 4517/2023",
+   "norma": "Lei Ordinária 14974/2024",
+   "data": "2024-09-16",
+   "principal": [
+    "160598"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2353391",
+   "sigla": "PL 1394/2023",
+   "norma": "Lei Ordinária 14972/2024",
+   "data": "2024-09-13",
+   "principal": [
+    "220689"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2339981",
+   "sigla": "PL 2886/2022",
+   "norma": "Lei Ordinária 14971/2024",
+   "data": "2024-09-13",
+   "principal": [
+    "204541"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2308800",
+   "sigla": "PL 4168/2021",
+   "norma": "Lei Ordinária 14969/2024",
+   "data": "2024-09-13",
+   "principal": [
+    "141555"
+   ],
+   "coautoria": [
+    "204540"
+   ]
+  },
+  {
+   "id": "2236291",
+   "sigla": "PL 13/2020",
+   "norma": "Lei Ordinária 14968/2024",
+   "data": "2024-09-11",
+   "principal": [
+    "204572"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2231851",
+   "sigla": "PL 6279/2019",
+   "norma": "Lei Ordinária 14966/2024",
+   "data": "2024-09-09",
+   "principal": [
+    "204416"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2267065",
+   "sigla": "PL 5516/2020",
+   "norma": "Lei Ordinária 14963/2024",
+   "data": "2024-09-05",
+   "principal": [],
+   "coautoria": [
+    "204374"
+   ]
+  },
+  {
+   "id": "2188469",
+   "sigla": "PL 11144/2018",
+   "norma": "Lei Ordinária 14964/2024",
+   "data": "2024-09-05",
+   "principal": [
+    "160598"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2362595",
+   "sigla": "PL 2610/2023",
+   "norma": "Lei Ordinária 14960/2024",
+   "data": "2024-09-04",
+   "principal": [
+    "204572"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2090676",
+   "sigla": "PL 5766/2016",
+   "norma": "Lei Ordinária 14959/2024",
+   "data": "2024-09-04",
+   "principal": [
+    "74856"
+   ],
+   "coautoria": [
+    "178884"
+   ]
+  },
+  {
+   "id": "2374326",
+   "sigla": "PL 3605/2023",
+   "norma": "Lei Ordinária 14954/2024",
+   "data": "2024-09-02",
+   "principal": [
+    "204388"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2219786",
+   "sigla": "PL 4987/2019",
+   "norma": "Lei Ordinária 14955/2024",
+   "data": "2024-09-02",
+   "principal": [
+    "204361"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2182474",
+   "sigla": "PL 10671/2018",
+   "norma": "Lei Ordinária 14953/2024",
+   "data": "2024-09-02",
+   "principal": [
+    "73486"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2352476",
+   "sigla": "PEC 9/2023",
+   "norma": "Emenda Constitucional 133/2024",
+   "data": "2024-08-22",
+   "principal": [
+    "74574"
+   ],
+   "coautoria": [
+    "161440",
+    "74537",
+    "74253",
+    "74041",
+    "160674",
+    "122158",
+    "178985",
+    "178997",
+    "191923",
+    "204441",
+    "204369",
+    "178970"
+   ]
+  },
+  {
+   "id": "2359608",
+   "sigla": "PL 2308/2023",
+   "norma": "Lei Ordinária 14948/2024",
+   "data": "2024-08-02",
+   "principal": [
+    "204365"
+   ],
+   "coautoria": [
+    "204528"
+   ]
+  },
+  {
+   "id": "2213247",
+   "sigla": "PL 4189/2019",
+   "norma": "Lei Ordinária 14951/2024",
+   "data": "2024-08-02",
+   "principal": [
+    "204572"
+   ],
+   "coautoria": [
+    "213762"
+   ]
+  },
+  {
+   "id": "2417234",
+   "sigla": "PL 147/2024",
+   "norma": "Lei Ordinária 14942/2024",
+   "data": "2024-07-31",
+   "principal": [
+    "220668"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2320339",
+   "sigla": "PL 1006/2022",
+   "norma": "Lei Ordinária 14946/2024",
+   "data": "2024-07-31",
+   "principal": [
+    "122974"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "1150824",
+   "sigla": "PL 906/2015",
+   "norma": "Lei Ordinária 14935/2024",
+   "data": "2024-07-26",
+   "principal": [
+    "160556"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2370642",
+   "sigla": "PL 3183/2023",
+   "norma": "Lei Ordinária 14929/2024",
+   "data": "2024-07-22",
+   "principal": [
+    "220632"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2206604",
+   "sigla": "PL 3324/2019",
+   "norma": "Lei Ordinária 14930/2024",
+   "data": "2024-07-22",
+   "principal": [
+    "171623"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2221373",
+   "sigla": "PL 5177/2019",
+   "norma": "Lei Ordinária 14927/2024",
+   "data": "2024-07-18",
+   "principal": [
+    "204441"
+   ],
+   "coautoria": [
+    "74356",
+    "73486",
+    "74273",
+    "178929",
+    "204455"
+   ]
+  },
+  {
+   "id": "2330015",
+   "sigla": "PL 1741/2022",
+   "norma": "Lei Ordinária 14925/2024",
+   "data": "2024-07-17",
+   "principal": [
+    "204464"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "1301025",
+   "sigla": "PL 1733/2015",
+   "norma": "Lei Ordinária 14926/2024",
+   "data": "2024-07-17",
+   "principal": [
+    "178931"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "565753",
+   "sigla": "PL 5056/2013",
+   "norma": "Lei Ordinária 14924/2024",
+   "data": "2024-07-12",
+   "principal": [
+    "160575"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2431026",
+   "sigla": "PL 1564/2024",
+   "norma": "Lei Ordinária 14917/2024",
+   "data": "2024-07-05",
+   "principal": [
+    "156190"
+   ],
+   "coautoria": [
+    "220588",
+    "220542",
+    "220549",
+    "220550",
+    "220551",
+    "220686",
+    "165470",
+    "220526",
+    "220590",
+    "220666",
+    "153423",
+    "220552",
+    "220546",
+    "220608",
+    "220568",
+    "220576",
+    "220547",
+    "220534",
+    "220558",
+    "104552",
+    "220652",
+    "209787",
+    "220630",
+    "220654",
+    "161440",
+    "220530",
+    "220655",
+    "220706",
+    "220555",
+    "74084",
+    "73486",
+    "136811",
+    "160673",
+    "160559",
+    "178843",
+    "178871",
+    "178929",
+    "178947",
+    "178954",
+    "178963",
+    "178964",
+    "204387",
+    "204423",
+    "204398",
+    "204404",
+    "204409",
+    "204367",
+    "204520",
+    "204462",
+    "204525",
+    "204526",
+    "204528",
+    "204374",
+    "204536",
+    "204416",
+    "204572",
+    "204378",
+    "204388",
+    "221328"
+   ]
+  },
+  {
+   "id": "2373053",
+   "sigla": "PL 3466/2023",
+   "norma": "Lei Ordinária 14919/2024",
+   "data": "2024-07-05",
+   "principal": [
+    "73441"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2329145",
+   "sigla": "PL 1675/2022",
+   "norma": "Lei Ordinária 14918/2024",
+   "data": "2024-07-05",
+   "principal": [
+    "204396"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2231998",
+   "sigla": "PL 6294/2019",
+   "norma": "Lei Ordinária 14913/2024",
+   "data": "2024-07-03",
+   "principal": [
+    "178993"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2409610",
+   "sigla": "PL 5867/2023",
+   "norma": "Lei Ordinária 14909/2024",
+   "data": "2024-07-01",
+   "principal": [
+    "178931"
+   ],
+   "coautoria": [
+    "72442"
+   ]
+  },
+  {
+   "id": "2377705",
+   "sigla": "PL 3885/2023",
+   "norma": "Lei Ordinária 14908/2024",
+   "data": "2024-07-01",
+   "principal": [
+    "204412"
+   ],
+   "coautoria": [
+    "220576",
+    "204536"
+   ]
+  },
+  {
+   "id": "2182688",
+   "sigla": "PL 10706/2018",
+   "norma": "Lei Ordinária 14910/2024",
+   "data": "2024-07-01",
+   "principal": [
+    "178947"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2308223",
+   "sigla": "PL 4129/2021",
+   "norma": "Lei Ordinária 14904/2024",
+   "data": "2024-06-27",
+   "principal": [
+    "204534"
+   ],
+   "coautoria": [
+    "178986",
+    "204464"
+   ]
+  },
+  {
+   "id": "2305816",
+   "sigla": "PL 3905/2021",
+   "norma": "Lei Ordinária 14903/2024",
+   "data": "2024-06-27",
+   "principal": [],
+   "coautoria": [
+    "73701",
+    "139285",
+    "74398",
+    "74057",
+    "160569",
+    "160575",
+    "204495",
+    "157130",
+    "204464",
+    "204535"
+   ]
+  },
+  {
+   "id": "2351860",
+   "sigla": "PL 1227/2023",
+   "norma": "Lei Ordinária 14900/2024",
+   "data": "2024-06-21",
+   "principal": [
+    "160635"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2191260",
+   "sigla": "PL 501/2019",
+   "norma": "Lei Ordinária 14899/2024",
+   "data": "2024-06-17",
+   "principal": [
+    "178832"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2200728",
+   "sigla": "PL 2737/2019",
+   "norma": "Lei Ordinária 14887/2024",
+   "data": "2024-06-12",
+   "principal": [
+    "204423"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2371157",
+   "sigla": "PL 3231/2023",
+   "norma": "Lei Ordinária 14884/2024",
+   "data": "2024-06-11",
+   "principal": [
+    "204412"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2192230",
+   "sigla": "PL 826/2019",
+   "norma": "Lei Ordinária 14886/2024",
+   "data": "2024-06-11",
+   "principal": [
+    "160758"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2017937",
+   "sigla": "PL 3309/2015",
+   "norma": "Lei Ordinária 14885/2024",
+   "data": "2024-06-11",
+   "principal": [
+    "178857"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "540979",
+   "sigla": "PL 2913/2021",
+   "norma": "Lei Ordinária 14877/2024",
+   "data": "2024-06-04",
+   "principal": [
+    "160666"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2355765",
+   "sigla": "PL 1803/2023",
+   "norma": "Lei Ordinária 14879/2024",
+   "data": "2024-06-04",
+   "principal": [
+    "220532"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2088318",
+   "sigla": "PL 5592/2016",
+   "norma": "Lei Ordinária 14880/2024",
+   "data": "2024-06-04",
+   "principal": [
+    "160575"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2331099",
+   "sigla": "PL 1846/2022",
+   "norma": "Lei Ordinária 14867/2024",
+   "data": "2024-05-28",
+   "principal": [
+    "74398"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2234453",
+   "sigla": "PL 6487/2019",
+   "norma": "Lei Ordinária 14870/2024",
+   "data": "2024-05-28",
+   "principal": [
+    "161550"
+   ],
+   "coautoria": [
+    "160758",
+    "178871"
+   ]
+  },
+  {
+   "id": "2183477",
+   "sigla": "PL 10777/2018",
+   "norma": "Lei Ordinária 14865/2024",
+   "data": "2024-05-28",
+   "principal": [
+    "178884"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "1734475",
+   "sigla": "PL 3038/2015",
+   "norma": "Lei Ordinária 14866/2024",
+   "data": "2024-05-28",
+   "principal": [
+    "178975"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2382257",
+   "sigla": "PLP 175/2023",
+   "norma": "Lei Complementar 205/2024",
+   "data": "2024-05-09",
+   "principal": [
+    "160598"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2260492",
+   "sigla": "PL 4222/2020",
+   "norma": "Lei Ordinária 14854/2024",
+   "data": "2024-05-09",
+   "principal": [
+    "204541"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2293861",
+   "sigla": "PL 2796/2021",
+   "norma": "Lei Ordinária 14852/2024",
+   "data": "2024-05-03",
+   "principal": [
+    "204536"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2180923",
+   "sigla": "PL 10521/2018",
+   "norma": "Lei Ordinária 14850/2024",
+   "data": "2024-05-02",
+   "principal": [
+    "141488"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2081971",
+   "sigla": "PL 5011/2016",
+   "norma": "Lei Ordinária 14849/2024",
+   "data": "2024-05-02",
+   "principal": [],
+   "coautoria": [
+    "73692",
+    "160666",
+    "160604",
+    "178871",
+    "178992",
+    "141488"
+   ]
+  },
+  {
+   "id": "2358793",
+   "sigla": "PL 2221/2023",
+   "norma": "Lei Ordinária 14847/2024",
+   "data": "2024-04-25",
+   "principal": [
+    "220670"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2304105",
+   "sigla": "PL 3724/2021",
+   "norma": "Lei Ordinária 14845/2024",
+   "data": "2024-04-24",
+   "principal": [
+    "74398"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2298615",
+   "sigla": "PL 3144/2021",
+   "norma": "Lei Ordinária 14844/2024",
+   "data": "2024-04-24",
+   "principal": [
+    "204506"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "493361",
+   "sigla": "PL 2253/2022",
+   "norma": "Lei Ordinária 14843/2024",
+   "data": "2024-04-11",
+   "principal": [
+    "122158"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2317864",
+   "sigla": "PL 570/2022",
+   "norma": "Lei Ordinária 14838/2024",
+   "data": "2024-04-10",
+   "principal": [
+    "73692"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2301683",
+   "sigla": "PL 3453/2021",
+   "norma": "Lei Ordinária 14836/2024",
+   "data": "2024-04-08",
+   "principal": [
+    "178887"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2167716",
+   "sigla": "PL 5656/2019",
+   "norma": "Lei Ordinária 14837/2024",
+   "data": "2024-04-08",
+   "principal": [
+    "74856"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2386178",
+   "sigla": "PL 4358/2023",
+   "norma": "Lei Ordinária 14831/2024",
+   "data": "2024-03-27",
+   "principal": [
+    "220668"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2365593",
+   "sigla": "PL 2812/2023",
+   "norma": "Lei Ordinária 14833/2024",
+   "data": "2024-03-27",
+   "principal": [
+    "74478"
+   ],
+   "coautoria": [
+    "220648"
+   ]
+  },
+  {
+   "id": "2296359",
+   "sigla": "PL 2975/2021",
+   "norma": "Lei Ordinária 14830/2024",
+   "data": "2024-03-27",
+   "principal": [
+    "204517"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2366271",
+   "sigla": "PL 2861/2023",
+   "norma": "Lei Ordinária 14826/2024",
+   "data": "2024-03-20",
+   "principal": [
+    "74856"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2323391",
+   "sigla": "PL 1269/2022",
+   "norma": "Lei Ordinária 14825/2024",
+   "data": "2024-03-20",
+   "principal": [
+    "141516"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2267323",
+   "sigla": "PL 5543/2020",
+   "norma": "Lei Ordinária 14827/2024",
+   "data": "2024-03-20",
+   "principal": [
+    "204518"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2228136",
+   "sigla": "PL 5826/2019",
+   "norma": "Lei Ordinária 14828/2024",
+   "data": "2024-03-20",
+   "principal": [
+    "178993"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2358915",
+   "sigla": "PL 2245/2023",
+   "norma": "Lei Ordinária 14821/2024",
+   "data": "2024-01-16",
+   "principal": [
+    "220645"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2325391",
+   "sigla": "PL 1435/2022",
+   "norma": "Lei Ordinária 14820/2024",
+   "data": "2024-01-16",
+   "principal": [
+    "160553"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2268691",
+   "sigla": "PL 54/2021",
+   "norma": "Lei Ordinária 14818/2024",
+   "data": "2024-01-16",
+   "principal": [
+    "204534"
+   ],
+   "coautoria": [
+    "139285",
+    "178843",
+    "69871",
+    "178989",
+    "178997",
+    "204488",
+    "204410",
+    "204533"
+   ]
+  },
+  {
+   "id": "2345634",
+   "sigla": "PL 7/2023",
+   "norma": "Lei Ordinária 14812/2024",
+   "data": "2024-01-15",
+   "principal": [
+    "204506"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2309768",
+   "sigla": "PL 4224/2021",
+   "norma": "Lei Ordinária 14811/2024",
+   "data": "2024-01-12",
+   "principal": [
+    "73692"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2162085",
+   "sigla": "PL 9073/2017",
+   "norma": "Lei Ordinária 14808/2024",
+   "data": "2024-01-11",
+   "principal": [
+    "160559"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2252649",
+   "sigla": "PL 2646/2020",
+   "norma": "Lei Ordinária 14801/2024",
+   "data": "2024-01-09",
+   "principal": [
+    "141459"
+   ],
+   "coautoria": [
+    "141450",
+    "160665",
+    "204404",
+    "204536",
+    "178987"
+   ]
+  },
+  {
+   "id": "2362842",
+   "sigla": "PL 2626/2023",
+   "norma": "Lei Ordinária 14794/2024",
+   "data": "2024-01-05",
+   "principal": [
+    "204374"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2270913",
+   "sigla": "PL 597/2021",
+   "norma": "Lei Ordinária 14742/2023",
+   "data": "2023-12-30",
+   "principal": [
+    "191923"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2236355",
+   "sigla": "PL 25/2020",
+   "norma": "Lei Ordinária 14743/2023",
+   "data": "2023-12-30",
+   "principal": [
+    "73701"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2115253",
+   "sigla": "PL 2721/2023",
+   "norma": "Lei Ordinária 14744/2023",
+   "data": "2023-12-30",
+   "principal": [
+    "133439"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2345625",
+   "sigla": "PL 3/2023",
+   "norma": "Lei Ordinária 14786/2023",
+   "data": "2023-12-28",
+   "principal": [
+    "74398"
+   ],
+   "coautoria": [
+    "74856",
+    "220656",
+    "220565",
+    "220556",
+    "220686",
+    "220553",
+    "220537",
+    "220700",
+    "220629",
+    "220668",
+    "220632",
+    "220704",
+    "220548",
+    "220707",
+    "73701",
+    "74848",
+    "139285",
+    "74075",
+    "74784",
+    "74057",
+    "160575",
+    "160598",
+    "178832",
+    "178866",
+    "204534"
+   ]
+  },
+  {
+   "id": "2200476",
+   "sigla": "PL 2673/2019",
+   "norma": "Lei Ordinária 14788/2023",
+   "data": "2023-12-28",
+   "principal": [
+    "204572"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2301550",
+   "sigla": "PL 3441/2021",
+   "norma": "Lei Ordinária 14769/2023",
+   "data": "2023-12-22",
+   "principal": [
+    "74060"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2117380",
+   "sigla": "PL 6498/2016",
+   "norma": "Lei Ordinária 14767/2023",
+   "data": "2023-12-22",
+   "principal": [
+    "178873"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2201532",
+   "sigla": "PL 2788/2019",
+   "norma": "Lei Ordinária 14755/2023",
+   "data": "2023-12-15",
+   "principal": [
+    "160632"
+   ],
+   "coautoria": [
+    "74156",
+    "160556",
+    "204491",
+    "198197",
+    "204508",
+    "204515",
+    "204518",
+    "204539"
+   ]
+  },
+  {
+   "id": "2312373",
+   "sigla": "PL 4416/2021",
+   "norma": "Lei Ordinária 14753/2023",
+   "data": "2023-12-12",
+   "principal": [
+    "74317"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2395452",
+   "sigla": "PL 4943/2023",
+   "norma": "Lei Ordinária 14745/2023",
+   "data": "2023-12-05",
+   "principal": [
+    "220651"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2322607",
+   "sigla": "PL 1199/2022",
+   "norma": "Lei Ordinária 14746/2023",
+   "data": "2023-12-05",
+   "principal": [
+    "160559"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2232893",
+   "sigla": "PL 6328/2019",
+   "norma": "Lei Ordinária 14749/2023",
+   "data": "2023-12-05",
+   "principal": [
+    "204409"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2265732",
+   "sigla": "PL 5310/2020",
+   "norma": "Lei Ordinária 14739/2023",
+   "data": "2023-11-28",
+   "principal": [
+    "178931"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2264131",
+   "sigla": "PL 4852/2020",
+   "norma": "Lei Ordinária 14738/2023",
+   "data": "2023-11-28",
+   "principal": [
+    "204388"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2313886",
+   "sigla": "PL 81/2022",
+   "norma": "Lei Ordinária 14737/2023",
+   "data": "2023-11-27",
+   "principal": [
+    "204372"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "517033",
+   "sigla": "PL 2104/2011",
+   "norma": "Lei Ordinária 14736/2023",
+   "data": "2023-11-24",
+   "principal": [
+    "160588"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2266069",
+   "sigla": "PL 5384/2020",
+   "norma": "Lei Ordinária 14723/2023",
+   "data": "2023-11-13",
+   "principal": [
+    "74398"
+   ],
+   "coautoria": [
+    "73701",
+    "74467",
+    "74400",
+    "74161",
+    "74160",
+    "74156",
+    "74376",
+    "74371",
+    "141464",
+    "141398",
+    "160508",
+    "160610",
+    "160569",
+    "160575",
+    "160556",
+    "160538",
+    "160535",
+    "160604",
+    "171617",
+    "204480",
+    "73604",
+    "178857",
+    "178866",
+    "178873",
+    "178887",
+    "178986",
+    "191923",
+    "204559",
+    "204492",
+    "204495",
+    "107283",
+    "204407",
+    "204501",
+    "204426",
+    "204453",
+    "141488",
+    "178970",
+    "188097",
+    "178987"
+   ]
+  },
+  {
+   "id": "2190598",
+   "sigla": "PL 130/2019",
+   "norma": "Lei Ordinária 14721/2023",
+   "data": "2023-11-08",
+   "principal": [
+    "178989"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2228217",
+   "sigla": "PL 5838/2019",
+   "norma": "Lei Ordinária 14720/2023",
+   "data": "2023-11-07",
+   "principal": [
+    "204559"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "531846",
+   "sigla": "PL 2971/2011",
+   "norma": "Lei Ordinária 14718/2023",
+   "data": "2023-11-01",
+   "principal": [
+    "160588"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2320213",
+   "sigla": "PL 976/2022",
+   "norma": "Lei Ordinária 14717/2023",
+   "data": "2023-10-31",
+   "principal": [
+    "74398"
+   ],
+   "coautoria": [
+    "73701",
+    "160575",
+    "178866",
+    "107283",
+    "204453"
+   ]
+  },
+  {
+   "id": "2199362",
+   "sigla": "PL 2529/2019",
+   "norma": "Lei Ordinária 14716/2023",
+   "data": "2023-10-30",
+   "principal": [
+    "204456"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "602764",
+   "sigla": "PL 3525/2019",
+   "norma": "Lei Ordinária 14705/2023",
+   "data": "2023-10-25",
+   "principal": [
+    "160575"
+   ],
+   "coautoria": [
+    "204356"
+   ]
+  },
+  {
+   "id": "328361",
+   "sigla": "PL 7243/2006",
+   "norma": "Lei Ordinária 14698/2023",
+   "data": "2023-10-19",
+   "principal": [
+    "74161"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2003931",
+   "sigla": "PL 3229/2015",
+   "norma": "Lei Ordinária 14699/2023",
+   "data": "2023-10-19",
+   "principal": [
+    "74161"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2192913",
+   "sigla": "PL 1077/2019",
+   "norma": "Lei Ordinária 14697/2023",
+   "data": "2023-10-11",
+   "principal": [
+    "204572"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2306073",
+   "sigla": "PL 3930/2021",
+   "norma": "Lei Ordinária 14694/2023",
+   "data": "2023-10-10",
+   "principal": [
+    "204412"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2350302",
+   "sigla": "PL 920/2023",
+   "norma": "Lei Ordinária 14691/2023",
+   "data": "2023-10-03",
+   "principal": [
+    "220529"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2336393",
+   "sigla": "PL 2685/2022",
+   "norma": "Lei Ordinária 14690/2023",
+   "data": "2023-10-03",
+   "principal": [
+    "178854"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2374507",
+   "sigla": "PL 3635/2023",
+   "norma": "Lei Ordinária 14683/2023",
+   "data": "2023-09-20",
+   "principal": [
+    "220670"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "560741",
+   "sigla": "PL 4753/2012",
+   "norma": "Lei Ordinária 14679/2023",
+   "data": "2023-09-18",
+   "principal": [
+    "73701"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2279318",
+   "sigla": "PL 1540/2021",
+   "norma": "Lei Ordinária 14681/2023",
+   "data": "2023-09-18",
+   "principal": [],
+   "coautoria": [
+    "74057",
+    "178832",
+    "204488",
+    "204410",
+    "204533",
+    "204535"
+   ]
+  },
+  {
+   "id": "2238209",
+   "sigla": "PL 473/2020",
+   "norma": "Lei Ordinária 14678/2023",
+   "data": "2023-09-18",
+   "principal": [
+    "178962"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2151082",
+   "sigla": "PL 8549/2017",
+   "norma": "Lei Ordinária 14669/2023",
+   "data": "2023-09-11",
+   "principal": [
+    "74376"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2144682",
+   "sigla": "PL 8061/2017",
+   "norma": "Lei Ordinária 14672/2023",
+   "data": "2023-09-11",
+   "principal": [
+    "178929"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2318679",
+   "sigla": "PL 710/2022",
+   "norma": "Lei Ordinária 14664/2023",
+   "data": "2023-09-04",
+   "principal": [
+    "160598"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2242297",
+   "sigla": "PL 1211/2020",
+   "norma": "Lei Ordinária 14650/2023",
+   "data": "2023-08-23",
+   "principal": [
+    "204406"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2207429",
+   "sigla": "PL 3430/2019",
+   "norma": "Lei Ordinária 14653/2023",
+   "data": "2023-08-23",
+   "principal": [
+    "178832"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2076723",
+   "sigla": "PL 4288/2016",
+   "norma": "Lei Ordinária 14649/2023",
+   "data": "2023-08-16",
+   "principal": [
+    "74398"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2192980",
+   "sigla": "PL 1096/2019",
+   "norma": "Lei Ordinária 14647/2023",
+   "data": "2023-08-04",
+   "principal": [
+    "141555"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "420230",
+   "sigla": "PL 4483/2008",
+   "norma": "Lei Ordinária 14644/2023",
+   "data": "2023-08-02",
+   "principal": [
+    "74784"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2287197",
+   "sigla": "PL 2209/2021",
+   "norma": "Lei Ordinária 14646/2023",
+   "data": "2023-08-02",
+   "principal": [
+    "74646"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2234538",
+   "sigla": "PL 6494/2019",
+   "norma": "Lei Ordinária 14645/2023",
+   "data": "2023-08-02",
+   "principal": [],
+   "coautoria": [
+    "74043",
+    "74060",
+    "133439",
+    "160541",
+    "160510",
+    "160527",
+    "160665",
+    "178832",
+    "178934",
+    "178975",
+    "204488",
+    "204391",
+    "204494",
+    "204496",
+    "204423",
+    "157130",
+    "122974"
+   ]
+  },
+  {
+   "id": "1302486",
+   "sigla": "PL 1830/2015",
+   "norma": "Lei Ordinária 14642/2023",
+   "data": "2023-08-01",
+   "principal": [
+    "160604"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2282686",
+   "sigla": "PL 1795/2021",
+   "norma": "Lei Ordinária 14635/2023",
+   "data": "2023-07-25",
+   "principal": [],
+   "coautoria": [
+    "160641",
+    "73701",
+    "74848",
+    "139285",
+    "74075",
+    "74784",
+    "74398",
+    "74057",
+    "160575",
+    "178866",
+    "204407",
+    "204453",
+    "204464",
+    "204534",
+    "204535"
+   ]
+  },
+  {
+   "id": "2123759",
+   "sigla": "PL 6913/2017",
+   "norma": "Lei Ordinária 14639/2023",
+   "data": "2023-07-25",
+   "principal": [
+    "178871"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2123758",
+   "sigla": "PL 6912/2017",
+   "norma": "Lei Ordinária 14637/2023",
+   "data": "2023-07-25",
+   "principal": [
+    "178871"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2115471",
+   "sigla": "PL 6408/2016",
+   "norma": "Lei Ordinária 14638/2023",
+   "data": "2023-07-25",
+   "principal": [
+    "136811"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "1299574",
+   "sigla": "PL 1711/2015",
+   "norma": "Lei Ordinária 14636/2023",
+   "data": "2023-07-25",
+   "principal": [
+    "178871"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2274088",
+   "sigla": "PL 940/2021",
+   "norma": "Lei Ordinária 14622/2023",
+   "data": "2023-07-17",
+   "principal": [
+    "204410"
+   ],
+   "coautoria": [
+    "178946"
+   ]
+  },
+  {
+   "id": "2266830",
+   "sigla": "PL 5486/2020",
+   "norma": "Lei Ordinária 14624/2023",
+   "data": "2023-07-17",
+   "principal": [
+    "204572"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2281210",
+   "sigla": "PL 1732/2021",
+   "norma": "Lei Ordinária 14618/2023",
+   "data": "2023-07-11",
+   "principal": [
+    "204535"
+   ],
+   "coautoria": [
+    "73701",
+    "74057",
+    "204495",
+    "157130"
+   ]
+  },
+  {
+   "id": "2177148",
+   "sigla": "PL 10330/2018",
+   "norma": "Lei Ordinária 14619/2023",
+   "data": "2023-07-11",
+   "principal": [
+    "178970"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2296561",
+   "sigla": "PL 2994/2021",
+   "norma": "Lei Ordinária 14616/2023",
+   "data": "2023-07-07",
+   "principal": [
+    "204372"
+   ],
+   "coautoria": [
+    "204353",
+    "141555",
+    "150418",
+    "178945",
+    "178962",
+    "204491",
+    "204506",
+    "205550",
+    "204540"
+   ]
+  },
+  {
+   "id": "2123795",
+   "sigla": "PL 6925/2017",
+   "norma": "Lei Ordinária 14615/2023",
+   "data": "2023-07-07",
+   "principal": [
+    "160632"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "1738814",
+   "sigla": "PEC 142/2015",
+   "norma": "Emenda Constitucional 129/2023",
+   "data": "2023-07-05",
+   "principal": [
+    "66828"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2355991",
+   "sigla": "PL 1852/2023",
+   "norma": "Lei Ordinária 14612/2023",
+   "data": "2023-07-03",
+   "principal": [
+    "74856"
+   ],
+   "coautoria": [
+    "141408"
+   ]
+  },
+  {
+   "id": "2199303",
+   "sigla": "PL 2522/2019",
+   "norma": "Lei Ordinária 14610/2023",
+   "data": "2023-06-28",
+   "principal": [
+    "204550"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "565766",
+   "sigla": "PL 5060/2013",
+   "norma": "Lei Ordinária 14607/2023",
+   "data": "2023-06-20",
+   "principal": [
+    "160575"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2252873",
+   "sigla": "PL 2730/2020",
+   "norma": "Lei Ordinária 14606/2023",
+   "data": "2023-06-20",
+   "principal": [],
+   "coautoria": [
+    "160518",
+    "178946",
+    "137070",
+    "204494"
+   ]
+  },
+  {
+   "id": "2193223",
+   "sigla": "PL 1177/2019",
+   "norma": "Lei Ordinária 14603/2023",
+   "data": "2023-06-20",
+   "principal": [
+    "204550"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2182677",
+   "sigla": "PL 10704/2018",
+   "norma": "Lei Ordinária 14608/2023",
+   "data": "2023-06-20",
+   "principal": [
+    "178934"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2074401",
+   "sigla": "PL 3908/2015",
+   "norma": "Lei Ordinária 14609/2023",
+   "data": "2023-06-20",
+   "principal": [
+    "136811"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2221168",
+   "sigla": "PL 5166/2019",
+   "norma": "Lei Ordinária 14594/2023",
+   "data": "2023-06-02",
+   "principal": [
+    "141450"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2252927",
+   "sigla": "PL 2738/2020",
+   "norma": "Lei Ordinária 14589/2023",
+   "data": "2023-05-18",
+   "principal": [
+    "204358"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2239486",
+   "sigla": "PL 710/2020",
+   "norma": "Lei Ordinária 14588/2023",
+   "data": "2023-05-18",
+   "principal": [
+    "204412"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2175265",
+   "sigla": "PL 10241/2018",
+   "norma": "Lei Ordinária 14586/2023",
+   "data": "2023-05-18",
+   "principal": [
+    "160673"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2181770",
+   "sigla": "PL 10617/2018",
+   "norma": "Lei Ordinária 14585/2023",
+   "data": "2023-05-16",
+   "principal": [
+    "160556"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2300377",
+   "sigla": "PL 3322/2021",
+   "norma": "Lei Ordinária 14575/2023",
+   "data": "2023-05-10",
+   "principal": [
+    "139285"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2163403",
+   "sigla": "PL 9182/2017",
+   "norma": "Lei Ordinária 14569/2023",
+   "data": "2023-05-05",
+   "principal": [
+    "178963"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2125627",
+   "sigla": "PL 7126/2017",
+   "norma": "Lei Ordinária 14571/2023",
+   "data": "2023-05-05",
+   "principal": [
+    "136811"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2190768",
+   "sigla": "PL 256/2019",
+   "norma": "Lei Ordinária 14567/2023",
+   "data": "2023-05-04",
+   "principal": [
+    "74398"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2292144",
+   "sigla": "PL 2676/2021",
+   "norma": "Lei Ordinária 14558/2023",
+   "data": "2023-04-25",
+   "principal": [
+    "160640"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2201716",
+   "sigla": "PL 2793/2019",
+   "norma": "Lei Ordinária 14559/2023",
+   "data": "2023-04-25",
+   "principal": [
+    "204411"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2195737",
+   "sigla": "PL 1818/2019",
+   "norma": "Lei Ordinária 14551/2023",
+   "data": "2023-04-20",
+   "principal": [
+    "178934"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "946514",
+   "sigla": "PL 2419/2021",
+   "norma": "Lei Ordinária 14549/2023",
+   "data": "2023-04-13",
+   "principal": [
+    "178931"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2077748",
+   "sigla": "PL 2099/2019",
+   "norma": "Lei Ordinária 14548/2023",
+   "data": "2023-04-13",
+   "principal": [
+    "74856"
+   ],
+   "coautoria": [
+    "74398"
+   ]
+  },
+  {
+   "id": "2258084",
+   "sigla": "PL 3878/2020",
+   "norma": "Lei Ordinária 14542/2023",
+   "data": "2023-04-03",
+   "principal": [
+    "204572"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "1307394",
+   "sigla": "PL 1938/2015",
+   "norma": "Lei Ordinária 14543/2023",
+   "data": "2023-04-03",
+   "principal": [
+    "160517"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "258022",
+   "sigla": "PL 3796/2004",
+   "norma": "Lei Ordinária 14539/2023",
+   "data": "2023-03-31",
+   "principal": [
+    "74856"
+   ],
+   "coautoria": []
+  },
+  {
+   "id": "2139046",
+   "sigla": "PL 2113/2019",
+   "norma": "Lei Ordinária 14538/2023",
+   "data": "2023-03-31",
+   "principal": [
+    "74856"
+   ],
+   "coautoria": []
+  }
+ ],
+ "por_deputado": {
+  "62881": {
+   "principal": 1,
+   "coautoria": 0
+  },
+  "66385": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "66828": {
+   "principal": 1,
+   "coautoria": 2
+  },
+  "69871": {
+   "principal": 0,
+   "coautoria": 4
+  },
+  "72442": {
+   "principal": 6,
+   "coautoria": 2
+  },
+  "73433": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "73441": {
+   "principal": 2,
+   "coautoria": 0
+  },
+  "73486": {
+   "principal": 2,
+   "coautoria": 2
+  },
+  "73579": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "73604": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "73692": {
+   "principal": 4,
+   "coautoria": 1
+  },
+  "73701": {
+   "principal": 5,
+   "coautoria": 7
+  },
+  "73768": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "73778": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "73788": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "73801": {
+   "principal": 0,
+   "coautoria": 3
+  },
+  "73808": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "74041": {
+   "principal": 1,
+   "coautoria": 2
+  },
+  "74043": {
+   "principal": 0,
+   "coautoria": 2
+  },
+  "74044": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "74057": {
+   "principal": 2,
+   "coautoria": 5
+  },
+  "74060": {
+   "principal": 1,
+   "coautoria": 1
+  },
+  "74075": {
+   "principal": 0,
+   "coautoria": 2
+  },
+  "74079": {
+   "principal": 1,
+   "coautoria": 0
+  },
+  "74084": {
+   "principal": 1,
+   "coautoria": 2
+  },
+  "74090": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "74156": {
+   "principal": 0,
+   "coautoria": 3
+  },
+  "74158": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "74160": {
+   "principal": 1,
+   "coautoria": 2
+  },
+  "74161": {
+   "principal": 4,
+   "coautoria": 3
+  },
+  "74171": {
+   "principal": 1,
+   "coautoria": 1
+  },
+  "74253": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "74262": {
+   "principal": 2,
+   "coautoria": 0
+  },
+  "74270": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "74273": {
+   "principal": 1,
+   "coautoria": 1
+  },
+  "74295": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "74317": {
+   "principal": 1,
+   "coautoria": 0
+  },
+  "74356": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "74371": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "74374": {
+   "principal": 2,
+   "coautoria": 0
+  },
+  "74376": {
+   "principal": 1,
+   "coautoria": 1
+  },
+  "74398": {
+   "principal": 8,
+   "coautoria": 6
+  },
+  "74400": {
+   "principal": 4,
+   "coautoria": 1
+  },
+  "74428": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "74454": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "74467": {
+   "principal": 1,
+   "coautoria": 3
+  },
+  "74478": {
+   "principal": 1,
+   "coautoria": 0
+  },
+  "74537": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "74550": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "74554": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "74574": {
+   "principal": 1,
+   "coautoria": 0
+  },
+  "74581": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "74585": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "74646": {
+   "principal": 1,
+   "coautoria": 0
+  },
+  "74784": {
+   "principal": 1,
+   "coautoria": 4
+  },
+  "74848": {
+   "principal": 1,
+   "coautoria": 2
+  },
+  "74856": {
+   "principal": 25,
+   "coautoria": 2
+  },
+  "74858": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "80815": {
+   "principal": 1,
+   "coautoria": 0
+  },
+  "81055": {
+   "principal": 0,
+   "coautoria": 3
+  },
+  "88256": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "91228": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "92102": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "92699": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "92776": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "98057": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "98148": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "98615": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "104552": {
+   "principal": 0,
+   "coautoria": 3
+  },
+  "107283": {
+   "principal": 0,
+   "coautoria": 3
+  },
+  "107970": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "109429": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "121948": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "122158": {
+   "principal": 1,
+   "coautoria": 3
+  },
+  "122195": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "122974": {
+   "principal": 1,
+   "coautoria": 1
+  },
+  "123086": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "123756": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "133439": {
+   "principal": 2,
+   "coautoria": 6
+  },
+  "133810": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "136811": {
+   "principal": 3,
+   "coautoria": 1
+  },
+  "137070": {
+   "principal": 1,
+   "coautoria": 2
+  },
+  "139285": {
+   "principal": 5,
+   "coautoria": 5
+  },
+  "141391": {
+   "principal": 2,
+   "coautoria": 0
+  },
+  "141398": {
+   "principal": 2,
+   "coautoria": 2
+  },
+  "141408": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "141411": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "141421": {
+   "principal": 1,
+   "coautoria": 0
+  },
+  "141431": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "141450": {
+   "principal": 3,
+   "coautoria": 2
+  },
+  "141456": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "141458": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "141459": {
+   "principal": 1,
+   "coautoria": 1
+  },
+  "141464": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "141485": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "141487": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "141488": {
+   "principal": 2,
+   "coautoria": 3
+  },
+  "141516": {
+   "principal": 1,
+   "coautoria": 0
+  },
+  "141518": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "141531": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "141533": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "141555": {
+   "principal": 4,
+   "coautoria": 3
+  },
+  "143084": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "143632": {
+   "principal": 0,
+   "coautoria": 2
+  },
+  "150418": {
+   "principal": 1,
+   "coautoria": 2
+  },
+  "152605": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "153423": {
+   "principal": 0,
+   "coautoria": 2
+  },
+  "154178": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "156190": {
+   "principal": 1,
+   "coautoria": 0
+  },
+  "157130": {
+   "principal": 2,
+   "coautoria": 3
+  },
+  "160161": {
+   "principal": 0,
+   "coautoria": 2
+  },
+  "160508": {
+   "principal": 0,
+   "coautoria": 2
+  },
+  "160510": {
+   "principal": 0,
+   "coautoria": 3
+  },
+  "160512": {
+   "principal": 1,
+   "coautoria": 2
+  },
+  "160517": {
+   "principal": 1,
+   "coautoria": 1
+  },
+  "160518": {
+   "principal": 0,
+   "coautoria": 2
+  },
+  "160527": {
+   "principal": 1,
+   "coautoria": 1
+  },
+  "160535": {
+   "principal": 0,
+   "coautoria": 4
+  },
+  "160538": {
+   "principal": 0,
+   "coautoria": 4
+  },
+  "160541": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "160545": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "160548": {
+   "principal": 2,
+   "coautoria": 1
+  },
+  "160552": {
+   "principal": 1,
+   "coautoria": 0
+  },
+  "160553": {
+   "principal": 2,
+   "coautoria": 2
+  },
+  "160556": {
+   "principal": 2,
+   "coautoria": 5
+  },
+  "160558": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "160559": {
+   "principal": 4,
+   "coautoria": 1
+  },
+  "160561": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "160569": {
+   "principal": 0,
+   "coautoria": 3
+  },
+  "160575": {
+   "principal": 6,
+   "coautoria": 7
+  },
+  "160588": {
+   "principal": 3,
+   "coautoria": 0
+  },
+  "160591": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "160592": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "160598": {
+   "principal": 9,
+   "coautoria": 2
+  },
+  "160599": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "160600": {
+   "principal": 1,
+   "coautoria": 0
+  },
+  "160601": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "160604": {
+   "principal": 2,
+   "coautoria": 3
+  },
+  "160610": {
+   "principal": 0,
+   "coautoria": 3
+  },
+  "160621": {
+   "principal": 1,
+   "coautoria": 1
+  },
+  "160632": {
+   "principal": 3,
+   "coautoria": 1
+  },
+  "160635": {
+   "principal": 1,
+   "coautoria": 0
+  },
+  "160640": {
+   "principal": 2,
+   "coautoria": 0
+  },
+  "160641": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "160642": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "160665": {
+   "principal": 0,
+   "coautoria": 2
+  },
+  "160666": {
+   "principal": 1,
+   "coautoria": 1
+  },
+  "160673": {
+   "principal": 4,
+   "coautoria": 1
+  },
+  "160674": {
+   "principal": 0,
+   "coautoria": 5
+  },
+  "160758": {
+   "principal": 3,
+   "coautoria": 2
+  },
+  "160976": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "161440": {
+   "principal": 0,
+   "coautoria": 2
+  },
+  "161550": {
+   "principal": 1,
+   "coautoria": 1
+  },
+  "162067": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "162332": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "165470": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "166402": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "171617": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "171623": {
+   "principal": 1,
+   "coautoria": 0
+  },
+  "171786": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "175765": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "178829": {
+   "principal": 0,
+   "coautoria": 2
+  },
+  "178831": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "178832": {
+   "principal": 3,
+   "coautoria": 3
+  },
+  "178835": {
+   "principal": 2,
+   "coautoria": 3
+  },
+  "178843": {
+   "principal": 0,
+   "coautoria": 2
+  },
+  "178854": {
+   "principal": 1,
+   "coautoria": 1
+  },
+  "178857": {
+   "principal": 1,
+   "coautoria": 1
+  },
+  "178858": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "178860": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "178866": {
+   "principal": 1,
+   "coautoria": 5
+  },
+  "178871": {
+   "principal": 5,
+   "coautoria": 4
+  },
+  "178873": {
+   "principal": 1,
+   "coautoria": 1
+  },
+  "178876": {
+   "principal": 1,
+   "coautoria": 0
+  },
+  "178881": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "178882": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "178884": {
+   "principal": 1,
+   "coautoria": 1
+  },
+  "178886": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "178887": {
+   "principal": 2,
+   "coautoria": 3
+  },
+  "178895": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "178896": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "178905": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "178908": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "178910": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "178927": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "178929": {
+   "principal": 1,
+   "coautoria": 3
+  },
+  "178931": {
+   "principal": 4,
+   "coautoria": 1
+  },
+  "178933": {
+   "principal": 2,
+   "coautoria": 0
+  },
+  "178934": {
+   "principal": 2,
+   "coautoria": 1
+  },
+  "178937": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "178943": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "178945": {
+   "principal": 0,
+   "coautoria": 2
+  },
+  "178946": {
+   "principal": 3,
+   "coautoria": 4
+  },
+  "178947": {
+   "principal": 1,
+   "coautoria": 3
+  },
+  "178954": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "178962": {
+   "principal": 2,
+   "coautoria": 2
+  },
+  "178963": {
+   "principal": 2,
+   "coautoria": 2
+  },
+  "178964": {
+   "principal": 0,
+   "coautoria": 2
+  },
+  "178966": {
+   "principal": 1,
+   "coautoria": 0
+  },
+  "178970": {
+   "principal": 1,
+   "coautoria": 4
+  },
+  "178972": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "178975": {
+   "principal": 2,
+   "coautoria": 1
+  },
+  "178983": {
+   "principal": 2,
+   "coautoria": 0
+  },
+  "178985": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "178986": {
+   "principal": 1,
+   "coautoria": 4
+  },
+  "178987": {
+   "principal": 0,
+   "coautoria": 3
+  },
+  "178989": {
+   "principal": 6,
+   "coautoria": 2
+  },
+  "178992": {
+   "principal": 1,
+   "coautoria": 1
+  },
+  "178993": {
+   "principal": 3,
+   "coautoria": 0
+  },
+  "178997": {
+   "principal": 0,
+   "coautoria": 2
+  },
+  "179000": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "179001": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "180214": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "188097": {
+   "principal": 1,
+   "coautoria": 2
+  },
+  "191923": {
+   "principal": 2,
+   "coautoria": 3
+  },
+  "198197": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "198783": {
+   "principal": 0,
+   "coautoria": 3
+  },
+  "204351": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "204353": {
+   "principal": 1,
+   "coautoria": 1
+  },
+  "204355": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "204356": {
+   "principal": 0,
+   "coautoria": 2
+  },
+  "204358": {
+   "principal": 1,
+   "coautoria": 0
+  },
+  "204360": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "204361": {
+   "principal": 1,
+   "coautoria": 0
+  },
+  "204362": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "204364": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "204365": {
+   "principal": 1,
+   "coautoria": 0
+  },
+  "204367": {
+   "principal": 0,
+   "coautoria": 2
+  },
+  "204368": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "204369": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "204372": {
+   "principal": 6,
+   "coautoria": 2
+  },
+  "204374": {
+   "principal": 1,
+   "coautoria": 3
+  },
+  "204378": {
+   "principal": 0,
+   "coautoria": 2
+  },
+  "204379": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "204387": {
+   "principal": 0,
+   "coautoria": 2
+  },
+  "204388": {
+   "principal": 3,
+   "coautoria": 2
+  },
+  "204390": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "204391": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "204394": {
+   "principal": 0,
+   "coautoria": 4
+  },
+  "204395": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "204396": {
+   "principal": 2,
+   "coautoria": 0
+  },
+  "204398": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "204404": {
+   "principal": 0,
+   "coautoria": 3
+  },
+  "204406": {
+   "principal": 3,
+   "coautoria": 0
+  },
+  "204407": {
+   "principal": 0,
+   "coautoria": 4
+  },
+  "204408": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "204409": {
+   "principal": 1,
+   "coautoria": 1
+  },
+  "204410": {
+   "principal": 1,
+   "coautoria": 3
+  },
+  "204411": {
+   "principal": 1,
+   "coautoria": 0
+  },
+  "204412": {
+   "principal": 5,
+   "coautoria": 2
+  },
+  "204416": {
+   "principal": 1,
+   "coautoria": 1
+  },
+  "204419": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "204423": {
+   "principal": 1,
+   "coautoria": 3
+  },
+  "204425": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "204426": {
+   "principal": 1,
+   "coautoria": 3
+  },
+  "204427": {
+   "principal": 1,
+   "coautoria": 1
+  },
+  "204431": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "204436": {
+   "principal": 2,
+   "coautoria": 5
+  },
+  "204441": {
+   "principal": 1,
+   "coautoria": 1
+  },
+  "204444": {
+   "principal": 1,
+   "coautoria": 1
+  },
+  "204445": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "204449": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "204450": {
+   "principal": 2,
+   "coautoria": 4
+  },
+  "204453": {
+   "principal": 0,
+   "coautoria": 4
+  },
+  "204455": {
+   "principal": 0,
+   "coautoria": 2
+  },
+  "204456": {
+   "principal": 2,
+   "coautoria": 0
+  },
+  "204457": {
+   "principal": 1,
+   "coautoria": 1
+  },
+  "204459": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "204460": {
+   "principal": 1,
+   "coautoria": 1
+  },
+  "204462": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "204464": {
+   "principal": 1,
+   "coautoria": 4
+  },
+  "204472": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "204473": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "204474": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "204479": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "204480": {
+   "principal": 1,
+   "coautoria": 2
+  },
+  "204481": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "204482": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "204485": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "204486": {
+   "principal": 2,
+   "coautoria": 2
+  },
+  "204488": {
+   "principal": 0,
+   "coautoria": 3
+  },
+  "204489": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "204491": {
+   "principal": 0,
+   "coautoria": 3
+  },
+  "204492": {
+   "principal": 0,
+   "coautoria": 2
+  },
+  "204494": {
+   "principal": 1,
+   "coautoria": 3
+  },
+  "204495": {
+   "principal": 2,
+   "coautoria": 4
+  },
+  "204496": {
+   "principal": 1,
+   "coautoria": 1
+  },
+  "204497": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "204498": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "204501": {
+   "principal": 0,
+   "coautoria": 4
+  },
+  "204504": {
+   "principal": 1,
+   "coautoria": 0
+  },
+  "204506": {
+   "principal": 3,
+   "coautoria": 1
+  },
+  "204508": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "204511": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "204512": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "204515": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "204517": {
+   "principal": 2,
+   "coautoria": 2
+  },
+  "204518": {
+   "principal": 1,
+   "coautoria": 1
+  },
+  "204520": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "204524": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "204525": {
+   "principal": 0,
+   "coautoria": 2
+  },
+  "204526": {
+   "principal": 0,
+   "coautoria": 2
+  },
+  "204528": {
+   "principal": 0,
+   "coautoria": 4
+  },
+  "204531": {
+   "principal": 1,
+   "coautoria": 0
+  },
+  "204533": {
+   "principal": 1,
+   "coautoria": 2
+  },
+  "204534": {
+   "principal": 6,
+   "coautoria": 4
+  },
+  "204535": {
+   "principal": 2,
+   "coautoria": 3
+  },
+  "204536": {
+   "principal": 2,
+   "coautoria": 3
+  },
+  "204539": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "204540": {
+   "principal": 0,
+   "coautoria": 5
+  },
+  "204541": {
+   "principal": 3,
+   "coautoria": 1
+  },
+  "204549": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "204550": {
+   "principal": 2,
+   "coautoria": 1
+  },
+  "204553": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "204557": {
+   "principal": 1,
+   "coautoria": 0
+  },
+  "204558": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "204559": {
+   "principal": 1,
+   "coautoria": 1
+  },
+  "204560": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "204563": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "204566": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "204567": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "204570": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "204572": {
+   "principal": 9,
+   "coautoria": 3
+  },
+  "204574": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "205476": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "205550": {
+   "principal": 0,
+   "coautoria": 3
+  },
+  "206018": {
+   "principal": 2,
+   "coautoria": 2
+  },
+  "209189": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "209787": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "210989": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "213762": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "214694": {
+   "principal": 1,
+   "coautoria": 0
+  },
+  "215043": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220526": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "220527": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220528": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220529": {
+   "principal": 1,
+   "coautoria": 0
+  },
+  "220530": {
+   "principal": 0,
+   "coautoria": 2
+  },
+  "220532": {
+   "principal": 1,
+   "coautoria": 0
+  },
+  "220533": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220534": {
+   "principal": 0,
+   "coautoria": 2
+  },
+  "220536": {
+   "principal": 1,
+   "coautoria": 0
+  },
+  "220537": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "220538": {
+   "principal": 1,
+   "coautoria": 0
+  },
+  "220539": {
+   "principal": 1,
+   "coautoria": 2
+  },
+  "220540": {
+   "principal": 1,
+   "coautoria": 1
+  },
+  "220542": {
+   "principal": 0,
+   "coautoria": 3
+  },
+  "220543": {
+   "principal": 3,
+   "coautoria": 0
+  },
+  "220544": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "220545": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220546": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "220547": {
+   "principal": 0,
+   "coautoria": 2
+  },
+  "220548": {
+   "principal": 0,
+   "coautoria": 2
+  },
+  "220549": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "220550": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "220551": {
+   "principal": 0,
+   "coautoria": 2
+  },
+  "220552": {
+   "principal": 0,
+   "coautoria": 2
+  },
+  "220553": {
+   "principal": 0,
+   "coautoria": 2
+  },
+  "220554": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220555": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "220556": {
+   "principal": 0,
+   "coautoria": 3
+  },
+  "220557": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220558": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "220559": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220560": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "220561": {
+   "principal": 1,
+   "coautoria": 1
+  },
+  "220563": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220564": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220565": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "220566": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220567": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220568": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "220569": {
+   "principal": 1,
+   "coautoria": 1
+  },
+  "220570": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220571": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220572": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220573": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220574": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220576": {
+   "principal": 1,
+   "coautoria": 2
+  },
+  "220578": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220581": {
+   "principal": 1,
+   "coautoria": 3
+  },
+  "220582": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220583": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220584": {
+   "principal": 1,
+   "coautoria": 1
+  },
+  "220585": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220586": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220588": {
+   "principal": 0,
+   "coautoria": 2
+  },
+  "220589": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220590": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "220591": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220592": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220594": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220595": {
+   "principal": 1,
+   "coautoria": 1
+  },
+  "220597": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220598": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220599": {
+   "principal": 1,
+   "coautoria": 0
+  },
+  "220602": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220603": {
+   "principal": 1,
+   "coautoria": 0
+  },
+  "220604": {
+   "principal": 1,
+   "coautoria": 0
+  },
+  "220605": {
+   "principal": 0,
+   "coautoria": 2
+  },
+  "220606": {
+   "principal": 1,
+   "coautoria": 1
+  },
+  "220607": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "220608": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "220609": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220610": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220611": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220612": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220613": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220614": {
+   "principal": 1,
+   "coautoria": 0
+  },
+  "220615": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220616": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220617": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220618": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220620": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220621": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220622": {
+   "principal": 2,
+   "coautoria": 0
+  },
+  "220623": {
+   "principal": 2,
+   "coautoria": 0
+  },
+  "220624": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220625": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220626": {
+   "principal": 2,
+   "coautoria": 0
+  },
+  "220628": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220629": {
+   "principal": 1,
+   "coautoria": 1
+  },
+  "220630": {
+   "principal": 0,
+   "coautoria": 2
+  },
+  "220631": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220632": {
+   "principal": 1,
+   "coautoria": 1
+  },
+  "220633": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220635": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220637": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220638": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220640": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220641": {
+   "principal": 1,
+   "coautoria": 0
+  },
+  "220642": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220643": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220644": {
+   "principal": 1,
+   "coautoria": 0
+  },
+  "220645": {
+   "principal": 2,
+   "coautoria": 0
+  },
+  "220646": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220647": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220648": {
+   "principal": 1,
+   "coautoria": 1
+  },
+  "220649": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "220650": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220651": {
+   "principal": 4,
+   "coautoria": 0
+  },
+  "220652": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "220653": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220654": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "220655": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "220656": {
+   "principal": 1,
+   "coautoria": 1
+  },
+  "220657": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220658": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220660": {
+   "principal": 1,
+   "coautoria": 0
+  },
+  "220661": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220662": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "220663": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "220664": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "220665": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220666": {
+   "principal": 0,
+   "coautoria": 2
+  },
+  "220667": {
+   "principal": 1,
+   "coautoria": 2
+  },
+  "220668": {
+   "principal": 2,
+   "coautoria": 4
+  },
+  "220669": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220670": {
+   "principal": 4,
+   "coautoria": 0
+  },
+  "220671": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220672": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220673": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220674": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "220675": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220676": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "220677": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "220681": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220682": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220683": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220684": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220685": {
+   "principal": 1,
+   "coautoria": 0
+  },
+  "220686": {
+   "principal": 0,
+   "coautoria": 5
+  },
+  "220687": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220688": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220689": {
+   "principal": 1,
+   "coautoria": 0
+  },
+  "220690": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220691": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220692": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220693": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220694": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220695": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "220696": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220697": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220698": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220699": {
+   "principal": 1,
+   "coautoria": 0
+  },
+  "220700": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "220701": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "220702": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220703": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "220704": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "220706": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "220707": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "220708": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220712": {
+   "principal": 1,
+   "coautoria": 0
+  },
+  "220713": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220714": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "220715": {
+   "principal": 0,
+   "coautoria": 2
+  },
+  "221148": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "221328": {
+   "principal": 0,
+   "coautoria": 2
+  },
+  "221329": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "221338": {
+   "principal": 1,
+   "coautoria": 1
+  },
+  "224117": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "224333": {
+   "principal": 0,
+   "coautoria": 1
+  },
+  "225846": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "226075": {
+   "principal": 1,
+   "coautoria": 0
+  },
+  "226837": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "227991": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "230765": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "230767": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "230768": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "230957": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "233592": {
+   "principal": 0,
+   "coautoria": 0
+  },
+  "233594": {
+   "principal": 0,
+   "coautoria": 0
+  }
+ }
+}

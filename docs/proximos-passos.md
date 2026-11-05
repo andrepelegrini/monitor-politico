@@ -31,6 +31,10 @@ Piloto só na página de Tabata Amaral (id 204534). Nenhum outro parlamentar rec
 
 Cuidado com a cota: os arquivos abertos da Câmara oscilam. Em 04/11/2026 traziam as passagens aéreas do SIGEPA até julho de 2025; em 05/11/2026, em nenhum ano. Por isso o total vem da página oficial do deputado, e o que falta no arquivo aparece como "sem detalhamento".
 
+Autorizado também em 05/11/2026: leis de autoria principal e coautoria na lista de deputados, para todos, com ordenação. Comparar é desejado quando a métrica é objetiva. O número vem de `data/metricas_deputados.json` (coleta manual: `.venv/bin/python -m monitor_politico.metricas`, que leva bastante tempo), e o restante do perfil novo segue só no piloto. Trocar `INICIO_MANDATO` em `metricas.py` na posse de 2027.
+
+Propostas de campanha: o TSE só recebe proposta de governo de candidaturas a presidente, governador e prefeito. Deputados e senadores não registram proposta nenhuma, então essa comparação depende de outra fonte, a definir.
+
 Atualizar os dados do piloto: `.venv/bin/python -m monitor_politico.perfis` (leva alguns minutos e fica fora do robô diário).
 
 ## Backlog (features sem IA)

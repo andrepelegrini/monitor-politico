@@ -36,6 +36,7 @@
         </tbody>
       </table>
     </div>
+    {% if a.inicio_mandato %}<p class="ce-section-note">Pela data em que a {{ a.palavra_norma }} saiu, {{ a.sancionadas_no_mandato.total|numero }} {{ "foi sancionada" if a.sancionadas_no_mandato.total == 1 else "foram sancionadas" }} desde {{ a.inicio_mandato|data_br }}: {{ a.sancionadas_no_mandato.principal|numero }} de autoria principal e {{ a.sancionadas_no_mandato.coautoria|numero }} em coautoria. É esse o critério usado para comparar os parlamentares na lista de deputados.</p>{% endif %}
     <p class="ce-section-note">São contagens de projetos e PECs, e não medem qualidade nem resultado. Uma proposta pode levar anos para avançar, e por isso as mais recentes têm menos chance de já ter virado {{ a.palavra_norma }}. Aqui conta só a proposta que virou {{ a.palavra_norma }} diretamente: uma ideia que avançou dentro de outro projeto, por exemplo tramitando em conjunto, não aparece. A {{ a.palavra_norma }} entra no mandato em que a proposta foi apresentada, mesmo que tenha sido aprovada depois.</p>
   </div>
 

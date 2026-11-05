@@ -30,18 +30,27 @@
         <option value="">Todas</option>
         {% for u in ufs %}<option>{{ u }}</option>{% endfor %}
       </select>
-    </label>
+    </label>{% if leis_na_lista %}
+    <label class="ce-field"><span class="ce-control-label">Ordenar por</span>
+      <select class="ce-select" id="f-ordem">
+        <option value="nome">Nome</option>
+        <option value="principal">Leis de autoria principal</option>
+        <option value="coautoria">Leis em coautoria</option>
+      </select>
+    </label>{% endif %}
   </form>
 
-  <p class="ce-count" aria-live="polite"><span id="contagem">{{ parlamentares|length }}</span> de {{ parlamentares|length }} {{ plural }}</p>
+  <p class="ce-count" aria-live="polite"><span id="contagem">{{ parlamentares|length }}</span> de {{ parlamentares|length }} {{ plural }}</p>{% if leis_na_lista %}
+  <p class="ce-section-note">Leis sancionadas desde {{ metricas.inicio|data_br }} a partir de projetos assinados por cada parlamentar, com o mesmo critério para todos. Autoria principal é a primeira assinatura. A contagem não mede qualidade, não inclui relatorias nem ideias aprovadas dentro de outros projetos, e quem entrou depois do início do mandato ou se licenciou teve menos tempo.</p>{% endif %}
 
-  <ul class="ce-people" id="lista">
+  <ul class="ce-people{% if leis_na_lista %} ce-people--leis{% endif %}" id="lista">
     {% for d in parlamentares %}
-    <li data-nome="{{ d.nome|lower }}" data-partido="{{ d.partido }}" data-uf="{{ d.uf }}">
+    <li data-nome="{{ d.nome|lower }}" data-partido="{{ d.partido }}" data-uf="{{ d.uf }}"{% if leis_na_lista %} data-principal="{{ leis_na_lista[d.id].principal }}" data-coautoria="{{ leis_na_lista[d.id].coautoria }}"{% endif %}>
       <a href="{{ d.id }}.html">
         {% if d.url_foto %}<img src="{{ d.url_foto }}" alt="" loading="lazy" width="64" height="85">{% else %}<span class="ce-photo-empty" aria-hidden="true"></span>{% endif %}
         <span class="ce-people-name">{{ d.nome }}</span>
-        <span class="ce-meta">{{ d.partido }} · {{ d.uf }}</span>
+        <span class="ce-meta">{{ d.partido }} · {{ d.uf }}</span>{% if leis_na_lista %}
+        <span class="ce-people-leis"><strong>{{ leis_na_lista[d.id].principal }}</strong> {{ "lei" if leis_na_lista[d.id].principal == 1 else "leis" }} de autoria principal · {{ leis_na_lista[d.id].coautoria }} em coautoria</span>{% endif %}
       </a>
     </li>
     {% endfor %}

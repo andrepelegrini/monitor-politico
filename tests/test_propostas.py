@@ -90,6 +90,18 @@ def test_numero_da_norma_vem_da_tramitacao(doc):
     assert doc["propostas"][0]["norma"] is None
 
 
+def test_norma_com_texto_vazio_vale_pela_data():
+    norma = propostas.norma_da_tramitacao([{"dataHora": "2024-10-17T10:00", "descricaoTramitacao": "Transformação em Norma Jurídica", "despacho": ""}])
+    assert norma == {"nome": propostas.NORMA_SEM_NUMERO, "data": "2024-10-17", "veto_parcial": False}
+
+
+def test_norma_em_formatos_antigos():
+    antiga = propostas.norma_da_tramitacao([{"dataHora": "2001-09-05T10:00", "despacho": "TRANSFORMADO NA LEI 10272/01. DOFC 06 09 01."}])
+    assert antiga["nome"] == "LEI 10272/01"
+    com_prefixo = propostas.norma_da_tramitacao([{"dataHora": "2002-12-19T10:00", "despacho": "OF -SF, encaminhando. Transformado na Lei  10.606/02. DOFC"}])
+    assert com_prefixo["nome"] == "Lei 10.606/02"
+
+
 def test_norma_sem_despacho_reconhecido():
     assert propostas.norma_da_tramitacao([{"dataHora": "2023-01-01T10:00", "despacho": "Remessa"}]) is None
 
@@ -138,6 +150,12 @@ def test_por_mandato_conta_autoria_e_normas(doc):
         {"rotulo": "2019–2023", "primeira": 0, "coautoria": 0, "normas": 0},
     ]
     assert {p["mandato"] for p in v["propostas"]} == {"2023–2027"}
+
+
+def test_conta_tambem_pela_data_de_sancao(doc):
+    v = propostas.visao(doc, inicio_mandato="2023-02-01")
+    assert v["sancionadas_no_mandato"] == {"total": 1, "principal": 1, "coautoria": 0}
+    assert propostas.visao(doc, inicio_mandato="2024-01-01")["sancionadas_no_mandato"]["total"] == 0
 
 
 def test_palavra_da_norma_so_diz_lei_quando_todas_sao():

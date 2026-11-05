@@ -17,7 +17,7 @@ from zoneinfo import ZoneInfo
 
 from jinja2 import Environment, PackageLoader, select_autoescape
 
-from monitor_politico import painel, perfis, resumo
+from monitor_politico import metricas as modulo_metricas, painel, perfis, resumo
 from monitor_politico.models import Deputado, Senador
 
 DEPUTADOS_PADRAO = Path("data/deputados.json")
@@ -25,6 +25,7 @@ SENADORES_PADRAO = Path("data/senadores.json")
 CONGRESSO_PADRAO = Path("data/congresso.json")
 RESUMOS_PADRAO = Path("data/resumos.json")
 PERFIS_PADRAO = Path("data/perfis")
+METRICAS_PADRAO = Path("data/metricas_deputados.json")
 SAIDA_PADRAO = Path("site")
 FUSO = ZoneInfo("America/Sao_Paulo")
 PACOTE = Path(__file__).parent
@@ -123,6 +124,7 @@ def construir(
     doc_resumos: Optional[dict[str, Any]] = None,
     site_url: Optional[str] = None,
     perfis_ampliados: Optional[dict[int, dict[str, Any]]] = None,
+    metricas: Optional[dict[str, Any]] = None,
 ) -> None:
     env = Environment(
         loader=PackageLoader("monitor_politico", "templates"),
@@ -184,6 +186,8 @@ def construir(
     )
     slugs = {p["chave"]: p["slug"] for p in doc_congresso["proposicoes"].values()}
     visoes_ampliadas = {id_: perfis.visao(doc, slugs=slugs) for id_, doc in (perfis_ampliados or {}).items()}
+    # Deputado sem registro nas métricas é parte da coleta só se ela existir; o template trata a ausência.
+    leis_na_lista = {d.id: modulo_metricas.do_deputado(metricas, d.id) for d in deputados} if metricas else None
     for id_, doc in (perfis_ampliados or {}).items():
         if doc.get("dinheiro"):
             pasta_perfis = saida / "static" / "perfis"
@@ -195,7 +199,8 @@ def construir(
         env, saida / "deputados", deputados, "perfil_deputado.html", "d",
         {"raiz": "..", "casa": "camara", "titulo": "Deputados federais", "singular": "deputado", "plural": "deputados",
          "nome_casa": "Câmara dos Deputados", "resumo": resumo.da_camara(deputados, doc_deputados.get("resumo") or {}),
-         "atualizado_em": atualizado_camara, "fonte_nome": FONTE_CAMARA[0], "fonte_url": FONTE_CAMARA[1]},
+         "atualizado_em": atualizado_camara, "fonte_nome": FONTE_CAMARA[0], "fonte_url": FONTE_CAMARA[1],
+         "leis_na_lista": leis_na_lista, "metricas": metricas},
         visoes_ampliadas,
     )
     _gerar_casa(
@@ -217,7 +222,7 @@ if __name__ == "__main__":
     doc_con = json.loads(entrada_con.read_text(encoding="utf-8"))
     # Os resumos por IA são opcionais: sem o arquivo, as páginas mostram só a ementa oficial.
     doc_res = json.loads(RESUMOS_PADRAO.read_text(encoding="utf-8")) if RESUMOS_PADRAO.exists() else None
-    construir(doc_dep, doc_sen, doc_con, destino, doc_res, perfis_ampliados=perfis.ler_perfis(PERFIS_PADRAO))
+    construir(doc_dep, doc_sen, doc_con, destino, doc_res, perfis_ampliados=perfis.ler_perfis(PERFIS_PADRAO), metricas=modulo_metricas.ler(METRICAS_PADRAO))
     print(
         f"Site gerado em {destino}/ ({len(doc_dep['deputados'])} deputados, {len(doc_sen['senadores'])} senadores, "
         f"{len(doc_con['proposicoes'])} proposições)"

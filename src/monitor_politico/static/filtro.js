@@ -41,6 +41,21 @@
     });
   });
 
+  // Ordenação pelas leis: empate fica na ordem alfabética, que é a ordem original da página.
+  var ordem = document.getElementById("f-ordem");
+  if (ordem) {
+    var lista = document.getElementById("lista");
+    itens.forEach(function (li, i) { li.dataset.posicao = i; });
+    ordem.addEventListener("change", function () {
+      var campo = ordem.value;
+      var outro = campo === "principal" ? "coautoria" : "principal";
+      itens.slice().sort(function (a, b) {
+        if (campo === "nome") return a.dataset.posicao - b.dataset.posicao;
+        return (b.dataset[campo] - a.dataset[campo]) || (b.dataset[outro] - a.dataset[outro]) || (a.dataset.posicao - b.dataset.posicao);
+      }).forEach(function (li) { lista.appendChild(li); });
+    });
+  }
+
   var limpar = document.querySelector("[data-limpar-filtros]");
   if (limpar) {
     limpar.addEventListener("click", function () {
