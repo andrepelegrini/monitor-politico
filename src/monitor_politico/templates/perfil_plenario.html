@@ -1,0 +1,145 @@
+{% set p = perfil.plenario %}
+<section class="pf-secao" id="plenario">
+  <p class="ce-eyebrow">Atuação em Plenário</p>
+  <h2 class="pf-h2">{{ p.votos_registrados|numero }} votos registrados, {{ p.total_texto|numero }} deles sobre o texto principal de uma proposta</h2>
+  <p class="ce-section-note">Período: {{ p.inicio|data_br }} a {{ perfil.coleta_local|data_br }}. Muitas votações do Plenário são simbólicas, sem registro individual de voto, e não entram nesta conta.</p>
+
+  <div class="pf-duas pf-espaco">
+    <div class="ce-vote-card">
+      <h3 class="pf-h3">Todos os votos nominais</h3>
+      <div class="ce-vote-bar" aria-hidden="true"><span class="ce-vote-yes" style="width: {{ p.todos.barra.sim }}%"></span><span class="ce-vote-no" style="width: {{ p.todos.barra.nao }}%"></span>{% if p.todos.outros %}<span class="ce-vote-other" style="width: {{ p.todos.barra.outros }}%"></span>{% endif %}</div>
+      <ul class="ce-legend">
+        <li><span class="ce-dot ce-vote-yes"></span>Sim <strong>{{ p.todos.sim|numero }}</strong></li>
+        <li><span class="ce-dot ce-vote-no"></span>Não <strong>{{ p.todos.nao|numero }}</strong></li>
+        <li><span class="ce-dot ce-vote-other"></span>Outros registros <strong>{{ p.todos.outros|numero }}</strong></li>
+      </ul>
+      <p class="pf-nota">{{ p.total_procedimento|numero }} sobre procedimento, {{ p.total_ajuste|numero }} sobre emendas, destaques e recursos, {{ p.total_texto|numero }} sobre o texto principal. Em {{ p.sem_registro|numero }} das {{ p.votacoes_nominais|numero }} votações nominais não há voto registrado, o que não significa ausência.</p>
+    </div>
+    <div class="ce-vote-card">
+      <h3 class="pf-h3">Só o texto principal</h3>
+      <div class="ce-vote-bar" aria-hidden="true"><span class="ce-vote-yes" style="width: {{ p.texto.barra.sim }}%"></span><span class="ce-vote-no" style="width: {{ p.texto.barra.nao }}%"></span>{% if p.texto.outros %}<span class="ce-vote-other" style="width: {{ p.texto.barra.outros }}%"></span>{% endif %}</div>
+      <ul class="ce-legend">
+        <li><span class="ce-dot ce-vote-yes"></span>Sim <strong>{{ p.texto.sim|numero }}</strong></li>
+        <li><span class="ce-dot ce-vote-no"></span>Não <strong>{{ p.texto.nao|numero }}</strong></li>
+        <li><span class="ce-dot ce-vote-other"></span>Outros registros <strong>{{ p.texto.outros|numero }}</strong></li>
+      </ul>
+      <p class="pf-nota">Em {{ p.contra_texto|numero }} destas votações, o voto ficou do lado menos votado. Ele diferiu da orientação do partido em {{ p.difere_texto|numero }} das {{ p.com_orientacao|numero }} votações em que há orientação própria de Sim ou Não, fora de bloco.</p>
+    </div>
+  </div>
+  <p class="ce-section-note">Sim e Não indicam a posição sobre o texto votado naquele momento. Não indicam a posição sobre o tema nem a intenção do parlamentar.</p>
+
+  {% if p.temas %}
+  <h3 class="pf-h3 pf-espaco">Assuntos mais frequentes no texto principal</h3>
+  <ul class="pf-temas">
+    {% for t in p.temas %}
+    <li>
+      <span class="pf-tema-nome">{{ t.tema }}</span>
+      <div class="ce-vote-bar" aria-hidden="true"><span class="ce-vote-yes" style="width: {{ t.barra.sim }}%"></span><span class="ce-vote-no" style="width: {{ t.barra.nao }}%"></span>{% if t.outros %}<span class="ce-vote-other" style="width: {{ t.barra.outros }}%"></span>{% endif %}</div>
+      <span class="pf-nota">{{ t.sim }} Sim · {{ t.nao }} Não{% if t.outros %} · {{ t.outros }} {{ "outro" if t.outros == 1 else "outros" }}{% endif %}</span>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  <h3 class="pf-h3 pf-espaco" id="votacoes">Explorar as votações</h3>
+  <div class="ce-filters">
+    <label class="ce-field"><span class="ce-control-label">Tipo de votação</span>
+      <select class="ce-select" id="v-classe">
+        <option value="texto">Texto principal ({{ p.total_texto|numero }})</option>
+        <option value="ajuste">Emendas, destaques e recursos ({{ p.total_ajuste|numero }})</option>
+        <option value="">Todas ({{ (p.total_texto + p.total_ajuste)|numero }})</option>
+      </select></label>
+    <label class="ce-field"><span class="ce-control-label">Assunto</span>
+      <select class="ce-select" id="v-tema">
+        <option value="">Todos os assuntos</option>
+        {% for tema in p.opcoes_temas %}<option>{{ tema }}</option>{% endfor %}
+      </select></label>
+    <label class="ce-field"><span class="ce-control-label">Voto</span>
+      <select class="ce-select" id="v-voto">
+        <option value="">Todos</option>
+        <option>Sim</option>
+        <option>Não</option>
+      </select></label>
+    <label class="ce-check"><input type="checkbox" id="v-contra">Lado menos votado</label>
+    <label class="ce-check"><input type="checkbox" id="v-difere">Diferente da orientação do partido</label>
+  </div>
+  <p class="ce-count"><span id="v-contagem">{{ p.votos|length|numero }}</span> votações, da mais recente para a mais antiga.</p>
+  <ul class="pf-votos" id="v-lista">
+    {% for v in p.votos %}
+    <li data-classe="{{ v.classe }}" data-voto="{{ v.voto }}" data-temas="{{ v.temas|join('|') }}"{% if v.contra %} data-contra="1"{% endif %}{% if v.difere %} data-difere="1"{% endif %}>
+      <div>
+        <div class="pf-voto-meta">
+          <span>{{ v.data|data_br }}</span>
+          {% if v.slug %}<a href="../proposicoes/{{ v.slug }}.html">{{ v.sigla }}</a>{% else %}<a href="https://www.camara.leg.br/propostas-legislativas/{{ v.proposicao_id }}">{{ v.sigla or "Proposição" }}</a>{% endif %}
+          {% if v.contra %}<span class="ce-badge ce-badge--outline">Lado menos votado</span>{% endif %}
+          {% if v.difere %}<span class="ce-badge ce-badge--outline">Diferente da orientação do partido</span>{% endif %}
+        </div>
+        <p class="pf-voto-texto">{{ (v.ementa or v.descricao)|truncate(190, true, "…", 0) }}</p>
+        <details class="pf-detalhes pf-detalhes--voto">
+          <summary>O que foi votado</summary>
+          <p>{{ v.descricao }}</p>
+          <p>Orientação do {{ v.partido }}: {{ v.orientacao or "não publicada separadamente" }}.</p>
+          <a href="https://dadosabertos.camara.leg.br/api/v2/votacoes/{{ v.id }}">Votação na fonte oficial</a>
+        </details>
+      </div>
+      <div class="pf-voto-posicao">
+        <span class="pf-voto-rotulo"><span class="ce-dot {{ 'ce-vote-yes' if v.voto == 'Sim' else 'ce-vote-no' if v.voto == 'Não' else 'ce-vote-other' }}"></span>{% if v.voto in ("Sim", "Não") %}Votou {{ v.voto }}{% else %}{{ v.voto }}{% endif %}</span>
+        <div class="ce-vote-bar" aria-hidden="true"><span class="ce-vote-yes" style="width: {{ v.barra.sim }}%"></span><span class="ce-vote-no" style="width: {{ v.barra.nao }}%"></span>{% if v.outros %}<span class="ce-vote-other" style="width: {{ v.barra.outros }}%"></span>{% endif %}</div>
+        <span>Demais votos: {{ v.sim }} Sim · {{ v.nao }} Não{% if v.outros %} · {{ v.outros }} {{ "outro" if v.outros == 1 else "outros" }}{% endif %}</span>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+  <div class="ce-state-box pf-espaco" id="v-vazio" hidden>
+    <p>Nenhuma votação com estes filtros.</p>
+    <button class="ce-button ce-button--ghost" id="v-limpar" type="button">Limpar filtros</button>
+  </div>
+  <button class="ce-button ce-button--ghost pf-mais" id="v-mais" type="button" hidden>Mostrar mais votações</button>
+  <details class="pf-detalhes">
+    <summary>Fonte e método</summary>
+    <p>Só votações nominais do Plenário em que há voto registrado. Votações em que a fonte não informa as posições individuais ficam de fora. A separação entre texto principal, emendas e procedimento é feita por regras sobre a descrição oficial de cada votação e pode ter exceções. O placar exibido não inclui o voto deste perfil. A orientação do partido só aparece quando ele consta separado de um bloco. Coleta em {{ perfil.coleta_local|data_br }}.</p>
+    <ul class="ce-links">
+      <li><a href="https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/csv/votacoesVotos-2026.csv">Câmara: votos por votação</a></li>
+      <li><a href="https://dadosabertos.camara.leg.br/arquivos/votacoes/csv/votacoes-2026.csv">Câmara: votações</a></li>
+      <li><a href="https://dadosabertos.camara.leg.br/arquivos/votacoesOrientacoes/csv/votacoesOrientacoes-2026.csv">Câmara: orientações das bancadas</a></li>
+      <li><a href="https://dadosabertos.camara.leg.br/arquivos/proposicoesTemas/csv/proposicoesTemas-2026.csv">Câmara: temas das proposições</a></li>
+    </ul>
+  </details>
+
+  <div class="pf-bloco" id="presenca">
+    <h3 class="pf-h3">Presença em {{ p.presenca.total.presencas|numero }} dos {{ p.presenca.total.dias|numero }} dias com sessões deliberativas</h3>
+    <div class="ce-table-scroll" tabindex="0" role="region" aria-label="Presença por ano">
+      <table class="ce-table pf-tabela">
+        <caption>Relatório oficial da Câmara, por ano</caption>
+        <thead>
+          <tr>
+            <th scope="col">Ano</th>
+            <th scope="col" class="pf-num">Dias com sessão</th>
+            <th scope="col" class="pf-num">Presença</th>
+            <th scope="col" class="pf-num">Ausência justificada</th>
+            <th scope="col" class="pf-num">Ausência não justificada</th>
+            <th scope="col" class="pf-num">Reuniões e outros eventos</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for a in p.presenca.por_ano %}
+          <tr><th scope="row">{{ a.ano }}</th><td class="pf-num">{{ a.dias }}</td><td class="pf-num">{{ a.presencas }}</td><td class="pf-num">{{ a.justificadas }}</td><td class="pf-num">{{ a.nao_justificadas }}</td><td class="pf-num">{{ a.outros_eventos }}</td></tr>
+          {% endfor %}
+          {% set t = p.presenca.total %}
+          <tr class="pf-total"><th scope="row">Total</th><td class="pf-num">{{ t.dias }}</td><td class="pf-num">{{ t.presencas }}</td><td class="pf-num">{{ t.justificadas }}</td><td class="pf-num">{{ t.nao_justificadas }}</td><td class="pf-num">{{ t.outros_eventos }}</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="ce-section-note">Os dias, a presença e as ausências são os totais publicados pela Câmara para o ano inteiro, e por isso {{ p.presenca.por_ano[0].ano }} pode incluir janeiro, antes do início do mandato. Ausências justificadas seguem as regras da Câmara e incluem casos como missão autorizada. A última coluna conta reuniões de comissão, audiências e outros eventos com presença registrada, sem total de referência, porque cada parlamentar participa de comissões diferentes.</p>
+    <details class="pf-detalhes">
+      <summary>Fonte e método</summary>
+      <p>Presença por dia conforme o relatório de presença em Plenário de cada ano. Outros eventos contados pelo cruzamento das presenças com os eventos encerrados. Coleta em {{ perfil.coleta_local|data_br }}.</p>
+      <ul class="ce-links">
+        {% for a in p.presenca.por_ano|reverse %}
+        <li><a href="https://www.camara.leg.br/deputados/{{ d.id }}/presenca-plenario/{{ a.ano }}">Câmara: relatório de presença de {{ a.ano }}</a></li>
+        {% endfor %}
+        <li><a href="https://dadosabertos.camara.leg.br/arquivos/eventosPresencaDeputados/csv/eventosPresencaDeputados-2026.csv">Câmara: presenças em eventos</a></li>
+      </ul>
+    </details>
+  </div>
+</section>

@@ -6,7 +6,7 @@ import httpx
 import pytest
 
 from conftest import cliente_falso, congresso_falso
-from monitor_politico import perfis
+from monitor_politico import perfis, plenario
 from monitor_politico.build import construir
 from monitor_politico.camara import coletar as coletar_camara
 from monitor_politico.congresso import coletar as coletar_congresso
@@ -59,6 +59,19 @@ ORGAOS = [
     {"siglaOrgao": "ANT", "nomeOrgao": "Comissão Antiga", "nomePublicacao": "Comissão Antiga", "titulo": "Titular", "dataFim": "2024-01-31T23:59"},
     {"siglaOrgao": "SEM", "nomeOrgao": "SECRETARIA DA MULHER", "nomePublicacao": "SECRETARIA DA MULHER", "titulo": "Presidente", "dataFim": None},
 ]
+
+
+PLENARIO = {
+    "votos": {
+        "inicio": "2023-02-01", "votacoes_nominais": 3, "votos_registrados": 2, "procedimento": {"Sim": 1},
+        "votos": [{
+            "id": "10-1", "data": "2023-03-01", "voto": "Não", "classe": "texto", "proposicao_id": "10", "sigla": "PEC 18/2025",
+            "ementa": "Ementa oficial " + "x" * 300, "descricao": "Aprovado o Projeto.", "sim": 30, "nao": 10, "outros": 1,
+            "partido": "PSB", "orientacao": "Sim", "temas": ["Educação"],
+        }],
+    },
+    "presenca": {"por_ano": [{"ano": 2023, "dias": 115, "presencas": 103, "justificadas": 10, "nao_justificadas": 2, "outros_eventos": 149}]},
+}
 
 
 def responder(request: httpx.Request) -> httpx.Response:
@@ -183,3 +196,27 @@ def test_so_o_perfil_com_dados_ampliados_muda(tmp_path, docs, doc):
     # Gênero fica de fora do perfil individual, como no restante do site.
     for genero in ("Reeleita", "Reeleito", "Deputada", "Eleita"):
         assert genero not in pagina
+
+
+def test_perfil_com_plenario(tmp_path, docs, doc):
+    alvo = docs[0]["deputados"][0]["id"]
+    construir(*docs, tmp_path / "site", perfis_ampliados={alvo: {**doc, "id": alvo, "plenario": PLENARIO}})
+    pagina = (tmp_path / "site" / "deputados" / f"{alvo}.html").read_text(encoding="utf-8")
+    assert 'id="plenario"' in pagina and 'id="presenca"' in pagina and 'href="#plenario"' in pagina
+    assert "2 votos registrados, 1 deles sobre o texto principal" in pagina
+    assert "Presença em 103 dos 115 dias" in pagina
+    assert 'data-classe="texto"' in pagina and 'data-temas="Educação"' in pagina and 'data-contra="1"' in pagina and 'data-difere="1"' in pagina
+    assert 'static/perfil.js' in pagina
+    assert (tmp_path / "site" / "static" / "perfil.js").exists()
+    # Proposição com página própria aponta para o site; a ementa longa é cortada na lista.
+    assert 'href="../proposicoes/pec-18-2025.html"' in pagina
+    assert "x" * 300 not in pagina
+    assert "o que não significa ausência" in pagina
+    assert "nem a intenção do parlamentar" in pagina
+
+
+def test_perfil_sem_plenario_nao_carrega_o_script(tmp_path, docs, doc):
+    alvo = docs[0]["deputados"][0]["id"]
+    construir(*docs, tmp_path / "site", perfis_ampliados={alvo: {**doc, "id": alvo}})
+    pagina = (tmp_path / "site" / "deputados" / f"{alvo}.html").read_text(encoding="utf-8")
+    assert 'id="plenario"' not in pagina and "perfil.js" not in pagina

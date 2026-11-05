@@ -22,8 +22,8 @@ Ideias soltas anotadas durante o uso ficam em [notes.txt](../notes.txt).
 Piloto só na página de Tabata Amaral (id 204534). Nenhum outro parlamentar recebe o perfil novo sem autorização: `perfis.PILOTO` e um teste travam isso, e as demais páginas continuam com os templates atuais.
 
 - [x] Etapa 0: estrutura e mock.
-- [x] Etapa 1: Quem é (eleições, votos por município, bens, trajetória e comissões). Aguardando validação.
-- [ ] Etapa 2: atuação em Plenário (votos e presença).
+- [x] Etapa 1: Quem é (eleições, votos por município, bens, trajetória e comissões).
+- [x] Etapa 2: atuação em Plenário (votos e presença). Aguardando validação.
 - [ ] Etapa 3: dinheiro público (cota e emendas).
 - [ ] Etapa 4: propostas e leis.
 - [ ] Etapa 5: leitura e compartilhamento.

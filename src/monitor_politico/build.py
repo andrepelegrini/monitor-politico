@@ -108,7 +108,7 @@ def _gerar_casa(
         ampliado = perfis_ampliados.get(p.id)
         if ampliado:
             pagina = env.get_template("perfil_ampliado.html").render(
-                **contexto, caminho=caminho, **{variavel: p}, perfil=perfis.visao(ampliado)
+                **contexto, caminho=caminho, **{variavel: p}, perfil=ampliado
             )
         else:
             pagina = modelo.render(**contexto, caminho=caminho, **{variavel: p})
@@ -182,12 +182,14 @@ def construir(
         json.dumps(indice_de_busca(deputados, senadores, doc_congresso["proposicoes"]), ensure_ascii=False, separators=(",", ":")),
         encoding="utf-8",
     )
+    slugs = {p["chave"]: p["slug"] for p in doc_congresso["proposicoes"].values()}
+    visoes_ampliadas = {id_: perfis.visao(doc, slugs=slugs) for id_, doc in (perfis_ampliados or {}).items()}
     _gerar_casa(
         env, saida / "deputados", deputados, "perfil_deputado.html", "d",
         {"raiz": "..", "casa": "camara", "titulo": "Deputados federais", "singular": "deputado", "plural": "deputados",
          "nome_casa": "Câmara dos Deputados", "resumo": resumo.da_camara(deputados, doc_deputados.get("resumo") or {}),
          "atualizado_em": atualizado_camara, "fonte_nome": FONTE_CAMARA[0], "fonte_url": FONTE_CAMARA[1]},
-        perfis_ampliados,
+        visoes_ampliadas,
     )
     _gerar_casa(
         env, saida / "senadores", senadores, "perfil_senador.html", "s",

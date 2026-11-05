@@ -24,6 +24,7 @@ from zoneinfo import ZoneInfo
 
 import httpx
 
+from monitor_politico import plenario
 from monitor_politico.camara import ClienteCamara
 
 PILOTO = (204534,)  # Tabata Amaral
@@ -200,7 +201,9 @@ def eleicoes_da_pessoa(fonte: Any, cpf: str, anos: Iterable[int] = ELEICOES) -> 
     return resultado
 
 
-def coletar_perfil(id_: int, camara: ClienteCamara, fonte: Any, hoje: Optional[date] = None) -> dict[str, Any]:
+def coletar_perfil(
+    id_: int, camara: ClienteCamara, fonte: Any, hoje: Optional[date] = None, arquivos: Any = None
+) -> dict[str, Any]:
     hoje = hoje or date.today()
     detalhe = camara._get(f"/deputados/{id_}")["dados"]
     eventos = trajetoria(camara._get(f"/deputados/{id_}/historico")["dados"])
@@ -218,6 +221,7 @@ def coletar_perfil(id_: int, camara: ClienteCamara, fonte: Any, hoje: Optional[d
         "eleicoes": eleicoes_da_pessoa(fonte, detalhe["cpf"]),
         "trajetoria": eventos,
         "comissoes": comissoes_atuais(orgaos, hoje),
+        "plenario": plenario.coletar(arquivos, id_, legislatura["inicio"], hoje) if arquivos and legislatura else None,
     }
 
 
@@ -298,7 +302,7 @@ def proximo_mandato(doc: dict[str, Any], hoje: date) -> Optional[dict[str, Any]]
     return {**ultima, "inicio": inicio.isoformat(), "fim_ano": ultima["ano"] + 5, "inicio_ano": ultima["ano"] + 1}
 
 
-def visao(doc: dict[str, Any], hoje: Optional[date] = None) -> dict[str, Any]:
+def visao(doc: dict[str, Any], hoje: Optional[date] = None, slugs: Optional[dict[str, str]] = None) -> dict[str, Any]:
     """Dados já prontos para o template."""
     coleta_local = datetime.fromisoformat(doc["coletado_em"]).astimezone(FUSO).date()
     hoje = hoje or coleta_local
@@ -316,6 +320,7 @@ def visao(doc: dict[str, Any], hoje: Optional[date] = None) -> dict[str, Any]:
         "variacoes": variacoes_de_bens(eleicoes),
         "linha_do_tempo": linha_do_tempo(doc, hoje),
         "proximo_mandato": proximo_mandato(doc, hoje),
+        "plenario": plenario.visao(doc["plenario"], slugs) if doc.get("plenario") else None,
     }
 
 
@@ -343,8 +348,8 @@ def nome_proprio(texto: str) -> str:
 if __name__ == "__main__":
     destino = Path(sys.argv[1]) if len(sys.argv) > 1 else SAIDA_PADRAO
     destino.mkdir(parents=True, exist_ok=True)
-    camara, tse = ClienteCamara(), FonteTSE()
+    camara, tse, arquivos_camara = ClienteCamara(), FonteTSE(), plenario.ArquivosCamara()
     for id_parlamentar in PILOTO:
-        perfil = coletar_perfil(id_parlamentar, camara, tse)
+        perfil = coletar_perfil(id_parlamentar, camara, tse, arquivos=arquivos_camara)
         (destino / f"{id_parlamentar}.json").write_text(json.dumps(perfil, ensure_ascii=False, indent=2), encoding="utf-8")
         print(f"Perfil {id_parlamentar}: {len(perfil['eleicoes'])} eleições, {len(perfil['comissoes'])} comissões")

@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block titulo %}{{ d.nome }} ({{ d.partido }}-{{ d.uf }}) · Monitor Político{% endblock %}
 {% block og_titulo %}{{ d.nome }} ({{ d.partido }}-{{ d.uf }}) · Câmara dos Deputados{% endblock %}
-{% block descricao %}Eleições, bens declarados, trajetória, comissões e contato oficial de {{ d.nome }} na Câmara dos Deputados, com dados abertos oficiais.{% endblock %}
+{% block descricao %}Eleições, bens declarados, votos, presença, comissões e contato oficial de {{ d.nome }} na Câmara dos Deputados, com dados abertos oficiais.{% endblock %}
 {% block conteudo %}
 <nav class="ce-breadcrumb" aria-label="Trilha de navegação">
   <ol>
@@ -19,11 +19,18 @@
       <h1>{{ d.nome }}</h1>
       <p class="pf-deck">{{ d.partido }}-{{ d.uf }}{% if d.situacao %} · {{ d.situacao }}{% endif %}{% if perfil.legislatura_atual %} · Mandato atual: {{ perfil.legislatura_atual.inicio|data_br }} a {{ perfil.legislatura_atual.fim|data_br }}.{% endif %}{% if perfil.proximo_mandato %} Mandato renovado na eleição de {{ perfil.proximo_mandato.ano }}, para {{ perfil.proximo_mandato.inicio_ano }}–{{ perfil.proximo_mandato.fim_ano }}.{% endif %}</p>
     </header>
+    {% if perfil.plenario %}
+    <div class="pf-numeros">
+      <a href="#plenario"><span class="ce-kpi-value">{{ perfil.plenario.votos_registrados|numero }}</span><span>votos registrados em {{ perfil.plenario.votacoes_nominais|numero }} votações nominais do Plenário</span></a>
+      <a href="#presenca"><span class="ce-kpi-value">{{ perfil.plenario.presenca.total.presencas|numero }}</span><span>dias com presença, de {{ perfil.plenario.presenca.total.dias|numero }} dias com sessões deliberativas</span></a>
+    </div>
+    {% endif %}
   </div>
 </article>
 
 <nav class="pf-ancoras" aria-label="Seções do perfil">
   <a href="#quem-e">Quem é</a>
+  {% if perfil.plenario %}<a href="#plenario">Plenário</a>{% endif %}
   <a href="#contato">Contato e fontes</a>
 </nav>
 
@@ -159,6 +166,8 @@
   </details>
 </section>
 
+{% if perfil.plenario %}{% include "perfil_plenario.html" %}{% endif %}
+
 <section class="pf-secao" id="contato">
   <p class="ce-eyebrow">Contato e fontes</p>
   <h2 class="pf-h2">Contato oficial do gabinete</h2>
@@ -175,3 +184,4 @@
   </div>
 </section>
 {% endblock %}
+{% block scripts %}{% if perfil.plenario %}<script src="{{ raiz }}/static/perfil.js" defer></script>{% endif %}{% endblock %}
