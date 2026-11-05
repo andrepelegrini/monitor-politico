@@ -1,0 +1,254 @@
+{
+  "id": 204534,
+  "coletado_em": "2026-11-05T02:02:06+00:00",
+  "legislatura_atual": {
+    "id": 57,
+    "inicio": "2023-02-01",
+    "fim": "2027-01-31"
+  },
+  "eleicoes": [
+    {
+      "ano": 2018,
+      "partido": "PDT",
+      "uf": "SP",
+      "situacao": "ELEITO POR QP",
+      "votos": 264450,
+      "total_municipios": 645,
+      "municipios": [
+        [
+          "SÃO PAULO",
+          114559
+        ],
+        [
+          "CAMPINAS",
+          8927
+        ],
+        [
+          "SÃO JOSÉ DOS CAMPOS",
+          6979
+        ],
+        [
+          "SÃO BERNARDO DO CAMPO",
+          6389
+        ],
+        [
+          "SANTO ANDRÉ",
+          6138
+        ],
+        [
+          "GUARULHOS",
+          5339
+        ],
+        [
+          "OSASCO",
+          4486
+        ],
+        [
+          "SOROCABA",
+          4096
+        ]
+      ],
+      "bens": {
+        "total": 122942.98,
+        "categorias": [
+          [
+            "Fundos: Ações, Mútuos de Privatização, Invest. Empresas Emergentes, Invest.Participação e Invest. Índice Mercado",
+            88526.05
+          ],
+          [
+            "Outras aplicações e Investimentos",
+            22946.63
+          ],
+          [
+            "Aplicação de renda fixa (CDB, RDB e outros)",
+            7248.34
+          ],
+          [
+            "Caderneta de poupança",
+            4221.96
+          ]
+        ]
+      }
+    },
+    {
+      "ano": 2022,
+      "partido": "PSB",
+      "uf": "SP",
+      "situacao": "ELEITO POR QP",
+      "votos": 337873,
+      "total_municipios": 645,
+      "municipios": [
+        [
+          "SÃO PAULO",
+          143266
+        ],
+        [
+          "CAMPINAS",
+          10710
+        ],
+        [
+          "SANTO ANDRÉ",
+          6933
+        ],
+        [
+          "SÃO BERNARDO DO CAMPO",
+          6889
+        ],
+        [
+          "GUARULHOS",
+          6553
+        ],
+        [
+          "OSASCO",
+          5669
+        ],
+        [
+          "SÃO JOSÉ DOS CAMPOS",
+          5594
+        ],
+        [
+          "RIBEIRÃO PRETO",
+          5134
+        ]
+      ],
+      "bens": {
+        "total": 556700.29,
+        "categorias": [
+          [
+            "Outras aplicações e Investimentos",
+            492785.8
+          ],
+          [
+            "Depósito bancário em conta corrente no País",
+            63914.49
+          ]
+        ]
+      }
+    },
+    {
+      "ano": 2026,
+      "partido": "PSB",
+      "uf": "SP",
+      "situacao": "ELEITO POR QP",
+      "votos": 476383,
+      "total_municipios": 645,
+      "municipios": [
+        [
+          "SÃO PAULO",
+          238734
+        ],
+        [
+          "CAMPINAS",
+          9673
+        ],
+        [
+          "SÃO BERNARDO DO CAMPO",
+          9483
+        ],
+        [
+          "OSASCO",
+          8958
+        ],
+        [
+          "GUARULHOS",
+          8304
+        ],
+        [
+          "SANTO ANDRÉ",
+          7317
+        ],
+        [
+          "SÃO JOSÉ DOS CAMPOS",
+          6635
+        ],
+        [
+          "DIADEMA",
+          6124
+        ]
+      ],
+      "bens": {
+        "total": 674534.74,
+        "categorias": [
+          [
+            "OUTROS BENS E DIREITOS",
+            588571.54
+          ],
+          [
+            "Apartamento",
+            79571.54
+          ],
+          [
+            "Dinheiro em espécie - moeda nacional",
+            6391.66
+          ]
+        ]
+      }
+    }
+  ],
+  "trajetoria": [
+    {
+      "data": "2019-02-01",
+      "legislatura": 56,
+      "partido": "PDT",
+      "uf": "SP",
+      "tipo": "posse"
+    },
+    {
+      "data": "2021-09-28",
+      "legislatura": 56,
+      "partido": "PSB",
+      "uf": "SP",
+      "tipo": "partido",
+      "partido_anterior": "PDT"
+    },
+    {
+      "data": "2023-02-01",
+      "legislatura": 57,
+      "partido": "PSB",
+      "uf": "SP",
+      "tipo": "posse"
+    }
+  ],
+  "comissoes": [
+    {
+      "sigla": "PL261424",
+      "nome": "Comissão Especial sobre o Plano Nacional de Educação 2024-2034 (PL 2614/24)",
+      "funcao": "Presidente"
+    },
+    {
+      "sigla": "CONMP",
+      "nome": "Coordenadoria-Geral do Observatório Nacional da Mulher na Política",
+      "funcao": "2º Coordenador Adjunto"
+    },
+    {
+      "sigla": "CEDESNAT",
+      "nome": "Comissão Especial sobre Prevenção e Auxílio a Desastres e Calamidades Naturais",
+      "funcao": "Titular"
+    },
+    {
+      "sigla": "CEXTUNEL",
+      "nome": "Comissão Externa para Monitorar Obras do Túnel Santos-Guarujá",
+      "funcao": "Titular"
+    },
+    {
+      "sigla": "CE",
+      "nome": "Comissão de Educação",
+      "funcao": "Titular"
+    },
+    {
+      "sigla": "CMADS",
+      "nome": "Comissão de Meio Ambiente e Desenvolvimento Sustentável",
+      "funcao": "Titular"
+    },
+    {
+      "sigla": "SEMULHER",
+      "nome": "Secretaria da Mulher",
+      "funcao": "Titular"
+    },
+    {
+      "sigla": "CCJC",
+      "nome": "Comissão de Constituição e Justiça e de Cidadania",
+      "funcao": "Suplente"
+    }
+  ]
+}

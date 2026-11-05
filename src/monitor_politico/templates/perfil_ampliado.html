@@ -1,0 +1,177 @@
+{% extends "base.html" %}
+{% block titulo %}{{ d.nome }} ({{ d.partido }}-{{ d.uf }}) · Monitor Político{% endblock %}
+{% block og_titulo %}{{ d.nome }} ({{ d.partido }}-{{ d.uf }}) · Câmara dos Deputados{% endblock %}
+{% block descricao %}Eleições, bens declarados, trajetória, comissões e contato oficial de {{ d.nome }} na Câmara dos Deputados, com dados abertos oficiais.{% endblock %}
+{% block conteudo %}
+<nav class="ce-breadcrumb" aria-label="Trilha de navegação">
+  <ol>
+    <li><a href="../index.html">Início</a></li>
+    <li><a href="index.html">Deputados</a></li>
+    <li aria-current="page">{{ d.nome }}</li>
+  </ol>
+</nav>
+
+<article class="ce-profile pf-topo">
+  {% if d.url_foto %}<img src="{{ d.url_foto }}" alt="Foto oficial de {{ d.nome }}" width="150" height="200">{% else %}<span class="ce-photo-empty" aria-hidden="true"></span>{% endif %}
+  <div class="ce-profile-body">
+    <header class="ce-page-head">
+      <p class="ce-eyebrow">Câmara dos Deputados</p>
+      <h1>{{ d.nome }}</h1>
+      <p class="pf-deck">{{ d.partido }}-{{ d.uf }}{% if d.situacao %} · {{ d.situacao }}{% endif %}{% if perfil.legislatura_atual %} · Mandato atual: {{ perfil.legislatura_atual.inicio|data_br }} a {{ perfil.legislatura_atual.fim|data_br }}.{% endif %}{% if perfil.proximo_mandato %} Mandato renovado na eleição de {{ perfil.proximo_mandato.ano }}, para {{ perfil.proximo_mandato.inicio_ano }}–{{ perfil.proximo_mandato.fim_ano }}.{% endif %}</p>
+    </header>
+  </div>
+</article>
+
+<nav class="pf-ancoras" aria-label="Seções do perfil">
+  <a href="#quem-e">Quem é</a>
+  <a href="#contato">Contato e fontes</a>
+</nav>
+
+<section class="pf-secao" id="quem-e">
+  <p class="ce-eyebrow">Quem é</p>
+  {% set votos = perfil.eleicoes|map(attribute="votos")|list %}
+  {% if votos|length > 1 %}
+  <h2 class="pf-h2">{{ votos|length }} eleições, de {{ votos|min|numero }} a {{ votos|max|numero }} votos</h2>
+  {% elif votos %}
+  <h2 class="pf-h2">{{ votos[0]|numero }} votos na eleição de {{ perfil.eleicoes[0].ano }}</h2>
+  {% else %}
+  <h2 class="pf-h2">Trajetória na Câmara</h2>
+  {% endif %}
+
+  <div class="pf-duas">
+    <div>
+      <h3 class="pf-h3">Trajetória na Câmara</h3>
+      <ol class="ce-timeline ce-timeline--spaced">
+        {% for item in perfil.linha_do_tempo %}
+        <li{% if item.futuro %} class="futura"{% endif %}>
+          <span class="ce-timeline-title">{{ item.data|data_br }} · {{ item.titulo }}</span>
+          <span class="pf-nota">{{ item.detalhe }}{% if item.votos %}, {{ item.votos|numero }} votos na eleição de {{ item.ano_eleicao }}.{% endif %}</span>
+        </li>
+        {% endfor %}
+      </ol>
+
+      {% if perfil.comissoes %}
+      <h3 class="pf-h3 pf-espaco">Comissões e funções atuais</h3>
+      <ul class="pf-lista">
+        {% for c in perfil.comissoes %}
+        <li><strong>{{ c.funcao }}</strong> · {{ c.nome }}</li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p class="pf-nota pf-espaco">Sem comissões atuais registradas na fonte.</p>
+      {% endif %}
+    </div>
+
+    <div>
+      {% if perfil.eleicao_recente and perfil.eleicao_recente.municipios %}
+      {% set e = perfil.eleicao_recente %}
+      <h3 class="pf-h3">Votos na eleição de {{ e.ano }}, por município</h3>
+      <ul class="pf-barras">
+        {% for nome, votos_municipio in e.municipios[:6] %}
+        <li>
+          <span>{{ nome|nome_proprio }}</span>
+          <span class="ce-bar-track" aria-hidden="true"><span class="ce-bar-value" style="width: {{ '%.1f'|format(votos_municipio / perfil.maior_voto_municipio * 100) }}%"></span></span>
+          <span class="pf-barra-numero">{{ votos_municipio|numero }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+      <p class="ce-section-note">{{ e.municipios[0][0]|nome_proprio }} reuniu {{ ('%.1f'|format(e.municipios[0][1] / e.votos * 100))|replace('.', ',') }}% dos votos. Houve votos em {{ e.total_municipios|numero }} municípios.</p>
+      {% endif %}
+
+      {% if perfil.eleicoes %}
+      <div class="ce-table-scroll pf-espaco" tabindex="0" role="region" aria-label="Resultado por eleição">
+        <table class="ce-table pf-tabela">
+          <caption>Resultado por eleição</caption>
+          <thead><tr><th scope="col">Eleição</th><th scope="col">Partido</th><th scope="col" class="pf-num">Votos</th><th scope="col">Resultado (TSE)</th></tr></thead>
+          <tbody>
+            {% for e in perfil.eleicoes %}
+            <tr><th scope="row">{{ e.ano }}</th><td>{{ e.partido }}</td><td class="pf-num">{{ e.votos|numero }}</td><td>{{ e.resultado }}</td></tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+  {% if perfil.com_bens %}
+  <div class="pf-bloco" id="bens">
+    <h3 class="pf-h3">Bens declarados ao TSE{% if perfil.variacoes and perfil.variacoes[0].percentual is not none %}: {{ perfil.variacoes[0].percentual|percentual }} de {{ perfil.variacoes[0].de }} para {{ perfil.variacoes[0].para }}{% endif %}</h3>
+    <div class="pf-duas">
+      <ul class="pf-barras pf-barras--curta">
+        {% for e in perfil.com_bens %}
+        <li>
+          <span>{{ e.ano }}</span>
+          <span class="ce-bar-track" aria-hidden="true"><span class="ce-bar-value" style="width: {{ e.largura }}%"></span></span>
+          <span class="pf-barra-numero">{{ e.bens.total|moeda }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+      {% if perfil.variacoes %}
+      <dl class="pf-variacoes">
+        {% for v in perfil.variacoes %}
+        <div>
+          <dt>{{ v.de }} → {{ v.para }}</dt>
+          <dd>{% if v.percentual is not none %}<strong>{{ v.percentual|percentual }}</strong> {% endif %}<span>{{ v.diferenca|diferenca }}</span></dd>
+        </div>
+        {% endfor %}
+      </dl>
+      {% endif %}
+    </div>
+    <p class="ce-section-note">Valores informados pela própria candidatura ao TSE em cada eleição, sem correção pela inflação. A variação não explica a origem dos bens e não indica irregularidade.</p>
+    <details class="pf-detalhes">
+      <summary>Ver composição por categoria</summary>
+      <div class="pf-composicao">
+        {% for e in perfil.com_bens|reverse %}
+        <div>
+          <h4>{{ e.ano }}</h4>
+          <ul>
+            {% for tipo, valor in e.bens.categorias %}
+            <li><span>{{ tipo }}</span><strong>{{ valor|moeda }}</strong></li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endfor %}
+      </div>
+    </details>
+    <details class="pf-detalhes">
+      <summary>Fonte e método</summary>
+      <p>Somamos os valores por tipo de bem. A descrição livre de cada item não é exibida. As categorias do TSE mudam entre eleições, então nem toda diferença de composição é uma mudança real.</p>
+      <ul class="ce-links">
+        {% for e in perfil.com_bens|reverse %}
+        <li><a href="https://dadosabertos.tse.jus.br/dataset/candidatos-{{ e.ano }}">TSE: candidaturas e bens de {{ e.ano }}</a></li>
+        {% endfor %}
+      </ul>
+    </details>
+  </div>
+  {% endif %}
+
+  <details class="pf-detalhes">
+    <summary>Fonte das eleições e da trajetória</summary>
+    <p>Votos nominais válidos somados por município no estado da candidatura. Trajetória e comissões conforme o registro da Câmara. Coleta em {{ perfil.coleta_local|data_br }}.</p>
+    <ul class="ce-links">
+      {% for e in perfil.eleicoes %}
+      <li><a href="https://dadosabertos.tse.jus.br/dataset/resultados-{{ e.ano }}">TSE: resultados de {{ e.ano }}</a></li>
+      {% endfor %}
+      <li><a href="{{ d.uri_api }}/historico">Câmara: histórico do mandato</a></li>
+      <li><a href="{{ d.uri_api }}/orgaos">Câmara: comissões e órgãos</a></li>
+    </ul>
+  </details>
+</section>
+
+<section class="pf-secao" id="contato">
+  <p class="ce-eyebrow">Contato e fontes</p>
+  <h2 class="pf-h2">Contato oficial do gabinete</h2>
+  <div class="pf-duas">
+    <dl class="ce-dl">
+      {% if d.gabinete.email %}<dt>E-mail</dt><dd><a href="mailto:{{ d.gabinete.email }}">{{ d.gabinete.email }}</a></dd>{% endif %}
+      {% if d.gabinete.telefone %}<dt>Telefone</dt><dd>(61) {{ d.gabinete.telefone }}</dd>{% endif %}
+      {% if d.gabinete.sala %}<dt>Gabinete</dt><dd>Sala {{ d.gabinete.sala }}{% if d.gabinete.andar %}, {{ d.gabinete.andar }}º andar{% endif %}{% if d.gabinete.predio %}, Anexo {{ d.gabinete.predio }}{% endif %}</dd>{% endif %}
+    </dl>
+    <ul class="ce-links">
+      <li><a href="{{ d.url_site }}">Página oficial na Câmara</a></li>
+      <li><a href="{{ d.uri_api }}">Registro na API de Dados Abertos</a></li>
+    </ul>
+  </div>
+</section>
+{% endblock %}

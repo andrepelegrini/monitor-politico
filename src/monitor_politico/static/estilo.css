@@ -234,3 +234,48 @@ body { margin: 0; }
 .ce-app .ce-terms > div:target { background: var(--ce-muted-surface); box-shadow: inset 3px 0 0 var(--ce-terracotta); padding-inline: var(--ce-space-3); }
 .ce-app .ce-terms dt { font-weight: 600; }
 .ce-app .ce-terms dd { margin: var(--ce-space-1) 0 0; color: var(--ce-text-secondary); }
+
+/* Perfil ampliado de parlamentar */
+.ce-app .pf-topo { padding-top: var(--ce-space-5); }
+.ce-app .pf-deck { color: var(--ce-text-secondary); max-width: 62ch; }
+.ce-app .pf-ancoras { position: sticky; top: 0; z-index: 5; display: flex; gap: var(--ce-space-5); overflow-x: auto; margin-top: var(--ce-space-8); background: var(--ce-paper); border-bottom: 1px solid var(--ce-border); scrollbar-width: none; }
+.ce-app .pf-ancoras a { flex: none; padding-block: var(--ce-space-3); color: var(--ce-text-secondary); font-size: var(--ce-text-sm); font-weight: 600; text-decoration: none; }
+.ce-app .pf-ancoras a:hover { color: var(--ce-ink); text-decoration: underline; text-underline-offset: .4em; }
+.ce-app .pf-secao { padding-top: var(--ce-space-12); scroll-margin-top: 2.5rem; }
+.ce-app .pf-secao > .ce-eyebrow { color: var(--ce-terracotta); margin-bottom: var(--ce-space-2); }
+.ce-app .pf-bloco { margin-top: var(--ce-space-12); padding-top: var(--ce-space-8); border-top: 1px solid var(--ce-border); scroll-margin-top: 3rem; }
+.ce-app .pf-h2 { font: 480 var(--ce-title-sm)/1.2 var(--ce-font-display); letter-spacing: -.02em; max-width: 34ch; margin-bottom: var(--ce-space-5); text-wrap: balance; }
+.ce-app .pf-h3 { font: 600 1.0625rem/1.35 var(--ce-font-ui); margin-bottom: var(--ce-space-3); text-wrap: balance; }
+.ce-app .pf-espaco { margin-top: var(--ce-space-8); }
+.ce-app .pf-duas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--ce-space-8) clamp(1.5rem, 4vw, 3.5rem); align-items: start; }
+.ce-app .pf-duas > * { min-width: 0; }
+.ce-app .pf-nota { font-size: var(--ce-text-sm); color: var(--ce-text-secondary); }
+.ce-app .pf-lista { display: flex; flex-direction: column; gap: var(--ce-space-2); margin: 0; padding: 0; list-style: none; font-size: .9375rem; }
+.ce-app .pf-num { text-align: right; }
+.ce-app .ce-table tbody th { color: var(--ce-ink); background: transparent; font-size: var(--ce-text-sm); font-weight: 600; letter-spacing: 0; }
+.ce-app .pf-barras { display: flex; flex-direction: column; gap: var(--ce-space-3); margin: 0; padding: 0; list-style: none; }
+.ce-app .pf-barras li { display: grid; grid-template-columns: minmax(0, 10.5rem) minmax(2.5rem, 1fr) 4.5rem; gap: var(--ce-space-3); align-items: center; font-size: var(--ce-text-sm); }
+.ce-app .pf-barras--curta li { grid-template-columns: 3rem minmax(2.5rem, 1fr) 7.5rem; }
+.ce-app .pf-barra-numero { font-weight: 600; font-variant-numeric: tabular-nums; text-align: right; }
+.ce-app .pf-variacoes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--ce-space-5); margin: 0; }
+.ce-app .pf-variacoes dt { font-size: .8125rem; color: var(--ce-text-secondary); }
+.ce-app .pf-variacoes dd { display: flex; flex-direction: column; margin: 0; font-size: var(--ce-text-sm); color: var(--ce-text-secondary); }
+.ce-app .pf-variacoes strong { font: 460 clamp(1.6rem, 2.6vw, 2.25rem)/1.15 var(--ce-font-display); font-variant-numeric: tabular-nums; color: var(--ce-ink); }
+.ce-app .pf-detalhes { margin-top: var(--ce-space-4); font-size: var(--ce-text-sm); color: var(--ce-text-secondary); }
+.ce-app .pf-detalhes summary { display: flex; align-items: center; gap: var(--ce-space-2); width: max-content; max-width: 100%; min-height: 44px; font-weight: 600; color: var(--ce-espresso); cursor: pointer; list-style: none; }
+.ce-app .pf-detalhes summary::-webkit-details-marker { display: none; }
+.ce-app .pf-detalhes summary::before { content: ""; flex: none; width: .4rem; height: .4rem; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(-45deg); }
+.ce-app .pf-detalhes[open] > summary::before { transform: rotate(45deg); }
+.ce-app .pf-detalhes > p { max-width: 72ch; margin-bottom: var(--ce-space-2); }
+.ce-app .pf-composicao { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--ce-space-6); margin-top: var(--ce-space-3); }
+.ce-app .pf-composicao > * { min-width: 0; }
+.ce-app .pf-composicao h4 { font: 600 var(--ce-text-sm)/1.3 var(--ce-font-ui); margin-bottom: var(--ce-space-2); color: var(--ce-ink); }
+.ce-app .pf-composicao ul { margin: 0; padding: 0; list-style: none; font-size: .8125rem; }
+.ce-app .pf-composicao li { display: flex; flex-direction: column; padding-block: var(--ce-space-2); border-bottom: 1px solid var(--ce-border-soft); overflow-wrap: anywhere; }
+.ce-app .pf-composicao strong { color: var(--ce-ink); }
+@media (max-width: 800px) {
+  .ce-app .pf-duas, .ce-app .pf-composicao { grid-template-columns: minmax(0, 1fr); }
+  .ce-app .pf-barras li { grid-template-columns: minmax(0, 8rem) minmax(2rem, 1fr) 4rem; }
+  .ce-app .pf-barras--curta li { grid-template-columns: 3rem minmax(2rem, 1fr) 7rem; }
+  .ce-app .pf-tabela th, .ce-app .pf-tabela td { padding-inline: var(--ce-space-2); white-space: normal; }
+}

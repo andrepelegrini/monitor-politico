@@ -17,11 +17,25 @@ Ideias soltas anotadas durante o uso ficam em [notes.txt](../notes.txt).
 - [ ] Cadastrar o secret `ANTHROPIC_API_KEY` no GitHub (Settings → Secrets and variables → Actions) para os resumos por IA serem gerados na coleta diária. A IA ficou para depois, talvez numa versão paga, então isso não é urgente.
 - [ ] Conferir a pré-visualização ao compartilhar: colar o link de uma página no WhatsApp. Se não aparecer imagem, cadastrar `SITE_URL` com o domínio do site nas variáveis de ambiente do projeto na Vercel.
 
+## Em andamento: novo perfil de parlamentar (branch `perfil-piloto`)
+
+Piloto só na página de Tabata Amaral (id 204534). Nenhum outro parlamentar recebe o perfil novo sem autorização: `perfis.PILOTO` e um teste travam isso, e as demais páginas continuam com os templates atuais.
+
+- [x] Etapa 0: estrutura e mock.
+- [x] Etapa 1: Quem é (eleições, votos por município, bens, trajetória e comissões). Aguardando validação.
+- [ ] Etapa 2: atuação em Plenário (votos e presença).
+- [ ] Etapa 3: dinheiro público (cota e emendas).
+- [ ] Etapa 4: propostas e leis.
+- [ ] Etapa 5: leitura e compartilhamento.
+- [ ] Rollout, com autorização: 6A deputados, 6B senadores, 6C legislatura de 2027. A 6C precisa estar pronta até o início de janeiro, porque a coleta atual lista só quem está em exercício e a nova legislatura começa em 01/02/2027.
+
+Atualizar os dados do piloto: `.venv/bin/python -m monitor_politico.perfis` (leva alguns minutos e fica fora do robô diário).
+
 ## Backlog (features sem IA)
 
 Ordem combinada: 5 (feito) → 1 junto com 4 → 2 → 3. Antes de cada uma, fazer um mock para aprovação.
 
-1. **Atuação no perfil do parlamentar**: votos nas votações nominais e presença (os dados já estão em `data/congresso.json`); proposições de autoria (Câmara `/proposicoes?idDeputadoAutor`, Senado `/processo` por autor); gastos da cota parlamentar (Câmara `/deputados/{id}/despesas`; o Senado publica a CEAPS em arquivo).
+1. **Atuação no perfil do parlamentar** (em andamento no piloto acima): votos nas votações nominais e presença (a coleta é nova: `data/congresso.json` só tem 30 dias e nenhuma presença); proposições de autoria (Câmara `/proposicoes?idDeputadoAutor`, Senado `/processo` por autor); gastos da cota parlamentar (Câmara `/deputados/{id}/despesas`; o Senado publica a CEAPS em arquivo).
 2. **Retrospectiva do mandato compartilhável**: página por parlamentar com os números do mandato e uma imagem para redes gerada na coleta. Os mandatos atuais terminam em 31/01/2027, então o ideal é lançar antes. Depende do item 1.
 3. **Resultado eleitoral (TSE)**: votos em 2022 e resultado de 2026 (reeleito, não concorreu, não eleito). Os arquivos são grandes e separados por UF; confirmar o que o TSE já publicou de 2026.
 4. **"Acompanhar" sem servidor próprio**: feeds RSS por parlamentar e por proposição, gerados no build. Alertas por e-mail exigem servidor e ficam como candidatos à versão paga.
