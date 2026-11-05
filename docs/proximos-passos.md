@@ -27,7 +27,12 @@ Piloto só na página de Tabata Amaral (id 204534). Nenhum outro parlamentar rec
 - [x] Etapa 3: dinheiro público (cota e emendas).
 - [x] Etapa 4: propostas e leis, desde o primeiro mandato, com o painel "Da autoria à lei".
 - [x] Etapa 5: leitura e compartilhamento. Aguardando validação.
-- [ ] Rollout, com autorização: 6A deputados, 6B senadores, 6C legislatura de 2027. A 6C precisa estar pronta até o início de janeiro, porque a coleta atual lista só quem está em exercício e a nova legislatura começa em 01/02/2027.
+- [x] Piloto publicado em 05/11/2026.
+- [ ] 6C, legislatura de 2027 (branch `rollout-2027`): badges da eleição de 2026, páginas dos eleitos, páginas de quem está fora de exercício e saída automática para o arquivo. Aguardando validação.
+- [ ] 6A, perfil completo para os deputados, com coleta automática. Falta decidir onde guardar os dados detalhados.
+- [ ] 6B, senadores.
+
+Na posse, em 01/02/2027: trocar `INICIO_MANDATO` em `metricas.py` e `LEGISLATURA_ATUAL`, `ANO_DA_ELEICAO` e `POSSE` em `legislatura.py`, rodar as coletas manuais e ligar as páginas dos eleitos (`deputados/eleitos/`) aos novos perfis, com redirecionamento. A coleta diária já move para o arquivo quem sair da lista de exercício.
 
 Cuidado com a cota: os arquivos abertos da Câmara oscilam. Em 04/11/2026 traziam as passagens aéreas do SIGEPA até julho de 2025; em 05/11/2026, em nenhum ano. Por isso o total vem da página oficial do deputado, e o que falta no arquivo aparece como "sem detalhamento".
 

@@ -15,7 +15,11 @@
     <h2 class="ce-display ce-section-title" id="lista-titulo">Todos os {{ plural }}</h2>
   </div>
 
-  <form class="ce-filters" role="search" aria-label="Filtrar {{ plural }}" onsubmit="return false">
+{% if tem_legislatura %}  <ul class="ce-links pf-atalhos">
+    <li><a href="eleitos/index.html">Eleitos para 2027: quem chega e quem sai</a></li>
+    <li><a href="anteriores.html">Fora de exercício ({{ total_anteriores }})</a></li>
+  </ul>
+{% endif %}  <form class="ce-filters" role="search" aria-label="Filtrar {{ plural }}" onsubmit="return false">
     <label class="ce-field"><span class="ce-control-label">Nome</span>
       <input class="ce-input" type="search" id="f-nome" placeholder="Buscar por nome" autocomplete="off">
     </label>
@@ -37,6 +41,18 @@
         <option value="principal">Leis de autoria principal</option>
         <option value="coautoria">Leis em coautoria</option>
       </select>
+    </label>{% endif %}{% if situacoes_eleitorais %}
+    <label class="ce-field"><span class="ce-control-label">Eleição de 2026</span>
+      <select class="ce-select" id="f-situacao">
+        <option value="">Todas</option>
+        <option>Reeleição</option>
+        <option>Suplência</option>
+        <option>Não se reelegeu</option>
+        <option value="Eleição para">Eleição para outro cargo</option>
+        <option>Disputou outro cargo</option>
+        <option>Sem candidatura em 2026</option>
+        <option>Candidatura sem resultado</option>
+      </select>
     </label>{% endif %}
   </form>
 
@@ -45,12 +61,13 @@
 
   <ul class="ce-people{% if leis_na_lista %} ce-people--leis{% endif %}" id="lista">
     {% for d in parlamentares %}
-    <li data-nome="{{ d.nome|lower }}" data-partido="{{ d.partido }}" data-uf="{{ d.uf }}"{% if leis_na_lista %} data-principal="{{ leis_na_lista[d.id].principal }}" data-coautoria="{{ leis_na_lista[d.id].coautoria }}"{% endif %}>
+    <li data-nome="{{ d.nome|lower }}" data-partido="{{ d.partido }}" data-uf="{{ d.uf }}"{% if leis_na_lista %} data-principal="{{ leis_na_lista[d.id].principal }}" data-coautoria="{{ leis_na_lista[d.id].coautoria }}"{% endif %}{% if situacoes_eleitorais and situacoes_eleitorais.get(d.id|string) %} data-situacao="{{ situacoes_eleitorais[d.id|string].rotulo }}"{% endif %}>
       <a href="{{ d.id }}.html">
         {% if d.url_foto %}<img src="{{ d.url_foto }}" alt="" loading="lazy" width="64" height="85">{% else %}<span class="ce-photo-empty" aria-hidden="true"></span>{% endif %}
         <span class="ce-people-name">{{ d.nome }}</span>
         <span class="ce-meta">{{ d.partido }} · {{ d.uf }}</span>{% if leis_na_lista %}
-        <span class="ce-people-leis"><strong>{{ leis_na_lista[d.id].principal }}</strong> {{ "lei" if leis_na_lista[d.id].principal == 1 else "leis" }} de autoria principal · {{ leis_na_lista[d.id].coautoria }} em coautoria</span>{% endif %}
+        <span class="ce-people-leis"><strong>{{ leis_na_lista[d.id].principal }}</strong> {{ "lei" if leis_na_lista[d.id].principal == 1 else "leis" }} de autoria principal · {{ leis_na_lista[d.id].coautoria }} em coautoria</span>{% endif %}{% if situacoes_eleitorais and situacoes_eleitorais.get(d.id|string) %}
+        <span class="ce-people-leis"><span class="ce-badge ce-badge--outline">{{ situacoes_eleitorais[d.id|string].rotulo }}</span></span>{% endif %}
       </a>
     </li>
     {% endfor %}

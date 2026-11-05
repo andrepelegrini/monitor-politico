@@ -2,6 +2,7 @@
   var nome = document.getElementById("f-nome");
   var partido = document.getElementById("f-partido");
   var uf = document.getElementById("f-uf");
+  var situacao = document.getElementById("f-situacao");
   var itens = Array.prototype.slice.call(document.querySelectorAll("#lista > li"));
   var contagem = document.getElementById("contagem");
   var vazio = document.getElementById("vazio");
@@ -18,7 +19,8 @@
     itens.forEach(function (li) {
       var ok = (!termo || li.dataset.busca.indexOf(termo) !== -1) &&
         (!partido.value || li.dataset.partido === partido.value) &&
-        (!uf.value || li.dataset.uf === uf.value);
+        (!uf.value || li.dataset.uf === uf.value) &&
+        (!situacao || !situacao.value || (li.dataset.situacao || "").indexOf(situacao.value) === 0);
       li.hidden = !ok;
       if (ok) visiveis++;
     });
@@ -26,7 +28,7 @@
     vazio.hidden = visiveis !== 0;
   }
 
-  [nome, partido, uf].forEach(function (el) { el.addEventListener("input", aplicar); });
+  [nome, partido, uf, situacao].forEach(function (el) { if (el) el.addEventListener("input", aplicar); });
 
   // Botões do resumo (partido, estado): aplicam o filtro e levam à lista; clicar de novo limpa.
   var titulo = document.getElementById("lista-titulo");
@@ -60,6 +62,7 @@
   if (limpar) {
     limpar.addEventListener("click", function () {
       nome.value = partido.value = uf.value = "";
+      if (situacao) situacao.value = "";
       aplicar();
       nome.focus();
     });

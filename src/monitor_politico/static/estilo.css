@@ -334,3 +334,15 @@ body { margin: 0; }
 .ce-app .ce-people--leis img, .ce-app .ce-people--leis .ce-photo-empty { grid-row: span 3; }
 .ce-app .ce-people-leis { font-size: .8125rem; line-height: 1.35; color: var(--ce-text-secondary); }
 .ce-app .ce-people-leis strong { color: var(--ce-ink); font-weight: 700; font-variant-numeric: tabular-nums; }
+
+/* Situação eleitoral e virada de legislatura */
+.ce-app .pf-badges { display: flex; flex-wrap: wrap; gap: var(--ce-space-2); }
+.ce-app .ce-people-leis .ce-badge { margin-top: var(--ce-space-1); }
+.ce-app .pf-atalhos { display: flex; flex-wrap: wrap; gap: 0 var(--ce-space-6); margin-top: var(--ce-space-3); }
+.ce-app .pf-renovacao { margin-top: var(--ce-space-5); }
+.ce-app .pf-eleito-reeleicao { background: var(--ce-espresso); }
+.ce-app .pf-eleito-retorno { background: var(--ce-olive); }
+.ce-app .pf-eleito-primeiro { background: var(--ce-terracotta); }
+.ce-app .pf-composicao-lista { margin: 0; padding: 0; list-style: none; font-size: var(--ce-text-sm); }
+.ce-app .pf-composicao-lista li { display: flex; justify-content: space-between; gap: var(--ce-space-4); padding-block: var(--ce-space-2); border-bottom: 1px solid var(--ce-border-soft); overflow-wrap: anywhere; }
+.ce-app .pf-composicao-lista strong { flex: none; }
