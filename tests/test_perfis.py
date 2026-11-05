@@ -254,6 +254,7 @@ PROPOSTAS = {
          "participacao": "apoio", "temas": [], "norma": None},
     ],
 }
+PROPOSTAS["inicio"] = "2023-02-01"
 
 
 def test_perfil_com_propostas(tmp_path, docs, doc):
@@ -261,7 +262,10 @@ def test_perfil_com_propostas(tmp_path, docs, doc):
     construir(*docs, tmp_path / "site", perfis_ampliados={alvo: {**doc, "id": alvo, "propostas": PROPOSTAS}})
     pagina = (tmp_path / "site" / "deputados" / f"{alvo}.html").read_text(encoding="utf-8")
     assert 'id="propostas"' in pagina and 'href="#propostas"' in pagina
-    assert "2 projetos e PECs assinados no mandato, 1 virou norma jurídica" in pagina
+    assert "propostas de autoria desde 2023, 1 virou lei" in pagina
+    assert "Da autoria à lei" in pagina and 'id="autoria"' in pagina
+    assert "1 de autoria principal" not in pagina and "1 em coautoria" in pagina
+    assert "não medem qualidade nem resultado" in pagina
     assert "Lei Ordinária 14786/2023, de 28/12/2023" in pagina and "Com veto parcial" in pagina
     assert 'data-participacao="apoio"' in pagina and 'data-situacao="sem_situacao"' in pagina
     assert "Situação não informada na fonte" in pagina

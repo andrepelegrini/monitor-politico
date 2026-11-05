@@ -63,8 +63,9 @@ listaFiltravel("v", ["classe", "tema", "voto", "contra", "difere"], function (li
     (!c.difere.checked || li.dataset.difere === "1");
 }, { classe: "texto" });
 
-listaFiltravel("p", ["tipo", "tema", "participacao", "situacao"], function (li, c) {
+listaFiltravel("p", ["participacao", "situacao", "mandato", "tema", "tipo"], function (li, c) {
   return (!c.tipo.value || li.dataset.tipo === c.tipo.value) &&
+    (!c.mandato.value || li.dataset.mandato === c.mandato.value) &&
     (!c.tema.value || li.dataset.temas.split("|").indexOf(c.tema.value) !== -1) &&
     (!c.participacao.value || li.dataset.participacao === c.participacao.value) &&
     (!c.situacao.value || li.dataset.situacao === c.situacao.value);

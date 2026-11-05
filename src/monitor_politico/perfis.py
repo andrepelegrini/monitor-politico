@@ -222,7 +222,8 @@ def coletar_perfil(
         "trajetoria": eventos,
         "comissoes": comissoes_atuais(orgaos, hoje),
         "plenario": plenario.coletar(arquivos, id_, legislatura["inicio"], hoje) if arquivos and legislatura else None,
-        "propostas": propostas.coletar(arquivos, camara, id_, legislatura["inicio"], hoje) if arquivos and legislatura else None,
+        # Desde a primeira posse: muitas leis de um mandato vêm de propostas apresentadas no anterior.
+        "propostas": propostas.coletar(arquivos, camara, id_, posses[0]["data"], hoje) if arquivos and posses else None,
         "dinheiro": (
             dinheiro.coletar(financas, id_, detalhe["ultimoStatus"]["nomeEleitoral"], legislatura["id"], int(legislatura["inicio"][:4]), hoje.year)
             if financas and legislatura else None
@@ -307,6 +308,12 @@ def proximo_mandato(doc: dict[str, Any], hoje: date) -> Optional[dict[str, Any]]
     return {**ultima, "inicio": inicio.isoformat(), "fim_ano": ultima["ano"] + 5, "inicio_ano": ultima["ano"] + 1}
 
 
+def mandatos_da_trajetoria(doc: dict[str, Any]) -> list[dict[str, str]]:
+    """Mandatos pelas posses, do mais antigo para o mais recente. Cada um vai até o início do seguinte."""
+    posses = [e for e in doc["trajetoria"] if e["tipo"] == "posse"]
+    return [{"inicio": e["data"], "rotulo": f"{e['data'][:4]}–{int(e['data'][:4]) + 4}"} for e in posses]
+
+
 def visao(doc: dict[str, Any], hoje: Optional[date] = None, slugs: Optional[dict[str, str]] = None) -> dict[str, Any]:
     """Dados já prontos para o template."""
     coleta_local = datetime.fromisoformat(doc["coletado_em"]).astimezone(FUSO).date()
@@ -327,7 +334,7 @@ def visao(doc: dict[str, Any], hoje: Optional[date] = None, slugs: Optional[dict
         "proximo_mandato": proximo_mandato(doc, hoje),
         "plenario": plenario.visao(doc["plenario"], slugs) if doc.get("plenario") else None,
         "dinheiro": dinheiro.visao(doc["dinheiro"]) if doc.get("dinheiro") else None,
-        "propostas": propostas.visao(doc["propostas"], slugs) if doc.get("propostas") else None,
+        "propostas": propostas.visao(doc["propostas"], slugs, mandatos_da_trajetoria(doc)) if doc.get("propostas") else None,
     }
 
 

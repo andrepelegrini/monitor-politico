@@ -78,7 +78,7 @@ def test_participacao_separa_apoio_em_pec_de_autoria(linha, esperado):
 
 @pytest.mark.parametrize("situacao, esperado", [
     ("Transformado em Norma Jurídica", "norma"), ("Arquivada", "encerrada"), ("Retirado pelo(a) Autor(a)", "encerrada"),
-    ("Aguardando Parecer", "tramitacao"), ("Pronta para Pauta", "tramitacao"), ("", "sem_situacao"),
+    ("Aguardando Apreciação pelo Senado Federal", "senado"), ("Aguardando Parecer", "tramitacao"), ("Pronta para Pauta", "tramitacao"), ("", "sem_situacao"),
 ])
 def test_grupo_da_situacao(situacao, esperado):
     assert propostas.grupo_da_situacao(situacao) == esperado
@@ -105,8 +105,13 @@ def test_visao(doc):
     assert [p["sigla"] for p in v["normas"]] == ["PL 1/2023"]
     assert v["normas"][0]["slug"] == "pl-1-2023"
     assert v["tipos"] == [("PL", 2), ("PEC", 1)]
-    assert [(r, n) for r, n, _ in v["participacoes"]] == [("Primeira assinatura", 1), ("Coautoria", 1), ("Apoio", 1)]
+    assert [(g["rotulo"], g["total"], g["normas"]) for g in v["caminho"]] == [("Autoria principal", 1, 1), ("Coautoria", 1, 0), ("Apoio em PEC", 1, 0)]
+    assert v["total_autoria_propostas"] == 2
+    assert v["palavra_norma"] == "lei"
+    assert [p["sigla"] for p in v["normas_principais"]] == ["PL 1/2023"] and v["normas_coautoria"] == []
     assert {c: n for _, n, c in v["situacoes"]} == {"norma": 1, "encerrada": 1, "sem_situacao": 1}
+    assert v["situacoes"][0][0] == "Virou lei"
+    assert v["caminho"][0]["situacoes"][0]["rotulo"] == "Virou lei"
     assert v["temas"][0] == {"nome": "Saúde", "valor": 2, "largura": 100.0}
     assert v["total_autoria"] == 10 and v["total_relatadas"] == 2
 
@@ -115,6 +120,38 @@ def test_visao_mostra_so_a_ementa_atual(doc):
     doc["propostas"][0]["ementa"] = "Texto antigo. NOVA EMENTA: Texto atual."
     assert propostas.visao(doc)["propostas"][0]["ementa"] == "Texto atual."
     assert plenario.ementa_atual("Sem mudança.") == "Sem mudança."
+
+
+MANDATOS = [{"inicio": "2019-02-01", "rotulo": "2019–2023"}, {"inicio": "2023-02-01", "rotulo": "2023–2027"}]
+
+
+def test_mandato_pela_data_de_apresentacao():
+    assert propostas.mandato_da_data("2021-05-01", MANDATOS) == "2019–2023"
+    assert propostas.mandato_da_data("2023-02-01", MANDATOS) == "2023–2027"
+    assert propostas.mandato_da_data("2021-05-01", []) == ""
+
+
+def test_por_mandato_conta_autoria_e_normas(doc):
+    v = propostas.visao(doc, mandatos=MANDATOS)
+    assert v["por_mandato"] == [
+        {"rotulo": "2023–2027", "primeira": 1, "coautoria": 1, "normas": 1},
+        {"rotulo": "2019–2023", "primeira": 0, "coautoria": 0, "normas": 0},
+    ]
+    assert {p["mandato"] for p in v["propostas"]} == {"2023–2027"}
+
+
+def test_palavra_da_norma_so_diz_lei_quando_todas_sao():
+    lei = {"norma": {"nome": "Lei Ordinária 1/2023"}}
+    emenda = {"norma": {"nome": "Emenda Constitucional 141/2026"}}
+    assert propostas.palavra_da_norma([lei]) == "lei"
+    assert propostas.palavra_da_norma([lei, emenda]) == "norma"
+    assert propostas.palavra_da_norma([{"norma": None}]) == "norma"
+
+
+def test_barra_do_caminho_e_proporcional(doc):
+    caminho = propostas.visao(doc)["caminho"]
+    assert caminho[0]["largura"] == 100.0
+    assert sum(s["largura"] for s in caminho[0]["situacoes"]) == 100
 
 
 def test_le_atuacao_da_pagina_oficial():

@@ -1,4 +1,4 @@
-"""Projetos e PECs assinados por um deputado no mandato, e quais viraram norma jurídica.
+"""Projetos e PECs assinados por um deputado desde o primeiro mandato, e quais viraram norma jurídica.
 
 A lista vem dos arquivos anuais de Dados Abertos da Câmara. O número da norma só existe na tramitação
 de cada proposta. Os totais por ano de todos os tipos de proposta e de relatorias vêm da página oficial.
@@ -14,10 +14,16 @@ from typing import Any, Iterable, Optional
 from monitor_politico.plenario import ementa_atual, limpar_texto
 
 TIPOS = ("PL", "PLP", "PEC")
-ROTULOS_PARTICIPACAO = {"primeira": "Primeira assinatura", "coautoria": "Coautoria", "apoio": "Apoio"}
+ROTULOS_PARTICIPACAO = {"primeira": "Autoria principal", "coautoria": "Coautoria", "apoio": "Apoio em PEC"}
+EXPLICACOES_PARTICIPACAO = {
+    "primeira": "Primeira assinatura da proposta",
+    "coautoria": "Assinou como autoria, sem ser a primeira",
+    "apoio": "Assinou para atingir o mínimo de apoios, sem ser proponente",
+}
 ROTULOS_SITUACAO = {
     "norma": "Virou norma",
-    "tramitacao": "Em tramitação",
+    "senado": "Aguardando o Senado",
+    "tramitacao": "Em tramitação na Câmara",
     "encerrada": "Arquivada ou retirada",
     "sem_situacao": "Sem situação informada",
 }
@@ -37,6 +43,8 @@ def grupo_da_situacao(situacao: str) -> str:
         return "sem_situacao"
     if "norma" in situacao.lower():
         return "norma"
+    if "senado federal" in situacao.lower():
+        return "senado"
     return "encerrada" if SITUACOES_ENCERRADAS.search(situacao) else "tramitacao"
 
 
@@ -51,7 +59,13 @@ def norma_da_tramitacao(tramitacoes: Iterable[dict[str, Any]]) -> Optional[dict[
     return achada
 
 
-def propostas_do_mandato(fonte: Any, camara: Any, id_: int, inicio: str, anos: Iterable[int]) -> dict[str, Any]:
+def palavra_da_norma(normas: Iterable[dict[str, Any]]) -> str:
+    """"lei" só quando todas são leis: uma PEC aprovada, por exemplo, vira emenda constitucional."""
+    nomes = [(n.get("norma") or {}).get("nome", "") for n in normas]
+    return "lei" if all(nome.startswith("Lei") for nome in nomes) else "norma"
+
+
+def propostas_desde(fonte: Any, camara: Any, id_: int, inicio: str, anos: Iterable[int]) -> dict[str, Any]:
     anos = list(anos)
     assinaturas: dict[str, dict[str, str]] = {}
     for ano in anos:
@@ -97,36 +111,89 @@ def propostas_do_mandato(fonte: Any, camara: Any, id_: int, inicio: str, anos: I
 
 
 def coletar(fonte: Any, camara: Any, id_: int, inicio: str, hoje: date) -> dict[str, Any]:
-    return propostas_do_mandato(fonte, camara, id_, inicio, range(int(inicio[:4]), hoje.year + 1))
+    return propostas_desde(fonte, camara, id_, inicio, range(int(inicio[:4]), hoje.year + 1))
 
 
 # --- O que a página mostra
 
 
-def visao(doc: dict[str, Any], slugs: Optional[dict[str, str]] = None) -> dict[str, Any]:
-    slugs = slugs or {}
+def mandato_da_data(data: str, mandatos: list[dict[str, str]]) -> str:
+    """Mandato em que a proposta foi apresentada. `mandatos` vem do mais antigo para o mais recente."""
+    atual = mandatos[0]["rotulo"] if mandatos else ""
+    for mandato in mandatos:
+        if data >= mandato["inicio"]:
+            atual = mandato["rotulo"]
+    return atual
+
+
+def _rotulo_situacao(chave: str, palavra: str) -> str:
+    return f"Virou {palavra}" if chave == "norma" else ROTULOS_SITUACAO[chave]
+
+
+def _caminho(propostas: list[dict[str, Any]], palavra: str) -> list[dict[str, Any]]:
+    """Uma linha por tipo de participação, com a largura proporcional ao total de propostas."""
+    maior = max((sum(p["participacao"] == c for p in propostas) for c in ROTULOS_PARTICIPACAO), default=1) or 1
+    linhas = []
+    for chave, rotulo in ROTULOS_PARTICIPACAO.items():
+        grupo = [p for p in propostas if p["participacao"] == chave]
+        if not grupo:
+            continue
+        contagem = Counter(p["grupo"] for p in grupo)
+        linhas.append({
+            "chave": chave,
+            "rotulo": rotulo,
+            "explicacao": EXPLICACOES_PARTICIPACAO[chave],
+            "total": len(grupo),
+            "normas": contagem["norma"],
+            "largura": round(len(grupo) / maior * 100, 1),
+            "situacoes": [
+                {"chave": c, "rotulo": _rotulo_situacao(c, palavra), "valor": contagem[c], "largura": round(contagem[c] / len(grupo) * 100, 2)}
+                for c in ROTULOS_SITUACAO if contagem[c]
+            ],
+        })
+    return linhas
+
+
+def visao(doc: dict[str, Any], slugs: Optional[dict[str, str]] = None, mandatos: Optional[list[dict[str, str]]] = None) -> dict[str, Any]:
+    slugs, mandatos = slugs or {}, mandatos or []
     propostas = []
     for proposta in doc["propostas"]:
-        grupo = grupo_da_situacao(proposta["situacao"])
         propostas.append({
             **proposta,
             "ementa": ementa_atual(proposta["ementa"]),
-            "grupo": grupo,
+            "grupo": grupo_da_situacao(proposta["situacao"]),
             "rotulo_participacao": ROTULOS_PARTICIPACAO[proposta["participacao"]],
             "slug": slugs.get(proposta["sigla"]),
+            "mandato": mandato_da_data(proposta["data"], mandatos),
         })
+    normas = sorted((p for p in propostas if p["grupo"] == "norma"), key=lambda p: (p["norma"] or {}).get("data") or p["data"], reverse=True)
     assuntos = Counter(t for p in propostas for t in p["temas"])
     maior = max(assuntos.values(), default=1)
-    participacoes = Counter(p["participacao"] for p in propostas)
     situacoes = Counter(p["grupo"] for p in propostas)
+    palavra = palavra_da_norma(normas)
+    por_mandato = []
+    for mandato in reversed(mandatos):
+        grupo = [p for p in propostas if p["mandato"] == mandato["rotulo"]]
+        por_mandato.append({
+            "rotulo": mandato["rotulo"],
+            "primeira": sum(p["participacao"] == "primeira" for p in grupo),
+            "coautoria": sum(p["participacao"] == "coautoria" for p in grupo),
+            "normas": sum(p["grupo"] == "norma" and p["participacao"] != "apoio" for p in grupo),
+        })
     return {
         "inicio": doc["inicio"],
+        "ano_inicial": doc["inicio"][:4],
         "propostas": propostas,
         "total": len(propostas),
-        "normas": [p for p in propostas if p["grupo"] == "norma"],
+        "total_autoria_propostas": sum(p["participacao"] != "apoio" for p in propostas),
+        "normas": normas,
+        "normas_principais": [p for p in normas if p["participacao"] == "primeira"],
+        "normas_coautoria": [p for p in normas if p["participacao"] == "coautoria"],
+        "palavra_norma": palavra,
+        "caminho": _caminho(propostas, palavra),
+        "por_mandato": por_mandato,
         "tipos": [(t, sum(p["tipo"] == t for p in propostas)) for t in TIPOS if any(p["tipo"] == t for p in propostas)],
-        "participacoes": [(ROTULOS_PARTICIPACAO[c], participacoes[c], c) for c in ROTULOS_PARTICIPACAO if participacoes[c]],
-        "situacoes": [(ROTULOS_SITUACAO[c], situacoes[c], c) for c in ROTULOS_SITUACAO if situacoes[c]],
+        "situacoes": [(_rotulo_situacao(c, palavra), situacoes[c], c) for c in ROTULOS_SITUACAO if situacoes[c]],
         "temas": [{"nome": t, "valor": n, "largura": round(n / maior * 100, 1)} for t, n in assuntos.most_common(6)],
         "opcoes_temas": sorted(assuntos),
         "por_ano": doc["por_ano"],

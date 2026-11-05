@@ -29,7 +29,7 @@
       <a href="#dinheiro"><span class="ce-kpi-value">{{ perfil.dinheiro.cota.total|milhoes }}</span><span>em cota parlamentar neste mandato</span></a>
       {% endif %}
       {% if perfil.propostas %}
-      <a href="#propostas"><span class="ce-kpi-value">{{ perfil.propostas.total|numero }}</span><span>projetos e PECs assinados, {{ perfil.propostas.normas|length }} {{ "virou" if perfil.propostas.normas|length == 1 else "viraram" }} norma</span></a>
+      <a href="#autoria"><span class="ce-kpi-value">{{ perfil.propostas.normas|length|numero }}</span><span>{{ "proposta virou" if perfil.propostas.normas|length == 1 else "propostas viraram" }} {{ perfil.propostas.palavra_norma }} desde {{ perfil.propostas.ano_inicial }}, {{ perfil.propostas.normas_principais|length }} de autoria principal</span></a>
       {% endif %}
     </div>
     {% endif %}

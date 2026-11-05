@@ -25,7 +25,7 @@ Piloto só na página de Tabata Amaral (id 204534). Nenhum outro parlamentar rec
 - [x] Etapa 1: Quem é (eleições, votos por município, bens, trajetória e comissões).
 - [x] Etapa 2: atuação em Plenário (votos e presença).
 - [x] Etapa 3: dinheiro público (cota e emendas).
-- [x] Etapa 4: propostas e leis. Aguardando validação.
+- [x] Etapa 4: propostas e leis, desde o primeiro mandato, com o painel "Da autoria à lei". Aguardando validação.
 - [ ] Etapa 5: leitura e compartilhamento.
 - [ ] Rollout, com autorização: 6A deputados, 6B senadores, 6C legislatura de 2027. A 6C precisa estar pronta até o início de janeiro, porque a coleta atual lista só quem está em exercício e a nova legislatura começa em 01/02/2027.
 

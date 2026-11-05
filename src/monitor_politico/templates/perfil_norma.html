@@ -1,0 +1,5 @@
+<li>
+  <p class="pf-norma-nome">{% if p.norma %}{{ p.norma.nome }}, de {{ p.norma.data|data_br }}{% if p.norma.veto_parcial %} · Com veto parcial{% endif %}{% else %}Norma não identificada na tramitação{% endif %}</p>
+  <p class="pf-voto-meta">{% if p.slug %}<a href="../proposicoes/{{ p.slug }}.html">{{ p.sigla }}</a>{% else %}<a href="https://www.camara.leg.br/propostas-legislativas/{{ p.id }}">{{ p.sigla }}</a>{% endif %}<span>Apresentada em {{ p.data|data_br }}</span></p>
+  <p class="pf-voto-texto">{{ p.ementa|truncate(240, true, "…", 0) }}</p>
+</li>
