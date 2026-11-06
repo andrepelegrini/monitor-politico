@@ -151,6 +151,17 @@ def test_funcao_multipla_tem_nome_legivel():
     assert doc["funcoes"][0][0] == "Várias áreas"
 
 
+@pytest.mark.parametrize("nome, esperado", [
+    ("FULANA DE TAL 04970541167", "FULANA DE TAL"),
+    ("FULANO DE TAL 489.909.226-15", "FULANO DE TAL"),
+    ("FULANO DE TAL - 48990922615", "FULANO DE TAL"),
+    ("ACME COMUNICACAO LTDA", "ACME COMUNICACAO LTDA"),
+    ("POSTO 12 DE OUTUBRO LTDA", "POSTO 12 DE OUTUBRO LTDA"),
+])
+def test_cpf_no_nome_da_empresa_nao_aparece(nome, esperado):
+    assert dinheiro.fornecedor_publico(nome, "11222333000144")[0] == esperado
+
+
 def test_nome_do_autor_ignora_acentos_e_caixa():
     assert dinheiro.nome_de_autor("Tábata Amaral ") == dinheiro.nome_de_autor("TABATA AMARAL")
 

@@ -30,6 +30,7 @@ URL_EMENDAS = "https://dadosabertos-download.cgu.gov.br/PortalDaTransparencia/sa
 ARQUIVO_EMENDAS = "EmendasParlamentares.csv"
 ARQUIVO_FAVORECIDOS = "EmendasParlamentares_PorFavorecido.csv"
 PESSOA_FISICA = "Pessoa física (nome não exibido)"
+CPF_NO_NOME = re.compile(r"[\s\-–]*\b\d{3}\.?\d{3}\.?\d{3}-?\d{2}\b")
 TAMANHO_CNPJ = 14
 TAMANHO_CPF = 11
 TOLERANCIA_ARREDONDAMENTO = 1.0  # A Câmara arredonda os meses: centavos de diferença não são "sem detalhamento".
@@ -83,12 +84,17 @@ def ler_cota_da_pagina(pagina: str) -> dict[str, float]:
     return {"total": _virgula(achado[1]), "percentual": float(achado[2].replace(",", ".")), "nao_utilizado": _virgula(achado[3])}
 
 
+def sem_cpf(nome: str) -> str:
+    """Empresa individual costuma ter o CPF do dono no próprio nome, inclusive nos arquivos oficiais."""
+    return CPF_NO_NOME.sub("", nome).strip()
+
+
 def fornecedor_publico(nome: str, documento: str) -> tuple[str, Optional[str]]:
     """Nome a exibir e chave de agrupamento. Pessoa física fica sem nome e sem documento."""
     digitos = re.sub(r"\D", "", documento or "")
     if len(digitos) == TAMANHO_CPF:
         return PESSOA_FISICA, None
-    return nome.strip(), digitos if len(digitos) == TAMANHO_CNPJ else None
+    return sem_cpf(nome), digitos if len(digitos) == TAMANHO_CNPJ else None
 
 
 def cota_do_mandato(fonte: Any, id_: int, legislatura: int, anos: Iterable[int]) -> dict[str, Any]:
@@ -167,7 +173,7 @@ def emendas_do_mandato(linhas: Iterable[dict[str, str]], favorecidos: Iterable[d
         chave = PESSOA_FISICA if pessoa_fisica else linha["Código do Favorecido"]
         recebido[chave] += _virgula(linha["Valor Recebido"])
         dados[chave] = {
-            "nome": PESSOA_FISICA if pessoa_fisica else linha["Favorecido"],
+            "nome": PESSOA_FISICA if pessoa_fisica else sem_cpf(linha["Favorecido"]),
             "municipio": "" if pessoa_fisica else linha["Município Favorecido"],
             "uf": "" if pessoa_fisica else linha["UF Favorecido"],
         }
