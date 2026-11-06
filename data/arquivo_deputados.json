@@ -419,25 +419,6 @@
    "saiu_em": "2025-12-18"
   },
   {
-   "id": 228272,
-   "nome": "Délio Pinheiro",
-   "partido": "PDT",
-   "uf": "MG",
-   "url_foto": "https://www.camara.leg.br/internet/deputado/bandep/228272.jpg",
-   "situacao": "Suplência",
-   "condicao_eleitoral": "Suplente",
-   "gabinete": {
-    "predio": null,
-    "sala": null,
-    "andar": null,
-    "telefone": null,
-    "email": null
-   },
-   "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/228272",
-   "url_site": "https://www.camara.leg.br/deputados/228272",
-   "saiu_em": "2024-08-07"
-  },
-  {
    "id": 220705,
    "nome": "Deltan Dallagnol",
    "partido": "PODE",
@@ -476,25 +457,6 @@
    "saiu_em": "2026-03-16"
   },
   {
-   "id": 221339,
-   "nome": "Dr. Benjamim",
-   "partido": "UNIÃO",
-   "uf": "MA",
-   "url_foto": "https://www.camara.leg.br/internet/deputado/bandep/221339.jpg",
-   "situacao": "Vacância",
-   "condicao_eleitoral": "Suplente",
-   "gabinete": {
-    "predio": null,
-    "sala": null,
-    "andar": null,
-    "telefone": null,
-    "email": null
-   },
-   "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/221339",
-   "url_site": "https://www.camara.leg.br/deputados/221339",
-   "saiu_em": "2025-01-01"
-  },
-  {
    "id": 227401,
    "nome": "Dr Fabio Rueda",
    "partido": "UNIÃO",
@@ -512,6 +474,25 @@
    "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/227401",
    "url_site": "https://www.camara.leg.br/deputados/227401",
    "saiu_em": "2024-04-12"
+  },
+  {
+   "id": 221339,
+   "nome": "Dr. Benjamim",
+   "partido": "UNIÃO",
+   "uf": "MA",
+   "url_foto": "https://www.camara.leg.br/internet/deputado/bandep/221339.jpg",
+   "situacao": "Vacância",
+   "condicao_eleitoral": "Suplente",
+   "gabinete": {
+    "predio": null,
+    "sala": null,
+    "andar": null,
+    "telefone": null,
+    "email": null
+   },
+   "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/221339",
+   "url_site": "https://www.camara.leg.br/deputados/221339",
+   "saiu_em": "2025-01-01"
   },
   {
    "id": 212625,
@@ -588,6 +569,25 @@
    "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/227800",
    "url_site": "https://www.camara.leg.br/deputados/227800",
    "saiu_em": "2026-03-25"
+  },
+  {
+   "id": 228272,
+   "nome": "Délio Pinheiro",
+   "partido": "PDT",
+   "uf": "MG",
+   "url_foto": "https://www.camara.leg.br/internet/deputado/bandep/228272.jpg",
+   "situacao": "Suplência",
+   "condicao_eleitoral": "Suplente",
+   "gabinete": {
+    "predio": null,
+    "sala": null,
+    "andar": null,
+    "telefone": null,
+    "email": null
+   },
+   "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/228272",
+   "url_site": "https://www.camara.leg.br/deputados/228272",
+   "saiu_em": "2024-08-07"
   },
   {
    "id": 92346,
@@ -761,25 +761,6 @@
    "saiu_em": "2026-02-28"
   },
   {
-   "id": 68720,
-   "nome": "Fábio Henrique",
-   "partido": "UNIÃO",
-   "uf": "SE",
-   "url_foto": "https://www.camara.leg.br/internet/deputado/bandep/68720.jpg",
-   "situacao": "Suplência",
-   "condicao_eleitoral": "Suplente",
-   "gabinete": {
-    "predio": null,
-    "sala": null,
-    "andar": null,
-    "telefone": null,
-    "email": null
-   },
-   "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/68720",
-   "url_site": "https://www.camara.leg.br/deputados/68720",
-   "saiu_em": "2024-11-03"
-  },
-  {
    "id": 74065,
    "nome": "Fatima Pelaes",
    "partido": "REPUBLICANOS",
@@ -835,6 +816,25 @@
    "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/225727",
    "url_site": "https://www.camara.leg.br/deputados/225727",
    "saiu_em": "2024-05-27"
+  },
+  {
+   "id": 68720,
+   "nome": "Fábio Henrique",
+   "partido": "UNIÃO",
+   "uf": "SE",
+   "url_foto": "https://www.camara.leg.br/internet/deputado/bandep/68720.jpg",
+   "situacao": "Suplência",
+   "condicao_eleitoral": "Suplente",
+   "gabinete": {
+    "predio": null,
+    "sala": null,
+    "andar": null,
+    "telefone": null,
+    "email": null
+   },
+   "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/68720",
+   "url_site": "https://www.camara.leg.br/deputados/68720",
+   "saiu_em": "2024-11-03"
   },
   {
    "id": 220587,
@@ -913,25 +913,6 @@
    "saiu_em": "2026-04-06"
   },
   {
-   "id": 229333,
-   "nome": "Gláucia Santiago",
-   "partido": "PL",
-   "uf": "MG",
-   "url_foto": "https://www.camara.leg.br/internet/deputado/bandep/229333.jpg",
-   "situacao": "Suplência",
-   "condicao_eleitoral": "Suplente",
-   "gabinete": {
-    "predio": null,
-    "sala": null,
-    "andar": null,
-    "telefone": null,
-    "email": null
-   },
-   "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/229333",
-   "url_site": "https://www.camara.leg.br/deputados/229333",
-   "saiu_em": "2024-11-08"
-  },
-  {
    "id": 236284,
    "nome": "Glaycon Franco",
    "partido": "PSDB",
@@ -949,6 +930,25 @@
    "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/236284",
    "url_site": "https://www.camara.leg.br/deputados/236284",
    "saiu_em": "2026-09-14"
+  },
+  {
+   "id": 229333,
+   "nome": "Gláucia Santiago",
+   "partido": "PL",
+   "uf": "MG",
+   "url_foto": "https://www.camara.leg.br/internet/deputado/bandep/229333.jpg",
+   "situacao": "Suplência",
+   "condicao_eleitoral": "Suplente",
+   "gabinete": {
+    "predio": null,
+    "sala": null,
+    "andar": null,
+    "telefone": null,
+    "email": null
+   },
+   "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/229333",
+   "url_site": "https://www.camara.leg.br/deputados/229333",
+   "saiu_em": "2024-11-08"
   },
   {
    "id": 129618,
@@ -987,25 +987,6 @@
    "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/220639",
    "url_site": "https://www.camara.leg.br/deputados/220639",
    "saiu_em": "2025-10-29"
-  },
-  {
-   "id": 178909,
-   "nome": "Hélio Leite",
-   "partido": "UNIÃO",
-   "uf": "PA",
-   "url_foto": "https://www.camara.leg.br/internet/deputado/bandep/178909.jpg",
-   "situacao": "Vacância",
-   "condicao_eleitoral": "Suplente",
-   "gabinete": {
-    "predio": null,
-    "sala": null,
-    "andar": null,
-    "telefone": null,
-    "email": null
-   },
-   "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/178909",
-   "url_site": "https://www.camara.leg.br/deputados/178909",
-   "saiu_em": "2025-01-01"
   },
   {
    "id": 234788,
@@ -1063,6 +1044,25 @@
    "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/100689",
    "url_site": "https://www.camara.leg.br/deputados/100689",
    "saiu_em": "2024-04-11"
+  },
+  {
+   "id": 178909,
+   "nome": "Hélio Leite",
+   "partido": "UNIÃO",
+   "uf": "PA",
+   "url_foto": "https://www.camara.leg.br/internet/deputado/bandep/178909.jpg",
+   "situacao": "Vacância",
+   "condicao_eleitoral": "Suplente",
+   "gabinete": {
+    "predio": null,
+    "sala": null,
+    "andar": null,
+    "telefone": null,
+    "email": null
+   },
+   "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/178909",
+   "url_site": "https://www.camara.leg.br/deputados/178909",
+   "saiu_em": "2025-01-01"
   },
   {
    "id": 235620,
@@ -1141,25 +1141,6 @@
    "saiu_em": "2023-03-08"
   },
   {
-   "id": 235869,
-   "nome": "João Carlos",
-   "partido": "REPUBLICANOS",
-   "uf": "AM",
-   "url_foto": "https://www.camara.leg.br/internet/deputado/bandep/235869.jpg",
-   "situacao": "Suplência",
-   "condicao_eleitoral": "Suplente",
-   "gabinete": {
-    "predio": null,
-    "sala": null,
-    "andar": null,
-    "telefone": null,
-    "email": null
-   },
-   "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/235869",
-   "url_site": "https://www.camara.leg.br/deputados/235869",
-   "saiu_em": "2026-08-12"
-  },
-  {
    "id": 217480,
    "nome": "Jones Moura",
    "partido": "PSD",
@@ -1196,6 +1177,25 @@
    "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/235800",
    "url_site": "https://www.camara.leg.br/deputados/235800",
    "saiu_em": "2026-10-13"
+  },
+  {
+   "id": 74141,
+   "nome": "Josias Gomes",
+   "partido": "PT",
+   "uf": "BA",
+   "url_foto": "https://www.camara.leg.br/internet/deputado/bandep/74141.jpg",
+   "situacao": "Vacância",
+   "condicao_eleitoral": "Suplente",
+   "gabinete": {
+    "predio": null,
+    "sala": null,
+    "andar": null,
+    "telefone": null,
+    "email": null
+   },
+   "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/74141",
+   "url_site": "https://www.camara.leg.br/deputados/74141",
+   "saiu_em": "2026-01-02"
   },
   {
    "id": 74140,
@@ -1236,12 +1236,12 @@
    "saiu_em": "2026-04-14"
   },
   {
-   "id": 74141,
-   "nome": "Josias Gomes",
-   "partido": "PT",
-   "uf": "BA",
-   "url_foto": "https://www.camara.leg.br/internet/deputado/bandep/74141.jpg",
-   "situacao": "Vacância",
+   "id": 235869,
+   "nome": "João Carlos",
+   "partido": "REPUBLICANOS",
+   "uf": "AM",
+   "url_foto": "https://www.camara.leg.br/internet/deputado/bandep/235869.jpg",
+   "situacao": "Suplência",
    "condicao_eleitoral": "Suplente",
    "gabinete": {
     "predio": null,
@@ -1250,9 +1250,9 @@
     "telefone": null,
     "email": null
    },
-   "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/74141",
-   "url_site": "https://www.camara.leg.br/deputados/74141",
-   "saiu_em": "2026-01-02"
+   "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/235869",
+   "url_site": "https://www.camara.leg.br/deputados/235869",
+   "saiu_em": "2026-08-12"
   },
   {
    "id": 228837,
@@ -1312,25 +1312,6 @@
    "saiu_em": "2026-03-25"
   },
   {
-   "id": 141480,
-   "nome": "Lázaro Botelho",
-   "partido": "PP",
-   "uf": "TO",
-   "url_foto": "https://www.camara.leg.br/internet/deputado/bandep/141480.jpg",
-   "situacao": "Suplência",
-   "condicao_eleitoral": "Suplente",
-   "gabinete": {
-    "predio": null,
-    "sala": null,
-    "andar": null,
-    "telefone": null,
-    "email": null
-   },
-   "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/141480",
-   "url_site": "https://www.camara.leg.br/deputados/141480",
-   "saiu_em": "2025-07-30"
-  },
-  {
    "id": 220600,
    "nome": "Lebrão",
    "partido": "UNIÃO",
@@ -1367,6 +1348,25 @@
    "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/231911",
    "url_site": "https://www.camara.leg.br/deputados/231911",
    "saiu_em": "2026-04-06"
+  },
+  {
+   "id": 122195,
+   "nome": "Leonardo Gadelha",
+   "partido": "PODE",
+   "uf": "PB",
+   "url_foto": "https://www.camara.leg.br/internet/deputado/bandep/122195.jpg",
+   "situacao": "Exercício",
+   "condicao_eleitoral": "Suplente",
+   "gabinete": {
+    "predio": "4",
+    "sala": "610",
+    "andar": "6",
+    "telefone": "3215-5610",
+    "email": "dep.leonardogadelha@camara.leg.br"
+   },
+   "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/122195",
+   "url_site": "https://www.camara.leg.br/deputados/122195",
+   "saiu_em": "2026-11-06"
   },
   {
    "id": 74299,
@@ -1578,6 +1578,25 @@
    "saiu_em": "2025-02-03"
   },
   {
+   "id": 141480,
+   "nome": "Lázaro Botelho",
+   "partido": "PP",
+   "uf": "TO",
+   "url_foto": "https://www.camara.leg.br/internet/deputado/bandep/141480.jpg",
+   "situacao": "Suplência",
+   "condicao_eleitoral": "Suplente",
+   "gabinete": {
+    "predio": null,
+    "sala": null,
+    "andar": null,
+    "telefone": null,
+    "email": null
+   },
+   "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/141480",
+   "url_site": "https://www.camara.leg.br/deputados/141480",
+   "saiu_em": "2025-07-30"
+  },
+  {
    "id": 204433,
    "nome": "Marcelo Calero",
    "partido": "PSD",
@@ -1614,25 +1633,6 @@
    "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/220634",
    "url_site": "https://www.camara.leg.br/deputados/220634",
    "saiu_em": "2023-11-30"
-  },
-  {
-   "id": 226410,
-   "nome": "Márcio Correa",
-   "partido": "MDB",
-   "uf": "GO",
-   "url_foto": "https://www.camara.leg.br/internet/deputado/bandep/226410.jpg",
-   "situacao": "Suplência",
-   "condicao_eleitoral": "Suplente",
-   "gabinete": {
-    "predio": null,
-    "sala": null,
-    "andar": null,
-    "telefone": null,
-    "email": null
-   },
-   "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/226410",
-   "url_site": "https://www.camara.leg.br/deputados/226410",
-   "saiu_em": "2023-12-06"
   },
   {
    "id": 204522,
@@ -1728,6 +1728,25 @@
    "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/229225",
    "url_site": "https://www.camara.leg.br/deputados/229225",
    "saiu_em": "2024-11-01"
+  },
+  {
+   "id": 226410,
+   "nome": "Márcio Correa",
+   "partido": "MDB",
+   "uf": "GO",
+   "url_foto": "https://www.camara.leg.br/internet/deputado/bandep/226410.jpg",
+   "situacao": "Suplência",
+   "condicao_eleitoral": "Suplente",
+   "gabinete": {
+    "predio": null,
+    "sala": null,
+    "andar": null,
+    "telefone": null,
+    "email": null
+   },
+   "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/226410",
+   "url_site": "https://www.camara.leg.br/deputados/226410",
+   "saiu_em": "2023-12-06"
   },
   {
    "id": 228042,
@@ -2205,25 +2224,6 @@
    "saiu_em": "2026-04-06"
   },
   {
-   "id": 160629,
-   "nome": "Romero Rodrigues",
-   "partido": "PODE",
-   "uf": "PB",
-   "url_foto": "https://www.camara.leg.br/internet/deputado/bandep/160629.jpg",
-   "situacao": "Licença",
-   "condicao_eleitoral": "Titular",
-   "gabinete": {
-    "predio": null,
-    "sala": null,
-    "andar": null,
-    "telefone": null,
-    "email": null
-   },
-   "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/160629",
-   "url_site": "https://www.camara.leg.br/deputados/160629",
-   "saiu_em": "2026-07-06"
-  },
-  {
    "id": 163321,
    "nome": "Ronaldo Nogueira",
    "partido": "REPUBLICANOS",
@@ -2319,25 +2319,6 @@
    "saiu_em": "2026-03-19"
   },
   {
-   "id": 235776,
-   "nome": "Sérgio Turra",
-   "partido": "PP",
-   "uf": "RS",
-   "url_foto": "https://www.camara.leg.br/internet/deputado/bandep/235776.jpg",
-   "situacao": "Suplência",
-   "condicao_eleitoral": "Suplente",
-   "gabinete": {
-    "predio": null,
-    "sala": null,
-    "andar": null,
-    "telefone": null,
-    "email": null
-   },
-   "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/235776",
-   "url_site": "https://www.camara.leg.br/deputados/235776",
-   "saiu_em": "2026-08-06"
-  },
-  {
    "id": 220579,
    "nome": "Silvia Waiãpi",
    "partido": "PL",
@@ -2412,6 +2393,25 @@
    "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/220575",
    "url_site": "https://www.camara.leg.br/deputados/220575",
    "saiu_em": "2025-07-30"
+  },
+  {
+   "id": 235776,
+   "nome": "Sérgio Turra",
+   "partido": "PP",
+   "uf": "RS",
+   "url_foto": "https://www.camara.leg.br/internet/deputado/bandep/235776.jpg",
+   "situacao": "Suplência",
+   "condicao_eleitoral": "Suplente",
+   "gabinete": {
+    "predio": null,
+    "sala": null,
+    "andar": null,
+    "telefone": null,
+    "email": null
+   },
+   "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/235776",
+   "url_site": "https://www.camara.leg.br/deputados/235776",
+   "saiu_em": "2026-08-06"
   },
   {
    "id": 230177,

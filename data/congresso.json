@@ -1,93 +1,10 @@
 {
- "coletado_em": "2026-11-05T17:16:18+00:00",
+ "coletado_em": "2026-11-06T16:44:08+00:00",
  "periodo": {
-  "votacoes_desde": "2026-10-06",
-  "pauta_ate": "2026-11-11"
+  "votacoes_desde": "2026-10-07",
+  "pauta_ate": "2026-11-12"
  },
- "pauta": [
-  {
-   "casa": "Câmara",
-   "data_hora": "2026-11-05T11:07",
-   "sessao": "Sessão Deliberativa",
-   "itens": [
-    {
-     "chave": "PL 2879/2011",
-     "ementa": "Altera a Lei nº 9.503, de 23 de setembro de 1997, que institui o Código de Trânsito Brasileiro, para dispor sobre a sinalização vertical da travessia de pedestre.",
-     "fase": "Redações Finais (RICD, art. 83, I)"
-    },
-    {
-     "chave": "PL 1932/2021",
-     "ementa": "Altera a Lei nº 8.080, de 19 de setembro de 1990, para determinar que o abastecimento de medicamentos e de produtos para a saúde nos entes da federação será controlado por meio de sistema integrado de acompanhamento em tempo real do consumo e do estoque.",
-     "fase": "Redações Finais (RICD, art. 83, I)"
-    },
-    {
-     "chave": "PL 5086/2026",
-     "ementa": "Dispõe sobre o regime jurídico específico das associações civis sem fins lucrativos de utilidade pública que instituam sistemas de beneficência e assistência mútua de interesse social.",
-     "fase": "Requerimentos de Urgência Art. 155"
-    },
-    {
-     "chave": "PRC 113/2023",
-     "ementa": "Dá ao túnel que conecta os anexos II e IV da Câmara dos Deputados a denominação José Richa.",
-     "fase": "Requerimentos de Urgência Art. 155"
-    },
-    {
-     "chave": "PL 3099/2019",
-     "ementa": "Institui no calendário nacional o \"Dia Nacional do Autocuidado\".",
-     "fase": "Discussão"
-    },
-    {
-     "chave": "PL 79/2020",
-     "ementa": "Altera o Decreto-Lei nº 1.305, de 8 de janeiro de 1974, e as Leis nºs 5.461, de 25 de junho de 1968, 5.989, de 17 de dezembro de 1973, 7.573, de 23 de dezembro de 1986, 8.706, de 14 de setembro de 1993, e 12.462, de 4 de agosto de 2011, além de dar outras providências, para dispor sobre a destinação das contribuições sociais compulsórias das empresas do setor de transporte aéreo e portuário, incluindo aquelas relativas à contratação do trabalhador portuário avulso (TPA).",
-     "fase": "Discussão"
-    },
-    {
-     "chave": "PL 2994/2020",
-     "ementa": "Altera a Lei nº 11.771, de 17 de setembro de 2008, para dispor sobre o Turismo Colaborativo.",
-     "fase": "Discussão"
-    },
-    {
-     "chave": "PL 2726/2022",
-     "ementa": "Institui a Política Nacional de Convivência Sociocultural e Economia Solidária (PNCS).",
-     "fase": "Discussão"
-    },
-    {
-     "chave": "PL 2374/2023",
-     "ementa": "Altera a Lei n.º 11.947, de 16 de junho de 2009 e a Lei n.º 14.113, de 25 de dezembro de 2020 de modo a assegurar que haja a inclusão das escolas comunitárias e o repasse direto dos recursos do Programa Nacional de Alimentação Escolar – PNAE e do Programa Dinheiro Direto na Escola – PDDE, e dá outras providências.",
-     "fase": "Discussão"
-    },
-    {
-     "chave": "PL 2475/2025",
-     "ementa": "Altera a Lei nº 8.072, de 25 de julho de 1990 (Lei dos Crimes Hediondos), para tornar hediondo o crime de maus-tratos aos animais, quando do evento criminoso resultar a morte do animal.",
-     "fase": "Discussão"
-    },
-    {
-     "chave": "PL 4159/2025",
-     "ementa": "Inscreve o nome de Padre Inácio de Sousa Rolim no Livro dos Heróis e Heroínas da Pátria.",
-     "fase": "Discussão"
-    },
-    {
-     "chave": "PL 3507/2026",
-     "ementa": "Reconhece o artesanato tradicional do Estado do Maranhão como manifestação da cultura nacional.",
-     "fase": "Discussão"
-    },
-    {
-     "chave": "PL 5542/2026",
-     "ementa": "Altera a Lei nº 11.340, de 7 de agosto de 2006 – Lei Maria da Penha, a fim de estabelecer garantias mínimas para a execução da monitoração eletrônica como medida protetiva de urgência, inclusive quanto à emissão de alertas sonoros e luminosos, à utilização excepcional de mecanismo de contenção física remota e à proteção da vítima.",
-     "fase": "Discussão"
-    },
-    {
-     "chave": "PL 565/2020",
-     "ementa": "Altera a Lei nº 8.080, de 19 de setembro de 1990, para tratar de ações de educação em saúde executadas pelos profissionais do Sistema Único de Saúde.",
-     "fase": "Discussão"
-    },
-    {
-     "chave": "PL 5974/2023",
-     "ementa": "Dispõe sobre a permissão de reprodução adaptada de obras para pessoas com deficiência intelectual.",
-     "fase": "Discussão"
-    }
-   ]
-  }
- ],
+ "pauta": [],
  "proposicoes": {
   "MPV 1370/2026": {
    "chave": "MPV 1370/2026",
@@ -4077,214 +3994,6 @@
     }
    ]
   },
-  "PL 1932/2021": {
-   "chave": "PL 1932/2021",
-   "slug": "pl-1932-2021",
-   "sigla": "PL",
-   "numero": 1932,
-   "ano": 2021,
-   "tipo": "Projeto de Lei",
-   "ementa": "Altera a Lei nº 8.080, de 19 de setembro de 1990, para determinar que o abastecimento de medicamentos e de produtos para a saúde nos entes da federação será controlado por meio de sistema integrado de acompanhamento em tempo real do consumo e do estoque.",
-   "apelido": null,
-   "autores": [
-    "Senado Federal - Jayme Campos"
-   ],
-   "data_apresentacao": "2021-05-25",
-   "casa_inicial": "Senado",
-   "temas": [
-    "Saúde"
-   ],
-   "situacao": {
-    "descricao": "Aguardando Remessa à Sanção",
-    "data": "2026-11-05",
-    "casa": "Câmara",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2305879",
-   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/148567",
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2100771",
-   "votacoes": []
-  },
-  "PL 2374/2023": {
-   "chave": "PL 2374/2023",
-   "slug": "pl-2374-2023",
-   "sigla": "PL",
-   "numero": 2374,
-   "ano": 2023,
-   "tipo": "Projeto de Lei",
-   "ementa": "Altera a Lei n.º 11.947, de 16 de junho de 2009 e a Lei n.º 14.113, de 25 de dezembro de 2020 de modo a assegurar que haja a inclusão das escolas comunitárias e o repasse direto dos recursos do Programa Nacional de Alimentação Escolar – PNAE e do Programa Dinheiro Direto na Escola – PDDE, e dá outras providências.",
-   "apelido": null,
-   "autores": [
-    "Duarte"
-   ],
-   "data_apresentacao": "2023-05-05",
-   "casa_inicial": "Câmara",
-   "temas": [
-    "Educação",
-    "Finanças Públicas e Orçamento"
-   ],
-   "situacao": {
-    "descricao": "Aguardando Deliberação",
-    "data": "2026-11-05",
-    "casa": "Câmara",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2360367",
-   "url_senado": null,
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2268837",
-   "votacoes": []
-  },
-  "PL 2475/2025": {
-   "chave": "PL 2475/2025",
-   "slug": "pl-2475-2025",
-   "sigla": "PL",
-   "numero": 2475,
-   "ano": 2025,
-   "tipo": "Projeto de Lei",
-   "ementa": "Altera a Lei nº 8.072, de 25 de julho de 1990 (Lei dos Crimes Hediondos), para tornar hediondo o crime de maus-tratos aos animais, quando do evento criminoso resultar a morte do animal.",
-   "apelido": null,
-   "autores": [
-    "Célio Studart",
-    "Delegado Bruno Lima",
-    "Dr. Ismael Alexandrino",
-    "Felipe Becari",
-    "Laura Carneiro",
-    "Marcelo Queiroz"
-   ],
-   "data_apresentacao": "2025-05-22",
-   "casa_inicial": "Câmara",
-   "temas": [
-    "Cidades e Desenvolvimento Urbano",
-    "Direito Penal e Processual Penal"
-   ],
-   "situacao": {
-    "descricao": "Aguardando Deliberação",
-    "data": "2026-11-05",
-    "casa": "Câmara",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2515534",
-   "url_senado": null,
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2916380",
-   "votacoes": []
-  },
-  "PL 2726/2022": {
-   "chave": "PL 2726/2022",
-   "slug": "pl-2726-2022",
-   "sigla": "PL",
-   "numero": 2726,
-   "ano": 2022,
-   "tipo": "Projeto de Lei",
-   "ementa": "Institui a Política Nacional de Convivência Sociocultural e Economia Solidária (PNCS).",
-   "apelido": null,
-   "autores": [
-    "Luiza Erundina"
-   ],
-   "data_apresentacao": "2022-11-05",
-   "casa_inicial": "Câmara",
-   "temas": [
-    "Administração Pública",
-    "Arte, Cultura e Religião",
-    "Direitos Humanos e Minorias"
-   ],
-   "situacao": {
-    "descricao": "Aguardando Deliberação",
-    "data": "2026-11-05",
-    "casa": "Câmara",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2336566",
-   "url_senado": null,
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2212779",
-   "votacoes": []
-  },
-  "PL 2879/2011": {
-   "chave": "PL 2879/2011",
-   "slug": "pl-2879-2011",
-   "sigla": "PL",
-   "numero": 2879,
-   "ano": 2011,
-   "tipo": "Projeto de Lei",
-   "ementa": "Altera a Lei nº 9.503, de 23 de setembro de 1997, que institui o Código de Trânsito Brasileiro, para dispor sobre a sinalização vertical da travessia de pedestre.",
-   "apelido": null,
-   "autores": [
-    "Luis Tibé"
-   ],
-   "data_apresentacao": "2011-12-07",
-   "casa_inicial": "Câmara",
-   "temas": [
-    "Cidades e Desenvolvimento Urbano"
-   ],
-   "situacao": {
-    "descricao": "Aguardando Envio ao Senado Federal",
-    "data": "2026-11-05",
-    "casa": "Câmara",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/530513",
-   "url_senado": null,
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=948745",
-   "votacoes": []
-  },
-  "PL 2994/2020": {
-   "chave": "PL 2994/2020",
-   "slug": "pl-2994-2020",
-   "sigla": "PL",
-   "numero": 2994,
-   "ano": 2020,
-   "tipo": "Projeto de Lei",
-   "ementa": "Altera a Lei nº 11.771, de 17 de setembro de 2008, para dispor sobre o Turismo Colaborativo.",
-   "apelido": null,
-   "autores": [
-    "Adriana Ventura",
-    "Paulo Ganime"
-   ],
-   "data_apresentacao": "2020-05-29",
-   "casa_inicial": "Câmara",
-   "temas": [
-    "Indústria, Comércio e Serviços",
-    "Trabalho e Emprego",
-    "Turismo"
-   ],
-   "situacao": {
-    "descricao": "Aguardando Deliberação",
-    "data": "2026-11-05",
-    "casa": "Câmara",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2254065",
-   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/157078",
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1899178",
-   "votacoes": []
-  },
-  "PL 3099/2019": {
-   "chave": "PL 3099/2019",
-   "slug": "pl-3099-2019",
-   "sigla": "PL",
-   "numero": 3099,
-   "ano": 2019,
-   "tipo": "Projeto de Lei",
-   "ementa": "Institui no calendário nacional o \"Dia Nacional do Autocuidado\".",
-   "apelido": null,
-   "autores": [
-    "Juninho do Pneu"
-   ],
-   "data_apresentacao": "2019-05-22",
-   "casa_inicial": "Câmara",
-   "temas": [
-    "Homenagens e Datas Comemorativas"
-   ],
-   "situacao": {
-    "descricao": "Aguardando Deliberação",
-    "data": "2026-11-05",
-    "casa": "Câmara",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2204495",
-   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/170101",
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1751589",
-   "votacoes": []
-  },
   "PL 3220/2019": {
    "chave": "PL 3220/2019",
    "slug": "pl-3220-2019",
@@ -4434,37 +4143,32 @@
    "url_camara": "https://www.camara.leg.br/propostas-legislativas/2637478",
    "url_senado": null,
    "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3157723",
-   "votacoes": []
-  },
-  "PL 4159/2025": {
-   "chave": "PL 4159/2025",
-   "slug": "pl-4159-2025",
-   "sigla": "PL",
-   "numero": 4159,
-   "ano": 2025,
-   "tipo": "Projeto de Lei",
-   "ementa": "Inscreve o nome de Padre Inácio de Sousa Rolim no Livro dos Heróis e Heroínas da Pátria.",
-   "apelido": null,
-   "autores": [
-    "Luiz Couto"
-   ],
-   "data_apresentacao": "2025-08-21",
-   "casa_inicial": "Câmara",
-   "temas": [
-    "Arte, Cultura e Religião",
-    "Educação",
-    "Homenagens e Datas Comemorativas"
-   ],
-   "situacao": {
-    "descricao": "Aguardando Deliberação",
-    "data": "2026-11-05",
-    "casa": "Câmara",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2551091",
-   "url_senado": null,
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2982390",
-   "votacoes": []
+   "votacoes": [
+    {
+     "id": "2637478-26",
+     "casa": "Câmara",
+     "data_hora": "2026-11-05T11:37:08",
+     "descricao": "Aprovado o Projeto de Lei nº 3.507, de 2026.",
+     "resultado": "aprovada",
+     "procedimento": false,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    },
+    {
+     "id": "2637478-28",
+     "casa": "Câmara",
+     "data_hora": "2026-11-05T11:37:36",
+     "descricao": "Aprovada a Redação Final assinada pelo relator, Dep. Hildo Rocha (MDB-MA).",
+     "resultado": "aprovada",
+     "procedimento": true,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    }
+   ]
   },
   "PL 4674/2024": {
    "chave": "PL 4674/2024",
@@ -4519,37 +4223,6 @@
      "votos": []
     }
    ]
-  },
-  "PL 5086/2026": {
-   "chave": "PL 5086/2026",
-   "slug": "pl-5086-2026",
-   "sigla": "PL",
-   "numero": 5086,
-   "ano": 2026,
-   "tipo": "Projeto de Lei",
-   "ementa": "Dispõe sobre o regime jurídico específico das associações civis sem fins lucrativos de utilidade pública que instituam sistemas de beneficência e assistência mútua de interesse social.",
-   "apelido": null,
-   "autores": [
-    "Doutor Luizinho"
-   ],
-   "data_apresentacao": "2026-08-14",
-   "casa_inicial": "Câmara",
-   "temas": [
-    "Direito Civil e Processual Civil",
-    "Previdência e Assistência Social",
-    "Saúde",
-    "Trabalho e Emprego"
-   ],
-   "situacao": {
-    "descricao": "Aguardando Designação de Relator(a)",
-    "data": "2026-11-05",
-    "casa": "Câmara",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2643842",
-   "url_senado": null,
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3172575",
-   "votacoes": []
   },
   "PL 5239/2025": {
    "chave": "PL 5239/2025",
@@ -4659,36 +4332,6 @@
     }
    ]
   },
-  "PL 5542/2026": {
-   "chave": "PL 5542/2026",
-   "slug": "pl-5542-2026",
-   "sigla": "PL",
-   "numero": 5542,
-   "ano": 2026,
-   "tipo": "Projeto de Lei",
-   "ementa": "Altera a Lei nº 11.340, de 7 de agosto de 2006 – Lei Maria da Penha, a fim de estabelecer garantias mínimas para a execução da monitoração eletrônica como medida protetiva de urgência, inclusive quanto à emissão de alertas sonoros e luminosos, à utilização excepcional de mecanismo de contenção física remota e à proteção da vítima.",
-   "apelido": null,
-   "autores": [
-    "Yury Bruno"
-   ],
-   "data_apresentacao": "2026-10-13",
-   "casa_inicial": "Câmara",
-   "temas": [
-    "Direitos Humanos e Minorias",
-    "Defesa e Segurança",
-    "Direito Penal e Processual Penal"
-   ],
-   "situacao": {
-    "descricao": "Aguardando Designação de Relator(a)",
-    "data": "2026-11-05",
-    "casa": "Câmara",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2647427",
-   "url_senado": null,
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3183470",
-   "votacoes": []
-  },
   "PL 5649/2026": {
    "chave": "PL 5649/2026",
    "slug": "pl-5649-2026",
@@ -4762,15 +4405,40 @@
     "Saúde"
    ],
    "situacao": {
-    "descricao": "Aguardando Encaminhamento",
-    "data": "2026-11-05",
+    "descricao": "Aguardando Designação de Relator(a)",
+    "data": "2026-11-06",
     "casa": "Câmara",
     "norma": null
    },
    "url_camara": "https://www.camara.leg.br/propostas-legislativas/2238560",
    "url_senado": null,
    "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1864114",
-   "votacoes": []
+   "votacoes": [
+    {
+     "id": "2238560-42",
+     "casa": "Câmara",
+     "data_hora": "2026-11-05T11:24:47",
+     "descricao": "Aprovado o Projeto de Lei nº 565, de 2020.",
+     "resultado": "aprovada",
+     "procedimento": false,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    },
+    {
+     "id": "2238560-44",
+     "casa": "Câmara",
+     "data_hora": "2026-11-05T11:25:20",
+     "descricao": "Aprovada a Emenda de Redação.",
+     "resultado": "aprovada",
+     "procedimento": true,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    }
+   ]
   },
   "PL 5815/2025": {
    "chave": "PL 5815/2025",
@@ -4900,47 +4568,40 @@
     "Direitos Humanos e Minorias"
    ],
    "situacao": {
-    "descricao": "Aguardando Encaminhamento",
-    "data": "2026-11-05",
+    "descricao": "Aguardando Designação de Relator(a)",
+    "data": "2026-11-06",
     "casa": "Câmara",
     "norma": null
    },
    "url_camara": "https://www.camara.leg.br/propostas-legislativas/2412504",
    "url_senado": null,
    "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2374424",
-   "votacoes": []
-  },
-  "PL 79/2020": {
-   "chave": "PL 79/2020",
-   "slug": "pl-79-2020",
-   "sigla": "PL",
-   "numero": 79,
-   "ano": 2020,
-   "tipo": "Projeto de Lei",
-   "ementa": "Altera o Decreto-Lei nº 1.305, de 8 de janeiro de 1974, e as Leis nºs 5.461, de 25 de junho de 1968, 5.989, de 17 de dezembro de 1973, 7.573, de 23 de dezembro de 1986, 8.706, de 14 de setembro de 1993, e 12.462, de 4 de agosto de 2011, além de dar outras providências, para dispor sobre a destinação das contribuições sociais compulsórias das empresas do setor de transporte aéreo e portuário, incluindo aquelas relativas à contratação do trabalhador portuário avulso (TPA).",
-   "apelido": null,
-   "autores": [
-    "Senado Federal - Wellington Fagundes"
-   ],
-   "data_apresentacao": "2020-02-03",
-   "casa_inicial": "Senado",
-   "temas": [
-    "Administração Pública",
-    "Indústria, Comércio e Serviços",
-    "Previdência e Assistência Social",
-    "Trabalho e Emprego",
-    "Viação, Transporte e Mobilidade"
-   ],
-   "situacao": {
-    "descricao": "Aguardando Deliberação",
-    "data": "2026-11-05",
-    "casa": "Câmara",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2596596",
-   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/140484",
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3067600",
-   "votacoes": []
+   "votacoes": [
+    {
+     "id": "2412504-60",
+     "casa": "Câmara",
+     "data_hora": "2026-11-05T11:46:25",
+     "descricao": "Aprovado o Substitutivo ao Projeto de Lei nº 5.974, de 2023, da Comissão de Defesa dos Direitos das Pessoas com Deficiência.",
+     "resultado": "aprovada",
+     "procedimento": false,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    },
+    {
+     "id": "2412504-64",
+     "casa": "Câmara",
+     "data_hora": "2026-11-05T11:57:14",
+     "descricao": "Aprovadas as Subemendas nºs 1 e 2 ao Substitutivo da Comissão de Cultura.",
+     "resultado": "aprovada",
+     "procedimento": false,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    }
+   ]
   },
   "PLP 186/2026": {
    "chave": "PLP 186/2026",
@@ -14964,7 +14625,32 @@
    "url_camara": "https://www.camara.leg.br/propostas-legislativas/2389679",
    "url_senado": null,
    "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2331762",
-   "votacoes": []
+   "votacoes": [
+    {
+     "id": "2389679-27",
+     "casa": "Câmara",
+     "data_hora": "2026-11-05T11:18:41",
+     "descricao": "Aprovado o Projeto de Resolução nº 113, de 2023.",
+     "resultado": "aprovada",
+     "procedimento": false,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    },
+    {
+     "id": "2389679-29",
+     "casa": "Câmara",
+     "data_hora": "2026-11-05T11:20:44",
+     "descricao": "Aprovada a Redação Final, assinada pelo relator, Dep. Aécio Neves (PSDB/MG).",
+     "resultado": "aprovada",
+     "procedimento": true,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    }
+   ]
   },
   "REC 19/2022": {
    "chave": "REC 19/2022",
