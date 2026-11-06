@@ -18,7 +18,7 @@
     <header class="ce-page-head">
       <p class="ce-eyebrow">Câmara dos Deputados</p>
       <h1>{{ d.nome }}</h1>{% if situacoes_eleitorais and situacoes_eleitorais.get(d.id|string) %}
-      <p class="pf-badges"><span class="ce-badge ce-badge--outline">{{ situacoes_eleitorais[d.id|string].rotulo }}</span></p>{% endif %}
+      <p class="pf-badges"><span class="ce-badge badge-{{ situacoes_eleitorais[d.id|string].chave }}">{{ situacoes_eleitorais[d.id|string].rotulo }}</span></p>{% endif %}
       <p class="pf-deck">{{ d.partido }}-{{ d.uf }}{% if d.situacao %} · {{ d.situacao }}{% endif %}{% if perfil.legislatura_atual %} · Mandato atual: {{ perfil.legislatura_atual.inicio|data_br }} a {{ perfil.legislatura_atual.fim|data_br }}.{% endif %}{% if perfil.proximo_mandato %} Mandato renovado na eleição de {{ perfil.proximo_mandato.ano }}, para {{ perfil.proximo_mandato.inicio_ano }}–{{ perfil.proximo_mandato.fim_ano }}.{% endif %}</p>
       <p class="pf-nota">Dados deste perfil coletados em {{ perfil.coleta_local|data_br }}, de fontes oficiais.</p>
     </header>

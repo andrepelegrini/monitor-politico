@@ -1,4 +1,5 @@
 import json
+import re
 from datetime import date
 from pathlib import Path
 
@@ -245,13 +246,19 @@ def test_paginas_sem_dados_de_demonstracao(site):
 def test_resultado_e_voto_sem_julgamento_por_cor(site):
     pasta, _ = site
     plp = (pasta / "proposicoes" / "plp-186-2026.html").read_text(encoding="utf-8")
-    assert '<span class="ce-badge">Aprovada</span>' in plp
-    assert "selo-aprovada" not in plp and "selo-rejeitada" not in plp
+    assert '<span class="ce-badge resultado-aprovada">Aprovada</span>' in plp
     assert 'class="ce-vote-yes"' in plp and 'class="ce-vote-no"' in plp
     assert "registros nominais nesta votação" in plp  # denominador explícito
     assert "<caption" in plp and '<th scope="col">Voto</th>' in plp
     estilo = (pasta / "static" / "estilo.css").read_text(encoding="utf-8")
     assert "prefers-color-scheme" not in estilo
+    # Aprovada e rejeitada têm cor própria, mas nos tons do voto, sem verde e vermelho de certo e errado.
+    regra = {r: re.search(rf"\.resultado-{r} \{{ background: #(\w+); color: #(\w+)", estilo).groups() for r in ("aprovada", "rejeitada")}
+    for fundo, texto in regra.values():
+        for cor in (fundo, texto):
+            vermelho, verde, azul = (int(cor[i:i + 2], 16) for i in (0, 2, 4))
+            assert not (verde > vermelho + 20 and verde > azul + 20), f"#{cor} é verde"
+            assert not (vermelho > verde + 60 and vermelho > azul + 60 and verde < 90), f"#{cor} é vermelho"
 
 
 def test_estados_previsto_e_vazio(site):

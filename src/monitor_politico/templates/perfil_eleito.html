@@ -17,7 +17,7 @@
     <header class="ce-page-head">
       <p class="ce-eyebrow">Eleição para a Câmara dos Deputados</p>
       <h1>{{ e.nome|nome_proprio }}</h1>
-      <p class="pf-badges"><span class="ce-badge ce-badge--outline">{{ e.rotulo }}</span></p>
+      <p class="pf-badges"><span class="ce-badge badge-{{ e.chave }}">{{ e.rotulo }}</span></p>
       <p class="pf-deck">{{ e.partido }}-{{ e.uf }}. Posse prevista para {{ legislatura.posse|data_br }}.</p>
       <p class="pf-nota">Dados do TSE coletados em {{ coleta_legislatura|data_br }}. Esta página ganha votos, presença e gastos depois da posse, quando a Câmara publicar os registros do mandato.</p>
     </header>

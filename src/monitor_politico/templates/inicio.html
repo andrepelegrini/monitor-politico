@@ -134,7 +134,7 @@
           {% for x in v.votos %}
           <div>
             <span class="ce-meta">{{ x.casa }} · {{ x.data }}</span>
-            {% if x.resultado %}<span class="ce-badge">{{ x.resultado|capitalize }}</span>{% endif %}
+            {% if x.resultado %}<span class="ce-badge resultado-{{ x.resultado }}">{{ x.resultado|capitalize }}</span>{% endif %}
             <span class="ce-score">{{ x.placar }}</span>
           </div>
           {% endfor %}

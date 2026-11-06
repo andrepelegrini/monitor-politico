@@ -52,7 +52,7 @@
         <span class="ce-photo-empty" aria-hidden="true"></span>
         <span class="ce-people-name">{{ e.nome|nome_proprio }}</span>
         <span class="ce-meta">{{ e.partido }} · {{ e.uf }}</span>
-        <span class="ce-people-leis"><span class="ce-badge ce-badge--outline">{{ e.rotulo }}</span></span>
+        <span class="ce-people-leis"><span class="ce-badge badge-{{ e.chave }}">{{ e.rotulo }}</span></span>
       </a>
     </li>
     {% endfor %}

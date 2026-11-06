@@ -202,7 +202,10 @@ def test_paginas_da_virada_de_legislatura(tmp_path, docs):
     lista = (site / "deputados" / "index.html").read_text(encoding="utf-8")
     assert 'data-situacao="Reeleição"' in lista and 'id="f-situacao"' in lista and 'href="eleitos/index.html"' in lista
     perfil = (site / "deputados" / f"{alvo}.html").read_text(encoding="utf-8")
-    assert '<span class="ce-badge ce-badge--outline">Reeleição</span>' in perfil
+    assert '<span class="ce-badge badge-reeleicao">Reeleição</span>' in perfil
+    assert 'class="ce-people ce-people--leis"' in lista and 'badge-reeleicao' in lista
+    assert 'class="ce-badge badge-primeiro"' in novo and 'badge-primeiro' in indice
+    assert 'badge-suplencia' in saiu and 'badge-suplencia' in anteriores
 
     busca = json.loads((site / "static" / "busca.json").read_text(encoding="utf-8"))
     enderecos = [p[4] for p in busca["parlamentares"]]

@@ -32,6 +32,8 @@ Piloto só na página de Tabata Amaral (id 204534). Nenhum outro parlamentar rec
 - [ ] 6A, perfil completo para os deputados, com coleta automática. Falta decidir onde guardar os dados detalhados.
 - [ ] 6B, senadores.
 
+As cores dos badges e dos resultados de votação estão em `static/estilo.css`, e foram aprovadas em 06/11/2026. São categorias, sem verde e vermelho como certo e errado.
+
 Na posse, em 01/02/2027: trocar `INICIO_MANDATO` em `metricas.py` e `LEGISLATURA_ATUAL`, `ANO_DA_ELEICAO` e `POSSE` em `legislatura.py`, rodar as coletas manuais e ligar as páginas dos eleitos (`deputados/eleitos/`) aos novos perfis, com redirecionamento. A coleta diária já move para o arquivo quem sair da lista de exercício.
 
 Cuidado com a cota: os arquivos abertos da Câmara oscilam. Em 04/11/2026 traziam as passagens aéreas do SIGEPA até julho de 2025; em 05/11/2026, em nenhum ano. Por isso o total vem da página oficial do deputado, e o que falta no arquivo aparece como "sem detalhamento".

@@ -85,7 +85,7 @@
     <article class="ce-card ce-vote-card">
       <div class="ce-house-head">
         <h3 class="ce-subtitle">{{ v.casa }} · {{ v.data }}</h3>
-        {% if v.resultado %}<span class="ce-badge">{{ v.resultado|capitalize }}</span>{% endif %}
+        {% if v.resultado %}<span class="ce-badge resultado-{{ v.resultado }}">{{ v.resultado|capitalize }}</span>{% endif %}
       </div>
       <p class="ce-muted ce-text-sm">{{ v.descricao }}</p>
       {% if v.nominal %}

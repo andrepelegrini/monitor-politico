@@ -29,7 +29,7 @@
         {% if d.url_foto %}<img src="{{ d.url_foto }}" alt="" loading="lazy" width="64" height="85">{% else %}<span class="ce-photo-empty" aria-hidden="true"></span>{% endif %}
         <span class="ce-people-name">{{ d.nome }}</span>
         <span class="ce-meta">{{ d.partido }} · {{ d.uf }}{% if d.situacao %} · {{ d.situacao }}{% endif %}</span>
-        {% if situacoes_eleitorais.get(d.id|string) %}<span class="ce-people-leis"><span class="ce-badge ce-badge--outline">{{ situacoes_eleitorais[d.id|string].rotulo }}</span></span>{% endif %}
+        {% if situacoes_eleitorais.get(d.id|string) %}<span class="ce-people-leis"><span class="ce-badge badge-{{ situacoes_eleitorais[d.id|string].chave }}">{{ situacoes_eleitorais[d.id|string].rotulo }}</span></span>{% endif %}
       </a>
     </li>
     {% endfor %}

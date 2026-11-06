@@ -331,7 +331,9 @@ body { margin: 0; }
 }
 
 /* Lista de deputados com as leis de cada um */
-.ce-app .ce-people--leis img, .ce-app .ce-people--leis .ce-photo-empty { grid-row: span 3; }
+.ce-app .ce-people--leis img, .ce-app .ce-people--leis .ce-photo-empty { grid-row: 1 / span 4; align-self: start; }
+.ce-app .ce-people--leis a { align-content: start; }
+.ce-app .ce-people--leis a > :not(img):not(.ce-photo-empty) { grid-column: 2; min-width: 0; }
 .ce-app .ce-people-leis { font-size: .8125rem; line-height: 1.35; color: var(--ce-text-secondary); }
 .ce-app .ce-people-leis strong { color: var(--ce-ink); font-weight: 700; font-variant-numeric: tabular-nums; }
 
@@ -340,9 +342,26 @@ body { margin: 0; }
 .ce-app .ce-people-leis .ce-badge { margin-top: var(--ce-space-1); }
 .ce-app .pf-atalhos { display: flex; flex-wrap: wrap; gap: 0 var(--ce-space-6); margin-top: var(--ce-space-3); }
 .ce-app .pf-renovacao { margin-top: var(--ce-space-5); }
-.ce-app .pf-eleito-reeleicao { background: var(--ce-espresso); }
+.ce-app .pf-eleito-reeleicao { background: var(--ce-focus); }
 .ce-app .pf-eleito-retorno { background: var(--ce-olive); }
 .ce-app .pf-eleito-primeiro { background: var(--ce-terracotta); }
 .ce-app .pf-composicao-lista { margin: 0; padding: 0; list-style: none; font-size: var(--ce-text-sm); }
 .ce-app .pf-composicao-lista li { display: flex; justify-content: space-between; gap: var(--ce-space-4); padding-block: var(--ce-space-2); border-bottom: 1px solid var(--ce-border-soft); overflow-wrap: anywhere; }
 .ce-app .pf-composicao-lista strong { flex: none; }
+
+/* Cores dos badges. São categorias, não julgamento: nada de verde e vermelho como certo e errado.
+   O texto sempre diz a situação, e todas as combinações têm contraste acima de 6,5:1. */
+.ce-app .ce-people-leis .ce-badge { max-width: 100%; height: auto; white-space: normal; }
+.ce-app .badge-reeleicao { background: #CDE3EF; color: #123F57; border-color: #8FB9CF; }
+.ce-app .badge-retorno { background: #DDE6BE; color: #3D4A1E; border-color: #A9B878; }
+.ce-app .badge-primeiro { background: #F7D6C8; color: #7D2F18; border-color: #DE9E85; }
+.ce-app .badge-suplencia { background: #F6E9CF; color: #664510; border-color: #D9B878; }
+.ce-app .badge-nao_reeleito { background: #E6E6E3; color: #4A4A46; border-color: #B4B4AE; }
+.ce-app .badge-outro_eleito { background: #E2D9F3; color: #42306B; border-color: #B3A2D6; }
+.ce-app .badge-outro_disputou { background: #F4E2EC; color: #70304F; border-color: #D9AEC5; }
+.ce-app .badge-sem_candidatura { background: #F0EBE2; color: #5A5148; border-color: #CFC6B8; }
+.ce-app .badge-sem_resultado { background: #FFFFFF; color: #5A5148; border: 1px dashed #8B7F73; }
+.ce-app .badge-falecimento { background: #FFFFFF; color: #26221E; border-color: #26221E; }
+/* Resultado de votação: os mesmos tons do voto Sim e do voto Não. */
+.ce-app .resultado-aprovada { background: #DCE8F6; color: #1F4A80; border-color: #9DBBE0; }
+.ce-app .resultado-rejeitada { background: #F6E9CF; color: #664510; border-color: #D9B878; }
