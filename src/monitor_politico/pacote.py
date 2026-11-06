@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 import sys
 import tarfile
 import tempfile
@@ -32,6 +33,39 @@ class PacoteInvalido(RuntimeError):
     pass
 
 
+CPF_FORMATADO = re.compile(r"\b\d{3}\.\d{3}\.\d{3}-\d{2}\b")
+CPF_EM_NOME = re.compile(r"\b\d{3}\.?\d{3}\.?\d{3}-?\d{2}\b")
+CHAVES_PROIBIDAS = {"cpf", "datanascimento", "nomecivil", "txtpassageiro", "txttrecho", "ds_bem_candidato", "ds_email", "nr_cpf_candidato"}
+
+
+def dados_pessoais_no_documento(documento: Any) -> list[str]:
+    """Última barreira antes de publicar: CPF em qualquer texto, em nome de fornecedor ou campo que nunca deveria estar aqui."""
+    achados: list[str] = []
+
+    def percorrer(valor: Any, chave: str = "") -> None:
+        if isinstance(valor, dict):
+            for nome, item in valor.items():
+                if nome.lower() in CHAVES_PROIBIDAS:
+                    achados.append(f"campo {nome}")
+                percorrer(item, nome)
+        elif isinstance(valor, list):
+            for item in valor:
+                percorrer(item, chave)
+        elif isinstance(valor, str):
+            if CPF_FORMATADO.search(valor) or (chave in ("fornecedor", "fornecedores", "nome") and CPF_EM_NOME.search(valor)):
+                achados.append(f"CPF em {chave or 'texto'}")
+
+    percorrer(documento)
+    return achados
+
+
+def verificar_privacidade(pasta: Path) -> None:
+    for caminho in sorted(pasta.glob("*.json")):
+        achados = dados_pessoais_no_documento(json.loads(caminho.read_text(encoding="utf-8")))
+        if achados:
+            raise PacoteInvalido(f"dados pessoais em {caminho.name}: {sorted(set(achados))[:5]}")
+
+
 def checksum(caminho: Path) -> str:
     resumo = hashlib.sha256()
     with caminho.open("rb") as arquivo:
@@ -41,6 +75,7 @@ def checksum(caminho: Path) -> str:
 
 
 def empacotar(pasta: Path = PASTA_PERFIS, versao: Path = VERSAO, destino: Optional[Path] = None, agora: Optional[datetime] = None) -> Path:
+    verificar_privacidade(pasta)
     agora = agora or datetime.now(timezone.utc)
     nome = f"perfis-{agora:%Y%m%d-%H%M}.tar.gz"
     arquivo = (destino or Path(tempfile.gettempdir())) / nome

@@ -268,7 +268,7 @@ def test_perfil_com_propostas(tmp_path, docs, doc):
     construir(*docs, tmp_path / "site", perfis_ampliados={alvo: {**doc, "id": alvo, "propostas": PROPOSTAS}})
     pagina = (tmp_path / "site" / "deputados" / f"{alvo}.html").read_text(encoding="utf-8")
     assert 'id="propostas"' in pagina and 'href="#propostas"' in pagina
-    assert "propostas de autoria desde 2023, 1 virou lei" in pagina
+    assert "1 proposta de autoria desde 2023, 1 virou lei" in pagina
     assert "Da autoria à lei" in pagina and 'id="autoria"' in pagina
     assert "1 de autoria principal" not in pagina and "1 em coautoria" in pagina
     assert "não medem qualidade nem resultado" in pagina

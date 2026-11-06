@@ -112,6 +112,29 @@ def test_pacote_ida_e_volta_com_checksum(tmp_path):
     assert (destino / "1.json").exists() and (destino / "_cache" / "cache.json").exists()
 
 
+@pytest.mark.parametrize("documento", [
+    {"dinheiro": {"cota": {"comprovantes": [{"fornecedor": "FULANA DE TAL 04970541167"}]}}},
+    {"dinheiro": {"cota": {"fornecedores": [["FULANO 489.909.226-15", 10.0]]}}},
+    {"dinheiro": {"emendas": {"favorecidos": [{"nome": "FULANO 04970541167"}]}}},
+    {"propostas": {"propostas": [{"ementa": "Prisão de Fulano (CPF 750.100.207-00)"}]}},
+    {"cpf": "04970541167"},
+])
+def test_pacote_recusa_dados_pessoais(tmp_path, documento):
+    pasta = tmp_path / "perfis"
+    pasta.mkdir()
+    (pasta / "1.json").write_text(json.dumps(documento), encoding="utf-8")
+    with pytest.raises(pacote.PacoteInvalido):
+        pacote.empacotar(pasta, tmp_path / "versao.json", tmp_path)
+    assert not (tmp_path / "versao.json").exists()
+
+
+def test_pacote_aceita_numeros_que_nao_sao_cpf():
+    assert pacote.dados_pessoais_no_documento({
+        "id": 204534, "fornecedor": "POSTO 12 DE OUTUBRO LTDA", "ementa": "Lei nº 14.786, de 2023; processo 12345678901",
+        "url": "https://www.camara.leg.br/doc/12345678901.pdf",
+    }) == []
+
+
 def test_pacote_com_checksum_errado_e_recusado(tmp_path):
     versao = tmp_path / "versao.json"
     versao.write_text(json.dumps({"nome": "x.tar.gz", "sha256": "abc", "perfis": 1}), encoding="utf-8")
