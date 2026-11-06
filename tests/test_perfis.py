@@ -159,10 +159,13 @@ def test_ler_perfis_sem_pasta(tmp_path):
     assert perfis.ler_perfis(tmp_path / "nao-existe") == {}
 
 
-def test_piloto_restrito_ate_autorizacao_do_rollout():
-    assert perfis.PILOTO == (204534,)
-    guardados = {c.stem for c in Path("data/perfis").glob("*.json")}
-    assert guardados <= {"204534"}
+def test_mandato_pela_legislatura_e_nao_pelo_ano_da_posse():
+    doc = {"trajetoria": [
+        {"tipo": "posse", "data": "2019-02-01", "legislatura": 56},
+        {"tipo": "posse", "data": "2024-05-10", "legislatura": 57},  # suplente assumindo no meio
+        {"tipo": "posse", "data": "2025-03-01", "legislatura": 57},  # e voltando a assumir
+    ]}
+    assert perfis.mandatos_da_trajetoria(doc) == [{"inicio": "2019-02-01", "rotulo": "2019–2023"}, {"inicio": "2024-05-10", "rotulo": "2023–2027"}]
 
 
 @pytest.fixture
@@ -211,6 +214,9 @@ def test_perfil_com_plenario(tmp_path, docs, doc):
     # Proposição com página própria aponta para o site; a ementa longa é cortada na lista.
     assert 'href="../proposicoes/pec-18-2025.html"' in pagina
     assert "x" * 300 not in pagina
+    assert 'data-fragmento="../static/perfis/' in pagina
+    fragmento = (tmp_path / "site" / "static" / "perfis" / f"{alvo}-votos.html").read_text(encoding="utf-8")
+    assert 'data-classe="texto"' in fragmento and 'href="../proposicoes/pec-18-2025.html"' in fragmento
     assert "o que não significa ausência" in pagina
     assert "nem a intenção do parlamentar" in pagina
 
@@ -241,7 +247,7 @@ def test_perfil_com_dinheiro_publico(tmp_path, docs, doc):
     assert "Pagamento não comprova a entrega" in pagina
     assert "Cajamar-SP" in pagina
     assert "static/perfil.js" in pagina
-    assert json.loads((tmp_path / "site" / "static" / "perfis" / f"{alvo}-comprovantes.json").read_text(encoding="utf-8"))[0]["fornecedor"] == "ACME LTDA"
+    assert json.loads((tmp_path / "site" / "static" / "perfis" / f"{alvo}-comprovantes.json").read_text(encoding="utf-8"))["itens"][0][2] == "ACME LTDA"
 
 
 PROPOSTAS = {
@@ -267,13 +273,59 @@ def test_perfil_com_propostas(tmp_path, docs, doc):
     assert "1 de autoria principal" not in pagina and "1 em coautoria" in pagina
     assert "não medem qualidade nem resultado" in pagina
     assert "Lei Ordinária 14786/2023, de 28/12/2023" in pagina and "Com veto parcial" in pagina
-    assert 'data-participacao="apoio"' in pagina and 'data-situacao="sem_situacao"' in pagina
+    assert 'data-situacao="sem_situacao"' in pagina
     assert "Situação não informada na fonte" in pagina
     assert 'href="../proposicoes/pec-18-2025.html"' in pagina
     assert "y" * 400 not in pagina
+    assert 'data-fragmento="../static/perfis/' in pagina
     assert "não pertence a uma pessoa só" in pagina
     assert "quantidade não mede qualidade" in pagina
     assert "static/perfil.js" in pagina
+
+
+def test_perfil_sem_emendas_explica_em_vez_de_mostrar_tabela_vazia(tmp_path, docs, doc):
+    alvo = docs[0]["deputados"][0]["id"]
+    sem = {**DINHEIRO, "emendas": {**DINHEIRO["emendas"], "por_ano": [], "funcoes": [], "destinos": [], "tipos": [], "favorecidos": []}}
+    construir(*docs, tmp_path / "site", perfis_ampliados={alvo: {**doc, "id": alvo, "dinheiro": sem}})
+    pagina = (tmp_path / "site" / "deputados" / f"{alvo}.html").read_text(encoding="utf-8")
+    assert "não traz emendas individuais" in pagina and "Por ano da emenda" not in pagina
+    assert "pagos em emendas" not in pagina
+
+
+def test_build_com_perfis_em_disco_e_imagem(tmp_path, docs, doc):
+    """Como o build de verdade: abre cada perfil só na hora, e quem não tem perfil fica com a página simples."""
+    alvo, outro = docs[0]["deputados"][0]["id"], docs[0]["deputados"][1]["id"]
+    pasta = tmp_path / "perfis"
+    pasta.mkdir()
+    (pasta / f"{alvo}.json").write_text(json.dumps({**doc, "id": alvo, "dinheiro": DINHEIRO, "propostas": PROPOSTAS, "plenario": PLENARIO}), encoding="utf-8")
+    (pasta / f"{alvo}-compartilhar.jpg").write_bytes(b"imagem")
+    construir(*docs, tmp_path / "site", site_url="https://exemplo.org", perfis_ampliados=perfis.PerfisEmDisco(pasta), pasta_imagens=pasta)
+    site = tmp_path / "site"
+    pagina = (site / "deputados" / f"{alvo}.html").read_text(encoding="utf-8")
+    assert f'content="https://exemplo.org/static/perfis/{alvo}-compartilhar.jpg"' in pagina
+    assert (site / "static" / "perfis" / f"{alvo}-compartilhar.jpg").exists()
+    for final in ("votos.html", "propostas.html", "comprovantes.json"):
+        assert (site / "static" / "perfis" / f"{alvo}-{final}").exists()
+    assert 'id="plenario"' not in (site / "deputados" / f"{outro}.html").read_text(encoding="utf-8")
+
+
+def test_eleicao_sem_votos_validos_fica_na_tabela_mas_nao_no_titulo(tmp_path, docs, doc):
+    alvo = docs[0]["deputados"][0]["id"]
+    anulada = {"ano": 2026, "partido": "PL", "uf": "RJ", "situacao": "#NULO", "votos": 0, "total_municipios": 0, "municipios": [], "bens": {"total": 0, "categorias": []}}
+    zerada = {**anulada, "ano": 2018, "situacao": "NÃO ELEITO", "total_municipios": 2, "municipios": [["ACRELÂNDIA", 0]]}
+    valida = {**anulada, "ano": 2022, "situacao": "ELEITO POR QP", "votos": 500, "total_municipios": 1, "municipios": [["NITERÓI", 500]]}
+    construir(*docs, tmp_path / "site", perfis_ampliados={alvo: {**doc, "id": alvo, "eleicoes": [zerada, valida, anulada]}})
+    pagina = (tmp_path / "site" / "deputados" / f"{alvo}.html").read_text(encoding="utf-8")
+    assert "500 votos na eleição de 2022" in pagina and "Votos na eleição de 2022, por município" in pagina
+    assert "Sem resultado informado" in pagina and "#NULO" not in pagina
+
+
+def test_titulo_de_propostas_no_singular_e_sem_leis(tmp_path, docs, doc):
+    alvo = docs[0]["deputados"][0]["id"]
+    uma = {"inicio": "2023-02-01", "por_ano": [], "propostas": [{**PROPOSTAS["propostas"][1], "participacao": "primeira"}]}
+    construir(*docs, tmp_path / "site", perfis_ampliados={alvo: {**doc, "id": alvo, "propostas": uma}})
+    pagina = (tmp_path / "site" / "deputados" / f"{alvo}.html").read_text(encoding="utf-8")
+    assert "1 proposta de autoria desde 2023, nenhuma virou lei" in pagina
 
 
 def test_formato_em_milhoes():

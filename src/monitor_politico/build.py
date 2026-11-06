@@ -28,7 +28,8 @@ PERFIS_PADRAO = Path("data/perfis")
 METRICAS_PADRAO = Path("data/metricas_deputados.json")
 LEGISLATURA_PADRAO = Path("data/legislatura.json")
 ARQUIVO_PADRAO = Path("data/arquivo_deputados.json")
-NOME_DA_IMAGEM = "{id}-compartilhar.png"
+NOME_DA_IMAGEM = "{id}-compartilhar.jpg"
+PREFIXO_COMPROVANTE = "https://www.camara.leg.br/cota-parlamentar/documentos/publ/"
 SAIDA_PADRAO = Path("site")
 FUSO = ZoneInfo("America/Sao_Paulo")
 PACOTE = Path(__file__).parent
@@ -94,7 +95,9 @@ def _gerar_casa(
     perfil: str,
     variavel: str,
     contexto: dict[str, Any],
-    perfis_ampliados: Optional[dict[int, dict[str, Any]]] = None,
+    perfis_ampliados: Any = None,
+    slugs: Optional[dict[str, str]] = None,
+    pasta_imagens: Optional[Path] = None,
 ) -> None:
     pasta.mkdir(parents=True)
     (pasta / "index.html").write_text(
@@ -113,12 +116,53 @@ def _gerar_casa(
         caminho = f"{pasta.name}/{p.id}.html"
         ampliado = perfis_ampliados.get(p.id)
         if ampliado:
-            pagina = env.get_template("perfil_ampliado.html").render(
-                **contexto, caminho=caminho, **{variavel: p}, perfil=ampliado
-            )
+            pagina = _gerar_perfil_ampliado(env, pasta.parent, p, ampliado, {**contexto, "caminho": caminho, variavel: p}, slugs or {}, pasta_imagens)
         else:
             pagina = modelo.render(**contexto, caminho=caminho, **{variavel: p})
         (pasta / f"{p.id}.html").write_text(pagina, encoding="utf-8")
+
+
+def _gerar_perfil_ampliado(
+    env: Environment, saida: Path, deputado: Deputado, doc: dict[str, Any], contexto: dict[str, Any], slugs: dict[str, str], pasta_imagens: Optional[Path]
+) -> str:
+    """Página do perfil completo e os arquivos com as listas longas, baixados só quando alguém as usa."""
+    visao = perfis.visao(doc, slugs=slugs)
+    pasta = saida / "static" / "perfis"
+    pasta.mkdir(exist_ok=True)
+    imagem = (pasta_imagens / NOME_DA_IMAGEM.format(id=deputado.id)) if pasta_imagens else None
+    visao["imagem"] = bool(imagem and imagem.exists())
+    if visao["imagem"]:
+        shutil.copyfile(imagem, pasta / imagem.name)
+    if visao.get("plenario"):
+        (pasta / f"{deputado.id}-votos.html").write_text(
+            "".join(env.get_template("perfil_voto_item.html").render(raiz=contexto["raiz"], v=v) for v in visao["plenario"]["votos"]), encoding="utf-8"
+        )
+    if visao.get("propostas"):
+        (pasta / f"{deputado.id}-propostas.html").write_text(
+            "".join(
+                env.get_template("perfil_proposta_item.html").render(raiz=contexto["raiz"], p=p, palavra_norma=visao["propostas"]["palavra_norma"])
+                for p in visao["propostas"]["propostas"]
+            ),
+            encoding="utf-8",
+        )
+    if doc.get("dinheiro"):
+        (pasta / f"{deputado.id}-comprovantes.json").write_text(
+            json.dumps(comprovantes_compactos(doc["dinheiro"]["cota"]["comprovantes"]), ensure_ascii=False, separators=(",", ":")), encoding="utf-8"
+        )
+    return env.get_template("perfil_ampliado.html").render(**contexto, perfil=visao)
+
+
+def comprovantes_compactos(comprovantes: Sequence[dict[str, Any]]) -> dict[str, Any]:
+    """Listas em vez de objetos, e categorias e endereços abreviados: com 513 deputados, faz diferença."""
+    categorias = sorted({c["categoria"] for c in comprovantes})
+    indice = {nome: i for i, nome in enumerate(categorias)}
+    itens = []
+    for c in comprovantes:
+        url = c["url"] or ""
+        if url.startswith(PREFIXO_COMPROVANTE):
+            url = url[len(PREFIXO_COMPROVANTE):]
+        itens.append([c["mes"], indice[c["categoria"]], c["fornecedor"], c["valor"], url])
+    return {"categorias": categorias, "prefixo": PREFIXO_COMPROVANTE, "itens": itens}
 
 
 def _gerar_legislatura(
@@ -166,10 +210,11 @@ def construir(
     saida: Path = SAIDA_PADRAO,
     doc_resumos: Optional[dict[str, Any]] = None,
     site_url: Optional[str] = None,
-    perfis_ampliados: Optional[dict[int, dict[str, Any]]] = None,
+    perfis_ampliados: Any = None,
     metricas: Optional[dict[str, Any]] = None,
     legislatura: Optional[dict[str, Any]] = None,
     arquivo_deputados: Optional[list[dict[str, Any]]] = None,
+    pasta_imagens: Optional[Path] = None,
 ) -> None:
     env = Environment(
         loader=PackageLoader("monitor_politico", "templates"),
@@ -239,22 +284,8 @@ def construir(
         encoding="utf-8",
     )
     slugs = {p["chave"]: p["slug"] for p in doc_congresso["proposicoes"].values()}
-    visoes_ampliadas = {id_: perfis.visao(doc, slugs=slugs) for id_, doc in (perfis_ampliados or {}).items()}
-    for id_, visao in visoes_ampliadas.items():
-        imagem = PERFIS_PADRAO / NOME_DA_IMAGEM.format(id=id_)
-        visao["imagem"] = imagem.exists()
-        if visao["imagem"]:
-            (saida / "static" / "perfis").mkdir(exist_ok=True)
-            shutil.copyfile(imagem, saida / "static" / "perfis" / imagem.name)
     # Deputado sem registro nas métricas é parte da coleta só se ela existir; o template trata a ausência.
     leis_na_lista = {d.id: modulo_metricas.do_deputado(metricas, d.id) for d in deputados} if metricas else None
-    for id_, doc in (perfis_ampliados or {}).items():
-        if doc.get("dinheiro"):
-            pasta_perfis = saida / "static" / "perfis"
-            pasta_perfis.mkdir(exist_ok=True)
-            (pasta_perfis / f"{id_}-comprovantes.json").write_text(
-                json.dumps(doc["dinheiro"]["cota"]["comprovantes"], ensure_ascii=False, separators=(",", ":")), encoding="utf-8"
-            )
     _gerar_casa(
         env, saida / "deputados", deputados, "perfil_deputado.html", "d",
         {"raiz": "..", "casa": "camara", "titulo": "Deputados federais", "singular": "deputado", "plural": "deputados",
@@ -262,7 +293,9 @@ def construir(
          "atualizado_em": atualizado_camara, "fonte_nome": FONTE_CAMARA[0], "fonte_url": FONTE_CAMARA[1],
          "leis_na_lista": leis_na_lista, "metricas": metricas, "situacoes_eleitorais": situacoes_eleitorais,
          "tem_legislatura": bool(legislatura), "total_anteriores": len(anteriores), "total_eleitos_novos": len(eleitos)},
-        visoes_ampliadas,
+        perfis_ampliados,
+        slugs,
+        pasta_imagens,
     )
     if legislatura:
         _gerar_legislatura(
@@ -289,7 +322,7 @@ if __name__ == "__main__":
     # Os resumos por IA são opcionais: sem o arquivo, as páginas mostram só a ementa oficial.
     doc_res = json.loads(RESUMOS_PADRAO.read_text(encoding="utf-8")) if RESUMOS_PADRAO.exists() else None
     construir(
-        doc_dep, doc_sen, doc_con, destino, doc_res, perfis_ampliados=perfis.ler_perfis(PERFIS_PADRAO),
+        doc_dep, doc_sen, doc_con, destino, doc_res, perfis_ampliados=perfis.PerfisEmDisco(PERFIS_PADRAO), pasta_imagens=PERFIS_PADRAO,
         metricas=modulo_metricas.ler(METRICAS_PADRAO),
         legislatura=modulo_legislatura.ler(LEGISLATURA_PADRAO),
         arquivo_deputados=(modulo_legislatura.ler(ARQUIVO_PADRAO) or {}).get("deputados"),

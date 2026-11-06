@@ -153,6 +153,7 @@ def test_funcao_multipla_tem_nome_legivel():
 
 def test_nome_do_autor_ignora_acentos_e_caixa():
     assert dinheiro.nome_de_autor("Tábata Amaral ") == dinheiro.nome_de_autor("TABATA AMARAL")
+    assert dinheiro.nome_de_autor("DR. FLAVIO (EX-PARLAMENTAR FULANO, NOS TERMOS DA DECISAO ADPF 854)") == dinheiro.nome_de_autor("Dr Flávio")
 
 
 def test_visao_mostra_total_oficial_e_o_que_nao_tem_detalhe(doc):

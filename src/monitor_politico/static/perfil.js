@@ -5,13 +5,37 @@ function listaFiltravel(prefixo, controles, passa, padroes) {
   if (!lista) return;
 
   var POR_VEZ = 15;
-  var itens = Array.prototype.slice.call(lista.children);
+  var itens = null;
+  var pedido = null;
   var contagem = document.getElementById(prefixo + "-contagem");
   var vazio = document.getElementById(prefixo + "-vazio");
   var mais = document.getElementById(prefixo + "-mais");
   var campos = {};
   controles.forEach(function (nome) { campos[nome] = document.getElementById(prefixo + "-" + nome); });
   var limite = POR_VEZ;
+
+  // A página traz só os primeiros itens. A lista completa chega na primeira vez em que alguém a usa.
+  function carregar() {
+    if (!pedido) {
+      pedido = fetch(lista.dataset.fragmento)
+        .then(function (r) {
+          if (!r.ok) throw new Error(String(r.status));
+          return r.text();
+        })
+        .then(function (html) {
+          lista.innerHTML = html;
+          itens = Array.prototype.slice.call(lista.children);
+        })
+        .catch(function (erro) {
+          pedido = null;
+          contagem.textContent = "?";
+          vazio.hidden = false;
+          vazio.querySelector("p").textContent = "Não foi possível carregar a lista completa. Tente novamente.";
+          throw erro;
+        });
+    }
+    return pedido;
+  }
 
   function aplicar() {
     var total = 0;
@@ -25,20 +49,23 @@ function listaFiltravel(prefixo, controles, passa, padroes) {
     mais.hidden = total <= limite;
   }
 
-  controles.forEach(function (nome) {
-    campos[nome].addEventListener("change", function () {
-      limite = POR_VEZ;
-      aplicar();
-    });
-  });
+  function atualizar() {
+    limite = POR_VEZ;
+    carregar().then(aplicar).catch(function () {});
+  }
+
+  controles.forEach(function (nome) { campos[nome].addEventListener("change", atualizar); });
 
   mais.addEventListener("click", function () {
-    // Leva o foco para o primeiro item novo, para quem navega pelo teclado não voltar ao topo da lista.
-    var ocultos = itens.filter(function (li) { return li.hidden && passa(li, campos); });
-    limite += POR_VEZ;
-    aplicar();
-    var primeiro = ocultos[0] && ocultos[0].querySelector("a");
-    if (primeiro) primeiro.focus();
+    var jaVisiveis = limite;
+    carregar().then(function () {
+      limite += POR_VEZ;
+      aplicar();
+      // Leva o foco para o primeiro item novo, para quem navega pelo teclado não voltar ao topo da lista.
+      var filtrados = itens.filter(function (li) { return passa(li, campos); });
+      var primeiro = filtrados[jaVisiveis] && filtrados[jaVisiveis].querySelector("a");
+      if (primeiro) primeiro.focus();
+    }).catch(function () {});
   });
 
   document.getElementById(prefixo + "-limpar").addEventListener("click", function () {
@@ -47,12 +74,12 @@ function listaFiltravel(prefixo, controles, passa, padroes) {
       if (campo.type === "checkbox") campo.checked = false;
       else campo.value = (padroes && padroes[nome]) || "";
     });
-    limite = POR_VEZ;
-    aplicar();
+    vazio.querySelector("p").textContent = "Nenhum item com estes filtros.";
+    atualizar();
     campos[controles[0]].focus();
   });
 
-  aplicar();
+  mais.hidden = Number(contagem.textContent.replace(/\D/g, "")) <= lista.children.length;
 }
 
 listaFiltravel("v", ["classe", "tema", "voto", "contra", "difere"], function (li, c) {
@@ -135,7 +162,12 @@ listaFiltravel("p", ["participacao", "situacao", "mandato", "tema", "tipo"], fun
           if (!r.ok) throw new Error(String(r.status));
           return r.json();
         })
-        .then(function (dados) { todos = dados; })
+        .then(function (dados) {
+          todos = dados.itens.map(function (i) {
+            var url = i[4] ? (i[4].indexOf("http") === 0 ? i[4] : dados.prefixo + i[4]) : null;
+            return { mes: i[0], categoria: dados.categorias[i[1]], fornecedor: i[2], valor: i[3], url: url };
+          });
+        })
         .catch(function () {
           pedido = null;
           contagem.textContent = "Não foi possível carregar a lista completa. Tente novamente.";

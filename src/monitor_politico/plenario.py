@@ -86,19 +86,20 @@ def ementa_atual(ementa: str) -> str:
     return re.split(r"NOVA EMENTA\s*:", ementa, flags=re.IGNORECASE)[-1].strip()
 
 
-def votos_do_mandato(fonte: Any, id_: int, inicio: str, anos: Iterable[int]) -> dict[str, Any]:
-    """Votos do parlamentar nas votações nominais do Plenário desde o início do mandato.
+def votos_de_todos(fonte: Any, ids: Iterable[int], inicio: str, anos: Iterable[int]) -> dict[int, dict[str, Any]]:
+    """Votos de cada parlamentar nas votações nominais do Plenário desde o início do mandato, numa passada só.
 
-    Só os votos do próprio parlamentar são guardados um a um; o restante vira placar.
+    Só os votos dos próprios parlamentares são guardados um a um; o restante vira placar.
     """
     anos = list(anos)
+    alvo = {str(i) for i in ids}
     votacoes = {}
     for ano in anos:
         for v in fonte.linhas("votacoes", ano):
             if v["siglaOrgao"] == ORGAO_PLENARIO and v["data"] >= inicio:
                 votacoes[v["id"]] = v
 
-    registrados: dict[str, dict[str, str]] = {}
+    registrados: dict[str, dict[str, tuple[str, str]]] = defaultdict(dict)
     placares: dict[str, Counter[str]] = defaultdict(Counter)
     for ano in anos:
         for linha in fonte.linhas("votacoesVotos", ano):
@@ -106,19 +107,20 @@ def votos_do_mandato(fonte: Any, id_: int, inicio: str, anos: Iterable[int]) -> 
             if linha["idVotacao"] not in votacoes or not linha["voto"]:
                 continue
             placares[linha["idVotacao"]][linha["voto"]] += 1
-            if linha["deputado_id"] == str(id_):
-                registrados[linha["idVotacao"]] = linha
+            if linha["deputado_id"] in alvo:
+                registrados[linha["deputado_id"]][linha["idVotacao"]] = (linha["voto"], linha["deputado_siglaPartido"])
 
+    com_voto = {i for votos in registrados.values() for i in votos}
     objetos: dict[str, dict[str, str]] = {}
     orientacoes: dict[str, dict[str, str]] = defaultdict(dict)
     for ano in anos:
         for linha in fonte.linhas("votacoesProposicoes", ano):
             id_votacao = linha["idVotacao"]
             # O id da votação começa com o id da proposição votada; as demais só aparecem como relacionadas.
-            if id_votacao in registrados and (id_votacao not in objetos or id_votacao.split("-")[0] == linha["proposicao_id"]):
+            if id_votacao in com_voto and (id_votacao not in objetos or id_votacao.split("-")[0] == linha["proposicao_id"]):
                 objetos[id_votacao] = linha
         for linha in fonte.linhas("votacoesOrientacoes", ano):
-            if linha["idVotacao"] in registrados:
+            if linha["idVotacao"] in com_voto:
                 orientacoes[linha["idVotacao"]][linha["siglaBancada"]] = linha["orientacao"]
 
     temas: dict[str, list[str]] = defaultdict(list)
@@ -128,60 +130,76 @@ def votos_do_mandato(fonte: Any, id_: int, inicio: str, anos: Iterable[int]) -> 
             if linha["tema"] not in temas[id_proposicao]:
                 temas[id_proposicao].append(linha["tema"])
 
-    votos, procedimento = [], Counter()
-    for id_votacao, linha in registrados.items():
-        votacao = votacoes[id_votacao]
-        descricao = limpar_texto(votacao["descricao"])
-        classe = classe_da_votacao(descricao)
-        voto = linha["voto"]
-        if classe == "procedimento":
-            procedimento[voto] += 1
-            continue
-        placar = placares[id_votacao].copy()
-        placar[linha["voto"]] -= 1  # O placar mostrado é o dos demais votos.
-        sim, nao = placar["Sim"], placar["Não"]
-        objeto = objetos.get(id_votacao, {})
-        id_proposicao = objeto.get("proposicao_id") or id_votacao.split("-")[0]
-        votos.append({
-            "id": id_votacao,
-            "data": votacao["data"],
-            "voto": voto,
-            "classe": classe,
-            "proposicao_id": id_proposicao,
-            "sigla": f"{objeto['proposicao_siglaTipo']} {objeto['proposicao_numero']}/{objeto['proposicao_ano']}" if objeto else "",
-            "ementa": limpar_texto(objeto.get("proposicao_ementa")),
-            "descricao": descricao,
-            "sim": sim,
-            "nao": nao,
-            "outros": sum(placar.values()) - sim - nao,
-            "partido": linha["deputado_siglaPartido"],
-            "orientacao": orientacao_do_partido(orientacoes.get(id_votacao, {}), linha["deputado_siglaPartido"]),
-            "temas": sorted(temas.get(id_proposicao, [])),
-        })
-    votos.sort(key=lambda v: (v["data"], v["id"]), reverse=True)
-    return {
-        "inicio": inicio,
-        "votacoes_nominais": len({i for i in votacoes if placares[i]}),
-        "votos_registrados": len(registrados),
-        "procedimento": dict(procedimento),
-        "votos": votos,
-    }
+    nominais = len({i for i in votacoes if placares[i]})
+    resultado = {}
+    for id_ in ids:
+        votos, procedimento = [], Counter()
+        for id_votacao, (voto, partido) in registrados.get(str(id_), {}).items():
+            votacao = votacoes[id_votacao]
+            descricao = limpar_texto(votacao["descricao"])
+            classe = classe_da_votacao(descricao)
+            if classe == "procedimento":
+                procedimento[voto] += 1
+                continue
+            placar = placares[id_votacao].copy()
+            placar[voto] -= 1  # O placar mostrado é o dos demais votos.
+            sim, nao = placar["Sim"], placar["Não"]
+            objeto = objetos.get(id_votacao, {})
+            id_proposicao = objeto.get("proposicao_id") or id_votacao.split("-")[0]
+            votos.append({
+                "id": id_votacao,
+                "data": votacao["data"],
+                "voto": voto,
+                "classe": classe,
+                "proposicao_id": id_proposicao,
+                "sigla": f"{objeto['proposicao_siglaTipo']} {objeto['proposicao_numero']}/{objeto['proposicao_ano']}" if objeto else "",
+                "ementa": limpar_texto(objeto.get("proposicao_ementa")),
+                "descricao": descricao,
+                "sim": sim,
+                "nao": nao,
+                "outros": sum(placar.values()) - sim - nao,
+                "partido": partido,
+                "orientacao": orientacao_do_partido(orientacoes.get(id_votacao, {}), partido),
+                "temas": sorted(temas.get(id_proposicao, [])),
+            })
+        votos.sort(key=lambda v: (v["data"], v["id"]), reverse=True)
+        resultado[id_] = {
+            "inicio": inicio,
+            "votacoes_nominais": nominais,
+            "votos_registrados": len(registrados.get(str(id_), {})),
+            "procedimento": dict(procedimento),
+            "votos": votos,
+        }
+    return resultado
+
+
+def votos_do_mandato(fonte: Any, id_: int, inicio: str, anos: Iterable[int]) -> dict[str, Any]:
+    return votos_de_todos(fonte, [id_], inicio, anos)[id_]
+
+
+def outros_eventos_de_todos(fonte: Any, ids: Iterable[int], inicio: str, anos: Iterable[int]) -> dict[int, dict[int, int]]:
+    """Reuniões, audiências e outros eventos encerrados com presença, por parlamentar e por ano."""
+    alvo = {str(i) for i in ids}
+    contagem: dict[int, dict[int, int]] = {int(i): {} for i in alvo}
+    for ano in anos:
+        eventos = {e["id"]: e for e in fonte.linhas("eventos", ano)}
+        for linha in fonte.linhas("eventosPresencaDeputados", ano):
+            if linha["idDeputado"] not in alvo:
+                continue
+            evento = eventos.get(linha["idEvento"])
+            if (
+                evento and evento["situacao"].startswith("Encerrada")
+                and evento["descricaoTipo"] != SESSAO_DELIBERATIVA and evento["dataHoraInicio"][:10] >= inicio
+            ):
+                por_ano = contagem[int(linha["idDeputado"])]
+                por_ano[ano] = por_ano.get(ano, 0) + 1
+    return contagem
 
 
 def presenca_do_mandato(fonte: Any, id_: int, inicio: str, anos: Iterable[int]) -> dict[str, Any]:
-    por_ano = []
-    for ano in anos:
-        eventos = {e["id"]: e for e in fonte.linhas("eventos", ano)}
-        outros = 0
-        for linha in fonte.linhas("eventosPresencaDeputados", ano):
-            evento = eventos.get(linha["idEvento"])
-            if (
-                linha["idDeputado"] == str(id_) and evento and evento["situacao"].startswith("Encerrada")
-                and evento["descricaoTipo"] != SESSAO_DELIBERATIVA and evento["dataHoraInicio"][:10] >= inicio
-            ):
-                outros += 1
-        por_ano.append({"ano": ano, **fonte.relatorio_de_presenca(id_, ano), "outros_eventos": outros})
-    return {"por_ano": por_ano}
+    anos = list(anos)
+    outros = outros_eventos_de_todos(fonte, [id_], inicio, anos)[id_]
+    return {"por_ano": [{"ano": ano, **fonte.relatorio_de_presenca(id_, ano), "outros_eventos": outros.get(ano, 0)} for ano in anos]}
 
 
 class ArquivosCamara:
@@ -227,6 +245,7 @@ def coletar(fonte: Any, id_: int, inicio: str, hoje: date) -> dict[str, Any]:
 
 # --- O que a página mostra
 
+ITENS_NA_PAGINA = 15  # O restante da lista é baixado quando alguém usa os filtros.
 ROTULOS_CLASSE = {"texto": "Texto principal", "ajuste": "Emendas, destaques e recursos"}
 
 
@@ -280,7 +299,7 @@ def visao(doc: dict[str, Any], slugs: Optional[dict[str, str]] = None) -> dict[s
         temas.append({"tema": tema, **contagem, "barra": _largura(contagem)})
     com_orientacao = [v for v in texto if v["orientacao"] in ("Sim", "Não") and v["voto"] in ("Sim", "Não")]
     totais_presenca = {
-        chave: sum(a[chave] for a in presenca["por_ano"])
+        chave: sum(a.get(chave, 0) for a in presenca["por_ano"])
         for chave in ("dias", "presencas", "justificadas", "nao_justificadas", "outros_eventos")
     }
     return {
@@ -289,6 +308,7 @@ def visao(doc: dict[str, Any], slugs: Optional[dict[str, str]] = None) -> dict[s
         "sem_registro": dados["votacoes_nominais"] - dados["votos_registrados"],
         "inicio": dados["inicio"],
         "votos": votos,
+        "votos_iniciais": texto[:ITENS_NA_PAGINA],
         "todos": {**todos, "barra": _largura(todos)},
         "texto": {**contar(texto), "barra": _largura(contar(texto))},
         "total_texto": len(texto),

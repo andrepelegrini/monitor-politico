@@ -1,12 +1,9 @@
-"""Coleta do perfil ampliado de parlamentar: eleições, bens, trajetória e comissões.
+"""Perfil completo de parlamentar: eleições, bens, trajetória e comissões, e o que a página mostra.
 
-Piloto: só os IDs de PILOTO têm perfil ampliado até o rollout ser autorizado. A coleta é manual e
-fica fora do robô diário, porque os arquivos do TSE são grandes e mudam pouco.
+A coleta de todos, numa passada só, está em lote.py.
 
 O CPF liga os registros da Câmara aos do TSE. Ele é usado só em memória: como nos outros modelos,
 apenas os campos declarados aqui chegam ao JSON. A descrição livre de cada bem não é guardada.
-
-Uso: python -m monitor_politico.perfis [pasta_saida]
 """
 
 from __future__ import annotations
@@ -27,7 +24,6 @@ import httpx
 from monitor_politico import dinheiro, plenario, propostas
 from monitor_politico.camara import ClienteCamara
 
-PILOTO = (204534,)  # Tabata Amaral
 ELEICOES = (2018, 2022, 2026)
 SAIDA_PADRAO = Path("data/perfis")
 CARGO_DEPUTADO = "DEPUTADO FEDERAL"
@@ -231,7 +227,22 @@ def coletar_perfil(
     }
 
 
+class PerfisEmDisco:
+    """Abre o perfil só na hora de gerar a página: os 513 juntos não precisam ficar em memória."""
+
+    def __init__(self, pasta: Path) -> None:
+        self.pasta = pasta
+
+    def get(self, id_: int) -> Optional[dict[str, Any]]:
+        caminho = self.pasta / f"{id_}.json"
+        return json.loads(caminho.read_text(encoding="utf-8")) if caminho.exists() else None
+
+    def __bool__(self) -> bool:
+        return self.pasta.is_dir() and any(self.pasta.glob("*.json"))
+
+
 def ler_perfis(pasta: Path) -> dict[int, dict[str, Any]]:
+    """Todos de uma vez, para scripts. O build usa PerfisEmDisco."""
     if not pasta.is_dir():
         return {}
     documentos = (json.loads(c.read_text(encoding="utf-8")) for c in sorted(pasta.glob("*.json")))
@@ -246,6 +257,8 @@ RESULTADOS = {
     "ELEITO POR MÉDIA": "Por média",
     "SUPLENTE": "Suplência",
     "NÃO ELEITO": "Sem vaga",
+    "#NULO": "Sem resultado informado",
+    "#NULO#": "Sem resultado informado",
 }
 
 
@@ -310,8 +323,16 @@ def proximo_mandato(doc: dict[str, Any], hoje: date) -> Optional[dict[str, Any]]
 
 def mandatos_da_trajetoria(doc: dict[str, Any]) -> list[dict[str, str]]:
     """Mandatos pelas posses, do mais antigo para o mais recente. Cada um vai até o início do seguinte."""
-    posses = [e for e in doc["trajetoria"] if e["tipo"] == "posse"]
-    return [{"inicio": e["data"], "rotulo": f"{e['data'][:4]}–{int(e['data'][:4]) + 4}"} for e in posses]
+    posses = sorted((e for e in doc["trajetoria"] if e["tipo"] == "posse"), key=lambda e: e["data"])
+    mandatos, vistas = [], set()
+    for posse in posses:
+        if posse["legislatura"] in vistas:
+            continue  # Quem assume e volta a assumir como suplente continua no mesmo mandato.
+        vistas.add(posse["legislatura"])
+        # A 57ª legislatura começou em 2023 e cada uma dura 4 anos. Quem assume no meio entra no mandato inteiro.
+        ano = 2023 + (posse["legislatura"] - 57) * 4
+        mandatos.append({"inicio": posse["data"], "rotulo": f"{ano}–{ano + 4}"})
+    return mandatos
 
 
 def visao(doc: dict[str, Any], hoje: Optional[date] = None, slugs: Optional[dict[str, str]] = None) -> dict[str, Any]:
@@ -321,12 +342,16 @@ def visao(doc: dict[str, Any], hoje: Optional[date] = None, slugs: Optional[dict
     eleicoes = sorted(doc["eleicoes"], key=lambda e: e["ano"], reverse=True)
     com_bens = [e for e in eleicoes if e["bens"]["categorias"]]
     maior_bem = max((e["bens"]["total"] for e in com_bens), default=0) or 1
-    recente = eleicoes[0] if eleicoes else None
+    # Eleição sem votos válidos (candidatura anulada, por exemplo) fica na tabela, mas não no título nem no gráfico.
+    com_votos = [e for e in eleicoes if e["votos"] > 0]
+    recente = com_votos[0] if com_votos else None
     return {
         **doc,
         "coleta_local": coleta_local.isoformat(),
         "eleicoes": [{**e, "resultado": RESULTADOS.get(e["situacao"], e["situacao"].capitalize())} for e in eleicoes],
         "eleicao_recente": recente,
+        "votos_validos": [e["votos"] for e in com_votos],
+        "ano_unica_eleicao": com_votos[0]["ano"] if len(com_votos) == 1 else None,
         "maior_voto_municipio": recente["municipios"][0][1] if recente and recente["municipios"] else 1,
         "com_bens": [{**e, "largura": round(e["bens"]["total"] / maior_bem * 100, 1)} for e in sorted(com_bens, key=lambda e: e["ano"])],
         "variacoes": variacoes_de_bens(eleicoes),
@@ -368,13 +393,3 @@ def diferenca(valor: float) -> str:
 
 def nome_proprio(texto: str) -> str:
     return " ".join(p.capitalize() if p.lower() not in {"de", "do", "da", "dos", "das", "e"} else p.lower() for p in texto.split())
-
-
-if __name__ == "__main__":
-    destino = Path(sys.argv[1]) if len(sys.argv) > 1 else SAIDA_PADRAO
-    destino.mkdir(parents=True, exist_ok=True)
-    camara, tse, arquivos_camara, financas_camara = ClienteCamara(), FonteTSE(), plenario.ArquivosCamara(), dinheiro.FonteDinheiro()
-    for id_parlamentar in PILOTO:
-        perfil = coletar_perfil(id_parlamentar, camara, tse, arquivos=arquivos_camara, financas=financas_camara)
-        (destino / f"{id_parlamentar}.json").write_text(json.dumps(perfil, ensure_ascii=False, indent=2), encoding="utf-8")
-        print(f"Perfil {id_parlamentar}: {len(perfil['eleicoes'])} eleições, {len(perfil['comissoes'])} comissões")

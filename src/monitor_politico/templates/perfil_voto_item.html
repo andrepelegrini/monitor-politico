@@ -1,0 +1,22 @@
+<li data-classe="{{ v.classe }}" data-voto="{{ v.voto }}" data-temas="{{ v.temas|join('|') }}"{% if v.contra %} data-contra="1"{% endif %}{% if v.difere %} data-difere="1"{% endif %}>
+  <div>
+    <div class="pf-voto-meta">
+      <span>{{ v.data|data_br }}</span>
+      {% if v.slug %}<a href="../proposicoes/{{ v.slug }}.html">{{ v.sigla }}</a>{% else %}<a href="https://www.camara.leg.br/propostas-legislativas/{{ v.proposicao_id }}">{{ v.sigla or "Proposição" }}</a>{% endif %}
+      {% if v.contra %}<span class="ce-badge ce-badge--outline">Lado menos votado</span>{% endif %}
+      {% if v.difere %}<span class="ce-badge ce-badge--outline">Diferente da orientação do partido</span>{% endif %}
+    </div>
+    <p class="pf-voto-texto">{{ (v.ementa or v.descricao)|truncate(190, true, "…", 0) }}</p>
+    <details class="pf-detalhes pf-detalhes--voto">
+      <summary>O que foi votado</summary>
+      <p>{{ v.descricao }}</p>
+      <p>Orientação do {{ v.partido }}: {{ v.orientacao or "não publicada separadamente" }}.</p>
+      <a href="https://dadosabertos.camara.leg.br/api/v2/votacoes/{{ v.id }}">Votação na fonte oficial</a>
+    </details>
+  </div>
+  <div class="pf-voto-posicao">
+    <span class="pf-voto-rotulo"><span class="ce-dot {{ 'ce-vote-yes' if v.voto == 'Sim' else 'ce-vote-no' if v.voto == 'Não' else 'ce-vote-other' }}"></span>{% if v.voto in ("Sim", "Não") %}Votou {{ v.voto }}{% else %}{{ v.voto }}{% endif %}</span>
+    <div class="ce-vote-bar" aria-hidden="true"><span class="ce-vote-yes" style="width: {{ v.barra.sim }}%"></span><span class="ce-vote-no" style="width: {{ v.barra.nao }}%"></span>{% if v.outros %}<span class="ce-vote-other" style="width: {{ v.barra.outros }}%"></span>{% endif %}</div>
+    <span>Demais votos: {{ v.sim }} Sim · {{ v.nao }} Não{% if v.outros %} · {{ v.outros }} {{ "outro" if v.outros == 1 else "outros" }}{% endif %}</span>
+  </div>
+</li>

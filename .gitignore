@@ -5,3 +5,6 @@ __pycache__/
 
 # Gerado no build (Vercel)
 site/
+
+# Perfis completos: ficam no pacote anexado à release dados-perfis (veja pacote.py)
+data/perfis/

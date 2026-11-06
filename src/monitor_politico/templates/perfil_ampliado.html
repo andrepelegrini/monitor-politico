@@ -2,7 +2,7 @@
 {% block titulo %}{{ d.nome }} ({{ d.partido }}-{{ d.uf }}) · Monitor Político{% endblock %}
 {% block og_titulo %}{{ d.nome }} ({{ d.partido }}-{{ d.uf }}) · Câmara dos Deputados{% endblock %}
 {% block descricao %}{{ d.nome }} ({{ d.partido }}-{{ d.uf }}):{% if perfil.plenario %} {{ perfil.plenario.votos_registrados|numero }} votos registrados, presença em {{ perfil.plenario.presenca.total.presencas|numero }} de {{ perfil.plenario.presenca.total.dias|numero }} dias com sessão,{% endif %}{% if perfil.dinheiro %} cota parlamentar, emendas,{% endif %}{% if perfil.propostas %} {{ perfil.propostas.total_autoria_propostas|numero }} propostas de autoria e {{ perfil.propostas.normas|length }} que viraram {{ perfil.propostas.palavra_norma }},{% endif %} com dados abertos oficiais.{% endblock %}
-{% block og_imagem %}{% if perfil.imagem %}perfis/{{ d.id }}-compartilhar.png{% else %}compartilhar.png{% endif %}{% endblock %}
+{% block og_imagem %}{% if perfil.imagem %}perfis/{{ d.id }}-compartilhar.jpg{% else %}compartilhar.png{% endif %}{% endblock %}
 {% block conteudo %}
 <nav class="ce-breadcrumb" aria-label="Trilha de navegação">
   <ol>
@@ -56,11 +56,11 @@
 
 <section class="pf-secao" id="quem-e">
   <p class="ce-eyebrow">Quem é</p>
-  {% set votos = perfil.eleicoes|map(attribute="votos")|list %}
+  {% set votos = perfil.votos_validos %}
   {% if votos|length > 1 %}
   <h2 class="pf-h2">{{ votos|length }} eleições, de {{ votos|min|numero }} a {{ votos|max|numero }} votos</h2>
   {% elif votos %}
-  <h2 class="pf-h2">{{ votos[0]|numero }} votos na eleição de {{ perfil.eleicoes[0].ano }}</h2>
+  <h2 class="pf-h2">{{ votos[0]|numero }} votos na eleição de {{ perfil.ano_unica_eleicao }}</h2>
   {% else %}
   <h2 class="pf-h2">Trajetória na Câmara</h2>
   {% endif %}

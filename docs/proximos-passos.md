@@ -17,34 +17,22 @@ Ideias soltas anotadas durante o uso ficam em [notes.txt](../notes.txt).
 - [ ] Cadastrar o secret `ANTHROPIC_API_KEY` no GitHub (Settings → Secrets and variables → Actions) para os resumos por IA serem gerados na coleta diária. A IA ficou para depois, talvez numa versão paga, então isso não é urgente.
 - [ ] Conferir a pré-visualização ao compartilhar: colar o link de uma página no WhatsApp. Se não aparecer imagem, cadastrar `SITE_URL` com o domínio do site nas variáveis de ambiente do projeto na Vercel.
 
-## Em andamento: novo perfil de parlamentar (branch `perfil-piloto`)
+## Em andamento: perfil completo para todos
 
-Piloto só na página de Tabata Amaral (id 204534). Nenhum outro parlamentar recebe o perfil novo sem autorização: `perfis.PILOTO` e um teste travam isso, e as demais páginas continuam com os templates atuais.
-
-- [x] Etapa 0: estrutura e mock.
-- [x] Etapa 1: Quem é (eleições, votos por município, bens, trajetória e comissões).
-- [x] Etapa 2: atuação em Plenário (votos e presença).
-- [x] Etapa 3: dinheiro público (cota e emendas).
-- [x] Etapa 4: propostas e leis, desde o primeiro mandato, com o painel "Da autoria à lei".
-- [x] Etapa 5: leitura e compartilhamento. Aguardando validação.
-- [x] Piloto publicado em 05/11/2026.
-- [ ] 6C, legislatura de 2027 (branch `rollout-2027`): badges da eleição de 2026, páginas dos eleitos, páginas de quem está fora de exercício e saída automática para o arquivo. Aguardando validação.
-- [ ] 6A, perfil completo para os deputados, com coleta automática. Falta decidir onde guardar os dados detalhados.
+- [x] Piloto com Tabata Amaral e publicação, em 05/11/2026.
+- [x] 6C, legislatura de 2027: badges, eleitos e quem está fora de exercício.
+- [ ] 6A, perfil completo para os deputados em exercício (branch `rollout-6a`). Aguardando validação.
 - [ ] 6B, senadores.
 
-As cores dos badges e dos resultados de votação estão em `static/estilo.css`, e foram aprovadas em 06/11/2026. São categorias, sem verde e vermelho como certo e errado.
+Como funciona: `lote.py` coleta todos numa passada só e `pacote.py` empacota em um anexo da release `dados-perfis`, porque são centenas de MB que mudam toda semana. O Git guarda só `data/perfis_versao.json`, com o nome e o checksum. O build da Vercel baixa essa versão, e se o download falhar o build falha e o site continua como está. O robô `perfis.yml` faz isso toda segunda. Rodar à mão: `gh workflow run perfis.yml`.
 
-Na posse, em 01/02/2027: trocar `INICIO_MANDATO` em `metricas.py` e `LEGISLATURA_ATUAL`, `ANO_DA_ELEICAO` e `POSSE` em `legislatura.py`, rodar as coletas manuais e ligar as páginas dos eleitos (`deputados/eleitos/`) aos novos perfis, com redirecionamento. A coleta diária já move para o arquivo quem sair da lista de exercício.
-
-Cuidado com a cota: os arquivos abertos da Câmara oscilam. Em 04/11/2026 traziam as passagens aéreas do SIGEPA até julho de 2025; em 05/11/2026, em nenhum ano. Por isso o total vem da página oficial do deputado, e o que falta no arquivo aparece como "sem detalhamento".
-
-Autorizado também em 05/11/2026: leis de autoria principal e coautoria na lista de deputados, para todos, com ordenação. Comparar é desejado quando a métrica é objetiva. O número vem de `data/metricas_deputados.json` (coleta manual: `.venv/bin/python -m monitor_politico.metricas`, que leva bastante tempo), e o restante do perfil novo segue só no piloto. Trocar `INICIO_MANDATO` em `metricas.py` na posse de 2027.
+Cuidado com a cota: os arquivos abertos da Câmara oscilam. As passagens aéreas do SIGEPA estavam lá em 04/11/2026, sumiram em 05/11 e voltaram em 06/11. Por isso o total vem da página oficial do deputado, e o que falta no arquivo aparece como "sem detalhamento".
 
 Propostas de campanha: o TSE só recebe proposta de governo de candidaturas a presidente, governador e prefeito. Deputados e senadores não registram proposta nenhuma, então essa comparação depende de outra fonte, a definir.
 
-A imagem de compartilhamento do perfil é gerada à parte, depois da coleta: `.venv/bin/python -m monitor_politico.compartilhar` (precisa da CLI do Playwright). Ela guarda os números da data da coleta.
+As cores dos badges e dos resultados de votação estão em `static/estilo.css`, e foram aprovadas em 06/11/2026. São categorias, sem verde e vermelho como certo e errado. Comparar parlamentares é desejado quando a métrica é objetiva.
 
-Atualizar os dados do piloto: `.venv/bin/python -m monitor_politico.perfis` (leva alguns minutos e fica fora do robô diário).
+Na posse, em 01/02/2027: trocar `INICIO_MANDATO` em `metricas.py` e `LEGISLATURA_ATUAL`, `ANO_DA_ELEICAO` e `POSSE` em `legislatura.py`, rodar as coletas manuais e ligar as páginas dos eleitos (`deputados/eleitos/`) aos novos perfis, com redirecionamento. A coleta diária já move para o arquivo quem sair da lista de exercício.
 
 ## Backlog (features sem IA)
 

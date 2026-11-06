@@ -1,7 +1,8 @@
 {% set a = perfil.propostas %}
+{% set norma_sem_numero = a.norma_sem_numero %}
 <section class="pf-secao" id="propostas">
   <p class="ce-eyebrow">Propostas e leis</p>
-  <h2 class="pf-h2">{{ a.total_autoria_propostas|numero }} propostas de autoria desde {{ a.ano_inicial }}, {{ a.normas|length }} {{ "virou" if a.normas|length == 1 else "viraram" }} {{ a.palavra_norma }}</h2>
+  <h2 class="pf-h2">{{ a.total_autoria_propostas|numero }} {{ "proposta" if a.total_autoria_propostas == 1 else "propostas" }} de autoria desde {{ a.ano_inicial }}, {% if a.normas %}{{ a.normas|length }} {{ "virou" if a.normas|length == 1 else "viraram" }} {{ a.palavra_norma }}{% else %}nenhuma virou lei{% endif %}</h2>
 
   <div class="pf-caminho" id="autoria">
     <h3 class="pf-h3">Da autoria à {{ a.palavra_norma }}</h3>
@@ -106,25 +107,16 @@
       </select></label>
   </div>
   <p class="ce-count"><span id="p-contagem">{{ a.total|numero }}</span> propostas, da mais recente para a mais antiga.</p>
-  <ul class="pf-propostas" id="p-lista">
-    {% for p in a.propostas %}
-    <li data-tipo="{{ p.tipo }}" data-temas="{{ p.temas|join('|') }}" data-participacao="{{ p.participacao }}" data-situacao="{{ p.grupo }}" data-mandato="{{ p.mandato }}">
-      <p class="pf-voto-meta">
-        <span>{{ p.data|data_br }}</span>
-        {% if p.slug %}<a href="../proposicoes/{{ p.slug }}.html">{{ p.sigla }}</a>{% else %}<a href="https://www.camara.leg.br/propostas-legislativas/{{ p.id }}">{{ p.sigla }}</a>{% endif %}
-        <span class="ce-badge ce-badge--outline">{{ p.rotulo_participacao }}</span>
-        {% if p.grupo == "norma" %}<span class="ce-badge">Virou {{ a.palavra_norma }}</span>{% endif %}
-      </p>
-      <p class="pf-voto-texto">{{ p.ementa|truncate(240, true, "…", 0) }}</p>
-      <p class="pf-nota">{% if p.situacao %}{{ p.situacao }}{% if p.data_situacao %}, em {{ p.data_situacao|data_br }}{% endif %}{% else %}Situação não informada na fonte{% endif %}.</p>
-    </li>
-    {% endfor %}
+  <ul class="pf-propostas" id="p-lista" data-fragmento="{{ raiz }}/static/perfis/{{ d.id }}-propostas.html">
+    {% set palavra_norma = a.palavra_norma %}
+    {% for p in a.propostas_iniciais %}{% include "perfil_proposta_item.html" %}{% endfor %}
   </ul>
   <div class="ce-state-box pf-espaco" id="p-vazio" hidden>
     <p>Nenhuma proposta com estes filtros.</p>
     <button class="ce-button ce-button--ghost" id="p-limpar" type="button">Limpar filtros</button>
   </div>
   <button class="ce-button ce-button--ghost pf-mais" id="p-mais" type="button" hidden>Mostrar mais propostas</button>
+  <noscript><p class="pf-nota">Sem JavaScript, esta lista mostra só as propostas mais recentes.</p></noscript>
 
   <div class="ce-table-scroll pf-espaco" tabindex="0" role="region" aria-label="Autoria e relatoria por ano">
     <table class="ce-table pf-tabela">

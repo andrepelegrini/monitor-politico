@@ -17,7 +17,7 @@ import io
 import re
 import unicodedata
 import zipfile
-from collections import Counter
+from collections import Counter, defaultdict
 from typing import Any, Iterable, Iterator, Optional
 
 import httpx
@@ -91,95 +91,118 @@ def fornecedor_publico(nome: str, documento: str) -> tuple[str, Optional[str]]:
     return nome.strip(), digitos if len(digitos) == TAMANHO_CNPJ else None
 
 
-def cota_do_mandato(fonte: Any, id_: int, legislatura: int, anos: Iterable[int]) -> dict[str, Any]:
-    categorias: Counter[str] = Counter()
-    fornecedores: Counter[str] = Counter()
-    nomes: dict[str, str] = {}
-    comprovantes = []
-    por_ano = []
+def cota_de_todos(fonte: Any, ids: Iterable[int], legislatura: int, anos: Iterable[int]) -> dict[int, dict[str, Any]]:
+    """Categorias, fornecedores e comprovantes de cada parlamentar, numa passada só. O total oficial entra depois."""
+    alvo = {str(i) for i in ids}
+    categorias: dict[str, Counter[str]] = defaultdict(Counter)
+    fornecedores: dict[str, Counter[str]] = defaultdict(Counter)
+    nomes: dict[str, dict[str, str]] = defaultdict(dict)
+    comprovantes: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    detalhado: dict[str, Counter[int]] = defaultdict(Counter)
+    anos = list(anos)
     for ano in anos:
-        detalhado = 0.0
         for linha in fonte.cota(ano):
-            if linha["ideCadastro"] != str(id_) or linha["codLegislatura"] != str(legislatura):
+            pessoa = linha["ideCadastro"]
+            if pessoa not in alvo or linha["codLegislatura"] != str(legislatura):
                 continue
             valor = _ponto(linha["vlrLiquido"])
             categoria = CATEGORIAS.get(linha["txtDescricao"], linha["txtDescricao"].capitalize().rstrip("."))
             nome, chave = fornecedor_publico(linha["txtFornecedor"], linha["txtCNPJCPF"])
-            categorias[categoria] += valor
-            detalhado += valor
+            categorias[pessoa][categoria] += valor
+            detalhado[pessoa][ano] += valor
             if chave:
-                fornecedores[chave] += valor
-                nomes[chave] = nome
-            comprovantes.append({
+                fornecedores[pessoa][chave] += valor
+                nomes[pessoa][chave] = nome
+            comprovantes[pessoa].append({
                 "mes": f"{linha['numAno']}-{int(linha['numMes']):02d}",
                 "categoria": categoria,
                 "fornecedor": nome,
                 "valor": round(valor, 2),
                 "url": linha["urlDocumento"] or None,
             })
-        por_ano.append({"ano": ano, **fonte.cota_oficial(id_, ano), "detalhado": round(detalhado, 2)})
-    comprovantes.sort(key=lambda c: (-c["valor"], c["mes"]))
-    # Primeiro por CNPJ, porque o mesmo CNPJ vem com grafias diferentes; depois pelo nome, porque uma
-    # empresa individual pode ter mais de um CNPJ.
-    por_nome: Counter[str] = Counter()
-    nome_exibido: dict[str, str] = {}
-    for chave, valor in fornecedores.items():
-        normalizado = _sem_acento(nomes[chave])
-        por_nome[normalizado] += valor
-        nome_exibido[normalizado] = nomes[chave]
-    return {
-        "por_ano": por_ano,
-        "categorias": [[nome, round(valor, 2)] for nome, valor in categorias.most_common()],
-        "fornecedores": [[nome_exibido[chave], round(valor, 2)] for chave, valor in por_nome.most_common(10)],
-        "total_fornecedores": len(por_nome),
-        "comprovantes": comprovantes,
-    }
+    resultado = {}
+    for id_ in ids:
+        pessoa = str(id_)
+        comprovantes[pessoa].sort(key=lambda c: (-c["valor"], c["mes"]))
+        # Primeiro por CNPJ, porque o mesmo CNPJ vem com grafias diferentes; depois pelo nome, porque uma
+        # empresa individual pode ter mais de um CNPJ.
+        por_nome: Counter[str] = Counter()
+        nome_exibido: dict[str, str] = {}
+        for chave, valor in fornecedores[pessoa].items():
+            normalizado = _sem_acento(nomes[pessoa][chave])
+            por_nome[normalizado] += valor
+            nome_exibido[normalizado] = nomes[pessoa][chave]
+        resultado[id_] = {
+            "detalhado_por_ano": {ano: round(detalhado[pessoa][ano], 2) for ano in anos},
+            "categorias": [[nome, round(valor, 2)] for nome, valor in categorias[pessoa].most_common()],
+            "fornecedores": [[nome_exibido[chave], round(valor, 2)] for chave, valor in por_nome.most_common(10)],
+            "total_fornecedores": len(por_nome),
+            "comprovantes": comprovantes[pessoa],
+        }
+    return resultado
+
+
+def cota_do_mandato(fonte: Any, id_: int, legislatura: int, anos: Iterable[int]) -> dict[str, Any]:
+    anos = list(anos)
+    cota = cota_de_todos(fonte, [id_], legislatura, anos)[id_]
+    detalhado = cota.pop("detalhado_por_ano")
+    return {"por_ano": [{"ano": ano, **fonte.cota_oficial(id_, ano), "detalhado": detalhado[ano]} for ano in anos], **cota}
 
 
 def nome_de_autor(nome: str) -> str:
-    return _sem_acento(nome)
+    """Compara nomes sem acento e pontuação. O portal registra casos como "DR. FLAVIO (EX-PARLAMENTAR FULANO, NOS TERMOS DA...)"."""
+    return re.sub(r"[^A-Z ]", "", _sem_acento(nome.split("(")[0])).strip()
 
 
-def emendas_do_mandato(linhas: Iterable[dict[str, str]], favorecidos: Iterable[dict[str, str]], autor: str, ano_inicial: int) -> dict[str, Any]:
-    alvo = nome_de_autor(autor)
-    por_ano: dict[str, Counter[str]] = {}
-    funcoes: Counter[str] = Counter()
-    tipos: Counter[str] = Counter()
-    destinos: Counter[str] = Counter()
+def emendas_de_todos(linhas: Iterable[dict[str, str]], favorecidos: Iterable[dict[str, str]], autores: dict[str, int], ano_inicial: int) -> dict[int, dict[str, Any]]:
+    """Emendas individuais de cada parlamentar. `autores` liga o nome normalizado do autor ao id da Câmara."""
+    por_ano: dict[int, dict[str, Counter[str]]] = defaultdict(dict)
+    funcoes: dict[int, Counter[str]] = defaultdict(Counter)
+    tipos: dict[int, Counter[str]] = defaultdict(Counter)
+    destinos: dict[int, Counter[str]] = defaultdict(Counter)
     for linha in linhas:
+        id_ = autores.get(nome_de_autor(linha["Nome do Autor da Emenda"]))
         ano = linha["Ano da Emenda"]
-        if nome_de_autor(linha["Nome do Autor da Emenda"]) != alvo or int(ano) < ano_inicial:
+        if id_ is None or int(ano) < ano_inicial:
             continue
-        etapas = por_ano.setdefault(ano, Counter())
+        etapas = por_ano[id_].setdefault(ano, Counter())
         for chave, coluna in ETAPAS_EMENDA.items():
             etapas[chave] += _virgula(linha[coluna])
         pago = _virgula(linha["Valor Pago"]) + _virgula(linha["Valor Restos A Pagar Pagos"])
-        funcoes[FUNCOES.get(linha["Nome Função"], linha["Nome Função"])] += pago
-        tipos[linha["Tipo de Emenda"].replace("Emenda Individual - ", "")] += pago
-        destinos[_destino(linha)] += pago
+        funcoes[id_][FUNCOES.get(linha["Nome Função"], linha["Nome Função"])] += pago
+        tipos[id_][linha["Tipo de Emenda"].replace("Emenda Individual - ", "")] += pago
+        destinos[id_][_destino(linha)] += pago
 
-    recebido: Counter[str] = Counter()
-    dados: dict[str, dict[str, str]] = {}
+    recebido: dict[int, Counter[str]] = defaultdict(Counter)
+    dados: dict[int, dict[str, dict[str, str]]] = defaultdict(dict)
     for linha in favorecidos:
-        if nome_de_autor(linha["Nome do Autor da Emenda"]) != alvo or int(linha["Código da Emenda"][:4]) < ano_inicial:
+        id_ = autores.get(nome_de_autor(linha["Nome do Autor da Emenda"]))
+        if id_ is None or int(linha["Código da Emenda"][:4]) < ano_inicial:
             continue
         pessoa_fisica = "Jur" not in linha["Tipo Favorecido"]
         chave = PESSOA_FISICA if pessoa_fisica else linha["Código do Favorecido"]
-        recebido[chave] += _virgula(linha["Valor Recebido"])
-        dados[chave] = {
+        recebido[id_][chave] += _virgula(linha["Valor Recebido"])
+        dados[id_][chave] = {
             "nome": PESSOA_FISICA if pessoa_fisica else linha["Favorecido"],
             "municipio": "" if pessoa_fisica else linha["Município Favorecido"],
             "uf": "" if pessoa_fisica else linha["UF Favorecido"],
         }
-    return {
-        "por_ano": [{"ano": int(ano), **{c: round(v, 2) for c, v in por_ano[ano].items()}} for ano in sorted(por_ano)],
-        "funcoes": [[nome, round(valor, 2)] for nome, valor in funcoes.most_common() if valor > 0],
-        "tipos": [[nome, round(valor, 2)] for nome, valor in tipos.most_common() if valor > 0],
-        "destinos": [[nome, round(valor, 2)] for nome, valor in destinos.most_common() if valor > 0],
-        "favorecidos": [{**dados[chave], "valor": round(valor, 2)} for chave, valor in recebido.most_common(10)],
-        "total_favorecidos": len(recebido),
-        "total_recebido": round(sum(recebido.values()), 2),
-    }
+    resultado = {}
+    for id_ in autores.values():
+        resultado[id_] = {
+            "por_ano": [{"ano": int(ano), **{c: round(v, 2) for c, v in por_ano[id_][ano].items()}} for ano in sorted(por_ano[id_])],
+            "funcoes": [[nome, round(valor, 2)] for nome, valor in funcoes[id_].most_common() if valor > 0],
+            "tipos": [[nome, round(valor, 2)] for nome, valor in tipos[id_].most_common() if valor > 0],
+            "destinos": [[nome, round(valor, 2)] for nome, valor in destinos[id_].most_common() if valor > 0],
+            "favorecidos": [{**dados[id_][chave], "valor": round(valor, 2)} for chave, valor in recebido[id_].most_common(10)],
+            "total_favorecidos": len(recebido[id_]),
+            "total_recebido": round(sum(recebido[id_].values()), 2),
+        }
+    return resultado
+
+
+def emendas_do_mandato(linhas: Iterable[dict[str, str]], favorecidos: Iterable[dict[str, str]], autor: str, ano_inicial: int) -> dict[str, Any]:
+    return emendas_de_todos(linhas, favorecidos, {nome_de_autor(autor): 0}, ano_inicial)[0]
 
 
 def _titulo(texto: str) -> str:
@@ -207,8 +230,11 @@ class FonteDinheiro:
         with arquivo.open(arquivo.namelist()[0]) as bruto:
             yield from csv.DictReader(io.TextIOWrapper(bruto, encoding="utf-8-sig", newline=""), delimiter=";")
 
+    def pagina_do_deputado(self, id_: int, ano: int) -> str:
+        return self.http.get(URL_PAGINA_DEPUTADO.format(id=id_, ano=ano)).raise_for_status().text
+
     def cota_oficial(self, id_: int, ano: int) -> dict[str, float]:
-        return ler_cota_da_pagina(self.http.get(URL_PAGINA_DEPUTADO.format(id=id_, ano=ano)).raise_for_status().text)
+        return ler_cota_da_pagina(self.pagina_do_deputado(id_, ano))
 
     def _zip_emendas(self) -> zipfile.ZipFile:
         if self._emendas is None:
