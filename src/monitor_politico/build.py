@@ -167,17 +167,19 @@ def comprovantes_compactos(comprovantes: Sequence[dict[str, Any]]) -> dict[str, 
 
 def _gerar_legislatura(
     env: Environment, pasta: Path, anteriores: Sequence[Deputado], saidas: dict[int, Optional[str]], legislatura: dict[str, Any],
-    situacoes_eleitorais: dict[str, Any], contexto: dict[str, Any],
+    situacoes_eleitorais: dict[str, Any], contexto: dict[str, Any], perfis_ampliados: Any = None, slugs: Optional[dict[str, str]] = None,
+    pasta_imagens: Optional[Path] = None,
 ) -> None:
     """Páginas de quem saiu do exercício e de quem chega em 2027."""
     coleta = datetime.fromisoformat(legislatura["coletado_em"]).astimezone(FUSO).date().isoformat()
     comum = {**contexto, "legislatura": legislatura, "coleta_legislatura": coleta, "situacoes_eleitorais": situacoes_eleitorais}
     modelo = env.get_template("perfil_deputado.html")
     for d in anteriores:
-        (pasta / f"{d.id}.html").write_text(
-            modelo.render(**comum, raiz="..", caminho=f"deputados/{d.id}.html", d=d, fora_de_exercicio=True, saiu_em=saidas.get(d.id)),
-            encoding="utf-8",
-        )
+        pagina = {**comum, "raiz": "..", "caminho": f"deputados/{d.id}.html", "d": d, "fora_de_exercicio": True, "saiu_em": saidas.get(d.id)}
+        # Quem saiu mantém o perfil completo que já tinha, com os dados do último registro.
+        ampliado = perfis_ampliados.get(d.id) if perfis_ampliados else None
+        conteudo = _gerar_perfil_ampliado(env, pasta.parent, d, ampliado, pagina, slugs or {}, pasta_imagens) if ampliado else modelo.render(**pagina)
+        (pasta / f"{d.id}.html").write_text(conteudo, encoding="utf-8")
     (pasta / "anteriores.html").write_text(
         env.get_template("deputados_anteriores.html").render(
             **comum, raiz="..", caminho="deputados/anteriores.html", arquivo=anteriores,
@@ -301,6 +303,7 @@ def construir(
         _gerar_legislatura(
             env, saida / "deputados", anteriores, saidas, legislatura, situacoes_eleitorais,
             {"casa": "camara", "atualizado_em": atualizado_camara, "fonte_nome": FONTE_CAMARA[0], "fonte_url": FONTE_CAMARA[1], "singular": "deputado", "plural": "deputados", "nome_casa": "Câmara dos Deputados"},
+            perfis_ampliados, slugs, pasta_imagens,
         )
     _gerar_casa(
         env, saida / "senadores", senadores, "perfil_senador.html", "s",

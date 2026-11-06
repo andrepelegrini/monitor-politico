@@ -328,6 +328,17 @@ def test_titulo_de_propostas_no_singular_e_sem_leis(tmp_path, docs, doc):
     assert "1 proposta de autoria desde 2023, nenhuma virou lei" in pagina
 
 
+def test_quem_sai_do_exercicio_mantem_o_perfil_completo(tmp_path, docs, doc):
+    legislatura = {"coletado_em": "2026-11-05T12:00:00+00:00", "legislatura_atual": 57, "ano_da_eleicao": 2026, "posse": "2027-02-01", "situacoes": {}, "eleitos_novos": []}
+    base = docs[0]["deputados"][0]
+    arquivo = [{**base, "id": 777, "nome": "Saiu Antes", "situacao": "Fim de Mandato", "saiu_em": "2027-02-01"}]
+    construir(*docs, tmp_path / "site", legislatura=legislatura, arquivo_deputados=arquivo, perfis_ampliados={777: {**doc, "id": 777, "plenario": PLENARIO}})
+    pagina = (tmp_path / "site" / "deputados" / "777.html").read_text(encoding="utf-8")
+    assert 'id="plenario"' in pagina and "Fora de exercício desde 01/02/2027" in pagina and "Situação oficial: Fim de Mandato" in pagina
+    assert "Estes são os dados do último registro" in pagina
+    assert (tmp_path / "site" / "static" / "perfis" / "777-votos.html").exists()
+
+
 def test_formato_em_milhoes():
     assert perfis.milhoes(1964701.47) == "R$\u00a01,96\u00a0milhão"
     assert perfis.milhoes(109107000) == "R$\u00a0109,11\u00a0milhões"

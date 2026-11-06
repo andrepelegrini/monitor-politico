@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block titulo %}{{ d.nome }} ({{ d.partido }}-{{ d.uf }}) · Monitor Político{% endblock %}
 {% block og_titulo %}{{ d.nome }} ({{ d.partido }}-{{ d.uf }}) · Câmara dos Deputados{% endblock %}
-{% block descricao %}{{ d.nome }} ({{ d.partido }}-{{ d.uf }}):{% if perfil.plenario %} {{ perfil.plenario.votos_registrados|numero }} votos registrados, presença em {{ perfil.plenario.presenca.total.presencas|numero }} de {{ perfil.plenario.presenca.total.dias|numero }} dias com sessão,{% endif %}{% if perfil.dinheiro %} cota parlamentar, emendas,{% endif %}{% if perfil.propostas %} {{ perfil.propostas.total_autoria_propostas|numero }} propostas de autoria e {{ perfil.propostas.normas|length }} que viraram {{ perfil.propostas.palavra_norma }},{% endif %} com dados abertos oficiais.{% endblock %}
+{% block descricao %}{{ d.nome }} ({{ d.partido }}-{{ d.uf }}):{% if perfil.plenario %} {{ perfil.plenario.votos_registrados|numero }} votos registrados, presença em {{ perfil.plenario.presenca.total.presencas|numero }} de {{ perfil.plenario.presenca.total.dias|numero }} dias com sessão,{% endif %}{% if perfil.dinheiro %} cota parlamentar, emendas,{% endif %}{% if perfil.propostas %} {{ perfil.propostas.total_autoria_propostas|numero }} {{ "proposta" if perfil.propostas.total_autoria_propostas == 1 else "propostas" }} de autoria, {{ perfil.propostas.normas|length }} {{ "virou" if perfil.propostas.normas|length == 1 else "viraram" }} {{ perfil.propostas.palavra_norma }},{% endif %} com dados abertos oficiais.{% endblock %}
 {% block og_imagem %}{% if perfil.imagem %}perfis/{{ d.id }}-compartilhar.jpg{% else %}compartilhar.png{% endif %}{% endblock %}
 {% block conteudo %}
 <nav class="ce-breadcrumb" aria-label="Trilha de navegação">
@@ -20,7 +20,8 @@
       <h1>{{ d.nome }}</h1>{% if situacoes_eleitorais and situacoes_eleitorais.get(d.id|string) %}
       <p class="pf-badges"><span class="ce-badge badge-{{ situacoes_eleitorais[d.id|string].chave }}">{{ situacoes_eleitorais[d.id|string].rotulo }}</span></p>{% endif %}
       <p class="pf-deck">{{ d.partido }}-{{ d.uf }}{% if d.situacao %} · {{ d.situacao }}{% endif %}{% if perfil.legislatura_atual %} · Mandato atual: {{ perfil.legislatura_atual.inicio|data_br }} a {{ perfil.legislatura_atual.fim|data_br }}.{% endif %}{% if perfil.proximo_mandato %} Mandato renovado na eleição de {{ perfil.proximo_mandato.ano }}, para {{ perfil.proximo_mandato.inicio_ano }}–{{ perfil.proximo_mandato.fim_ano }}.{% endif %}</p>
-      <p class="pf-nota">Dados deste perfil coletados em {{ perfil.coleta_local|data_br }}, de fontes oficiais.</p>
+      {% if fora_de_exercicio %}<p class="pf-nota">Fora de exercício{% if saiu_em %} desde {{ saiu_em|data_br }}{% endif %}{% if d.situacao %} · Situação oficial: {{ d.situacao }}{% endif %}. Estes são os dados do último registro, de {{ perfil.coleta_local|data_br }}.</p>
+      {% else %}<p class="pf-nota">Dados deste perfil coletados em {{ perfil.coleta_local|data_br }}, de fontes oficiais.</p>{% endif %}
     </header>
     {% if perfil.plenario or perfil.dinheiro or perfil.propostas %}
     <div class="pf-numeros">
