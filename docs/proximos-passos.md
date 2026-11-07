@@ -42,6 +42,8 @@ Ordem combinada: 5 (feito) → 1 junto com 4 → 2 → 3. Antes de cada uma, faz
 2. **Retrospectiva do mandato compartilhável**: página por parlamentar com os números do mandato e uma imagem para redes gerada na coleta. Os mandatos atuais terminam em 31/01/2027, então o ideal é lançar antes. Depende do item 1.
 3. **Resultado eleitoral (TSE)**: votos em 2022 e resultado de 2026 (reeleito, não concorreu, não eleito). Os arquivos são grandes e separados por UF; confirmar o que o TSE já publicou de 2026.
 4. **"Acompanhar" sem servidor próprio**: feeds RSS por parlamentar e por proposição, gerados no build. Alertas por e-mail exigem servidor e ficam como candidatos à versão paga.
+6. **Avisos da nova legislatura e contato**: mock aprovado em 07/11/2026, nas posições Eleitos para 2027, perfil de quem chega e página inicial, mais "Encontrou um erro?" nos perfis e no rodapé. Falta criar um Gmail do projeto e um Google Forms com planilha privada (nunca um link direto para a planilha), e definir o nome do responsável para a política de privacidade. Na hora de enviar: cópia oculta, atenção ao limite diário do Gmail e apagar a lista depois, como o texto promete.
+7. **Domínio próprio**: comprar antes da divulgação ampla, apontar o site e redirecionar os links do endereço `vercel.app`.
 5. ~~**Melhorias rápidas**: busca única, "Entenda os dados", Open Graph.~~ Entregue em 03/11/2026.
 
 Fora do escopo por enquanto: deputados estaduais e governadores (27 assembleias com formatos diferentes) e contador de visitantes (se quiser, usar o Vercel Analytics).
