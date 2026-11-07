@@ -398,5 +398,19 @@ def diferenca(valor: float) -> str:
     return ("+" if valor >= 0 else "−") + moeda(abs(valor))
 
 
+SOBRA_MINIMA = 60
+
+
+def partir(texto: str, limite: int) -> tuple[str, str]:
+    """Divide um texto longo no último espaço antes do limite: o começo aparece, o resto abre com "Mostrar ementa inteira"."""
+    texto = texto or ""
+    # Se sobra pouco além do limite, vale mostrar tudo: um botão para abrir três palavras só atrapalha.
+    if len(texto) <= limite + SOBRA_MINIMA:
+        return texto, ""
+    corte = texto.rfind(" ", 0, limite)
+    corte = corte if corte > limite // 2 else limite
+    return texto[:corte], texto[corte:]
+
+
 def nome_proprio(texto: str) -> str:
     return " ".join(p.capitalize() if p.lower() not in {"de", "do", "da", "dos", "das", "e"} else p.lower() for p in texto.split())

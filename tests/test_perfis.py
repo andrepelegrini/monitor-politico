@@ -360,3 +360,14 @@ def test_compartilhamento_do_perfil(tmp_path, docs, doc):
     assert "Dados deste perfil coletados em" in pagina
     # Sem PNG gerado, fica a imagem padrão do site.
     assert 'content="https://exemplo.org/static/brand/social/open-graph-1200x630.png"' in pagina
+
+
+def test_partir_ementa_no_ultimo_espaco_antes_do_limite():
+    assert perfis.partir("Curta.", 190) == ("Curta.", "")
+    assert perfis.partir("a" * 30 + " " + "b" * 20, 25) == ("a" * 30 + " " + "b" * 20, "")
+    inicio, resto = perfis.partir("Altera a Lei nº 8.080, de 19 de setembro de 1990, para tratar de saúde, " + "x " * 40, 40)
+    assert inicio == "Altera a Lei nº 8.080, de 19 de"
+    assert inicio + resto == "Altera a Lei nº 8.080, de 19 de setembro de 1990, para tratar de saúde, " + "x " * 40
+    texto = "Institui a semana, no mês de maio, " + "y " * 40
+    inicio, resto = perfis.partir(texto, 20)
+    assert inicio == "Institui a semana," and inicio + resto == texto

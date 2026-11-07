@@ -100,6 +100,19 @@ listaFiltravel("p", ["participacao", "situacao", "mandato", "tema", "tipo"], fun
     (!c.situacao.value || li.dataset.situacao === c.situacao.value);
 });
 
+// Ementas longas: o começo aparece na lista, e o botão abre o resto. Delegado no documento porque
+// as listas completas chegam depois, baixadas quando alguém usa os filtros.
+document.addEventListener("click", function (evento) {
+  var botao = evento.target.closest ? evento.target.closest(".pf-ementa-botao") : null;
+  if (!botao) return;
+  var aberto = botao.getAttribute("aria-expanded") === "true";
+  var texto = botao.parentNode;
+  texto.querySelector(".pf-resto").hidden = aberto;
+  texto.querySelector(".pf-reticencias").hidden = !aberto;
+  botao.setAttribute("aria-expanded", String(!aberto));
+  botao.textContent = aberto ? "Mostrar ementa inteira" : "Mostrar menos";
+});
+
 // Comprovantes da cota: a lista completa só é baixada quando alguém vai usá-la.
 // Sem JavaScript, ficam os maiores comprovantes, que já vêm na página.
 (function () {

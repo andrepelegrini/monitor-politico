@@ -6,7 +6,8 @@
       {% if v.contra %}<span class="ce-badge ce-badge--outline">Lado menos votado</span>{% endif %}
       {% if v.difere %}<span class="ce-badge ce-badge--outline">Diferente da orientação do partido</span>{% endif %}
     </div>
-    <p class="pf-voto-texto">{{ (v.ementa or v.descricao)|truncate(190, true, "…", 0) }}</p>
+    {% set partes = (v.ementa or v.descricao)|partir(190) %}
+    <p class="pf-voto-texto">{{ partes[0] }}{% if partes[1] %}<span class="pf-reticencias" aria-hidden="true">…</span><span class="pf-resto" hidden>{{ partes[1] }}</span> <button type="button" class="pf-ementa-botao" aria-expanded="false">Mostrar ementa inteira</button>{% endif %}</p>
     <details class="pf-detalhes pf-detalhes--voto">
       <summary>O que foi votado</summary>
       <p>{{ v.descricao }}</p>

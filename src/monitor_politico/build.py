@@ -239,7 +239,7 @@ def construir(
         autoescape=select_autoescape(),
     )
     env.filters["data_br"] = painel.data_br
-    for nome in ("numero", "moeda", "milhoes", "percentual", "diferenca", "nome_proprio"):
+    for nome in ("numero", "moeda", "milhoes", "percentual", "diferenca", "nome_proprio", "partir"):
         env.filters[nome] = getattr(perfis, nome)
     env.globals["site_url"] = url_do_site() if site_url is None else site_url.rstrip("/")
     deputados = sorted((Deputado.de_dict(d) for d in doc_deputados["deputados"]), key=lambda d: chave_alfabetica(d.nome))

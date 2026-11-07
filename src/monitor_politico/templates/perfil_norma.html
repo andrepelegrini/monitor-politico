@@ -1,5 +1,6 @@
 <li>
   <p class="pf-norma-nome">{% if p.norma and p.norma.nome != norma_sem_numero %}{{ p.norma.nome }}, de {{ p.norma.data|data_br }}{% if p.norma.veto_parcial %} · Com veto parcial{% endif %}{% else %}Virou norma, sem número informado na tramitação{% endif %}</p>
   <p class="pf-voto-meta">{% if p.slug %}<a href="../proposicoes/{{ p.slug }}.html">{{ p.sigla }}</a>{% elif p.url %}<a href="{{ p.url }}">{{ p.sigla }}</a>{% else %}<a href="https://www.camara.leg.br/propostas-legislativas/{{ p.id }}">{{ p.sigla }}</a>{% endif %}<span>Apresentada em {{ p.data|data_br }}</span></p>
-  <p class="pf-voto-texto">{{ p.ementa|truncate(240, true, "…", 0) }}</p>
+  {% set partes = p.ementa|partir(240) %}
+  <p class="pf-voto-texto">{{ partes[0] }}{% if partes[1] %}<span class="pf-reticencias" aria-hidden="true">…</span><span class="pf-resto" hidden>{{ partes[1] }}</span> <button type="button" class="pf-ementa-botao" aria-expanded="false">Mostrar ementa inteira</button>{% endif %}</p>
 </li>

@@ -90,7 +90,7 @@ body { margin: 0; }
 .ce-app .ce-items { list-style: none; margin: 0; padding: 0; }
 .ce-app .ce-items li { border-top: 1px solid var(--ce-border-soft); }
 .ce-app .ce-items a, .ce-app .ce-items li > div { display: flex; flex-direction: column; gap: var(--ce-space-1); padding-block: var(--ce-space-3); color: var(--ce-ink); text-decoration: none; }
-.ce-app .ce-item-title { font-weight: 600; font-size: .9375rem; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.ce-app .ce-item-title { font-weight: 600; font-size: .9375rem; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
 .ce-app .ce-item-title--lg { font: 480 1.1875rem/1.3 var(--ce-font-display); letter-spacing: -.01em; }
 .ce-app a:hover > .ce-item-title, .ce-app a:hover .ce-vote-text .ce-item-title { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .18em; }
 
@@ -298,6 +298,8 @@ body { margin: 0; }
 .ce-app .pf-detalhes[open] > summary::before { transform: rotate(45deg); }
 .ce-app .pf-detalhes > p { margin-bottom: var(--ce-space-2); }
 /* Blocos longos que ficam recolhidos, como fornecedores e comprovantes: o título tem o peso de um subtítulo. */
+.ce-app .pf-ementa-botao { display: inline; margin: 0 0 0 .25rem; padding: 0; border: 0; background: none; font: 600 var(--ce-text-sm)/inherit var(--ce-font-ui); color: var(--ce-espresso); text-decoration: underline; text-underline-offset: 2px; cursor: pointer; }
+.ce-app .pf-ementa-botao:focus-visible { outline: 2px solid var(--ce-focus); outline-offset: 2px; border-radius: 2px; }
 .ce-app .pf-recolhe { font-size: var(--ce-text-md); color: var(--ce-ink); border-top: 1px solid var(--ce-border-soft); }
 .ce-app .pf-recolhe > summary { font-size: var(--ce-text-md); color: var(--ce-ink); }
 .ce-app .pf-recolhe[open] > summary { margin-bottom: var(--ce-space-3); }
