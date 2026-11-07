@@ -32,7 +32,7 @@
     <div>
       <h3 class="pf-h3">Municípios com mais votos</h3>
       <ul class="pf-barras">
-        {% for nome, votos_municipio in e.municipios %}
+        {% for nome, votos_municipio in e.municipios[:6] %}
         <li><span>{{ nome|nome_proprio }}</span><span class="ce-bar-track" aria-hidden="true"><span class="ce-bar-value" style="width: {{ '%.1f'|format(votos_municipio / e.municipios[0][1] * 100) }}%"></span></span><span class="pf-barra-numero">{{ votos_municipio|numero }}</span></li>
         {% endfor %}
       </ul>

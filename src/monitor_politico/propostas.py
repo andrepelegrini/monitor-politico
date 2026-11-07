@@ -7,13 +7,14 @@ de cada proposta. Os totais por ano de todos os tipos de proposta e de relatoria
 from __future__ import annotations
 
 import re
-from collections import Counter
+from collections import Counter, defaultdict
 from datetime import date
-from typing import Any, Iterable, Optional
+from typing import Any, Callable, Iterable, Optional
 
 from monitor_politico.plenario import ementa_atual, limpar_texto
 
 TIPOS = ("PL", "PLP", "PEC")
+ITENS_NA_PAGINA = 15  # O restante da lista é baixado quando alguém usa os filtros.
 ROTULOS_PARTICIPACAO = {"primeira": "Autoria principal", "coautoria": "Coautoria", "apoio": "Apoio em PEC"}
 EXPLICACOES_PARTICIPACAO = {
     "primeira": "Primeira assinatura da proposta",
@@ -76,21 +77,24 @@ def palavra_da_norma(normas: Iterable[dict[str, Any]]) -> str:
     return "lei" if all(nome.startswith("Lei") for nome in nomes) else "norma"
 
 
-def propostas_desde(fonte: Any, camara: Any, id_: int, inicio: str, anos: Iterable[int]) -> dict[str, Any]:
+def propostas_de_todos(
+    fonte: Any, consultar_norma: Callable[[str], Optional[dict[str, Any]]], inicios: dict[int, str], anos: Iterable[int]
+) -> dict[int, list[dict[str, Any]]]:
+    """Projetos e PECs de cada parlamentar, desde a primeira posse de cada um, numa passada só."""
     anos = list(anos)
-    assinaturas: dict[str, dict[str, str]] = {}
+    alvo = {str(i) for i in inicios}
+    assinaturas: dict[str, dict[str, str]] = defaultdict(dict)
     for ano in anos:
         for linha in fonte.linhas("proposicoesAutores", ano):
-            if linha["idDeputadoAutor"] == str(id_):
-                assinaturas[linha["idProposicao"]] = linha
+            if linha["idDeputadoAutor"] in alvo:
+                assinaturas[linha["idProposicao"]][linha["idDeputadoAutor"]] = participacao(linha)
 
-    lista = []
+    catalogo: dict[str, dict[str, Any]] = {}
     for ano in anos:
         for proposta in fonte.linhas("proposicoes", ano):
-            assinatura = assinaturas.get(proposta["id"])
-            if assinatura is None or proposta["siglaTipo"] not in TIPOS or proposta["dataApresentacao"][:10] < inicio:
+            if proposta["id"] not in assinaturas or proposta["siglaTipo"] not in TIPOS:
                 continue
-            lista.append({
+            catalogo[proposta["id"]] = {
                 "id": proposta["id"],
                 "sigla": f"{proposta['siglaTipo']} {proposta['numero']}/{proposta['ano']}",
                 "tipo": proposta["siglaTipo"],
@@ -98,26 +102,38 @@ def propostas_desde(fonte: Any, camara: Any, id_: int, inicio: str, anos: Iterab
                 "ementa": limpar_texto(proposta["ementa"]),
                 "situacao": limpar_texto(proposta["ultimoStatus_descricaoSituacao"]),
                 "data_situacao": proposta["ultimoStatus_dataHora"][:10],
-                "participacao": participacao(assinatura),
                 "temas": [],
-            })
-
-    por_id = {p["id"]: p for p in lista}
+                "norma": None,
+            }
     for ano in anos:
         for linha in fonte.linhas("proposicoesTemas", ano):
-            proposta = por_id.get(linha["uriProposicao"].rsplit("/", 1)[-1])
+            proposta = catalogo.get(linha["uriProposicao"].rsplit("/", 1)[-1])
             if proposta and linha["tema"] not in proposta["temas"]:
                 proposta["temas"].append(linha["tema"])
-    for proposta in lista:
+    for proposta in catalogo.values():
         proposta["temas"].sort()
-        proposta["norma"] = None
         if grupo_da_situacao(proposta["situacao"]) == "norma":
-            proposta["norma"] = norma_da_tramitacao(camara._get(f"/proposicoes/{proposta['id']}/tramitacoes")["dados"])
-    lista.sort(key=lambda p: (p["data"], p["id"]), reverse=True)
+            # A situação oficial já diz que virou norma. Sem texto na tramitação, falta só o número.
+            proposta["norma"] = consultar_norma(proposta["id"]) or {"nome": NORMA_SEM_NUMERO, "data": proposta["data_situacao"], "veto_parcial": False}
+
+    # Não filtra pela data da posse: a assinatura é a prova, e o histórico de quem foi suplente pode estar incompleto.
+    por_pessoa: dict[int, list[dict[str, Any]]] = {i: [] for i in inicios}
+    for id_proposta, proposta in catalogo.items():
+        for id_deputado, tipo in assinaturas[id_proposta].items():
+            por_pessoa[int(id_deputado)].append({**proposta, "participacao": tipo})
+    for lista in por_pessoa.values():
+        lista.sort(key=lambda p: (p["data"], p["id"]), reverse=True)
+    return por_pessoa
+
+
+def propostas_desde(fonte: Any, camara: Any, id_: int, inicio: str, anos: Iterable[int]) -> dict[str, Any]:
+    anos = list(anos)
+    def consultar(id_proposta: str) -> Optional[dict[str, Any]]:
+        return norma_da_tramitacao(camara._get(f"/proposicoes/{id_proposta}/tramitacoes")["dados"])
     return {
         "inicio": inicio,
         "por_ano": [{"ano": ano, **fonte.atuacao_oficial(id_, ano)} for ano in anos],
-        "propostas": lista,
+        "propostas": propostas_de_todos(fonte, consultar, {id_: inicio}, anos)[id_],
     }
 
 
@@ -199,6 +215,7 @@ def visao(
         "inicio": doc["inicio"],
         "ano_inicial": doc["inicio"][:4],
         "propostas": propostas,
+        "propostas_iniciais": propostas[:ITENS_NA_PAGINA],
         "total": len(propostas),
         "total_autoria_propostas": sum(p["participacao"] != "apoio" for p in propostas),
         "normas": normas,
@@ -206,6 +223,7 @@ def visao(
         "normas_coautoria": [p for p in normas if p["participacao"] == "coautoria"],
         "palavra_norma": palavra,
         "inicio_mandato": inicio_mandato,
+        "norma_sem_numero": NORMA_SEM_NUMERO,
         "sancionadas_no_mandato": {
             "total": len(no_mandato),
             "principal": sum(p["participacao"] == "primeira" for p in no_mandato),

@@ -63,38 +63,16 @@
     <label class="ce-check"><input type="checkbox" id="v-contra">Lado menos votado</label>
     <label class="ce-check"><input type="checkbox" id="v-difere">Diferente da orientação do partido</label>
   </div>
-  <p class="ce-count"><span id="v-contagem">{{ p.votos|length|numero }}</span> votações, da mais recente para a mais antiga.</p>
-  <ul class="pf-votos" id="v-lista">
-    {% for v in p.votos %}
-    <li data-classe="{{ v.classe }}" data-voto="{{ v.voto }}" data-temas="{{ v.temas|join('|') }}"{% if v.contra %} data-contra="1"{% endif %}{% if v.difere %} data-difere="1"{% endif %}>
-      <div>
-        <div class="pf-voto-meta">
-          <span>{{ v.data|data_br }}</span>
-          {% if v.slug %}<a href="../proposicoes/{{ v.slug }}.html">{{ v.sigla }}</a>{% else %}<a href="https://www.camara.leg.br/propostas-legislativas/{{ v.proposicao_id }}">{{ v.sigla or "Proposição" }}</a>{% endif %}
-          {% if v.contra %}<span class="ce-badge ce-badge--outline">Lado menos votado</span>{% endif %}
-          {% if v.difere %}<span class="ce-badge ce-badge--outline">Diferente da orientação do partido</span>{% endif %}
-        </div>
-        <p class="pf-voto-texto">{{ (v.ementa or v.descricao)|truncate(190, true, "…", 0) }}</p>
-        <details class="pf-detalhes pf-detalhes--voto">
-          <summary>O que foi votado</summary>
-          <p>{{ v.descricao }}</p>
-          <p>Orientação do {{ v.partido }}: {{ v.orientacao or "não publicada separadamente" }}.</p>
-          <a href="https://dadosabertos.camara.leg.br/api/v2/votacoes/{{ v.id }}">Votação na fonte oficial</a>
-        </details>
-      </div>
-      <div class="pf-voto-posicao">
-        <span class="pf-voto-rotulo"><span class="ce-dot {{ 'ce-vote-yes' if v.voto == 'Sim' else 'ce-vote-no' if v.voto == 'Não' else 'ce-vote-other' }}"></span>{% if v.voto in ("Sim", "Não") %}Votou {{ v.voto }}{% else %}{{ v.voto }}{% endif %}</span>
-        <div class="ce-vote-bar" aria-hidden="true"><span class="ce-vote-yes" style="width: {{ v.barra.sim }}%"></span><span class="ce-vote-no" style="width: {{ v.barra.nao }}%"></span>{% if v.outros %}<span class="ce-vote-other" style="width: {{ v.barra.outros }}%"></span>{% endif %}</div>
-        <span>Demais votos: {{ v.sim }} Sim · {{ v.nao }} Não{% if v.outros %} · {{ v.outros }} {{ "outro" if v.outros == 1 else "outros" }}{% endif %}</span>
-      </div>
-    </li>
-    {% endfor %}
+  <p class="ce-count"><span id="v-contagem">{{ p.total_texto|numero }}</span> votações, da mais recente para a mais antiga.</p>
+  <ul class="pf-votos" id="v-lista" data-fragmento="{{ raiz }}/static/perfis/{{ d.id }}-votos.html">
+    {% for v in p.votos_iniciais %}{% include "perfil_voto_item.html" %}{% endfor %}
   </ul>
   <div class="ce-state-box pf-espaco" id="v-vazio" hidden>
     <p>Nenhuma votação com estes filtros.</p>
     <button class="ce-button ce-button--ghost" id="v-limpar" type="button">Limpar filtros</button>
   </div>
   <button class="ce-button ce-button--ghost pf-mais" id="v-mais" type="button" hidden>Mostrar mais votações</button>
+  <noscript><p class="pf-nota">Sem JavaScript, esta lista mostra só as votações mais recentes.</p></noscript>
   <details class="pf-detalhes">
     <summary>Fonte e método</summary>
     <p>Só votações nominais do Plenário em que há voto registrado. Votações em que a fonte não informa as posições individuais ficam de fora. A separação entre texto principal, emendas e procedimento é feita por regras sobre a descrição oficial de cada votação e pode ter exceções. O placar exibido não inclui o voto deste perfil. A orientação do partido só aparece quando ele consta separado de um bloco. Coleta em {{ perfil.coleta_local|data_br }}.</p>

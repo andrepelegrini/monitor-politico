@@ -1,18 +1,17 @@
 """Imagem de compartilhamento (og:image) do perfil ampliado.
 
-O SVG sai dos dados do perfil. O PNG é gerado por um navegador, como arte/compartilhar.svg, porque as
-fontes vêm do Google Fonts. Por isso o arquivo é gerado junto com a coleta e guardado em data/perfis/,
-e o build do site só copia o PNG.
+O SVG sai dos dados do perfil. A imagem é gerada por um navegador, como arte/compartilhar.svg, porque as
+fontes vêm do Google Fonts. Por isso ela é gerada junto com a coleta e vai no pacote de dados, e o build
+do site só copia o arquivo.
 
-Uso: python -m monitor_politico.compartilhar  (precisa da CLI do Playwright com o Chromium instalado)
+Uso: python -m monitor_politico.compartilhar  (precisa de pip install ".[imagens]" e do Chromium do Playwright)
 """
 
 from __future__ import annotations
 
 import base64
 import json
-import subprocess
-import tempfile
+import sys
 from pathlib import Path
 from typing import Any, Optional
 from xml.sax.saxutils import escape
@@ -25,7 +24,7 @@ from monitor_politico.models import Deputado
 LARGURA, ALTURA = 1200, 630
 COLUNAS, LARGURA_DA_COLUNA = 4, 275
 DEPUTADOS_PADRAO = Path("data/deputados.json")
-NOME_DA_IMAGEM = "{id}-compartilhar.png"
+NOME_DA_IMAGEM = "{id}-compartilhar.jpg"
 
 
 def numeros_do_perfil(visao: dict[str, Any]) -> list[tuple[str, str]]:
@@ -102,25 +101,33 @@ def visao_data(visao: dict[str, Any]) -> str:
     return f"{dia}/{mes}/{ano}"
 
 
-def gerar_png(svg: str, destino: Path) -> None:
-    with tempfile.TemporaryDirectory() as pasta:
-        entrada = Path(pasta) / "perfil.svg"
-        entrada.write_text(svg, encoding="utf-8")
-        subprocess.run(
-            ["playwright", "screenshot", "--browser=chromium", f"--viewport-size={LARGURA},{ALTURA}", "--wait-for-timeout=2500", entrada.as_uri(), str(destino)],
-            check=True, capture_output=True,
-        )
+def gerar_imagens(pasta: Path = perfis.SAIDA_PADRAO, deputados_json: Path = DEPUTADOS_PADRAO) -> int:
+    """Um navegador só, reaproveitado: abrir um por imagem levaria horas com 513 deputados."""
+    from playwright.sync_api import sync_playwright
+
+    deputados = {d["id"]: Deputado.de_dict(d) for d in json.loads(deputados_json.read_text(encoding="utf-8"))["deputados"]}
+    disco = perfis.PerfisEmDisco(pasta)
+    geradas = 0
+    with sync_playwright() as playwright, httpx.Client(timeout=30, follow_redirects=True) as http:
+        navegador = playwright.chromium.launch()
+        pagina = navegador.new_page(viewport={"width": LARGURA, "height": ALTURA})
+        for id_, deputado in deputados.items():
+            documento = disco.get(id_)
+            if documento is None:
+                continue
+            foto = None
+            if deputado.url_foto:
+                try:
+                    foto = base64.b64encode(http.get(deputado.url_foto).raise_for_status().content).decode()
+                except httpx.HTTPError as erro:
+                    print(f"aviso: foto de {id_} indisponível ({erro})", file=sys.stderr)
+            pagina.set_content(f"<!doctype html><html><body style='margin:0'>{svg_do_perfil(deputado, perfis.visao(documento), foto)}</body></html>", wait_until="load")
+            pagina.evaluate("document.fonts.ready")
+            pagina.screenshot(path=str(pasta / NOME_DA_IMAGEM.format(id=id_)), type="jpeg", quality=85)
+            geradas += 1
+        navegador.close()
+    return geradas
 
 
 if __name__ == "__main__":
-    deputados = {d["id"]: Deputado.de_dict(d) for d in json.loads(DEPUTADOS_PADRAO.read_text(encoding="utf-8"))["deputados"]}
-    for id_parlamentar, documento in perfis.ler_perfis(perfis.SAIDA_PADRAO).items():
-        deputado = deputados[id_parlamentar]
-        conteudo_foto = None
-        if deputado.url_foto:
-            resposta = httpx.get(deputado.url_foto, timeout=30, follow_redirects=True)
-            resposta.raise_for_status()
-            conteudo_foto = base64.b64encode(resposta.content).decode()
-        saida = perfis.SAIDA_PADRAO / NOME_DA_IMAGEM.format(id=id_parlamentar)
-        gerar_png(svg_do_perfil(deputado, perfis.visao(documento), conteudo_foto), saida)
-        print(f"Imagem gerada em {saida}")
+    print(f"{gerar_imagens()} imagens geradas")

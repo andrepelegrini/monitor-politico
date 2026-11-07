@@ -33,7 +33,7 @@ ANO_DA_ELEICAO = 2026
 POSSE = "2027-02-01"
 URL_DEPUTADOS = "https://dadosabertos.camara.leg.br/arquivos/deputados/csv/deputados.csv"
 SAIDA_PADRAO = Path("data/legislatura.json")
-MUNICIPIOS_GUARDADOS = 6
+MUNICIPIOS_GUARDADOS = 8
 PALAVRAS_VAZIAS = {"DE", "DA", "DO", "DOS", "DAS", "E"}
 
 ELEITO = {"ELEITO", "ELEITO POR QP", "ELEITO POR MÉDIA"}

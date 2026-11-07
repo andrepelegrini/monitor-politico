@@ -1,0 +1,55 @@
+name: Atualizar perfis completos
+
+# Coleta o perfil completo dos deputados em exercício, publica o pacote como anexo da release
+# dados-perfis e faz commit de data/perfis_versao.json, o que dispara o deploy. O pacote fica fora do
+# Git porque são centenas de MB que mudam toda semana. Se algo falhar, a versão anterior continua valendo.
+
+on:
+  schedule:
+    - cron: "0 8 * * 1" # 05:00 em Brasília, às segundas
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: atualizar-perfis
+  cancel-in-progress: false
+
+jobs:
+  coletar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e ".[imagens]"
+      - name: Baixar o pacote atual, com o cache do que não muda
+        run: python -m monitor_politico.pacote baixar
+      - name: Coletar os perfis
+        run: python -m monitor_politico.lote
+      - name: Gerar as imagens de compartilhamento
+        continue-on-error: true
+        run: |
+          playwright install --with-deps chromium
+          python -m monitor_politico.compartilhar
+      - name: Publicar o pacote
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          arquivo=$(python -m monitor_politico.pacote empacotar)
+          gh release upload dados-perfis "$arquivo"
+          # Mantém o pacote anterior para o deploy em andamento e remove os mais antigos.
+          gh release view dados-perfis --json assets --jq '.assets | sort_by(.createdAt) | reverse | .[2:] | .[].name' \
+            | while read -r antigo; do gh release delete-asset dados-perfis "$antigo" --yes; done
+      - name: Commit da versão
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/perfis_versao.json data/metricas_deputados.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Atualiza perfis completos ($(date -u +%F))"
+          git pull --rebase
+          git push

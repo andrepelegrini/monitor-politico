@@ -2,7 +2,7 @@
 {% set m = perfil.dinheiro.emendas %}
 <section class="pf-secao" id="dinheiro">
   <p class="ce-eyebrow">Dinheiro público</p>
-  <h2 class="pf-h2">{{ q.total|milhoes }} em cota parlamentar e {{ m.pago_total|milhoes }} pagos em emendas neste mandato</h2>
+  <h2 class="pf-h2">{{ q.total|milhoes }} em cota parlamentar{% if m.por_ano %} e {{ m.pago_total|milhoes }} pagos em emendas{% endif %} neste mandato</h2>
 
   <div id="cota">
     <h3 class="pf-h3">Cota parlamentar: despesas de custeio do mandato</h3>
@@ -28,7 +28,7 @@
             <thead><tr><th scope="col">Ano</th><th scope="col" class="pf-num">Gasto</th><th scope="col" class="pf-num">Da cota disponível</th></tr></thead>
             <tbody>
               {% for a in q.por_ano %}
-              <tr><th scope="row">{{ a.ano }}</th><td class="pf-num">{{ a.total|moeda }}</td><td class="pf-num">{{ ('%.1f'|format(a.percentual))|replace('.', ',') }}%</td></tr>
+              <tr><th scope="row">{{ a.ano }}</th><td class="pf-num">{{ a.total|moeda }}</td><td class="pf-num">{% if a.percentual is not none %}{{ ('%.1f'|format(a.percentual))|replace('.', ',') }}%{% else %}Não informado{% endif %}</td></tr>
               {% endfor %}
               <tr class="pf-total"><th scope="row">Total</th><td class="pf-num">{{ q.total|moeda }}</td><td></td></tr>
             </tbody>
@@ -81,6 +81,7 @@
   </div>
 
   <div class="pf-bloco" id="emendas">
+    {% if m.por_ano %}
     <h3 class="pf-h3">Emendas individuais: {{ m.pago_total|milhoes }} pagos{% if m.ano_inicial %} nas emendas de {{ m.ano_inicial }} em diante{% endif %}</h3>
     <div class="ce-table-scroll" tabindex="0" role="region" aria-label="Emendas por ano">
       <table class="ce-table pf-tabela">
@@ -129,9 +130,13 @@
     </div>
     <p class="ce-section-note">O favorecido é quem recebeu o pagamento na fonte, e nem sempre é quem executa o projeto. A sede não indica onde o dinheiro foi usado. Instituições financeiras podem aparecer como intermediárias.</p>
     {% endif %}
+    {% else %}
+    <h3 class="pf-h3">Emendas individuais</h3>
+    <p class="pf-nota">O Portal da Transparência não traz emendas individuais de {{ m.ano_inicial_mandato or "2023" }} em diante em nome deste parlamentar. Isso pode acontecer com quem assumiu recentemente, como suplente, ou esteve fora do mandato.</p>
+    {% endif %}
     <details class="pf-detalhes">
       <summary>Fonte e método</summary>
-      <p>Emendas individuais atribuídas ao parlamentar no Portal da Transparência, em arquivo de {{ m.arquivo_em|data_br }}. O total pago soma “pago no ano” e “restos a pagar pagos”. Os favorecidos somam {{ m.total_recebido|moeda }}, valor próximo mas não idêntico, porque vêm de outro arquivo da mesma fonte. Pessoa física aparece sem o nome.</p>
+      <p>Emendas individuais atribuídas ao nome do parlamentar no Portal da Transparência, em arquivo de {{ m.arquivo_em|data_br }}. Inclui as registradas no nome do parlamentar com a observação de que vieram de um mandato anterior, por decisão judicial. O total pago soma “pago no ano” e “restos a pagar pagos”. Os favorecidos somam {{ m.total_recebido|moeda }}, valor próximo mas não idêntico, porque vêm de outro arquivo da mesma fonte. Pessoa física aparece sem o nome.</p>
       <ul class="ce-links">
         <li><a href="https://portaldatransparencia.gov.br/download-de-dados/emendas-parlamentares">Portal da Transparência: emendas parlamentares</a></li>
       </ul>

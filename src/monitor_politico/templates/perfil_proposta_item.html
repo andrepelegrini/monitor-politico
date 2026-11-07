@@ -1,0 +1,10 @@
+<li data-tipo="{{ p.tipo }}" data-temas="{{ p.temas|join('|') }}" data-participacao="{{ p.participacao }}" data-situacao="{{ p.grupo }}" data-mandato="{{ p.mandato }}">
+  <p class="pf-voto-meta">
+    <span>{{ p.data|data_br }}</span>
+    {% if p.slug %}<a href="../proposicoes/{{ p.slug }}.html">{{ p.sigla }}</a>{% else %}<a href="https://www.camara.leg.br/propostas-legislativas/{{ p.id }}">{{ p.sigla }}</a>{% endif %}
+    <span class="ce-badge ce-badge--outline">{{ p.rotulo_participacao }}</span>
+    {% if p.grupo == "norma" %}<span class="ce-badge">Virou {{ palavra_norma }}</span>{% endif %}
+  </p>
+  <p class="pf-voto-texto">{{ p.ementa|truncate(240, true, "…", 0) }}</p>
+  <p class="pf-nota">{% if p.situacao %}{{ p.situacao }}{% if p.data_situacao %}, em {{ p.data_situacao|data_br }}{% endif %}{% else %}Situação não informada na fonte{% endif %}.</p>
+</li>

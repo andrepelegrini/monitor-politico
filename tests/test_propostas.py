@@ -35,7 +35,7 @@ class FonteFalsa:
             proposta("2", numero="2", data="2023-04-01T10:00", situacao="Arquivada"),
             proposta("3", tipo="PEC", numero="3", data="2023-05-01T10:00", situacao=""),
             proposta("4", tipo="REQ", numero="4"),  # requerimento fica de fora
-            proposta("5", numero="5", data="2023-01-20T10:00"),  # antes do mandato
+            proposta("5", numero="5", data="2023-01-20T10:00"),  # assinada antes da posse registrada, conta igual
             proposta("7", numero="7"),  # de outra pessoa
         ]
 
@@ -66,7 +66,7 @@ def doc():
 
 
 def test_lista_so_projetos_e_pecs_do_mandato_e_da_pessoa(doc):
-    assert [p["sigla"] for p in doc["propostas"]] == ["PEC 3/2023", "PL 2/2023", "PL 1/2023"]
+    assert [p["sigla"] for p in doc["propostas"]] == ["PEC 3/2023", "PL 2/2023", "PL 1/2023", "PL 5/2023"]
 
 
 @pytest.mark.parametrize("linha, esperado", [
@@ -102,6 +102,17 @@ def test_norma_em_formatos_antigos():
     assert com_prefixo["nome"] == "Lei 10.606/02"
 
 
+def test_situacao_de_norma_sem_texto_na_tramitacao_conta_pela_data_da_situacao():
+    class Camara:
+        def _get(self, _url):
+            return {"dados": [{"dataHora": "2023-11-14T10:00", "despacho": "Recebido o ofício", "descricaoTramitacao": "Recebimento"}]}
+    class Fonte(FonteFalsa):
+        def proposicoes(self):
+            return [proposta("1", tipo="PEC", situacao="Transformado em Norma Jurídica")]
+    doc = propostas.coletar(Fonte(), Camara(), ID, INICIO, date(2023, 12, 1))
+    assert doc["propostas"][0]["norma"] == {"nome": propostas.NORMA_SEM_NUMERO, "data": "2024-05-06", "veto_parcial": False}
+
+
 def test_norma_sem_despacho_reconhecido():
     assert propostas.norma_da_tramitacao([{"dataHora": "2023-01-01T10:00", "despacho": "Remessa"}]) is None
 
@@ -113,15 +124,15 @@ def test_temas_sem_repeticao_e_texto_limpo(doc):
 
 def test_visao(doc):
     v = propostas.visao(doc, slugs={"PL 1/2023": "pl-1-2023"})
-    assert v["total"] == 3
+    assert v["total"] == 4
     assert [p["sigla"] for p in v["normas"]] == ["PL 1/2023"]
     assert v["normas"][0]["slug"] == "pl-1-2023"
-    assert v["tipos"] == [("PL", 2), ("PEC", 1)]
-    assert [(g["rotulo"], g["total"], g["normas"]) for g in v["caminho"]] == [("Autoria principal", 1, 1), ("Coautoria", 1, 0), ("Apoio em PEC", 1, 0)]
-    assert v["total_autoria_propostas"] == 2
+    assert v["tipos"] == [("PL", 3), ("PEC", 1)]
+    assert [(g["rotulo"], g["total"], g["normas"]) for g in v["caminho"]] == [("Autoria principal", 2, 1), ("Coautoria", 1, 0), ("Apoio em PEC", 1, 0)]
+    assert v["total_autoria_propostas"] == 3
     assert v["palavra_norma"] == "lei"
     assert [p["sigla"] for p in v["normas_principais"]] == ["PL 1/2023"] and v["normas_coautoria"] == []
-    assert {c: n for _, n, c in v["situacoes"]} == {"norma": 1, "encerrada": 1, "sem_situacao": 1}
+    assert {c: n for _, n, c in v["situacoes"]} == {"norma": 1, "encerrada": 1, "sem_situacao": 1, "tramitacao": 1}
     assert v["situacoes"][0][0] == "Virou lei"
     assert v["caminho"][0]["situacoes"][0]["rotulo"] == "Virou lei"
     assert v["temas"][0] == {"nome": "Saúde", "valor": 2, "largura": 100.0}
@@ -147,9 +158,9 @@ def test_por_mandato_conta_autoria_e_normas(doc):
     v = propostas.visao(doc, mandatos=MANDATOS)
     assert v["por_mandato"] == [
         {"rotulo": "2023–2027", "primeira": 1, "coautoria": 1, "normas": 1},
-        {"rotulo": "2019–2023", "primeira": 0, "coautoria": 0, "normas": 0},
+        {"rotulo": "2019–2023", "primeira": 1, "coautoria": 0, "normas": 0},
     ]
-    assert {p["mandato"] for p in v["propostas"]} == {"2023–2027"}
+    assert {p["mandato"] for p in v["propostas"]} == {"2023–2027", "2019–2023"}
 
 
 def test_conta_tambem_pela_data_de_sancao(doc):
