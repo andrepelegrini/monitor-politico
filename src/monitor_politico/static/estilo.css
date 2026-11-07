@@ -14,6 +14,8 @@ body { margin: 0; }
 
 /* Topo */
 .ce-app .ce-brand { font: 500 1.375rem/1.2 var(--ce-font-display); letter-spacing: -.02em; }
+.ce-app .ce-brand-logo { display: block; flex: none; width: 36px; height: 36px; }
+@media (max-width: 480px) { .ce-app .ce-brand-logo { width: 30px; height: 30px; } }
 .ce-app .ce-nav a { display: inline-flex; align-items: center; min-height: 44px; }
 .ce-app .ce-nav a:hover { color: var(--ce-ink); text-decoration: underline; text-underline-offset: 7px; }
 .ce-app .ce-topbar .ce-nav { margin-right: auto; margin-left: var(--ce-space-6); }

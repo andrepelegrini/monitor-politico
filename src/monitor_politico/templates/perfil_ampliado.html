@@ -2,7 +2,8 @@
 {% block titulo %}{{ d.nome }} ({{ d.partido }}-{{ d.uf }}) · Monitor Político{% endblock %}
 {% block og_titulo %}{{ d.nome }} ({{ d.partido }}-{{ d.uf }}) · {{ nome_casa }}{% endblock %}
 {% block descricao %}{{ d.nome }} ({{ d.partido }}-{{ d.uf }}):{% if perfil.plenario %} {{ perfil.plenario.votos_registrados|numero }} votos registrados, {% if casa == "senado" %}participação em {{ perfil.plenario.participacao.total.votou|numero }} de {{ perfil.plenario.participacao.total.votacoes|numero }} votações nominais,{% else %}presença em {{ perfil.plenario.presenca.total.presencas|numero }} de {{ perfil.plenario.presenca.total.dias|numero }} dias com sessão,{% endif %}{% endif %}{% if perfil.dinheiro %} cota parlamentar, emendas,{% endif %}{% if perfil.propostas %} {{ perfil.propostas.total_autoria_propostas|numero }} {{ "proposta" if perfil.propostas.total_autoria_propostas == 1 else "propostas" }} de autoria, {{ perfil.propostas.normas|length }} {{ "virou" if perfil.propostas.normas|length == 1 else "viraram" }} {{ perfil.propostas.palavra_norma }},{% endif %} com dados abertos oficiais.{% endblock %}
-{% block og_imagem %}{% if perfil.imagem %}perfis/{{ perfil.arquivo }}-compartilhar.jpg{% else %}compartilhar.png{% endif %}{% endblock %}
+{% block og_imagem %}{% if perfil.imagem %}perfis/{{ perfil.arquivo }}-compartilhar.jpg{% else %}brand/social/open-graph-1200x630.png{% endif %}{% endblock %}
+{% block twitter_imagem %}{% if perfil.imagem %}perfis/{{ perfil.arquivo }}-compartilhar.jpg{% else %}brand/social/twitter-card-1200x600.png{% endif %}{% endblock %}
 {% block conteudo %}
 <nav class="ce-breadcrumb" aria-label="Trilha de navegação">
   <ol>

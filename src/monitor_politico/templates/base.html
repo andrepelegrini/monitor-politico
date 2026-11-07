@@ -12,12 +12,22 @@
   <meta property="og:description" content="{{ self.descricao() }}">
   {% if site_url %}
   <meta property="og:url" content="{{ site_url }}/{{ caminho }}">
-  <meta property="og:image" content="{{ site_url }}/static/{% block og_imagem %}compartilhar.png{% endblock %}">
+  <meta property="og:image" content="{{ site_url }}/static/{% block og_imagem %}brand/social/open-graph-1200x630.png{% endblock %}">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta name="twitter:image" content="{{ site_url }}/static/{% block twitter_imagem %}brand/social/twitter-card-1200x600.png{% endblock %}">
   <link rel="canonical" href="{{ site_url }}/{{ caminho }}">
   {% endif %}
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="application-name" content="Monitor Político">
+  <meta name="apple-mobile-web-app-title" content="Monitor Político">
+  <meta name="theme-color" content="#14263D">
+  <link rel="icon" type="image/svg+xml" href="{{ raiz }}/static/brand/favicon/favicon.svg">
+  <link rel="icon" sizes="any" href="{{ raiz }}/static/brand/favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ raiz }}/static/brand/favicon/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ raiz }}/static/brand/favicon/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ raiz }}/static/brand/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="{{ raiz }}/static/brand/favicon/site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Instrument+Sans:wght@400;500;600;700&display=swap">
@@ -30,7 +40,7 @@
   <a class="ce-skip" href="#conteudo">Pular para o conteúdo</a>
   <header class="ce-topbar">
     <div class="ce-container ce-topbar-inner">
-      <a class="ce-brand" href="{{ raiz }}/index.html">Monitor Político</a>
+      <a class="ce-brand" href="{{ raiz }}/index.html"><img class="ce-brand-logo" src="{{ raiz }}/static/brand/svg/logo-primary.svg" alt="" width="36" height="36">Monitor Político</a>
       <nav class="ce-nav" aria-label="Navegação principal">
         <a href="{{ raiz }}/index.html"{% if casa == "inicio" %} aria-current="page"{% endif %}>Início</a>
         <a href="{{ raiz }}/deputados/index.html"{% if casa == "camara" %} aria-current="page"{% endif %}>Deputados</a>

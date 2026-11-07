@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Marca com losango verde e amarelo e semicírculos azuis">
+
+<path d="M 277 65 L 447 235 Q 468 256 447 277 L 277 447 Q 256 468 235 447 L 65 277 Q 44 256 65 235 L 235 65 Q 256 44 277 65 Z" fill="#FFFFFF"/>
+<g fill="#FFFFFF" stroke="#0B1B2A" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M 110 253 A 90 90 0 0 1 290 253 Z"/><path d="M 222 262 H 402 A 90 90 0 0 1 222 262 Z"/>
+</g></svg>

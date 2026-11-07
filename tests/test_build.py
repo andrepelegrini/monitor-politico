@@ -197,12 +197,14 @@ def test_tags_de_compartilhamento_com_endereco(tmp_path, site):
     pasta = tmp_path / "site2"
     plp = (pasta / "proposicoes" / "plp-186-2026.html").read_text(encoding="utf-8")
     assert '<meta property="og:url" content="https://monitor.exemplo.br/proposicoes/plp-186-2026.html">' in plp
-    assert '<meta property="og:image" content="https://monitor.exemplo.br/static/compartilhar.png">' in plp
+    assert '<meta property="og:image" content="https://monitor.exemplo.br/static/brand/social/open-graph-1200x630.png">' in plp
     assert '<meta property="og:description" content="Virou Lei Complementar 238/2026.' in plp
     inicio = (pasta / "index.html").read_text(encoding="utf-8")
     assert '<meta property="og:url" content="https://monitor.exemplo.br/index.html">' in inicio
     assert '<meta property="og:title" content="O que está em discussão no Congresso">' in inicio
-    assert (pasta / "static" / "compartilhar.png").exists()
+    assert (pasta / "static" / "brand" / "social" / "open-graph-1200x630.png").exists()
+    assert (pasta / "static" / "brand" / "favicon" / "site.webmanifest").exists()
+    assert '<meta name="twitter:image" content="https://monitor.exemplo.br/static/brand/social/twitter-card-1200x600.png">' in plp
 
 
 def test_url_do_site():

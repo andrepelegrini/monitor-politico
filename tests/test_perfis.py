@@ -359,4 +359,4 @@ def test_compartilhamento_do_perfil(tmp_path, docs, doc):
     assert 'id="compartilhar"' in pagina and "Copiar link" in pagina and "Compartilhar no WhatsApp" in pagina
     assert "Dados deste perfil coletados em" in pagina
     # Sem PNG gerado, fica a imagem padrão do site.
-    assert 'content="https://exemplo.org/static/compartilhar.png"' in pagina
+    assert 'content="https://exemplo.org/static/brand/social/open-graph-1200x630.png"' in pagina
