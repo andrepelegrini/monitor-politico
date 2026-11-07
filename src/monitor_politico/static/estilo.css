@@ -48,7 +48,6 @@ body { margin: 0; }
 
 /* Rodapé */
 .ce-app .ce-footer { margin-top: var(--ce-space-16); padding-block: var(--ce-space-6) var(--ce-space-8); border-top: 1px solid var(--ce-border); font-size: .8125rem; color: var(--ce-text-secondary); }
-.ce-app .ce-footer p { max-width: 80ch; }
 .ce-app .ce-footer p + p { margin-top: var(--ce-space-2); }
 
 /* Abertura de página */
@@ -57,11 +56,11 @@ body { margin: 0; }
 .ce-app .ce-page-head--editorial { padding-block: var(--ce-space-12) var(--ce-space-8); }
 .ce-app .ce-page-head--editorial h1 { font-size: var(--ce-title-lg); letter-spacing: -.035em; max-width: 18ch; }
 .ce-app .ce-page-head .ce-eyebrow { color: var(--ce-terracotta); }
-.ce-app .ce-deck { font-size: var(--ce-text-lg); color: var(--ce-text-secondary); max-width: 62ch; }
+.ce-app .ce-deck { font-size: var(--ce-text-lg); color: var(--ce-text-secondary); }
 
 /* Seções e blocos */
 .ce-app .ce-section { margin-top: var(--ce-space-12); }
-.ce-app .ce-section-note { margin-top: var(--ce-space-3); font-size: var(--ce-text-sm); color: var(--ce-text-secondary); max-width: 72ch; }
+.ce-app .ce-section-note { margin-top: var(--ce-space-3); font-size: var(--ce-text-sm); color: var(--ce-text-secondary); }
 .ce-app .ce-subtitle { font: 500 1.25rem/1.2 var(--ce-font-display); letter-spacing: -.01em; }
 .ce-app .ce-text-sm { font-size: var(--ce-text-sm); }
 .ce-app .ce-stack { display: flex; flex-direction: column; gap: var(--ce-space-8); min-width: 0; }
@@ -266,7 +265,7 @@ body { margin: 0; }
 
 /* Perfil ampliado de parlamentar */
 .ce-app .pf-topo { padding-top: var(--ce-space-5); }
-.ce-app .pf-deck { color: var(--ce-text-secondary); max-width: 62ch; }
+.ce-app .pf-deck { color: var(--ce-text-secondary); }
 .ce-app .pf-ancoras { position: sticky; top: 0; z-index: 5; display: flex; gap: var(--ce-space-5); overflow-x: auto; margin-top: var(--ce-space-8); background: var(--ce-paper); border-bottom: 1px solid var(--ce-border); scrollbar-width: none; }
 .ce-app .pf-ancoras a { flex: none; padding-block: var(--ce-space-3); color: var(--ce-text-secondary); font-size: var(--ce-text-sm); font-weight: 600; text-decoration: none; }
 .ce-app .pf-ancoras a:hover { color: var(--ce-ink); text-decoration: underline; text-underline-offset: .4em; }
@@ -297,7 +296,7 @@ body { margin: 0; }
 .ce-app .pf-detalhes summary::-webkit-details-marker { display: none; }
 .ce-app .pf-detalhes summary::before { content: ""; flex: none; width: .4rem; height: .4rem; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(-45deg); }
 .ce-app .pf-detalhes[open] > summary::before { transform: rotate(45deg); }
-.ce-app .pf-detalhes > p { max-width: 72ch; margin-bottom: var(--ce-space-2); }
+.ce-app .pf-detalhes > p { margin-bottom: var(--ce-space-2); }
 .ce-app .pf-composicao { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--ce-space-6); margin-top: var(--ce-space-3); }
 .ce-app .pf-composicao > * { min-width: 0; }
 .ce-app .pf-composicao h4 { font: 600 var(--ce-text-sm)/1.3 var(--ce-font-ui); margin-bottom: var(--ce-space-2); color: var(--ce-ink); }
