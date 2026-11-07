@@ -216,11 +216,12 @@ def ler(caminho: Path) -> Optional[dict[str, Any]]:
 # --- O que a página mostra
 
 
-def resumo(doc: dict[str, Any]) -> dict[str, Any]:
+def resumo(doc: dict[str, Any], chegam_em: Iterable[str] = CHEGAM, rotulos: Optional[dict[str, str]] = None) -> dict[str, Any]:
+    rotulos = {**ROTULOS, **(rotulos or {})}
     contagem = Counter(s["chave"] for s in doc["situacoes"].values())
     contagem.update(e["chave"] for e in doc["eleitos_novos"])
-    chegam = [{"chave": c, "rotulo": ROTULOS[c], "valor": contagem[c]} for c in CHEGAM if contagem[c]]
-    saem = [{"chave": c, "rotulo": ROTULOS[c], "valor": contagem[c]} for c in SAEM if contagem[c]]
+    chegam = [{"chave": c, "rotulo": rotulos[c], "valor": contagem[c]} for c in chegam_em if contagem[c]]
+    saem = [{"chave": c, "rotulo": rotulos[c], "valor": contagem[c]} for c in SAEM if contagem[c]]
     total = sum(c["valor"] for c in chegam) or 1
     maior = max((c["valor"] for c in saem), default=1)
     return {

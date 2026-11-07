@@ -345,6 +345,7 @@ body { margin: 0; }
 .ce-app .pf-eleito-reeleicao { background: var(--ce-focus); }
 .ce-app .pf-eleito-retorno { background: var(--ce-olive); }
 .ce-app .pf-eleito-primeiro { background: var(--ce-terracotta); }
+.ce-app .pf-eleito-camara { background: #6F86B8; }
 .ce-app .pf-composicao-lista { margin: 0; padding: 0; list-style: none; font-size: var(--ce-text-sm); }
 .ce-app .pf-composicao-lista li { display: flex; justify-content: space-between; gap: var(--ce-space-4); padding-block: var(--ce-space-2); border-bottom: 1px solid var(--ce-border-soft); overflow-wrap: anywhere; }
 .ce-app .pf-composicao-lista strong { flex: none; }
@@ -362,6 +363,8 @@ body { margin: 0; }
 .ce-app .badge-sem_candidatura { background: #F0EBE2; color: #5A5148; border-color: #CFC6B8; }
 .ce-app .badge-sem_resultado { background: #FFFFFF; color: #5A5148; border: 1px dashed #8B7F73; }
 .ce-app .badge-falecimento { background: #FFFFFF; color: #26221E; border-color: #26221E; }
+.ce-app .badge-camara { background: #D6E0F5; color: #263F73; border-color: #9FB3DC; }
+.ce-app .badge-continua { background: #E4ECEA; color: #2F4A45; border-color: #A9C0BB; }
 /* Resultado de votação: os mesmos tons do voto Sim e do voto Não. */
 .ce-app .resultado-aprovada { background: #DCE8F6; color: #1F4A80; border-color: #9DBBE0; }
 .ce-app .resultado-rejeitada { background: #F6E9CF; color: #664510; border-color: #D9B878; }

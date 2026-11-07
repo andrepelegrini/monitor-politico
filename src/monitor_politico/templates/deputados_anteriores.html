@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% block titulo %}Fora de exercício · Monitor Político{% endblock %}
-{% block descricao %}Quem exerceu mandato de deputado federal nesta legislatura e não está mais em exercício, com a situação oficial e o resultado de {{ legislatura.ano_da_eleicao }}.{% endblock %}
+{% block descricao %}Quem exerceu mandato {{ "no Senado" if casa == "senado" else "de deputado federal" }} nesta legislatura e não está mais em exercício, com a situação oficial e o resultado de {{ legislatura.ano_da_eleicao }}.{% endblock %}
 {% block conteudo %}
 <nav class="ce-breadcrumb" aria-label="Trilha de navegação">
   <ol>
     <li><a href="{{ raiz }}/index.html">Início</a></li>
-    <li><a href="index.html">Deputados</a></li>
+    <li><a href="index.html">{{ "Senadores" if casa == "senado" else "Deputados" }}</a></li>
     <li aria-current="page">Fora de exercício</li>
   </ol>
 </nav>

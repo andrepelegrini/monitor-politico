@@ -37,7 +37,7 @@
         </tbody>
       </table>
     </div>
-    {% if a.inicio_mandato %}<p class="ce-section-note">Pela data em que a {{ a.palavra_norma }} saiu, {{ a.sancionadas_no_mandato.total|numero }} {{ "foi sancionada" if a.sancionadas_no_mandato.total == 1 else "foram sancionadas" }} desde {{ a.inicio_mandato|data_br }}: {{ a.sancionadas_no_mandato.principal|numero }} de autoria principal e {{ a.sancionadas_no_mandato.coautoria|numero }} em coautoria. É esse o critério usado para comparar os parlamentares na lista de deputados.</p>{% endif %}
+    {% if a.inicio_mandato %}<p class="ce-section-note">Pela data em que a {{ a.palavra_norma }} saiu, {{ a.sancionadas_no_mandato.total|numero }} {{ "foi sancionada" if a.sancionadas_no_mandato.total == 1 else "foram sancionadas" }} desde {{ a.inicio_mandato|data_br }}: {{ a.sancionadas_no_mandato.principal|numero }} de autoria principal e {{ a.sancionadas_no_mandato.coautoria|numero }} em coautoria. É esse o critério usado para comparar os parlamentares na lista de {{ "senadores" if casa == "senado" else "deputados" }}.</p>{% endif %}
     <p class="ce-section-note">São contagens de projetos e PECs, e não medem qualidade nem resultado. Uma proposta pode levar anos para avançar, e por isso as mais recentes têm menos chance de já ter virado {{ a.palavra_norma }}. Aqui conta só a proposta que virou {{ a.palavra_norma }} diretamente: uma ideia que avançou dentro de outro projeto, por exemplo tramitando em conjunto, não aparece. A {{ a.palavra_norma }} entra no mandato em que a proposta foi apresentada, mesmo que tenha sido aprovada depois.</p>
   </div>
 
@@ -67,7 +67,7 @@
         <li><span>{{ t.nome }}</span><span class="ce-bar-track" aria-hidden="true"><span class="ce-bar-value" style="width: {{ t.largura }}%"></span></span><span class="pf-barra-numero">{{ t.valor|numero }}</span></li>
         {% endfor %}
       </ul>
-      <p class="ce-section-note">Uma proposta pode ter mais de um assunto. A conta inclui apoio em PEC.</p>
+      <p class="ce-section-note">Uma proposta pode ter mais de um assunto.{% if casa != "senado" %} A conta inclui apoio em PEC.{% endif %}</p>
     </div>
     <div>
       <h3 class="pf-h3">O que entra nesta conta</h3>
@@ -107,7 +107,7 @@
       </select></label>
   </div>
   <p class="ce-count"><span id="p-contagem">{{ a.total|numero }}</span> propostas, da mais recente para a mais antiga.</p>
-  <ul class="pf-propostas" id="p-lista" data-fragmento="{{ raiz }}/static/perfis/{{ d.id }}-propostas.html">
+  <ul class="pf-propostas" id="p-lista" data-fragmento="{{ raiz }}/static/perfis/{{ perfil.arquivo }}-propostas.html">
     {% set palavra_norma = a.palavra_norma %}
     {% for p in a.propostas_iniciais %}{% include "perfil_proposta_item.html" %}{% endfor %}
   </ul>
@@ -118,6 +118,10 @@
   <button class="ce-button ce-button--ghost pf-mais" id="p-mais" type="button" hidden>Mostrar mais propostas</button>
   <noscript><p class="pf-nota">Sem JavaScript, esta lista mostra só as propostas mais recentes.</p></noscript>
 
+{% if casa == "senado" %}<h3 class="pf-h3 pf-espaco" id="relatorias">Relatorias</h3>
+  <p>{{ a.relatorias_no_mandato.em_andamento|numero }} {{ "projeto" if a.relatorias_no_mandato.em_andamento == 1 else "projetos" }} com relatoria em andamento. Desde {{ a.inicio_mandato|data_br }}, {{ a.relatorias_no_mandato.total|numero }} {{ "designação" if a.relatorias_no_mandato.total == 1 else "designações" }} em projetos diferentes.</p>
+  <p class="ce-section-note">Conta PL, PLP, PEC, MP, PDL e projetos de resolução. Em andamento é a designação sem data de encerramento na fonte. A escolha de quem relata é feita pelas comissões e pela Presidência, e não só pelo parlamentar.</p>
+  {% else %}
   <div class="ce-table-scroll pf-espaco" tabindex="0" role="region" aria-label="Autoria e relatoria por ano">
     <table class="ce-table pf-tabela">
       <caption>Toda a atividade por ano, segundo a Câmara</caption>
@@ -131,15 +135,21 @@
     </table>
   </div>
   <p class="ce-section-note">Esta contagem inclui requerimentos, emendas, pareceres e outros documentos, por isso é maior do que a lista de projetos e PECs. Nas relatadas, entram também requerimentos de informação, que a Mesa da Câmara relata em grande volume por causa do cargo. Ela vale como referência de volume, e quantidade não mede qualidade nem resultado.</p>
+  {% endif %}
 
   <details class="pf-detalhes">
     <summary>Fonte e método</summary>
-    <p>Autoria conforme a Câmara. Autoria principal é a primeira posição na ordem de assinatura. Apoio é a assinatura em PEC sem ser proponente. O número da norma vem da tramitação de cada proposta. “Aguardando o Senado” indica proposta cuja situação atual é aguardar a apreciação do Senado Federal. Assuntos pela classificação temática oficial. A tabela por ano é a publicada na página do parlamentar. Coleta em {{ perfil.coleta_local|data_br }}.</p>
+{% if casa == "senado" %}<p>Autoria conforme o Senado. Autoria principal é o primeiro nome na relação de autores da proposta. Na API do Senado não há como separar quem apenas apoiou uma PEC, e por isso todas as assinaturas contam como autoria. “Aguardando a Câmara” indica proposta remetida à Câmara dos Deputados. Assuntos pela classificação oficial do Senado. Só entram propostas apresentadas no Senado. Coleta em {{ perfil.coleta_local|data_br }}.</p>
+    <ul class="ce-links">
+      <li><a href="https://legis.senado.leg.br/dadosabertos/docs/">Senado: documentação dos Dados Abertos (processos e relatorias)</a></li>
+      <li><a href="{{ d.url_site }}">Senado: página do parlamentar</a></li>
+    </ul>
+    {% else %}<p>Autoria conforme a Câmara. Autoria principal é a primeira posição na ordem de assinatura. Apoio é a assinatura em PEC sem ser proponente. O número da norma vem da tramitação de cada proposta. “Aguardando o Senado” indica proposta cuja situação atual é aguardar a apreciação do Senado Federal. Assuntos pela classificação temática oficial. A tabela por ano é a publicada na página do parlamentar. Coleta em {{ perfil.coleta_local|data_br }}.</p>
     <ul class="ce-links">
       <li><a href="https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2026.csv">Câmara: autores de proposições</a></li>
       <li><a href="https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2026.csv">Câmara: proposições</a></li>
       <li><a href="https://dadosabertos.camara.leg.br/arquivos/proposicoesTemas/csv/proposicoesTemas-2026.csv">Câmara: temas das proposições</a></li>
       <li><a href="{{ d.url_site }}">Câmara: página do parlamentar</a></li>
-    </ul>
+    </ul>{% endif %}
   </details>
 </section>

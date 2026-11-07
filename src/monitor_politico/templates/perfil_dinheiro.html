@@ -2,10 +2,16 @@
 {% set m = perfil.dinheiro.emendas %}
 <section class="pf-secao" id="dinheiro">
   <p class="ce-eyebrow">Dinheiro público</p>
-  <h2 class="pf-h2">{{ q.total|milhoes }} em cota parlamentar{% if m.por_ano %} e {{ m.pago_total|milhoes }} pagos em emendas{% endif %} neste mandato</h2>
+  <h2 class="pf-h2">{% if q.por_ano %}{{ q.total|milhoes }} em cota parlamentar{% else %}Sem despesas de cota registradas{% endif %}{% if m.por_ano %} e {{ m.pago_total|milhoes }} pagos em emendas{% endif %} neste mandato</h2>
 
   <div id="cota">
     <h3 class="pf-h3">Cota parlamentar: despesas de custeio do mandato</h3>
+    {% if not q.por_ano %}
+    <p class="pf-nota">O arquivo de cota parlamentar do Senado não traz despesas em nome desta pessoa desde {{ "fevereiro de 2023" }}. Isso pode acontecer com quem assumiu há pouco tempo ou não pediu reembolso.</p>
+    <ul class="ce-links">
+      <li><a href="https://www12.senado.leg.br/transparencia/dados-abertos-transparencia/dados-abertos-ceaps">Senado: dados abertos da cota parlamentar</a></li>
+    </ul>
+    {% else %}
     <div class="pf-duas">
       <div>
         <ul class="pf-barras pf-barras--moeda">
@@ -24,17 +30,17 @@
       <div>
         <div class="ce-table-scroll" tabindex="0" role="region" aria-label="Cota parlamentar por ano">
           <table class="ce-table pf-tabela">
-            <caption>Total oficial da Câmara, por ano</caption>
-            <thead><tr><th scope="col">Ano</th><th scope="col" class="pf-num">Gasto</th><th scope="col" class="pf-num">Da cota disponível</th></tr></thead>
+            <caption>{{ "Soma dos registros do Senado, por ano" if casa == "senado" else "Total oficial da Câmara, por ano" }}</caption>
+            <thead><tr><th scope="col">Ano</th><th scope="col" class="pf-num">Gasto</th>{% if casa != "senado" %}<th scope="col" class="pf-num">Da cota disponível</th>{% endif %}</tr></thead>
             <tbody>
               {% for a in q.por_ano %}
-              <tr><th scope="row">{{ a.ano }}</th><td class="pf-num">{{ a.total|moeda }}</td><td class="pf-num">{% if a.percentual is not none %}{{ ('%.1f'|format(a.percentual))|replace('.', ',') }}%{% else %}Não informado{% endif %}</td></tr>
+              <tr><th scope="row">{{ a.ano }}</th><td class="pf-num">{{ a.total|moeda }}</td>{% if casa != "senado" %}<td class="pf-num">{% if a.percentual is not none %}{{ ('%.1f'|format(a.percentual))|replace('.', ',') }}%{% else %}Não informado{% endif %}</td>{% endif %}</tr>
               {% endfor %}
-              <tr class="pf-total"><th scope="row">Total</th><td class="pf-num">{{ q.total|moeda }}</td><td></td></tr>
+              <tr class="pf-total"><th scope="row">Total</th><td class="pf-num">{{ q.total|moeda }}</td>{% if casa != "senado" %}<td></td>{% endif %}</tr>
             </tbody>
           </table>
         </div>
-        <p class="ce-section-note">A cota é um limite mensal para despesas previstas pela Câmara, e o valor varia por estado. Usar a cota não indica irregularidade, nem deixar de usá-la indica economia.</p>
+        <p class="ce-section-note">A cota é um limite mensal para despesas previstas {{ "pelo Senado" if casa == "senado" else "pela Câmara" }}, e o valor varia por estado. Usar a cota não indica irregularidade, nem deixar de usá-la indica economia.</p>
       </div>
     </div>
 
@@ -50,7 +56,7 @@
     </div>
 
     <h4 class="pf-h4 pf-espaco">Comprovantes</h4>
-    <div class="ce-filters" id="c-filtros" data-url="{{ raiz }}/static/perfis/{{ d.id }}-comprovantes.json" hidden>
+    <div class="ce-filters" id="c-filtros" data-url="{{ raiz }}/static/perfis/{{ perfil.arquivo }}-comprovantes.json"{% if casa == "senado" %} data-sem-documento="1"{% endif %} hidden>
       <label class="ce-field"><span class="ce-control-label">Buscar fornecedor</span><input class="ce-input" id="c-busca" type="search" autocomplete="off" placeholder="Nome do fornecedor"></label>
       <label class="ce-field"><span class="ce-control-label">Categoria</span>
         <select class="ce-select" id="c-categoria">
@@ -61,10 +67,10 @@
     <p class="ce-count" id="c-contagem" aria-live="polite">Os {{ q.maiores_comprovantes|length }} maiores de {{ q.total_comprovantes|numero }} comprovantes.</p>
     <div class="ce-table-scroll" tabindex="0" role="region" aria-label="Comprovantes da cota">
       <table class="ce-table pf-tabela pf-tabela--texto pf-comprovantes">
-        <thead><tr><th scope="col">Mês</th><th scope="col">Fornecedor</th><th scope="col">Categoria</th><th scope="col" class="pf-num">Valor</th><th scope="col">Documento</th></tr></thead>
+        <thead><tr><th scope="col">Mês</th><th scope="col">Fornecedor</th><th scope="col">Categoria</th><th scope="col" class="pf-num">Valor</th>{% if casa != "senado" %}<th scope="col">Documento</th>{% endif %}</tr></thead>
         <tbody id="c-lista">
           {% for c in q.maiores_comprovantes %}
-          <tr><td>{{ c.mes[5:] }}/{{ c.mes[:4] }}</td><td>{{ c.fornecedor }}</td><td>{{ c.categoria }}</td><td class="pf-num">{{ c.valor|moeda }}</td><td>{% if c.url %}<a href="{{ c.url }}">Abrir</a>{% else %}Sem arquivo{% endif %}</td></tr>
+          <tr><td>{{ c.mes[5:] }}/{{ c.mes[:4] }}</td><td>{{ c.fornecedor }}</td><td>{{ c.categoria }}</td><td class="pf-num">{{ c.valor|moeda }}</td>{% if casa != "senado" %}<td>{% if c.url %}<a href="{{ c.url }}">Abrir</a>{% else %}Sem arquivo{% endif %}</td>{% endif %}</tr>
           {% endfor %}
         </tbody>
       </table>
@@ -72,12 +78,17 @@
     <button class="ce-button ce-button--ghost pf-mais" id="c-mais" type="button" hidden>Mostrar mais comprovantes</button>
     <details class="pf-detalhes">
       <summary>Fonte e método</summary>
-      <p>O total e o percentual de cada ano são os publicados pela Câmara na página do parlamentar. Categorias, fornecedores e comprovantes vêm dos arquivos abertos e somam {{ q.detalhado|moeda }}, em {{ q.total_comprovantes|numero }} registros desta legislatura. Valores negativos são compensações registradas pela Câmara. Fornecedores com o mesmo nome são somados, mesmo com mais de um CNPJ. Fornecedor pessoa física aparece sem o nome. Coleta em {{ perfil.coleta_local|data_br }}.</p>
+{% if casa == "senado" %}<p>Os totais somam {{ q.total_comprovantes|numero }} registros do arquivo de cota parlamentar (CEAPS) publicado pelo Senado, desde fevereiro de 2023, porque o Senado não publica um total oficial nem o percentual usado da cota. O arquivo não traz o endereço do comprovante. A descrição livre de cada despesa não é exibida. Fornecedores com o mesmo nome são somados, mesmo com mais de um CNPJ. Fornecedor pessoa física aparece sem o nome. Coleta em {{ perfil.coleta_local|data_br }}.</p>
+      <ul class="ce-links">
+        <li><a href="https://www12.senado.leg.br/transparencia/dados-abertos-transparencia/dados-abertos-ceaps">Senado: dados abertos da cota parlamentar</a></li>
+      </ul>
+      {% else %}<p>O total e o percentual de cada ano são os publicados pela Câmara na página do parlamentar. Categorias, fornecedores e comprovantes vêm dos arquivos abertos e somam {{ q.detalhado|moeda }}, em {{ q.total_comprovantes|numero }} registros desta legislatura. Valores negativos são compensações registradas pela Câmara. Fornecedores com o mesmo nome são somados, mesmo com mais de um CNPJ. Fornecedor pessoa física aparece sem o nome. Coleta em {{ perfil.coleta_local|data_br }}.</p>
       <ul class="ce-links">
         <li><a href="https://www.camara.leg.br/cota-parlamentar/consulta-cota-parlamentar?ideDeputado={{ d.id }}">Câmara: consulta da cota parlamentar</a></li>
         <li><a href="https://dadosabertos.camara.leg.br/swagger/api.html?tab=staticfiles">Câmara: arquivos abertos da cota</a></li>
-      </ul>
+      </ul>{% endif %}
     </details>
+    {% endif %}
   </div>
 
   <div class="pf-bloco" id="emendas">

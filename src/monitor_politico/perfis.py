@@ -288,7 +288,7 @@ def linha_do_tempo(doc: dict[str, Any], hoje: date) -> list[dict[str, Any]]:
     for evento in doc["trajetoria"]:
         item = {"data": evento["data"], "futuro": False, "detalhe": ""}
         if evento["tipo"] == "posse":
-            item["titulo"] = f"Posse na {evento['legislatura']}ª legislatura"
+            item["titulo"] = "Início do mandato" if doc.get("casa") == "senado" else f"Posse na {evento['legislatura']}ª legislatura"
             eleicao = por_ano.get(int(evento["data"][:4]) - 1)
             item["detalhe"] = f"{evento['partido']}-{evento['uf']}"
             if eleicao:
@@ -316,13 +316,17 @@ def proximo_mandato(doc: dict[str, Any], hoje: date) -> Optional[dict[str, Any]]
         return None
     ultima = max(doc["eleicoes"], key=lambda e: e["ano"])
     inicio = date(ultima["ano"] + 1, 2, 1)
-    if not foi_eleito(ultima) or inicio <= hoje:
+    senado = doc.get("casa") == "senado"
+    # O mandato no Senado dura oito anos. Senador que venceu para outro cargo não renova este mandato.
+    if not foi_eleito(ultima) or inicio <= hoje or (senado and ultima.get("cargo") != "Senador"):
         return None
-    return {**ultima, "inicio": inicio.isoformat(), "fim_ano": ultima["ano"] + 5, "inicio_ano": ultima["ano"] + 1}
+    return {**ultima, "inicio": inicio.isoformat(), "fim_ano": ultima["ano"] + (9 if senado else 5), "inicio_ano": ultima["ano"] + 1}
 
 
 def mandatos_da_trajetoria(doc: dict[str, Any]) -> list[dict[str, str]]:
     """Mandatos pelas posses, do mais antigo para o mais recente. Cada um vai até o início do seguinte."""
+    if doc.get("mandatos"):
+        return doc["mandatos"]  # O Senado publica o período de cada mandato, de oito anos.
     posses = sorted((e for e in doc["trajetoria"] if e["tipo"] == "posse"), key=lambda e: e["data"])
     mandatos, vistas = [], set()
     for posse in posses:
@@ -360,7 +364,10 @@ def visao(doc: dict[str, Any], hoje: Optional[date] = None, slugs: Optional[dict
         "plenario": plenario.visao(doc["plenario"], slugs) if doc.get("plenario") else None,
         "dinheiro": dinheiro.visao(doc["dinheiro"]) if doc.get("dinheiro") else None,
         "propostas": (
-            propostas.visao(doc["propostas"], slugs, mandatos_da_trajetoria(doc), (doc.get("legislatura_atual") or {}).get("inicio"))
+            propostas.visao(
+                doc["propostas"], slugs, mandatos_da_trajetoria(doc),
+                doc["propostas"].get("inicio_comparacao") or (doc.get("legislatura_atual") or {}).get("inicio"), doc.get("casa", "camara"),
+            )
             if doc.get("propostas") else None
         ),
     }

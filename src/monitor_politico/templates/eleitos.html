@@ -1,18 +1,18 @@
 {% extends "base.html" %}
 {% block titulo %}Eleitos para 2027 · Monitor Político{% endblock %}
-{% block descricao %}Os {{ resumo_legislatura.total_eleitos }} deputados federais eleitos em {{ legislatura.ano_da_eleicao }}: quem volta, quem chega pela primeira vez e o que aconteceu com quem está no mandato atual.{% endblock %}
+{% block descricao %}{% if casa == "senado" %}Os {{ resumo_legislatura.total_eleitos }} eleitos para o Senado em {{ legislatura.ano_da_eleicao }}: quem continua, quem chega e o que aconteceu com quem tem mandato até 2027.{% else %}Os {{ resumo_legislatura.total_eleitos }} deputados federais eleitos em {{ legislatura.ano_da_eleicao }}: quem volta, quem chega pela primeira vez e o que aconteceu com quem está no mandato atual.{% endif %}{% endblock %}
 {% block conteudo %}
 <nav class="ce-breadcrumb" aria-label="Trilha de navegação">
   <ol>
     <li><a href="{{ raiz }}/index.html">Início</a></li>
-    <li><a href="{{ raiz }}/deputados/index.html">Deputados</a></li>
+    <li><a href="../index.html">{{ "Senadores" if casa == "senado" else "Deputados" }}</a></li>
     <li aria-current="page">Eleitos para 2027</li>
   </ol>
 </nav>
 <header class="ce-page-head">
   <p class="ce-eyebrow">Próxima legislatura</p>
-  <h1>Eleitos para a Câmara em {{ legislatura.ano_da_eleicao }}</h1>
-  <p class="ce-deck">Posse prevista para {{ legislatura.posse|data_br }}. Dados do TSE e da Câmara, coletados em {{ coleta_legislatura|data_br }}.</p>
+  <h1>Eleitos para {{ "o Senado" if casa == "senado" else "a Câmara" }} em {{ legislatura.ano_da_eleicao }}</h1>
+  <p class="ce-deck">Posse prevista para {{ legislatura.posse|data_br }}. Dados do TSE e {{ "do Senado" if casa == "senado" else "da Câmara" }}, coletados em {{ coleta_legislatura|data_br }}.</p>
 </header>
 
 <section class="ce-section" aria-labelledby="renovacao-titulo">
@@ -23,28 +23,28 @@
   <ul class="ce-legend">
     {% for c in resumo_legislatura.chegam %}<li><span class="ce-dot pf-eleito-{{ c.chave }}"></span>{{ c.rotulo }} <strong>{{ c.valor|numero }}</strong></li>{% endfor %}
   </ul>
-  <p class="ce-section-note">Reeleição inclui quem exerceu mandato nesta legislatura, mesmo como suplente. Retorno é quem já foi deputado em legislaturas anteriores. A Câmara ainda não cadastrou a nova legislatura, por isso quem chega agora não tem foto oficial nem página na Câmara.</p>
+  {% if casa == "senado" %}<p class="ce-section-note">Só um terço ou dois terços das vagas são renovados a cada eleição: em {{ legislatura.ano_da_eleicao }}, foram 54 das 81. Os demais têm mandato até 2031. Sem CPF na fonte do Senado, a ligação com o TSE é feita pela data de nascimento e pelo nome. Quando não dá para confirmar, a pessoa fica sem indicação.</p>{% else %}<p class="ce-section-note">Reeleição inclui quem exerceu mandato nesta legislatura, mesmo como suplente. Retorno é quem já foi deputado em legislaturas anteriores. A Câmara ainda não cadastrou a nova legislatura, por isso quem chega agora não tem foto oficial nem página na Câmara.</p>{% endif %}
 </section>
 
 <section class="ce-section" aria-labelledby="saem-titulo">
-  <div class="ce-section-header"><h2 class="ce-display ce-section-title" id="saem-titulo">Quem exerceu mandato nesta legislatura e não tem vaga em 2027</h2></div>
+  <div class="ce-section-header"><h2 class="ce-display ce-section-title" id="saem-titulo">{{ "O que aconteceu com os demais senadores em exercício" if casa == "senado" else "Quem exerceu mandato nesta legislatura e não tem vaga em 2027" }}</h2></div>
   <ul class="pf-barras pf-espaco">
     {% for c in resumo_legislatura.saem %}
     <li><span>{{ c.rotulo }}</span><span class="ce-bar-track" aria-hidden="true"><span class="ce-bar-value" style="width: {{ c.largura }}%"></span></span><span class="pf-barra-numero">{{ c.valor|numero }}</span></li>
     {% endfor %}
   </ul>
-  <p class="ce-section-note">A conta inclui suplentes que assumiram por um período e quem deixou o cargo antes do fim do mandato. Suplência significa que a pessoa disputou a vaga e pode assumir durante o mandato.</p>
+  {% if casa == "senado" %}<p class="ce-section-note">Inclui quem está em exercício como suplente. Quem tem mandato até 2031 só aparece aqui se disputou outro cargo: nesse caso, se não venceu, continua no Senado. Os demais com mandato até 2031 não estão nesta conta.</p>{% else %}<p class="ce-section-note">A conta inclui suplentes que assumiram por um período e quem deixou o cargo antes do fim do mandato. Suplência significa que a pessoa disputou a vaga e pode assumir durante o mandato.</p>{% endif %}
 </section>
 
 <section class="ce-section" aria-labelledby="novos-titulo">
-  <div class="ce-section-header"><h2 class="ce-display ce-section-title" id="novos-titulo">Quem chega à Câmara em 2027</h2></div>
+  <div class="ce-section-header"><h2 class="ce-display ce-section-title" id="novos-titulo">Quem chega {{ "ao Senado" if casa == "senado" else "à Câmara" }} em 2027</h2></div>
   <form class="ce-filters" role="search" aria-label="Filtrar eleitos" onsubmit="return false">
     <label class="ce-field"><span class="ce-control-label">Nome</span><input class="ce-input" type="search" id="f-nome" placeholder="Buscar por nome" autocomplete="off"></label>
     <label class="ce-field"><span class="ce-control-label">Partido</span><select class="ce-select" id="f-partido"><option value="">Todos</option>{% for p in partidos %}<option>{{ p }}</option>{% endfor %}</select></label>
     <label class="ce-field"><span class="ce-control-label">UF</span><select class="ce-select" id="f-uf"><option value="">Todas</option>{% for u in ufs %}<option>{{ u }}</option>{% endfor %}</select></label>
-    <label class="ce-field"><span class="ce-control-label">Situação</span><select class="ce-select" id="f-situacao"><option value="">Todas</option><option>Primeiro mandato</option><option>Retorno à Câmara</option></select></label>
+    <label class="ce-field"><span class="ce-control-label">Situação</span><select class="ce-select" id="f-situacao"><option value="">Todas</option>{% if casa == "senado" %}<option>Primeiro mandato no Senado</option><option>Retorno ao Senado</option><option>Chega da Câmara</option>{% else %}<option>Primeiro mandato</option><option>Retorno à Câmara</option>{% endif %}</select></label>
   </form>
-  <p class="ce-count" aria-live="polite"><span id="contagem">{{ eleitos|length }}</span> de {{ eleitos|length }} novos nomes. Quem se reelegeu continua na <a href="{{ raiz }}/deputados/index.html">lista de deputados</a>.</p>
+  <p class="ce-count" aria-live="polite"><span id="contagem">{{ eleitos|length }}</span> de {{ eleitos|length }} novos nomes. Quem se reelegeu continua na <a href="../index.html">lista de {{ "senadores" if casa == "senado" else "deputados" }}</a>.</p>
   <ul class="ce-people ce-people--leis" id="lista">
     {% for e in eleitos %}
     <li data-nome="{{ e.nome|lower }}" data-partido="{{ e.partido }}" data-uf="{{ e.uf }}" data-situacao="{{ e.rotulo }}">
@@ -64,6 +64,6 @@
 </section>
 {% endblock %}
 {% block rodape %}
-<p>Fontes: <a href="https://dadosabertos.tse.jus.br/dataset/candidatos-2026">TSE</a> e <a href="https://dadosabertos.camara.leg.br/">Dados Abertos da Câmara dos Deputados</a>. Este site reproduz informações públicas oficiais, sem avaliação ou opinião.</p>
+<p>Fontes: <a href="https://dadosabertos.tse.jus.br/dataset/candidatos-2026">TSE</a> e <a href="{{ fonte_url }}">Dados Abertos {{ "do Senado Federal" if casa == "senado" else "da Câmara dos Deputados" }}</a>. Este site reproduz informações públicas oficiais, sem avaliação ou opinião.</p>
 {% endblock %}
 {% block scripts %}<script src="{{ raiz }}/static/filtro.js"></script>{% endblock %}

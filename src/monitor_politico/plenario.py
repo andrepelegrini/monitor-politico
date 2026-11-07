@@ -272,6 +272,12 @@ def _largura(partes: dict[str, int]) -> dict[str, float]:
     return {chave: round(valor / total * 100, 2) for chave, valor in partes.items()}
 
 
+def _participacao(doc: dict[str, Any]) -> dict[str, Any]:
+    """Senado: votações nominais em que a pessoa consta na relação oficial, e o que está registrado em cada uma."""
+    colunas = ("votacoes", "votou", "presente_sem_voto", "afastamento", "nao_compareceu")
+    return {"por_ano": doc["por_ano"], "total": {c: sum(a[c] for a in doc["por_ano"]) for c in colunas}, "secretas": doc["secretas"]}
+
+
 def visao(doc: dict[str, Any], slugs: Optional[dict[str, str]] = None) -> dict[str, Any]:
     slugs = slugs or {}
     dados, presenca = doc["votos"], doc["presenca"]
@@ -303,6 +309,7 @@ def visao(doc: dict[str, Any], slugs: Optional[dict[str, str]] = None) -> dict[s
         for chave in ("dias", "presencas", "justificadas", "nao_justificadas", "outros_eventos")
     }
     return {
+        "participacao": _participacao(doc["participacao"]) if doc.get("participacao") else None,
         "votacoes_nominais": dados["votacoes_nominais"],
         "votos_registrados": dados["votos_registrados"],
         "sem_registro": dados["votacoes_nominais"] - dados["votos_registrados"],

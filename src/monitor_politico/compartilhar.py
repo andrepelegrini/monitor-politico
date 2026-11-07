@@ -19,11 +19,13 @@ from xml.sax.saxutils import escape
 import httpx
 
 from monitor_politico import perfis
-from monitor_politico.models import Deputado
+from monitor_politico.models import Deputado, Senador
 
 LARGURA, ALTURA = 1200, 630
 COLUNAS, LARGURA_DA_COLUNA = 4, 275
 DEPUTADOS_PADRAO = Path("data/deputados.json")
+SENADORES_PADRAO = Path("data/senadores.json")
+PASTA_SENADO = perfis.SAIDA_PADRAO / "senado"
 NOME_DA_IMAGEM = "{id}-compartilhar.jpg"
 
 
@@ -33,10 +35,14 @@ def numeros_do_perfil(visao: dict[str, Any]) -> list[tuple[str, str]]:
     plenario = visao.get("plenario")
     if plenario:
         numeros.append((perfis.numero(plenario["votos_registrados"]), f"votos em {perfis.numero(plenario['votacoes_nominais'])} votações nominais"))
-        total = plenario["presenca"]["total"]
-        numeros.append((perfis.numero(total["presencas"]), f"dias com presença, de {perfis.numero(total['dias'])} com sessão"))
+        if plenario.get("participacao"):
+            total = plenario["participacao"]["total"]
+            numeros.append((perfis.numero(total["votou"]), f"participações, em {perfis.numero(total['votacoes'])} votações nominais"))
+        else:
+            total = plenario["presenca"]["total"]
+            numeros.append((perfis.numero(total["presencas"]), f"dias com presença, de {perfis.numero(total['dias'])} com sessão"))
     dinheiro = visao.get("dinheiro")
-    if dinheiro:
+    if dinheiro and dinheiro["cota"]["total"]:
         numeros.append((perfis.milhoes(dinheiro["cota"]["total"]), "em cota parlamentar no mandato"))
     propostas = visao.get("propostas")
     if propostas:
@@ -57,7 +63,8 @@ def _quebrar(texto: str, limite: int = 30) -> list[str]:
     return linhas + [atual] if atual else linhas
 
 
-def svg_do_perfil(deputado: Deputado, visao: dict[str, Any], foto_base64: Optional[str] = None) -> str:
+def svg_do_perfil(deputado: Any, visao: dict[str, Any], foto_base64: Optional[str] = None) -> str:
+    senado = visao.get("casa") == "senado"
     foto = (
         f'<image href="data:image/jpeg;base64,{foto_base64}" x="60" y="60" width="210" height="280" preserveAspectRatio="xMidYMid slice" clip-path="url(#recorte)"/>'
         if foto_base64 else '<rect x="60" y="60" width="210" height="280" rx="10" fill="#F0EBE2"/>'
@@ -81,13 +88,13 @@ def svg_do_perfil(deputado: Deputado, visao: dict[str, Any], foto_base64: Option
   <defs><clipPath id="recorte"><rect x="60" y="60" width="210" height="280" rx="10"/></clipPath></defs>
   <rect width="{LARGURA}" height="{ALTURA}" fill="#FAF8F4"/>
   {foto}
-  <text class="rotulo" x="310" y="104" font-size="20" fill="#B75131">CÂMARA DOS DEPUTADOS</text>
+  <text class="rotulo" x="310" y="104" font-size="20" fill="#B75131">{"SENADO FEDERAL" if senado else "CÂMARA DOS DEPUTADOS"}</text>
   <text class="titulo" x="310" y="190" font-size="{_tamanho_do_nome(deputado.nome)}" fill="#26221E">{escape(deputado.nome)}</text>
   <text class="texto" x="310" y="248" font-size="30" fill="#62594F">{escape(deputado.partido)}-{escape(deputado.uf)}</text>
   <text class="texto" x="310" y="302" font-size="24" font-weight="500" fill="#513C2D">Monitor Político</text>
   <rect x="60" y="358" width="1080" height="1" fill="#D9D2C8"/>
   {"".join(blocos)}
-  <text class="texto" x="60" y="602" font-size="19" fill="#62594F">Dados oficiais da Câmara, do TSE e do Portal da Transparência. Coleta em {visao_data(visao)}.</text>
+  <text class="texto" x="60" y="602" font-size="19" fill="#62594F">Dados oficiais {"do Senado" if senado else "da Câmara"}, do TSE e do Portal da Transparência. Coleta em {visao_data(visao)}.</text>
 </svg>
 """
 
@@ -101,11 +108,12 @@ def visao_data(visao: dict[str, Any]) -> str:
     return f"{dia}/{mes}/{ano}"
 
 
-def gerar_imagens(pasta: Path = perfis.SAIDA_PADRAO, deputados_json: Path = DEPUTADOS_PADRAO) -> int:
+def gerar_imagens(pasta: Path = perfis.SAIDA_PADRAO, deputados_json: Path = DEPUTADOS_PADRAO, senado: bool = False) -> int:
     """Um navegador só, reaproveitado: abrir um por imagem levaria horas com 513 deputados."""
     from playwright.sync_api import sync_playwright
 
-    deputados = {d["id"]: Deputado.de_dict(d) for d in json.loads(deputados_json.read_text(encoding="utf-8"))["deputados"]}
+    doc = json.loads(deputados_json.read_text(encoding="utf-8"))
+    deputados = {d["id"]: (Senador if senado else Deputado).de_dict(d) for d in doc["senadores" if senado else "deputados"]}
     disco = perfis.PerfisEmDisco(pasta)
     geradas = 0
     with sync_playwright() as playwright, httpx.Client(timeout=30, follow_redirects=True) as http:
@@ -131,3 +139,4 @@ def gerar_imagens(pasta: Path = perfis.SAIDA_PADRAO, deputados_json: Path = DEPU
 
 if __name__ == "__main__":
     print(f"{gerar_imagens()} imagens geradas")
+    print(f"{gerar_imagens(PASTA_SENADO, SENADORES_PADRAO, senado=True)} imagens de senadores geradas")

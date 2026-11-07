@@ -2,7 +2,7 @@
   <div>
     <div class="pf-voto-meta">
       <span>{{ v.data|data_br }}</span>
-      {% if v.slug %}<a href="../proposicoes/{{ v.slug }}.html">{{ v.sigla }}</a>{% else %}<a href="https://www.camara.leg.br/propostas-legislativas/{{ v.proposicao_id }}">{{ v.sigla or "Proposição" }}</a>{% endif %}
+      {% if v.slug %}<a href="../proposicoes/{{ v.slug }}.html">{{ v.sigla }}</a>{% elif v.url %}<a href="{{ v.url }}">{{ v.sigla or "Matéria" }}</a>{% else %}<a href="https://www.camara.leg.br/propostas-legislativas/{{ v.proposicao_id }}">{{ v.sigla or "Proposição" }}</a>{% endif %}
       {% if v.contra %}<span class="ce-badge ce-badge--outline">Lado menos votado</span>{% endif %}
       {% if v.difere %}<span class="ce-badge ce-badge--outline">Diferente da orientação do partido</span>{% endif %}
     </div>
@@ -10,8 +10,8 @@
     <details class="pf-detalhes pf-detalhes--voto">
       <summary>O que foi votado</summary>
       <p>{{ v.descricao }}</p>
-      <p>Orientação do {{ v.partido }}: {{ v.orientacao or "não publicada separadamente" }}.</p>
-      <a href="https://dadosabertos.camara.leg.br/api/v2/votacoes/{{ v.id }}">Votação na fonte oficial</a>
+      {% if v.url %}<a href="{{ v.url }}">Matéria na fonte oficial</a>{% else %}<p>Orientação do {{ v.partido }}: {{ v.orientacao or "não publicada separadamente" }}.</p>
+      <a href="https://dadosabertos.camara.leg.br/api/v2/votacoes/{{ v.id }}">Votação na fonte oficial</a>{% endif %}
     </details>
   </div>
   <div class="pf-voto-posicao">

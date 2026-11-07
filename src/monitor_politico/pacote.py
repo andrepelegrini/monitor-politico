@@ -60,7 +60,7 @@ def dados_pessoais_no_documento(documento: Any) -> list[str]:
 
 
 def verificar_privacidade(pasta: Path) -> None:
-    for caminho in sorted(pasta.glob("*.json")):
+    for caminho in sorted([*pasta.glob("*.json"), *pasta.glob("senado/*.json")]):
         achados = dados_pessoais_no_documento(json.loads(caminho.read_text(encoding="utf-8")))
         if achados:
             raise PacoteInvalido(f"dados pessoais em {caminho.name}: {sorted(set(achados))[:5]}")

@@ -1,7 +1,7 @@
 <li data-tipo="{{ p.tipo }}" data-temas="{{ p.temas|join('|') }}" data-participacao="{{ p.participacao }}" data-situacao="{{ p.grupo }}" data-mandato="{{ p.mandato }}">
   <p class="pf-voto-meta">
     <span>{{ p.data|data_br }}</span>
-    {% if p.slug %}<a href="../proposicoes/{{ p.slug }}.html">{{ p.sigla }}</a>{% else %}<a href="https://www.camara.leg.br/propostas-legislativas/{{ p.id }}">{{ p.sigla }}</a>{% endif %}
+    {% if p.slug %}<a href="../proposicoes/{{ p.slug }}.html">{{ p.sigla }}</a>{% elif p.url %}<a href="{{ p.url }}">{{ p.sigla }}</a>{% else %}<a href="https://www.camara.leg.br/propostas-legislativas/{{ p.id }}">{{ p.sigla }}</a>{% endif %}
     <span class="ce-badge ce-badge--outline">{{ p.rotulo_participacao }}</span>
     {% if p.grupo == "norma" %}<span class="ce-badge">Virou {{ palavra_norma }}</span>{% endif %}
   </p>

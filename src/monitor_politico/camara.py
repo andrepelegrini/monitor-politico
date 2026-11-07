@@ -15,6 +15,7 @@ from typing import Any, Callable, Iterator, Optional
 import httpx
 
 from monitor_politico import composicao
+from monitor_politico.composicao import arquivar_saidas
 from monitor_politico.api import ClienteJSON
 from monitor_politico.models import Deputado
 from monitor_politico.senado import ClienteSenado
@@ -119,23 +120,6 @@ def ler_anteriores(caminho: Path) -> dict[int, Deputado]:
         return {}
     doc = json.loads(caminho.read_text(encoding="utf-8"))
     return {d["id"]: Deputado.de_dict(d) for d in doc["deputados"]}
-
-
-def arquivar_saidas(caminho: Path, anteriores: dict[int, Deputado], atuais: list[Deputado], hoje: date) -> None:
-    """Quem saiu da lista de exercício continua no site: a página fica, com os dados do último dia.
-
-    Quem volta ao exercício sai do arquivo. Sem o arquivo criado pela carga inicial, nada é feito.
-    """
-    if not caminho.exists():
-        return
-    doc = json.loads(caminho.read_text(encoding="utf-8"))
-    ids_atuais = {d.id for d in atuais}
-    guardados = {d["id"]: d for d in doc["deputados"] if d["id"] not in ids_atuais}
-    for id_, deputado in anteriores.items():
-        if id_ not in ids_atuais and id_ not in guardados:
-            guardados[id_] = {**deputado.para_dict(), "saiu_em": hoje.isoformat()}
-    doc["deputados"] = sorted(guardados.values(), key=lambda d: d["nome"])
-    caminho.write_text(json.dumps(doc, ensure_ascii=False, indent=1), encoding="utf-8")
 
 
 def coletar(

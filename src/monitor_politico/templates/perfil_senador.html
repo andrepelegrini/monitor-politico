@@ -17,6 +17,7 @@
     <header class="ce-page-head">
       <p class="ce-eyebrow">Senado Federal</p>
       <h1>{{ s.nome }}</h1>
+      {% if fora_de_exercicio %}<p class="pf-nota">Fora de exercício{% if saiu_em %} desde {{ saiu_em|data_br }}{% endif %}. Estes são os dados do último registro.</p>{% endif %}
     </header>
     <dl class="ce-dl">
       <dt>Partido</dt><dd>{{ s.partido }}</dd>

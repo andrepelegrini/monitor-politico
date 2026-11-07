@@ -41,7 +41,7 @@
         <option value="principal">Leis de autoria principal</option>
         <option value="coautoria">Leis em coautoria</option>
         <option value="votos">Votos registrados</option>
-        <option value="presenca">Percentual de presença</option>
+        <option value="presenca">{{ "Participação em votações" if casa == "senado" else "Percentual de presença" }}</option>
         <option value="relatorias">Relatorias atuais</option>
       </select>
     </label>{% endif %}{% if situacoes_eleitorais %}
@@ -49,7 +49,7 @@
       <select class="ce-select" id="f-situacao">
         <option value="">Todas</option>
         <option>Reeleição</option>
-        <option>Suplência</option>
+        {% if casa == "senado" %}<option value="Mandato até">Mandato até 2031</option>{% else %}<option>Suplência</option>{% endif %}
         <option>Não se reelegeu</option>
         <option value="Eleição para">Eleição para outro cargo</option>
         <option>Disputou outro cargo</option>
@@ -60,7 +60,7 @@
   </form>
 
   <p class="ce-count" aria-live="polite"><span id="contagem">{{ parlamentares|length }}</span> de {{ parlamentares|length }} {{ plural }}</p>{% if leis_na_lista %}
-  <p class="ce-section-note">Números do mandato atual, desde {{ metricas.inicio|data_br }}, com o mesmo critério para todos: leis sancionadas a partir de projetos assinados, votos nominais registrados no Plenário, dias com presença entre os dias com sessão em que a pessoa estava em exercício, e projetos em que consta como relatora atual. Quem entrou depois ou se licenciou teve menos tempo. Eles não medem qualidade e não mostram todo o trabalho de um mandato. <a href="{{ raiz }}/entenda.html#numeros-na-lista">Entenda a contagem</a>.</p>{% endif %}
+  <p class="ce-section-note">Números do mandato atual, desde {{ metricas.inicio|data_br }}, com o mesmo critério para todos: leis sancionadas a partir de projetos assinados, {% if casa == "senado" %}votos nominais abertos, participação nas votações nominais em que a pessoa constava, incluindo as secretas, e projetos com relatoria em andamento.{% else %}votos nominais registrados no Plenário, dias com presença entre os dias com sessão em que a pessoa estava em exercício, e projetos em que consta como relatora atual.{% endif %} Quem entrou depois ou se licenciou teve menos tempo. Eles não medem qualidade e não mostram todo o trabalho de um mandato. <a href="{{ raiz }}/entenda.html#{{ "numeros-no-senado" if casa == "senado" else "numeros-na-lista" }}">Entenda a contagem</a>.</p>{% endif %}
 
   <ul class="ce-people{% if leis_na_lista or situacoes_eleitorais %} ce-people--leis{% endif %}" id="lista">
     {% for d in parlamentares %}
@@ -70,7 +70,7 @@
         <span class="ce-people-name">{{ d.nome }}</span>
         <span class="ce-meta">{{ d.partido }} · {{ d.uf }}</span>{% if leis_na_lista %}
         <span class="ce-people-leis"><strong>{{ leis_na_lista[d.id].principal }}</strong> {{ "lei" if leis_na_lista[d.id].principal == 1 else "leis" }} de autoria principal · {{ leis_na_lista[d.id].coautoria }} em coautoria</span>
-        <span class="ce-people-leis"><strong>{{ leis_na_lista[d.id].votos|numero }}</strong> votos · <strong>{{ leis_na_lista[d.id].presencas|numero }}</strong> de {{ leis_na_lista[d.id].dias|numero }} dias · <strong>{{ leis_na_lista[d.id].relatorias|numero }}</strong> {{ "relatoria atual" if leis_na_lista[d.id].relatorias == 1 else "relatorias atuais" }}</span>{% endif %}{% if situacoes_eleitorais and situacoes_eleitorais.get(d.id|string) %}
+        <span class="ce-people-leis"><strong>{{ leis_na_lista[d.id].votos|numero }}</strong> votos · <strong>{{ leis_na_lista[d.id].presencas|numero }}</strong> de {{ leis_na_lista[d.id].dias|numero }} {{ "votações" if casa == "senado" else "dias" }} · <strong>{{ leis_na_lista[d.id].relatorias|numero }}</strong> {{ "relatoria atual" if leis_na_lista[d.id].relatorias == 1 else "relatorias atuais" }}</span>{% endif %}{% if situacoes_eleitorais and situacoes_eleitorais.get(d.id|string) %}
         <span class="ce-people-leis"><span class="ce-badge badge-{{ situacoes_eleitorais[d.id|string].chave }}">{{ situacoes_eleitorais[d.id|string].rotulo }}</span></span>{% endif %}
       </a>
     </li>

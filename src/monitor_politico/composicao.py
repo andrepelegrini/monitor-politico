@@ -8,8 +8,11 @@ parlamentar: o JSON continua sem dados pessoais por pessoa.
 
 from __future__ import annotations
 
+import json
 import re
 from collections import Counter, defaultdict
+from datetime import date
+from pathlib import Path
 from typing import Any, Iterable, Optional
 
 from monitor_politico.models import como_lista
@@ -98,3 +101,20 @@ def contar_sexo(pares: Iterable[tuple[str, bool]]) -> dict[str, Any]:
             key=lambda kv: (-kv[1], kv[0]),
         )),
     }
+
+
+def arquivar_saidas(caminho: Path, anteriores: dict[int, Any], atuais: list[Any], hoje: date, chave: str = "deputados") -> None:
+    """Quem saiu da lista de exercício continua no site: a página fica, com os dados do último dia.
+
+    Quem volta ao exercício sai do arquivo. Sem o arquivo criado pela carga inicial, nada é feito.
+    """
+    if not caminho.exists():
+        return
+    doc = json.loads(caminho.read_text(encoding="utf-8"))
+    ids_atuais = {d.id for d in atuais}
+    guardados = {d["id"]: d for d in doc[chave] if d["id"] not in ids_atuais}
+    for id_, parlamentar in anteriores.items():
+        if id_ not in ids_atuais and id_ not in guardados:
+            guardados[id_] = {**parlamentar.para_dict(), "saiu_em": hoje.isoformat()}
+    doc[chave] = sorted(guardados.values(), key=lambda d: d["nome"])
+    caminho.write_text(json.dumps(doc, ensure_ascii=False, indent=1), encoding="utf-8")

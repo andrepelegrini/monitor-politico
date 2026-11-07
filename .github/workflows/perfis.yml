@@ -30,6 +30,10 @@ jobs:
         run: python -m monitor_politico.pacote baixar
       - name: Coletar os perfis
         run: python -m monitor_politico.lote
+      - name: Coletar os perfis do Senado
+        # Se o Senado falhar, os perfis do Senado da semana anterior seguem no pacote.
+        continue-on-error: true
+        run: python -m monitor_politico.lote_senado
       - name: Gerar as imagens de compartilhamento
         continue-on-error: true
         run: |
@@ -48,7 +52,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/perfis_versao.json data/metricas_deputados.json
+          git add data/perfis_versao.json data/metricas_deputados.json data/metricas_senadores.json data/legislatura_senado.json data/arquivo_senadores.json
           git diff --cached --quiet && exit 0
           git commit -m "Atualiza perfis completos ($(date -u +%F))"
           git pull --rebase

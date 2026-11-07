@@ -1,0 +1,3108 @@
+{
+ "coletado_em": "2026-11-07T05:28:51+00:00",
+ "legislatura_atual": 57,
+ "ano_da_eleicao": 2026,
+ "posse": "2027-02-01",
+ "situacoes": {
+  "5672": {
+   "chave": "outro_disputou",
+   "rotulo": "Disputou outro cargo",
+   "detalhe": "Disputou o governo do estado em 2026."
+  },
+  "5982": {
+   "chave": "reeleicao",
+   "rotulo": "Reeleição"
+  },
+  "6358": {
+   "chave": "continua",
+   "rotulo": "Mandato até 2031"
+  },
+  "5967": {
+   "chave": "nao_reeleito",
+   "rotulo": "Não se reelegeu"
+  },
+  "6009": {
+   "chave": "continua",
+   "rotulo": "Mandato até 2031"
+  },
+  "4639": {
+   "chave": "continua",
+   "rotulo": "Mandato até 2031"
+  },
+  "6336": {
+   "chave": "continua",
+   "rotulo": "Mandato até 2031"
+  },
+  "6295": {
+   "chave": "nao_reeleito",
+   "rotulo": "Não se reelegeu"
+  },
+  "5936": {
+   "chave": "reeleicao",
+   "rotulo": "Reeleição"
+  },
+  "5990": {
+   "chave": "nao_reeleito",
+   "rotulo": "Não se reelegeu"
+  },
+  "470": {
+   "chave": "nao_reeleito",
+   "rotulo": "Não se reelegeu"
+  },
+  "5973": {
+   "chave": "reeleicao",
+   "rotulo": "Reeleição"
+  },
+  "739": {
+   "chave": "nao_reeleito",
+   "rotulo": "Não se reelegeu"
+  },
+  "6337": {
+   "chave": "outro_eleito",
+   "rotulo": "Eleição para o governo do estado"
+  },
+  "475": {
+   "chave": "sem_candidatura",
+   "rotulo": "Sem candidatura em 2026"
+  },
+  "6335": {
+   "chave": "continua",
+   "rotulo": "Mandato até 2031"
+  },
+  "5998": {
+   "chave": "outro_disputou",
+   "rotulo": "Disputou outro cargo",
+   "detalhe": "Disputou a suplência do Senado em 2026."
+  },
+  "3830": {
+   "chave": "continua",
+   "rotulo": "Mandato até 2031"
+  },
+  "5793": {
+   "chave": "continua",
+   "rotulo": "Mandato até 2031"
+  },
+  "5906": {
+   "chave": "outro_eleito",
+   "rotulo": "Eleição para a suplência do Senado"
+  },
+  "4994": {
+   "chave": "reeleicao",
+   "rotulo": "Reeleição"
+  },
+  "3777": {
+   "chave": "reeleicao",
+   "rotulo": "Reeleição"
+  },
+  "4642": {
+   "chave": "outro_disputou",
+   "rotulo": "Disputou outro cargo",
+   "detalhe": "Disputou o governo do estado em 2026."
+  },
+  "5718": {
+   "chave": "nao_reeleito",
+   "rotulo": "Não se reelegeu"
+  },
+  "22": {
+   "chave": "nao_reeleito",
+   "rotulo": "Não se reelegeu"
+  },
+  "5953": {
+   "chave": "nao_reeleito",
+   "rotulo": "Não se reelegeu"
+  },
+  "345": {
+   "chave": "sem_candidatura",
+   "rotulo": "Sem candidatura em 2026"
+  },
+  "5894": {
+   "chave": "outro_disputou",
+   "rotulo": "Disputou outro cargo",
+   "detalhe": "Disputou a Presidência da República em 2026."
+  },
+  "6341": {
+   "chave": "continua",
+   "rotulo": "Mandato até 2031"
+  },
+  "5008": {
+   "chave": "reeleicao",
+   "rotulo": "Reeleição"
+  },
+  "5385": {
+   "chave": "sem_candidatura",
+   "rotulo": "Sem candidatura em 2026"
+  },
+  "6010": {
+   "chave": "sem_candidatura",
+   "rotulo": "Sem candidatura em 2026"
+  },
+  "4770": {
+   "chave": "outro_eleito",
+   "rotulo": "Eleição para a Câmara dos Deputados"
+  },
+  "6340": {
+   "chave": "continua",
+   "rotulo": "Mandato até 2031"
+  },
+  "581": {
+   "chave": "reeleicao",
+   "rotulo": "Reeleição"
+  },
+  "4531": {
+   "chave": "sem_candidatura",
+   "rotulo": "Sem candidatura em 2026"
+  },
+  "5895": {
+   "chave": "sem_candidatura",
+   "rotulo": "Sem candidatura em 2026"
+  },
+  "6342": {
+   "chave": "continua",
+   "rotulo": "Mandato até 2031"
+  },
+  "6369": {
+   "chave": "continua",
+   "rotulo": "Mandato até 2031"
+  },
+  "4811": {
+   "chave": "continua",
+   "rotulo": "Mandato até 2031"
+  },
+  "5977": {
+   "chave": "sem_candidatura",
+   "rotulo": "Sem candidatura em 2026"
+  },
+  "5926": {
+   "chave": "reeleicao",
+   "rotulo": "Reeleição"
+  },
+  "1186": {
+   "chave": "sem_candidatura",
+   "rotulo": "Sem candidatura em 2026"
+  },
+  "631": {
+   "chave": "continua",
+   "rotulo": "Mandato até 2031"
+  },
+  "5376": {
+   "chave": "outro_disputou",
+   "rotulo": "Disputou outro cargo",
+   "detalhe": "Disputou a assembleia estadual em 2026."
+  },
+  "742": {
+   "chave": "reeleicao",
+   "rotulo": "Reeleição"
+  },
+  "285": {
+   "chave": "reeleicao",
+   "rotulo": "Reeleição"
+  },
+  "5422": {
+   "chave": "outro_eleito",
+   "rotulo": "Eleição para o governo do estado"
+  },
+  "5942": {
+   "chave": "nao_reeleito",
+   "rotulo": "Não se reelegeu"
+  },
+  "5985": {
+   "chave": "outro_eleito",
+   "rotulo": "Eleição para a suplência do Senado"
+  },
+  "5525": {
+   "chave": "outro_eleito",
+   "rotulo": "Eleição para o governo do estado"
+  },
+  "5924": {
+   "chave": "sem_candidatura",
+   "rotulo": "Sem candidatura em 2026"
+  },
+  "5523": {
+   "chave": "continua",
+   "rotulo": "Mandato até 2031"
+  },
+  "5502": {
+   "chave": "reeleicao",
+   "rotulo": "Reeleição"
+  },
+  "5386": {
+   "chave": "outro_disputou",
+   "rotulo": "Disputou outro cargo",
+   "detalhe": "Disputou o governo do estado em 2026."
+  },
+  "5012": {
+   "chave": "nao_reeleito",
+   "rotulo": "Não se reelegeu"
+  },
+  "70": {
+   "chave": "nao_reeleito",
+   "rotulo": "Não se reelegeu"
+  },
+  "5207": {
+   "chave": "outro_disputou",
+   "rotulo": "Disputou outro cargo",
+   "detalhe": "Disputou o governo do estado em 2026."
+  },
+  "5257": {
+   "chave": "sem_candidatura",
+   "rotulo": "Sem candidatura em 2026"
+  },
+  "6025": {
+   "chave": "outro_disputou",
+   "rotulo": "Disputou outro cargo",
+   "detalhe": "Disputou a Câmara dos Deputados em 2026."
+  },
+  "4694": {
+   "chave": "continua",
+   "rotulo": "Mandato até 2031"
+  },
+  "5352": {
+   "chave": "reeleicao",
+   "rotulo": "Reeleição"
+  },
+  "5322": {
+   "chave": "continua",
+   "rotulo": "Mandato até 2031"
+  },
+  "5974": {
+   "chave": "outro_disputou",
+   "rotulo": "Disputou outro cargo",
+   "detalhe": "Disputou a assembleia estadual em 2026."
+  },
+  "6331": {
+   "chave": "outro_eleito",
+   "rotulo": "Eleição para o governo do estado"
+  },
+  "5988": {
+   "chave": "nao_reeleito",
+   "rotulo": "Não se reelegeu"
+  },
+  "5959": {
+   "chave": "reeleicao",
+   "rotulo": "Reeleição"
+  },
+  "4560": {
+   "chave": "nao_reeleito",
+   "rotulo": "Não se reelegeu"
+  },
+  "6338": {
+   "chave": "continua",
+   "rotulo": "Mandato até 2031"
+  },
+  "5736": {
+   "chave": "continua",
+   "rotulo": "Mandato até 2031"
+  },
+  "5899": {
+   "chave": "nao_reeleito",
+   "rotulo": "Não se reelegeu"
+  },
+  "5748": {
+   "chave": "reeleicao",
+   "rotulo": "Reeleição"
+  },
+  "1173": {
+   "chave": "outro_disputou",
+   "rotulo": "Disputou outro cargo",
+   "detalhe": "Disputou o governo do estado em 2026."
+  },
+  "5411": {
+   "chave": "nao_reeleito",
+   "rotulo": "Não se reelegeu"
+  },
+  "5070": {
+   "chave": "outro_disputou",
+   "rotulo": "Disputou outro cargo",
+   "detalhe": "Disputou o governo do estado em 2026."
+  },
+  "5783": {
+   "chave": "nao_reeleito",
+   "rotulo": "Não se reelegeu"
+  },
+  "3806": {
+   "chave": "nao_reeleito",
+   "rotulo": "Não se reelegeu"
+  }
+ },
+ "eleitos_novos": [
+  {
+   "sq": "270002548344",
+   "nome": "ALEXANDRE GUIMARÃES",
+   "partido": "MDB",
+   "uf": "TO",
+   "chave": "camara",
+   "rotulo": "Chega da Câmara",
+   "id_deputado": 220542,
+   "votos": 316786,
+   "total_municipios": 139,
+   "municipios": [
+    [
+     "PALMAS",
+     42499
+    ],
+    [
+     "ARAGUAÍNA",
+     32926
+    ],
+    [
+     "GURUPI",
+     13437
+    ],
+    [
+     "PORTO NACIONAL",
+     10252
+    ],
+    [
+     "PARAÍSO DO TOCANTINS",
+     9313
+    ],
+    [
+     "GUARAÍ",
+     6105
+    ],
+    [
+     "ARAGUATINS",
+     4613
+    ],
+    [
+     "SÃO MIGUEL DO TOCANTINS",
+     4550
+    ]
+   ],
+   "bens": {
+    "total": 2676113.84,
+    "categorias": [
+     [
+      "Casa",
+      850000.0
+     ],
+     [
+      "Veículo automotor terrestre: caminhão, automóvel, moto, etc.",
+      632000.0
+     ],
+     [
+      "Outros bens imóveis",
+      483388.31
+     ],
+     [
+      "OUTROS BENS E DIREITOS",
+      300000.0
+     ],
+     [
+      "Depósito bancário em conta corrente no País",
+      280982.63
+     ],
+     [
+      "Terreno",
+      129742.9
+     ]
+    ]
+   }
+  },
+  {
+   "sq": "250002541308",
+   "nome": "ANDRÉ DO PRADO",
+   "partido": "PL",
+   "uf": "SP",
+   "chave": "primeiro",
+   "rotulo": "Primeiro mandato no Senado",
+   "id_deputado": null,
+   "votos": 12703089,
+   "total_municipios": 645,
+   "municipios": [
+    [
+     "SÃO PAULO",
+     2699532
+    ],
+    [
+     "GUARULHOS",
+     352948
+    ],
+    [
+     "CAMPINAS",
+     317691
+    ],
+    [
+     "SÃO JOSÉ DOS CAMPOS",
+     241940
+    ],
+    [
+     "SOROCABA",
+     212516
+    ],
+    [
+     "SANTO ANDRÉ",
+     191220
+    ],
+    [
+     "SÃO BERNARDO DO CAMPO",
+     188309
+    ],
+    [
+     "OSASCO",
+     185064
+    ]
+   ],
+   "bens": {
+    "total": 692610.86,
+    "categorias": [
+     [
+      "Caderneta de poupança",
+      606533.55
+     ],
+     [
+      "Veículo automotor terrestre: caminhão, automóvel, moto, etc.",
+      56000.0
+     ],
+     [
+      "Aplicação de renda fixa (CDB, RDB e outros)",
+      24943.13
+     ],
+     [
+      "Depósito bancário em conta corrente no País",
+      5134.18
+     ]
+    ]
+   }
+  },
+  {
+   "sq": "20002553272",
+   "nome": "ARTHUR LIRA",
+   "partido": "PP",
+   "uf": "AL",
+   "chave": "camara",
+   "rotulo": "Chega da Câmara",
+   "id_deputado": 160541,
+   "votos": 948703,
+   "total_municipios": 102,
+   "municipios": [
+    [
+     "MACEIÓ",
+     181017
+    ],
+    [
+     "ARAPIRACA",
+     63776
+    ],
+    [
+     "RIO LARGO",
+     29011
+    ],
+    [
+     "UNIÃO DOS PALMARES",
+     22091
+    ],
+    [
+     "PENEDO",
+     19630
+    ],
+    [
+     "SÃO MIGUEL DOS CAMPOS",
+     19483
+    ],
+    [
+     "CORURIPE",
+     19417
+    ],
+    [
+     "PALMEIRA DOS ÍNDIOS",
+     17903
+    ]
+   ],
+   "bens": {
+    "total": 25961089.42,
+    "categorias": [
+     [
+      "Outros bens imóveis",
+      8348000.0
+     ],
+     [
+      "OUTROS BENS E DIREITOS",
+      7080537.05
+     ],
+     [
+      "Casa",
+      3743269.51
+     ],
+     [
+      "Terreno",
+      2147742.87
+     ],
+     [
+      "Aplicação de renda fixa (CDB, RDB e outros)",
+      2145086.49
+     ],
+     [
+      "Apartamento",
+      706852.2
+     ],
+     [
+      "Depósito bancário em conta corrente no País",
+      680210.91
+     ],
+     [
+      "Veículo automotor terrestre: caminhão, automóvel, moto, etc.",
+      608070.0
+     ],
+     [
+      "Quotas ou quinhões de capital",
+      401320.39
+     ],
+     [
+      "Embarcação",
+      100000.0
+     ]
+    ]
+   }
+  },
+  {
+   "sq": "70002552934",
+   "nome": "BIA KICIS",
+   "partido": "PL",
+   "uf": "DF",
+   "chave": "camara",
+   "rotulo": "Chega da Câmara",
+   "id_deputado": 204374,
+   "votos": 886616,
+   "total_municipios": 1,
+   "municipios": [
+    [
+     "BRASÍLIA",
+     886616
+    ]
+   ],
+   "bens": {
+    "total": 1330688.17,
+    "categorias": [
+     [
+      "Outros bens imóveis",
+      1230000.0
+     ],
+     [
+      "Depósito bancário em conta corrente no País",
+      100688.17
+     ]
+    ]
+   }
+  },
+  {
+   "sq": "220002539995",
+   "nome": "BRUNO SCHEID",
+   "partido": "PL",
+   "uf": "RO",
+   "chave": "primeiro",
+   "rotulo": "Primeiro mandato no Senado",
+   "id_deputado": null,
+   "votos": 474226,
+   "total_municipios": 52,
+   "municipios": [
+    [
+     "PORTO VELHO",
+     119134
+    ],
+    [
+     "JI-PARANÁ",
+     41391
+    ],
+    [
+     "ARIQUEMES",
+     33976
+    ],
+    [
+     "VILHENA",
+     29518
+    ],
+    [
+     "CACOAL",
+     26922
+    ],
+    [
+     "JARU",
+     17109
+    ],
+    [
+     "ROLIM DE MOURA",
+     15741
+    ],
+    [
+     "BURITIS",
+     11691
+    ]
+   ],
+   "bens": {
+    "total": 1125641.24,
+    "categorias": [
+     [
+      "Casa",
+      1095641.24
+     ],
+     [
+      "Quotas ou quinhões de capital",
+      30000.0
+     ]
+    ]
+   }
+  },
+  {
+   "sq": "120002535769",
+   "nome": "CAPITÃO CONTAR",
+   "partido": "PL",
+   "uf": "MS",
+   "chave": "primeiro",
+   "rotulo": "Primeiro mandato no Senado",
+   "id_deputado": null,
+   "votos": 856045,
+   "total_municipios": 79,
+   "municipios": [
+    [
+     "CAMPO GRANDE",
+     281204
+    ],
+    [
+     "DOURADOS",
+     75656
+    ],
+    [
+     "TRÊS LAGOAS",
+     35921
+    ],
+    [
+     "PONTA PORÃ",
+     30019
+    ],
+    [
+     "CORUMBÁ",
+     24711
+    ],
+    [
+     "NAVIRAÍ",
+     17333
+    ],
+    [
+     "MARACAJU",
+     15743
+    ],
+    [
+     "NOVA ANDRADINA",
+     14899
+    ]
+   ],
+   "bens": {
+    "total": 1660693.63,
+    "categorias": [
+     [
+      "Veículo automotor terrestre: caminhão, automóvel, moto, etc.",
+      1408546.01
+     ],
+     [
+      "Aplicação de renda fixa (CDB, RDB e outros)",
+      137014.84
+     ],
+     [
+      "Quotas ou quinhões de capital",
+      100000.0
+     ],
+     [
+      "Depósito bancário em conta corrente no País",
+      14962.99
+     ],
+     [
+      "Outras aplicações e Investimentos",
+      108.5
+     ],
+     [
+      "OUTROS BENS E DIREITOS",
+      39.79
+     ],
+     [
+      "Caderneta de poupança",
+      21.5
+     ]
+    ]
+   }
+  },
+  {
+   "sq": "240002541935",
+   "nome": "CARLOS BOLSONARO",
+   "partido": "PL",
+   "uf": "SC",
+   "chave": "primeiro",
+   "rotulo": "Primeiro mandato no Senado",
+   "id_deputado": null,
+   "votos": 2041840,
+   "total_municipios": 295,
+   "municipios": [
+    [
+     "JOINVILLE",
+     178339
+    ],
+    [
+     "BLUMENAU",
+     105373
+    ],
+    [
+     "FLORIANÓPOLIS",
+     100884
+    ],
+    [
+     "ITAJAÍ",
+     74607
+    ],
+    [
+     "SÃO JOSÉ",
+     62804
+    ],
+    [
+     "PALHOÇA",
+     54379
+    ],
+    [
+     "CRICIÚMA",
+     53043
+    ],
+    [
+     "LAGES",
+     48302
+    ]
+   ],
+   "bens": {
+    "total": 2784065.08,
+    "categorias": [
+     [
+      "Outras aplicações e Investimentos",
+      1953289.05
+     ],
+     [
+      "Depósito bancário em conta corrente no País",
+      463887.03
+     ],
+     [
+      "Veículo automotor terrestre: caminhão, automóvel, moto, etc.",
+      246640.0
+     ],
+     [
+      "Outras participações societárias",
+      120249.0
+     ]
+    ]
+   }
+  },
+  {
+   "sq": "190002542888",
+   "nome": "CARLOS JORDY",
+   "partido": "PL",
+   "uf": "RJ",
+   "chave": "camara",
+   "rotulo": "Chega da Câmara",
+   "id_deputado": 204460,
+   "votos": 3912405,
+   "total_municipios": 92,
+   "municipios": [
+    [
+     "RIO DE JANEIRO",
+     1271157
+    ],
+    [
+     "SÃO GONÇALO",
+     213163
+    ],
+    [
+     "NOVA IGUAÇU",
+     203270
+    ],
+    [
+     "DUQUE DE CAXIAS",
+     189032
+    ],
+    [
+     "NITERÓI",
+     127842
+    ],
+    [
+     "CAMPOS DOS GOYTACAZES",
+     116614
+    ],
+    [
+     "SÃO JOÃO DE MERITI",
+     112468
+    ],
+    [
+     "BELFORD ROXO",
+     109619
+    ]
+   ],
+   "bens": {
+    "total": 1105163.23,
+    "categorias": [
+     [
+      "Casa",
+      1071000.0
+     ],
+     [
+      "Aplicação de renda fixa (CDB, RDB e outros)",
+      34163.23
+     ]
+    ]
+   }
+  },
+  {
+   "sq": "240002541931",
+   "nome": "CAROL DE TONI",
+   "partido": "PL",
+   "uf": "SC",
+   "chave": "camara",
+   "rotulo": "Chega da Câmara",
+   "id_deputado": 204369,
+   "votos": 2694918,
+   "total_municipios": 295,
+   "municipios": [
+    [
+     "JOINVILLE",
+     225250
+    ],
+    [
+     "FLORIANÓPOLIS",
+     150156
+    ],
+    [
+     "BLUMENAU",
+     135006
+    ],
+    [
+     "ITAJAÍ",
+     92727
+    ],
+    [
+     "SÃO JOSÉ",
+     83679
+    ],
+    [
+     "CHAPECÓ",
+     73006
+    ],
+    [
+     "PALHOÇA",
+     68453
+    ],
+    [
+     "CRICIÚMA",
+     68222
+    ]
+   ],
+   "bens": {
+    "total": 1412309.5,
+    "categorias": [
+     [
+      "Outras aplicações e Investimentos",
+      922250.52
+     ],
+     [
+      "Outros bens imóveis",
+      260000.0
+     ],
+     [
+      "Apartamento",
+      172058.98
+     ],
+     [
+      "Casa",
+      38000.0
+     ],
+     [
+      "Quotas ou quinhões de capital",
+      20000.0
+     ]
+    ]
+   }
+  },
+  {
+   "sq": "140002550780",
+   "nome": "CHICÃO",
+   "partido": "UNIÃO",
+   "uf": "PA",
+   "chave": "primeiro",
+   "rotulo": "Primeiro mandato no Senado",
+   "id_deputado": null,
+   "votos": 2014409,
+   "total_municipios": 144,
+   "municipios": [
+    [
+     "BELÉM",
+     305508
+    ],
+    [
+     "ANANINDEUA",
+     82008
+    ],
+    [
+     "SANTARÉM",
+     72412
+    ],
+    [
+     "ABAETETUBA",
+     63200
+    ],
+    [
+     "CAMETÁ",
+     58722
+    ],
+    [
+     "MARABÁ",
+     42667
+    ],
+    [
+     "PARAUAPEBAS",
+     40159
+    ],
+    [
+     "BARCARENA",
+     40041
+    ]
+   ],
+   "bens": {
+    "total": 6475103.95,
+    "categorias": [
+     [
+      "Casa",
+      1681000.0
+     ],
+     [
+      "Sala ou conjunto",
+      1187419.0
+     ],
+     [
+      "VGBL - Vida Gerador de Benefício Livre",
+      1068597.0
+     ],
+     [
+      "Terreno",
+      918643.0
+     ],
+     [
+      "Quotas ou quinhões de capital",
+      835583.58
+     ],
+     [
+      "Apartamento",
+      377764.0
+     ],
+     [
+      "Aplicação de renda fixa (CDB, RDB e outros)",
+      371767.28
+     ],
+     [
+      "Consórcio não contemplado",
+      32426.79
+     ],
+     [
+      "Depósito bancário em conta corrente no País",
+      1903.3
+     ]
+    ]
+   }
+  },
+  {
+   "sq": "160002547661",
+   "nome": "DELTAN DALLAGNOL",
+   "partido": "NOVO",
+   "uf": "PR",
+   "chave": "camara",
+   "rotulo": "Chega da Câmara",
+   "id_deputado": 220705,
+   "votos": 2904594,
+   "total_municipios": 399,
+   "municipios": [
+    [
+     "CURITIBA",
+     528946
+    ],
+    [
+     "LONDRINA",
+     155697
+    ],
+    [
+     "MARINGÁ",
+     124924
+    ],
+    [
+     "CASCAVEL",
+     98331
+    ],
+    [
+     "PONTA GROSSA",
+     85172
+    ],
+    [
+     "FOZ DO IGUAÇU",
+     77008
+    ],
+    [
+     "SÃO JOSÉ DOS PINHAIS",
+     74529
+    ],
+    [
+     "COLOMBO",
+     50897
+    ]
+   ],
+   "bens": {
+    "total": 2756904.77,
+    "categorias": [
+     [
+      "Apartamento",
+      1466809.09
+     ],
+     [
+      "Depósito bancário em conta corrente no País",
+      1108207.01
+     ],
+     [
+      "Outros bens imóveis",
+      109013.67
+     ],
+     [
+      "Veículo automotor terrestre: caminhão, automóvel, moto, etc.",
+      57500.0
+     ],
+     [
+      "Título de clube e assemelhado",
+      7500.0
+     ],
+     [
+      "Quotas ou quinhões de capital",
+      6500.0
+     ],
+     [
+      "Dinheiro em espécie - moeda nacional",
+      1375.0
+     ]
+    ]
+   }
+  },
+  {
+   "sq": "130002551786",
+   "nome": "DOMINGOS SÁVIO",
+   "partido": "PL",
+   "uf": "MG",
+   "chave": "camara",
+   "rotulo": "Chega da Câmara",
+   "id_deputado": 160758,
+   "votos": 4968829,
+   "total_municipios": 853,
+   "municipios": [
+    [
+     "BELO HORIZONTE",
+     581730
+    ],
+    [
+     "UBERLÂNDIA",
+     178245
+    ],
+    [
+     "CONTAGEM",
+     144296
+    ],
+    [
+     "JUIZ DE FORA",
+     111219
+    ],
+    [
+     "BETIM",
+     91776
+    ],
+    [
+     "MONTES CLAROS",
+     86706
+    ],
+    [
+     "UBERABA",
+     78883
+    ],
+    [
+     "DIVINÓPOLIS",
+     77064
+    ]
+   ],
+   "bens": {
+    "total": 2403414.92,
+    "categorias": [
+     [
+      "Quotas ou quinhões de capital",
+      737392.85
+     ],
+     [
+      "Aeronave",
+      500000.0
+     ],
+     [
+      "Veículo automotor terrestre: caminhão, automóvel, moto, etc.",
+      396195.2
+     ],
+     [
+      "OUTROS BENS E DIREITOS",
+      374743.64
+     ],
+     [
+      "Benfeitorias",
+      230000.0
+     ],
+     [
+      "Terreno",
+      153314.0
+     ],
+     [
+      "Outras aplicações e Investimentos",
+      6543.86
+     ],
+     [
+      "Aplicação de renda fixa (CDB, RDB e outros)",
+      3176.89
+     ],
+     [
+      "Depósito bancário em conta corrente no País",
+      2048.48
+     ]
+    ]
+   }
+  },
+  {
+   "sq": "220002539996",
+   "nome": "DR. FERNANDO MÁXIMO",
+   "partido": "PL",
+   "uf": "RO",
+   "chave": "camara",
+   "rotulo": "Chega da Câmara",
+   "id_deputado": 220610,
+   "votos": 570799,
+   "total_municipios": 52,
+   "municipios": [
+    [
+     "PORTO VELHO",
+     149771
+    ],
+    [
+     "JI-PARANÁ",
+     43839
+    ],
+    [
+     "ARIQUEMES",
+     38775
+    ],
+    [
+     "VILHENA",
+     36202
+    ],
+    [
+     "CACOAL",
+     32269
+    ],
+    [
+     "JARU",
+     19777
+    ],
+    [
+     "ROLIM DE MOURA",
+     18986
+    ],
+    [
+     "OURO PRETO DO OESTE",
+     13084
+    ]
+   ],
+   "bens": {
+    "total": 2900071.44,
+    "categorias": [
+     [
+      "OUTROS BENS E DIREITOS",
+      1232557.97
+     ],
+     [
+      "Terreno",
+      922151.0
+     ],
+     [
+      "Casa",
+      486173.07
+     ],
+     [
+      "Terra nua",
+      140000.0
+     ],
+     [
+      "Veículo automotor terrestre: caminhão, automóvel, moto, etc.",
+      65000.0
+     ],
+     [
+      "Quotas ou quinhões de capital",
+      42339.89
+     ],
+     [
+      "Outros fundos",
+      6350.45
+     ],
+     [
+      "VGBL - Vida Gerador de Benefício Livre",
+      5499.06
+     ]
+    ]
+   }
+  },
+  {
+   "sq": "80002553265",
+   "nome": "EVAIR DE MELO",
+   "partido": "REPUBLICANOS",
+   "uf": "ES",
+   "chave": "camara",
+   "rotulo": "Chega da Câmara",
+   "id_deputado": 178871,
+   "votos": 982978,
+   "total_municipios": 78,
+   "municipios": [
+    [
+     "VILA VELHA",
+     108276
+    ],
+    [
+     "SERRA",
+     92510
+    ],
+    [
+     "VITÓRIA",
+     84313
+    ],
+    [
+     "CARIACICA",
+     70198
+    ],
+    [
+     "CACHOEIRO DE ITAPEMIRIM",
+     59841
+    ],
+    [
+     "LINHARES",
+     38747
+    ],
+    [
+     "GUARAPARI",
+     32266
+    ],
+    [
+     "COLATINA",
+     32192
+    ]
+   ],
+   "bens": {
+    "total": 142777.32,
+    "categorias": [
+     [
+      "Veículo automotor terrestre: caminhão, automóvel, moto, etc.",
+      52000.0
+     ],
+     [
+      "VGBL - Vida Gerador de Benefício Livre",
+      49725.41
+     ],
+     [
+      "Aplicação de renda fixa (CDB, RDB e outros)",
+      33502.89
+     ],
+     [
+      "Depósito bancário em conta corrente no País",
+      5342.78
+     ],
+     [
+      "Quotas ou quinhões de capital",
+      2206.24
+     ]
+    ]
+   }
+  },
+  {
+   "sq": "160002547660",
+   "nome": "FILIPE BARROS",
+   "partido": "PL",
+   "uf": "PR",
+   "chave": "camara",
+   "rotulo": "Chega da Câmara",
+   "id_deputado": 204411,
+   "votos": 3148583,
+   "total_municipios": 399,
+   "municipios": [
+    [
+     "CURITIBA",
+     497488
+    ],
+    [
+     "LONDRINA",
+     175780
+    ],
+    [
+     "MARINGÁ",
+     129950
+    ],
+    [
+     "CASCAVEL",
+     101966
+    ],
+    [
+     "PONTA GROSSA",
+     97017
+    ],
+    [
+     "FOZ DO IGUAÇU",
+     84573
+    ],
+    [
+     "SÃO JOSÉ DOS PINHAIS",
+     78098
+    ],
+    [
+     "COLOMBO",
+     52626
+    ]
+   ],
+   "bens": {
+    "total": 1107434.39,
+    "categorias": [
+     [
+      "Terreno",
+      1000000.0
+     ],
+     [
+      "Consórcio não contemplado",
+      106315.14
+     ],
+     [
+      "Quotas ou quinhões de capital",
+      1119.25
+     ]
+    ]
+   }
+  },
+  {
+   "sq": "100002542867",
+   "nome": "FUFUCA",
+   "partido": "PP",
+   "uf": "MA",
+   "chave": "camara",
+   "rotulo": "Chega da Câmara",
+   "id_deputado": 178882,
+   "votos": 1530187,
+   "total_municipios": 217,
+   "municipios": [
+    [
+     "SÃO LUÍS",
+     209143
+    ],
+    [
+     "TIMON",
+     57828
+    ],
+    [
+     "IMPERATRIZ",
+     53734
+    ],
+    [
+     "CAXIAS",
+     32376
+    ],
+    [
+     "SÃO JOSÉ DE RIBAMAR",
+     28970
+    ],
+    [
+     "CODÓ",
+     27255
+    ],
+    [
+     "BALSAS",
+     24852
+    ],
+    [
+     "SANTA INÊS",
+     23607
+    ]
+   ],
+   "bens": {
+    "total": 1829911.74,
+    "categorias": [
+     [
+      "OUTROS BENS E DIREITOS",
+      858710.0
+     ],
+     [
+      "Casa",
+      431201.74
+     ],
+     [
+      "Veículo automotor terrestre: caminhão, automóvel, moto, etc.",
+      420000.0
+     ],
+     [
+      "Terreno",
+      120000.0
+     ]
+    ]
+   }
+  },
+  {
+   "sq": "90002540997",
+   "nome": "GRACINHA CAIADO",
+   "partido": "UNIÃO",
+   "uf": "GO",
+   "chave": "primeiro",
+   "rotulo": "Primeiro mandato no Senado",
+   "id_deputado": null,
+   "votos": 1458522,
+   "total_municipios": 246,
+   "municipios": [
+    [
+     "GOIÂNIA",
+     259977
+    ],
+    [
+     "APARECIDA DE GOIÂNIA",
+     82336
+    ],
+    [
+     "ANÁPOLIS",
+     78921
+    ],
+    [
+     "LUZIÂNIA",
+     41480
+    ],
+    [
+     "ÁGUAS LINDAS DE GOIÁS",
+     32125
+    ],
+    [
+     "TRINDADE",
+     31302
+    ],
+    [
+     "VALPARAÍSO DE GOIÁS",
+     28571
+    ],
+    [
+     "RIO VERDE",
+     25214
+    ]
+   ],
+   "bens": {
+    "total": 3943021.29,
+    "categorias": [
+     [
+      "Apartamento",
+      2960599.72
+     ],
+     [
+      "Aplicação de renda fixa (CDB, RDB e outros)",
+      646368.87
+     ],
+     [
+      "Outros fundos",
+      314640.73
+     ],
+     [
+      "Outras aplicações e Investimentos",
+      17511.78
+     ],
+     [
+      "Casa",
+      1850.0
+     ],
+     [
+      "Caderneta de poupança",
+      1812.58
+     ],
+     [
+      "VGBL - Vida Gerador de Benefício Livre",
+      210.76
+     ],
+     [
+      "Ações (inclusive as provenientes de linha telefônica)",
+      22.44
+     ],
+     [
+      "Depósito bancário em conta corrente no País",
+      4.41
+     ]
+    ]
+   }
+  },
+  {
+   "sq": "250002541312",
+   "nome": "GUILHERME DERRITE",
+   "partido": "PP",
+   "uf": "SP",
+   "chave": "camara",
+   "rotulo": "Chega da Câmara",
+   "id_deputado": 204531,
+   "votos": 13273880,
+   "total_municipios": 645,
+   "municipios": [
+    [
+     "SÃO PAULO",
+     2925148
+    ],
+    [
+     "GUARULHOS",
+     349789
+    ],
+    [
+     "CAMPINAS",
+     333843
+    ],
+    [
+     "SÃO JOSÉ DOS CAMPOS",
+     249620
+    ],
+    [
+     "SOROCABA",
+     233072
+    ],
+    [
+     "SANTO ANDRÉ",
+     205135
+    ],
+    [
+     "SÃO BERNARDO DO CAMPO",
+     204766
+    ],
+    [
+     "OSASCO",
+     202233
+    ]
+   ],
+   "bens": {
+    "total": 2021196.05,
+    "categorias": [
+     [
+      "Terreno",
+      1168538.85
+     ],
+     [
+      "OUTROS BENS E DIREITOS",
+      638150.0
+     ],
+     [
+      "Aplicação de renda fixa (CDB, RDB e outros)",
+      76856.45
+     ],
+     [
+      "Caderneta de poupança",
+      60366.22
+     ],
+     [
+      "Outros bens imóveis",
+      39300.0
+     ],
+     [
+      "Outras aplicações e Investimentos",
+      36939.6
+     ],
+     [
+      "Depósito bancário em conta corrente no País",
+      1044.93
+     ]
+    ]
+   }
+  },
+  {
+   "sq": "90002543556",
+   "nome": "GUSTAVO GAYER",
+   "partido": "PL",
+   "uf": "GO",
+   "chave": "camara",
+   "rotulo": "Chega da Câmara",
+   "id_deputado": 220568,
+   "votos": 1639247,
+   "total_municipios": 246,
+   "municipios": [
+    [
+     "GOIÂNIA",
+     359222
+    ],
+    [
+     "ANÁPOLIS",
+     121488
+    ],
+    [
+     "APARECIDA DE GOIÂNIA",
+     97165
+    ],
+    [
+     "RIO VERDE",
+     67722
+    ],
+    [
+     "ÁGUAS LINDAS DE GOIÁS",
+     40405
+    ],
+    [
+     "LUZIÂNIA",
+     39038
+    ],
+    [
+     "JATAÍ",
+     31032
+    ],
+    [
+     "VALPARAÍSO DE GOIÁS",
+     29692
+    ]
+   ],
+   "bens": {
+    "total": 908561.0,
+    "categorias": [
+     [
+      "Terreno",
+      550000.0
+     ],
+     [
+      "OUTROS BENS E DIREITOS",
+      197000.0
+     ],
+     [
+      "Veículo automotor terrestre: caminhão, automóvel, moto, etc.",
+      151561.0
+     ],
+     [
+      "Quotas ou quinhões de capital",
+      10000.0
+     ]
+    ]
+   }
+  },
+  {
+   "sq": "140002550779",
+   "nome": "HELDER",
+   "partido": "MDB",
+   "uf": "PA",
+   "chave": "primeiro",
+   "rotulo": "Primeiro mandato no Senado",
+   "id_deputado": null,
+   "votos": 2342070,
+   "total_municipios": 144,
+   "municipios": [
+    [
+     "BELÉM",
+     388084
+    ],
+    [
+     "ANANINDEUA",
+     92406
+    ],
+    [
+     "SANTARÉM",
+     81685
+    ],
+    [
+     "ABAETETUBA",
+     70842
+    ],
+    [
+     "CAMETÁ",
+     65743
+    ],
+    [
+     "MARABÁ",
+     53043
+    ],
+    [
+     "BARCARENA",
+     46695
+    ],
+    [
+     "CASTANHAL",
+     46255
+    ]
+   ],
+   "bens": {
+    "total": 15490795.67,
+    "categorias": [
+     [
+      "OUTROS BENS E DIREITOS",
+      6514671.54
+     ],
+     [
+      "Outros créditos e poupança vinculados",
+      3732940.32
+     ],
+     [
+      "Quotas ou quinhões de capital",
+      3130700.0
+     ],
+     [
+      "Prédio residencial",
+      1540598.2
+     ],
+     [
+      "Aplicação de renda fixa (CDB, RDB e outros)",
+      537810.72
+     ],
+     [
+      "Ações (inclusive as provenientes de linha telefônica)",
+      33618.0
+     ],
+     [
+      "Outras aplicações e Investimentos",
+      456.89
+     ]
+    ]
+   }
+  },
+  {
+   "sq": "150002549793",
+   "nome": "JOAO AZEVÊDO",
+   "partido": "PSB",
+   "uf": "PB",
+   "chave": "primeiro",
+   "rotulo": "Primeiro mandato no Senado",
+   "id_deputado": null,
+   "votos": 1391994,
+   "total_municipios": 223,
+   "municipios": [
+    [
+     "JOÃO PESSOA",
+     227192
+    ],
+    [
+     "CAMPINA GRANDE",
+     119584
+    ],
+    [
+     "SANTA RITA",
+     41005
+    ],
+    [
+     "PATOS",
+     33295
+    ],
+    [
+     "BAYEUX",
+     31954
+    ],
+    [
+     "CAJAZEIRAS",
+     27215
+    ],
+    [
+     "SOUSA",
+     21958
+    ],
+    [
+     "GUARABIRA",
+     18631
+    ]
+   ],
+   "bens": {
+    "total": 1929603.6,
+    "categorias": [
+     [
+      "Apartamento",
+      1332655.69
+     ],
+     [
+      "Depósito bancário em conta corrente no País",
+      420277.4
+     ],
+     [
+      "Fundo de Longo Prazo e Fundo de Investimentos em Direitos Creditórios (FIDC)",
+      114638.85
+     ],
+     [
+      "Casa",
+      60531.66
+     ],
+     [
+      "Terreno",
+      1500.0
+     ]
+    ]
+   }
+  },
+  {
+   "sq": "180002533964",
+   "nome": "JÚLIO CÉSAR O JULIM DO LULA",
+   "partido": "PSD",
+   "uf": "PI",
+   "chave": "camara",
+   "rotulo": "Chega da Câmara",
+   "id_deputado": 74317,
+   "votos": 989146,
+   "total_municipios": 224,
+   "municipios": [
+    [
+     "TERESINA",
+     210977
+    ],
+    [
+     "PARNAÍBA",
+     43424
+    ],
+    [
+     "PICOS",
+     22142
+    ],
+    [
+     "PIRIPIRI",
+     19902
+    ],
+    [
+     "BARRAS",
+     17647
+    ],
+    [
+     "FLORIANO",
+     15522
+    ],
+    [
+     "UNIÃO",
+     14486
+    ],
+    [
+     "JOSÉ DE FREITAS",
+     13719
+    ]
+   ],
+   "bens": {
+    "total": 3057528.3,
+    "categorias": [
+     [
+      "Ações (inclusive as provenientes de linha telefônica)",
+      1195012.56
+     ],
+     [
+      "Terra nua",
+      742045.38
+     ],
+     [
+      "Aeronave",
+      673454.0
+     ],
+     [
+      "Fundo de Curto Prazo",
+      323955.62
+     ],
+     [
+      "Veículo automotor terrestre: caminhão, automóvel, moto, etc.",
+      70000.0
+     ],
+     [
+      "Quotas ou quinhões de capital",
+      48000.0
+     ],
+     [
+      "Outros fundos",
+      5060.74
+     ]
+    ]
+   }
+  },
+  {
+   "sq": "100002548011",
+   "nome": "LAHESIO BONFIM",
+   "partido": "NOVO",
+   "uf": "MA",
+   "chave": "primeiro",
+   "rotulo": "Primeiro mandato no Senado",
+   "id_deputado": null,
+   "votos": 1471859,
+   "total_municipios": 217,
+   "municipios": [
+    [
+     "SÃO LUÍS",
+     278972
+    ],
+    [
+     "IMPERATRIZ",
+     79022
+    ],
+    [
+     "SÃO JOSÉ DE RIBAMAR",
+     42815
+    ],
+    [
+     "BALSAS",
+     35223
+    ],
+    [
+     "AÇAILÂNDIA",
+     30666
+    ],
+    [
+     "PAÇO DO LUMIAR",
+     27398
+    ],
+    [
+     "BACABAL",
+     25951
+    ],
+    [
+     "TIMON",
+     25541
+    ]
+   ],
+   "bens": {
+    "total": 3677655.55,
+    "categorias": [
+     [
+      "Outros bens imóveis",
+      1920000.0
+     ],
+     [
+      "OUTROS BENS E DIREITOS",
+      435000.0
+     ],
+     [
+      "Veículo automotor terrestre: caminhão, automóvel, moto, etc.",
+      421000.0
+     ],
+     [
+      "Apartamento",
+      400000.0
+     ],
+     [
+      "Terreno",
+      395000.0
+     ],
+     [
+      "Quotas ou quinhões de capital",
+      60000.0
+     ],
+     [
+      "Consórcio não contemplado",
+      45505.35
+     ],
+     [
+      "Outros créditos e poupança vinculados",
+      1150.2
+     ]
+    ]
+   }
+  },
+  {
+   "sq": "60002542476",
+   "nome": "LUIZIANNE",
+   "partido": "REDE",
+   "uf": "CE",
+   "chave": "camara",
+   "rotulo": "Chega da Câmara",
+   "id_deputado": 178866,
+   "votos": 2822806,
+   "total_municipios": 184,
+   "municipios": [
+    [
+     "FORTALEZA",
+     683333
+    ],
+    [
+     "CAUCAIA",
+     90482
+    ],
+    [
+     "JUAZEIRO DO NORTE",
+     82748
+    ],
+    [
+     "MARACANAÚ",
+     60878
+    ],
+    [
+     "ITAPIPOCA",
+     51454
+    ],
+    [
+     "CRATO",
+     49119
+    ],
+    [
+     "SOBRAL",
+     45988
+    ],
+    [
+     "MARANGUAPE",
+     33905
+    ]
+   ],
+   "bens": {
+    "total": 333284.84,
+    "categorias": [
+     [
+      "Apartamento",
+      228124.51
+     ],
+     [
+      "Depósito bancário em conta corrente no País",
+      95160.33
+     ],
+     [
+      "Veículo automotor terrestre: caminhão, automóvel, moto, etc.",
+      10000.0
+     ]
+    ]
+   }
+  },
+  {
+   "sq": "10002533895",
+   "nome": "MARA ROCHA",
+   "partido": "REPUBLICANOS",
+   "uf": "AC",
+   "chave": "primeiro",
+   "rotulo": "Primeiro mandato no Senado",
+   "id_deputado": null,
+   "votos": 157104,
+   "total_municipios": 22,
+   "municipios": [
+    [
+     "RIO BRANCO",
+     79445
+    ],
+    [
+     "CRUZEIRO DO SUL",
+     13466
+    ],
+    [
+     "SENA MADUREIRA",
+     8221
+    ],
+    [
+     "BRASILÉIA",
+     5494
+    ],
+    [
+     "TARAUACÁ",
+     5082
+    ],
+    [
+     "FEIJÓ",
+     5006
+    ],
+    [
+     "PORTO ACRE",
+     4882
+    ],
+    [
+     "ACRELÂNDIA",
+     4700
+    ]
+   ],
+   "bens": {
+    "total": 0,
+    "categorias": []
+   }
+  },
+  {
+   "sq": "210002547819",
+   "nome": "MARCEL VAN HATTEM",
+   "partido": "NOVO",
+   "uf": "RS",
+   "chave": "camara",
+   "rotulo": "Chega da Câmara",
+   "id_deputado": 156190,
+   "votos": 3449053,
+   "total_municipios": 497,
+   "municipios": [
+    [
+     "PORTO ALEGRE",
+     331784
+    ],
+    [
+     "CAXIAS DO SUL",
+     160691
+    ],
+    [
+     "CANOAS",
+     94385
+    ],
+    [
+     "NOVO HAMBURGO",
+     84243
+    ],
+    [
+     "PELOTAS",
+     78590
+    ],
+    [
+     "GRAVATAÍ",
+     73973
+    ],
+    [
+     "SANTA MARIA",
+     73041
+    ],
+    [
+     "PASSO FUNDO",
+     65098
+    ]
+   ],
+   "bens": {
+    "total": 1319313.0,
+    "categorias": [
+     [
+      "Apartamento",
+      743347.0
+     ],
+     [
+      "Depósito bancário em conta corrente no exterior",
+      286620.0
+     ],
+     [
+      "Aplicação de renda fixa (CDB, RDB e outros)",
+      75087.0
+     ],
+     [
+      "Veículo automotor terrestre: caminhão, automóvel, moto, etc.",
+      55900.0
+     ],
+     [
+      "Quotas ou quinhões de capital",
+      50000.0
+     ],
+     [
+      "Terreno",
+      40181.0
+     ],
+     [
+      "Outros bens imóveis",
+      36100.0
+     ],
+     [
+      "Dinheiro em espécie - moeda estrangeira",
+      16432.0
+     ],
+     [
+      "Depósito bancário em conta corrente no País",
+      10038.0
+     ],
+     [
+      "Outras aplicações e Investimentos",
+      5608.0
+     ]
+    ]
+   }
+  },
+  {
+   "sq": "170002547771",
+   "nome": "MARÍLIA ARRAES",
+   "partido": "PDT",
+   "uf": "PE",
+   "chave": "primeiro",
+   "rotulo": "Primeiro mandato no Senado",
+   "id_deputado": null,
+   "votos": 2325127,
+   "total_municipios": 185,
+   "municipios": [
+    [
+     "RECIFE",
+     432843
+    ],
+    [
+     "JABOATÃO DOS GUARARAPES",
+     142875
+    ],
+    [
+     "OLINDA",
+     105127
+    ],
+    [
+     "PETROLINA",
+     81797
+    ],
+    [
+     "PAULISTA",
+     79632
+    ],
+    [
+     "CABO DE SANTO AGOSTINHO",
+     61280
+    ],
+    [
+     "CARUARU",
+     58951
+    ],
+    [
+     "GARANHUNS",
+     42840
+    ]
+   ],
+   "bens": {
+    "total": 2606626.55,
+    "categorias": [
+     [
+      "Apartamento",
+      1700000.0
+     ],
+     [
+      "Casa",
+      600000.0
+     ],
+     [
+      "Aplicação de renda fixa (CDB, RDB e outros)",
+      128626.55
+     ],
+     [
+      "Dinheiro em espécie - moeda nacional",
+      100000.0
+     ],
+     [
+      "Quotas ou quinhões de capital",
+      71000.0
+     ],
+     [
+      "Outras aplicações e Investimentos",
+      7000.0
+     ]
+    ]
+   }
+  },
+  {
+   "sq": "130002550560",
+   "nome": "MARÍLIA CAMPOS",
+   "partido": "PT",
+   "uf": "MG",
+   "chave": "primeiro",
+   "rotulo": "Primeiro mandato no Senado",
+   "id_deputado": null,
+   "votos": 3990864,
+   "total_municipios": 853,
+   "municipios": [
+    [
+     "BELO HORIZONTE",
+     571180
+    ],
+    [
+     "CONTAGEM",
+     163957
+    ],
+    [
+     "UBERLÂNDIA",
+     130037
+    ],
+    [
+     "JUIZ DE FORA",
+     123616
+    ],
+    [
+     "BETIM",
+     89988
+    ],
+    [
+     "MONTES CLAROS",
+     71852
+    ],
+    [
+     "RIBEIRÃO DAS NEVES",
+     58933
+    ],
+    [
+     "UBERABA",
+     51351
+    ]
+   ],
+   "bens": {
+    "total": 1802316.7,
+    "categorias": [
+     [
+      "Casa",
+      1000000.0
+     ],
+     [
+      "Apartamento",
+      495000.0
+     ],
+     [
+      "Aplicação de renda fixa (CDB, RDB e outros)",
+      270000.0
+     ],
+     [
+      "Veículo automotor terrestre: caminhão, automóvel, moto, etc.",
+      36290.0
+     ],
+     [
+      "Outras aplicações e Investimentos",
+      1026.7
+     ]
+    ]
+   }
+  },
+  {
+   "sq": "20002553711",
+   "nome": "MARINA JHC",
+   "partido": "PSDB",
+   "uf": "AL",
+   "chave": "primeiro",
+   "rotulo": "Primeiro mandato no Senado",
+   "id_deputado": null,
+   "votos": 926860,
+   "total_municipios": 102,
+   "municipios": [
+    [
+     "MACEIÓ",
+     328290
+    ],
+    [
+     "ARAPIRACA",
+     61036
+    ],
+    [
+     "RIO LARGO",
+     26974
+    ],
+    [
+     "MARECHAL DEODORO",
+     19156
+    ],
+    [
+     "SÃO MIGUEL DOS CAMPOS",
+     18535
+    ],
+    [
+     "PALMEIRA DOS ÍNDIOS",
+     17598
+    ],
+    [
+     "CORURIPE",
+     15699
+    ],
+    [
+     "UNIÃO DOS PALMARES",
+     15223
+    ]
+   ],
+   "bens": {
+    "total": 47041164.18,
+    "categorias": [
+     [
+      "Outras participações societárias",
+      42028955.0
+     ],
+     [
+      "Apartamento",
+      3591272.57
+     ],
+     [
+      "Veículo automotor terrestre: caminhão, automóvel, moto, etc.",
+      704322.0
+     ],
+     [
+      "Outras aplicações e Investimentos",
+      412151.76
+     ],
+     [
+      "Dinheiro em espécie - moeda nacional",
+      180000.0
+     ],
+     [
+      "OUTROS BENS E DIREITOS",
+      124462.85
+     ]
+    ]
+   }
+  },
+  {
+   "sq": "110002551966",
+   "nome": "MAURO MENDES",
+   "partido": "UNIÃO",
+   "uf": "MT",
+   "chave": "primeiro",
+   "rotulo": "Primeiro mandato no Senado",
+   "id_deputado": null,
+   "votos": 1187352,
+   "total_municipios": 142,
+   "municipios": [
+    [
+     "CUIABÁ",
+     204542
+    ],
+    [
+     "VÁRZEA GRANDE",
+     79689
+    ],
+    [
+     "RONDONÓPOLIS",
+     75358
+    ],
+    [
+     "SINOP",
+     61795
+    ],
+    [
+     "SORRISO",
+     40650
+    ],
+    [
+     "TANGARÁ DA SERRA",
+     35433
+    ],
+    [
+     "LUCAS DO RIO VERDE",
+     28822
+    ],
+    [
+     "PRIMAVERA DO LESTE",
+     27237
+    ]
+   ],
+   "bens": {
+    "total": 67180206.27,
+    "categorias": [
+     [
+      "Quotas ou quinhões de capital",
+      63750000.0
+     ],
+     [
+      "Casa",
+      2870816.48
+     ],
+     [
+      "Galpão",
+      378130.74
+     ],
+     [
+      "Outros fundos",
+      154500.0
+     ],
+     [
+      "Outros bens imóveis",
+      24000.0
+     ],
+     [
+      "Depósito bancário em conta corrente no País",
+      2759.05
+     ]
+    ]
+   }
+  },
+  {
+   "sq": "70002552936",
+   "nome": "MICHELLE BOLSONARO",
+   "partido": "PL",
+   "uf": "DF",
+   "chave": "primeiro",
+   "rotulo": "Primeiro mandato no Senado",
+   "id_deputado": null,
+   "votos": 938496,
+   "total_municipios": 1,
+   "municipios": [
+    [
+     "BRASÍLIA",
+     938496
+    ]
+   ],
+   "bens": {
+    "total": 4486170.75,
+    "categorias": [
+     [
+      "Outras aplicações e Investimentos",
+      4456170.75
+     ],
+     [
+      "Veículo automotor terrestre: caminhão, automóvel, moto, etc.",
+      30000.0
+     ]
+    ]
+   }
+  },
+  {
+   "sq": "230002534804",
+   "nome": "NICOLETTI",
+   "partido": "PL",
+   "uf": "RR",
+   "chave": "camara",
+   "rotulo": "Chega da Câmara",
+   "id_deputado": 204479,
+   "votos": 138269,
+   "total_municipios": 15,
+   "municipios": [
+    [
+     "BOA VISTA",
+     88061
+    ],
+    [
+     "RORAINÓPOLIS",
+     8139
+    ],
+    [
+     "MUCAJAÍ",
+     5526
+    ],
+    [
+     "CANTÁ",
+     5415
+    ],
+    [
+     "CARACARAÍ",
+     4879
+    ],
+    [
+     "ALTO ALEGRE",
+     4310
+    ],
+    [
+     "BONFIM",
+     3861
+    ],
+    [
+     "PACARAIMA",
+     3136
+    ]
+   ],
+   "bens": {
+    "total": 2100000.0,
+    "categorias": [
+     [
+      "Casa",
+      2000000.0
+     ],
+     [
+      "Veículo automotor terrestre: caminhão, automóvel, moto, etc.",
+      100000.0
+     ]
+    ]
+   }
+  },
+  {
+   "sq": "30002530071",
+   "nome": "RAYSSA FURLAN",
+   "partido": "PODE",
+   "uf": "AP",
+   "chave": "primeiro",
+   "rotulo": "Primeiro mandato no Senado",
+   "id_deputado": null,
+   "votos": 264799,
+   "total_municipios": 16,
+   "municipios": [
+    [
+     "MACAPÁ",
+     158131
+    ],
+    [
+     "SANTANA",
+     38843
+    ],
+    [
+     "OIAPOQUE",
+     10013
+    ],
+    [
+     "LARANJAL DO JARI",
+     9224
+    ],
+    [
+     "MAZAGÃO",
+     8557
+    ],
+    [
+     "PORTO GRANDE",
+     6949
+    ],
+    [
+     "TARTARUGALZINHO",
+     4864
+    ],
+    [
+     "CALÇOENE",
+     4340
+    ]
+   ],
+   "bens": {
+    "total": 1374700.0,
+    "categorias": [
+     [
+      "Outros bens imóveis",
+      980000.0
+     ],
+     [
+      "Veículo automotor terrestre: caminhão, automóvel, moto, etc.",
+      369700.0
+     ],
+     [
+      "Outras participações societárias",
+      25000.0
+     ]
+    ]
+   }
+  },
+  {
+   "sq": "120002535764",
+   "nome": "REINALDO AZAMBUJA",
+   "partido": "PL",
+   "uf": "MS",
+   "chave": "primeiro",
+   "rotulo": "Primeiro mandato no Senado",
+   "id_deputado": null,
+   "votos": 903554,
+   "total_municipios": 79,
+   "municipios": [
+    [
+     "CAMPO GRANDE",
+     272817
+    ],
+    [
+     "DOURADOS",
+     76935
+    ],
+    [
+     "TRÊS LAGOAS",
+     35335
+    ],
+    [
+     "PONTA PORÃ",
+     33576
+    ],
+    [
+     "CORUMBÁ",
+     30387
+    ],
+    [
+     "MARACAJU",
+     17074
+    ],
+    [
+     "NAVIRAÍ",
+     16023
+    ],
+    [
+     "AQUIDAUANA",
+     15371
+    ]
+   ],
+   "bens": {
+    "total": 55976398.48,
+    "categorias": [
+     [
+      "Outros bens imóveis",
+      15188537.5
+     ],
+     [
+      "OUTROS BENS E DIREITOS",
+      13372000.0
+     ],
+     [
+      "Bem relacionado com o exercício da atividade autônoma",
+      12500000.0
+     ],
+     [
+      "Benfeitorias",
+      6500000.0
+     ],
+     [
+      "Depósito bancário em conta corrente no País",
+      2614138.1
+     ],
+     [
+      "Aeronave",
+      1250000.0
+     ],
+     [
+      "Prédio residencial",
+      1200000.0
+     ],
+     [
+      "Veículo automotor terrestre: caminhão, automóvel, moto, etc.",
+      1155000.0
+     ],
+     [
+      "Outros créditos e poupança vinculados",
+      780166.6
+     ],
+     [
+      "Quotas ou quinhões de capital",
+      656012.34
+     ],
+     [
+      "Terreno",
+      460000.0
+     ],
+     [
+      "Prédio comercial",
+      300000.0
+     ],
+     [
+      "Ações (inclusive as provenientes de linha telefônica)",
+      543.94
+     ]
+    ]
+   }
+  },
+  {
+   "sq": "80002551370",
+   "nome": "RENATO CASAGRANDE",
+   "partido": "PSB",
+   "uf": "ES",
+   "chave": "retorno",
+   "rotulo": "Retorno ao Senado",
+   "id_deputado": null,
+   "votos": 995361,
+   "total_municipios": 78,
+   "municipios": [
+    [
+     "SERRA",
+     121389
+    ],
+    [
+     "VILA VELHA",
+     110422
+    ],
+    [
+     "CARIACICA",
+     94497
+    ],
+    [
+     "VITÓRIA",
+     91552
+    ],
+    [
+     "CACHOEIRO DE ITAPEMIRIM",
+     40367
+    ],
+    [
+     "SÃO MATEUS",
+     35929
+    ],
+    [
+     "LINHARES",
+     30586
+    ],
+    [
+     "GUARAPARI",
+     30039
+    ]
+   ],
+   "bens": {
+    "total": 3068203.91,
+    "categorias": [
+     [
+      "Apartamento",
+      2681369.87
+     ],
+     [
+      "Casa",
+      220714.28
+     ],
+     [
+      "Aplicação de renda fixa (CDB, RDB e outros)",
+      164619.76
+     ],
+     [
+      "Outras participações societárias",
+      1500.0
+     ]
+    ]
+   }
+  },
+  {
+   "sq": "50002536321",
+   "nome": "RUI COSTA",
+   "partido": "PT",
+   "uf": "BA",
+   "chave": "primeiro",
+   "rotulo": "Primeiro mandato no Senado",
+   "id_deputado": null,
+   "votos": 4335196,
+   "total_municipios": 417,
+   "municipios": [
+    [
+     "SALVADOR",
+     639827
+    ],
+    [
+     "FEIRA DE SANTANA",
+     137932
+    ],
+    [
+     "VITÓRIA DA CONQUISTA",
+     84937
+    ],
+    [
+     "CAMAÇARI",
+     74155
+    ],
+    [
+     "JUAZEIRO",
+     68714
+    ],
+    [
+     "LAURO DE FREITAS",
+     48222
+    ],
+    [
+     "ITABUNA",
+     47039
+    ],
+    [
+     "ILHÉUS",
+     43070
+    ]
+   ],
+   "bens": {
+    "total": 1264911.31,
+    "categorias": [
+     [
+      "Apartamento",
+      1250000.0
+     ],
+     [
+      "Aplicação de renda fixa (CDB, RDB e outros)",
+      14911.31
+     ]
+    ]
+   }
+  },
+  {
+   "sq": "200002533841",
+   "nome": "SAMANDA DE LULA",
+   "partido": "PT",
+   "uf": "RN",
+   "chave": "primeiro",
+   "rotulo": "Primeiro mandato no Senado",
+   "id_deputado": null,
+   "votos": 635924,
+   "total_municipios": 167,
+   "municipios": [
+    [
+     "NATAL",
+     138855
+    ],
+    [
+     "MOSSORÓ",
+     44073
+    ],
+    [
+     "PARNAMIRIM",
+     29561
+    ],
+    [
+     "CEARÁ-MIRIM",
+     17082
+    ],
+    [
+     "SÃO GONÇALO DO AMARANTE",
+     14969
+    ],
+    [
+     "JOÃO CÂMARA",
+     10479
+    ],
+    [
+     "APODI",
+     10021
+    ],
+    [
+     "MACAÍBA",
+     9706
+    ]
+   ],
+   "bens": {
+    "total": 476720.98,
+    "categorias": [
+     [
+      "Apartamento",
+      245000.0
+     ],
+     [
+      "Veículo automotor terrestre: caminhão, automóvel, moto, etc.",
+      178000.0
+     ],
+     [
+      "Caderneta de poupança",
+      45720.98
+     ],
+     [
+      "Dinheiro em espécie - moeda nacional",
+      8000.0
+     ]
+    ]
+   }
+  },
+  {
+   "sq": "210002547816",
+   "nome": "SANDERSON",
+   "partido": "PL",
+   "uf": "RS",
+   "chave": "camara",
+   "rotulo": "Chega da Câmara",
+   "id_deputado": 204416,
+   "votos": 3453316,
+   "total_municipios": 497,
+   "municipios": [
+    [
+     "PORTO ALEGRE",
+     324205
+    ],
+    [
+     "CAXIAS DO SUL",
+     156888
+    ],
+    [
+     "CANOAS",
+     93285
+    ],
+    [
+     "NOVO HAMBURGO",
+     82966
+    ],
+    [
+     "PELOTAS",
+     76740
+    ],
+    [
+     "GRAVATAÍ",
+     74949
+    ],
+    [
+     "SANTA MARIA",
+     72524
+    ],
+    [
+     "PASSO FUNDO",
+     64967
+    ]
+   ],
+   "bens": {
+    "total": 145000.0,
+    "categorias": [
+     [
+      "Veículo automotor terrestre: caminhão, automóvel, moto, etc.",
+      145000.0
+     ]
+    ]
+   }
+  },
+  {
+   "sq": "230002553006",
+   "nome": "TERESA SURITA",
+   "partido": "MDB",
+   "uf": "RR",
+   "chave": "primeiro",
+   "rotulo": "Primeiro mandato no Senado",
+   "id_deputado": null,
+   "votos": 117270,
+   "total_municipios": 15,
+   "municipios": [
+    [
+     "BOA VISTA",
+     76237
+    ],
+    [
+     "RORAINÓPOLIS",
+     7356
+    ],
+    [
+     "CANTÁ",
+     5615
+    ],
+    [
+     "CARACARAÍ",
+     4185
+    ],
+    [
+     "BONFIM",
+     4092
+    ],
+    [
+     "MUCAJAÍ",
+     3304
+    ],
+    [
+     "ALTO ALEGRE",
+     3017
+    ],
+    [
+     "PACARAIMA",
+     1988
+    ]
+   ],
+   "bens": {
+    "total": 8481615.57,
+    "categorias": [
+     [
+      "Aplicação de renda fixa (CDB, RDB e outros)",
+      5896314.97
+     ],
+     [
+      "Ações (inclusive as provenientes de linha telefônica)",
+      1218652.67
+     ],
+     [
+      "OUTROS BENS E DIREITOS",
+      1184941.22
+     ],
+     [
+      "Dinheiro em espécie - moeda nacional",
+      100000.0
+     ],
+     [
+      "Depósito bancário em conta corrente no País",
+      81206.71
+     ],
+     [
+      "Outras participações societárias",
+      500.0
+     ]
+    ]
+   }
+  },
+  {
+   "sq": "110002552693",
+   "nome": "ZÉ MEDEIROS",
+   "partido": "PL",
+   "uf": "MT",
+   "chave": "camara",
+   "rotulo": "Chega da Câmara",
+   "id_deputado": 204472,
+   "votos": 977777,
+   "total_municipios": 142,
+   "municipios": [
+    [
+     "CUIABÁ",
+     150647
+    ],
+    [
+     "RONDONÓPOLIS",
+     74427
+    ],
+    [
+     "VÁRZEA GRANDE",
+     59971
+    ],
+    [
+     "SINOP",
+     55758
+    ],
+    [
+     "SORRISO",
+     36520
+    ],
+    [
+     "TANGARÁ DA SERRA",
+     30281
+    ],
+    [
+     "PRIMAVERA DO LESTE",
+     25132
+    ],
+    [
+     "LUCAS DO RIO VERDE",
+     24850
+    ]
+   ],
+   "bens": {
+    "total": 356000.0,
+    "categorias": [
+     [
+      "Casa",
+      206000.0
+     ],
+     [
+      "Terreno",
+      150000.0
+     ]
+    ]
+   }
+  }
+ ]
+}

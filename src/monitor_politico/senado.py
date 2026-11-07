@@ -14,11 +14,13 @@ from typing import Any, Callable, Optional
 import httpx
 
 from monitor_politico import composicao
+from monitor_politico.composicao import arquivar_saidas
 from monitor_politico.api import ClienteJSON
 from monitor_politico.models import Senador, como_lista
 
 API_BASE = "https://legis.senado.leg.br/dadosabertos"
 SAIDA_PADRAO = Path("data/senadores.json")
+ARQUIVO_PADRAO = Path("data/arquivo_senadores.json")
 MINIMO_ESPERADO = 70  # são 81 cadeiras; menos que isso indica resposta incompleta
 
 
@@ -85,6 +87,10 @@ def coletar(
     if len(brutos) < minimo:
         raise ColetaIncompleta(f"só {len(brutos)} senadores na resposta (esperado ao menos {minimo})")
     senadores = [Senador.da_api(p) for p in brutos]
+    anteriores = {}
+    if saida.exists():
+        anteriores = {s["id"]: Senador.de_dict(s) for s in json.loads(saida.read_text(encoding="utf-8"))["senadores"]}
+    arquivar_saidas(saida.parent / ARQUIVO_PADRAO.name, anteriores, senadores, date.today(), "senadores")
     sexo = composicao.contar_sexo(
         (s.partido, p["IdentificacaoParlamentar"].get("SexoParlamentar") == "Feminino") for s, p in zip(senadores, brutos)
     )

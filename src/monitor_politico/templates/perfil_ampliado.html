@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 {% block titulo %}{{ d.nome }} ({{ d.partido }}-{{ d.uf }}) · Monitor Político{% endblock %}
-{% block og_titulo %}{{ d.nome }} ({{ d.partido }}-{{ d.uf }}) · Câmara dos Deputados{% endblock %}
-{% block descricao %}{{ d.nome }} ({{ d.partido }}-{{ d.uf }}):{% if perfil.plenario %} {{ perfil.plenario.votos_registrados|numero }} votos registrados, presença em {{ perfil.plenario.presenca.total.presencas|numero }} de {{ perfil.plenario.presenca.total.dias|numero }} dias com sessão,{% endif %}{% if perfil.dinheiro %} cota parlamentar, emendas,{% endif %}{% if perfil.propostas %} {{ perfil.propostas.total_autoria_propostas|numero }} {{ "proposta" if perfil.propostas.total_autoria_propostas == 1 else "propostas" }} de autoria, {{ perfil.propostas.normas|length }} {{ "virou" if perfil.propostas.normas|length == 1 else "viraram" }} {{ perfil.propostas.palavra_norma }},{% endif %} com dados abertos oficiais.{% endblock %}
-{% block og_imagem %}{% if perfil.imagem %}perfis/{{ d.id }}-compartilhar.jpg{% else %}compartilhar.png{% endif %}{% endblock %}
+{% block og_titulo %}{{ d.nome }} ({{ d.partido }}-{{ d.uf }}) · {{ nome_casa }}{% endblock %}
+{% block descricao %}{{ d.nome }} ({{ d.partido }}-{{ d.uf }}):{% if perfil.plenario %} {{ perfil.plenario.votos_registrados|numero }} votos registrados, {% if casa == "senado" %}participação em {{ perfil.plenario.participacao.total.votou|numero }} de {{ perfil.plenario.participacao.total.votacoes|numero }} votações nominais,{% else %}presença em {{ perfil.plenario.presenca.total.presencas|numero }} de {{ perfil.plenario.presenca.total.dias|numero }} dias com sessão,{% endif %}{% endif %}{% if perfil.dinheiro %} cota parlamentar, emendas,{% endif %}{% if perfil.propostas %} {{ perfil.propostas.total_autoria_propostas|numero }} {{ "proposta" if perfil.propostas.total_autoria_propostas == 1 else "propostas" }} de autoria, {{ perfil.propostas.normas|length }} {{ "virou" if perfil.propostas.normas|length == 1 else "viraram" }} {{ perfil.propostas.palavra_norma }},{% endif %} com dados abertos oficiais.{% endblock %}
+{% block og_imagem %}{% if perfil.imagem %}perfis/{{ perfil.arquivo }}-compartilhar.jpg{% else %}compartilhar.png{% endif %}{% endblock %}
 {% block conteudo %}
 <nav class="ce-breadcrumb" aria-label="Trilha de navegação">
   <ol>
     <li><a href="../index.html">Início</a></li>
-    <li><a href="index.html">Deputados</a></li>
+    <li><a href="index.html">{{ "Senadores" if casa == "senado" else "Deputados" }}</a></li>
     <li aria-current="page">{{ d.nome }}</li>
   </ol>
 </nav>
@@ -16,20 +16,21 @@
   {% if d.url_foto %}<img src="{{ d.url_foto }}" alt="Foto oficial de {{ d.nome }}" width="150" height="200">{% else %}<span class="ce-photo-empty" aria-hidden="true"></span>{% endif %}
   <div class="ce-profile-body">
     <header class="ce-page-head">
-      <p class="ce-eyebrow">Câmara dos Deputados</p>
+      <p class="ce-eyebrow">{{ nome_casa }}</p>
       <h1>{{ d.nome }}</h1>{% if situacoes_eleitorais and situacoes_eleitorais.get(d.id|string) %}
       <p class="pf-badges"><span class="ce-badge badge-{{ situacoes_eleitorais[d.id|string].chave }}">{{ situacoes_eleitorais[d.id|string].rotulo }}</span></p>{% endif %}
-      <p class="pf-deck">{{ d.partido }}-{{ d.uf }}{% if d.situacao %} · {{ d.situacao }}{% endif %}{% if perfil.legislatura_atual %} · Mandato atual: {{ perfil.legislatura_atual.inicio|data_br }} a {{ perfil.legislatura_atual.fim|data_br }}.{% endif %}{% if perfil.proximo_mandato %} Mandato renovado na eleição de {{ perfil.proximo_mandato.ano }}, para {{ perfil.proximo_mandato.inicio_ano }}–{{ perfil.proximo_mandato.fim_ano }}.{% endif %}</p>
+      <p class="pf-deck">{{ d.partido }}-{{ d.uf }}{% if d.situacao %} · {{ d.situacao }}{% endif %}{% if d.condicao %} · {{ d.condicao }}{% endif %}{% if perfil.legislatura_atual %} · Mandato atual: {{ perfil.legislatura_atual.inicio|data_br }} a {{ perfil.legislatura_atual.fim|data_br }}.{% endif %}{% if perfil.proximo_mandato %} Mandato renovado na eleição de {{ perfil.proximo_mandato.ano }}, para {{ perfil.proximo_mandato.inicio_ano }}–{{ perfil.proximo_mandato.fim_ano }}.{% endif %}</p>
       {% if fora_de_exercicio %}<p class="pf-nota">Fora de exercício{% if saiu_em %} desde {{ saiu_em|data_br }}{% endif %}{% if d.situacao %} · Situação oficial: {{ d.situacao }}{% endif %}. Estes são os dados do último registro, de {{ perfil.coleta_local|data_br }}.</p>
       {% else %}<p class="pf-nota">Dados deste perfil coletados em {{ perfil.coleta_local|data_br }}, de fontes oficiais.</p>{% endif %}
     </header>
     {% if perfil.plenario or perfil.dinheiro or perfil.propostas %}
     <div class="pf-numeros">
       {% if perfil.plenario %}
-      <a href="#plenario"><span class="ce-kpi-value">{{ perfil.plenario.votos_registrados|numero }}</span><span>votos registrados em {{ perfil.plenario.votacoes_nominais|numero }} votações nominais do Plenário</span></a>
-      <a href="#presenca"><span class="ce-kpi-value">{{ perfil.plenario.presenca.total.presencas|numero }}</span><span>dias com presença, de {{ perfil.plenario.presenca.total.dias|numero }} dias com sessões deliberativas</span></a>
+      <a href="#plenario"><span class="ce-kpi-value">{{ perfil.plenario.votos_registrados|numero }}</span><span>votos registrados em {{ perfil.plenario.votacoes_nominais|numero }} votações nominais {{ "abertas" if casa == "senado" else "do Plenário" }}</span></a>
+      {% if casa == "senado" %}<a href="#participacao"><span class="ce-kpi-value">{{ perfil.plenario.participacao.total.votou|numero }}</span><span>participações, em {{ perfil.plenario.participacao.total.votacoes|numero }} votações nominais em que constava</span></a>
+      {% else %}<a href="#presenca"><span class="ce-kpi-value">{{ perfil.plenario.presenca.total.presencas|numero }}</span><span>dias com presença, de {{ perfil.plenario.presenca.total.dias|numero }} dias com sessões deliberativas</span></a>{% endif %}
       {% endif %}
-      {% if perfil.dinheiro %}
+      {% if perfil.dinheiro and perfil.dinheiro.cota.por_ano %}
       <a href="#dinheiro"><span class="ce-kpi-value">{{ perfil.dinheiro.cota.total|milhoes|replace("\u00a0", " ") }}</span><span>em cota parlamentar neste mandato</span></a>
       {% endif %}
       {% if perfil.propostas %}
@@ -40,7 +41,7 @@
   </div>
 </article>
 
-<div class="pf-compartilhar" id="compartilhar" data-texto="{{ d.nome }} ({{ d.partido }}-{{ d.uf }}): votos, presença, gastos e leis, com dados oficiais, no Monitor Político." hidden>
+<div class="pf-compartilhar" id="compartilhar" data-texto="{{ d.nome }} ({{ d.partido }}-{{ d.uf }}): votos, {{ "participação" if casa == "senado" else "presença" }}, gastos e leis, com dados oficiais, no Monitor Político." hidden>
   <button class="ce-button ce-button--ghost" id="s-nativo" type="button" hidden>Compartilhar</button>
   <a class="ce-button ce-button--ghost" id="s-whatsapp" href="https://wa.me/">Compartilhar no WhatsApp</a>
   <button class="ce-button ce-button--ghost" id="s-copiar" type="button">Copiar link</button>
@@ -63,12 +64,12 @@
   {% elif votos %}
   <h2 class="pf-h2">{{ votos[0]|numero }} votos na eleição de {{ perfil.ano_unica_eleicao }}</h2>
   {% else %}
-  <h2 class="pf-h2">Trajetória na Câmara</h2>
+  <h2 class="pf-h2">Trajetória {{ "no Senado" if casa == "senado" else "na Câmara" }}</h2>
   {% endif %}
 
   <div class="pf-duas">
     <div>
-      <h3 class="pf-h3">Trajetória na Câmara</h3>
+      <h3 class="pf-h3">Trajetória {{ "no Senado" if casa == "senado" else "na Câmara" }}</h3>
       <ol class="ce-timeline ce-timeline--spaced">
         {% for item in perfil.linha_do_tempo %}
         <li{% if item.futuro %} class="futura"{% endif %}>
@@ -110,10 +111,10 @@
       <div class="ce-table-scroll pf-espaco" tabindex="0" role="region" aria-label="Resultado por eleição">
         <table class="ce-table pf-tabela">
           <caption>Resultado por eleição</caption>
-          <thead><tr><th scope="col">Eleição</th><th scope="col">Partido</th><th scope="col" class="pf-num">Votos</th><th scope="col">Resultado (TSE)</th></tr></thead>
+          <thead><tr><th scope="col">Eleição</th>{% if casa == "senado" %}<th scope="col">Cargo</th>{% endif %}<th scope="col">Partido</th><th scope="col" class="pf-num">Votos</th><th scope="col">Resultado (TSE)</th></tr></thead>
           <tbody>
             {% for e in perfil.eleicoes %}
-            <tr><th scope="row">{{ e.ano }}</th><td>{{ e.partido }}</td><td class="pf-num">{{ e.votos|numero }}</td><td>{{ e.resultado }}</td></tr>
+            <tr><th scope="row">{{ e.ano }}</th>{% if casa == "senado" %}<td>{{ "Senado" if e.cargo == "Senador" else "Câmara" }}</td>{% endif %}<td>{{ e.partido }}</td><td class="pf-num">{{ e.votos|numero }}</td><td>{{ e.resultado }}</td></tr>
             {% endfor %}
           </tbody>
         </table>
@@ -176,13 +177,15 @@
 
   <details class="pf-detalhes">
     <summary>Fonte das eleições e da trajetória</summary>
-    <p>Votos nominais válidos somados por município no estado da candidatura. Trajetória e comissões conforme o registro da Câmara. Coleta em {{ perfil.coleta_local|data_br }}.</p>
+    <p>Votos nominais válidos somados por município no estado da candidatura. Trajetória e comissões conforme o registro {{ "do Senado" if casa == "senado" else "da Câmara" }}. Coleta em {{ perfil.coleta_local|data_br }}.</p>
     <ul class="ce-links">
       {% for e in perfil.eleicoes %}
       <li><a href="https://dadosabertos.tse.jus.br/dataset/resultados-{{ e.ano }}">TSE: resultados de {{ e.ano }}</a></li>
       {% endfor %}
-      <li><a href="{{ d.uri_api }}/historico">Câmara: histórico do mandato</a></li>
-      <li><a href="{{ d.uri_api }}/orgaos">Câmara: comissões e órgãos</a></li>
+{% if casa == "senado" %}<li><a href="{{ d.uri_api }}/mandatos">Senado: mandatos</a></li>
+      <li><a href="{{ d.uri_api }}/comissoes">Senado: comissões</a></li>
+      {% else %}<li><a href="{{ d.uri_api }}/historico">Câmara: histórico do mandato</a></li>
+      <li><a href="{{ d.uri_api }}/orgaos">Câmara: comissões e órgãos</a></li>{% endif %}
     </ul>
   </details>
 </section>
@@ -196,12 +199,15 @@
   <h2 class="pf-h2">Contato oficial do gabinete</h2>
   <div class="pf-duas">
     <dl class="ce-dl">
-      {% if d.gabinete.email %}<dt>E-mail</dt><dd><a href="mailto:{{ d.gabinete.email }}">{{ d.gabinete.email }}</a></dd>{% endif %}
+{% if casa == "senado" %}{% if d.email %}<dt>E-mail</dt><dd><a href="mailto:{{ d.email }}">{{ d.email }}</a></dd>{% endif %}
+      {% if d.telefones %}<dt>Telefone{% if d.telefones|length > 1 %}s{% endif %}</dt><dd>{% for t in d.telefones %}(61) {{ t }}{% if not loop.last %}<br>{% endif %}{% endfor %}</dd>{% endif %}
+      {% if d.bloco %}<dt>Bloco</dt><dd>{{ d.bloco }}</dd>{% endif %}
+      {% else %}{% if d.gabinete.email %}<dt>E-mail</dt><dd><a href="mailto:{{ d.gabinete.email }}">{{ d.gabinete.email }}</a></dd>{% endif %}
       {% if d.gabinete.telefone %}<dt>Telefone</dt><dd>(61) {{ d.gabinete.telefone }}</dd>{% endif %}
-      {% if d.gabinete.sala %}<dt>Gabinete</dt><dd>Sala {{ d.gabinete.sala }}{% if d.gabinete.andar %}, {{ d.gabinete.andar }}º andar{% endif %}{% if d.gabinete.predio %}, Anexo {{ d.gabinete.predio }}{% endif %}</dd>{% endif %}
+      {% if d.gabinete.sala %}<dt>Gabinete</dt><dd>Sala {{ d.gabinete.sala }}{% if d.gabinete.andar %}, {{ d.gabinete.andar }}º andar{% endif %}{% if d.gabinete.predio %}, Anexo {{ d.gabinete.predio }}{% endif %}</dd>{% endif %}{% endif %}
     </dl>
     <ul class="ce-links">
-      <li><a href="{{ d.url_site }}">Página oficial na Câmara</a></li>
+      <li><a href="{{ d.url_site }}">Página oficial {{ "no Senado" if casa == "senado" else "na Câmara" }}</a></li>
       <li><a href="{{ d.uri_api }}">Registro na API de Dados Abertos</a></li>
     </ul>
   </div>

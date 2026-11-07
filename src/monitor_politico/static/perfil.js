@@ -11,6 +11,8 @@ function listaFiltravel(prefixo, controles, passa, padroes) {
   var vazio = document.getElementById(prefixo + "-vazio");
   var mais = document.getElementById(prefixo + "-mais");
   var campos = {};
+  // Nem toda Casa tem todos os filtros: o Senado não publica a orientação dos partidos.
+  controles = controles.filter(function (nome) { return document.getElementById(prefixo + "-" + nome); });
   controles.forEach(function (nome) { campos[nome] = document.getElementById(prefixo + "-" + nome); });
   var limite = POR_VEZ;
 
@@ -87,7 +89,7 @@ listaFiltravel("v", ["classe", "tema", "voto", "contra", "difere"], function (li
     (!c.tema.value || li.dataset.temas.split("|").indexOf(c.tema.value) !== -1) &&
     (!c.voto.value || li.dataset.voto === c.voto.value) &&
     (!c.contra.checked || li.dataset.contra === "1") &&
-    (!c.difere.checked || li.dataset.difere === "1");
+    (!c.difere || !c.difere.checked || li.dataset.difere === "1");
 }, { classe: "texto" });
 
 listaFiltravel("p", ["participacao", "situacao", "mandato", "tema", "tipo"], function (li, c) {
@@ -142,6 +144,7 @@ listaFiltravel("p", ["participacao", "situacao", "mandato", "tema", "tipo"], fun
       celula(linha, c.fornecedor);
       celula(linha, c.categoria);
       celula(linha, moeda(c.valor), "pf-num");
+      if (filtros.dataset.semDocumento) return;
       var documento = linha.insertCell();
       if (c.url && c.url.indexOf(ORIGEM_DOCUMENTOS) === 0) {
         var link = document.createElement("a");

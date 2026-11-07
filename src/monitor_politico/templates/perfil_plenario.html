@@ -2,7 +2,7 @@
 <section class="pf-secao" id="plenario">
   <p class="ce-eyebrow">Atuação em Plenário</p>
   <h2 class="pf-h2">{{ p.votos_registrados|numero }} votos registrados, {{ p.total_texto|numero }} deles sobre o texto principal de uma proposta</h2>
-  <p class="ce-section-note">Período: {{ p.inicio|data_br }} a {{ perfil.coleta_local|data_br }}. Muitas votações do Plenário são simbólicas, sem registro individual de voto, e não entram nesta conta.</p>
+  <p class="ce-section-note">Período: {{ p.inicio|data_br }} a {{ perfil.coleta_local|data_br }}. {% if casa == "senado" %}Votações simbólicas e secretas não têm voto individual publicado e não entram nesta conta.{% else %}Muitas votações do Plenário são simbólicas, sem registro individual de voto, e não entram nesta conta.{% endif %}</p>
 
   <div class="pf-duas pf-espaco">
     <div class="ce-vote-card">
@@ -13,7 +13,7 @@
         <li><span class="ce-dot ce-vote-no"></span>Não <strong>{{ p.todos.nao|numero }}</strong></li>
         <li><span class="ce-dot ce-vote-other"></span>Outros registros <strong>{{ p.todos.outros|numero }}</strong></li>
       </ul>
-      <p class="pf-nota">{{ p.total_procedimento|numero }} sobre procedimento, {{ p.total_ajuste|numero }} sobre emendas, destaques e recursos, {{ p.total_texto|numero }} sobre o texto principal. Em {{ p.sem_registro|numero }} das {{ p.votacoes_nominais|numero }} votações nominais não há voto registrado, o que não significa ausência.</p>
+      <p class="pf-nota">{{ p.total_procedimento|numero }} sobre procedimento, {{ p.total_ajuste|numero }} sobre emendas, destaques e recursos, {{ p.total_texto|numero }} sobre o texto principal. {% if casa == "senado" %}Das {{ p.votacoes_nominais|numero }} votações nominais abertas do período, a pessoa pode não ter estado em exercício em parte delas. Veja a participação abaixo.{% else %}Em {{ p.sem_registro|numero }} das {{ p.votacoes_nominais|numero }} votações nominais não há voto registrado, o que não significa ausência.{% endif %}</p>
     </div>
     <div class="ce-vote-card">
       <h3 class="pf-h3">Só o texto principal</h3>
@@ -23,7 +23,7 @@
         <li><span class="ce-dot ce-vote-no"></span>Não <strong>{{ p.texto.nao|numero }}</strong></li>
         <li><span class="ce-dot ce-vote-other"></span>Outros registros <strong>{{ p.texto.outros|numero }}</strong></li>
       </ul>
-      <p class="pf-nota">Em {{ p.contra_texto|numero }} destas votações, o voto ficou do lado menos votado. Ele diferiu da orientação do partido em {{ p.difere_texto|numero }} das {{ p.com_orientacao|numero }} votações em que há orientação própria de Sim ou Não, fora de bloco.</p>
+      <p class="pf-nota">Em {{ p.contra_texto|numero }} destas votações, o voto ficou do lado menos votado.{% if casa != "senado" %} Ele diferiu da orientação do partido em {{ p.difere_texto|numero }} das {{ p.com_orientacao|numero }} votações em que há orientação própria de Sim ou Não, fora de bloco.{% endif %}</p>
     </div>
   </div>
   <p class="ce-section-note">Sim e Não indicam a posição sobre o texto votado naquele momento. Não indicam a posição sobre o tema nem a intenção do parlamentar.</p>
@@ -61,10 +61,10 @@
         <option>Não</option>
       </select></label>
     <label class="ce-check"><input type="checkbox" id="v-contra">Lado menos votado</label>
-    <label class="ce-check"><input type="checkbox" id="v-difere">Diferente da orientação do partido</label>
+    {% if casa != "senado" %}<label class="ce-check"><input type="checkbox" id="v-difere">Diferente da orientação do partido</label>{% endif %}
   </div>
   <p class="ce-count"><span id="v-contagem">{{ p.total_texto|numero }}</span> votações, da mais recente para a mais antiga.</p>
-  <ul class="pf-votos" id="v-lista" data-fragmento="{{ raiz }}/static/perfis/{{ d.id }}-votos.html">
+  <ul class="pf-votos" id="v-lista" data-fragmento="{{ raiz }}/static/perfis/{{ perfil.arquivo }}-votos.html">
     {% for v in p.votos_iniciais %}{% include "perfil_voto_item.html" %}{% endfor %}
   </ul>
   <div class="ce-state-box pf-espaco" id="v-vazio" hidden>
@@ -75,15 +75,53 @@
   <noscript><p class="pf-nota">Sem JavaScript, esta lista mostra só as votações mais recentes.</p></noscript>
   <details class="pf-detalhes">
     <summary>Fonte e método</summary>
-    <p>Só votações nominais do Plenário em que há voto registrado. Votações em que a fonte não informa as posições individuais ficam de fora. A separação entre texto principal, emendas e procedimento é feita por regras sobre a descrição oficial de cada votação e pode ter exceções. O placar exibido não inclui o voto deste perfil. A orientação do partido só aparece quando ele consta separado de um bloco. Coleta em {{ perfil.coleta_local|data_br }}.</p>
+{% if casa == "senado" %}<p>Votações nominais abertas do Senado em que há voto registrado de Sim, Não ou abstenção. A separação entre texto principal, emendas e procedimento é feita por regras sobre a descrição oficial de cada votação e pode ter exceções. O placar exibido não inclui o voto deste perfil. O Senado não publica a orientação dos partidos. Coleta em {{ perfil.coleta_local|data_br }}.</p>
+    <ul class="ce-links">
+      <li><a href="https://legis.senado.leg.br/dadosabertos/docs/">Senado: documentação dos Dados Abertos (votações)</a></li>
+    </ul>
+    {% else %}<p>Só votações nominais do Plenário em que há voto registrado. Votações em que a fonte não informa as posições individuais ficam de fora. A separação entre texto principal, emendas e procedimento é feita por regras sobre a descrição oficial de cada votação e pode ter exceções. O placar exibido não inclui o voto deste perfil. A orientação do partido só aparece quando ele consta separado de um bloco. Coleta em {{ perfil.coleta_local|data_br }}.</p>
     <ul class="ce-links">
       <li><a href="https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/csv/votacoesVotos-2026.csv">Câmara: votos por votação</a></li>
       <li><a href="https://dadosabertos.camara.leg.br/arquivos/votacoes/csv/votacoes-2026.csv">Câmara: votações</a></li>
       <li><a href="https://dadosabertos.camara.leg.br/arquivos/votacoesOrientacoes/csv/votacoesOrientacoes-2026.csv">Câmara: orientações das bancadas</a></li>
       <li><a href="https://dadosabertos.camara.leg.br/arquivos/proposicoesTemas/csv/proposicoesTemas-2026.csv">Câmara: temas das proposições</a></li>
-    </ul>
+    </ul>{% endif %}
   </details>
 
+  {% if p.participacao %}{% set t = p.participacao.total %}
+  <div class="pf-bloco" id="participacao">
+    <h3 class="pf-h3">Participação em {{ t.votou|numero }} das {{ t.votacoes|numero }} votações nominais em que constava</h3>
+    <div class="ce-table-scroll" tabindex="0" role="region" aria-label="Participação em votações nominais por ano">
+      <table class="ce-table pf-tabela">
+        <caption>Registros do Senado em cada votação nominal, por ano</caption>
+        <thead>
+          <tr>
+            <th scope="col">Ano</th>
+            <th scope="col" class="pf-num">Votações</th>
+            <th scope="col" class="pf-num">Votou ou presidiu</th>
+            <th scope="col" class="pf-num">Presente, sem voto</th>
+            <th scope="col" class="pf-num">Licença, missão ou atividade parlamentar</th>
+            <th scope="col" class="pf-num">Não compareceu</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for a in p.participacao.por_ano %}
+          <tr><th scope="row">{{ a.ano }}</th><td class="pf-num">{{ a.votacoes }}</td><td class="pf-num">{{ a.votou }}</td><td class="pf-num">{{ a.presente_sem_voto }}</td><td class="pf-num">{{ a.afastamento }}</td><td class="pf-num">{{ a.nao_compareceu }}</td></tr>
+          {% endfor %}
+          <tr class="pf-total"><th scope="row">Total</th><td class="pf-num">{{ t.votacoes }}</td><td class="pf-num">{{ t.votou }}</td><td class="pf-num">{{ t.presente_sem_voto }}</td><td class="pf-num">{{ t.afastamento }}</td><td class="pf-num">{{ t.nao_compareceu }}</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="ce-section-note">O Senado não publica um relatório de presença por dia, como a Câmara. Esta conta usa só as votações nominais, inclusive as secretas ({{ p.participacao.secretas|numero }} no período), em que a fonte registra apenas que a pessoa votou. Votações simbólicas ficam de fora. Licença, missão e atividade parlamentar são afastamentos registrados pelo Senado e não equivalem a falta. Por isso, os números não são comparáveis com a presença de deputados.</p>
+    <details class="pf-detalhes">
+      <summary>Fonte e método</summary>
+      <p>Cada votação nominal publica a relação de senadores e o registro de cada um. Entram só as votações em que a pessoa aparece nessa relação. “Dispositivo não citado” fica fora da conta, porque a pessoa não votava naquele trecho. Coleta em {{ perfil.coleta_local|data_br }}.</p>
+      <ul class="ce-links">
+        <li><a href="https://legis.senado.leg.br/dadosabertos/docs/">Senado: documentação dos Dados Abertos (votações)</a></li>
+      </ul>
+    </details>
+  </div>
+  {% else %}
   <div class="pf-bloco" id="presenca">
     <h3 class="pf-h3">Presença em {{ p.presenca.total.presencas|numero }} dos {{ p.presenca.total.dias|numero }} dias com sessões deliberativas</h3>
     <div class="ce-table-scroll" tabindex="0" role="region" aria-label="Presença por ano">
@@ -120,4 +158,5 @@
       </ul>
     </details>
   </div>
+  {% endif %}
 </section>

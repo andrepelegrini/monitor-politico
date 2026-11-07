@@ -29,6 +29,7 @@ ROTULOS_SITUACAO = {
     "encerrada": "Arquivada ou retirada",
     "sem_situacao": "Sem situação informada",
 }
+ROTULOS_SITUACAO_SENADO = {**ROTULOS_SITUACAO, "senado": "Aguardando a Câmara", "tramitacao": "Em tramitação no Senado"}
 SITUACOES_ENCERRADAS = re.compile(r"arquivad|retirad|devolvid|rejeitad|prejudicad", re.IGNORECASE)
 NORMA_NO_DESPACHO = re.compile(r"Transformad[oa] n[ao] (.+?)\.(\s|$)", re.IGNORECASE)
 TRAMITACAO_DE_NORMA = re.compile(r"Transforma\w+ em Norma", re.IGNORECASE)
@@ -173,11 +174,13 @@ def mandato_da_data(data: str, mandatos: list[dict[str, str]]) -> str:
     return atual
 
 
-def _rotulo_situacao(chave: str, palavra: str) -> str:
-    return f"Virou {palavra}" if chave == "norma" else ROTULOS_SITUACAO[chave]
+def _rotulo_situacao(chave: str, palavra: str, casa: str = "camara") -> str:
+    if chave == "norma":
+        return f"Virou {palavra}"
+    return (ROTULOS_SITUACAO_SENADO if casa == "senado" else ROTULOS_SITUACAO)[chave]
 
 
-def _caminho(propostas: list[dict[str, Any]], palavra: str) -> list[dict[str, Any]]:
+def _caminho(propostas: list[dict[str, Any]], palavra: str, casa: str = "camara") -> list[dict[str, Any]]:
     """Uma linha por tipo de participação, com a largura proporcional ao total de propostas."""
     maior = max((sum(p["participacao"] == c for p in propostas) for c in ROTULOS_PARTICIPACAO), default=1) or 1
     linhas = []
@@ -194,7 +197,7 @@ def _caminho(propostas: list[dict[str, Any]], palavra: str) -> list[dict[str, An
             "normas": contagem["norma"],
             "largura": round(len(grupo) / maior * 100, 1),
             "situacoes": [
-                {"chave": c, "rotulo": _rotulo_situacao(c, palavra), "valor": contagem[c], "largura": round(contagem[c] / len(grupo) * 100, 2)}
+                {"chave": c, "rotulo": _rotulo_situacao(c, palavra, casa), "valor": contagem[c], "largura": round(contagem[c] / len(grupo) * 100, 2)}
                 for c in ROTULOS_SITUACAO if contagem[c]
             ],
         })
@@ -203,7 +206,7 @@ def _caminho(propostas: list[dict[str, Any]], palavra: str) -> list[dict[str, An
 
 def visao(
     doc: dict[str, Any], slugs: Optional[dict[str, str]] = None, mandatos: Optional[list[dict[str, str]]] = None,
-    inicio_mandato: Optional[str] = None,
+    inicio_mandato: Optional[str] = None, casa: str = "camara",
 ) -> dict[str, Any]:
     slugs, mandatos = slugs or {}, mandatos or []
     propostas = []
@@ -211,7 +214,7 @@ def visao(
         propostas.append({
             **proposta,
             "ementa": ementa_atual(proposta["ementa"]),
-            "grupo": grupo_da_situacao(proposta["situacao"]),
+            "grupo": proposta.get("grupo") or grupo_da_situacao(proposta["situacao"]),
             "rotulo_participacao": ROTULOS_PARTICIPACAO[proposta["participacao"]],
             "slug": slugs.get(proposta["sigla"]),
             "mandato": mandato_da_data(proposta["data"], mandatos),
@@ -249,13 +252,14 @@ def visao(
             "principal": sum(p["participacao"] == "primeira" for p in no_mandato),
             "coautoria": sum(p["participacao"] == "coautoria" for p in no_mandato),
         },
-        "caminho": _caminho(propostas, palavra),
+        "caminho": _caminho(propostas, palavra, casa),
         "por_mandato": por_mandato,
         "tipos": [(t, sum(p["tipo"] == t for p in propostas)) for t in TIPOS if any(p["tipo"] == t for p in propostas)],
-        "situacoes": [(_rotulo_situacao(c, palavra), situacoes[c], c) for c in ROTULOS_SITUACAO if situacoes[c]],
+        "situacoes": [(_rotulo_situacao(c, palavra, casa), situacoes[c], c) for c in ROTULOS_SITUACAO if situacoes[c]],
         "temas": [{"nome": t, "valor": n, "largura": round(n / maior * 100, 1)} for t, n in assuntos.most_common(6)],
         "opcoes_temas": sorted(assuntos),
         "por_ano": doc["por_ano"],
         "total_autoria": sum(a["autoria"] for a in doc["por_ano"]),
         "total_relatadas": sum(a["relatadas"] for a in doc["por_ano"]),
+        "relatorias_no_mandato": doc.get("relatorias_no_mandato"),
     }

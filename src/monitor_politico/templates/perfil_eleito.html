@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block titulo %}{{ e.nome|nome_proprio }} ({{ e.partido }}-{{ e.uf }}) · Monitor Político{% endblock %}
-{% block og_titulo %}{{ e.nome|nome_proprio }} ({{ e.partido }}-{{ e.uf }}) · Eleição para a Câmara em {{ legislatura.ano_da_eleicao }}{% endblock %}
-{% block descricao %}{{ e.nome|nome_proprio }} ({{ e.partido }}-{{ e.uf }}): {{ e.votos|numero }} votos na eleição de {{ legislatura.ano_da_eleicao }} para a Câmara dos Deputados, com dados oficiais do TSE.{% endblock %}
+{% block og_titulo %}{{ e.nome|nome_proprio }} ({{ e.partido }}-{{ e.uf }}) · Eleição para {{ "o Senado" if casa == "senado" else "a Câmara" }} em {{ legislatura.ano_da_eleicao }}{% endblock %}
+{% block descricao %}{{ e.nome|nome_proprio }} ({{ e.partido }}-{{ e.uf }}): {{ e.votos|numero }} votos na eleição de {{ legislatura.ano_da_eleicao }} para {{ "o Senado Federal" if casa == "senado" else "a Câmara dos Deputados" }}, com dados oficiais do TSE.{% endblock %}
 {% block conteudo %}
 <nav class="ce-breadcrumb" aria-label="Trilha de navegação">
   <ol>
@@ -15,11 +15,11 @@
   <span class="ce-photo-empty" aria-hidden="true"></span>
   <div class="ce-profile-body">
     <header class="ce-page-head">
-      <p class="ce-eyebrow">Eleição para a Câmara dos Deputados</p>
+      <p class="ce-eyebrow">Eleição para {{ "o Senado Federal" if casa == "senado" else "a Câmara dos Deputados" }}</p>
       <h1>{{ e.nome|nome_proprio }}</h1>
       <p class="pf-badges"><span class="ce-badge badge-{{ e.chave }}">{{ e.rotulo }}</span></p>
       <p class="pf-deck">{{ e.partido }}-{{ e.uf }}. Posse prevista para {{ legislatura.posse|data_br }}.</p>
-      <p class="pf-nota">Dados do TSE coletados em {{ coleta_legislatura|data_br }}. Esta página ganha votos, presença e gastos depois da posse, quando a Câmara publicar os registros do mandato.</p>
+      <p class="pf-nota">Dados do TSE coletados em {{ coleta_legislatura|data_br }}. Esta página ganha votos, presença e gastos depois da posse, quando {{ "o Senado" if casa == "senado" else "a Câmara" }} publicar os registros do mandato.</p>
     </header>
   </div>
 </article>
@@ -52,6 +52,7 @@
   </div>
   <ul class="ce-links pf-espaco">
     <li><a href="https://divulgacandcontas.tse.jus.br/">TSE: consulta de candidaturas (DivulgaCandContas)</a></li>
+    {% if e.id_deputado %}<li><a href="{{ raiz }}/deputados/{{ e.id_deputado }}.html">Perfil de {{ e.nome|nome_proprio }} como parlamentar na Câmara</a></li>{% endif %}
     {% if e.id_camara_antigo %}<li><a href="https://www.camara.leg.br/deputados/{{ e.id_camara_antigo }}">Câmara: página de mandatos anteriores</a></li>{% endif %}
   </ul>
 </section>
