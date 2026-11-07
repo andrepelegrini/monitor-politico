@@ -6,7 +6,7 @@
 body { margin: 0; }
 .ce-app [hidden] { display: none !important; }
 /* #AAA095 (components.css) dá 2,57:1 sobre branco; WCAG 1.4.11 pede 3:1 para borda de controle. */
-.ce-app .ce-input, .ce-app .ce-select { border-color: var(--ce-vote-other); }
+.ce-app .ce-input, .ce-app .ce-select { border-color: var(--ce-vote-other); box-sizing: border-box; }
 .ce-app .ce-input::placeholder { color: var(--ce-text-muted); opacity: 1; }
 
 .ce-app .ce-skip { position: absolute; left: var(--ce-space-2); top: -4rem; z-index: 20; padding: var(--ce-space-3) var(--ce-space-4); background: var(--ce-espresso); color: #fff; border-radius: var(--ce-radius-md); }
@@ -274,7 +274,7 @@ body { margin: 0; }
 .ce-app .pf-secao { padding-top: var(--ce-space-12); scroll-margin-top: 2.5rem; }
 .ce-app .pf-secao > .ce-eyebrow { color: var(--ce-terracotta); margin-bottom: var(--ce-space-2); }
 .ce-app .pf-bloco { margin-top: var(--ce-space-12); padding-top: var(--ce-space-8); border-top: 1px solid var(--ce-border); scroll-margin-top: 3rem; }
-.ce-app .pf-h2 { font: 480 var(--ce-title-sm)/1.2 var(--ce-font-display); letter-spacing: -.02em; max-width: 34ch; margin-bottom: var(--ce-space-5); text-wrap: balance; }
+.ce-app .pf-h2 { font: 480 var(--ce-title-sm)/1.2 var(--ce-font-display); letter-spacing: -.02em; margin-bottom: var(--ce-space-5); text-wrap: balance; }
 .ce-app .pf-h3 { font: 600 1.0625rem/1.35 var(--ce-font-ui); margin-bottom: var(--ce-space-3); text-wrap: balance; }
 .ce-app .pf-espaco { margin-top: var(--ce-space-8); }
 .ce-app .pf-duas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--ce-space-8) clamp(1.5rem, 4vw, 3.5rem); align-items: start; }
@@ -297,6 +297,10 @@ body { margin: 0; }
 .ce-app .pf-detalhes summary::before { content: ""; flex: none; width: .4rem; height: .4rem; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(-45deg); }
 .ce-app .pf-detalhes[open] > summary::before { transform: rotate(45deg); }
 .ce-app .pf-detalhes > p { margin-bottom: var(--ce-space-2); }
+/* Blocos longos que ficam recolhidos, como fornecedores e comprovantes: o título tem o peso de um subtítulo. */
+.ce-app .pf-recolhe { font-size: var(--ce-text-md); color: var(--ce-ink); border-top: 1px solid var(--ce-border-soft); }
+.ce-app .pf-recolhe > summary { font-size: var(--ce-text-md); color: var(--ce-ink); }
+.ce-app .pf-recolhe[open] > summary { margin-bottom: var(--ce-space-3); }
 .ce-app .pf-composicao { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--ce-space-6); margin-top: var(--ce-space-3); }
 .ce-app .pf-composicao > * { min-width: 0; }
 .ce-app .pf-composicao h4 { font: 600 var(--ce-text-sm)/1.3 var(--ce-font-ui); margin-bottom: var(--ce-space-2); color: var(--ce-ink); }

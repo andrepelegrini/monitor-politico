@@ -44,9 +44,11 @@
       </div>
     </div>
 
-    <div class="ce-table-scroll pf-espaco" tabindex="0" role="region" aria-label="Maiores fornecedores">
+    <details class="pf-detalhes pf-recolhe pf-espaco">
+    <summary>Maiores fornecedores, entre {{ q.total_fornecedores|numero }}</summary>
+    <div class="ce-table-scroll" tabindex="0" role="region" aria-label="Maiores fornecedores">
       <table class="ce-table pf-tabela pf-tabela--texto">
-        <caption>Maiores fornecedores, entre {{ q.total_fornecedores|numero }}</caption>
+        <caption class="ce-sr-only">Maiores fornecedores, entre {{ q.total_fornecedores|numero }}</caption>
         <tbody>
           {% for nome, valor in q.fornecedores %}
           <tr><td>{{ nome }}</td><td class="pf-num">{{ valor|moeda }}</td></tr>
@@ -54,8 +56,10 @@
         </tbody>
       </table>
     </div>
+    </details>
 
-    <h4 class="pf-h4 pf-espaco">Comprovantes</h4>
+    <details class="pf-detalhes pf-recolhe">
+    <summary>Comprovantes: {{ q.total_comprovantes|numero }} registros</summary>
     <div class="ce-filters" id="c-filtros" data-url="{{ raiz }}/static/perfis/{{ perfil.arquivo }}-comprovantes.json"{% if casa == "senado" %} data-sem-documento="1"{% endif %} hidden>
       <label class="ce-field"><span class="ce-control-label">Buscar fornecedor</span><input class="ce-input" id="c-busca" type="search" autocomplete="off" placeholder="Nome do fornecedor"></label>
       <label class="ce-field"><span class="ce-control-label">Categoria</span>
@@ -76,6 +80,7 @@
       </table>
     </div>
     <button class="ce-button ce-button--ghost pf-mais" id="c-mais" type="button" hidden>Mostrar mais comprovantes</button>
+    </details>
     <details class="pf-detalhes">
       <summary>Fonte e método</summary>
 {% if casa == "senado" %}<p>Os totais somam {{ q.total_comprovantes|numero }} registros do arquivo de cota parlamentar (CEAPS) publicado pelo Senado, desde fevereiro de 2023, porque o Senado não publica um total oficial nem o percentual usado da cota. O arquivo não traz o endereço do comprovante. A descrição livre de cada despesa não é exibida. Fornecedores com o mesmo nome são somados, mesmo com mais de um CNPJ. Fornecedor pessoa física aparece sem o nome. Coleta em {{ perfil.coleta_local|data_br }}.</p>
