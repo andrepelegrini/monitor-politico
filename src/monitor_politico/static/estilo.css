@@ -12,13 +12,22 @@ body { margin: 0; }
 .ce-app .ce-skip { position: absolute; left: var(--ce-space-2); top: -4rem; z-index: 20; padding: var(--ce-space-3) var(--ce-space-4); background: var(--ce-espresso); color: #fff; border-radius: var(--ce-radius-md); }
 .ce-app .ce-skip:focus { top: var(--ce-space-2); }
 
-/* Topo */
-.ce-app .ce-brand { font: 500 1.375rem/1.2 var(--ce-font-display); letter-spacing: -.02em; }
-.ce-app .ce-brand-logo { display: block; flex: none; width: 36px; height: 36px; }
-@media (max-width: 480px) { .ce-app .ce-brand-logo { width: 30px; height: 30px; } }
+/* Topo: faixa azul-marinho do kit da marca, a mesma cor da barra do navegador (theme-color). */
+.ce-app { --mp-marinho: #14263D; --mp-marinho-campo: #1E3552; --mp-marinho-borda: #4A6382; --mp-marinho-texto: #C9D3E0; --mp-amarelo: #FFCA18; }
+.ce-app .ce-topbar { background: var(--mp-marinho); border-bottom: 0; color: #FFFFFF; }
+.ce-app .ce-topbar-inner { min-height: 76px; }
+.ce-app .ce-topbar :focus-visible { outline-color: var(--mp-amarelo); }
+.ce-app .ce-brand { color: #FFFFFF; font: 600 1.3rem/1.2 var(--ce-font-display); letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; }
+.ce-app .ce-brand-logo { display: block; flex: none; width: 42px; height: 42px; }
+@media (max-width: 480px) { .ce-app .ce-brand-logo { width: 36px; height: 36px; } .ce-app .ce-brand { font-size: 1.15rem; } }
 .ce-app .ce-nav a { display: inline-flex; align-items: center; min-height: 44px; }
-.ce-app .ce-nav a:hover { color: var(--ce-ink); text-decoration: underline; text-underline-offset: 7px; }
-.ce-app .ce-topbar .ce-nav { margin-right: auto; margin-left: var(--ce-space-6); }
+.ce-app .ce-topbar .ce-nav { margin-right: auto; margin-left: var(--ce-space-6); gap: var(--ce-space-6); }
+.ce-app .ce-topbar .ce-nav a { color: var(--mp-marinho-texto); font-size: .9375rem; font-weight: 500; text-decoration: none; border-bottom: 3px solid transparent; }
+.ce-app .ce-topbar .ce-nav a:hover { color: #FFFFFF; text-decoration: none; border-bottom-color: rgb(255 255 255 / .35); }
+.ce-app .ce-topbar .ce-nav a[aria-current="page"] { color: #FFFFFF; font-weight: 700; text-decoration: none; border-bottom-color: var(--mp-amarelo); }
+.ce-app .ce-topbar .busca input { background: var(--mp-marinho-campo); border-color: var(--mp-marinho-borda); color: #FFFFFF; }
+.ce-app .ce-topbar .busca input::placeholder { color: var(--mp-marinho-texto); }
+.ce-app .ce-topbar .busca svg { stroke: var(--mp-marinho-texto); }
 
 .busca { position: relative; flex: 1 1 240px; max-width: 360px; min-width: 0; }
 .busca svg { position: absolute; left: .75rem; top: 50%; transform: translateY(-50%); width: 1rem; height: 1rem; fill: none; stroke: var(--ce-text-secondary); stroke-width: 2; pointer-events: none; }
@@ -41,6 +50,7 @@ body { margin: 0; }
 .busca-res .mais { display: block; padding: var(--ce-space-2); font-size: var(--ce-text-xs); color: var(--ce-text-secondary); border-top: 1px solid var(--ce-border-soft); margin-top: var(--ce-space-1); }
 
 @media (max-width: 800px) {
+  .ce-app .ce-topbar .ce-nav { gap: var(--ce-space-5); }
   .ce-app .ce-topbar-inner { align-items: stretch; gap: var(--ce-space-2); }
   .ce-app .ce-topbar .ce-nav { margin: 0; }
   .busca { flex: none; max-width: none; }
@@ -354,6 +364,7 @@ body { margin: 0; }
 .ce-app .pf-comprovantes td:nth-child(2) { min-width: 11rem; }
 .ce-app .pf-secao .ce-filters .ce-input, .ce-app .pf-secao .ce-filters .ce-select { height: 46px; }
 @media (max-width: 800px) {
+  .ce-app .ce-topbar .ce-nav { gap: var(--ce-space-5); }
   .ce-app .pf-votos > li, .ce-app .pf-temas li { grid-template-columns: minmax(0, 1fr); }
   .ce-app .pf-numeros { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .ce-app .pf-duas, .ce-app .pf-composicao { grid-template-columns: minmax(0, 1fr); }
