@@ -26,9 +26,40 @@
     });
     contagem.textContent = visiveis;
     vazio.hidden = visiveis !== 0;
+    marcarEstado();
+  }
+
+  // Mapa das bancadas: destaca o estado filtrado, venha o filtro do mapa, da lista ou do campo UF.
+  function marcarEstado() {
+    var formas = document.querySelectorAll(".mapa-uf");
+    if (!formas.length) return;
+    var escolhida = null;
+    Array.prototype.forEach.call(formas, function (forma) {
+      var ativa = forma.getAttribute("data-filtro-uf") === uf.value;
+      forma.setAttribute("aria-pressed", String(ativa));
+      if (ativa) escolhida = forma;
+    });
+    document.getElementById("mapa-vazio").hidden = !!escolhida;
+    document.getElementById("mapa-estado").hidden = !escolhida;
+    if (escolhida) {
+      document.getElementById("mapa-nome").textContent = escolhida.getAttribute("data-nome");
+      document.getElementById("mapa-n").textContent = escolhida.getAttribute("data-n");
+      document.getElementById("mapa-maior").textContent = escolhida.getAttribute("data-maior");
+      escolhida.parentNode.appendChild(escolhida);  // contorno de destaque por cima dos vizinhos
+    }
   }
 
   [nome, partido, uf, situacao].forEach(function (el) { if (el) el.addEventListener("input", aplicar); });
+
+  // Estados do mapa são formas do SVG, e não botões: Enter e espaço também os acionam.
+  Array.prototype.forEach.call(document.querySelectorAll(".mapa-uf"), function (forma) {
+    forma.addEventListener("keydown", function (evento) {
+      if (evento.key === "Enter" || evento.key === " ") {
+        evento.preventDefault();
+        forma.dispatchEvent(new MouseEvent("click", { bubbles: true }));
+      }
+    });
+  });
 
   // Botões do resumo (partido, estado): aplicam o filtro e levam à lista; clicar de novo limpa.
   var titulo = document.getElementById("lista-titulo");
@@ -38,6 +69,8 @@
         var valor = botao.getAttribute(par[0]);
         par[1].value = par[1].value === valor ? "" : valor;
         aplicar();
+        // No mapa, o estado escolhido fica no mapa: sem rolar até a lista, o painel ao lado mostra o resultado.
+        if (botao.classList.contains("mapa-uf")) return;
         if (titulo) titulo.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
       });
     });

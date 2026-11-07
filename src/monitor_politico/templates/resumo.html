@@ -104,16 +104,43 @@
 {% if casa == "camara" and resumo.bancadas %}
 <section class="ce-section" aria-labelledby="bancadas-titulo">
   <div class="ce-section-header"><h2 class="ce-display ce-section-title" id="bancadas-titulo">Bancadas por estado</h2></div>
-  <p class="ce-section-note">Número de deputados de cada estado e o partido com mais cadeiras nele. Clique para filtrar a lista.</p>
-  <ul class="ce-ufs">
-    {% for b in resumo.bancadas %}
-    <li>
-      <button type="button" data-filtro-uf="{{ b.uf }}" aria-label="{{ b.uf }}: {{ b.n }} deputados; maior partido {{ b.maior }}. Filtrar a lista">
-        <span><strong>{{ b.uf }}</strong> <span class="ce-muted">· {{ b.n }}</span></span>
-        <span class="ce-meta">{{ b.maior }}</span>
-      </button>
-    </li>
-    {% endfor %}
-  </ul>
+  <p class="ce-section-note">Número de deputados de cada estado: quanto mais escuro, maior a bancada. Clique num estado para filtrar a lista.</p>
+  {% set m = resumo.mapa %}
+  <div class="mapa-bancadas">
+    <div>
+      <svg class="mapa-svg" viewBox="0 0 {{ m.largura }} {{ m.altura }}" role="group" aria-label="Mapa do Brasil com o número de deputados por estado">
+        <g class="mapa-contorno" aria-hidden="true">{% for e in m.estados %}<path d="{{ e.d }}"/>{% endfor %}</g>
+        <g>{% for e in m.estados %}<path class="mapa-uf mapa-f{{ e.faixa }}" d="{{ e.d }}" data-filtro-uf="{{ e.uf }}" data-nome="{{ e.nome }}" data-n="{{ e.n }}" data-maior="{{ e.maior }}" role="button" tabindex="0" aria-pressed="false" aria-label="{{ e.nome }}: {{ e.n }} deputados; maior partido {{ e.maior }}. Filtrar a lista"/>{% endfor %}</g>
+        <g aria-hidden="true">{% for e in m.estados if e.rotulo %}<text class="mapa-rotulo{% if e.claro %} mapa-rotulo--claro{% endif %}" x="{{ e.rotulo[0] }}" y="{{ e.rotulo[1] }}"><tspan class="mapa-rotulo-uf">{{ e.uf }}</tspan><tspan x="{{ e.rotulo[0] }}" dy="1.15em">{{ e.n }}</tspan></text>{% endfor %}</g>
+      </svg>
+      <ul class="ce-legend mapa-legenda" aria-label="Legenda do mapa">
+        {% for f in m.faixas %}<li><span class="ce-dot mapa-f{{ f.indice }}" aria-hidden="true"></span>{{ f.rotulo }} <span class="ce-muted">{{ f.estados }} {{ "estado" if f.estados == 1 else "estados" }}</span></li>{% endfor %}
+      </ul>
+    </div>
+    <div class="mapa-painel" id="mapa-painel" aria-live="polite">
+      <p class="ce-eyebrow">Estado</p>
+      <p class="mapa-painel-vazio" id="mapa-vazio">Clique num estado para ver o maior partido e filtrar a lista.</p>
+      <div id="mapa-estado" hidden>
+        <p class="mapa-painel-nome" id="mapa-nome"></p>
+        <p class="mapa-painel-n"><span id="mapa-n"></span> deputados</p>
+        <p>Maior partido: <strong id="mapa-maior"></strong></p>
+        <p class="mapa-painel-acao"><a href="#lista-titulo">Ver a lista filtrada</a></p>
+      </div>
+    </div>
+  </div>
+  <details class="pf-detalhes">
+    <summary>Ver os estados em lista</summary>
+    <ul class="ce-ufs">
+      {% for b in resumo.bancadas %}
+      <li>
+        <button type="button" data-filtro-uf="{{ b.uf }}" aria-label="{{ b.uf }}: {{ b.n }} deputados; maior partido {{ b.maior }}. Filtrar a lista">
+          <span><strong>{{ b.uf }}</strong> <span class="ce-muted">· {{ b.n }}</span></span>
+          <span class="ce-meta">{{ b.maior }}</span>
+        </button>
+      </li>
+      {% endfor %}
+    </ul>
+  </details>
+  <p class="ce-section-note">Contorno dos estados: malha territorial do <a href="https://www.ibge.gov.br/geociencias/organizacao-do-territorio/malhas-territoriais.html">IBGE</a>.</p>
 </section>
 {% endif %}

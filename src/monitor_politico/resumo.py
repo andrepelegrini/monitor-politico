@@ -7,6 +7,7 @@ from __future__ import annotations
 from collections import Counter, defaultdict
 from typing import Any, Optional, Sequence, Union
 
+from monitor_politico import mapa
 from monitor_politico.models import Deputado, Senador
 from monitor_politico.painel import data_br
 
@@ -123,6 +124,7 @@ def da_camara(deputados: Sequence[Deputado], dados: dict[str, Any]) -> dict[str,
         "efetivados": efetivados,
         "suplentes": suplentes,
         "bancadas": bancadas,
+        "mapa": mapa.visao(bancadas),
     }
 
 

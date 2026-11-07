@@ -194,6 +194,33 @@ body { margin: 0; }
 .ce-app .ce-ufs button { width: 100%; height: 100%; min-height: 64px; display: flex; flex-direction: column; align-items: flex-start; gap: var(--ce-space-1); padding: var(--ce-space-2) var(--ce-space-3); border: 1px solid var(--ce-border); border-radius: var(--ce-radius-sm); background: transparent; color: var(--ce-ink); text-align: left; }
 .ce-app .ce-ufs button:hover { background: var(--ce-muted-surface); }
 .ce-app .ce-ufs .ce-meta { color: var(--ce-text-secondary); }
+/* Mapa das bancadas: um tom só, do claro ao escuro, nas cores das barras do site. */
+.ce-app { --mapa-0: #ECE3D6; --mapa-1: #D6BFA2; --mapa-2: #B48D66; --mapa-3: #86624A; --mapa-4: #4F3B2D; }
+.ce-app .mapa-bancadas { display: grid; grid-template-columns: minmax(0, 1fr) 16rem; gap: var(--ce-space-8); align-items: start; margin-top: var(--ce-space-5); }
+.ce-app .mapa-svg { display: block; width: 100%; max-width: 640px; height: auto; }
+.ce-app .mapa-contorno path { fill: none; stroke: #B5A999; stroke-width: 3; }
+.ce-app .mapa-uf { stroke: var(--ce-paper); stroke-width: 1.4; cursor: pointer; outline: none; }
+.ce-app .mapa-uf:hover { opacity: .88; }
+.ce-app .mapa-uf[aria-pressed="true"], .ce-app .mapa-uf:focus-visible { stroke: var(--ce-ink); stroke-width: 4; paint-order: stroke; }
+.ce-app .mapa-f0 { fill: var(--mapa-0); background: var(--mapa-0); }
+.ce-app .mapa-f1 { fill: var(--mapa-1); background: var(--mapa-1); }
+.ce-app .mapa-f2 { fill: var(--mapa-2); background: var(--mapa-2); }
+.ce-app .mapa-f3 { fill: var(--mapa-3); background: var(--mapa-3); }
+.ce-app .mapa-f4 { fill: var(--mapa-4); background: var(--mapa-4); }
+.ce-app .mapa-rotulo { font: 500 21px/1 var(--ce-font-ui); fill: var(--ce-ink); color: var(--ce-ink); text-anchor: middle; pointer-events: none; font-variant-numeric: tabular-nums; }
+.ce-app .mapa-rotulo--claro { fill: #FFFFFF; color: #FFFFFF; }
+.ce-app .mapa-rotulo-uf { font-weight: 700; }
+.ce-app .mapa-legenda { margin-top: var(--ce-space-4); }
+.ce-app .mapa-legenda .ce-dot { box-shadow: inset 0 0 0 1px rgb(38 34 30 / .12); }
+.ce-app .mapa-painel { padding: var(--ce-space-5); border: 1px solid var(--ce-border-soft); border-radius: var(--ce-radius-md); background: var(--ce-surface); }
+.ce-app .mapa-painel p { margin: 0; }
+.ce-app .mapa-painel-vazio { margin-top: var(--ce-space-2) !important; color: var(--ce-text-secondary); }
+.ce-app .mapa-painel-nome { margin-top: var(--ce-space-2) !important; font: 500 1.375rem/1.15 var(--ce-font-display); }
+.ce-app .mapa-painel-n { margin: var(--ce-space-2) 0 !important; color: var(--ce-text-secondary); }
+.ce-app .mapa-painel-acao { margin-top: var(--ce-space-4) !important; }
+.ce-app .mapa-painel-n span { margin-right: .2rem; font: 500 2.25rem/1 var(--ce-font-display); color: var(--ce-ink); font-variant-numeric: tabular-nums; }
+@media (max-width: 800px) { .ce-app .mapa-bancadas { grid-template-columns: 1fr; gap: var(--ce-space-5); } }
+@media (max-width: 560px) { .ce-app .mapa-rotulo { font-size: 32px; } }
 @media (pointer: coarse) { .ce-app .ce-bars button { min-height: 44px; } }
 @media (max-width: 480px) { .ce-app .ce-bars button { grid-template-columns: 7.5rem minmax(0, 1fr) 5.25rem; gap: var(--ce-space-2); } }
 

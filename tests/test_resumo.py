@@ -61,3 +61,13 @@ def test_resumo_da_camara_marca_lideres_com_perfil():
     assert (pagina["titulares"], pagina["efetivados"], pagina["suplentes"]) == (1, 1, 1)
     assert pagina["sexo"]["pct_mulheres"] == "33,3%"
     assert pagina["cartoes"][2] == {"valor": "33,3%", "rotulo": "são mulheres", "detalhe": "1 deputada"}
+
+
+def test_mapa_das_bancadas_traz_todos_os_estados_e_faixas():
+    from monitor_politico import mapa
+    bancadas = [{"uf": uf, "n": n, "maior": "PL 1", "empate": False} for uf, n in [("SP", 70), ("PE", 25), ("PB", 12), ("AC", 8), ("GO", 17)]]
+    visao = mapa.visao(bancadas)
+    assert {e["uf"]: e["faixa"] for e in visao["estados"]} == {"SP": 4, "PE": 3, "PB": 1, "AC": 0, "GO": 2}
+    assert [f["rotulo"] for f in visao["faixas"]] == ["8, o mínimo", "9 a 12", "13 a 20", "21 a 39", "40 a 70"]
+    assert next(e for e in visao["estados"] if e["uf"] == "SP")["claro"]
+    assert len(mapa._malha()["estados"]) == 27

@@ -20,7 +20,7 @@ imagens = ["playwright>=1.40"]
 where = ["src"]
 
 [tool.setuptools.package-data]
-monitor_politico = ["templates/*.html", "static/*", "static/brand/*/*"]
+monitor_politico = ["templates/*.html", "static/*", "static/brand/*/*", "mapa_brasil.json"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
