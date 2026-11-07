@@ -32,6 +32,8 @@ Propostas de campanha: o TSE só recebe proposta de governo de candidaturas a pr
 
 As cores dos badges e dos resultados de votação estão em `static/estilo.css`, e foram aprovadas em 06/11/2026. São categorias, sem verde e vermelho como certo e errado. Comparar parlamentares é desejado quando a métrica é objetiva.
 
+A lista de deputados mostra leis, votos, presença e relatorias atuais. As relatorias não usam o total oficial da Câmara, porque ele inclui requerimentos de informação que a Mesa relata aos milhares (10.959 para um único deputado) e concessões de rádio e TV.
+
 Na posse, em 01/02/2027: trocar `INICIO_MANDATO` em `metricas.py` e `LEGISLATURA_ATUAL`, `ANO_DA_ELEICAO` e `POSSE` em `legislatura.py`, rodar as coletas manuais e ligar as páginas dos eleitos (`deputados/eleitos/`) aos novos perfis, com redirecionamento. A coleta diária já move para o arquivo quem sair da lista de exercício.
 
 ## Backlog (features sem IA)

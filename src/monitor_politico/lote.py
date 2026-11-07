@@ -15,7 +15,7 @@ from __future__ import annotations
 import argparse
 import json
 import sys
-from collections import defaultdict
+from collections import Counter, defaultdict
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date, datetime, timezone
 from pathlib import Path
@@ -218,8 +218,19 @@ def montar_documentos(
 
 
 def metricas_dos_documentos(documentos: dict[int, dict[str, Any]], inicio: str, coletado_em: str) -> dict[str, Any]:
-    """A contagem de leis da lista de deputados, com o mesmo critério: data em que a norma saiu."""
-    por_deputado: dict[str, dict[str, int]] = {str(i): {"principal": 0, "coautoria": 0} for i in documentos}
+    """Os números da lista de deputados. As leis contam pela data em que a norma saiu, com o mesmo critério para todos."""
+    por_deputado: dict[str, dict[str, Any]] = {}
+    for id_, doc in documentos.items():
+        plenario_doc = doc.get("plenario") or {}
+        presencas = (plenario_doc.get("presenca") or {}).get("por_ano", [])
+        por_deputado[str(id_)] = {
+            "principal": 0,
+            "coautoria": 0,
+            "votos": (plenario_doc.get("votos") or {}).get("votos_registrados", 0),
+            "presencas": sum(a["presencas"] for a in presencas),
+            "dias": sum(a["dias"] for a in presencas),
+            "relatorias": doc["propostas"].get("relatorias_no_mandato", 0),
+        }
     normas: dict[str, dict[str, Any]] = {}
     for id_, doc in documentos.items():
         for proposta in doc["propostas"]["propostas"]:
@@ -281,7 +292,8 @@ def coletar(
             cache["normas"][id_proposta] = propostas.norma_da_tramitacao(camara._get(f"/proposicoes/{id_proposta}/tramitacoes")["dados"])
         return cache["normas"][id_proposta]
     ano_mais_antigo = min(anos_por_pessoa[i][0] for i in ids)
-    lista_propostas = propostas.propostas_de_todos(arquivos, consultar_norma, inicios, range(ano_mais_antigo, hoje.year + 1))
+    relatorias: Counter[int] = Counter()
+    lista_propostas = propostas.propostas_de_todos(arquivos, consultar_norma, inicios, range(ano_mais_antigo, hoje.year + 1), relatorias, leg["inicio"])
     salvar_cache(pasta, cache)
 
     avisar("Cota parlamentar e emendas")
@@ -296,6 +308,8 @@ def coletar(
         ids, pessoas, leg, cache, votos, outros, lista_propostas, cotas, emendas, financas.data_das_emendas(),
         anos_por_pessoa, inicios, anos_mandato, coletado_em,
     )
+    for id_, documento in documentos.items():
+        documento["propostas"]["relatorias_no_mandato"] = relatorias[id_]
     for id_, documento in documentos.items():
         (pasta / f"{id_}.json").write_text(json.dumps(documento, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     return documentos

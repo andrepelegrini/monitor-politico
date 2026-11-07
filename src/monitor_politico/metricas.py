@@ -21,5 +21,9 @@ def ler(caminho: Path) -> Optional[dict[str, Any]]:
     return json.loads(caminho.read_text(encoding="utf-8")) if caminho.exists() else None
 
 
-def do_deputado(metricas: Optional[dict[str, Any]], id_: int) -> dict[str, int]:
-    return (metricas or {}).get("por_deputado", {}).get(str(id_), {"principal": 0, "coautoria": 0})
+def do_deputado(metricas: Optional[dict[str, Any]], id_: int) -> dict[str, Any]:
+    """Números de um deputado na lista, com o percentual de presença sobre os dias em que esteve em exercício."""
+    numeros = {"principal": 0, "coautoria": 0, "votos": 0, "presencas": 0, "dias": 0, "relatorias": 0}
+    numeros.update((metricas or {}).get("por_deputado", {}).get(str(id_), {}))
+    numeros["percentual_presenca"] = round(numeros["presencas"] / numeros["dias"] * 100, 1) if numeros["dias"] else None
+    return numeros

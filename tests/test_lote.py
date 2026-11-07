@@ -91,8 +91,17 @@ def test_metricas_contam_pela_data_da_norma_sem_apoio():
         2: {"propostas": {"propostas": [proposta("a", "coautoria", "2024-01-01"), {"id": "d", "participacao": "primeira", "norma": None}]}},
     }
     m = lote.metricas_dos_documentos(docs, metricas.INICIO_MANDATO, "agora")
-    assert m["por_deputado"] == {"1": {"principal": 1, "coautoria": 0}, "2": {"principal": 0, "coautoria": 1}}
+    assert {k: (v["principal"], v["coautoria"]) for k, v in m["por_deputado"].items()} == {"1": (1, 0), "2": (0, 1)}
     assert [(n["id"], n["principal"], n["coautoria"]) for n in m["normas"]] == [("a", ["1"], ["2"])]
+
+
+def test_metricas_somam_votos_presenca_e_relatorias_do_mandato():
+    docs = {1: {
+        "plenario": {"votos": {"votos_registrados": 957}, "presenca": {"por_ano": [{"ano": 2023, "presencas": 100, "dias": 110}, {"ano": 2024, "presencas": 80, "dias": 90}]}},
+        "propostas": {"propostas": [], "por_ano": [{"ano": 2023, "relatadas": 9000}], "relatorias_no_mandato": 26},
+    }}
+    numeros = lote.metricas_dos_documentos(docs, "2023-02-01", "agora")["por_deputado"]["1"]
+    assert (numeros["votos"], numeros["presencas"], numeros["dias"], numeros["relatorias"]) == (957, 180, 200, 26)
 
 
 def test_pacote_ida_e_volta_com_checksum(tmp_path):

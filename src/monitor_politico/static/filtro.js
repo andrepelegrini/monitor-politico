@@ -50,10 +50,10 @@
     itens.forEach(function (li, i) { li.dataset.posicao = i; });
     ordem.addEventListener("change", function () {
       var campo = ordem.value;
-      var outro = campo === "principal" ? "coautoria" : "principal";
+      var desempate = campo === "coautoria" ? "principal" : "coautoria";
       itens.slice().sort(function (a, b) {
         if (campo === "nome") return a.dataset.posicao - b.dataset.posicao;
-        return (b.dataset[campo] - a.dataset[campo]) || (b.dataset[outro] - a.dataset[outro]) || (a.dataset.posicao - b.dataset.posicao);
+        return (b.dataset[campo] - a.dataset[campo]) || (b.dataset[desempate] - a.dataset[desempate]) || (a.dataset.posicao - b.dataset.posicao);
       }).forEach(function (li) { lista.appendChild(li); });
     });
   }

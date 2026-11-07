@@ -1,5 +1,5 @@
 {
- "coletado_em": "2026-11-07T03:38:08+00:00",
+ "coletado_em": "2026-11-07T04:05:26+00:00",
  "inicio": "2023-02-01",
  "normas": [
   {
@@ -4367,2055 +4367,4107 @@
  "por_deputado": {
   "204379": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 848,
+   "presencas": 340,
+   "dias": 400,
+   "relatorias": 12
   },
   "220714": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 1043,
+   "presencas": 382,
+   "dias": 399,
+   "relatorias": 6
   },
   "221328": {
    "principal": 0,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 949,
+   "presencas": 374,
+   "dias": 385,
+   "relatorias": 11
   },
   "204560": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 662,
+   "presencas": 308,
+   "dias": 400,
+   "relatorias": 1
   },
   "204528": {
    "principal": 0,
-   "coautoria": 4
+   "coautoria": 4,
+   "votos": 1041,
+   "presencas": 388,
+   "dias": 400,
+   "relatorias": 85
   },
   "121948": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 1009,
+   "presencas": 388,
+   "dias": 400,
+   "relatorias": 2
   },
   "74646": {
    "principal": 1,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 587,
+   "presencas": 338,
+   "dias": 400,
+   "relatorias": 2
   },
   "160508": {
    "principal": 0,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 61,
+   "presencas": 65,
+   "dias": 72,
+   "relatorias": 2
   },
   "136811": {
    "principal": 3,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 845,
+   "presencas": 373,
+   "dias": 400,
+   "relatorias": 24
   },
   "178835": {
    "principal": 2,
-   "coautoria": 3
+   "coautoria": 3,
+   "votos": 966,
+   "presencas": 391,
+   "dias": 400,
+   "relatorias": 49
   },
   "160527": {
    "principal": 1,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 636,
+   "presencas": 344,
+   "dias": 400,
+   "relatorias": 46
   },
   "204495": {
    "principal": 2,
-   "coautoria": 4
+   "coautoria": 4,
+   "votos": 955,
+   "presencas": 375,
+   "dias": 400,
+   "relatorias": 51
   },
   "204549": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 799,
+   "presencas": 343,
+   "dias": 400,
+   "relatorias": 19
   },
   "73579": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 1053,
+   "presencas": 386,
+   "dias": 399,
+   "relatorias": 34
   },
   "220538": {
    "principal": 1,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 933,
+   "presencas": 366,
+   "dias": 399,
+   "relatorias": 28
   },
   "160559": {
    "principal": 4,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 946,
+   "presencas": 364,
+   "dias": 400,
+   "relatorias": 42
   },
   "204501": {
    "principal": 0,
-   "coautoria": 4
+   "coautoria": 4,
+   "votos": 989,
+   "presencas": 391,
+   "dias": 400,
+   "relatorias": 81
   },
   "178972": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 478,
+   "presencas": 387,
+   "dias": 400,
+   "relatorias": 78
   },
   "220542": {
    "principal": 0,
-   "coautoria": 3
+   "coautoria": 3,
+   "votos": 842,
+   "presencas": 335,
+   "dias": 399,
+   "relatorias": 13
   },
   "160545": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 474,
+   "presencas": 256,
+   "dias": 276,
+   "relatorias": 3
   },
   "220554": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 883,
+   "presencas": 376,
+   "dias": 399,
+   "relatorias": 40
   },
   "221148": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 1073,
+   "presencas": 397,
+   "dias": 398,
+   "relatorias": 48
   },
   "220576": {
    "principal": 1,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 968,
+   "presencas": 399,
+   "dias": 399,
+   "relatorias": 81
   },
   "74057": {
    "principal": 2,
-   "coautoria": 5
+   "coautoria": 5,
+   "votos": 1073,
+   "presencas": 391,
+   "dias": 400,
+   "relatorias": 84
   },
   "178927": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 596,
+   "presencas": 348,
+   "dias": 400,
+   "relatorias": 13
   },
   "204353": {
    "principal": 1,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 119,
+   "presencas": 80,
+   "dias": 85,
+   "relatorias": 5
   },
   "178937": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 440,
+   "presencas": 308,
+   "dias": 400,
+   "relatorias": 1
   },
   "178881": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 868,
+   "presencas": 357,
+   "dias": 370,
+   "relatorias": 41
   },
   "220707": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 694,
+   "presencas": 290,
+   "dias": 366,
+   "relatorias": 39
   },
   "204356": {
    "principal": 0,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 1069,
+   "presencas": 399,
+   "dias": 400,
+   "relatorias": 12
   },
   "220715": {
    "principal": 0,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 767,
+   "presencas": 353,
+   "dias": 399,
+   "relatorias": 60
   },
   "107970": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 943,
+   "presencas": 363,
+   "dias": 399,
+   "relatorias": 18
   },
   "220556": {
    "principal": 0,
-   "coautoria": 3
+   "coautoria": 3,
+   "votos": 983,
+   "presencas": 386,
+   "dias": 399,
+   "relatorias": 174
   },
   "220632": {
    "principal": 1,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 992,
+   "presencas": 383,
+   "dias": 399,
+   "relatorias": 74
   },
   "178831": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 309,
+   "presencas": 132,
+   "dias": 134,
+   "relatorias": 1
   },
   "220657": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 830,
+   "presencas": 353,
+   "dias": 369,
+   "relatorias": 10
   },
   "204423": {
    "principal": 1,
-   "coautoria": 3
+   "coautoria": 3,
+   "votos": 691,
+   "presencas": 334,
+   "dias": 400,
+   "relatorias": 0
   },
   "133439": {
    "principal": 2,
-   "coautoria": 6
+   "coautoria": 6,
+   "votos": 958,
+   "presencas": 398,
+   "dias": 400,
+   "relatorias": 53
   },
   "178882": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 97,
+   "presencas": 104,
+   "dias": 134,
+   "relatorias": 2
   },
   "204515": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 885,
+   "presencas": 342,
+   "dias": 370,
+   "relatorias": 2
   },
   "220676": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 823,
+   "presencas": 324,
+   "dias": 399,
+   "relatorias": 42
   },
   "123756": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 853,
+   "presencas": 351,
+   "dias": 399,
+   "relatorias": 17
   },
   "220544": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 1059,
+   "presencas": 377,
+   "dias": 399,
+   "relatorias": 10
   },
   "160553": {
    "principal": 2,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 399,
+   "presencas": 400,
+   "dias": 400,
+   "relatorias": 10
   },
   "220638": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 1049,
+   "presencas": 394,
+   "dias": 399,
+   "relatorias": 8
   },
   "220675": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 955,
+   "presencas": 357,
+   "dias": 399,
+   "relatorias": 0
   },
   "220549": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 967,
+   "presencas": 386,
+   "dias": 399,
+   "relatorias": 25
   },
   "73433": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 994,
+   "presencas": 386,
+   "dias": 400,
+   "relatorias": 8
   },
   "141391": {
    "principal": 2,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 767,
+   "presencas": 380,
+   "dias": 400,
+   "relatorias": 45
   },
   "160541": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 418,
+   "presencas": 221,
+   "dias": 400,
+   "relatorias": 2
   },
   "160600": {
    "principal": 1,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 664,
+   "presencas": 338,
+   "dias": 400,
+   "relatorias": 98
   },
   "74090": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 772,
+   "presencas": 359,
+   "dias": 400,
+   "relatorias": 10
   },
   "123086": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 939,
+   "presencas": 385,
+   "dias": 399,
+   "relatorias": 47
   },
   "160665": {
    "principal": 0,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 998,
+   "presencas": 381,
+   "dias": 400,
+   "relatorias": 25
   },
   "160512": {
    "principal": 1,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 835,
+   "presencas": 372,
+   "dias": 400,
+   "relatorias": 158
   },
   "69871": {
    "principal": 0,
-   "coautoria": 4
+   "coautoria": 4,
+   "votos": 1013,
+   "presencas": 382,
+   "dias": 400,
+   "relatorias": 60
   },
   "178975": {
    "principal": 3,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 651,
+   "presencas": 353,
+   "dias": 400,
+   "relatorias": 10
   },
   "220605": {
    "principal": 0,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 1030,
+   "presencas": 387,
+   "dias": 399,
+   "relatorias": 14
   },
   "220612": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 1115,
+   "presencas": 399,
+   "dias": 399,
+   "relatorias": 31
   },
   "73701": {
    "principal": 5,
-   "coautoria": 7
+   "coautoria": 7,
+   "votos": 916,
+   "presencas": 356,
+   "dias": 400,
+   "relatorias": 59
   },
   "109429": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 1055,
+   "presencas": 399,
+   "dias": 400,
+   "relatorias": 32
   },
   "204358": {
    "principal": 1,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 824,
+   "presencas": 375,
+   "dias": 400,
+   "relatorias": 5
   },
   "220698": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 155,
+   "presencas": 120,
+   "dias": 124,
+   "relatorias": 27
   },
   "220683": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 1060,
+   "presencas": 374,
+   "dias": 399,
+   "relatorias": 23
   },
   "204374": {
    "principal": 1,
-   "coautoria": 3
+   "coautoria": 3,
+   "votos": 977,
+   "presencas": 388,
+   "dias": 400,
+   "relatorias": 168
   },
   "204388": {
    "principal": 3,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 1061,
+   "presencas": 395,
+   "dias": 400,
+   "relatorias": 10
   },
   "160538": {
    "principal": 0,
-   "coautoria": 4
+   "coautoria": 4,
+   "votos": 1035,
+   "presencas": 396,
+   "dias": 400,
+   "relatorias": 28
   },
   "210989": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 881,
+   "presencas": 343,
+   "dias": 399,
+   "relatorias": 28
   },
   "220635": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 1039,
+   "presencas": 387,
+   "dias": 399,
+   "relatorias": 58
   },
   "220574": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 1042,
+   "presencas": 399,
+   "dias": 399,
+   "relatorias": 57
   },
   "220548": {
    "principal": 0,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 956,
+   "presencas": 381,
+   "dias": 399,
+   "relatorias": 46
   },
   "204572": {
    "principal": 9,
-   "coautoria": 3
+   "coautoria": 3,
+   "votos": 879,
+   "presencas": 380,
+   "dias": 400,
+   "relatorias": 118
   },
   "220690": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 1037,
+   "presencas": 390,
+   "dias": 399,
+   "relatorias": 103
   },
   "178829": {
    "principal": 0,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 1009,
+   "presencas": 393,
+   "dias": 400,
+   "relatorias": 45
   },
   "213762": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 506,
+   "presencas": 195,
+   "dias": 198,
+   "relatorias": 34
   },
   "204361": {
    "principal": 1,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 404,
+   "presencas": 241,
+   "dias": 270,
+   "relatorias": 2
   },
   "178962": {
    "principal": 2,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 277,
+   "presencas": 167,
+   "dias": 183,
+   "relatorias": 12
   },
   "178993": {
    "principal": 3,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 991,
+   "presencas": 381,
+   "dias": 400,
+   "relatorias": 25
   },
   "204460": {
    "principal": 1,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 922,
+   "presencas": 353,
+   "dias": 367,
+   "relatorias": 24
   },
   "74262": {
    "principal": 2,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 944,
+   "presencas": 368,
+   "dias": 400,
+   "relatorias": 24
   },
   "204426": {
    "principal": 1,
-   "coautoria": 3
+   "coautoria": 3,
+   "votos": 1047,
+   "presencas": 400,
+   "dias": 400,
+   "relatorias": 17
   },
   "141398": {
    "principal": 2,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 983,
+   "presencas": 392,
+   "dias": 400,
+   "relatorias": 8
   },
   "220704": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 731,
+   "presencas": 333,
+   "dias": 399,
+   "relatorias": 38
   },
   "204369": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 897,
+   "presencas": 346,
+   "dias": 400,
+   "relatorias": 148
   },
   "220699": {
    "principal": 1,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 903,
+   "presencas": 366,
+   "dias": 399,
+   "relatorias": 28
   },
   "206018": {
    "principal": 2,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 844,
+   "presencas": 341,
+   "dias": 399,
+   "relatorias": 75
   },
   "178876": {
    "principal": 1,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 757,
+   "presencas": 330,
+   "dias": 354,
+   "relatorias": 15
   },
   "204488": {
    "principal": 0,
-   "coautoria": 3
+   "coautoria": 3,
+   "votos": 726,
+   "presencas": 342,
+   "dias": 363,
+   "relatorias": 35
   },
   "73441": {
    "principal": 2,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 848,
+   "presencas": 395,
+   "dias": 400,
+   "relatorias": 61
   },
   "204496": {
    "principal": 1,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 177,
+   "presencas": 129,
+   "dias": 141,
+   "relatorias": 1
   },
   "204504": {
    "principal": 1,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 925,
+   "presencas": 372,
+   "dias": 400,
+   "relatorias": 61
   },
   "205476": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 912,
+   "presencas": 362,
+   "dias": 369,
+   "relatorias": 10
   },
   "74171": {
    "principal": 1,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 1097,
+   "presencas": 398,
+   "dias": 399,
+   "relatorias": 44
   },
   "204462": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 899,
+   "presencas": 357,
+   "dias": 400,
+   "relatorias": 195
   },
   "220665": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 912,
+   "presencas": 361,
+   "dias": 374,
+   "relatorias": 49
   },
   "74537": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 918,
+   "presencas": 380,
+   "dias": 400,
+   "relatorias": 11
   },
   "141408": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 981,
+   "presencas": 373,
+   "dias": 400,
+   "relatorias": 47
   },
   "88256": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 924,
+   "presencas": 381,
+   "dias": 399,
+   "relatorias": 69
   },
   "98148": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 936,
+   "presencas": 397,
+   "dias": 399,
+   "relatorias": 67
   },
   "220594": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 975,
+   "presencas": 389,
+   "dias": 399,
+   "relatorias": 36
   },
   "204378": {
    "principal": 0,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 978,
+   "presencas": 386,
+   "dias": 400,
+   "relatorias": 47
   },
   "220595": {
    "principal": 1,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 928,
+   "presencas": 357,
+   "dias": 399,
+   "relatorias": 43
   },
   "220666": {
    "principal": 0,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 1061,
+   "presencas": 383,
+   "dias": 399,
+   "relatorias": 76
   },
   "220590": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 994,
+   "presencas": 386,
+   "dias": 399,
+   "relatorias": 32
   },
   "178963": {
    "principal": 2,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 814,
+   "presencas": 340,
+   "dias": 359,
+   "relatorias": 54
   },
   "220608": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 1004,
+   "presencas": 390,
+   "dias": 399,
+   "relatorias": 27
   },
   "204355": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 1015,
+   "presencas": 391,
+   "dias": 400,
+   "relatorias": 20
   },
   "141411": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 999,
+   "presencas": 377,
+   "dias": 400,
+   "relatorias": 15
   },
   "220555": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 883,
+   "presencas": 352,
+   "dias": 399,
+   "relatorias": 55
   },
   "220692": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 855,
+   "presencas": 359,
+   "dias": 399,
+   "relatorias": 5
   },
   "74467": {
    "principal": 1,
-   "coautoria": 3
+   "coautoria": 3,
+   "votos": 845,
+   "presencas": 364,
+   "dias": 400,
+   "relatorias": 8
   },
   "220629": {
    "principal": 1,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 745,
+   "presencas": 368,
+   "dias": 399,
+   "relatorias": 32
   },
   "220603": {
    "principal": 1,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 893,
+   "presencas": 346,
+   "dias": 399,
+   "relatorias": 14
   },
   "220571": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 1093,
+   "presencas": 399,
+   "dias": 399,
+   "relatorias": 34
   },
   "74060": {
    "principal": 1,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 970,
+   "presencas": 385,
+   "dias": 400,
+   "relatorias": 89
   },
   "220582": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 802,
+   "presencas": 336,
+   "dias": 399,
+   "relatorias": 13
   },
   "204367": {
    "principal": 0,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 936,
+   "presencas": 375,
+   "dias": 400,
+   "relatorias": 32
   },
   "204409": {
    "principal": 1,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 944,
+   "presencas": 391,
+   "dias": 400,
+   "relatorias": 3
   },
   "204459": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 847,
+   "presencas": 306,
+   "dias": 345,
+   "relatorias": 30
   },
   "220557": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 960,
+   "presencas": 376,
+   "dias": 399,
+   "relatorias": 29
   },
   "62881": {
    "principal": 1,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 787,
+   "presencas": 358,
+   "dias": 400,
+   "relatorias": 56
   },
   "160552": {
    "principal": 1,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 452,
+   "presencas": 214,
+   "dias": 241,
+   "relatorias": 17
   },
   "204511": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 630,
+   "presencas": 356,
+   "dias": 400,
+   "relatorias": 34
   },
   "220539": {
    "principal": 1,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 1050,
+   "presencas": 376,
+   "dias": 399,
+   "relatorias": 85
   },
   "220565": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 815,
+   "presencas": 370,
+   "dias": 399,
+   "relatorias": 34
   },
   "220625": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 874,
+   "presencas": 341,
+   "dias": 399,
+   "relatorias": 63
   },
   "220561": {
    "principal": 1,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 969,
+   "presencas": 366,
+   "dias": 399,
+   "relatorias": 49
   },
   "220642": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 642,
+   "presencas": 234,
+   "dias": 242,
+   "relatorias": 6
   },
   "220673": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 966,
+   "presencas": 396,
+   "dias": 399,
+   "relatorias": 13
   },
   "220649": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 782,
+   "presencas": 349,
+   "dias": 399,
+   "relatorias": 41
   },
   "178908": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 745,
+   "presencas": 366,
+   "dias": 400,
+   "relatorias": 39
   },
   "220583": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 1044,
+   "presencas": 398,
+   "dias": 399,
+   "relatorias": 38
   },
   "204512": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 1003,
+   "presencas": 370,
+   "dias": 400,
+   "relatorias": 55
   },
   "220701": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 1073,
+   "presencas": 386,
+   "dias": 399,
+   "relatorias": 68
   },
   "220652": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 1114,
+   "presencas": 393,
+   "dias": 399,
+   "relatorias": 10
   },
   "220654": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 1098,
+   "presencas": 393,
+   "dias": 399,
+   "relatorias": 209
   },
   "220553": {
    "principal": 0,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 1010,
+   "presencas": 392,
+   "dias": 399,
+   "relatorias": 86
   },
   "220689": {
    "principal": 1,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 559,
+   "presencas": 254,
+   "dias": 319,
+   "relatorias": 11
   },
   "160588": {
    "principal": 3,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 663,
+   "presencas": 353,
+   "dias": 400,
+   "relatorias": 39
   },
   "220691": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 983,
+   "presencas": 375,
+   "dias": 399,
+   "relatorias": 32
   },
   "178929": {
    "principal": 1,
-   "coautoria": 3
+   "coautoria": 3,
+   "votos": 897,
+   "presencas": 384,
+   "dias": 400,
+   "relatorias": 430
   },
   "73768": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 1007,
+   "presencas": 385,
+   "dias": 399,
+   "relatorias": 32
   },
   "220671": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 1028,
+   "presencas": 384,
+   "dias": 399,
+   "relatorias": 27
   },
   "160599": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 941,
+   "presencas": 384,
+   "dias": 400,
+   "relatorias": 1
   },
   "220602": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 940,
+   "presencas": 392,
+   "dias": 399,
+   "relatorias": 3
   },
   "143632": {
    "principal": 0,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 595,
+   "presencas": 318,
+   "dias": 400,
+   "relatorias": 58
   },
   "160758": {
    "principal": 3,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 930,
+   "presencas": 383,
+   "dias": 400,
+   "relatorias": 42
   },
   "220573": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 863,
+   "presencas": 336,
+   "dias": 399,
+   "relatorias": 36
   },
   "204450": {
    "principal": 2,
-   "coautoria": 4
+   "coautoria": 4,
+   "votos": 281,
+   "presencas": 144,
+   "dias": 332,
+   "relatorias": 15
   },
   "227991": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 202,
+   "presencas": 107,
+   "dias": 109,
+   "relatorias": 9
   },
   "220614": {
    "principal": 1,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 236,
+   "presencas": 139,
+   "dias": 144,
+   "relatorias": 1
   },
   "220610": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 889,
+   "presencas": 376,
+   "dias": 399,
+   "relatorias": 24
   },
   "220688": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 1027,
+   "presencas": 397,
+   "dias": 399,
+   "relatorias": 17
   },
   "204518": {
    "principal": 1,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 825,
+   "presencas": 385,
+   "dias": 400,
+   "relatorias": 23
   },
   "220570": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 816,
+   "presencas": 365,
+   "dias": 399,
+   "relatorias": 63
   },
   "204481": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 920,
+   "presencas": 375,
+   "dias": 400,
+   "relatorias": 27
   },
   "204351": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 999,
+   "presencas": 382,
+   "dias": 400,
+   "relatorias": 35
   },
   "220528": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 851,
+   "presencas": 366,
+   "dias": 399,
+   "relatorias": 48
   },
   "204412": {
    "principal": 5,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 984,
+   "presencas": 360,
+   "dias": 400,
+   "relatorias": 62
   },
   "220674": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 661,
+   "presencas": 352,
+   "dias": 399,
+   "relatorias": 22
   },
   "220686": {
    "principal": 0,
-   "coautoria": 5
+   "coautoria": 5,
+   "votos": 1014,
+   "presencas": 396,
+   "dias": 399,
+   "relatorias": 163
   },
   "220540": {
    "principal": 1,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 717,
+   "presencas": 325,
+   "dias": 399,
+   "relatorias": 122
   },
   "220623": {
    "principal": 2,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 909,
+   "presencas": 343,
+   "dias": 399,
+   "relatorias": 93
   },
   "204541": {
    "principal": 3,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 486,
+   "presencas": 218,
+   "dias": 224,
+   "relatorias": 102
   },
   "141421": {
    "principal": 1,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 906,
+   "presencas": 369,
+   "dias": 400,
+   "relatorias": 7
   },
   "220589": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 860,
+   "presencas": 342,
+   "dias": 374,
+   "relatorias": 6
   },
   "74075": {
    "principal": 0,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 521,
+   "presencas": 286,
+   "dias": 400,
+   "relatorias": 24
   },
   "204364": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 873,
+   "presencas": 358,
+   "dias": 374,
+   "relatorias": 28
   },
   "178854": {
    "principal": 1,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 331,
+   "presencas": 316,
+   "dias": 400,
+   "relatorias": 7
   },
   "198783": {
    "principal": 0,
-   "coautoria": 3
+   "coautoria": 3,
+   "votos": 810,
+   "presencas": 384,
+   "dias": 400,
+   "relatorias": 10
   },
   "161550": {
    "principal": 1,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 762,
+   "presencas": 339,
+   "dias": 400,
+   "relatorias": 7
   },
   "230765": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 480,
+   "presencas": 192,
+   "dias": 198,
+   "relatorias": 10
   },
   "220663": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 939,
+   "presencas": 380,
+   "dias": 399,
+   "relatorias": 8
   },
   "220645": {
    "principal": 2,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 805,
+   "presencas": 339,
+   "dias": 399,
+   "relatorias": 72
   },
   "160575": {
    "principal": 6,
-   "coautoria": 7
+   "coautoria": 7,
+   "votos": 1082,
+   "presencas": 398,
+   "dias": 400,
+   "relatorias": 145
   },
   "160640": {
    "principal": 2,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 991,
+   "presencas": 372,
+   "dias": 400,
+   "relatorias": 2
   },
   "204482": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 513,
+   "presencas": 244,
+   "dias": 276,
+   "relatorias": 1
   },
   "74454": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 661,
+   "presencas": 335,
+   "dias": 357,
+   "relatorias": 27
   },
   "178871": {
    "principal": 5,
-   "coautoria": 4
+   "coautoria": 4,
+   "votos": 921,
+   "presencas": 378,
+   "dias": 400,
+   "relatorias": 61
   },
   "178905": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 134,
+   "presencas": 109,
+   "dias": 114,
+   "relatorias": 3
   },
   "220681": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 752,
+   "presencas": 311,
+   "dias": 375,
+   "relatorias": 0
   },
   "171623": {
    "principal": 1,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 449,
+   "presencas": 230,
+   "dias": 256,
+   "relatorias": 1
   },
   "204368": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 1009,
+   "presencas": 379,
+   "dias": 400,
+   "relatorias": 12
   },
   "220653": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 996,
+   "presencas": 388,
+   "dias": 399,
+   "relatorias": 5
   },
   "220712": {
    "principal": 1,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 747,
+   "presencas": 278,
+   "dias": 333,
+   "relatorias": 25
   },
   "66828": {
    "principal": 1,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 878,
+   "presencas": 342,
+   "dias": 400,
+   "relatorias": 62
   },
   "220646": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 718,
+   "presencas": 289,
+   "dias": 310,
+   "relatorias": 17
   },
   "72442": {
    "principal": 6,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 843,
+   "presencas": 359,
+   "dias": 400,
+   "relatorias": 46
   },
   "204398": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 991,
+   "presencas": 373,
+   "dias": 400,
+   "relatorias": 126
   },
   "160666": {
    "principal": 1,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 986,
+   "presencas": 392,
+   "dias": 400,
+   "relatorias": 34
   },
   "204407": {
    "principal": 0,
-   "coautoria": 4
+   "coautoria": 4,
+   "votos": 903,
+   "presencas": 357,
+   "dias": 400,
+   "relatorias": 52
   },
   "220656": {
    "principal": 1,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 894,
+   "presencas": 344,
+   "dias": 368,
+   "relatorias": 55
   },
   "141431": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 843,
+   "presencas": 386,
+   "dias": 400,
+   "relatorias": 7
   },
   "204445": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 915,
+   "presencas": 397,
+   "dias": 399,
+   "relatorias": 21
   },
   "92699": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 895,
+   "presencas": 371,
+   "dias": 400,
+   "relatorias": 52
   },
   "204427": {
    "principal": 1,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 823,
+   "presencas": 366,
+   "dias": 400,
+   "relatorias": 24
   },
   "204411": {
    "principal": 1,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 681,
+   "presencas": 325,
+   "dias": 400,
+   "relatorias": 45
   },
   "220545": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 1033,
+   "presencas": 394,
+   "dias": 399,
+   "relatorias": 35
   },
   "160598": {
    "principal": 9,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 832,
+   "presencas": 373,
+   "dias": 400,
+   "relatorias": 194
   },
   "191923": {
    "principal": 2,
-   "coautoria": 3
+   "coautoria": 3,
+   "votos": 1017,
+   "presencas": 393,
+   "dias": 400,
+   "relatorias": 61
   },
   "220700": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 947,
+   "presencas": 379,
+   "dias": 399,
+   "relatorias": 38
   },
   "220551": {
    "principal": 0,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 995,
+   "presencas": 359,
+   "dias": 399,
+   "relatorias": 44
   },
   "204494": {
    "principal": 1,
-   "coautoria": 3
+   "coautoria": 3,
+   "votos": 441,
+   "presencas": 315,
+   "dias": 373,
+   "relatorias": 32
   },
   "220534": {
    "principal": 0,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 983,
+   "presencas": 387,
+   "dias": 399,
+   "relatorias": 4
   },
   "224117": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 1046,
+   "presencas": 373,
+   "dias": 388,
+   "relatorias": 12
   },
   "220708": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 1068,
+   "presencas": 394,
+   "dias": 399,
+   "relatorias": 14
   },
   "204473": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 993,
+   "presencas": 374,
+   "dias": 400,
+   "relatorias": 22
   },
   "220611": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 1037,
+   "presencas": 381,
+   "dias": 399,
+   "relatorias": 40
   },
   "178966": {
    "principal": 1,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 805,
+   "presencas": 340,
+   "dias": 343,
+   "relatorias": 24
   },
   "220702": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 712,
+   "presencas": 313,
+   "dias": 364,
+   "relatorias": 8
   },
   "74374": {
    "principal": 2,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 991,
+   "presencas": 389,
+   "dias": 399,
+   "relatorias": 70
   },
   "204394": {
    "principal": 0,
-   "coautoria": 4
+   "coautoria": 4,
+   "votos": 1049,
+   "presencas": 394,
+   "dias": 400,
+   "relatorias": 27
   },
   "204491": {
    "principal": 0,
-   "coautoria": 3
+   "coautoria": 3,
+   "votos": 829,
+   "presencas": 375,
+   "dias": 400,
+   "relatorias": 52
   },
   "74270": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 362,
+   "presencas": 298,
+   "dias": 400,
+   "relatorias": 17
   },
   "74581": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 3,
+   "presencas": 8,
+   "dias": 8,
+   "relatorias": 0
   },
   "220529": {
    "principal": 1,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 1044,
+   "presencas": 394,
+   "dias": 399,
+   "relatorias": 55
   },
   "204365": {
    "principal": 1,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 1107,
+   "presencas": 400,
+   "dias": 400,
+   "relatorias": 131
   },
   "220526": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 886,
+   "presencas": 342,
+   "dias": 371,
+   "relatorias": 4
   },
   "160673": {
    "principal": 4,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 995,
+   "presencas": 392,
+   "dias": 400,
+   "relatorias": 18
   },
   "152605": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 845,
+   "presencas": 324,
+   "dias": 342,
+   "relatorias": 0
   },
   "204419": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 666,
+   "presencas": 321,
+   "dias": 353,
+   "relatorias": 2
   },
   "107283": {
    "principal": 0,
-   "coautoria": 3
+   "coautoria": 3,
+   "votos": 437,
+   "presencas": 228,
+   "dias": 270,
+   "relatorias": 2
   },
   "198197": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 718,
+   "presencas": 320,
+   "dias": 400,
+   "relatorias": 30
   },
   "204531": {
    "principal": 1,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 118,
+   "presencas": 65,
+   "dias": 94,
+   "relatorias": 11
   },
   "220664": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 968,
+   "presencas": 375,
+   "dias": 399,
+   "relatorias": 9
   },
   "220568": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 988,
+   "presencas": 382,
+   "dias": 399,
+   "relatorias": 33
   },
   "204408": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 966,
+   "presencas": 377,
+   "dias": 400,
+   "relatorias": 2
   },
   "204456": {
    "principal": 2,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 1014,
+   "presencas": 378,
+   "dias": 400,
+   "relatorias": 23
   },
   "178964": {
    "principal": 0,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 660,
+   "presencas": 356,
+   "dias": 400,
+   "relatorias": 25
   },
   "178873": {
    "principal": 1,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 1003,
+   "presencas": 399,
+   "dias": 400,
+   "relatorias": 79
   },
   "220537": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 689,
+   "presencas": 332,
+   "dias": 399,
+   "relatorias": 33
   },
   "204444": {
    "principal": 1,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 822,
+   "presencas": 358,
+   "dias": 400,
+   "relatorias": 0
   },
   "220672": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 888,
+   "presencas": 371,
+   "dias": 399,
+   "relatorias": 11
   },
   "204539": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 755,
+   "presencas": 276,
+   "dias": 400,
+   "relatorias": 2
   },
   "178884": {
    "principal": 1,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 559,
+   "presencas": 228,
+   "dias": 228,
+   "relatorias": 118
   },
   "141450": {
    "principal": 3,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 728,
+   "presencas": 308,
+   "dias": 329,
+   "relatorias": 113
   },
   "160674": {
    "principal": 0,
-   "coautoria": 5
+   "coautoria": 5,
+   "votos": 621,
+   "presencas": 349,
+   "dias": 400,
+   "relatorias": 9
   },
   "220563": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 883,
+   "presencas": 345,
+   "dias": 376,
+   "relatorias": 59
   },
   "204533": {
    "principal": 1,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 578,
+   "presencas": 250,
+   "dias": 258,
+   "relatorias": 14
   },
   "204508": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 939,
+   "presencas": 387,
+   "dias": 400,
+   "relatorias": 5
   },
   "74295": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 57,
+   "presencas": 53,
+   "dias": 53,
+   "relatorias": 4
   },
   "98615": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 910,
+   "presencas": 387,
+   "dias": 399,
+   "relatorias": 21
   },
   "204436": {
    "principal": 2,
-   "coautoria": 5
+   "coautoria": 5,
+   "votos": 334,
+   "presencas": 224,
+   "dias": 400,
+   "relatorias": 21
   },
   "225846": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 36,
+   "presencas": 43,
+   "dias": 43,
+   "relatorias": 0
   },
   "220696": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 1005,
+   "presencas": 384,
+   "dias": 399,
+   "relatorias": 12
   },
   "220670": {
    "principal": 4,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 876,
+   "presencas": 352,
+   "dias": 399,
+   "relatorias": 40
   },
   "220527": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 1069,
+   "presencas": 389,
+   "dias": 399,
+   "relatorias": 50
   },
   "220697": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 794,
+   "presencas": 354,
+   "dias": 399,
+   "relatorias": 43
   },
   "74848": {
    "principal": 1,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 1077,
+   "presencas": 387,
+   "dias": 400,
+   "relatorias": 64
   },
   "220567": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 814,
+   "presencas": 337,
+   "dias": 372,
+   "relatorias": 13
   },
   "74273": {
    "principal": 1,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 1003,
+   "presencas": 382,
+   "dias": 400,
+   "relatorias": 2
   },
   "141456": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 876,
+   "presencas": 396,
+   "dias": 399,
+   "relatorias": 16
   },
   "141458": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 609,
+   "presencas": 354,
+   "dias": 400,
+   "relatorias": 9
   },
   "230957": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 379,
+   "presencas": 192,
+   "dias": 198,
+   "relatorias": 10
   },
   "178970": {
    "principal": 1,
-   "coautoria": 4
+   "coautoria": 4,
+   "votos": 884,
+   "presencas": 397,
+   "dias": 400,
+   "relatorias": 13
   },
   "74550": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 756,
+   "presencas": 307,
+   "dias": 353,
+   "relatorias": 9
   },
   "141459": {
    "principal": 1,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 921,
+   "presencas": 375,
+   "dias": 400,
+   "relatorias": 15
   },
   "178910": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 1056,
+   "presencas": 397,
+   "dias": 400,
+   "relatorias": 21
   },
   "160548": {
    "principal": 2,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 1021,
+   "presencas": 395,
+   "dias": 399,
+   "relatorias": 21
   },
   "205550": {
    "principal": 0,
-   "coautoria": 3
+   "coautoria": 3,
+   "votos": 1031,
+   "presencas": 380,
+   "dias": 400,
+   "relatorias": 43
   },
   "214694": {
    "principal": 1,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 879,
+   "presencas": 356,
+   "dias": 359,
+   "relatorias": 27
   },
   "178857": {
    "principal": 1,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 914,
+   "presencas": 380,
+   "dias": 400,
+   "relatorias": 33
   },
   "141464": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 763,
+   "presencas": 382,
+   "dias": 400,
+   "relatorias": 6
   },
   "204472": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 896,
+   "presencas": 370,
+   "dias": 400,
+   "relatorias": 93
   },
   "204391": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 665,
+   "presencas": 356,
+   "dias": 400,
+   "relatorias": 25
   },
   "74079": {
    "principal": 1,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 562,
+   "presencas": 345,
+   "dias": 400,
+   "relatorias": 11
   },
   "74554": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 826,
+   "presencas": 345,
+   "dias": 400,
+   "relatorias": 28
   },
   "209189": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 926,
+   "presencas": 386,
+   "dias": 400,
+   "relatorias": 13
   },
   "220578": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 1099,
+   "presencas": 399,
+   "dias": 399,
+   "relatorias": 62
   },
   "204563": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 549,
+   "presencas": 257,
+   "dias": 320,
+   "relatorias": 0
   },
   "215043": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 858,
+   "presencas": 356,
+   "dias": 400,
+   "relatorias": 9
   },
   "204474": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 663,
+   "presencas": 278,
+   "dias": 334,
+   "relatorias": 15
   },
   "220559": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 863,
+   "presencas": 347,
+   "dias": 399,
+   "relatorias": 95
   },
   "220640": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 913,
+   "presencas": 375,
+   "dias": 399,
+   "relatorias": 61
   },
   "66385": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 759,
+   "presencas": 360,
+   "dias": 379,
+   "relatorias": 32
   },
   "74317": {
    "principal": 1,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 814,
+   "presencas": 381,
+   "dias": 400,
+   "relatorias": 15
   },
   "204372": {
    "principal": 6,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 765,
+   "presencas": 290,
+   "dias": 311,
+   "relatorias": 109
   },
   "74253": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 775,
+   "presencas": 355,
+   "dias": 400,
+   "relatorias": 44
   },
   "204457": {
    "principal": 1,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 990,
+   "presencas": 387,
+   "dias": 400,
+   "relatorias": 9
   },
   "204520": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 873,
+   "presencas": 344,
+   "dias": 376,
+   "relatorias": 31
   },
   "204497": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 936,
+   "presencas": 391,
+   "dias": 400,
+   "relatorias": 10
   },
   "204574": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 607,
+   "presencas": 320,
+   "dias": 373,
+   "relatorias": 1
   },
   "204550": {
    "principal": 2,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 437,
+   "presencas": 287,
+   "dias": 373,
+   "relatorias": 13
   },
   "178886": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 386,
+   "presencas": 156,
+   "dias": 174,
+   "relatorias": 17
   },
   "220677": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 877,
+   "presencas": 379,
+   "dias": 399,
+   "relatorias": 10
   },
   "162067": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 929,
+   "presencas": 384,
+   "dias": 399,
+   "relatorias": 50
   },
   "204536": {
    "principal": 2,
-   "coautoria": 3
+   "coautoria": 3,
+   "votos": 893,
+   "presencas": 374,
+   "dias": 400,
+   "relatorias": 168
   },
   "98057": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 642,
+   "presencas": 366,
+   "dias": 400,
+   "relatorias": 129
   },
   "74856": {
    "principal": 25,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 956,
+   "presencas": 392,
+   "dias": 399,
+   "relatorias": 689
   },
   "178832": {
    "principal": 3,
-   "coautoria": 3
+   "coautoria": 3,
+   "votos": 56,
+   "presencas": 64,
+   "dias": 68,
+   "relatorias": 22
   },
   "220566": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 770,
+   "presencas": 369,
+   "dias": 399,
+   "relatorias": 48
   },
   "80815": {
    "principal": 1,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 939,
+   "presencas": 378,
+   "dias": 382,
+   "relatorias": 32
   },
   "74156": {
    "principal": 0,
-   "coautoria": 3
+   "coautoria": 3,
+   "votos": 923,
+   "presencas": 387,
+   "dias": 400,
+   "relatorias": 34
   },
   "92102": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 783,
+   "presencas": 372,
+   "dias": 400,
+   "relatorias": 22
   },
   "139285": {
    "principal": 5,
-   "coautoria": 5
+   "coautoria": 5,
+   "votos": 927,
+   "presencas": 375,
+   "dias": 400,
+   "relatorias": 123
   },
   "74585": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 932,
+   "presencas": 396,
+   "dias": 400,
+   "relatorias": 18
   },
   "74858": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 996,
+   "presencas": 390,
+   "dias": 399,
+   "relatorias": 6
   },
   "220662": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 1031,
+   "presencas": 394,
+   "dias": 399,
+   "relatorias": 24
   },
   "204404": {
    "principal": 0,
-   "coautoria": 3
+   "coautoria": 3,
+   "votos": 1068,
+   "presencas": 388,
+   "dias": 400,
+   "relatorias": 98
   },
   "220581": {
    "principal": 1,
-   "coautoria": 3
+   "coautoria": 3,
+   "votos": 1022,
+   "presencas": 391,
+   "dias": 399,
+   "relatorias": 4
   },
   "74478": {
    "principal": 1,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 358,
+   "presencas": 247,
+   "dias": 400,
+   "relatorias": 18
   },
   "178931": {
    "principal": 4,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 944,
+   "presencas": 378,
+   "dias": 400,
+   "relatorias": 13
   },
   "220616": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 843,
+   "presencas": 340,
+   "dias": 379,
+   "relatorias": 20
   },
   "178954": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 699,
+   "presencas": 373,
+   "dias": 400,
+   "relatorias": 3
   },
   "160510": {
    "principal": 0,
-   "coautoria": 3
+   "coautoria": 3,
+   "votos": 480,
+   "presencas": 245,
+   "dias": 359,
+   "relatorias": 2
   },
   "204410": {
    "principal": 1,
-   "coautoria": 3
+   "coautoria": 3,
+   "votos": 641,
+   "presencas": 362,
+   "dias": 400,
+   "relatorias": 17
   },
   "141485": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 981,
+   "presencas": 368,
+   "dias": 399,
+   "relatorias": 29
   },
   "73778": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 802,
+   "presencas": 324,
+   "dias": 352,
+   "relatorias": 23
   },
   "204485": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 933,
+   "presencas": 391,
+   "dias": 400,
+   "relatorias": 31
   },
   "74041": {
    "principal": 1,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 1078,
+   "presencas": 392,
+   "dias": 399,
+   "relatorias": 124
   },
   "141487": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 883,
+   "presencas": 376,
+   "dias": 399,
+   "relatorias": 35
   },
   "220658": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 837,
+   "presencas": 379,
+   "dias": 399,
+   "relatorias": 111
   },
   "204455": {
    "principal": 0,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 1099,
+   "presencas": 398,
+   "dias": 400,
+   "relatorias": 56
   },
   "162332": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 818,
+   "presencas": 342,
+   "dias": 400,
+   "relatorias": 17
   },
   "204526": {
    "principal": 0,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 917,
+   "presencas": 376,
+   "dias": 400,
+   "relatorias": 95
   },
   "74784": {
    "principal": 1,
-   "coautoria": 4
+   "coautoria": 4,
+   "votos": 894,
+   "presencas": 326,
+   "dias": 400,
+   "relatorias": 4
   },
   "178866": {
    "principal": 1,
-   "coautoria": 5
+   "coautoria": 5,
+   "votos": 934,
+   "presencas": 375,
+   "dias": 400,
+   "relatorias": 34
   },
   "220669": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 912,
+   "presencas": 370,
+   "dias": 399,
+   "relatorias": 10
   },
   "166402": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 907,
+   "presencas": 360,
+   "dias": 400,
+   "relatorias": 7
   },
   "220648": {
    "principal": 1,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 801,
+   "presencas": 367,
+   "dias": 399,
+   "relatorias": 89
   },
   "156190": {
    "principal": 1,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 1101,
+   "presencas": 399,
+   "dias": 400,
+   "relatorias": 11
   },
   "179000": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 833,
+   "presencas": 371,
+   "dias": 400,
+   "relatorias": 10
   },
   "220599": {
    "principal": 1,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 963,
+   "presencas": 393,
+   "dias": 399,
+   "relatorias": 23
   },
   "133810": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 886,
+   "presencas": 363,
+   "dias": 400,
+   "relatorias": 10
   },
   "204558": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 56,
+   "presencas": 56,
+   "dias": 56,
+   "relatorias": 0
   },
   "160161": {
    "principal": 0,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 823,
+   "presencas": 328,
+   "dias": 350,
+   "relatorias": 60
   },
   "178983": {
    "principal": 2,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 1003,
+   "presencas": 396,
+   "dias": 400,
+   "relatorias": 0
   },
   "179001": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 807,
+   "presencas": 388,
+   "dias": 400,
+   "relatorias": 1
   },
   "220687": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 843,
+   "presencas": 329,
+   "dias": 374,
+   "relatorias": 23
   },
   "81055": {
    "principal": 0,
-   "coautoria": 3
+   "coautoria": 3,
+   "votos": 1033,
+   "presencas": 392,
+   "dias": 400,
+   "relatorias": 14
   },
   "150418": {
    "principal": 1,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 909,
+   "presencas": 372,
+   "dias": 400,
+   "relatorias": 66
   },
   "160535": {
    "principal": 0,
-   "coautoria": 4
+   "coautoria": 4,
+   "votos": 977,
+   "presencas": 377,
+   "dias": 400,
+   "relatorias": 1
   },
   "204431": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 915,
+   "presencas": 366,
+   "dias": 400,
+   "relatorias": 2
   },
   "204506": {
    "principal": 3,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 690,
+   "presencas": 361,
+   "dias": 400,
+   "relatorias": 62
   },
   "220547": {
    "principal": 0,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 1018,
+   "presencas": 382,
+   "dias": 399,
+   "relatorias": 69
   },
   "178943": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 525,
+   "presencas": 279,
+   "dias": 400,
+   "relatorias": 5
   },
   "220604": {
    "principal": 1,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 895,
+   "presencas": 346,
+   "dias": 399,
+   "relatorias": 112
   },
   "220668": {
    "principal": 2,
-   "coautoria": 4
+   "coautoria": 4,
+   "votos": 954,
+   "presencas": 361,
+   "dias": 399,
+   "relatorias": 70
   },
   "74398": {
    "principal": 8,
-   "coautoria": 6
+   "coautoria": 6,
+   "votos": 837,
+   "presencas": 350,
+   "dias": 400,
+   "relatorias": 145
   },
   "204540": {
    "principal": 0,
-   "coautoria": 5
+   "coautoria": 5,
+   "votos": 992,
+   "presencas": 383,
+   "dias": 400,
+   "relatorias": 39
   },
   "220637": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 53,
+   "presencas": 57,
+   "dias": 57,
+   "relatorias": 4
   },
   "220655": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 859,
+   "presencas": 351,
+   "dias": 398,
+   "relatorias": 3
   },
   "74158": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 751,
+   "presencas": 328,
+   "dias": 369,
+   "relatorias": 8
   },
   "178858": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 891,
+   "presencas": 365,
+   "dias": 400,
+   "relatorias": 25
   },
   "204566": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 602,
+   "presencas": 262,
+   "dias": 327,
+   "relatorias": 18
   },
   "220572": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 642,
+   "presencas": 380,
+   "dias": 399,
+   "relatorias": 61
   },
   "178843": {
    "principal": 0,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 863,
+   "presencas": 384,
+   "dias": 400,
+   "relatorias": 10
   },
   "220661": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 819,
+   "presencas": 373,
+   "dias": 399,
+   "relatorias": 0
   },
   "220609": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 904,
+   "presencas": 388,
+   "dias": 399,
+   "relatorias": 53
   },
   "220628": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 970,
+   "presencas": 365,
+   "dias": 399,
+   "relatorias": 12
   },
   "220550": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 1041,
+   "presencas": 395,
+   "dias": 399,
+   "relatorias": 32
   },
   "220647": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 648,
+   "presencas": 343,
+   "dias": 399,
+   "relatorias": 11
   },
   "204486": {
    "principal": 2,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 1015,
+   "presencas": 384,
+   "dias": 400,
+   "relatorias": 21
   },
   "220607": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 1038,
+   "presencas": 395,
+   "dias": 399,
+   "relatorias": 50
   },
   "220591": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 930,
+   "presencas": 372,
+   "dias": 399,
+   "relatorias": 55
   },
   "74428": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 929,
+   "presencas": 387,
+   "dias": 399,
+   "relatorias": 38
   },
   "188097": {
    "principal": 1,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 1114,
+   "presencas": 395,
+   "dias": 400,
+   "relatorias": 66
   },
   "220585": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 708,
+   "presencas": 346,
+   "dias": 374,
+   "relatorias": 80
   },
   "220530": {
    "principal": 0,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 1041,
+   "presencas": 396,
+   "dias": 399,
+   "relatorias": 16
   },
   "171786": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 834,
+   "presencas": 369,
+   "dias": 399,
+   "relatorias": 23
   },
   "178985": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 1001,
+   "presencas": 400,
+   "dias": 400,
+   "relatorias": 10
   },
   "154178": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 104,
+   "presencas": 101,
+   "dias": 109,
+   "relatorias": 2
   },
   "178895": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 853,
+   "presencas": 360,
+   "dias": 400,
+   "relatorias": 1
   },
   "160561": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 314,
+   "presencas": 146,
+   "dias": 150,
+   "relatorias": 2
   },
   "178997": {
    "principal": 0,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 882,
+   "presencas": 372,
+   "dias": 400,
+   "relatorias": 18
   },
   "220617": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 994,
+   "presencas": 384,
+   "dias": 399,
+   "relatorias": 0
   },
   "220584": {
    "principal": 1,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 895,
+   "presencas": 349,
+   "dias": 379,
+   "relatorias": 25
   },
   "204453": {
    "principal": 0,
-   "coautoria": 4
+   "coautoria": 4,
+   "votos": 896,
+   "presencas": 376,
+   "dias": 400,
+   "relatorias": 28
   },
   "204449": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 362,
+   "presencas": 164,
+   "dias": 258,
+   "relatorias": 10
   },
   "220622": {
    "principal": 2,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 861,
+   "presencas": 356,
+   "dias": 368,
+   "relatorias": 40
   },
   "220703": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 960,
+   "presencas": 387,
+   "dias": 399,
+   "relatorias": 45
   },
   "178896": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 538,
+   "presencas": 320,
+   "dias": 366,
+   "relatorias": 4
   },
   "204479": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 901,
+   "presencas": 358,
+   "dias": 400,
+   "relatorias": 53
   },
   "209787": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 1034,
+   "presencas": 384,
+   "dias": 399,
+   "relatorias": 109
   },
   "178986": {
    "principal": 1,
-   "coautoria": 4
+   "coautoria": 4,
+   "votos": 1034,
+   "presencas": 386,
+   "dias": 400,
+   "relatorias": 137
   },
   "204498": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 877,
+   "presencas": 349,
+   "dias": 400,
+   "relatorias": 20
   },
   "178987": {
    "principal": 0,
-   "coautoria": 3
+   "coautoria": 3,
+   "votos": 869,
+   "presencas": 376,
+   "dias": 400,
+   "relatorias": 70
   },
   "73692": {
    "principal": 4,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 866,
+   "presencas": 364,
+   "dias": 400,
+   "relatorias": 18
   },
   "204441": {
    "principal": 1,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 714,
+   "presencas": 383,
+   "dias": 400,
+   "relatorias": 18
   },
   "220706": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 536,
+   "presencas": 308,
+   "dias": 381,
+   "relatorias": 4
   },
   "160556": {
    "principal": 2,
-   "coautoria": 5
+   "coautoria": 5,
+   "votos": 1037,
+   "presencas": 396,
+   "dias": 400,
+   "relatorias": 33
   },
   "180214": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 926,
+   "presencas": 367,
+   "dias": 399,
+   "relatorias": 34
   },
   "160642": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 890,
+   "presencas": 358,
+   "dias": 400,
+   "relatorias": 48
   },
   "204570": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 712,
+   "presencas": 339,
+   "dias": 373,
+   "relatorias": 17
   },
   "220615": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 1051,
+   "presencas": 390,
+   "dias": 399,
+   "relatorias": 49
   },
   "204553": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 1044,
+   "presencas": 384,
+   "dias": 400,
+   "relatorias": 45
   },
   "74160": {
    "principal": 1,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 901,
+   "presencas": 376,
+   "dias": 400,
+   "relatorias": 81
   },
   "171617": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 981,
+   "presencas": 382,
+   "dias": 391,
+   "relatorias": 4
   },
   "141518": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 408,
+   "presencas": 220,
+   "dias": 269,
+   "relatorias": 3
   },
   "141516": {
    "principal": 1,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 799,
+   "presencas": 365,
+   "dias": 400,
+   "relatorias": 57
   },
   "220650": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 976,
+   "presencas": 360,
+   "dias": 399,
+   "relatorias": 28
   },
   "178860": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 789,
+   "presencas": 378,
+   "dias": 400,
+   "relatorias": 33
   },
   "160517": {
    "principal": 1,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 792,
+   "presencas": 317,
+   "dias": 400,
+   "relatorias": 7
   },
   "160558": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 983,
+   "presencas": 351,
+   "dias": 400,
+   "relatorias": 0
   },
   "204492": {
    "principal": 0,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 1019,
+   "presencas": 387,
+   "dias": 400,
+   "relatorias": 87
   },
   "233592": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 200,
+   "presencas": 98,
+   "dias": 98,
+   "relatorias": 8
   },
   "220685": {
    "principal": 1,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 976,
+   "presencas": 375,
+   "dias": 399,
+   "relatorias": 12
   },
   "74574": {
    "principal": 1,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 965,
+   "presencas": 395,
+   "dias": 399,
+   "relatorias": 54
   },
   "74400": {
    "principal": 4,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 498,
+   "presencas": 193,
+   "dias": 199,
+   "relatorias": 19
   },
   "141488": {
    "principal": 2,
-   "coautoria": 3
+   "coautoria": 3,
+   "votos": 57,
+   "presencas": 56,
+   "dias": 57,
+   "relatorias": 16
   },
   "220630": {
    "principal": 0,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 908,
+   "presencas": 346,
+   "dias": 372,
+   "relatorias": 29
   },
   "220667": {
    "principal": 1,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 963,
+   "presencas": 367,
+   "dias": 399,
+   "relatorias": 32
   },
   "122974": {
    "principal": 1,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 779,
+   "presencas": 368,
+   "dias": 400,
+   "relatorias": 3
   },
   "204395": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 645,
+   "presencas": 329,
+   "dias": 400,
+   "relatorias": 96
   },
   "122158": {
    "principal": 1,
-   "coautoria": 3
+   "coautoria": 3,
+   "votos": 595,
+   "presencas": 354,
+   "dias": 400,
+   "relatorias": 17
   },
   "160604": {
    "principal": 2,
-   "coautoria": 3
+   "coautoria": 3,
+   "votos": 922,
+   "presencas": 361,
+   "dias": 374,
+   "relatorias": 25
   },
   "204406": {
    "principal": 3,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 934,
+   "presencas": 388,
+   "dias": 400,
+   "relatorias": 67
   },
   "161440": {
    "principal": 0,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 1027,
+   "presencas": 393,
+   "dias": 399,
+   "relatorias": 34
   },
   "204524": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 428,
+   "presencas": 381,
+   "dias": 400,
+   "relatorias": 12
   },
   "73486": {
    "principal": 2,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 934,
+   "presencas": 382,
+   "dias": 400,
+   "relatorias": 58
   },
   "160601": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 879,
+   "presencas": 357,
+   "dias": 400,
+   "relatorias": 44
   },
   "226075": {
    "principal": 1,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 104,
+   "presencas": 50,
+   "dias": 53,
+   "relatorias": 1
   },
   "220533": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 983,
+   "presencas": 381,
+   "dias": 399,
+   "relatorias": 48
   },
   "204390": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 874,
+   "presencas": 370,
+   "dias": 400,
+   "relatorias": 44
   },
   "221338": {
    "principal": 1,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 996,
+   "presencas": 390,
+   "dias": 398,
+   "relatorias": 47
   },
   "160641": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 335,
+   "presencas": 133,
+   "dias": 134,
+   "relatorias": 14
   },
   "220586": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 877,
+   "presencas": 375,
+   "dias": 399,
+   "relatorias": 52
   },
   "233594": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 274,
+   "presencas": 130,
+   "dias": 133,
+   "relatorias": 7
   },
   "220532": {
    "principal": 1,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 811,
+   "presencas": 375,
+   "dias": 399,
+   "relatorias": 10
   },
   "220626": {
    "principal": 2,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 945,
+   "presencas": 371,
+   "dias": 399,
+   "relatorias": 32
   },
   "204567": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 776,
+   "presencas": 350,
+   "dias": 400,
+   "relatorias": 7
   },
   "74084": {
    "principal": 1,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 1069,
+   "presencas": 399,
+   "dias": 399,
+   "relatorias": 38
   },
   "74161": {
    "principal": 4,
-   "coautoria": 3
+   "coautoria": 3,
+   "votos": 692,
+   "presencas": 376,
+   "dias": 400,
+   "relatorias": 40
   },
   "220606": {
    "principal": 1,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 988,
+   "presencas": 383,
+   "dias": 399,
+   "relatorias": 61
   },
   "178989": {
    "principal": 6,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 706,
+   "presencas": 289,
+   "dias": 356,
+   "relatorias": 5
   },
   "153423": {
    "principal": 0,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 662,
+   "presencas": 336,
+   "dias": 399,
+   "relatorias": 40
   },
   "73801": {
    "principal": 0,
-   "coautoria": 3
+   "coautoria": 3,
+   "votos": 1047,
+   "presencas": 381,
+   "dias": 400,
+   "relatorias": 34
   },
   "175765": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 437,
+   "presencas": 192,
+   "dias": 201,
+   "relatorias": 5
   },
   "221329": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 493,
+   "presencas": 230,
+   "dias": 252,
+   "relatorias": 30
   },
   "220543": {
    "principal": 3,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 1097,
+   "presencas": 399,
+   "dias": 399,
+   "relatorias": 216
   },
   "73788": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 364,
+   "presencas": 178,
+   "dias": 188,
+   "relatorias": 2
   },
   "204362": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 656,
+   "presencas": 277,
+   "dias": 287,
+   "relatorias": 6
   },
   "220694": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 912,
+   "presencas": 381,
+   "dias": 399,
+   "relatorias": 10
   },
   "220633": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 735,
+   "presencas": 342,
+   "dias": 399,
+   "relatorias": 17
   },
   "204489": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 711,
+   "presencas": 258,
+   "dias": 273,
+   "relatorias": 0
   },
   "220693": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 802,
+   "presencas": 347,
+   "dias": 399,
+   "relatorias": 3
   },
   "220588": {
    "principal": 0,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 1085,
+   "presencas": 382,
+   "dias": 399,
+   "relatorias": 43
   },
   "220613": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 986,
+   "presencas": 360,
+   "dias": 399,
+   "relatorias": 18
   },
   "220624": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 1071,
+   "presencas": 392,
+   "dias": 399,
+   "relatorias": 10
   },
   "220546": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 1083,
+   "presencas": 396,
+   "dias": 399,
+   "relatorias": 65
   },
   "230767": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 501,
+   "presencas": 187,
+   "dias": 198,
+   "relatorias": 40
   },
   "141531": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 927,
+   "presencas": 375,
+   "dias": 400,
+   "relatorias": 40
   },
   "220641": {
    "principal": 1,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 1029,
+   "presencas": 386,
+   "dias": 399,
+   "relatorias": 23
   },
   "141533": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 314,
+   "presencas": 131,
+   "dias": 133,
+   "relatorias": 13
   },
   "165470": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 913,
+   "presencas": 368,
+   "dias": 399,
+   "relatorias": 31
   },
   "220695": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 918,
+   "presencas": 378,
+   "dias": 399,
+   "relatorias": 225
   },
   "204480": {
    "principal": 1,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 982,
+   "presencas": 398,
+   "dias": 400,
+   "relatorias": 53
   },
   "160629": {
    "principal": 1,
-   "coautoria": 3
+   "coautoria": 3,
+   "votos": 1039,
+   "presencas": 379,
+   "dias": 380,
+   "relatorias": 9
   },
   "204525": {
    "principal": 0,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 990,
+   "presencas": 386,
+   "dias": 400,
+   "relatorias": 24
   },
   "178945": {
    "principal": 0,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 101,
+   "presencas": 68,
+   "dias": 70,
+   "relatorias": 2
   },
   "220644": {
    "principal": 1,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 933,
+   "presencas": 372,
+   "dias": 399,
+   "relatorias": 45
   },
   "220620": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 1018,
+   "presencas": 378,
+   "dias": 399,
+   "relatorias": 5
   },
   "74371": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 780,
+   "presencas": 381,
+   "dias": 400,
+   "relatorias": 36
   },
   "178887": {
    "principal": 2,
-   "coautoria": 3
+   "coautoria": 3,
+   "votos": 1009,
+   "presencas": 398,
+   "dias": 400,
+   "relatorias": 91
   },
   "73604": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 942,
+   "presencas": 372,
+   "dias": 376,
+   "relatorias": 7
   },
   "160635": {
    "principal": 1,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 812,
+   "presencas": 325,
+   "dias": 375,
+   "relatorias": 11
   },
   "204535": {
    "principal": 2,
-   "coautoria": 3
+   "coautoria": 3,
+   "votos": 877,
+   "presencas": 368,
+   "dias": 400,
+   "relatorias": 124
   },
   "220631": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 963,
+   "presencas": 386,
+   "dias": 399,
+   "relatorias": 9
   },
   "204416": {
    "principal": 1,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 1014,
+   "presencas": 384,
+   "dias": 400,
+   "relatorias": 87
   },
   "160621": {
    "principal": 1,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 74,
+   "presencas": 83,
+   "dias": 85,
+   "relatorias": 1
   },
   "204387": {
    "principal": 0,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 1116,
+   "presencas": 400,
+   "dias": 400,
+   "relatorias": 21
   },
   "220621": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 1065,
+   "presencas": 394,
+   "dias": 399,
+   "relatorias": 42
   },
   "220618": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 985,
+   "presencas": 372,
+   "dias": 399,
+   "relatorias": 79
   },
   "220713": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 548,
+   "presencas": 253,
+   "dias": 271,
+   "relatorias": 3
   },
   "226837": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 697,
+   "presencas": 306,
+   "dias": 320,
+   "relatorias": 28
   },
   "73808": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 168,
+   "presencas": 96,
+   "dias": 109,
+   "relatorias": 3
   },
   "178933": {
    "principal": 2,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 820,
+   "presencas": 374,
+   "dias": 400,
+   "relatorias": 27
   },
   "204557": {
    "principal": 1,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 881,
+   "presencas": 395,
+   "dias": 400,
+   "relatorias": 101
   },
   "74356": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 635,
+   "presencas": 299,
+   "dias": 361,
+   "relatorias": 12
   },
   "204360": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 955,
+   "presencas": 381,
+   "dias": 400,
+   "relatorias": 116
   },
   "204425": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 148,
+   "presencas": 113,
+   "dias": 131,
+   "relatorias": 43
   },
   "220569": {
    "principal": 1,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 851,
+   "presencas": 366,
+   "dias": 399,
+   "relatorias": 73
   },
   "220651": {
    "principal": 4,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 751,
+   "presencas": 353,
+   "dias": 399,
+   "relatorias": 17
   },
   "104552": {
    "principal": 0,
-   "coautoria": 3
+   "coautoria": 3,
+   "votos": 889,
+   "presencas": 391,
+   "dias": 399,
+   "relatorias": 55
   },
   "220643": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 61,
+   "presencas": 56,
+   "dias": 56,
+   "relatorias": 7
   },
   "178946": {
    "principal": 3,
-   "coautoria": 4
+   "coautoria": 4,
+   "votos": 794,
+   "presencas": 373,
+   "dias": 400,
+   "relatorias": 52
   },
   "178947": {
    "principal": 1,
-   "coautoria": 3
+   "coautoria": 3,
+   "votos": 579,
+   "presencas": 358,
+   "dias": 400,
+   "relatorias": 1
   },
   "92776": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 743,
+   "presencas": 348,
+   "dias": 400,
+   "relatorias": 8
   },
   "204534": {
    "principal": 6,
-   "coautoria": 4
+   "coautoria": 4,
+   "votos": 957,
+   "presencas": 378,
+   "dias": 400,
+   "relatorias": 96
   },
   "220682": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 944,
+   "presencas": 393,
+   "dias": 399,
+   "relatorias": 17
   },
   "204464": {
    "principal": 1,
-   "coautoria": 4
+   "coautoria": 4,
+   "votos": 731,
+   "presencas": 310,
+   "dias": 400,
+   "relatorias": 41
   },
   "220598": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 1024,
+   "presencas": 383,
+   "dias": 399,
+   "relatorias": 79
   },
   "220560": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 827,
+   "presencas": 358,
+   "dias": 375,
+   "relatorias": 19
   },
   "220597": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 927,
+   "presencas": 366,
+   "dias": 399,
+   "relatorias": 22
   },
   "143084": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 305,
+   "presencas": 133,
+   "dias": 134,
+   "relatorias": 15
   },
   "220684": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 800,
+   "presencas": 341,
+   "dias": 399,
+   "relatorias": 33
   },
   "160976": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 895,
+   "presencas": 361,
+   "dias": 400,
+   "relatorias": 2
   },
   "178934": {
    "principal": 2,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 958,
+   "presencas": 360,
+   "dias": 400,
+   "relatorias": 85
   },
   "157130": {
    "principal": 2,
-   "coautoria": 3
+   "coautoria": 3,
+   "votos": 896,
+   "presencas": 370,
+   "dias": 400,
+   "relatorias": 68
   },
   "160610": {
    "principal": 0,
-   "coautoria": 3
+   "coautoria": 3,
+   "votos": 891,
+   "presencas": 378,
+   "dias": 400,
+   "relatorias": 5
   },
   "74376": {
    "principal": 1,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 929,
+   "presencas": 366,
+   "dias": 400,
+   "relatorias": 9
   },
   "204396": {
    "principal": 2,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 664,
+   "presencas": 354,
+   "dias": 400,
+   "relatorias": 26
   },
   "137070": {
    "principal": 1,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 798,
+   "presencas": 313,
+   "dias": 368,
+   "relatorias": 15
   },
   "141555": {
    "principal": 4,
-   "coautoria": 3
+   "coautoria": 3,
+   "votos": 731,
+   "presencas": 319,
+   "dias": 400,
+   "relatorias": 42
   },
   "160591": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 802,
+   "presencas": 328,
+   "dias": 399,
+   "relatorias": 1
   },
   "178992": {
    "principal": 1,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 908,
+   "presencas": 379,
+   "dias": 400,
+   "relatorias": 29
   },
   "91228": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 1075,
+   "presencas": 384,
+   "dias": 399,
+   "relatorias": 31
   },
   "160569": {
    "principal": 0,
-   "coautoria": 3
+   "coautoria": 3,
+   "votos": 859,
+   "presencas": 355,
+   "dias": 400,
+   "relatorias": 20
   },
   "160518": {
    "principal": 0,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 856,
+   "presencas": 390,
+   "dias": 400,
+   "relatorias": 40
   },
   "74043": {
    "principal": 0,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 669,
+   "presencas": 335,
+   "dias": 400,
+   "relatorias": 1
   },
   "224333": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 927,
+   "presencas": 369,
+   "dias": 386,
+   "relatorias": 0
   },
   "74044": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 755,
+   "presencas": 333,
+   "dias": 354,
+   "relatorias": 6
   },
   "220564": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 642,
+   "presencas": 274,
+   "dias": 376,
+   "relatorias": 24
   },
   "220660": {
    "principal": 1,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 691,
+   "presencas": 314,
+   "dias": 330,
+   "relatorias": 7
   },
   "230768": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 504,
+   "presencas": 192,
+   "dias": 198,
+   "relatorias": 19
   },
   "220536": {
    "principal": 1,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 982,
+   "presencas": 383,
+   "dias": 399,
+   "relatorias": 51
   },
   "204559": {
    "principal": 1,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 807,
+   "presencas": 346,
+   "dias": 375,
+   "relatorias": 55
   },
   "160632": {
    "principal": 3,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 837,
+   "presencas": 345,
+   "dias": 400,
+   "relatorias": 14
   },
   "220558": {
    "principal": 0,
-   "coautoria": 1
+   "coautoria": 1,
+   "votos": 991,
+   "presencas": 390,
+   "dias": 399,
+   "relatorias": 92
   },
   "204517": {
    "principal": 2,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 459,
+   "presencas": 346,
+   "dias": 400,
+   "relatorias": 71
   },
   "160592": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 900,
+   "presencas": 368,
+   "dias": 400,
+   "relatorias": 12
   },
   "220592": {
    "principal": 0,
-   "coautoria": 0
+   "coautoria": 0,
+   "votos": 867,
+   "presencas": 379,
+   "dias": 399,
+   "relatorias": 6
   },
   "220552": {
    "principal": 0,
-   "coautoria": 2
+   "coautoria": 2,
+   "votos": 1087,
+   "presencas": 396,
+   "dias": 399,
+   "relatorias": 42
   }
  }
 }

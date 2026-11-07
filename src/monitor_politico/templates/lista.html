@@ -40,6 +40,9 @@
         <option value="nome">Nome</option>
         <option value="principal">Leis de autoria principal</option>
         <option value="coautoria">Leis em coautoria</option>
+        <option value="votos">Votos registrados</option>
+        <option value="presenca">Percentual de presença</option>
+        <option value="relatorias">Relatorias atuais</option>
       </select>
     </label>{% endif %}{% if situacoes_eleitorais %}
     <label class="ce-field"><span class="ce-control-label">Eleição de 2026</span>
@@ -57,16 +60,17 @@
   </form>
 
   <p class="ce-count" aria-live="polite"><span id="contagem">{{ parlamentares|length }}</span> de {{ parlamentares|length }} {{ plural }}</p>{% if leis_na_lista %}
-  <p class="ce-section-note">Leis sancionadas desde {{ metricas.inicio|data_br }} a partir de projetos assinados por cada parlamentar, com o mesmo critério para todos. Autoria principal é a primeira assinatura. A contagem não mede qualidade, não inclui relatorias nem ideias aprovadas dentro de outros projetos, e quem entrou depois do início do mandato ou se licenciou teve menos tempo. <a href="{{ raiz }}/entenda.html#leis-na-lista">Entenda a contagem</a>.</p>{% endif %}
+  <p class="ce-section-note">Números do mandato atual, desde {{ metricas.inicio|data_br }}, com o mesmo critério para todos: leis sancionadas a partir de projetos assinados, votos nominais registrados no Plenário, dias com presença entre os dias com sessão em que a pessoa estava em exercício, e projetos em que consta como relatora atual. Quem entrou depois ou se licenciou teve menos tempo. Eles não medem qualidade e não mostram todo o trabalho de um mandato. <a href="{{ raiz }}/entenda.html#numeros-na-lista">Entenda a contagem</a>.</p>{% endif %}
 
   <ul class="ce-people{% if leis_na_lista or situacoes_eleitorais %} ce-people--leis{% endif %}" id="lista">
     {% for d in parlamentares %}
-    <li data-nome="{{ d.nome|lower }}" data-partido="{{ d.partido }}" data-uf="{{ d.uf }}"{% if leis_na_lista %} data-principal="{{ leis_na_lista[d.id].principal }}" data-coautoria="{{ leis_na_lista[d.id].coautoria }}"{% endif %}{% if situacoes_eleitorais and situacoes_eleitorais.get(d.id|string) %} data-situacao="{{ situacoes_eleitorais[d.id|string].rotulo }}"{% endif %}>
+    <li data-nome="{{ d.nome|lower }}" data-partido="{{ d.partido }}" data-uf="{{ d.uf }}"{% if leis_na_lista %} data-principal="{{ leis_na_lista[d.id].principal }}" data-coautoria="{{ leis_na_lista[d.id].coautoria }}" data-votos="{{ leis_na_lista[d.id].votos }}" data-presenca="{{ leis_na_lista[d.id].percentual_presenca if leis_na_lista[d.id].percentual_presenca is not none else -1 }}" data-relatorias="{{ leis_na_lista[d.id].relatorias }}"{% endif %}{% if situacoes_eleitorais and situacoes_eleitorais.get(d.id|string) %} data-situacao="{{ situacoes_eleitorais[d.id|string].rotulo }}"{% endif %}>
       <a href="{{ d.id }}.html">
         {% if d.url_foto %}<img src="{{ d.url_foto }}" alt="" loading="lazy" width="64" height="85">{% else %}<span class="ce-photo-empty" aria-hidden="true"></span>{% endif %}
         <span class="ce-people-name">{{ d.nome }}</span>
         <span class="ce-meta">{{ d.partido }} · {{ d.uf }}</span>{% if leis_na_lista %}
-        <span class="ce-people-leis"><strong>{{ leis_na_lista[d.id].principal }}</strong> {{ "lei" if leis_na_lista[d.id].principal == 1 else "leis" }} de autoria principal · {{ leis_na_lista[d.id].coautoria }} em coautoria</span>{% endif %}{% if situacoes_eleitorais and situacoes_eleitorais.get(d.id|string) %}
+        <span class="ce-people-leis"><strong>{{ leis_na_lista[d.id].principal }}</strong> {{ "lei" if leis_na_lista[d.id].principal == 1 else "leis" }} de autoria principal · {{ leis_na_lista[d.id].coautoria }} em coautoria</span>
+        <span class="ce-people-leis"><strong>{{ leis_na_lista[d.id].votos|numero }}</strong> votos · <strong>{{ leis_na_lista[d.id].presencas|numero }}</strong> de {{ leis_na_lista[d.id].dias|numero }} dias · <strong>{{ leis_na_lista[d.id].relatorias|numero }}</strong> {{ "relatoria atual" if leis_na_lista[d.id].relatorias == 1 else "relatorias atuais" }}</span>{% endif %}{% if situacoes_eleitorais and situacoes_eleitorais.get(d.id|string) %}
         <span class="ce-people-leis"><span class="ce-badge badge-{{ situacoes_eleitorais[d.id|string].chave }}">{{ situacoes_eleitorais[d.id|string].rotulo }}</span></span>{% endif %}
       </a>
     </li>

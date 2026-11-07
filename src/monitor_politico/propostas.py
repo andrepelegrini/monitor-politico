@@ -14,6 +14,7 @@ from typing import Any, Callable, Iterable, Optional
 from monitor_politico.plenario import ementa_atual, limpar_texto
 
 TIPOS = ("PL", "PLP", "PEC")
+TIPOS_DE_RELATORIA = ("PL", "PLP", "PEC", "MPV", "PDL", "PRC")
 ITENS_NA_PAGINA = 15  # O restante da lista é baixado quando alguém usa os filtros.
 ROTULOS_PARTICIPACAO = {"primeira": "Autoria principal", "coautoria": "Coautoria", "apoio": "Apoio em PEC"}
 EXPLICACOES_PARTICIPACAO = {
@@ -77,10 +78,25 @@ def palavra_da_norma(normas: Iterable[dict[str, Any]]) -> str:
     return "lei" if all(nome.startswith("Lei") for nome in nomes) else "norma"
 
 
+def relator_do_projeto(proposta: dict[str, str], inicio: str) -> Optional[int]:
+    """Relator mais recente de um projeto, se a situação foi registrada no mandato.
+
+    Fora os requerimentos de informação, que a Mesa relata aos milhares por causa do cargo, e as concessões de rádio e TV.
+    """
+    uri = proposta.get("ultimoStatus_uriRelator") or ""
+    if not uri or proposta["siglaTipo"] not in TIPOS_DE_RELATORIA or (proposta.get("ultimoStatus_dataHora") or "")[:10] < inicio:
+        return None
+    return int(uri.rsplit("/", 1)[-1])
+
+
 def propostas_de_todos(
-    fonte: Any, consultar_norma: Callable[[str], Optional[dict[str, Any]]], inicios: dict[int, str], anos: Iterable[int]
+    fonte: Any, consultar_norma: Callable[[str], Optional[dict[str, Any]]], inicios: dict[int, str], anos: Iterable[int],
+    relatorias: Optional[Counter[int]] = None, inicio_relatorias: str = "",
 ) -> dict[int, list[dict[str, Any]]]:
-    """Projetos e PECs de cada parlamentar, desde a primeira posse de cada um, numa passada só."""
+    """Projetos e PECs de cada parlamentar, desde a primeira posse de cada um, numa passada só.
+
+    Se `relatorias` vier, conta também em quantos projetos a pessoa é a relatora mais recente, no mesmo arquivo.
+    """
     anos = list(anos)
     alvo = {str(i) for i in inicios}
     assinaturas: dict[str, dict[str, str]] = defaultdict(dict)
@@ -92,6 +108,10 @@ def propostas_de_todos(
     catalogo: dict[str, dict[str, Any]] = {}
     for ano in anos:
         for proposta in fonte.linhas("proposicoes", ano):
+            if relatorias is not None:
+                relator = relator_do_projeto(proposta, inicio_relatorias)
+                if relator in inicios:
+                    relatorias[relator] += 1
             if proposta["id"] not in assinaturas or proposta["siglaTipo"] not in TIPOS:
                 continue
             catalogo[proposta["id"]] = {

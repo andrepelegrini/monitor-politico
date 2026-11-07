@@ -1,3 +1,4 @@
+from collections import Counter
 from datetime import date
 
 import pytest
@@ -181,6 +182,32 @@ def test_barra_do_caminho_e_proporcional(doc):
     caminho = propostas.visao(doc)["caminho"]
     assert caminho[0]["largura"] == 100.0
     assert sum(s["largura"] for s in caminho[0]["situacoes"]) == 100
+
+
+@pytest.mark.parametrize("tipo, uri, data, esperado", [
+    ("PL", "https://x/deputados/7", "2024-01-01T10:00", 7),
+    ("PDL", "https://x/deputados/7", "2023-02-01T10:00", 7),
+    ("RIC", "https://x/deputados/7", "2024-01-01T10:00", None),  # requerimento de informação, relatado pela Mesa
+    ("TVR", "https://x/deputados/7", "2024-01-01T10:00", None),  # concessão de rádio e TV
+    ("PL", "", "2024-01-01T10:00", None),
+    ("PL", "https://x/deputados/7", "2020-01-01T10:00", None),  # situação de antes do mandato
+])
+def test_relator_do_projeto(tipo, uri, data, esperado):
+    proposta_ = {"siglaTipo": tipo, "ultimoStatus_uriRelator": uri, "ultimoStatus_dataHora": data}
+    assert propostas.relator_do_projeto(proposta_, "2023-02-01") == esperado
+
+
+def test_conta_relatorias_na_mesma_passada():
+    class Fonte(FonteFalsa):
+        def proposicoes(self):
+            return [
+                {**proposta("90", numero="90"), "ultimoStatus_uriRelator": f"https://x/deputados/{ID}"},
+                {**proposta("91", tipo="RIC", numero="91"), "ultimoStatus_uriRelator": f"https://x/deputados/{ID}"},
+                {**proposta("92", numero="92"), "ultimoStatus_uriRelator": "https://x/deputados/1"},
+            ]
+    contagem = Counter()
+    propostas.propostas_de_todos(Fonte(), lambda _i: None, {ID: INICIO}, [2023], contagem, INICIO)
+    assert contagem == {ID: 1}
 
 
 def test_le_atuacao_da_pagina_oficial():
