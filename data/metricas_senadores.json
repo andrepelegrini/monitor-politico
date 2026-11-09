@@ -1,5 +1,5 @@
 {
- "coletado_em": "2026-11-07T05:28:51+00:00",
+ "coletado_em": "2026-11-09T18:34:20+00:00",
  "inicio": "2023-02-01",
  "por_deputado": {
   "5672": {
@@ -224,7 +224,7 @@
    "votos": 153,
    "presencas": 332,
    "dias": 430,
-   "relatorias": 52
+   "relatorias": 73
   },
   "5894": {
    "principal": 0,
