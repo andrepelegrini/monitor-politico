@@ -1,10 +1,55 @@
 {
- "coletado_em": "2026-11-06T16:44:08+00:00",
+ "coletado_em": "2026-11-09T19:54:54+00:00",
  "periodo": {
-  "votacoes_desde": "2026-10-07",
-  "pauta_ate": "2026-11-12"
+  "votacoes_desde": "2026-10-10",
+  "pauta_ate": "2026-11-15"
  },
- "pauta": [],
+ "pauta": [
+  {
+   "casa": "Senado",
+   "data_hora": "2026-11-10T14:00",
+   "sessao": "Sessão deliberativa ordinária",
+   "itens": [
+    {
+     "chave": "PLP 109/2025",
+     "ementa": "Dispõe sobre o acesso da Agência Nacional do Petróleo, Gás Natural e Biocombustíveis (ANP) às informações fiscais dos agentes regulados para fins de fiscalização e regulação do setor, nos termos do § 1º do art. 145 da Constituição Federal.",
+     "fase": "Discussão, em turno único"
+    },
+    {
+     "chave": "PL 5608/2023",
+     "ementa": "Dispõe sobre as condições de trabalho de mulheres com diagnóstico, em tratamento ou em período de espera de remissão de câncer de mama e institui o Programa Empresa Rosa e o Selo Rosa.",
+     "fase": "Discussão, em turno único"
+    },
+    {
+     "chave": "PDL 934/2025",
+     "ementa": "Aprova o texto do Acordo Regional sobre Acesso à Informação, Participação Pública e Acesso à Justiça em Assuntos Ambientais na América Latina e no Caribe (Acordo de Escazú), assinado em Nova York, em 27 de setembro de 2018.",
+     "fase": null
+    }
+   ]
+  },
+  {
+   "casa": "Senado",
+   "data_hora": "2026-11-11T14:00",
+   "sessao": "Sessão deliberativa ordinária",
+   "itens": [
+    {
+     "chave": "PLP 230/2025",
+     "ementa": "Altera a Lei Complementar nº 101, de 4 de maio de 2000 (Lei de Responsabilidade Fiscal), para vedar a limitação de empenho e movimentação financeira das despesas relativas ao Fundo de Universalização dos Serviços de Telecomunicações (Fust), e a Lei nº 9.998, de 17 de agosto de 2000, para os fins que especifica.",
+     "fase": null
+    },
+    {
+     "chave": "PL 6461/2019",
+     "ementa": "Institui o Estatuto do Aprendiz; e altera a Consolidação das Leis do Trabalho, aprovada pelo Decreto-Lei nº 5.452, de 1º de maio de 1943 (CLT), e as Leis nºs 6.019, de 3 de janeiro de 1974, e 14.601, de 19 de junho de 2023.",
+     "fase": null
+    },
+    {
+     "chave": "PL 6683/2025",
+     "ementa": "Dispõe sobre os requisitos essenciais relativos aos implantes cirúrgicos; e estabelece a notificação compulsória das falhas detectadas em implantes.",
+     "fase": "Discussão, em turno único"
+    }
+   ]
+  }
+ ],
  "proposicoes": {
   "MPV 1370/2026": {
    "chave": "MPV 1370/2026",
@@ -26,10 +71,10 @@
     "Trabalho e Emprego"
    ],
    "situacao": {
-    "descricao": "Aguardando Apreciação pelo Senado Federal",
-    "data": "2026-10-16",
-    "casa": "Câmara",
-    "norma": null
+    "descricao": "Transformada em norma jurídica com veto parcial",
+    "data": "2026-11-06",
+    "casa": "Senado",
+    "norma": "Lei nº 15.527 de 06/11/2026"
    },
    "url_camara": "https://www.camara.leg.br/propostas-legislativas/2634542",
    "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174819",
@@ -229,6 +274,37 @@
      "votos": []
     }
    ]
+  },
+  "PDL 934/2025": {
+   "chave": "PDL 934/2025",
+   "slug": "pdl-934-2025",
+   "sigla": "PDL",
+   "numero": 934,
+   "ano": 2025,
+   "tipo": "Projeto de Decreto Legislativo",
+   "ementa": "Aprova o texto do Acordo Regional sobre Acesso à Informação, Participação Pública e Acesso à Justiça em Assuntos Ambientais na América Latina e no Caribe (“Acordo de Escazú”), assinado em Nova York, em 27 de setembro de 2018.",
+   "apelido": null,
+   "autores": [
+    "Comissão de Meio Ambiente e Desenvolvimento Sustentável"
+   ],
+   "data_apresentacao": "2025-11-05",
+   "casa_inicial": "Câmara",
+   "temas": [
+    "Direito e Justiça",
+    "Direitos Humanos e Minorias",
+    "Meio Ambiente e Desenvolvimento Sustentável",
+    "Relações Internacionais e Comércio Exterior"
+   ],
+   "situacao": {
+    "descricao": "Incluída em ordem do dia",
+    "data": "2026-11-07",
+    "casa": "Senado",
+    "norma": null
+   },
+   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2581961",
+   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/171607",
+   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3040112",
+   "votacoes": []
   },
   "PEC 18/2025": {
    "chave": "PEC 18/2025",
@@ -3959,8 +4035,8 @@
     "Saúde"
    ],
    "situacao": {
-    "descricao": "Aguardando Autógrafos na Mesa",
-    "data": "2026-11-04",
+    "descricao": "Aguardando Sanção",
+    "data": "2026-11-06",
     "casa": "Câmara",
     "norma": null
    },
@@ -4081,7 +4157,7 @@
     "Homenagens e Datas Comemorativas"
    ],
    "situacao": {
-    "descricao": "Aguardando Envio ao Senado Federal",
+    "descricao": "Aguardando Autógrafos na Mesa",
     "data": "2026-11-04",
     "casa": "Câmara",
     "norma": null
@@ -4135,7 +4211,7 @@
     "Homenagens e Datas Comemorativas"
    ],
    "situacao": {
-    "descricao": "Aguardando Envio ao Senado Federal",
+    "descricao": "Aguardando Autógrafos na Mesa",
     "data": "2026-11-05",
     "casa": "Câmara",
     "norma": null
@@ -4332,6 +4408,36 @@
     }
    ]
   },
+  "PL 5608/2023": {
+   "chave": "PL 5608/2023",
+   "slug": "pl-5608-2023",
+   "sigla": "PL",
+   "numero": 5608,
+   "ano": 2023,
+   "tipo": "Projeto de Lei",
+   "ementa": "Regula as condições de trabalho de mulheres que foram diagnosticadas, estão em tratamento ou em período de aguardo de remissão do câncer de mama.\n\r\n\r\nNOVA EMENTA: Dispõe sobre as condições de trabalho de mulheres com diagnóstico, em tratamento ou em período de espera de remissão de câncer de mama.",
+   "apelido": "Programa Empresa Rosa\nSelo Rosa",
+   "autores": [
+    "Maria Rosas"
+   ],
+   "data_apresentacao": "2023-11-21",
+   "casa_inicial": "Câmara",
+   "temas": [
+    "Direitos Humanos e Minorias",
+    "Saúde",
+    "Trabalho e Emprego"
+   ],
+   "situacao": {
+    "descricao": "Incluída em ordem do dia",
+    "data": "2026-11-07",
+    "casa": "Senado",
+    "norma": null
+   },
+   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2405120",
+   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/162645",
+   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2361649",
+   "votacoes": []
+  },
   "PL 5649/2026": {
    "chave": "PL 5649/2026",
    "slug": "pl-5649-2026",
@@ -4460,7 +4566,7 @@
     "Saúde"
    ],
    "situacao": {
-    "descricao": "Aguardando Envio ao Senado Federal",
+    "descricao": "Aguardando Autógrafos na Mesa",
     "data": "2026-11-04",
     "casa": "Câmara",
     "norma": null
@@ -4602,6 +4708,119 @@
      "votos": []
     }
    ]
+  },
+  "PL 6461/2019": {
+   "chave": "PL 6461/2019",
+   "slug": "pl-6461-2019",
+   "sigla": "PL",
+   "numero": 6461,
+   "ano": 2019,
+   "tipo": "Projeto de Lei",
+   "ementa": "Institui o Estatuto do Aprendiz e dá outras providências.",
+   "apelido": "Estatuto do Aprendiz",
+   "autores": [
+    "André de Paula",
+    "André Figueiredo",
+    "Arthur Lira",
+    "Augusto Coutinho",
+    "Baleia Rossi",
+    "Carlos Sampaio",
+    "Célio Studart",
+    "Daniel Almeida",
+    "Daniel Coelho",
+    "Eduardo Braide",
+    "Elmar Nascimento",
+    "Fred Costa",
+    "Jhonatan de Jesus",
+    "Joice Hasselmann",
+    "José Nelto",
+    "Mariana Carvalho",
+    "Pedro Cunha Lima",
+    "Pedro Lucas Fernandes",
+    "Rafael Motta",
+    "Raul Henry",
+    "Rose Modesto",
+    "Tabata Amaral",
+    "Tadeu Alencar",
+    "Toninho Wandscheer",
+    "Wellington Roberto"
+   ],
+   "data_apresentacao": "2019-12-16",
+   "casa_inicial": "Câmara",
+   "temas": [
+    "Trabalho e Emprego"
+   ],
+   "situacao": {
+    "descricao": "Aguardando Apreciação pelo Senado Federal",
+    "data": "2026-08-28",
+    "casa": "Câmara",
+    "norma": null
+   },
+   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2234260",
+   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174061",
+   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1847157",
+   "votacoes": []
+  },
+  "PL 6683/2025": {
+   "chave": "PL 6683/2025",
+   "slug": "pl-6683-2025",
+   "sigla": "PL",
+   "numero": 6683,
+   "ano": 2025,
+   "tipo": "Projeto de Lei Ordinária",
+   "ementa": "Dispõe sobre os requisitos essenciais relativos aos implantes cirúrgicos; e estabelece a notificação compulsória das falhas detectadas em implantes.",
+   "apelido": null,
+   "autores": [
+    "Câmara dos Deputados"
+   ],
+   "data_apresentacao": "2025-12-19",
+   "casa_inicial": "Senado",
+   "temas": [
+    "Saúde"
+   ],
+   "situacao": {
+    "descricao": "Incluída em ordem do dia",
+    "data": "2026-11-07",
+    "casa": "Senado",
+    "norma": null
+   },
+   "url_camara": null,
+   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172286",
+   "url_inteiro_teor": "https://legis.senado.gov.br/sdleg-getter/dadosabertos/documento/f877de0c-ba69-463d-8144-0257efd23b89",
+   "votacoes": []
+  },
+  "PLP 109/2025": {
+   "chave": "PLP 109/2025",
+   "slug": "plp-109-2025",
+   "sigla": "PLP",
+   "numero": 109,
+   "ano": 2025,
+   "tipo": "Projeto de Lei Complementar",
+   "ementa": "Dispõe sobre o acesso da Agência Nacional do Petróleo, Gás Natural e Biocombustíveis (ANP) às informações fiscais dos agentes regulados para fins de fiscalização e regulação do setor, nos termos do art. 145, § 1º, da Constituição Federal.",
+   "apelido": null,
+   "autores": [
+    "Alceu Moreira",
+    "Arnaldo Jardim",
+    "Flávio Nogueira",
+    "Pedro Lupion",
+    "Zé Vitor"
+   ],
+   "data_apresentacao": "2025-05-06",
+   "casa_inicial": "Câmara",
+   "temas": [
+    "Administração Pública",
+    "Energia, Recursos Hídricos e Minerais"
+   ],
+   "situacao": {
+    "descricao": "Incluída em ordem do dia",
+    "data": "2026-11-07",
+    "casa": "Senado",
+    "norma": null
+   },
+   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2503998",
+   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/173581",
+   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2898282",
+   "votacoes": []
   },
   "PLP 186/2026": {
    "chave": "PLP 186/2026",
@@ -11467,6 +11686,37 @@
      ]
     }
    ]
+  },
+  "PLP 230/2025": {
+   "chave": "PLP 230/2025",
+   "slug": "plp-230-2025",
+   "sigla": "PLP",
+   "numero": 230,
+   "ano": 2025,
+   "tipo": "Projeto de Lei Complementar",
+   "ementa": "Altera a Lei Complementar nº 101, de 4 de maio de 2000, para vedar a limitação de empenho e movimentação financeira das despesas relativas ao Fundo de Universalização dos Serviços de Telecomunicações, e a Lei nº 9.998, de 17 de agosto de 2000, para os fins que especifica.",
+   "apelido": null,
+   "autores": [
+    "Juscelino Filho",
+    "Luisa Canziani"
+   ],
+   "data_apresentacao": "2025-11-03",
+   "casa_inicial": "Câmara",
+   "temas": [
+    "Administração Pública",
+    "Comunicações",
+    "Finanças Públicas e Orçamento"
+   ],
+   "situacao": {
+    "descricao": "Incluída em ordem do dia",
+    "data": "2026-11-07",
+    "casa": "Senado",
+    "norma": null
+   },
+   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2580259",
+   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175647",
+   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3037247",
+   "votacoes": []
   },
   "PLP 281/2019": {
    "chave": "PLP 281/2019",
