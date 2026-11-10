@@ -37,11 +37,21 @@ def test_inicio_mostra_pauta_votadas_e_temas(site):
     # Pauta das duas casas, com link para a página de cada proposição.
     assert "PEC da Segurança Pública" in inicio
     assert 'href="proposicoes/pl-3099-2019.html"' in inicio
-    # Votadas: a de mérito mais recente por casa, com placar ou "simbólica".
-    assert '<span id="contagem">3</span> de 3 proposições' in inicio
-    assert "Fim da escala 6x1" in inicio
-    assert "Votação simbólica" in inicio
-    assert 'data-tema="Trabalho e Emprego"' in inicio
+    # Destaques: só votações nominais, PEC antes de PLP, com placar e link para a lista completa.
+    assert inicio.index("PEC 221/2019") < inicio.index("PLP 186/2026")
+    assert "Virou a Lei Complementar 238/2026" in inicio
+    assert 'href="votacoes.html"' in inicio
+    assert 'href="votacoes.html?tema=Trabalho%20e%20Emprego"' in inicio
+    # Entrada por estado: mapa e lista de escolha levam à página de cada UF.
+    assert 'href="estados/sp.html" aria-label="São Paulo"' in inicio
+    assert '<option value="sp" selected>São Paulo</option>' in inicio
+    # A lista completa, com placar ou "simbólica", fica na página de votações.
+    votacoes = (pasta / "votacoes.html").read_text(encoding="utf-8")
+    assert '<span id="contagem">3</span> de 3 proposições' in votacoes
+    assert "Fim da escala 6x1" in votacoes
+    assert "Votação simbólica" in votacoes
+    assert 'data-tema="Trabalho e Emprego"' in votacoes
+    assert 'href="entenda.html#rito"' in votacoes
     for estatico in ("filtro.js", "painel.js", "estilo.css"):
         assert (pasta / "static" / estatico).exists()
 
@@ -181,7 +191,7 @@ def test_pagina_entenda_os_dados(site):
     assert entenda.count('href="./entenda.html"') == 0  # sem link para si mesma no rodapé
     inicio = (pasta / "index.html").read_text(encoding="utf-8")
     assert 'href="./entenda.html"' in inicio
-    assert 'href="entenda.html#rito"' in inicio
+    assert 'href="entenda.html#destaques"' in inicio
 
 
 def test_sem_endereco_do_site_nao_gera_tags_absolutas(site):
@@ -201,7 +211,7 @@ def test_tags_de_compartilhamento_com_endereco(tmp_path, site):
     assert '<meta property="og:description" content="Virou Lei Complementar 238/2026.' in plp
     inicio = (pasta / "index.html").read_text(encoding="utf-8")
     assert '<meta property="og:url" content="https://monitor.exemplo.br/index.html">' in inicio
-    assert '<meta property="og:title" content="O que está em discussão no Congresso">' in inicio
+    assert '<meta property="og:title" content="O que o Congresso decidiu">' in inicio
     assert (pasta / "static" / "brand" / "social" / "open-graph-1200x630.png").exists()
     assert (pasta / "static" / "brand" / "favicon" / "site.webmanifest").exists()
     assert '<meta name="twitter:image" content="https://monitor.exemplo.br/static/brand/social/twitter-card-1200x600.png">' in plp
@@ -267,5 +277,17 @@ def test_estados_previsto_e_vazio(site):
     pasta, _ = site
     pdl = (pasta / "proposicoes" / "pdl-274-2026.html").read_text(encoding="utf-8")
     assert "Previsto" in pdl and "Evento programado. A agenda pode mudar." in pdl
-    for pagina in ("index.html", "deputados/index.html", "senadores/index.html"):
+    for pagina in ("votacoes.html", "deputados/index.html", "senadores/index.html"):
         assert "data-limpar-filtros" in (pasta / pagina).read_text(encoding="utf-8"), pagina
+
+
+def test_pagina_de_cada_estado(site):
+    pasta, (doc_dep, doc_sen, _doc_con) = site
+    paginas = sorted(p.stem for p in (pasta / "estados").glob("*.html"))
+    assert len(paginas) == 27 and "sp" in paginas and "df" in paginas
+    dep = doc_dep["deputados"][0]
+    pagina = (pasta / "estados" / f"{dep['uf'].lower()}.html").read_text(encoding="utf-8")
+    assert f'href="../deputados/{dep["id"]}.html"' in pagina
+    assert "<h1>" in pagina and 'href="../index.html#estados"' in pagina
+    assert 'src="../static/estado.js"' in pagina
+    assert (pasta / "static" / "estado.js").exists()

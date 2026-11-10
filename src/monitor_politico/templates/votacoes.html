@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% block titulo %}Votações dos últimos 30 dias · Monitor Político{% endblock %}
+{% block descricao %}Todas as proposições votadas nos plenários da Câmara e do Senado nos últimos 30 dias, com resultado, placar e filtros por casa, tema e resultado.{% endblock %}
+{% block conteudo %}
+<nav class="ce-breadcrumb" aria-label="Trilha de navegação">
+  <ol>
+    <li><a href="index.html">Início</a></li>
+    <li aria-current="page">Votações</li>
+  </ol>
+</nav>
+<header class="ce-page-head">
+  <p class="ce-eyebrow">Plenários da Câmara e do Senado</p>
+  <h1>Votações dos últimos 30 dias</h1>
+  <p class="ce-deck">Cada proposição votada no período, com o resultado e o placar da votação mais recente em cada casa.</p>
+</header>
+{% if temas %}
+    <section class="ce-section" aria-labelledby="temas-titulo">
+      <div class="ce-section-header">
+        <h2 class="ce-display ce-section-title" id="temas-titulo">Temas em destaque</h2>
+      </div>
+      <p class="ce-section-note">Temas oficiais das proposições em pauta ou votadas no período. Clique para filtrar a lista.</p>
+      <div class="chips">
+        {% for nome, qtd in temas %}
+        <button type="button" class="chip" data-tema="{{ nome }}">{{ nome }} <span class="qtd">{{ qtd }}</span></button>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+<section class="ce-section" id="votadas" aria-labelledby="votadas-titulo">
+  <div class="ce-section-header">
+    <h2 class="ce-display ce-section-title" id="votadas-titulo">{{ votadas|length }} {{ "proposição votada" if votadas|length == 1 else "proposições votadas" }}</h2>
+  </div>
+  <p class="ce-section-note">Uma linha por proposição, com a votação de mérito mais recente em cada casa. Votações de rito (requerimentos, redação final) ficam na página de cada uma. <a href="entenda.html#rito">O que é votação de rito?</a></p>
+
+  <form class="ce-filters" aria-label="Filtrar votações" onsubmit="return false">
+    <label class="ce-field"><span class="ce-control-label">Casa</span>
+      <select class="ce-select" id="f-casa">
+        <option value="">Câmara e Senado</option>
+        <option>Câmara</option>
+        <option>Senado</option>
+      </select>
+    </label>
+    <label class="ce-field"><span class="ce-control-label">Tema</span>
+      <select class="ce-select" id="f-tema">
+        <option value="">Todos</option>
+        {% for t in todos_temas %}<option>{{ t }}</option>{% endfor %}
+      </select>
+    </label>
+    <label class="ce-field"><span class="ce-control-label">Resultado</span>
+      <select class="ce-select" id="f-resultado">
+        <option value="">Todos</option>
+        <option value="aprovada">Aprovadas</option>
+        <option value="rejeitada">Rejeitadas</option>
+      </select>
+    </label>
+    <label class="ce-check"><input type="checkbox" id="f-nominal"> Só com o voto de cada parlamentar</label>
+  </form>
+
+  <p class="ce-count" aria-live="polite"><span id="contagem">{{ votadas|length }}</span> de {{ votadas|length }} proposições</p>
+  <ul class="ce-vote-list" id="lista-votadas">
+    {% for v in votadas %}
+    <li data-casas="{{ v.casas|join('|') }}" data-temas="|{{ v.temas|join('|') }}|" data-resultados="{{ v.resultados|join('|') }}" data-nominal="{{ 1 if v.nominal else 0 }}">
+      <a href="proposicoes/{{ v.slug }}.html">
+        <div class="ce-vote-text">
+          <span class="ce-meta">{{ v.sigla }}{% if v.temas %} · {{ v.temas[:3]|join(" · ") }}{% endif %}</span>
+          <span class="ce-item-title ce-item-title--lg">{{ v.titulo }}</span>
+          {% if v.situacao %}<span class="ce-meta">Situação: {{ v.situacao }}</span>{% endif %}
+        </div>
+        <div class="ce-vote-results">
+          {% for x in v.votos %}
+          <div>
+            <span class="ce-meta">{{ x.casa }} · {{ x.data }}</span>
+            {% if x.resultado %}<span class="ce-badge resultado-{{ x.resultado }}">{{ x.resultado|capitalize }}</span>{% endif %}
+            <span class="ce-score">{{ x.placar }}</span>
+          </div>
+          {% endfor %}
+        </div>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+  <div id="vazio" class="ce-state-box" hidden>
+    <p>Nenhuma proposição encontrada com esses filtros.</p>
+    <button type="button" class="ce-button ce-button--secondary" data-limpar-filtros>Limpar filtros</button>
+  </div>
+</section>
+{% endblock %}
+{% block rodape %}
+<p>Votações e pauta atualizadas em {{ atualizado_congresso }}.</p>
+<p>Fontes: <a href="https://dadosabertos.camara.leg.br/">Dados Abertos da Câmara dos Deputados</a> e <a href="https://www12.senado.leg.br/dados-abertos">Dados Abertos do Senado Federal</a>.{% if tem_resumos %} Títulos e resumos em linguagem simples são gerados automaticamente por IA a partir do texto oficial; a ementa oficial está sempre na página de cada proposição.{% endif %} Este site reproduz informações públicas oficiais, sem avaliação ou opinião.</p>
+{% endblock %}
+{% block scripts %}<script src="{{ raiz }}/static/painel.js"></script>{% endblock %}

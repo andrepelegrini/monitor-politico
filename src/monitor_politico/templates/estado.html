@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+{% block titulo %}Quem representa {{ e.nome }} · Monitor Político{% endblock %}
+{% block og_titulo %}Quem representa {{ e.nome }} no Congresso{% endblock %}
+{% block descricao %}Os {{ e.senadores|length }} senadores e {{ e.deputados|length }} deputados federais de {{ e.nome }}: partidos, leis, votos, presença e quem chega em 2027, com dados oficiais.{% endblock %}
+{% block conteudo %}
+<nav class="ce-breadcrumb" aria-label="Trilha de navegação">
+  <ol>
+    <li><a href="../index.html">Início</a></li>
+    <li><a href="../index.html#estados">Estados</a></li>
+    <li aria-current="page">{{ e.nome }}</li>
+  </ol>
+</nav>
+
+<header class="ce-page-head">
+  <p class="ce-eyebrow">Quem representa</p>
+  <h1>{{ e.nome }}</h1>
+  <p class="ce-deck">{{ e.senadores|length }} senadores e {{ e.deputados|length }} deputados federais em exercício.{% if e.novos_sen or e.novos_dep %} Em 2027, chegam {{ e.novos_sen|length }} {{ "novo senador" if e.novos_sen|length == 1 else "novos senadores" }} e {{ e.novos_dep|length }} {{ "novo deputado" if e.novos_dep|length == 1 else "novos deputados" }}.{% endif %}</p>
+</header>
+
+<section class="ce-kpis" aria-label="Números do estado">
+  <div class="ce-kpi-grid ce-kpi-grid--4">
+    <div class="ce-kpi"><div class="ce-kpi-value">{{ e.deputados|length }}</div><div class="ce-kpi-label">deputados federais</div><div class="ce-meta">{% if e.deputados|length == 8 %}O mínimo por estado{% elif e.deputados|length == 70 %}O máximo por estado{% else %}Proporcional à população{% endif %}</div></div>
+    <div class="ce-kpi"><div class="ce-kpi-value">{{ e.senadores|length }}</div><div class="ce-kpi-label">senadores</div><div class="ce-meta">Três por estado</div></div>
+    <div class="ce-kpi"><div class="ce-kpi-value">{{ e.n_partidos }}</div><div class="ce-kpi-label">partidos na bancada</div>{% if e.maior_partido %}<div class="ce-meta">{% if e.maior_partido.empate %}Maior bancada empatada, com {{ e.maior_partido.n }}{% else %}O maior é o {{ e.maior_partido.sigla }}, com {{ e.maior_partido.n }}{% endif %}</div>{% endif %}</div>
+    <div class="ce-kpi"><div class="ce-kpi-value">{{ e.reeleitos }}</div><div class="ce-kpi-label">deputados reeleitos para 2027</div><div class="ce-meta">Eleição de 2026</div></div>
+  </div>
+</section>
+
+<section class="ce-section" aria-labelledby="senadores-titulo">
+  <div class="ce-section-header"><h2 class="ce-display ce-section-title" id="senadores-titulo">Senadores</h2></div>
+  <ul class="ce-people ce-people--leis">
+    {% for s in e.senadores %}{% set n = e.numeros_sen[s.id] if e.numeros_sen else none %}{% set sit = e.situacoes_sen.get(s.id|string) %}
+    <li>
+      <a href="../senadores/{{ s.id }}.html">
+        {% if s.url_foto %}<img src="{{ s.url_foto }}" alt="" loading="lazy" width="64" height="85">{% else %}<span class="ce-photo-empty" aria-hidden="true"></span>{% endif %}
+        <span class="ce-people-name">{{ s.nome }}</span>
+        <span class="ce-meta">{{ s.partido }}{% if s.condicao %} · {{ s.condicao }}{% endif %}{% if s.fim_mandato %} · mandato até {{ s.fim_mandato[:4] }}{% endif %}</span>{% if n %}
+        <span class="ce-people-leis"><strong>{{ n.principal }}</strong> {{ "lei" if n.principal == 1 else "leis" }} de autoria principal · participação em <strong>{{ n.presencas|numero }}</strong> de {{ n.dias|numero }} votações</span>{% endif %}{% if sit %}
+        <span class="ce-people-leis"><span class="ce-badge badge-{{ sit.chave }}">{{ sit.rotulo }}</span></span>{% endif %}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="ce-section" aria-labelledby="deputados-titulo">
+  <div class="ce-section-header"><h2 class="ce-display ce-section-title" id="deputados-titulo">Deputados federais</h2></div>
+  <p class="ce-section-note">Números do mandato atual, desde {{ inicio_mandato|data_br }}, com o mesmo critério para todos. <a href="../entenda.html#numeros-na-lista">Entenda a contagem</a>.</p>
+  <div class="est-barras">
+    <div>
+      <h3 class="ce-subtitle">Bancada por partido</h3>
+      <ul class="ce-bars est-lista-barras">
+        {% for p in e.partidos %}<li><span class="ce-bar-label">{{ p.rotulo }}</span><span class="ce-bar-track"><span class="ce-bar-value" style="width: {{ p.largura }}%"></span></span><span class="ce-bar-number"><strong>{{ p.n }}</strong></span></li>{% endfor %}
+      </ul>
+      {% if e.outros_partidos %}<p class="ce-section-note">Mais {{ e.outros_partidos }} em outros partidos.</p>{% endif %}
+    </div>
+    {% if e.eleicao %}
+    <div>
+      <h3 class="ce-subtitle">O que aconteceu na eleição de 2026</h3>
+      <ul class="ce-bars est-lista-barras est-lista-barras--longo">
+        {% for p in e.eleicao %}<li><span class="ce-bar-label">{{ p.rotulo }}</span><span class="ce-bar-track"><span class="ce-bar-value" style="width: {{ p.largura }}%"></span></span><span class="ce-bar-number"><strong>{{ p.n }}</strong></span></li>{% endfor %}
+      </ul>
+      <p class="ce-section-note">Suplência: a pessoa disputou e ficou como suplente, podendo assumir durante o mandato.</p>
+    </div>
+    {% endif %}
+  </div>
+
+  <form class="ce-filters est-filtros" role="search" aria-label="Filtrar deputados de {{ e.nome }}" onsubmit="return false">
+    <label class="ce-field"><span class="ce-control-label">Nome</span><input class="ce-input" type="search" id="e-nome" placeholder="Buscar por nome" autocomplete="off"></label>
+    {% if e.numeros_dep %}<label class="ce-field"><span class="ce-control-label">Ordenar por</span>
+      <select class="ce-select" id="e-ordem">
+        <option value="nome">Nome</option>
+        <option value="principal">Leis de autoria principal</option>
+        <option value="votos">Votos registrados</option>
+        <option value="presenca">Percentual de presença</option>
+        <option value="relatorias">Relatorias atuais</option>
+      </select></label>{% endif %}
+  </form>
+  <ul class="ce-people ce-people--leis" id="e-lista" data-na-pagina="{{ e.na_pagina }}">
+    {% for d in e.deputados %}{% set n = e.numeros_dep[d.id] if e.numeros_dep else none %}{% set sit = e.situacoes.get(d.id|string) %}
+    <li data-nome="{{ d.nome|lower }}"{% if n %} data-principal="{{ n.principal }}" data-votos="{{ n.votos }}" data-presenca="{{ n.percentual_presenca if n.percentual_presenca is not none else -1 }}" data-relatorias="{{ n.relatorias }}"{% endif %}{% if loop.index > e.na_pagina %} hidden{% endif %}>
+      <a href="../deputados/{{ d.id }}.html">
+        {% if d.url_foto %}<img src="{{ d.url_foto }}" alt="" loading="lazy" width="64" height="85">{% else %}<span class="ce-photo-empty" aria-hidden="true"></span>{% endif %}
+        <span class="ce-people-name">{{ d.nome }}</span>
+        <span class="ce-meta">{{ d.partido }}</span>{% if n %}
+        <span class="ce-people-leis"><strong>{{ n.principal }}</strong> {{ "lei" if n.principal == 1 else "leis" }} de autoria principal · {{ n.coautoria }} em coautoria</span>
+        <span class="ce-people-leis"><strong>{{ n.votos|numero }}</strong> votos · <strong>{{ n.presencas|numero }}</strong> de {{ n.dias|numero }} dias</span>{% endif %}{% if sit %}
+        <span class="ce-people-leis"><span class="ce-badge badge-{{ sit.chave }}">{{ sit.rotulo }}</span></span>{% endif %}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+  <div id="e-vazio" class="ce-state-box" hidden><p>Nenhum deputado encontrado com esse nome.</p></div>
+  {% if e.deputados|length > e.na_pagina %}<button type="button" class="ce-button ce-button--secondary est-mais" id="e-mais">Mostrar os {{ e.deputados|length }} deputados</button>{% endif %}
+</section>
+
+{% if e.novos_sen or e.novos_dep %}
+<section class="ce-section" aria-labelledby="novos-titulo">
+  <div class="ce-section-header"><h2 class="ce-display ce-section-title" id="novos-titulo">Quem chega em 2027</h2></div>
+  <p class="ce-section-note">Eleitos em 2026 que não estão no cargo hoje. Posse prevista para 01/02/2027.</p>
+  <div class="est-barras">
+    <div>
+      <h3 class="ce-subtitle">Senado ({{ e.novos_sen|length }})</h3>
+      <ul class="est-novos">{% for x in e.novos_sen %}<li><a href="../senadores/eleitos/{{ x.sq }}.html">{{ x.nome|nome_proprio }}</a> <span class="ce-meta">{{ x.partido }}</span> <span class="ce-badge badge-{{ x.chave }}">{{ x.rotulo }}</span></li>{% else %}<li class="ce-muted">Ninguém novo: as vagas foram renovadas por quem já está no Senado.</li>{% endfor %}</ul>
+    </div>
+    <div>
+      <h3 class="ce-subtitle">Câmara ({{ e.novos_dep|length }})</h3>
+      <ul class="est-novos">{% for x in e.novos_dep %}<li><a href="../deputados/eleitos/{{ x.sq }}.html">{{ x.nome|nome_proprio }}</a> <span class="ce-meta">{{ x.partido }}</span> <span class="ce-badge badge-{{ x.chave }}">{{ x.rotulo }}</span></li>{% endfor %}</ul>
+    </div>
+  </div>
+</section>
+{% endif %}
+{% endblock %}
+{% block rodape %}
+<p>Dados de deputados atualizados em {{ atualizado_camara }} e de senadores em {{ atualizado_senado }}.</p>
+<p>Fontes: <a href="https://dadosabertos.camara.leg.br/">Dados Abertos da Câmara dos Deputados</a>, <a href="https://www12.senado.leg.br/dados-abertos">Dados Abertos do Senado Federal</a> e <a href="https://dadosabertos.tse.jus.br/">TSE</a>. Este site reproduz informações públicas oficiais, sem avaliação ou opinião.</p>
+{% endblock %}
+{% block scripts %}<script src="{{ raiz }}/static/estado.js" defer></script>{% endblock %}

@@ -39,7 +39,8 @@ def test_so_a_lista_de_deputados_muda(tmp_path, docs):
     construir(*docs, base)
     construir(*docs, nova, metricas=numeros)
     diferentes = [c.relative_to(base) for c in base.rglob("*.html") if c.read_bytes() != (nova / c.relative_to(base)).read_bytes()]
-    assert diferentes == [Path("deputados") / "index.html"]
+    # Fora as páginas de estado, que também mostram os números de cada deputado, só a lista muda.
+    assert [c for c in diferentes if c.parts[0] != "estados"] == [Path("deputados") / "index.html"]
     pagina = (nova / "deputados" / "index.html").read_text(encoding="utf-8")
     assert 'data-principal="6" data-coautoria="4" data-votos="957" data-presenca="94.5" data-relatorias="53"' in pagina
     assert "<strong>957</strong> votos · <strong>378</strong> de 400 dias · <strong>53</strong> relatorias atuais" in pagina

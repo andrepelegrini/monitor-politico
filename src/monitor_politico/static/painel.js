@@ -33,6 +33,13 @@
     };
     [casa, tema, resultado, nominal].forEach(function (el) { el.addEventListener("input", aplicar); });
 
+    // Vindo de "Assuntos do mês" na página inicial: votacoes.html?tema=Saúde já abre filtrada.
+    var temaPedido = new URLSearchParams(location.search).get("tema");
+    if (temaPedido && Array.prototype.some.call(tema.options, function (o) { return o.value === temaPedido; })) {
+      tema.value = temaPedido;
+      aplicar();
+    }
+
     Array.prototype.forEach.call(document.querySelectorAll(".chip[data-tema]"), function (chip) {
       chip.addEventListener("click", function () {
         tema.value = tema.value === chip.dataset.tema ? "" : chip.dataset.tema;

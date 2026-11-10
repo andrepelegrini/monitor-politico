@@ -125,9 +125,101 @@ def temas_em_destaque(doc: dict[str, Any], linhas: list[dict[str, Any]]) -> list
     return sorted(contagem.items(), key=lambda kv: (-kv[1], kv[0]))[:MAX_TEMAS]
 
 
+MAX_DESTAQUES = 4
+# Ordem dos destaques: mudanças na Constituição primeiro, depois leis complementares e medidas provisórias.
+PRIORIDADE_TIPO = {"PEC": 0, "PLP": 1, "MPV": 2, "PL": 3}
+# Votos mínimos para aprovar, por tipo e casa: maioria absoluta (PLP) e três quintos (PEC).
+QUORUM = {("PLP", "Câmara"): 257, ("PLP", "Senado"): 41, ("PEC", "Câmara"): 308, ("PEC", "Senado"): 49}
+NOMES_TIPO = {"PLP": "um projeto de lei complementar", "PEC": "uma proposta de emenda à Constituição"}
+LIMITE_FRASE = 240
+
+
+def primeira_frase(texto: str, limite: int = LIMITE_FRASE) -> str:
+    """O começo de um texto longo, até o fim da frase que cabe no limite."""
+    texto = " ".join((texto or "").split())
+    if len(texto) <= limite:
+        return texto
+    frases = re.split(r"(?<=[.!?])\s+", texto)
+    escolhido = ""
+    for frase in frases:
+        if len(escolhido) + len(frase) + 1 > limite:
+            break
+        escolhido = f"{escolhido} {frase}".strip()
+    return escolhido or texto[:limite].rsplit(" ", 1)[0] + "…"
+
+
+def destaques(doc: dict[str, Any], quantos: int = MAX_DESTAQUES) -> list[dict[str, Any]]:
+    """As votações do período com o voto de cada parlamentar, com PEC e PLP primeiro.
+
+    É uma regra fixa, a mesma toda semana: entre as proposições com votação nominal de mérito no
+    período, o tipo decide a ordem e, no mesmo tipo, a votação mais recente vem antes.
+    """
+    desde = doc["periodo"]["votacoes_desde"]
+    candidatos = []
+    for prop in doc["proposicoes"].values():
+        nominais = [v for v in principais(prop) if v["nominal"] and v.get("placar") and v["data_hora"][:10] >= desde]
+        if nominais:
+            candidatos.append((PRIORIDADE_TIPO.get(prop["sigla"], 9), max(v["data_hora"] for v in nominais), prop, nominais))
+    candidatos.sort(key=lambda c: c[1], reverse=True)  # mais recente primeiro...
+    candidatos.sort(key=lambda c: c[0])  # ...dentro de cada tipo (a ordenação é estável)
+    lista = []
+    for _, _, prop, nominais in candidatos[:quantos]:
+        ultimas = sorted(ultima_por_casa(nominais), key=lambda v: v["data_hora"])
+        ultima = ultimas[-1]
+        sit = prop.get("situacao") or {}
+        if sit.get("norma"):
+            estado, rotulo, texto = "norma", "Virou norma", f"Virou a {sit['norma']}"
+        else:
+            estado = ultima["resultado"] or "aprovada"
+            rotulo = estado.capitalize()
+            texto = f"{rotulo} {'no' if ultima['casa'] == 'Senado' else 'na'} {ultima['casa']} em {dia_mes(ultima['data_hora'])}"
+        nota = None
+        quorum = QUORUM.get((prop["sigla"], ultima["casa"]))
+        placar = ultima["placar"]
+        if estado == "rejeitada" and quorum and placar["sim"] > placar["nao"]:
+            nota = f"Teve mais votos Sim, mas {NOMES_TIPO[prop['sigla']]} precisa de pelo menos {quorum} votos {'no' if ultima['casa'] == 'Senado' else 'na'} {ultima['casa']}."
+        resumo = prop.get("resumo") or {}
+        # Sem resumo por IA, o título já é a ementa quando não há apelido: não repetimos o mesmo texto.
+        titulo_card = titulo(prop)
+        muda = primeira_frase(resumo.get("o_que_muda") or ("" if titulo_card == prop.get("ementa") else prop.get("ementa") or ""))
+        lista.append({
+            "slug": prop["slug"],
+            "sigla": prop["chave"],
+            "apelido": prop.get("apelido"),
+            "titulo": titulo_card,
+            "muda": muda,
+            "de_resumo": bool(resumo.get("o_que_muda")),
+            "temas": prop["temas"][:2],
+            "estado": estado,
+            "rotulo": rotulo,
+            "resultado": texto,
+            "nota": nota,
+            "placares": [
+                {"casa": v["casa"], "data": dia_mes(v["data_hora"]), "sim": v["placar"]["sim"], "nao": v["placar"]["nao"],
+                 "largura_sim": round(v["placar"]["sim"] / ((v["placar"]["sim"] + v["placar"]["nao"]) or 1) * 100, 1)}
+                for v in ultimas
+            ],
+        })
+    return lista
+
+
+def pauta_em_ordem(doc: dict[str, Any]) -> list[dict[str, Any]]:
+    """Sessões das duas casas na ordem em que acontecem."""
+    sessoes = []
+    for sessao in sorted(doc["pauta"], key=lambda s: s["data_hora"]):
+        sessoes.append({
+            "casa": sessao["casa"],
+            "rotulo": rotulo_sessao(sessao["data_hora"]),
+            "itens": [_item_pauta(i, doc["proposicoes"]) for i in sessao["itens"]],
+        })
+    return sessoes
+
+
 def inicio(doc: dict[str, Any]) -> dict[str, Any]:
     linhas = votadas(doc)
     return {
+        "destaques": destaques(doc),
+        "sessoes": pauta_em_ordem(doc),
         "pauta": pauta_por_casa(doc),
         "votadas": linhas,
         "temas": temas_em_destaque(doc, linhas),

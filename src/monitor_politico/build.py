@@ -17,7 +17,7 @@ from zoneinfo import ZoneInfo
 
 from jinja2 import Environment, PackageLoader, select_autoescape
 
-from monitor_politico import legislatura as modulo_legislatura, metricas as modulo_metricas, painel, perfis, resumo
+from monitor_politico import estados as modulo_estados, legislatura as modulo_legislatura, mapa as modulo_mapa, metricas as modulo_metricas, painel, perfis, resumo
 from monitor_politico.lote_senado import ROTULOS_ELEITOS as ROTULOS_ELEITOS_SENADO
 from monitor_politico.models import Deputado, Senador
 
@@ -258,9 +258,22 @@ def construir(
         **doc_congresso,
         "proposicoes": {k: {**p, "resumo": resumos.get(k)} for k, p in doc_congresso["proposicoes"].items()},
     }
+    dados_inicio = painel.inicio(doc_congresso)
+    malha = modulo_mapa._malha()
+    mapa_estados = [
+        {"uf": uf, "slug": uf.lower(), "nome": forma["nome"], "d": forma["d"], "rotulo": forma["rotulo"]}
+        for uf, forma in sorted(malha["estados"].items(), key=lambda kv: -len(kv[1]["d"]))
+    ]
     (saida / "index.html").write_text(
         env.get_template("inicio.html").render(
-            raiz=".", casa="inicio", caminho="index.html", atualizado_congresso=atualizado_congresso, **painel.inicio(doc_congresso)
+            raiz=".", casa="inicio", caminho="index.html", atualizado_congresso=atualizado_congresso, **dados_inicio,
+            mapa_estados=mapa_estados, mapa_dim=(malha["largura"], malha["altura"]),
+        ),
+        encoding="utf-8",
+    )
+    (saida / "votacoes.html").write_text(
+        env.get_template("votacoes.html").render(
+            raiz=".", casa=None, caminho="votacoes.html", atualizado_congresso=atualizado_congresso, **dados_inicio
         ),
         encoding="utf-8",
     )
@@ -341,6 +354,18 @@ def construir(
         slugs,
         pasta_imagens_senado,
     )
+    (saida / "estados").mkdir()
+    modelo_estado = env.get_template("estado.html")
+    por_uf = modulo_estados.por_estado(deputados, senadores, metricas, legislatura, metricas_senado, legislatura_senado)
+    for uf, contexto_uf in por_uf.items():
+        (saida / "estados" / f"{contexto_uf['slug']}.html").write_text(
+            modelo_estado.render(
+                raiz="..", casa=None, caminho=f"estados/{contexto_uf['slug']}.html", e=contexto_uf,
+                atualizado_camara=atualizado_camara, atualizado_senado=atualizado_senado,
+                inicio_mandato=(metricas or {}).get("inicio") or modulo_metricas.INICIO_MANDATO,
+            ),
+            encoding="utf-8",
+        )
     if legislatura_senado:
         _gerar_legislatura(
             env, saida / "senadores", senadores_anteriores, saidas_senado, legislatura_senado, situacoes_senado,

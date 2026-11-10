@@ -68,3 +68,31 @@ def test_barra_da_votacao_soma_todas_as_categorias():
     card = painel.votacoes_da_pagina({"votacoes": [votacao]}, set(), set())["principais"][0]
     assert card["total_votos"] == 10
     assert (card["p_sim"], card["p_nao"], card["p_abstencao"], card["p_outros"]) == ("60.0%", "20.0%", "10.0%", "10.0%")
+
+
+def test_destaques_seguem_a_regra_fixa_e_explicam_o_quorum():
+    def votacao(casa, data, sim, nao, resultado, nominal=True):
+        return {"casa": casa, "data_hora": data + "T18:00:00", "procedimento": False, "nominal": nominal, "resultado": resultado,
+                "placar": {"sim": sim, "nao": nao} if nominal else None}
+    def prop(chave, votacoes, norma=None):
+        return {"chave": chave, "slug": chave.lower().replace(" ", "-").replace("/", "-"), "sigla": chave.split()[0], "ementa": "Ementa de " + chave,
+                "temas": ["Economia"], "situacao": {"norma": norma} if norma else None, "votacoes": votacoes}
+    doc = {"periodo": {"votacoes_desde": "2026-10-01"}, "proposicoes": {
+        "PL 1/2026": prop("PL 1/2026", [votacao("Câmara", "2026-11-05", 300, 10, "aprovada")]),
+        "PLP 2/2026": prop("PLP 2/2026", [votacao("Câmara", "2026-10-14", 252, 176, "rejeitada")]),
+        "PEC 3/2026": prop("PEC 3/2026", [votacao("Senado", "2026-10-10", 70, 1, "aprovada")], norma="Emenda Constitucional 1/2026"),
+        "PL 4/2026": prop("PL 4/2026", [votacao("Câmara", "2026-11-06", 0, 0, "aprovada", nominal=False)]),
+        "PL 5/2026": prop("PL 5/2026", [votacao("Câmara", "2026-09-01", 300, 10, "aprovada")]),
+    }}
+    lista = painel.destaques(doc)
+    assert [d["sigla"] for d in lista] == ["PEC 3/2026", "PLP 2/2026", "PL 1/2026"]
+    assert lista[0]["resultado"] == "Virou a Emenda Constitucional 1/2026" and lista[0]["estado"] == "norma"
+    assert lista[1]["nota"] == "Teve mais votos Sim, mas um projeto de lei complementar precisa de pelo menos 257 votos na Câmara."
+    assert lista[2]["resultado"] == "Aprovada na Câmara em 05/11" and lista[2]["nota"] is None
+    # Sem resumo nem apelido, o título já é a ementa: ela não aparece duas vezes.
+    assert lista[2]["titulo"] == "Ementa de PL 1/2026" and lista[2]["muda"] == "" and not lista[2]["de_resumo"]
+
+
+def test_primeira_frase_corta_no_fim_da_frase():
+    assert painel.primeira_frase("Curta.") == "Curta."
+    assert painel.primeira_frase("Uma frase. " + "palavra " * 60, 40) == "Uma frase."
