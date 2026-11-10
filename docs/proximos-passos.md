@@ -23,6 +23,7 @@ Ideias soltas anotadas durante o uso ficam em [notes.txt](../notes.txt).
 - [x] 6C, legislatura de 2027: badges, eleitos e quem está fora de exercício.
 - [ ] 6A, perfil completo para os deputados em exercício (branch `rollout-6a`). Aguardando validação.
 - [x] 6B, senadores: publicado em 07/11/2026. Conferir a primeira coleta automática do Senado (segunda, 09/11) e os 10 marcados como "Sem candidatura em 2026". Perfil completo, lista comparável, eleitos e badges. Coleta em `lote_senado.py`.
+- [x] Página inicial v2 (10/11/2026): destaques por regra fixa, pauta com títulos simples, assuntos do mês, entrada por estado, 27 páginas de estado e a lista completa em votacoes.html. Resumos por IA ligados (segredo ANTHROPIC_API_KEY). Próximas etapas do plano: assuntos agrupados, busca simples, comparar lado a lado e custo do mandato, acompanhar temas.
 
 Como funciona: `lote.py` coleta todos numa passada só e `pacote.py` empacota em um anexo da release `dados-perfis`, porque são centenas de MB que mudam toda semana. O Git guarda só `data/perfis_versao.json`, com o nome e o checksum. O build da Vercel baixa essa versão, e se o download falhar o build falha e o site continua como está. O robô `perfis.yml` faz isso toda segunda. Rodar à mão: `gh workflow run perfis.yml`.
 
