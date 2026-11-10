@@ -138,3 +138,19 @@ def test_baixar_pdf_tenta_de_novo_em_erro_do_servidor(monkeypatch):
     http = httpx.Client(transport=httpx.MockTransport(lambda _r: next(respostas)))
     assert resumos_ia.baixar_pdf("https://exemplo/teor", http) == b"%PDF"
     assert resumos_ia.baixar_pdf(None, http) is None
+
+
+def test_texto_longo_perde_as_ultimas_frases_e_nao_o_resumo(tmp_path):
+    longo = "Primeira frase curta. " + "Outra frase do resumo com algum detalhe. " * 30
+    cliente = ClienteFalso([resposta({**RESUMO, "o_que_muda": longo})])
+    saida = tmp_path / "resumos.json"
+    resumos_ia.atualizar(doc(PROP), saida, cliente, http_falso())
+    guardado = json.loads(saida.read_text(encoding="utf-8"))["resumos"]["PLP 186/2026"]
+    assert guardado["o_que_muda"].startswith("Primeira frase curta.")
+    assert len(guardado["o_que_muda"]) <= resumos_ia.LIMITES["o_que_muda"] and guardado["o_que_muda"].endswith(".")
+
+
+def test_mudar_a_instrucao_refaz_os_resumos(monkeypatch):
+    antes = resumos_ia.impressao_digital(PROP)
+    monkeypatch.setattr(resumos_ia, "VERSAO_INSTRUCOES", resumos_ia.VERSAO_INSTRUCOES + 1)
+    assert resumos_ia.impressao_digital(PROP) != antes

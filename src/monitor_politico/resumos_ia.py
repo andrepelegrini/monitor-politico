@@ -14,6 +14,7 @@ from __future__ import annotations
 import base64
 import hashlib
 import json
+import re
 import sys
 import time
 from datetime import datetime, timezone
@@ -28,6 +29,8 @@ MODELO = "claude-opus-5-5"
 MAX_POR_EXECUCAO = 30  # teto de custo por coleta; o que sobrar fica para a próxima
 MAX_PDF_BYTES = 30 * 1024 * 1024  # a API aceita até 32 MB por requisição
 LIMITES = {"titulo": 90, "o_que_muda": 900, "quem_e_afetado": 400}
+# Muda quando a instrução muda, para refazer os resumos com a regra nova.
+VERSAO_INSTRUCOES = 2
 
 INSTRUCOES = """\
 Você escreve resumos de proposições legislativas brasileiras para um site público \
@@ -37,15 +40,20 @@ ou opinião. Os leitores são cidadãos sem formação jurídica.
 Com base no texto oficial anexado e na ementa, produza:
 - titulo: um título curto (até 80 caracteres) que diga do que trata a proposição, \
 em linguagem simples. Sem o número da proposição.
-- o_que_muda: de 2 a 4 frases sobre o que a proposição muda ou cria, com os números \
-e prazos concretos que estiverem no texto (valores, limites, datas).
-- quem_e_afetado: 1 ou 2 frases sobre quem é diretamente afetado.
+- o_que_muda: de 2 a 4 frases curtas sobre o que a proposição muda ou cria, com os \
+números e prazos concretos que estiverem no texto (valores, limites, datas), em no \
+máximo 600 caracteres. A primeira frase deve resumir sozinha a mudança principal, em \
+até 200 caracteres, porque ela aparece sozinha na página inicial do site.
+- quem_e_afetado: 1 ou 2 frases sobre quem é diretamente afetado, em no máximo 300 \
+caracteres.
 
 Regras:
 - Descreva o que o texto diz; não avalie se é bom ou ruim, não atribua intenções \
 e não use adjetivos valorativos.
 - Use só informações do texto e da ementa. Se o anexo não contiver o texto da \
 proposição (por exemplo, só um ofício), baseie-se na ementa e não invente detalhes.
+- Fale da proposição, não do documento: não comente o anexo, a ementa ou diferenças \
+entre eles. Se faltar informação, escreva só o que se sabe.
 - Escreva em português do Brasil, frases diretas, sem jargão; explique termos \
 técnicos inevitáveis.
 """
@@ -66,9 +74,18 @@ class ResumoInvalido(RuntimeError):
     pass
 
 
+def _frases_que_cabem(texto: str, limite: int) -> str:
+    escolhido = ""
+    for frase in re.split(r"(?<=[.!?])\s+", texto):
+        if len(escolhido) + len(frase) + 1 > limite:
+            break
+        escolhido = f"{escolhido} {frase}".strip()
+    return escolhido
+
+
 def impressao_digital(prop: dict[str, Any]) -> str:
     """Muda quando a ementa ou o documento de origem mudam, o que pede um novo resumo."""
-    fonte = json.dumps([prop.get("ementa"), prop.get("url_inteiro_teor")], ensure_ascii=False)
+    fonte = json.dumps([prop.get("ementa"), prop.get("url_inteiro_teor"), VERSAO_INSTRUCOES], ensure_ascii=False)
     return hashlib.sha256(fonte.encode("utf-8")).hexdigest()[:16]
 
 
@@ -141,7 +158,11 @@ def gerar(cliente: Any, prop: dict[str, Any], pdf: Optional[bytes]) -> dict[str,
         if not valor:
             raise ResumoInvalido(f"campo vazio: {campo}")
         if len(valor) > limite:
-            raise ResumoInvalido(f"{campo} longo demais ({len(valor)} caracteres)")
+            # Um texto longo demais perde as últimas frases, e não o resumo inteiro. O título não se corta.
+            cortado = _frases_que_cabem(valor, limite) if campo != "titulo" else ""
+            if not cortado:
+                raise ResumoInvalido(f"{campo} longo demais ({len(valor)} caracteres)")
+            valor = cortado
         resumo[campo] = valor
     return resumo
 
