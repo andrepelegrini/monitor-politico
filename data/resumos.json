@@ -1,0 +1,175 @@
+{
+ "resumos": {
+  "PDL 274/2026": {
+   "titulo": "Aprova acordo do Mercosul para reconhecer medidas de proteção a mulheres",
+   "o_que_muda": "O projeto aprova o texto de um acordo assinado em Assunção, no Paraguai, em 20 de julho de 2022, entre os países do Mercosul e os Estados Associados (países que participam do bloco sem ser membros plenos). Pelo nome, o acordo trata do reconhecimento mútuo, entre esses países, de medidas de proteção a mulheres em situação de violência de gênero. O texto do acordo em si não está no documento anexado, que contém apenas o decreto de aprovação. O decreto determina que qualquer ato que leve à saída do Brasil do acordo (chamada denúncia), à revisão dele ou a ajustes que criem custos ou compromissos pesados para o país precisará de nova aprovação do Congresso, e que o decreto entra em vigor na data de sua publicação.",
+   "quem_e_afetado": "Mulheres em situação de violência de gênero que tenham medidas de proteção no Brasil ou nos demais países do Mercosul e Estados Associados. Também são afetadas as autoridades desses países responsáveis por aplicar essas medidas.",
+   "fonte": "texto integral",
+   "fonte_hash": "a24609eebd9d74cd",
+   "modelo": "claude-opus-5-5",
+   "gerado_em": "2026-11-10T12:09:24+00:00"
+  },
+  "PDL 934/2025": {
+   "titulo": "Aprovação do Acordo de Escazú sobre informação e participação em temas ambientais",
+   "o_que_muda": "O Congresso aprova o texto do Acordo de Escazú, um tratado da América Latina e do Caribe sobre acesso à informação, participação pública e acesso à Justiça em assuntos ambientais, assinado em Nova York em 27 de setembro de 2018. O texto declara que o acordo deve ser aplicado de acordo com a Constituição e as leis brasileiras, sem limitar as competências do país e mantendo as regras de proteção de dados, inclusive a Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018). Prevê a proteção das informações que identifiquem produtores rurais e suas propriedades. Qualquer ato que possa levar à saída do Brasil do acordo (chamada denúncia) ou à sua revisão, assim como ajustes que gerem custos ou compromissos pesados ao patrimônio nacional, precisará de nova aprovação do Congresso; o decreto vale a partir da publicação.",
+   "quem_e_afetado": "São afetados os órgãos públicos responsáveis por informações e decisões ambientais e os cidadãos que buscam informação, participação ou acesso à Justiça nesses temas. O texto menciona também os produtores rurais, cujas informações identificáveis e de suas propriedades ficam protegidas.",
+   "fonte": "texto integral",
+   "fonte_hash": "2312ed43f2f78120",
+   "modelo": "claude-opus-5-5",
+   "gerado_em": "2026-11-10T12:11:41+00:00"
+  },
+  "PEC 221/2019": {
+   "titulo": "Redução da jornada máxima de trabalho para 36 horas semanais em 10 anos",
+   "o_que_muda": "A proposta muda a Constituição para reduzir o limite da jornada normal de trabalho de 44 para 36 horas por semana, mantendo o máximo de 8 horas por dia. Continua permitido compensar horários e reduzir a jornada por meio de acordo ou convenção coletiva, que são negociações entre empresas e sindicatos. A mudança só passaria a valer 10 anos depois da publicação da emenda. O texto da emenda não trata de salários.",
+   "quem_e_afetado": "Trabalhadores com direitos garantidos pelo artigo 7º da Constituição, como os empregados urbanos e rurais com carteira assinada. Também são afetados os empregadores, que teriam de seguir o novo limite de horas semanais.",
+   "fonte": "texto integral",
+   "fonte_hash": "e784e40f5d8d1052",
+   "modelo": "claude-opus-5-5",
+   "gerado_em": "2026-11-10T12:11:23+00:00"
+  },
+  "PL 1123/2025": {
+   "titulo": "SUS passa a ser obrigado a aceitar exames feitos em serviços privados",
+   "o_que_muda": "O projeto inclui um novo artigo na Lei Orgânica da Saúde (Lei nº 8.080/1990) que obriga as unidades do SUS a aceitar exames realizados em serviços privados de saúde, como laboratórios particulares. O prazo de validade desses exames, os requisitos técnicos e os padrões de qualidade exigidos serão definidos em regulamento do órgão federal que administra o SUS (o Ministério da Saúde). A lei entraria em vigor na data de sua publicação.",
+   "quem_e_afetado": "São afetados os pacientes atendidos pelo SUS que fizeram exames na rede privada e as unidades públicas de saúde, que passariam a ter de aceitar esses exames. Também é afetado o órgão federal gestor do SUS, responsável por definir as regras de validade e qualidade.",
+   "fonte": "texto integral",
+   "fonte_hash": "dae1c0cdf3820179",
+   "modelo": "claude-opus-5-5",
+   "gerado_em": "2026-11-10T12:10:08+00:00"
+  },
+  "PL 1435/2023": {
+   "titulo": "Cartazes sobre manobra contra engasgo e campanha nacional Recrutando Anjos",
+   "o_que_muda": "O texto original obriga a afixação de cartazes ilustrados sobre a Manobra de Heimlich, uma compressão na região do abdômen usada para desobstruir as vias respiratórias de uma pessoa engasgada. Os cartazes devem ficar em local de fácil visualização e trazer o passo a passo ilustrado da manobra em adultos e em bebês, os telefones 192 (Samu) e 193, e uma mensagem de rodapé sobre o uso das informações em emergências, com a lei valendo a partir da data de publicação. Segundo a nova ementa, a versão atualizada da proposta também cria a campanha nacional permanente Recrutando Anjos e altera o Estatuto da Criança e do Adolescente (Lei nº 8.069/1990), mas o texto anexado não traz os detalhes dessas mudanças.",
+   "quem_e_afetado": "Escolas públicas e privadas de educação infantil e ensino fundamental, locais de recreação como buffets infantis, parques, clubes e hotéis, e estabelecimentos que vendem alimentos para consumo no local, que teriam de afixar os cartazes. Também são afetadas as pessoas que frequentam esses lugares, que teriam acesso às instruções de socorro.",
+   "fonte": "texto integral",
+   "fonte_hash": "f3f768efaba5c7c6",
+   "modelo": "claude-opus-5-5",
+   "gerado_em": "2026-11-10T12:10:20+00:00"
+  },
+  "PL 3220/2025": {
+   "titulo": "Cria o Dia Nacional da Consolidação da Independência do Brasil em 2 de julho",
+   "o_que_muda": "O projeto cria o Dia Nacional da Consolidação da Independência do Brasil, a ser comemorado todos os anos em 2 de julho. Segundo a justificativa enviada pelo Ministério da Cultura, a data se refere a 2 de julho de 1823, quando tropas portuguesas foram expulsas de Salvador, na Bahia. O texto não transforma a data em feriado nem prevê outras medidas. A lei passaria a valer na data de sua publicação.",
+   "quem_e_afetado": "A medida inclui uma data comemorativa no calendário oficial do país. O texto não cria obrigações para cidadãos, empresas ou órgãos públicos.",
+   "fonte": "texto integral",
+   "fonte_hash": "6725e8adb6f4e08d",
+   "modelo": "claude-opus-5-5",
+   "gerado_em": "2026-11-10T12:08:14+00:00"
+  },
+  "PL 3507/2026": {
+   "titulo": "Reconhece o artesanato tradicional do Maranhão como cultura nacional",
+   "o_que_muda": "O projeto reconhece, por lei, o artesanato tradicional do Maranhão como manifestação da cultura nacional, citando sua importância como expressão do saber tradicional, da identidade das comunidades e como atividade de economia criativa (setor que gera renda a partir da cultura e da criatividade). O texto permite, mas não obriga, que o governo federal adote medidas para proteger, incentivar, valorizar e preservar esse artesanato. O projeto não define medidas específicas, valores ou prazos, e a lei entraria em vigor na data de sua publicação.",
+   "quem_e_afetado": "São diretamente afetados os artesãos maranhenses, que segundo a justificativa do projeto somam mais de 4 mil cadastrados, incluindo moradores de aldeias indígenas e comunidades quilombolas. Também é afetado o Poder Executivo federal, que passa a ter autorização legal para adotar ações voltadas a esse artesanato.",
+   "fonte": "texto integral",
+   "fonte_hash": "718216748f9a3b07",
+   "modelo": "claude-opus-5-5",
+   "gerado_em": "2026-11-10T12:07:28+00:00"
+  },
+  "PL 4674/2024": {
+   "titulo": "Ultrassom morfológico gratuito para gestantes na rede pública de saúde",
+   "o_que_muda": "O projeto garante a gestantes de todo o país o direito de fazer gratuitamente, na rede pública de saúde, o ultrassom morfológico, um exame de imagem que acompanha o desenvolvimento do bebê e pode identificar malformações, seguindo os protocolos do Ministério da Saúde e conforme indicação médica. Quando o exame for indicado e não for realizado, isso será considerado negligência médica, e os profissionais ficarão sujeitos às penalidades do Código de Ética Médica. O Ministério da Saúde deverá informar as gestantes sobre o exame com folhetos, cartazes, vídeos e campanhas em redes sociais e canais públicos, incluindo os critérios de agendamento. A lei entraria em vigor na data de sua publicação.",
+   "quem_e_afetado": "Gestantes atendidas na rede pública de saúde, os profissionais de saúde que fazem o acompanhamento pré-natal e o Ministério da Saúde, responsável pelas ações de informação.",
+   "fonte": "texto integral",
+   "fonte_hash": "e7489b9aa65927d2",
+   "modelo": "claude-opus-5-5",
+   "gerado_em": "2026-11-10T12:08:44+00:00"
+  },
+  "PL 5239/2025": {
+   "titulo": "Primeira consulta ginecológica no SUS para meninas a partir dos 10 anos",
+   "o_que_muda": "O projeto prevê que o SUS ofereça uma primeira consulta ginecológica informativa e preventiva para meninas a partir dos 10 anos, e que profissionais de saúde sejam orientados a encaminhar para essa consulta meninas com sinais de início da puberdade. O Ministério da Saúde deverá criar, em até 180 dias após a publicação da lei, o \"Protocolo Menarca\" (menarca é a primeira menstruação), com temas como vacinação contra o HPV (a partir dos 9 anos), higiene íntima, preparação para a primeira menstruação, métodos contraceptivos oferecidos pelo SUS e acompanhamento da puberdade, além de garantir vacinas e materiais educativos nas unidades de saúde. A consulta será acompanhada por um responsável e, quando necessário, por equipe com psicólogos e enfermeiros, e as secretarias estaduais e municipais de saúde deverão oferecer formação contínua aos profissionais, especialmente ginecologistas.",
+   "quem_e_afetado": "São afetadas meninas a partir dos 10 anos atendidas pelo SUS e seus responsáveis. Também são afetados o Ministério da Saúde, as secretarias estaduais e municipais de saúde e os profissionais de saúde que farão os encaminhamentos e os atendimentos.",
+   "fonte": "texto integral",
+   "fonte_hash": "afc702505bea598f",
+   "modelo": "claude-opus-5-5",
+   "gerado_em": "2026-11-10T12:09:32+00:00"
+  },
+  "PL 565/2020": {
+   "titulo": "Profissionais da atenção básica do SUS devem fazer educação em saúde para famílias",
+   "o_que_muda": "O projeto acrescenta o artigo 30-A à Lei nº 8.080/1990 (Lei Orgânica da Saúde, que organiza o SUS). O novo artigo determina que os profissionais que atuam na atenção básica do SUS (o primeiro nível de atendimento, como postos de saúde e equipes de Saúde da Família) deverão promover ações de educação em saúde voltadas à família, para prevenir doenças e agravos. O texto não fixa valores, metas ou prazos específicos para essas ações, e a lei entraria em vigor na data de sua publicação.",
+   "quem_e_afetado": "São diretamente afetados os profissionais que prestam serviço ao SUS na atenção básica, que passariam a ter essa obrigação prevista em lei. Também são afetadas as famílias atendidas pela rede básica de saúde, público das ações de educação em saúde.",
+   "fonte": "texto integral",
+   "fonte_hash": "51a6f132323876ec",
+   "modelo": "claude-opus-5-5",
+   "gerado_em": "2026-11-10T12:07:35+00:00"
+  },
+  "PL 5902/2023": {
+   "titulo": "Cria crime de usar drone para entregar objetos a presos",
+   "o_que_muda": "O projeto cria um novo crime no Código Penal (artigo 354-A): invadir o espaço aéreo de presídios com drone para entregar objetos a presos. A pena prevista é de reclusão (prisão que pode ser cumprida inicialmente em regime fechado) de 1 a 5 anos, além de multa. A lei entraria em vigor na data de sua publicação. A ementa e o artigo 1º citam o Código Penal (Decreto-Lei nº 2.848/1940), mas o artigo 2º menciona o Decreto-Lei nº 3.689/1941, que é o Código de Processo Penal.",
+   "quem_e_afetado": "Pessoas que usem drones para levar objetos a presos dentro de presídios passariam a responder por esse crime. A medida também envolve a administração dos presídios, a polícia e o Judiciário, responsáveis por fiscalizar, investigar e julgar esses casos.",
+   "fonte": "texto integral",
+   "fonte_hash": "5bba054874906f8b",
+   "modelo": "claude-opus-5-5",
+   "gerado_em": "2026-11-10T12:08:35+00:00"
+  },
+  "PL 5974/2023": {
+   "titulo": "Permite adaptar obras em linguagem simples para pessoas com deficiência intelectual",
+   "o_que_muda": "O projeto altera a Lei de Direitos Autorais (Lei nº 9.610, de 1998) para incluir um novo caso em que a reprodução de obras não é considerada violação do direito do autor. Passa a ser permitido reproduzir obras literárias, artísticas ou científicas em linguagem simples (texto adaptado com frases curtas e palavras fáceis de entender), desde que seja para uso exclusivo de pessoas com deficiência intelectual e sem fins comerciais. Nesses casos, não seria necessária a autorização do autor. A lei entraria em vigor na data de sua publicação.",
+   "quem_e_afetado": "Pessoas com deficiência intelectual, que poderiam ter acesso a obras adaptadas, e quem fizer essas adaptações sem fins comerciais. Também são afetados autores e detentores de direitos autorais, cujas obras poderiam ser adaptadas nessas condições sem sua autorização.",
+   "fonte": "texto integral",
+   "fonte_hash": "40d7f9a1a202c5d6",
+   "modelo": "claude-opus-5-5",
+   "gerado_em": "2026-11-10T12:07:19+00:00"
+  },
+  "PL 6683/2025": {
+   "titulo": "Regras de segurança para implantes cirúrgicos e aviso obrigatório de falhas",
+   "o_que_muda": "Proíbe fabricar implantes cirúrgicos com materiais muito tóxicos, que causem alergia ou sem biocompatibilidade comprovada (ou seja, sem prova de que não provocam reação prejudicial no corpo). A produção, a importação e a venda de implantes no Brasil passam a depender de autorização prévia do órgão sanitário federal, que verificará se o produto segue as normas técnicas e as boas práticas de fabricação, e esse órgão definirá as especificações técnicas de segurança e qualidade. Profissionais e serviços de saúde, públicos ou privados, passam a ser obrigados a comunicar às autoridades sanitárias todos os casos de falhas detectadas em implantes. O descumprimento é tratado como infração sanitária, punida conforme a Lei nº 6.437, de 1977, sem excluir punições penais e civis, e a lei vale a partir da data de sua publicação.",
+   "quem_e_afetado": "Fabricantes, importadores e vendedores de implantes cirúrgicos, além de profissionais e serviços de saúde públicos e privados. Também atinge pacientes que recebem implantes.",
+   "fonte": "texto integral",
+   "fonte_hash": "106896bff00860a7",
+   "modelo": "claude-opus-5-5",
+   "gerado_em": "2026-11-10T12:12:24+00:00"
+  },
+  "PLP 109/2025": {
+   "titulo": "ANP poderá acessar notas fiscais eletrônicas de empresas de combustíveis",
+   "o_que_muda": "O projeto autoriza a Agência Nacional do Petróleo, Gás Natural e Biocombustíveis (ANP) a obter, junto aos órgãos fazendários (as secretarias e órgãos responsáveis pela cobrança de tributos), informações de documentos fiscais eletrônicos, como notas fiscais, emitidos pelas empresas que ela regula. O acesso vale para dados sobre produção, venda, transporte, estoques e preços de derivados de petróleo e gás natural, combustíveis fósseis, biocombustíveis e combustíveis sintéticos, e está ligado à concessão e à autorização para essas empresas operarem. A ANP fica obrigada a manter o sigilo fiscal dessas informações, ou seja, não pode divulgá-las. A lei entraria em vigor na data de sua publicação.",
+   "quem_e_afetado": "São afetadas as empresas que atuam em atividades reguladas pela ANP no setor de petróleo, gás natural e combustíveis, que terão seus dados fiscais compartilhados com a agência. Também são afetados a própria ANP e os órgãos fazendários, que passam a trocar essas informações.",
+   "fonte": "texto integral",
+   "fonte_hash": "f4d0085b8cd15e15",
+   "modelo": "claude-opus-5-5",
+   "gerado_em": "2026-11-10T12:12:30+00:00"
+  },
+  "PLP 186/2026": {
+   "titulo": "Aumenta o limite de faturamento do MEI e permite até dois empregados",
+   "o_que_muda": "O limite de faturamento anual para ser Microempreendedor Individual (MEI), hoje de R$ 81.000, passa para R$ 110.000 em 2027 e para R$ 140.000 a partir de 1º de janeiro de 2028. Para quem abrir o MEI no meio do ano, o limite é proporcional: R$ 9.166,67 por mês de atividade em 2027 e R$ 11.666,67 por mês a partir de 2028, com fração de mês contada como mês inteiro. A partir de 1º de janeiro de 2027, o MEI poderá ter até dois empregados que recebam um salário mínimo ou o piso da categoria, e poderá contratar substitutos, inclusive por prazo determinado, quando um empregado estiver afastado por motivo previsto em lei. O aumento do limite de faturamento depende de a perda de arrecadação ser considerada nas leis orçamentárias de 2027 a 2029.",
+   "quem_e_afetado": "Microempreendedores individuais, incluindo quem deixou de ser MEI por ter ultrapassado o limite atual de faturamento, e os trabalhadores que podem ser contratados por eles. Também são afetados os órgãos que administram o Simples Nacional, regime de impostos simplificado do qual o MEI faz parte.",
+   "fonte": "texto integral",
+   "fonte_hash": "74bd4471807b0a55",
+   "modelo": "claude-opus-5-5",
+   "gerado_em": "2026-11-10T12:10:52+00:00"
+  },
+  "PLP 230/2025": {
+   "titulo": "Impede bloqueio de verbas do fundo de telecomunicações e amplia desconto a operadoras",
+   "o_que_muda": "O projeto proíbe o contingenciamento, ou seja, o bloqueio temporário de gastos pelo governo, das despesas com programas e ações aprovados pelo Conselho Gestor do Fust (Fundo de Universalização dos Serviços de Telecomunicações). Também proíbe impor limites à execução dos recursos do fundo, exceto quando a arrecadação ficar abaixo do previsto, e proíbe reservar esses valores como reserva de contingência no orçamento. Pelo menos 50% das receitas do Fust em cada ano deverão ser usadas em uma modalidade específica de aplicação já prevista na lei do fundo. As operadoras de telecomunicações que executarem com recursos próprios projetos aprovados pelo Conselho Gestor poderão reduzir sua contribuição ao Fust em valor igual ao aprovado, limitado a 50% do que teriam de pagar, com esse benefício valendo por 5 anos a partir do ano fiscal seguinte à publicação da lei.",
+   "quem_e_afetado": "São afetados o governo federal, que deixa de poder bloquear os recursos do Fust, e as prestadoras de serviços de telecomunicações que contribuem para o fundo. Também são alcançados os programas financiados pelo fundo, como os de acesso à internet em escolas públicas e de cobertura de telefonia móvel em áreas sem atendimento.",
+   "fonte": "texto integral",
+   "fonte_hash": "d58f83d16d1ce7d0",
+   "modelo": "claude-opus-5-5",
+   "gerado_em": "2026-11-10T12:12:46+00:00"
+  },
+  "PRC 113/2023": {
+   "titulo": "Túnel entre os anexos II e IV da Câmara passa a se chamar José Richa",
+   "o_que_muda": "O projeto dá o nome de \"Túnel José Richa\" ao túnel que liga os prédios anexos II e IV da Câmara dos Deputados, em Brasília. A mudança passaria a valer na data de publicação da resolução. Segundo a justificativa do autor, José Richa foi deputado federal (eleito em 1962), prefeito de Londrina, senador e governador do Paraná.",
+   "quem_e_afetado": "A medida trata apenas do nome de um espaço interno da Câmara dos Deputados. Atinge a própria Câmara e as pessoas que circulam pelo túnel, sem criar obrigações ou custos previstos no texto.",
+   "fonte": "texto integral",
+   "fonte_hash": "96a19146f01b135c",
+   "modelo": "claude-opus-5-5",
+   "gerado_em": "2026-11-10T12:07:41+00:00"
+  },
+  "REC 19/2022": {
+   "titulo": "Pedido para que o Plenário vote projeto sobre penhora do faturamento de empresas",
+   "o_que_muda": "O recurso pede que o Projeto de Lei nº 3.083, de 2019, seja votado pelo Plenário da Câmara, e não apenas pelas comissões. Pelo \"poder conclusivo\", certos projetos podem ser aprovados ou rejeitados só nas comissões, sem ir ao Plenário, a menos que haja recurso como este. O projeto em questão altera os artigos 642-A e 883 da Consolidação das Leis do Trabalho (CLT) para tratar da penhora sobre o faturamento da empresa, ou seja, o bloqueio de parte do que a empresa recebe para pagar dívidas reconhecidas na Justiça do Trabalho. O recurso foi apresentado em 15/07/2022 e assinado por 56 deputados.",
+   "quem_e_afetado": "O recurso afeta a forma de tramitação do projeto na Câmara dos Deputados, levando a decisão ao conjunto dos deputados no Plenário. O projeto, se aprovado, alcançaria empresas com dívidas trabalhistas cobradas na Justiça e os trabalhadores que buscam receber esses valores.",
+   "fonte": "texto integral",
+   "fonte_hash": "9520c54f21df2279",
+   "modelo": "claude-opus-5-5",
+   "gerado_em": "2026-11-10T12:08:52+00:00"
+  },
+  "REC 68/2019": {
+   "titulo": "Pedido para levar ao Plenário projeto sobre parcerias do INPI",
+   "o_que_muda": "O recurso pede que o Projeto de Lei 2334/2019, que permite ao Instituto Nacional da Propriedade Industrial (INPI) firmar convênios ou parcerias, seja votado pelo Plenário da Câmara, e não apenas pelas comissões. Pela regra da tramitação conclusiva, certos projetos podem ser aprovados ou rejeitados só nas comissões temáticas, sem passar pelo Plenário; o recurso, previsto no Regimento Interno da Câmara (art. 58, §§ 1º e 3º, e art. 132, § 2º), contesta essa forma de tramitação. O recurso foi apresentado em 10/12/2019 pelo deputado Alexandre Padilha (PT/SP) e não altera o conteúdo do projeto, apenas o caminho de votação.",
+   "quem_e_afetado": "Afeta a tramitação do projeto do deputado Marcos Pereira (PRB/SP) na Câmara dos Deputados, cuja decisão passaria a depender do voto de todos os deputados em Plenário. Indiretamente, envolve o INPI, órgão citado no projeto.",
+   "fonte": "texto integral",
+   "fonte_hash": "d83d8d555fdae2a2",
+   "modelo": "claude-opus-5-5",
+   "gerado_em": "2026-11-10T12:08:59+00:00"
+  }
+ }
+}
