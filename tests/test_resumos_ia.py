@@ -67,7 +67,7 @@ def test_gera_resumo_com_o_pdf_e_guarda_a_fonte(tmp_path):
     resumos_ia.atualizar(doc(PROP), saida, cliente, http_falso(), avisar=pytest.fail)
 
     pedido = cliente.pedidos[0]
-    assert pedido["model"] == "claude-opus-5-5"
+    assert pedido["model"] == "claude-sonnet-5-5"  # modelo padrão desde 11/11/2026
     assert pedido["fallbacks"] == "default"
     assert pedido["output_config"]["format"]["schema"] == resumos_ia.ESQUEMA
     documento, texto = pedido["messages"][0]["content"]
