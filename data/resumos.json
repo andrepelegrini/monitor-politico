@@ -18,6 +18,36 @@
    "modelo": "claude-opus-5-5",
    "gerado_em": "2026-11-10T12:19:29+00:00"
   },
+  "MPV 1376/2026": {
+   "titulo": "Linhas de crédito para renegociar dívidas rurais e fundo garantidor para produtores",
+   "o_que_muda": "Autoriza linhas de crédito rural para renegociar dívidas de produtores com perdas de safra, com juros de 6% a 12% ao ano e prazo de até 8 anos. Os limites vão de R$ 400 mil a R$ 4 milhões por produtor, conforme o porte. Quem teve perdas em três ou mais safras e queda de renda de 40% tem limites maiores, juros menores e até 10 anos. Contratação em até 120 dias. Autoriza a União a participar de um fundo garantidor.",
+   "quem_e_afetado": "Produtores rurais e cooperativas de produção agropecuária com perdas em duas ou mais safras entre 2019 e 2025, comprovadas por laudo, além de bancos e outras instituições financeiras que concedem crédito rural.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 15688,
+    "saida": 320
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "2d45e8579cac3c44",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-11T17:02:40+00:00"
+  },
+  "MPV 1379/2026": {
+   "titulo": "Mais R$ 13,5 bilhões para crédito a exportadores do Plano Brasil Soberano",
+   "o_que_muda": "Amplia em até R$ 13,5 bilhões o limite de recursos das linhas de financiamento do Plano Brasil Soberano, que apoiam empresas exportadoras. O dinheiro vem de valores devolvidos à União em 2026 pelo BNDES. Esses recursos podem ser combinados com recursos do próprio BNDES. O plano de aplicação será proposto pelo BNDES e aprovado por um conselho interministerial criado pelo Poder Executivo.",
+   "quem_e_afetado": "Empresas exportadoras e seus fornecedores que podem usar as linhas de financiamento do Plano Brasil Soberano, além do BNDES e do conselho interministerial que aprovará o plano de aplicação.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 7767,
+    "saida": 303
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "de5a959198cdf4c2",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-11T17:02:36+00:00"
+  },
   "PDL 274/2026": {
    "titulo": "Acordo do Mercosul para reconhecer medidas de proteção a mulheres",
    "o_que_muda": "O Congresso aprova o acordo em que países do Mercosul reconhecem entre si as medidas de proteção a mulheres em situação de violência de gênero. O acordo foi assinado em Assunção, no Paraguai, em 20 de julho de 2022, pelos países do Mercosul e pelos Estados associados. Revisões do acordo, a saída do Brasil (chamada denúncia) ou ajustes que gerem custos ou compromissos pesados ao país precisarão de nova aprovação do Congresso. O decreto vale a partir da publicação.",
@@ -36,6 +66,66 @@
    "modelo": "claude-opus-5-5",
    "gerado_em": "2026-11-10T12:21:27+00:00"
   },
+  "PEC 137/2019": {
+   "titulo": "Define a educação como vetor do progresso do País na Constituição",
+   "o_que_muda": "Muda o artigo 205 da Constituição para dizer que a educação é \"vetor do progresso do País\". O texto mantém que a educação é direito de todos e dever do Estado e da família. Ela será promovida e incentivada com a colaboração da sociedade, visando ao pleno desenvolvimento da pessoa, ao preparo para a cidadania e à qualificação para o trabalho. A emenda entra em vigor na data de sua publicação.",
+   "quem_e_afetado": "O texto é geral e se refere a toda a população, ao Estado, à família e à sociedade, que aparecem no artigo 205 como responsáveis pela educação.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 1432,
+    "saida": 255
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "8df485fa028d44ed",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-11T17:03:32+00:00"
+  },
+  "PEC 14/2021": {
+   "titulo": "Vínculo efetivo e aposentadoria especial para agentes de saúde e de endemias",
+   "o_que_muda": "Cria um sistema de proteção social para agentes comunitários de saúde e agentes de combate às endemias, com admissão por processo seletivo público e vínculo efetivo. Prevê aposentadoria especial e pensão integrais após 25 anos de atuação exclusiva nas funções. A União daria ajuda financeira para o piso salarial nacional, sem contar nos limites de gastos com pessoal. Quem já atua com vínculo temporário ou precário e passou em seleção após 14/02/2006 seria admitido como efetivo.",
+   "quem_e_afetado": "Agentes comunitários de saúde e agentes de combate às endemias, em especial os com vínculo temporário ou precário. Também gestores locais do SUS, que ficam impedidos de firmar convênios com repasses da União enquanto o vínculo estiver irregular.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 15951,
+    "saida": 333
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "c03820f8465fe94d",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-11T17:02:45+00:00"
+  },
+  "PEC 169/2019": {
+   "titulo": "Permite acumular cargo de professor com outro cargo público de qualquer tipo",
+   "o_que_muda": "Altera o art. 37 da Constituição para permitir que uma pessoa acumule, com remuneração, um cargo de professor com outro cargo de qualquer natureza. Hoje, a Constituição permite acumular o cargo de professor apenas com outro cargo técnico ou científico. A emenda passaria a valer na data de sua publicação.",
+   "quem_e_afetado": "Professores e demais servidores públicos que queiram ocupar dois cargos ao mesmo tempo, sendo um deles de professor, e os órgãos públicos que os contratam.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 2492,
+    "saida": 232
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "43456e42550762e8",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-11T17:03:03+00:00"
+  },
+  "PEC 18/2024": {
+   "titulo": "Inclui o Pantanal Sul-Mato-Grossense como patrimônio nacional na Constituição",
+   "o_que_muda": "A proposta inclui o Pantanal Sul-Mato-Grossense na lista de patrimônio nacional da Constituição, ao lado do Pantanal Mato-Grossense. A lista já traz a Floresta Amazônica, a Mata Atlântica, a Serra do Mar e a Zona Costeira. A utilização desses biomas continua dependendo de lei e de condições que assegurem a preservação do meio ambiente. A emenda vale a partir da publicação.",
+   "quem_e_afetado": "Atinge quem usa ou explora recursos naturais do Pantanal em Mato Grosso do Sul, como produtores rurais e empresas, e os órgãos públicos que aplicam as regras ambientais.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 1595,
+    "saida": 297
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "d472b82f58e76a8b",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-11T17:03:52+00:00"
+  },
   "PEC 18/2025": {
    "titulo": "Segurança pública: papel da União, polícias federais e guardas municipais",
    "o_que_muda": "A União passa a definir a política nacional de segurança pública e a coordenar o sistema único da área e o sistema penitenciário. A Polícia Rodoviária Federal vira polícia viária federal, que patrulha também ferrovias e hidrovias, e a Polícia Federal passa a apurar crimes de organizações criminosas e milícias com alcance interestadual ou internacional. Guardas municipais poderão fazer policiamento ostensivo, sob controle do Ministério Público. Os fundos de segurança e penitenciário não poderão ter verba bloqueada, e haverá corregedorias e ouvidorias autônomas.",
@@ -45,6 +135,36 @@
    "modelo": "claude-opus-5-5",
    "gerado_em": "2026-11-10T12:18:50+00:00"
   },
+  "PEC 2/2016": {
+   "titulo": "Inclui o saneamento básico entre os direitos sociais da Constituição",
+   "o_que_muda": "Inclui o saneamento básico na lista de direitos sociais do artigo 6º da Constituição, ao lado de educação, saúde, alimentação, trabalho e moradia. A mudança é feita na redação do artigo, sem criar outras regras. A emenda entra em vigor na data de sua publicação.",
+   "quem_e_afetado": "Toda a população brasileira, por ser titular dos direitos sociais previstos na Constituição, e o poder público, a quem cabe orientar políticas conforme esses direitos.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 4010,
+    "saida": 217
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "63409b32ef82663c",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-11T17:03:45+00:00"
+  },
+  "PEC 22/2025": {
+   "titulo": "Política de apoio ao transporte rodoviário e regras de descanso do motorista",
+   "o_que_muda": "Cria a Política Nacional de Apoio ao Transporte Rodoviário Profissional, para garantir locais de repouso nas rodovias. Em viagens de longa distância (mais de 24 horas), o descanso diário será de ao menos 11 horas, com no mínimo 8 horas seguidas. Enquanto faltarem locais de repouso, o descanso poderá ser fracionado; para empregados, isso exige acordo ou convenção coletiva.",
+   "quem_e_afetado": "Motoristas profissionais de cargas e de passageiros, empregados ou autônomos, e as empresas de transporte. Também afeta a União, os estados e os municípios, que devem articular a oferta de locais de repouso.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 3027,
+    "saida": 286
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "dc9e1bd0db5990e5",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-11T17:02:56+00:00"
+  },
   "PEC 221/2019": {
    "titulo": "Redução da jornada máxima de trabalho para 36 horas semanais",
    "o_que_muda": "Reduz o limite da jornada normal de trabalho previsto na Constituição de 44 para 36 horas semanais, com a mudança valendo 10 anos após a publicação. O limite diário continua sendo de 8 horas. Continua permitido compensar horários e reduzir a jornada por acordo ou convenção coletiva de trabalho, que são negociações entre empregadores e sindicatos.",
@@ -53,6 +173,246 @@
    "fonte_hash": "7f6c61ae94c424cf",
    "modelo": "claude-opus-5-5",
    "gerado_em": "2026-11-10T12:21:09+00:00"
+  },
+  "PEC 26/2022": {
+   "titulo": "Eleição da direção de Tribunais de Justiça com 150 ou mais desembargadores",
+   "o_que_muda": "Nos Tribunais de Justiça com 150 ou mais desembargadores, a direção do tribunal passa a ser eleita entre os membros do tribunal pleno. A eleição é por maioria absoluta, com voto direto e secreto. O mandato é de dois anos, com no máximo uma recondução seguida. A mudança entra em vigor na data da publicação da emenda.",
+   "quem_e_afetado": "Desembargadores dos Tribunais de Justiça com 150 ou mais membros, que votam e podem ser eleitos para os cargos de direção. Os demais Tribunais de Justiça não são alcançados.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 10331,
+    "saida": 259
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "36f38030b0268c6f",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-11T17:04:12+00:00"
+  },
+  "PEC 3/2020": {
+   "titulo": "Segurança cibernética e de bancos: só a União faz leis; todos os entes cuidam",
+   "o_que_muda": "Passa a ser competência privativa da União fazer leis sobre transporte e transferência de valores, defesa cibernética, segurança de instituições financeiras e segurança cibernética em serviços públicos. Também passa a ser dever comum de União, estados, Distrito Federal e municípios zelar pela segurança cibernética dos serviços públicos. A emenda vale desde a data de sua publicação.",
+   "quem_e_afetado": "União, estados, Distrito Federal e municípios, que têm suas competências definidas. Também bancos e seus correspondentes, empresas de transporte de valores e órgãos que prestam serviços públicos.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 1882,
+    "saida": 262
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "475ff501548c5bab",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-11T17:04:08+00:00"
+  },
+  "PEC 3/2021": {
+   "titulo": "Muda regras de prisão, processo e medidas judiciais contra parlamentares",
+   "o_que_muda": "Altera a Constituição para mudar as regras sobre prisão, buscas e processos contra deputados e senadores. A prisão em flagrante só vale em crime inafiançável, e a Casa tem 24 horas para decidir sobre ela por maioria. Proíbe o afastamento do cargo por decisão judicial, e medidas cautelares que afetem o mandato só valem após confirmação do Plenário do STF. Buscas em gabinetes e residências ficam a cargo do STF.",
+   "quem_e_afetado": "Deputados federais, senadores e deputados estaduais, além do STF, do STJ e de juízes que atuam em investigações e processos criminais envolvendo parlamentares.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 20051,
+    "saida": 279
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "0daca31351621eee",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-11T17:03:24+00:00"
+  },
+  "PEC 302/2017": {
+   "titulo": "Tribunais de Contas como órgãos permanentes e proibição de sua extinção",
+   "o_que_muda": "Altera a Constituição para dizer que os Tribunais de Contas são instituições permanentes e essenciais ao controle externo da administração pública. O texto também proíbe a extinção dos Tribunais, Conselhos ou Tribunais de Contas dos Municípios que auxiliam o controle das Câmaras Municipais. As regras da seção sobre fiscalização contábil valem, no que couber, para os tribunais estaduais, do Distrito Federal e municipais. A emenda vale a partir da publicação.",
+   "quem_e_afetado": "Tribunais de Contas dos Estados, do Distrito Federal e dos Municípios, as Câmaras Municipais que contam com seu auxílio e os governos estaduais e municipais que os fiscalizam.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 5325,
+    "saida": 303
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "e47fd4d17ca66d2e",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-11T17:03:20+00:00"
+  },
+  "PEC 31/2007": {
+   "titulo": "Reforma tributária: unifica o ICMS e integra impostos sobre o consumo",
+   "o_que_muda": "Unifica as regras do ICMS em todo o país, com no máximo seis alíquotas definidas pelo Senado, entre 7% e 25%. Cria um imposto federal sobre receita ou faturamento e um sistema que permite usar créditos de ICMS, IPI, ISS e desse imposto uns contra os outros. Mantém incentivos fiscais estaduais já concedidos por 3, 7 ou 11 anos, conforme o tipo, e proíbe novos. Cria adicional de 1% do imposto de renda e do IPI para fundos de Estados e de Municípios por 20 anos.",
+   "quem_e_afetado": "Empresas que pagam ICMS, IPI, ISS, PIS e Cofins, os Estados, o Distrito Federal, os Municípios e a União. Também atinge beneficiários de incentivos fiscais estaduais e Municípios com precatórios a pagar.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 33143,
+    "saida": 355
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "dfec7ab42a1d8fdc",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-11T17:03:59+00:00"
+  },
+  "PEC 37/2022": {
+   "titulo": "Guardas municipais e agentes de trânsito na segurança pública",
+   "o_que_muda": "Inclui as guardas ou polícias municipais e os agentes de trânsito entre os órgãos de segurança pública da Constituição. Os Municípios poderão criar guardas ou polícias municipais para proteger bens e serviços, fazer policiamento ostensivo local e comunitário e apoiar outros órgãos. Os Municípios poderão mudar por lei o nome da guarda, e as vagas serão preenchidas só por concurso ou pela transformação dos cargos atuais.",
+   "quem_e_afetado": "Municípios, guardas municipais atuais e agentes de trânsito. Também podem ser afetados os demais órgãos de segurança pública, com os quais as guardas deverão colaborar conforme a lei.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 2019,
+    "saida": 285
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "f8d1ddf8b8746459",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-11T17:03:36+00:00"
+  },
+  "PEC 383/2017": {
+   "titulo": "Garante verba mínima da União para o Sistema Único de Assistência Social",
+   "o_que_muda": "A União deverá aplicar todo ano pelo menos 1% da receita corrente líquida no financiamento do SUAS. O SUAS passa a constar na Constituição como sistema descentralizado e participativo de gestão da assistência social. Se a receita estimada diferir da realizada, a diferença será ajustada no 1º quadrimestre do ano seguinte.",
+   "quem_e_afetado": "O governo federal, que passa a ter um piso de gastos com o SUAS, e estados, municípios e Distrito Federal que operam o sistema. Também as famílias atendidas pelos serviços de assistência social.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 2803,
+    "saida": 248
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "16328c513e4af2d3",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-11T17:02:52+00:00"
+  },
+  "PEC 44/2023": {
+   "titulo": "Reserva de 5% das emendas de parlamentares para catástrofes e emergências naturais",
+   "o_que_muda": "Cada deputado ou senador poderá reservar 5% do valor de suas emendas ao orçamento para enfrentar catástrofes e emergências naturais. O dinheiro iria para o órgão federal competente, que o repassaria imediatamente aos estados e ao Distrito Federal no momento do desastre, até o valor reservado. Se não houver ocorrências que justifiquem o uso, o valor volta ao parlamentar no quarto ano da legislatura. A mudança valeria a partir da promulgação.",
+   "quem_e_afetado": "Deputados federais e senadores, que decidiriam sobre a reserva, e os estados e o Distrito Federal, que receberiam os repasses em caso de desastre. Também as populações atingidas por catástrofes.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 9389,
+    "saida": 305
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "5612941726bdd9e3",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-11T17:04:21+00:00"
+  },
+  "PEC 48/2023": {
+   "titulo": "Novas regras para a demarcação de terras indígenas na Constituição",
+   "o_que_muda": "Define que terras indígenas são as que eram ocupadas por indígenas em 5 de outubro de 1988, data da Constituição, e proíbe ampliar áreas além dos limites já demarcados. Se não havia ocupação nessa data, nem esbulho (expulsão) comprovado, ficam válidos os títulos e a posse de boa-fé de particulares, com indenização pela União em caso de desapropriação. O processo de demarcação passa a garantir participação de interessados, entes federados, possuidores e proprietários de boa-fé.",
+   "quem_e_afetado": "Povos indígenas com terras em demarcação, proprietários e possuidores de áreas reivindicadas, estados e municípios envolvidos e a União, responsável por indenizar.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 1992,
+    "saida": 295
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "81ad56c40429192d",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-11T17:03:11+00:00"
+  },
+  "PEC 5/2023": {
+   "titulo": "Imunidade de impostos para igrejas, partidos, sindicatos e entidades sociais",
+   "o_que_muda": "A proposta inclui na Constituição que a imunidade de impostos de templos, partidos, sindicatos, escolas e entidades de assistência social vale também para a compra de bens e serviços. Isso abrange o que for necessário para formar patrimônio, gerar renda e prestar serviços. A mudança entra em vigor na data da publicação da emenda.",
+   "quem_e_afetado": "Templos de qualquer culto, partidos políticos e suas fundações, sindicatos de trabalhadores e instituições de educação e assistência social sem fins lucrativos. Também afeta quem cobra impostos sobre as compras dessas entidades.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 16978,
+    "saida": 263
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "7387376897752948",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-11T17:02:49+00:00"
+  },
+  "PEC 54/2024": {
+   "titulo": "Mudanças na Constituição sobre salários, Fundeb, abono salarial e receitas da União",
+   "o_que_muda": "Altera a Constituição em vários pontos: parcelas indenizatórias previstas em lei nacional não contam para o teto remuneratório do serviço público. Prorroga até 31/12/2032 a desvinculação de 30% das receitas da União com contribuições sociais, taxas e outras. Em 2025, até 10% da complementação da União ao Fundeb pode ir para matrículas em tempo integral. Desde 2026, estados e municípios destinam no mínimo 4% dos recursos do Fundeb a essa finalidade.",
+   "quem_e_afetado": "Servidores públicos de todos os Poderes, estados, Distrito Federal e municípios, redes públicas de educação básica, trabalhadores do PIS/Pasep e o governo federal.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 4646,
+    "saida": 307
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "ee5e3d1e60ac4a26",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-11T17:04:04+00:00"
+  },
+  "PEC 66/2023": {
+   "titulo": "Limite de precatórios e parcelamento de dívidas previdenciárias dos Municípios",
+   "o_que_muda": "Limita o pagamento anual de precatórios (dívidas judiciais) pelos Municípios a 1% a 5% da receita corrente líquida, conforme o tamanho do estoque em atraso. Autoriza o parcelamento em até 300 prestações das dívidas previdenciárias municipais com os regimes próprios e com o INSS, com formalização em até 12 meses. Exige que Estados, DF e Municípios adotem, em 18 meses, regras previdenciárias ao menos iguais às da União. Libera parte das receitas municipais de vinculações até 2032.",
+   "quem_e_afetado": "Municípios e seus prefeitos, regimes próprios de previdência de Estados, DF e Municípios, servidores públicos e credores de precatórios municipais. Também o INSS, como credor, e a União, quanto ao uso de fundos para projetos climáticos.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 7192,
+    "saida": 344
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "7eaa0be4af960ffa",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-11T17:03:29+00:00"
+  },
+  "PEC 72/2023": {
+   "titulo": "Isenção de IPVA para veículos com 20 anos ou mais de fabricação",
+   "o_que_muda": "A proposta cria imunidade do IPVA, imposto estadual sobre veículos, para veículos com 20 anos ou mais de fabricação. Vale para veículos terrestres de passageiros, caminhonetes e veículos mistos. Ficam de fora micro-ônibus, ônibus, reboques e semirreboques. Mudaria o art. 155 da Constituição e valeria na data da publicação.",
+   "quem_e_afetado": "Proprietários de carros de passeio, caminhonetes e veículos mistos com 20 anos ou mais de fabricação, e os estados e o Distrito Federal, que cobram o IPVA.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 1467,
+    "saida": 261
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "33433043030c22a4",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-11T17:03:16+00:00"
+  },
+  "PEC 76/2019": {
+   "titulo": "Inclusão das polícias científicas entre os órgãos de segurança pública",
+   "o_que_muda": "A proposta altera a Constituição para incluir as polícias científicas na lista dos órgãos de segurança pública, ao lado das polícias civis. Elas passam a fazer, com exclusividade, a perícia oficial criminal no âmbito das polícias estaduais e distrital, ressalvada a competência da União. Cada Estado e o Distrito Federal deverão organizar sua polícia científica por lei. Onde já existir estrutura autônoma de perícia, o Governador terá 180 dias após a promulgação para enviar proposta de adequação.",
+   "quem_e_afetado": "Peritos criminais, médico-legistas e odontolegistas, as polícias científicas e civis, os governos estaduais e o do Distrito Federal, além dos Governadores, que terão o prazo de 180 dias.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 2267,
+    "saida": 313
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "68512c79416b603d",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-11T17:03:00+00:00"
+  },
+  "PEC 81/2015": {
+   "titulo": "Torna o homicídio doloso um crime que nunca prescreve",
+   "o_que_muda": "A proposta acrescenta à Constituição um inciso (LXXIX) no art. 5º dizendo que o homicídio doloso, quando há intenção de matar, é crime imprescritível. Imprescritível significa que não há prazo para o Estado punir o autor. Hoje o Código Penal, segundo o texto, prevê prescrição em 20 anos para crimes com pena máxima acima de 12 anos. A emenda entraria em vigor na data de sua publicação.",
+   "quem_e_afetado": "Pessoas acusadas ou condenadas por homicídio doloso, que poderiam ser punidas a qualquer tempo, e as famílias das vítimas. Também afeta a Justiça e o Ministério Público, que não teriam mais prazo para punir.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 2605,
+    "saida": 298
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "b5b0da385d1f08e2",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-11T17:03:39+00:00"
+  },
+  "PEC 9/2023": {
+   "titulo": "Perdão de sanções a partidos por cotas de sexo e raça e pagamento de dívidas de campanha",
+   "o_que_muda": "Proíbe sanções a partidos que não cumpriram a cota mínima de recursos ou os valores mínimos por sexo e raça nas eleições de 2022 e anteriores. Também veta sanções (devolução de valores, multa, suspensão do Fundo Partidário e do Fundo Eleitoral) nas prestações de contas anteriores à promulgação da emenda. Permite que partidos, em qualquer instância, arrecadem recursos de empresas para quitar dívidas com fornecedores contraídas até agosto de 2015.",
+   "quem_e_afetado": "Partidos políticos, em todos os níveis, que tenham pendências por cotas ou contas, ou dívidas com fornecedores de até agosto de 2015, e as empresas que poderiam doar para quitá-las.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 11130,
+    "saida": 322
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "9a7bc220ad34aa83",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-11T17:04:17+00:00"
   },
   "PL 1123/2025": {
    "titulo": "SUS obrigado a aceitar exames feitos em serviços privados de saúde",
@@ -71,6 +431,36 @@
    "fonte_hash": "2a43e0ea09a19f78",
    "modelo": "claude-opus-5-5",
    "gerado_em": "2026-11-10T12:20:01+00:00"
+  },
+  "PL 2829/2024": {
+   "titulo": "Dá o nome de Viaduto Severo Eulálio Filho a viaduto da BR-343 em Teresina",
+   "o_que_muda": "O viaduto da BR-343, na Ladeira do Uruguai, Zona Leste de Teresina (PI), passa a se chamar \"Viaduto Severo Eulálio Filho\". A lei entra em vigor na data de sua publicação.",
+   "quem_e_afetado": "Moradores de Teresina e quem usa o viaduto, que passa a ter novo nome oficial. A proposição não cria despesas nem regras de uso.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 1323,
+    "saida": 205
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "b62cb62d881feb72",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-11T17:02:24+00:00"
+  },
+  "PL 3099/2019": {
+   "titulo": "Cria o Dia Nacional do Autocuidado, em 24 de julho",
+   "o_que_muda": "Institui o Dia Nacional do Autocuidado, comemorado todo ano em 24 de julho. A data busca chamar a atenção da sociedade para as ações de cada pessoa na manutenção da vida, da saúde e do bem-estar. O texto prevê campanhas de conscientização, programas públicos e privados na Semana Nacional do Autocuidado e procedimentos e investimentos voltados a cada indivíduo. A lei passa a valer na data de sua publicação.",
+   "quem_e_afetado": "A sociedade em geral, alvo das campanhas de conscientização, e as instituições públicas e privadas que participarem dos programas previstos para a Semana Nacional do Autocuidado.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 2220,
+    "saida": 281
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "812c6d6228a777ef",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-11T17:02:21+00:00"
   },
   "PL 3220/2019": {
    "titulo": "Regras para uso de postes de energia por empresas de telecomunicações",
@@ -99,6 +489,36 @@
    "modelo": "claude-opus-5-5",
    "gerado_em": "2026-11-10T12:17:05+00:00"
   },
+  "PL 4159/2025": {
+   "titulo": "Padre Inácio de Sousa Rolim no Livro dos Heróis e Heroínas da Pátria",
+   "o_que_muda": "O projeto inscreve o nome de Padre Inácio de Sousa Rolim no Livro dos Heróis e Heroínas da Pátria. O livro fica no Panteão da Pátria e da Liberdade Tancredo Neves, em Brasília. A lei passa a valer na data de sua publicação. O texto não cria despesas, prazos ou obrigações.",
+   "quem_e_afetado": "Não há grupo diretamente afetado, pois a proposição é uma homenagem. O homenageado é Padre Rolim (1800–1899), educador que fundou um colégio em Cajazeiras, na Paraíba.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 4135,
+    "saida": 265
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "73af3e4986f62219",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-11T17:02:28+00:00"
+  },
+  "PL 4480/2025": {
+   "titulo": "Habite Seguro: crédito para policiais ameaçados e com restrição de crédito",
+   "o_que_muda": "Policiais, bombeiros e outros profissionais de segurança pública ameaçados por causa do cargo poderão usar o Habite Seguro mesmo já tendo imóvel ou financiamento. Restrição de crédito deixa de impedir o acesso se houver margem consignável suficiente para as parcelas. A ameaça deve ser comprovada por boletim de ocorrência, representação ou declaração do órgão. Se a alegação for falsa ou a denúncia rejeitada, o subsídio é devolvido com correção pela Selic.",
+   "quem_e_afetado": "Profissionais de segurança pública, ativos ou inativos, e suas famílias, além dos agentes financeiros que operam o programa. O imóvel antigo, quando o risco acabar, pode ser vendido e o valor vai ao Fundo Nacional de Segurança Pública.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 7827,
+    "saida": 337
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "aa4025aa5c5ba8b3",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-11T17:02:17+00:00"
+  },
   "PL 4674/2024": {
    "titulo": "Ultrassom morfológico gratuito para gestantes na rede pública",
    "o_que_muda": "Garante às gestantes o direito de fazer de graça, na rede pública de saúde, a ultrassonografia morfológica, exame de imagem que avalia a formação do bebê. O exame será feito conforme indicação médica, para acompanhar o desenvolvimento do feto e identificar cedo malformações e riscos. Não fazer o exame quando indicado será considerado negligência médica, sujeita às punições do Código de Ética Médica. O Ministério da Saúde deverá informar as gestantes com folhetos, cartazes, vídeos e campanhas.",
@@ -107,6 +527,21 @@
    "fonte_hash": "926ebea5229ec221",
    "modelo": "claude-opus-5-5",
    "gerado_em": "2026-11-10T12:18:16+00:00"
+  },
+  "PL 4724/2024": {
+   "titulo": "Pena em dobro para compra de votos feita por organização criminosa",
+   "o_que_muda": "A pena dos crimes do art. 299 do Código Eleitoral passa a ser aplicada em dobro quando eles forem cometidos no âmbito de associação ou organização criminosa. Esse artigo proíbe dar, oferecer, prometer, solicitar ou receber dinheiro ou outra vantagem para obter voto ou abstenção. A lei entraria em vigor na data de sua publicação.",
+   "quem_e_afetado": "Pessoas condenadas por compra de votos ou crimes do art. 299 praticados dentro de associações ou organizações criminosas. Também envolve candidatos e eleitores ligados a esses esquemas.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 2722,
+    "saida": 259
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "4212f5c294a24480",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-11T17:02:13+00:00"
   },
   "PL 5239/2025": {
    "titulo": "Primeira consulta ginecológica no SUS para meninas a partir dos 10 anos",
@@ -251,6 +686,21 @@
    "fonte_hash": "aef0cb8dbecb6bcb",
    "modelo": "claude-opus-5-5",
    "gerado_em": "2026-11-10T12:18:23+00:00"
+  },
+  "REC 20/2024": {
+   "titulo": "Recurso para que projeto sobre obras de irrigação seja votado no Plenário",
+   "o_que_muda": "O recurso pede que o Projeto de Lei 2168/2021 não seja aprovado apenas pelas comissões e passe também pela votação do Plenário da Câmara. Esse projeto altera o Código Florestal (Lei 12.651/2012) para considerar de utilidade pública as obras de infraestrutura de irrigação e de dessedentação animal (água para o gado beber). O recurso foi apresentado em 16 de agosto de 2024.",
+   "quem_e_afetado": "Os deputados que votam o projeto, pois o recurso define se ele será decidido só em comissões ou também no Plenário. O projeto trata de obras de irrigação e de água para animais.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 5018,
+    "saida": 272
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "225873f68ab3aeb6",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-11T17:02:32+00:00"
   },
   "REC 68/2019": {
    "titulo": "Pedido para levar ao Plenário projeto sobre parcerias do INPI",

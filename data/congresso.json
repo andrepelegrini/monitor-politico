@@ -1,29 +1,79 @@
 {
- "coletado_em": "2026-11-09T19:54:54+00:00",
+ "coletado_em": "2026-11-11T17:02:00+00:00",
  "periodo": {
-  "votacoes_desde": "2026-10-10",
-  "pauta_ate": "2026-11-15"
+  "votacoes_desde": "2026-10-12",
+  "pauta_ate": "2026-11-17"
  },
  "pauta": [
   {
-   "casa": "Senado",
-   "data_hora": "2026-11-10T14:00",
-   "sessao": "Sessão deliberativa ordinária",
+   "casa": "Câmara",
+   "data_hora": "2026-11-11T13:55",
+   "sessao": "Sessão Deliberativa",
    "itens": [
     {
-     "chave": "PLP 109/2025",
-     "ementa": "Dispõe sobre o acesso da Agência Nacional do Petróleo, Gás Natural e Biocombustíveis (ANP) às informações fiscais dos agentes regulados para fins de fiscalização e regulação do setor, nos termos do § 1º do art. 145 da Constituição Federal.",
-     "fase": "Discussão, em turno único"
+     "chave": "PL 479/2025",
+     "ementa": "Define a Pessoa com Transtorno do Déficit de Atenção com Hiperatividade (TDAH).como Pessoa com Deficiência para todos os efeitos legais e dá outras providências.",
+     "fase": "Requerimentos de Urgência Art. 155"
     },
     {
-     "chave": "PL 5608/2023",
-     "ementa": "Dispõe sobre as condições de trabalho de mulheres com diagnóstico, em tratamento ou em período de espera de remissão de câncer de mama e institui o Programa Empresa Rosa e o Selo Rosa.",
-     "fase": "Discussão, em turno único"
+     "chave": "PL 2812/2022",
+     "ementa": "Revoga a Lei no 12.318, de 26 de agosto de 2010 - Lei de Alienação Parental.",
+     "fase": "Recursos"
     },
     {
-     "chave": "PDL 934/2025",
-     "ementa": "Aprova o texto do Acordo Regional sobre Acesso à Informação, Participação Pública e Acesso à Justiça em Assuntos Ambientais na América Latina e no Caribe (Acordo de Escazú), assinado em Nova York, em 27 de setembro de 2018.",
-     "fase": null
+     "chave": "PL 215/2015",
+     "ementa": "Acrescenta inciso V ao art. 141 do Decreto-Lei nº 2.848, de 7 de dezembro de 1940.",
+     "fase": "Discussão"
+    },
+    {
+     "chave": "PL 79/2020",
+     "ementa": "Altera o Decreto-Lei nº 1.305, de 8 de janeiro de 1974, e as Leis nºs 5.461, de 25 de junho de 1968, 5.989, de 17 de dezembro de 1973, 7.573, de 23 de dezembro de 1986, 8.706, de 14 de setembro de 1993, e 12.462, de 4 de agosto de 2011, além de dar outras providências, para dispor sobre a destinação das contribuições sociais compulsórias das empresas do setor de transporte aéreo e portuário, incluindo aquelas relativas à contratação do trabalhador portuário avulso (TPA).",
+     "fase": "Discussão"
+    },
+    {
+     "chave": "PL 504/2021",
+     "ementa": "Cria a Política Nacional de Residência em Área Profissional da Saúde.",
+     "fase": "Discussão"
+    },
+    {
+     "chave": "PL 636/2023",
+     "ementa": "Altera a Lei n. 12.340, de 1° de Dezembro de 2010, para dar maior efetividade ao Plano de Contingência de Proteção e Defesa Civil.   NOVA EMENTA: Altera a Lei nº 12.340, de 1º de dezembro de 2010, para dar mais efetividade ao Plano de Contingência de Proteção e Defesa Civil.",
+     "fase": "Discussão"
+    },
+    {
+     "chave": "PL 2475/2025",
+     "ementa": "Altera a Lei nº 8.072, de 25 de julho de 1990 (Lei dos Crimes Hediondos), para tornar hediondo o crime de maus-tratos aos animais, quando do evento criminoso resultar a morte do animal.",
+     "fase": "Discussão"
+    },
+    {
+     "chave": "PL 724/2003",
+     "ementa": "Altera a Lei nº 9.503, de 23 de setembro de 1997, que \"Institui o Código de Trânsito Brasileiro\", para dispor sobre circulação de veículos de tração e crimes de trânsito.",
+     "fase": "Discussão"
+    },
+    {
+     "chave": "PDL 557/2026",
+     "ementa": "Aprova o texto da Convenção Internacional de Hong Kong para a Reciclagem Segura e Ambientalmente Adequada de Navios de 2009 (HKC), para fins de adesão brasileira ao referido instrumento.",
+     "fase": "Discussão"
+    },
+    {
+     "chave": "PL 423/2022",
+     "ementa": "Reconhece o extermínio de ucranianos por meio da fome (Holodomor) como genocídio e institui o quarto sábado de novembro como Dia de Memória às Vítimas do Holodomor.",
+     "fase": "Discussão"
+    },
+    {
+     "chave": "PL 4754/2024",
+     "ementa": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 – Código Penal, para prever a perda automática de cargo, função pública ou mandato eletivo em caso de condenação por estupro de vulnerável.",
+     "fase": "Discussão"
+    },
+    {
+     "chave": "PL 2500/2025",
+     "ementa": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 – Código Penal, e a Lei nº 7.210, de 11 de julho de 1984 – Lei de Execução Penal, para endurecer os requisitos de progressão de regime e livramento condicional de reincidentes em crimes patrimoniais praticados com violência ou grave ameaça à pessoa.",
+     "fase": "Discussão"
+    },
+    {
+     "chave": "PL 464/2026",
+     "ementa": "Altera a Lei nº 10.406, de 10 de janeiro de 2002 (Código Civil) e a Lei  nº 10.741, de 1º de outubro de 2003 (Estatuto da Pessoa Idosa) para dispor sobre a responsabilização por interdição abusiva",
+     "fase": "Discussão"
     }
    ]
   },
@@ -138,9 +188,9 @@
     "Trabalho e Emprego"
    ],
    "situacao": {
-    "descricao": "Aguardando Apreciação pelo Senado Federal",
-    "data": "2026-10-28",
-    "casa": "Câmara",
+    "descricao": "Remetida à sanção",
+    "data": "2026-11-11",
+    "casa": "Senado",
     "norma": null
    },
    "url_camara": "https://www.camara.leg.br/propostas-legislativas/2637101",
@@ -199,6 +249,140 @@
      "id": "2637101-50",
      "casa": "Câmara",
      "data_hora": "2026-10-27T21:44:49",
+     "descricao": "Aprovada a Redação Final.",
+     "resultado": "aprovada",
+     "procedimento": true,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    }
+   ]
+  },
+  "MPV 1376/2026": {
+   "chave": "MPV 1376/2026",
+   "slug": "mpv-1376-2026",
+   "sigla": "MPV",
+   "numero": 1376,
+   "ano": 2026,
+   "tipo": "Medida Provisória",
+   "ementa": "Autoriza a criação de linhas de crédito para composição de dívidas para liquidação ou amortização de operações de crédito rural e de Cédulas de Produto Rural e autoriza a participação da União em fundo garantidor destinado à cobertura de operações de crédito rural contratadas por produtores rurais afetados por eventos climáticos adversos.",
+   "apelido": "MP das dívidas rurais",
+   "autores": [
+    "Poder Executivo"
+   ],
+   "data_apresentacao": "2026-07-15",
+   "casa_inicial": "Câmara",
+   "temas": [
+    "Agricultura, Pecuária, Pesca e Extrativismo",
+    "Economia",
+    "Finanças Públicas e Orçamento"
+   ],
+   "situacao": {
+    "descricao": "Aguardando Apreciação pelo Senado Federal",
+    "data": "2026-11-11",
+    "casa": "Câmara",
+    "norma": null
+   },
+   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2639957",
+   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175190",
+   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3163739",
+   "votacoes": [
+    {
+     "id": "2639957-16",
+     "casa": "Câmara",
+     "data_hora": "2026-11-10T18:16:57",
+     "descricao": "Aprovado, em apreciação preliminar, o Parecer da Comissão Mista, na parte em que manifesta opinião favorável quanto ao atendimento dos pressupostos constitucionais de relevância e urgência e de sua adequação financeira e orçamentária, nos termos do artigo 8º da Resolução nº 01, de 2002-CN.",
+     "resultado": "aprovada",
+     "procedimento": true,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    },
+    {
+     "id": "2639957-18",
+     "casa": "Câmara",
+     "data_hora": "2026-11-10T18:23:05",
+     "descricao": "Aprovada a Medida Provisória nº 1.376 de 2026, na forma do Projeto de Lei de Conversão.",
+     "resultado": "aprovada",
+     "procedimento": false,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    },
+    {
+     "id": "2639957-20",
+     "casa": "Câmara",
+     "data_hora": "2026-11-10T18:23:51",
+     "descricao": "Aprovada a Redação Final assinada pelo relator, Dep. Paulo Pimenta (PT/RS).",
+     "resultado": "aprovada",
+     "procedimento": true,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    }
+   ]
+  },
+  "MPV 1379/2026": {
+   "chave": "MPV 1379/2026",
+   "slug": "mpv-1379-2026",
+   "sigla": "MPV",
+   "numero": 1379,
+   "ano": 2026,
+   "tipo": "Medida Provisória",
+   "ementa": "Altera a Lei nº 15.473, de 22 de julho de 2026, que altera a Lei nº 9.818, de 23 de agosto de 1999, e a Lei nº 12.712, de 30 de agosto de 2012, para fortalecer e modernizar o sistema brasileiro de apoio oficial ao crédito à exportação.",
+   "apelido": "Plano Brasil Soberano 3",
+   "autores": [
+    "Poder Executivo"
+   ],
+   "data_apresentacao": "2026-07-22",
+   "casa_inicial": "Câmara",
+   "temas": [
+    "Economia",
+    "Indústria, Comércio e Serviços",
+    "Relações Internacionais e Comércio Exterior"
+   ],
+   "situacao": {
+    "descricao": "Aguardando leitura",
+    "data": "2026-11-11",
+    "casa": "Senado",
+    "norma": null
+   },
+   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2641546",
+   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175261",
+   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3166455",
+   "votacoes": [
+    {
+     "id": "2641546-16",
+     "casa": "Câmara",
+     "data_hora": "2026-11-10T18:28:52",
+     "descricao": "Aprovado, em apreciação preliminar, o Parecer da Comissão Mista, na parte em que manifesta opinião favorável quanto ao atendimento dos pressupostos constitucionais de relevância e urgência e de sua adequação financeira e orçamentária, nos termos do artigo 8º da Resolução nº 01, de 2002-CN.",
+     "resultado": "aprovada",
+     "procedimento": true,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    },
+    {
+     "id": "2641546-18",
+     "casa": "Câmara",
+     "data_hora": "2026-11-10T18:30:47",
+     "descricao": "Aprovada a Medida Provisória nº 1.379 de 2026, na forma do Projeto de Lei de Conversão.",
+     "resultado": "aprovada",
+     "procedimento": false,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    },
+    {
+     "id": "2641546-20",
+     "casa": "Câmara",
+     "data_hora": "2026-11-10T18:31:38",
      "descricao": "Aprovada a Redação Final.",
      "resultado": "aprovada",
      "procedimento": true,
@@ -275,35 +459,34 @@
     }
    ]
   },
-  "PDL 934/2025": {
-   "chave": "PDL 934/2025",
-   "slug": "pdl-934-2025",
+  "PDL 557/2026": {
+   "chave": "PDL 557/2026",
+   "slug": "pdl-557-2026",
    "sigla": "PDL",
-   "numero": 934,
-   "ano": 2025,
-   "tipo": "Projeto de Decreto Legislativo",
-   "ementa": "Aprova o texto do Acordo Regional sobre Acesso à Informação, Participação Pública e Acesso à Justiça em Assuntos Ambientais na América Latina e no Caribe (“Acordo de Escazú”), assinado em Nova York, em 27 de setembro de 2018.",
+   "numero": 557,
+   "ano": 2026,
+   "tipo": "Projeto de Decreto Legislativo de Acordos, tratados ou atos internacionais",
+   "ementa": "Aprova o texto da Convenção Internacional de Hong Kong para a Reciclagem Segura e Ambientalmente Adequada de Navios de 2009 (HKC), para fins de adesão brasileira ao referido instrumento.",
    "apelido": null,
    "autores": [
-    "Comissão de Meio Ambiente e Desenvolvimento Sustentável"
+    "Comissão de Relações Exteriores e de Defesa Nacional"
    ],
-   "data_apresentacao": "2025-11-05",
+   "data_apresentacao": "2026-05-29",
    "casa_inicial": "Câmara",
    "temas": [
-    "Direito e Justiça",
-    "Direitos Humanos e Minorias",
     "Meio Ambiente e Desenvolvimento Sustentável",
-    "Relações Internacionais e Comércio Exterior"
+    "Relações Internacionais e Comércio Exterior",
+    "Viação, Transporte e Mobilidade"
    ],
    "situacao": {
-    "descricao": "Incluída em ordem do dia",
-    "data": "2026-11-07",
-    "casa": "Senado",
+    "descricao": "Aguardando Designação de Relator(a)",
+    "data": "2026-11-11",
+    "casa": "Câmara",
     "norma": null
    },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2581961",
-   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/171607",
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3040112",
+   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2629310",
+   "url_senado": null,
+   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3139887",
    "votacoes": []
   },
   "PEC 18/2025": {
@@ -4070,6 +4253,221 @@
     }
    ]
   },
+  "PL 215/2015": {
+   "chave": "PL 215/2015",
+   "slug": "pl-215-2015",
+   "sigla": "PL",
+   "numero": 215,
+   "ano": 2015,
+   "tipo": "Projeto de Lei",
+   "ementa": "Acrescenta inciso V ao art. 141 do Decreto-Lei nº 2.848, de 7 de dezembro de 1940.",
+   "apelido": null,
+   "autores": [
+    "Hildo Rocha"
+   ],
+   "data_apresentacao": "2015-02-05",
+   "casa_inicial": "Câmara",
+   "temas": [
+    "Direito Penal e Processual Penal"
+   ],
+   "situacao": {
+    "descricao": "Aguardando Deliberação",
+    "data": "2026-11-10",
+    "casa": "Câmara",
+    "norma": null
+   },
+   "url_camara": "https://www.camara.leg.br/propostas-legislativas/946034",
+   "url_senado": null,
+   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1298301",
+   "votacoes": []
+  },
+  "PL 2475/2025": {
+   "chave": "PL 2475/2025",
+   "slug": "pl-2475-2025",
+   "sigla": "PL",
+   "numero": 2475,
+   "ano": 2025,
+   "tipo": "Projeto de Lei",
+   "ementa": "Altera a Lei nº 8.072, de 25 de julho de 1990 (Lei dos Crimes Hediondos), para tornar hediondo o crime de maus-tratos aos animais, quando do evento criminoso resultar a morte do animal.",
+   "apelido": null,
+   "autores": [
+    "Célio Studart",
+    "Delegado Bruno Lima",
+    "Dr. Ismael Alexandrino",
+    "Felipe Becari",
+    "Laura Carneiro",
+    "Marcelo Queiroz"
+   ],
+   "data_apresentacao": "2025-05-22",
+   "casa_inicial": "Câmara",
+   "temas": [
+    "Cidades e Desenvolvimento Urbano",
+    "Direito Penal e Processual Penal"
+   ],
+   "situacao": {
+    "descricao": "Aguardando Deliberação",
+    "data": "2026-11-11",
+    "casa": "Câmara",
+    "norma": null
+   },
+   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2515534",
+   "url_senado": null,
+   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2916380",
+   "votacoes": []
+  },
+  "PL 2500/2025": {
+   "chave": "PL 2500/2025",
+   "slug": "pl-2500-2025",
+   "sigla": "PL",
+   "numero": 2500,
+   "ano": 2025,
+   "tipo": "Projeto de Lei",
+   "ementa": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 – Código Penal, e a Lei nº 7.210, de 11 de julho de 1984 – Lei de Execução Penal, para endurecer os requisitos de progressão de regime e livramento condicional de reincidentes em crimes patrimoniais praticados com violência ou grave ameaça à pessoa.",
+   "apelido": null,
+   "autores": [
+    "Capitão Alden"
+   ],
+   "data_apresentacao": "2025-05-22",
+   "casa_inicial": "Câmara",
+   "temas": [
+    "Defesa e Segurança",
+    "Direito Penal e Processual Penal"
+   ],
+   "situacao": {
+    "descricao": "Aguardando Deliberação",
+    "data": "2026-11-10",
+    "casa": "Câmara",
+    "norma": null
+   },
+   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2515664",
+   "url_senado": null,
+   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2916635",
+   "votacoes": []
+  },
+  "PL 2812/2022": {
+   "chave": "PL 2812/2022",
+   "slug": "pl-2812-2022",
+   "sigla": "PL",
+   "numero": 2812,
+   "ano": 2022,
+   "tipo": "Projeto de Lei",
+   "ementa": "Revoga a Lei no 12.318, de 26 de agosto de 2010 - Lei de Alienação Parental.",
+   "apelido": null,
+   "autores": [
+    "Fernanda Melchionna",
+    "Sâmia Bomfim",
+    "Vivi Reis"
+   ],
+   "data_apresentacao": "2022-11-18",
+   "casa_inicial": "Câmara",
+   "temas": [
+    "Direito Civil e Processual Civil"
+   ],
+   "situacao": {
+    "descricao": "Aguardando Deliberação de Recurso",
+    "data": "2026-11-10",
+    "casa": "Câmara",
+    "norma": null
+   },
+   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2338753",
+   "url_senado": null,
+   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2216469",
+   "votacoes": []
+  },
+  "PL 2829/2024": {
+   "chave": "PL 2829/2024",
+   "slug": "pl-2829-2024",
+   "sigla": "PL",
+   "numero": 2829,
+   "ano": 2024,
+   "tipo": "Projeto de Lei",
+   "ementa": "Denomina “Viaduto Severo Eulálio Filho” o viaduto localizado na BR-343, na Ladeira do Uruguai, Zona Leste do Município de Teresina, Estado do Piauí.",
+   "apelido": null,
+   "autores": [
+    "Senado Federal - Marcelo Castro"
+   ],
+   "data_apresentacao": "2024-07-10",
+   "casa_inicial": "Senado",
+   "temas": [
+    "Homenagens e Datas Comemorativas"
+   ],
+   "situacao": {
+    "descricao": "Aguardando Remessa à Sanção",
+    "data": "2026-11-10",
+    "casa": "Câmara",
+    "norma": null
+   },
+   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2465246",
+   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/164688",
+   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2533154",
+   "votacoes": [
+    {
+     "id": "2465246-61",
+     "casa": "Câmara",
+     "data_hora": "2026-11-10T18:51:37",
+     "descricao": "Aprovado o Projeto de Lei nº 2.829, de 2024.",
+     "resultado": "aprovada",
+     "procedimento": false,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    }
+   ]
+  },
+  "PL 3099/2019": {
+   "chave": "PL 3099/2019",
+   "slug": "pl-3099-2019",
+   "sigla": "PL",
+   "numero": 3099,
+   "ano": 2019,
+   "tipo": "Projeto de Lei",
+   "ementa": "Institui no calendário nacional o \"Dia Nacional do Autocuidado\".",
+   "apelido": null,
+   "autores": [
+    "Juninho do Pneu"
+   ],
+   "data_apresentacao": "2019-05-22",
+   "casa_inicial": "Câmara",
+   "temas": [
+    "Homenagens e Datas Comemorativas"
+   ],
+   "situacao": {
+    "descricao": "Aguardando Remessa à Sanção",
+    "data": "2026-11-10",
+    "casa": "Câmara",
+    "norma": null
+   },
+   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2204495",
+   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/170101",
+   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1751589",
+   "votacoes": [
+    {
+     "id": "2204495-106",
+     "casa": "Câmara",
+     "data_hora": "2026-11-10T19:08:57",
+     "descricao": "Aprovado o Substitutivo do Senado Federal ao Projeto de Lei nº 3.099, de 2019.",
+     "resultado": "aprovada",
+     "procedimento": false,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    },
+    {
+     "id": "2204495-108",
+     "casa": "Câmara",
+     "data_hora": "2026-11-10T19:09:19",
+     "descricao": "Aprovada a Redação Final assinada pelo relator, Dep. Eduardo Bismarck (PV-CE).",
+     "resultado": "aprovada",
+     "procedimento": true,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    }
+   ]
+  },
   "PL 3220/2019": {
    "chave": "PL 3220/2019",
    "slug": "pl-3220-2019",
@@ -4092,8 +4490,8 @@
     "Viação, Transporte e Mobilidade"
    ],
    "situacao": {
-    "descricao": "Aguardando Envio ao Senado Federal",
-    "data": "2026-11-04",
+    "descricao": "Aguardando Autógrafos na Mesa",
+    "data": "2026-11-10",
     "casa": "Câmara",
     "norma": null
    },
@@ -4157,8 +4555,8 @@
     "Homenagens e Datas Comemorativas"
    ],
    "situacao": {
-    "descricao": "Aguardando Autógrafos na Mesa",
-    "data": "2026-11-04",
+    "descricao": "Aguardando Apreciação pelo Senado Federal",
+    "data": "2026-11-10",
     "casa": "Câmara",
     "norma": null
    },
@@ -4211,8 +4609,8 @@
     "Homenagens e Datas Comemorativas"
    ],
    "situacao": {
-    "descricao": "Aguardando Autógrafos na Mesa",
-    "data": "2026-11-05",
+    "descricao": "Aguardando Apreciação pelo Senado Federal",
+    "data": "2026-11-10",
     "casa": "Câmara",
     "norma": null
    },
@@ -4246,6 +4644,176 @@
     }
    ]
   },
+  "PL 4159/2025": {
+   "chave": "PL 4159/2025",
+   "slug": "pl-4159-2025",
+   "sigla": "PL",
+   "numero": 4159,
+   "ano": 2025,
+   "tipo": "Projeto de Lei",
+   "ementa": "Inscreve o nome de Padre Inácio de Sousa Rolim no Livro dos Heróis e Heroínas da Pátria.",
+   "apelido": null,
+   "autores": [
+    "Luiz Couto"
+   ],
+   "data_apresentacao": "2025-08-21",
+   "casa_inicial": "Câmara",
+   "temas": [
+    "Arte, Cultura e Religião",
+    "Educação",
+    "Homenagens e Datas Comemorativas"
+   ],
+   "situacao": {
+    "descricao": "Aguardando Envio ao Senado Federal",
+    "data": "2026-11-10",
+    "casa": "Câmara",
+    "norma": null
+   },
+   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2551091",
+   "url_senado": null,
+   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2982390",
+   "votacoes": [
+    {
+     "id": "2551091-48",
+     "casa": "Câmara",
+     "data_hora": "2026-11-10T18:47:26",
+     "descricao": "Aprovado o Projeto de Lei nº 4.159, de 2025.",
+     "resultado": "aprovada",
+     "procedimento": false,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    },
+    {
+     "id": "2551091-50",
+     "casa": "Câmara",
+     "data_hora": "2026-11-10T18:48:09",
+     "descricao": "Aprovada a Redação Final assinada pelo relator, Dep. Helder Salomão (PT/ES).",
+     "resultado": "aprovada",
+     "procedimento": true,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    }
+   ]
+  },
+  "PL 423/2022": {
+   "chave": "PL 423/2022",
+   "slug": "pl-423-2022",
+   "sigla": "PL",
+   "numero": 423,
+   "ano": 2022,
+   "tipo": "Projeto de Lei",
+   "ementa": "Reconhece o extermínio de ucranianos por meio da fome (Holodomor) como genocídio e institui o quarto sábado de novembro como Dia de Memória às Vítimas do Holodomor.",
+   "apelido": null,
+   "autores": [
+    "Senado Federal - Alvaro Dias"
+   ],
+   "data_apresentacao": "2022-03-03",
+   "casa_inicial": "Senado",
+   "temas": [
+    "Direitos Humanos e Minorias",
+    "Homenagens e Datas Comemorativas",
+    "Relações Internacionais e Comércio Exterior"
+   ],
+   "situacao": {
+    "descricao": "Aguardando Deliberação",
+    "data": "2026-11-10",
+    "casa": "Câmara",
+    "norma": null
+   },
+   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2321628",
+   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/151969",
+   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2164639",
+   "votacoes": []
+  },
+  "PL 4480/2025": {
+   "chave": "PL 4480/2025",
+   "slug": "pl-4480-2025",
+   "sigla": "PL",
+   "numero": 4480,
+   "ano": 2025,
+   "tipo": "Projeto de Lei",
+   "ementa": "Altera a Lei nº 14.312, de 2022, para dispor sobre critérios de concessão de subvenções econômicas e estabelecer nova hipótese de acesso a operações de crédito imobiliário no âmbito do Programa Habite Seguro.",
+   "apelido": null,
+   "autores": [
+    "Capitão Alden"
+   ],
+   "data_apresentacao": "2025-09-08",
+   "casa_inicial": "Câmara",
+   "temas": [
+    "Cidades e Desenvolvimento Urbano",
+    "Defesa e Segurança",
+    "Trabalho e Emprego"
+   ],
+   "situacao": {
+    "descricao": "Aguardando Envio ao Senado Federal",
+    "data": "2026-11-10",
+    "casa": "Câmara",
+    "norma": null
+   },
+   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2557714",
+   "url_senado": null,
+   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2994276",
+   "votacoes": [
+    {
+     "id": "2557714-58",
+     "casa": "Câmara",
+     "data_hora": "2026-11-10T19:33:54",
+     "descricao": "Aprovado o Substitutivo ao Projeto de Lei nº 4.480, de 2025, adotado pelo relator da Comissão de Segurança Pública e Combate ao Crime Organizado.",
+     "resultado": "aprovada",
+     "procedimento": false,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    },
+    {
+     "id": "2557714-61",
+     "casa": "Câmara",
+     "data_hora": "2026-11-10T19:34:36",
+     "descricao": "Aprovada a Redação Final assinada pelo relator, Dep. Rodrigo da Zaeli (PL-MT).",
+     "resultado": "aprovada",
+     "procedimento": true,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    }
+   ]
+  },
+  "PL 464/2026": {
+   "chave": "PL 464/2026",
+   "slug": "pl-464-2026",
+   "sigla": "PL",
+   "numero": 464,
+   "ano": 2026,
+   "tipo": "Projeto de Lei",
+   "ementa": "Altera a Lei nº 10.406, de 10 de janeiro de 2002 (Código Civil) e a Lei  nº 10.741, de 1º de outubro de 2003 (Estatuto da Pessoa Idosa) para dispor sobre a responsabilização por interdição abusiva",
+   "apelido": null,
+   "autores": [
+    "Eriberto Medeiros"
+   ],
+   "data_apresentacao": "2026-02-11",
+   "casa_inicial": "Câmara",
+   "temas": [
+    "Direito Civil e Processual Civil",
+    "Direito Penal e Processual Penal",
+    "Direitos Humanos e Minorias"
+   ],
+   "situacao": {
+    "descricao": "Aguardando Deliberação",
+    "data": "2026-11-10",
+    "casa": "Câmara",
+    "norma": null
+   },
+   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2602370",
+   "url_senado": null,
+   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3081501",
+   "votacoes": []
+  },
   "PL 4674/2024": {
    "chave": "PL 4674/2024",
    "slug": "pl-4674-2024",
@@ -4265,8 +4833,8 @@
     "Saúde"
    ],
    "situacao": {
-    "descricao": "Aguardando Envio ao Senado Federal",
-    "data": "2026-11-03",
+    "descricao": "Aguardando Apreciação pelo Senado Federal",
+    "data": "2026-11-10",
     "casa": "Câmara",
     "norma": null
    },
@@ -4299,6 +4867,136 @@
      "votos": []
     }
    ]
+  },
+  "PL 4724/2024": {
+   "chave": "PL 4724/2024",
+   "slug": "pl-4724-2024",
+   "sigla": "PL",
+   "numero": 4724,
+   "ano": 2024,
+   "tipo": "Projeto de Lei",
+   "ementa": "Acrescenta o § 1º ao artigo 299 da Lei nº 4.737, de 15 de julho de 1965 (Código Eleitoral), para prever causa de aumento de pena quando o crime for cometido por meio de associações ou organizações criminosas.",
+   "apelido": null,
+   "autores": [
+    "Cabo Gilberto Silva"
+   ],
+   "data_apresentacao": "2024-12-05",
+   "casa_inicial": "Câmara",
+   "temas": [
+    "Direito Penal e Processual Penal",
+    "Política, Partidos e Eleições"
+   ],
+   "situacao": {
+    "descricao": "Encaminhamento",
+    "data": "2026-11-10",
+    "casa": "Câmara",
+    "norma": null
+   },
+   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2476576",
+   "url_senado": null,
+   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2835327",
+   "votacoes": [
+    {
+     "id": "2476576-30",
+     "casa": "Câmara",
+     "data_hora": "2026-11-10T19:38:42",
+     "descricao": "Aprovado o Substitutivo ao Projeto de Lei nº 4.724, de 2024, da Comissão de Constituição e Justiça e de Cidadania.",
+     "resultado": "aprovada",
+     "procedimento": false,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    }
+   ]
+  },
+  "PL 4754/2024": {
+   "chave": "PL 4754/2024",
+   "slug": "pl-4754-2024",
+   "sigla": "PL",
+   "numero": 4754,
+   "ano": 2024,
+   "tipo": "Projeto de Lei",
+   "ementa": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 – Código Penal, para prever a perda automática de cargo, função pública ou mandato eletivo em caso de condenação por estupro de vulnerável.",
+   "apelido": null,
+   "autores": [
+    "Cabo Gilberto Silva"
+   ],
+   "data_apresentacao": "2024-12-09",
+   "casa_inicial": "Câmara",
+   "temas": [
+    "Administração Pública",
+    "Direito Penal e Processual Penal"
+   ],
+   "situacao": {
+    "descricao": "Aguardando Deliberação",
+    "data": "2026-11-10",
+    "casa": "Câmara",
+    "norma": null
+   },
+   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2476909",
+   "url_senado": null,
+   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2836245",
+   "votacoes": []
+  },
+  "PL 479/2025": {
+   "chave": "PL 479/2025",
+   "slug": "pl-479-2025",
+   "sigla": "PL",
+   "numero": 479,
+   "ano": 2025,
+   "tipo": "Projeto de Lei",
+   "ementa": "Define a Pessoa com Transtorno do Déficit de Atenção com Hiperatividade (TDAH).como Pessoa com Deficiência para todos os efeitos legais e dá outras providências.",
+   "apelido": null,
+   "autores": [
+    "Roberto Duarte"
+   ],
+   "data_apresentacao": "2025-02-17",
+   "casa_inicial": "Câmara",
+   "temas": [
+    "Direitos Humanos e Minorias",
+    "Saúde"
+   ],
+   "situacao": {
+    "descricao": "Pronta para Pauta",
+    "data": "2026-05-19",
+    "casa": "Câmara",
+    "norma": null
+   },
+   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2484087",
+   "url_senado": null,
+   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2855941",
+   "votacoes": []
+  },
+  "PL 504/2021": {
+   "chave": "PL 504/2021",
+   "slug": "pl-504-2021",
+   "sigla": "PL",
+   "numero": 504,
+   "ano": 2021,
+   "tipo": "Projeto de Lei",
+   "ementa": "Cria a Política Nacional de Residência em Área Profissional da Saúde.",
+   "apelido": null,
+   "autores": [
+    "Alexandre Padilha"
+   ],
+   "data_apresentacao": "2021-02-19",
+   "casa_inicial": "Câmara",
+   "temas": [
+    "Educação",
+    "Saúde",
+    "Trabalho e Emprego"
+   ],
+   "situacao": {
+    "descricao": "Aguardando Deliberação",
+    "data": "2026-11-10",
+    "casa": "Câmara",
+    "norma": null
+   },
+   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2270540",
+   "url_senado": null,
+   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1964794",
+   "votacoes": []
   },
   "PL 5239/2025": {
    "chave": "PL 5239/2025",
@@ -4407,36 +5105,6 @@
      "votos": []
     }
    ]
-  },
-  "PL 5608/2023": {
-   "chave": "PL 5608/2023",
-   "slug": "pl-5608-2023",
-   "sigla": "PL",
-   "numero": 5608,
-   "ano": 2023,
-   "tipo": "Projeto de Lei",
-   "ementa": "Regula as condições de trabalho de mulheres que foram diagnosticadas, estão em tratamento ou em período de aguardo de remissão do câncer de mama.\n\r\n\r\nNOVA EMENTA: Dispõe sobre as condições de trabalho de mulheres com diagnóstico, em tratamento ou em período de espera de remissão de câncer de mama.",
-   "apelido": "Programa Empresa Rosa\nSelo Rosa",
-   "autores": [
-    "Maria Rosas"
-   ],
-   "data_apresentacao": "2023-11-21",
-   "casa_inicial": "Câmara",
-   "temas": [
-    "Direitos Humanos e Minorias",
-    "Saúde",
-    "Trabalho e Emprego"
-   ],
-   "situacao": {
-    "descricao": "Incluída em ordem do dia",
-    "data": "2026-11-07",
-    "casa": "Senado",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2405120",
-   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/162645",
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2361649",
-   "votacoes": []
   },
   "PL 5649/2026": {
    "chave": "PL 5649/2026",
@@ -4566,8 +5234,8 @@
     "Saúde"
    ],
    "situacao": {
-    "descricao": "Aguardando Autógrafos na Mesa",
-    "data": "2026-11-04",
+    "descricao": "Aguardando Apreciação pelo Senado Federal",
+    "data": "2026-11-10",
     "casa": "Câmara",
     "norma": null
    },
@@ -4619,8 +5287,8 @@
     "Direito Penal e Processual Penal"
    ],
    "situacao": {
-    "descricao": "Aguardando Envio ao Senado Federal",
-    "data": "2026-11-04",
+    "descricao": "Aguardando Apreciação pelo Senado Federal",
+    "data": "2026-11-10",
     "casa": "Câmara",
     "norma": null
    },
@@ -4709,6 +5377,35 @@
     }
    ]
   },
+  "PL 636/2023": {
+   "chave": "PL 636/2023",
+   "slug": "pl-636-2023",
+   "sigla": "PL",
+   "numero": 636,
+   "ano": 2023,
+   "tipo": "Projeto de Lei",
+   "ementa": "Altera a Lei n. 12.340, de 1° de Dezembro de 2010, para dar maior efetividade ao Plano de Contingência de Proteção e Defesa Civil. \r\n\r\nNOVA EMENTA: Altera a Lei nº 12.340, de 1º de dezembro de 2010, para dar mais efetividade ao Plano de Contingência de Proteção e Defesa Civil.",
+   "apelido": null,
+   "autores": [
+    "André Figueiredo"
+   ],
+   "data_apresentacao": "2023-02-23",
+   "casa_inicial": "Câmara",
+   "temas": [
+    "Administração Pública",
+    "Defesa e Segurança"
+   ],
+   "situacao": {
+    "descricao": "Encerramentos",
+    "data": "2026-11-10",
+    "casa": "Câmara",
+    "norma": null
+   },
+   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2349176",
+   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/156485",
+   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2236867",
+   "votacoes": []
+  },
   "PL 6461/2019": {
    "chave": "PL 6461/2019",
    "slug": "pl-6461-2019",
@@ -4789,6 +5486,66 @@
    "url_inteiro_teor": "https://legis.senado.gov.br/sdleg-getter/dadosabertos/documento/f877de0c-ba69-463d-8144-0257efd23b89",
    "votacoes": []
   },
+  "PL 724/2003": {
+   "chave": "PL 724/2003",
+   "slug": "pl-724-2003",
+   "sigla": "PL",
+   "numero": 724,
+   "ano": 2003,
+   "tipo": "Projeto de Lei",
+   "ementa": "Altera a Lei nº 9.503, de 23 de setembro de 1997, que \"Institui o Código de Trânsito Brasileiro\", para dispor sobre circulação de veículos de tração e crimes de trânsito.",
+   "apelido": null,
+   "autores": [
+    "Milton Monti"
+   ],
+   "data_apresentacao": "2003-04-09",
+   "casa_inicial": "Câmara",
+   "temas": [
+    "Viação, Transporte e Mobilidade"
+   ],
+   "situacao": {
+    "descricao": "Aguardando Deliberação",
+    "data": "2026-11-10",
+    "casa": "Câmara",
+    "norma": null
+   },
+   "url_camara": "https://www.camara.leg.br/propostas-legislativas/110593",
+   "url_senado": null,
+   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=124587",
+   "votacoes": []
+  },
+  "PL 79/2020": {
+   "chave": "PL 79/2020",
+   "slug": "pl-79-2020",
+   "sigla": "PL",
+   "numero": 79,
+   "ano": 2020,
+   "tipo": "Projeto de Lei",
+   "ementa": "Altera o Decreto-Lei nº 1.305, de 8 de janeiro de 1974, e as Leis nºs 5.461, de 25 de junho de 1968, 5.989, de 17 de dezembro de 1973, 7.573, de 23 de dezembro de 1986, 8.706, de 14 de setembro de 1993, e 12.462, de 4 de agosto de 2011, além de dar outras providências, para dispor sobre a destinação das contribuições sociais compulsórias das empresas do setor de transporte aéreo e portuário, incluindo aquelas relativas à contratação do trabalhador portuário avulso (TPA).",
+   "apelido": null,
+   "autores": [
+    "Senado Federal - Wellington Fagundes"
+   ],
+   "data_apresentacao": "2020-02-03",
+   "casa_inicial": "Senado",
+   "temas": [
+    "Administração Pública",
+    "Indústria, Comércio e Serviços",
+    "Previdência e Assistência Social",
+    "Trabalho e Emprego",
+    "Viação, Transporte e Mobilidade"
+   ],
+   "situacao": {
+    "descricao": "Aguardando Deliberação",
+    "data": "2026-11-10",
+    "casa": "Câmara",
+    "norma": null
+   },
+   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2596596",
+   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/140484",
+   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3067600",
+   "votacoes": []
+  },
   "PLP 109/2025": {
    "chave": "PLP 109/2025",
    "slug": "plp-109-2025",
@@ -4812,15 +5569,618 @@
     "Energia, Recursos Hídricos e Minerais"
    ],
    "situacao": {
-    "descricao": "Incluída em ordem do dia",
-    "data": "2026-11-07",
+    "descricao": "Aprovada",
+    "data": "2026-11-10",
     "casa": "Senado",
     "norma": null
    },
    "url_camara": "https://www.camara.leg.br/propostas-legislativas/2503998",
    "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/173581",
    "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2898282",
-   "votacoes": []
+   "votacoes": [
+    {
+     "id": "SF-7113",
+     "casa": "Senado",
+     "data_hora": "2026-11-10",
+     "descricao": "Votação nominal do Projeto de Lei Complementar nº 109, de 2025, nos termos dos pareceres.",
+     "resultado": "aprovada",
+     "procedimento": false,
+     "nominal": true,
+     "placar": {
+      "sim": 72,
+      "nao": 0,
+      "abstencao": 0,
+      "outros": [
+       [
+        "Missão da Casa no País/exterior",
+        5
+       ],
+       [
+        "Presente – Não registrou voto",
+        2
+       ],
+       [
+        "Presidente (art. 51 RISF)",
+        1
+       ],
+       [
+        "Atividade parlamentar",
+        1
+       ]
+      ]
+     },
+     "orientacoes": null,
+     "votos": [
+      {
+       "id": 5672,
+       "nome": "Alan Rick",
+       "partido": "REPUBLICANOS",
+       "uf": "AC",
+       "voto": "Presente – Não registrou voto"
+      },
+      {
+       "id": 5982,
+       "nome": "Alessandro Vieira",
+       "partido": "MDB",
+       "uf": "SE",
+       "voto": "Sim"
+      },
+      {
+       "id": 6358,
+       "nome": "Ana Paula Lobato",
+       "partido": "PSB",
+       "uf": "MA",
+       "voto": "Sim"
+      },
+      {
+       "id": 5967,
+       "nome": "Angelo Coronel",
+       "partido": "REPUBLICANOS",
+       "uf": "BA",
+       "voto": "Sim"
+      },
+      {
+       "id": 6009,
+       "nome": "Astronauta Marcos Pontes",
+       "partido": "PL",
+       "uf": "SP",
+       "voto": "Sim"
+      },
+      {
+       "id": 4639,
+       "nome": "Beto Faro",
+       "partido": "PT",
+       "uf": "PA",
+       "voto": "Sim"
+      },
+      {
+       "id": 6336,
+       "nome": "Camilo Santana",
+       "partido": "PT",
+       "uf": "CE",
+       "voto": "Sim"
+      },
+      {
+       "id": 6295,
+       "nome": "Carlos Fávaro",
+       "partido": "PSD",
+       "uf": "MT",
+       "voto": "Sim"
+      },
+      {
+       "id": 5936,
+       "nome": "Carlos Portinho",
+       "partido": "PL",
+       "uf": "RJ",
+       "voto": "Sim"
+      },
+      {
+       "id": 5990,
+       "nome": "Carlos Viana",
+       "partido": "PSD",
+       "uf": "MG",
+       "voto": "Sim"
+      },
+      {
+       "id": 470,
+       "nome": "Chico Rodrigues",
+       "partido": "PSB",
+       "uf": "RR",
+       "voto": "Sim"
+      },
+      {
+       "id": 5973,
+       "nome": "Cid Gomes",
+       "partido": "PSB",
+       "uf": "CE",
+       "voto": "Sim"
+      },
+      {
+       "id": 739,
+       "nome": "Ciro Nogueira",
+       "partido": "PP",
+       "uf": "PI",
+       "voto": "Sim"
+      },
+      {
+       "id": 6337,
+       "nome": "Cleitinho",
+       "partido": "REPUBLICANOS",
+       "uf": "MG",
+       "voto": "Sim"
+      },
+      {
+       "id": 475,
+       "nome": "Confúcio Moura",
+       "partido": "MDB",
+       "uf": "RO",
+       "voto": "Sim"
+      },
+      {
+       "id": 6335,
+       "nome": "Damares Alves",
+       "partido": "REPUBLICANOS",
+       "uf": "DF",
+       "voto": "Sim"
+      },
+      {
+       "id": 5998,
+       "nome": "Daniella Ribeiro",
+       "partido": "PP",
+       "uf": "PB",
+       "voto": "Sim"
+      },
+      {
+       "id": 3830,
+       "nome": "Davi Alcolumbre",
+       "partido": "UNIÃO",
+       "uf": "AP",
+       "voto": "Presidente (art. 51 RISF)"
+      },
+      {
+       "id": 5793,
+       "nome": "Dr. Hiran",
+       "partido": "PP",
+       "uf": "RR",
+       "voto": "Sim"
+      },
+      {
+       "id": 5906,
+       "nome": "Dra. Eudócia",
+       "partido": "PSDB",
+       "uf": "AL",
+       "voto": "Sim"
+      },
+      {
+       "id": 4994,
+       "nome": "Eduardo Braga",
+       "partido": "MDB",
+       "uf": "AM",
+       "voto": "Sim"
+      },
+      {
+       "id": 3777,
+       "nome": "Eduardo Gomes",
+       "partido": "PL",
+       "uf": "TO",
+       "voto": "Sim"
+      },
+      {
+       "id": 4642,
+       "nome": "Efraim Filho",
+       "partido": "PL",
+       "uf": "PB",
+       "voto": "Sim"
+      },
+      {
+       "id": 5718,
+       "nome": "Eliziane Gama",
+       "partido": "PSD",
+       "uf": "MA",
+       "voto": "Sim"
+      },
+      {
+       "id": 22,
+       "nome": "Esperidião Amin",
+       "partido": "PP",
+       "uf": "SC",
+       "voto": "Sim"
+      },
+      {
+       "id": 5953,
+       "nome": "Fabiano Contarato",
+       "partido": "PT",
+       "uf": "ES",
+       "voto": "Missão da Casa no País/exterior"
+      },
+      {
+       "id": 5917,
+       "nome": "Fernando Dueire",
+       "partido": "PSD",
+       "uf": "PE",
+       "voto": "Sim"
+      },
+      {
+       "id": 345,
+       "nome": "Flávio Arns",
+       "partido": "PSB",
+       "uf": "PR",
+       "voto": "Sim"
+      },
+      {
+       "id": 5894,
+       "nome": "Flávio Bolsonaro",
+       "partido": "PL",
+       "uf": "RJ",
+       "voto": "Sim"
+      },
+      {
+       "id": 6008,
+       "nome": "Giordano",
+       "partido": "PODE",
+       "uf": "SP",
+       "voto": "Missão da Casa no País/exterior"
+      },
+      {
+       "id": 6341,
+       "nome": "Hamilton Mourão",
+       "partido": "REPUBLICANOS",
+       "uf": "RS",
+       "voto": "Sim"
+      },
+      {
+       "id": 5008,
+       "nome": "Humberto Costa",
+       "partido": "PT",
+       "uf": "PE",
+       "voto": "Atividade parlamentar"
+      },
+      {
+       "id": 5385,
+       "nome": "Irajá",
+       "partido": "PSD",
+       "uf": "TO",
+       "voto": "Sim"
+      },
+      {
+       "id": 6010,
+       "nome": "Ivete da Silveira",
+       "partido": "MDB",
+       "uf": "SC",
+       "voto": "Sim"
+      },
+      {
+       "id": 4770,
+       "nome": "Izalci Lucas",
+       "partido": "PL",
+       "uf": "DF",
+       "voto": "Sim"
+      },
+      {
+       "id": 35,
+       "nome": "Jader Barbalho",
+       "partido": "MDB",
+       "uf": "PA",
+       "voto": "Sim"
+      },
+      {
+       "id": 6340,
+       "nome": "Jaime Bagattoli",
+       "partido": "PL",
+       "uf": "RO",
+       "voto": "Sim"
+      },
+      {
+       "id": 581,
+       "nome": "Jaques Wagner",
+       "partido": "PT",
+       "uf": "BA",
+       "voto": "Sim"
+      },
+      {
+       "id": 4531,
+       "nome": "Jayme Campos",
+       "partido": "UNIÃO",
+       "uf": "MT",
+       "voto": "Sim"
+      },
+      {
+       "id": 5895,
+       "nome": "Jorge Kajuru",
+       "partido": "PSB",
+       "uf": "GO",
+       "voto": "Sim"
+      },
+      {
+       "id": 6342,
+       "nome": "Jorge Seif",
+       "partido": "PL",
+       "uf": "SC",
+       "voto": "Sim"
+      },
+      {
+       "id": 6369,
+       "nome": "Jussara Lima",
+       "partido": "PSD",
+       "uf": "PI",
+       "voto": "Sim"
+      },
+      {
+       "id": 4811,
+       "nome": "Laércio Oliveira",
+       "partido": "PP",
+       "uf": "SE",
+       "voto": "Sim"
+      },
+      {
+       "id": 5977,
+       "nome": "Leany Lemos",
+       "partido": "PSB",
+       "uf": "DF",
+       "voto": "Missão da Casa no País/exterior"
+      },
+      {
+       "id": 5926,
+       "nome": "Lucas Barreto",
+       "partido": "PSD",
+       "uf": "AP",
+       "voto": "Sim"
+      },
+      {
+       "id": 1186,
+       "nome": "Luis Carlos Heinze",
+       "partido": "PP",
+       "uf": "RS",
+       "voto": "Sim"
+      },
+      {
+       "id": 631,
+       "nome": "Magno Malta",
+       "partido": "PL",
+       "uf": "ES",
+       "voto": "Sim"
+      },
+      {
+       "id": 5376,
+       "nome": "Mara Gabrilli",
+       "partido": "PSD",
+       "uf": "SP",
+       "voto": "Sim"
+      },
+      {
+       "id": 742,
+       "nome": "Marcelo Castro",
+       "partido": "MDB",
+       "uf": "PI",
+       "voto": "Sim"
+      },
+      {
+       "id": 285,
+       "nome": "Marcio Bittar",
+       "partido": "PL",
+       "uf": "AC",
+       "voto": "Sim"
+      },
+      {
+       "id": 5422,
+       "nome": "Marcos Rogério",
+       "partido": "PL",
+       "uf": "RO",
+       "voto": "Sim"
+      },
+      {
+       "id": 5942,
+       "nome": "Marcos do Val",
+       "partido": "AVANTE",
+       "uf": "ES",
+       "voto": "Sim"
+      },
+      {
+       "id": 5985,
+       "nome": "Nelsinho Trad",
+       "partido": "PSD",
+       "uf": "MS",
+       "voto": "Sim"
+      },
+      {
+       "id": 5525,
+       "nome": "Omar Aziz",
+       "partido": "PSD",
+       "uf": "AM",
+       "voto": "Sim"
+      },
+      {
+       "id": 5924,
+       "nome": "Oriovisto Guimarães",
+       "partido": "PSDB",
+       "uf": "PR",
+       "voto": "Sim"
+      },
+      {
+       "id": 5523,
+       "nome": "Otto Alencar",
+       "partido": "PSD",
+       "uf": "BA",
+       "voto": "Sim"
+      },
+      {
+       "id": 825,
+       "nome": "Paulo Paim",
+       "partido": "PT",
+       "uf": "RS",
+       "voto": "Sim"
+      },
+      {
+       "id": 5502,
+       "nome": "Plínio Valério",
+       "partido": "PSDB",
+       "uf": "AM",
+       "voto": "Sim"
+      },
+      {
+       "id": 5386,
+       "nome": "Professora Dorinha Seabra",
+       "partido": "UNIÃO",
+       "uf": "TO",
+       "voto": "Sim"
+      },
+      {
+       "id": 5012,
+       "nome": "Randolfe Rodrigues",
+       "partido": "PT",
+       "uf": "AP",
+       "voto": "Sim"
+      },
+      {
+       "id": 70,
+       "nome": "Renan Calheiros",
+       "partido": "MDB",
+       "uf": "AL",
+       "voto": "Sim"
+      },
+      {
+       "id": 5207,
+       "nome": "Renan Filho",
+       "partido": "MDB",
+       "uf": "AL",
+       "voto": "Sim"
+      },
+      {
+       "id": 5257,
+       "nome": "Renzo Braz",
+       "partido": "PP",
+       "uf": "MG",
+       "voto": "Sim"
+      },
+      {
+       "id": 6025,
+       "nome": "Roberta Acioly",
+       "partido": "REPUBLICANOS",
+       "uf": "RR",
+       "voto": "Sim"
+      },
+      {
+       "id": 4694,
+       "nome": "Rogerio Marinho",
+       "partido": "PL",
+       "uf": "RN",
+       "voto": "Sim"
+      },
+      {
+       "id": 5352,
+       "nome": "Rogério Carvalho",
+       "partido": "PT",
+       "uf": "SE",
+       "voto": "Sim"
+      },
+      {
+       "id": 5322,
+       "nome": "Romário",
+       "partido": "S/Partido",
+       "uf": "RJ",
+       "voto": "Sim"
+      },
+      {
+       "id": 5974,
+       "nome": "Sargento Reginauro",
+       "partido": "PSDB",
+       "uf": "CE",
+       "voto": "Sim"
+      },
+      {
+       "id": 6331,
+       "nome": "Sergio Moro",
+       "partido": "PL",
+       "uf": "PR",
+       "voto": "Presente – Não registrou voto"
+      },
+      {
+       "id": 5988,
+       "nome": "Soraya Thronicke",
+       "partido": "PSB",
+       "uf": "MS",
+       "voto": "Missão da Casa no País/exterior"
+      },
+      {
+       "id": 5959,
+       "nome": "Styvenson Valentim",
+       "partido": "PODE",
+       "uf": "RN",
+       "voto": "Sim"
+      },
+      {
+       "id": 4560,
+       "nome": "Sérgio Petecão",
+       "partido": "PSD",
+       "uf": "AC",
+       "voto": "Sim"
+      },
+      {
+       "id": 6338,
+       "nome": "Teresa Leitão",
+       "partido": "PT",
+       "uf": "PE",
+       "voto": "Sim"
+      },
+      {
+       "id": 5736,
+       "nome": "Tereza Cristina",
+       "partido": "PP",
+       "uf": "MS",
+       "voto": "Sim"
+      },
+      {
+       "id": 5899,
+       "nome": "Vanderlan Cardoso",
+       "partido": "PSD",
+       "uf": "GO",
+       "voto": "Sim"
+      },
+      {
+       "id": 5748,
+       "nome": "Veneziano Vital do Rêgo",
+       "partido": "MDB",
+       "uf": "PB",
+       "voto": "Missão da Casa no País/exterior"
+      },
+      {
+       "id": 1173,
+       "nome": "Wellington Fagundes",
+       "partido": "PL",
+       "uf": "MT",
+       "voto": "Sim"
+      },
+      {
+       "id": 5411,
+       "nome": "Weverton",
+       "partido": "PDT",
+       "uf": "MA",
+       "voto": "Sim"
+      },
+      {
+       "id": 5070,
+       "nome": "Wilder Morais",
+       "partido": "PL",
+       "uf": "GO",
+       "voto": "Sim"
+      },
+      {
+       "id": 5783,
+       "nome": "Zenaide Maia",
+       "partido": "PSD",
+       "uf": "RN",
+       "voto": "Sim"
+      },
+      {
+       "id": 3806,
+       "nome": "Zequinha Marinho",
+       "partido": "PODE",
+       "uf": "PA",
+       "voto": "Sim"
+      }
+     ]
+    }
+   ]
   },
   "PLP 186/2026": {
    "chave": "PLP 186/2026",
@@ -11101,15 +12461,11 @@
       "abstencao": 0,
       "outros": [
        [
-        "Não Compareceu",
-        1
+        "Atividade parlamentar",
+        2
        ],
        [
         "Presidente (art. 51 RISF)",
-        1
-       ],
-       [
-        "Atividade parlamentar",
         1
        ]
       ]
@@ -11198,7 +12554,7 @@
        "nome": "Cid Gomes",
        "partido": "PSB",
        "uf": "CE",
-       "voto": "Não Compareceu"
+       "voto": "Atividade parlamentar"
       },
       {
        "id": 739,
@@ -14867,8 +16223,8 @@
     "Processo Legislativo e Atuação Parlamentar"
    ],
    "situacao": {
-    "descricao": "Pronta para Pauta",
-    "data": "2026-11-05",
+    "descricao": "Aguardando Autógrafos na Mesa",
+    "data": "2026-11-10",
     "casa": "Câmara",
     "norma": null
    },
@@ -14987,6 +16343,111 @@
      "casa": "Câmara",
      "data_hora": "2026-11-03T16:48:43",
      "descricao": "Rejeitado o Recurso nº 19/2022 (art. 58, § 1º c/c art. 132, § 2º, RICD).",
+     "resultado": "rejeitada",
+     "procedimento": false,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    }
+   ]
+  },
+  "REC 20/2024": {
+   "chave": "REC 20/2024",
+   "slug": "rec-20-2024",
+   "sigla": "REC",
+   "numero": 20,
+   "ano": 2024,
+   "tipo": "Recurso contra apreciação conclusiva de comissão (Art. 58, § 1º c/c art. 132, § 2º, RICD)",
+   "ementa": "Recurso contra tramitação conclusiva do Projeto de Lei nº 2168/2021 que “Altera a Lei 12.651/2012, para considerar como de utilidade pública as obras de infraestrutura de irrigação e dessedentação animal”.",
+   "apelido": null,
+   "autores": [
+    "Alencar Santana",
+    "Alexandre Lindenmeyer",
+    "Alfredinho",
+    "Alice Portugal",
+    "Ana Paula Lima",
+    "Ana Pimentel",
+    "Bacelar",
+    "Carla Ayres",
+    "Carlos Veras",
+    "Carlos Zarattini",
+    "Carol Dartora",
+    "Célia Xakriabá",
+    "Célio Studart",
+    "Chico Alencar",
+    "Daiana Santos",
+    "Dandara",
+    "Daniel Almeida",
+    "Denise Pessôa",
+    "Dimas Gadelha",
+    "Dr. Francisco",
+    "Duda Salabert",
+    "Erika Kokay",
+    "Fernanda Melchionna",
+    "Fernando Mineiro",
+    "Fred Costa",
+    "Helder Salomão",
+    "Ivan Valente",
+    "Ivoneide Caetano",
+    "Jack Rocha",
+    "Jandira Feghali",
+    "Jilmar Tatto",
+    "João Daniel",
+    "Jorge Solla",
+    "José Airton Félix Cirilo",
+    "José Guimarães",
+    "Josias Gomes",
+    "Juliana Cardoso",
+    "Kiko Celeguim",
+    "Leonardo Monteiro",
+    "Lindbergh Farias",
+    "Luiza Erundina",
+    "Luizianne Lins",
+    "Marcon",
+    "Miguel Ângelo",
+    "Natália Bonavides",
+    "Nilto Tatto",
+    "Orlando Silva",
+    "Padre João",
+    "Pastor Henrique Vieira",
+    "Patrus Ananias",
+    "Paulão",
+    "Professora Luciene Cavalcante",
+    "Reginete Bispo",
+    "Reimont",
+    "Renildo Calheiros",
+    "Rogério Correia",
+    "Rubens Otoni",
+    "Rubens Pereira Júnior",
+    "Socorro Neri",
+    "Talíria Petrone",
+    "Tarcísio Motta",
+    "Túlio Gadêlha",
+    "Valmir Assunção",
+    "Vicentinho",
+    "Waldenor Pereira",
+    "Washington Quaquá",
+    "Zeca Dirceu"
+   ],
+   "data_apresentacao": "2024-08-23",
+   "casa_inicial": "Câmara",
+   "temas": [],
+   "situacao": {
+    "descricao": "Acessórios",
+    "data": "2026-11-10",
+    "casa": "Câmara",
+    "norma": null
+   },
+   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2454739",
+   "url_senado": null,
+   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2468649",
+   "votacoes": [
+    {
+     "id": "2454739-15",
+     "casa": "Câmara",
+     "data_hora": "2026-11-10T18:45:05",
+     "descricao": "Rejeitado o Recurso nº 20/2024 (art. 58, § 1º c/c art. 132, § 2º, RICD).",
      "resultado": "rejeitada",
      "procedimento": false,
      "nominal": false,
