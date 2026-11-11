@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+{% set r = retro %}{% set n = r.numeros %}
+{% block titulo %}Retrospectiva 2023–2027: {{ d.nome }} ({{ d.partido }}-{{ d.uf }}) · Monitor Político{% endblock %}
+{% block og_titulo %}Retrospectiva da legislatura 2023–2027: {{ d.nome }} ({{ d.partido }}-{{ d.uf }}){% endblock %}
+{% block descricao %}{{ d.nome }} ({{ d.partido }}-{{ d.uf }}) na legislatura 2023–2027: {{ n.principal }} {{ "lei" if n.principal == 1 else "leis" }} de autoria principal, {{ n.votos|numero }} votos no Plenário e {% if r.senado %}participação em {{ n.presencas|numero }} de {{ n.dias|numero }} votações{% else %}presença em {{ n.presencas|numero }} de {{ n.dias|numero }} dias com sessão{% endif %}, com dados oficiais.{% endblock %}
+{% block og_imagem %}{% if perfil.imagem %}perfis/{{ perfil.arquivo }}-compartilhar.jpg{% else %}brand/social/open-graph-1200x630.png{% endif %}{% endblock %}
+{% block twitter_imagem %}{% if perfil.imagem %}perfis/{{ perfil.arquivo }}-compartilhar.jpg{% else %}brand/social/twitter-card-1200x600.png{% endif %}{% endblock %}
+{% block conteudo %}
+<nav class="ce-breadcrumb" aria-label="Trilha de navegação">
+  <ol>
+    <li><a href="{{ raiz }}/index.html">Início</a></li>
+    <li><a href="../index.html">{{ "Senadores" if r.senado else "Deputados" }}</a></li>
+    <li><a href="../{{ d.id }}.html">{{ d.nome }}</a></li>
+    <li aria-current="page">Retrospectiva</li>
+  </ol>
+</nav>
+
+<article class="ce-profile pf-topo">
+  {% if d.url_foto %}<img src="{{ d.url_foto }}" alt="Foto oficial de {{ d.nome }}" width="150" height="200">{% else %}<span class="ce-photo-empty" aria-hidden="true"></span>{% endif %}
+  <div class="ce-profile-body">
+    <header class="ce-page-head">
+      <p class="ce-eyebrow">Retrospectiva da legislatura 2023–2027</p>
+      <h1>{{ d.nome }}</h1>{% if situacao %}
+      <p class="pf-badges"><span class="ce-badge badge-{{ situacao.chave }}">{{ situacao.rotulo }}</span></p>{% endif %}
+      <p class="pf-deck">{{ d.partido }}-{{ d.uf }} · {{ nome_casa }}. Os números da legislatura, com o mesmo critério para {{ "os " ~ r.ref.total ~ " senadores" if r.senado else "os " ~ r.ref.total ~ " deputados" }}. Dados oficiais até {{ perfil.coleta_local|data_br }}.</p>
+      {% if not r.completo %}<p class="pf-nota">Em exercício em parte do período{% if r.inicio_exercicio and r.inicio_exercicio > "2023-02-01" %}, desde {{ r.inicio_exercicio|data_br }}{% endif %}. Os números cobrem só esse período, por isso aparecem sem a comparação com quem exerceu a legislatura inteira, exceto o percentual {{ "de participação" if r.senado else "de presença" }}.</p>{% endif %}
+      <p class="rt-botoes"><a class="ce-button" href="#imagens">Compartilhar a retrospectiva</a><a class="ce-button ce-button--secondary" href="../{{ d.id }}.html">Ver o perfil completo</a></p>
+    </header>
+  </div>
+</article>
+
+<section class="ce-section" aria-labelledby="rt-numeros">
+  <div class="ce-section-header"><h2 class="ce-display ce-section-title" id="rt-numeros">A legislatura em seis números</h2></div>
+  <p class="ce-section-note">Cada número vem com uma referência {{ "do Senado" if r.senado else "da Câmara" }} inteira. A mediana é o valor do meio: metade fica abaixo dela e metade acima. Ela e as contagens consideram só quem exerceu pelo menos três quartos do período. Nos trilhos, a barra inteira é o total possível e a linha marca a mediana.</p>
+  <div class="rt-numeros">
+    <div class="rt-num"><strong>{{ n.principal }}</strong><span class="rt-rot">{{ "lei" if n.principal == 1 else "leis" }} de autoria principal sancionadas</span>
+      <span class="rt-cmp">{% if r.completo %}{{ r.leis_mais }} {{ "parlamentar tem" if r.leis_mais == 1 else "parlamentares têm" }} mais. {% endif %}{{ r.ref.sem_lei }} dos {{ r.ref.total }} não têm nenhuma.</span></div>
+    <div class="rt-num"><strong>{{ n.coautoria }}</strong><span class="rt-rot">{{ "lei" if n.coautoria == 1 else "leis" }} em coautoria sancionadas</span><span class="rt-cmp">Projetos assinados junto com outros parlamentares.</span></div>
+    <div class="rt-num"><strong>{{ (r.propostas_principal + r.propostas_coautoria)|numero }}</strong><span class="rt-rot">propostas apresentadas na legislatura</span><span class="rt-cmp">{{ r.propostas_principal }} de autoria principal e {{ r.propostas_coautoria }} em coautoria. Projetos de lei, de lei complementar e PECs.</span></div>
+    {% if n.percentual_presenca is not none %}
+    <div class="rt-num"><strong>{{ ('%.1f'|format(n.percentual_presenca))|replace('.', ',') }}%</strong><span class="rt-rot">{{ "de participação nas votações nominais" if r.senado else "de presença nos dias com sessão" }}</span>
+      <span class="rt-trilho" aria-hidden="true"><span class="rt-fill" style="width: {{ n.percentual_presenca }}%"></span>{% if r.ref.mediana_presenca is not none %}<span class="rt-med" style="left: {{ r.ref.mediana_presenca }}%"></span>{% endif %}</span>
+      <span class="rt-cmp">{{ n.presencas|numero }} de {{ n.dias|numero }} {{ "votações" if r.senado else "dias" }}.{% if r.ref.mediana_presenca is not none %} Mediana: {{ ('%.1f'|format(r.ref.mediana_presenca))|replace('.', ',') }}%.{% endif %}</span></div>
+    {% endif %}
+    <div class="rt-num"><strong>{{ n.votos|numero }}</strong><span class="rt-rot">votos registrados no Plenário</span>
+      {% if r.completo and r.votacoes_nominais %}<span class="rt-trilho" aria-hidden="true"><span class="rt-fill" style="width: {{ [n.votos / r.votacoes_nominais * 100, 100]|min }}%"></span><span class="rt-med" style="left: {{ [r.ref.mediana_votos / r.votacoes_nominais * 100, 100]|min }}%"></span></span>{% endif %}
+      <span class="rt-cmp">Em {{ r.votacoes_nominais|numero }} votações nominais{{ " abertas" if r.senado }}.{% if r.completo %} Mediana: {{ r.ref.mediana_votos|round|int|numero }}.{% endif %}</span></div>
+    <div class="rt-num"><strong>{{ n.relatorias|numero }}</strong><span class="rt-rot">projetos com relatoria atual</span><span class="rt-cmp">{% if r.completo %}Mediana: {{ r.ref.mediana_relatorias|round|int|numero }}. {{ r.relatorias_mais }} {{ "parlamentar tem" if r.relatorias_mais == 1 else "parlamentares têm" }} mais.{% else %}A escolha de quem relata é feita pelas comissões.{% endif %}</span></div>
+  </div>
+  <p class="ce-section-note"><a href="{{ raiz }}/entenda.html#{{ "numeros-no-senado" if r.senado else "numeros-na-lista" }}">Entenda a contagem</a>. Os números não medem qualidade e não mostram todo o trabalho de um mandato.</p>
+</section>
+
+<div class="rt-duas ce-section">
+  <section aria-labelledby="rt-leis">
+    <div class="ce-section-header"><h2 class="ce-display ce-section-title" id="rt-leis">Leis de autoria principal</h2></div>
+    <p class="ce-section-note">Sancionadas ou promulgadas desde {{ "01/02/2023" }}, a partir de projetos em que consta como primeira assinatura.</p>
+    {% if r.leis %}
+    <ul class="rt-leis">
+      {% for p in r.leis %}
+      <li>
+        <span class="rt-lei-nome">{% if p.norma.nome != perfil.propostas.norma_sem_numero %}{{ p.norma.nome }}{% else %}Norma sem número informado{% endif %} <span class="ce-badge resultado-norma">Virou {{ "emenda" if "Emenda" in p.norma.nome else "lei" }}</span></span>
+        <span class="ce-meta">{{ p.sigla }} · {{ p.norma.data|data_br }}</span>
+        <span class="rt-lei-texto">{{ p.descricao[0] }}{% if p.descricao[1] %}…{% endif %}</span>
+      </li>
+      {% endfor %}
+    </ul>
+    {% if r.leis_alem %}<p class="ce-section-note">E mais {{ r.leis_alem }} no <a href="../{{ d.id }}.html#leis">perfil completo</a>.</p>{% endif %}
+    {% else %}
+    <p class="ce-state-box ce-muted">Nenhuma lei de autoria principal sancionada no período.</p>
+    {% endif %}
+    <p class="ce-section-note">Virar lei é resultado de um processo com muitos participantes, e não pertence a uma pessoa só.</p>
+  </section>
+
+  <section aria-labelledby="rt-votos">
+    <div class="ce-section-header"><h2 class="ce-display ce-section-title" id="rt-votos">Como votou</h2></div>
+    {% if r.texto and r.total_texto %}
+    <p class="ce-section-note">Votações do texto principal das propostas, no Plenário{{ ", em votação aberta" if r.senado }}.</p>
+    <div class="ce-vote-bar rt-vbar" aria-hidden="true"><span class="ce-vote-yes" style="width: {{ r.texto.barra.sim }}%"></span><span class="ce-vote-no" style="width: {{ r.texto.barra.nao }}%"></span>{% if r.texto.outros %}<span class="ce-vote-other" style="width: {{ r.texto.barra.outros }}%"></span>{% endif %}</div>
+    <ul class="ce-legend">
+      <li><span class="ce-dot ce-vote-yes" aria-hidden="true"></span>Sim <strong>{{ r.texto.sim }}</strong></li>
+      <li><span class="ce-dot ce-vote-no" aria-hidden="true"></span>Não <strong>{{ r.texto.nao }}</strong></li>
+      {% if r.texto.outros %}<li><span class="ce-dot ce-vote-other" aria-hidden="true"></span>Outros <strong>{{ r.texto.outros }}</strong></li>{% endif %}
+    </ul>
+    <ul class="rt-fatos">
+      <li>Em <strong>{{ r.contra_texto }}</strong> das {{ r.total_texto }} votações do texto principal, o voto ficou do lado menos votado.</li>
+      {% if not r.senado and r.com_orientacao %}<li>Votou diferente da orientação do próprio partido em <strong>{{ r.difere_texto }}</strong> das {{ r.com_orientacao }} votações em que o partido orientou.</li>{% endif %}
+    </ul>
+    {% else %}
+    <p class="ce-state-box ce-muted">Sem votos registrados no texto principal das propostas no período.</p>
+    {% endif %}
+    {% if r.temas %}
+    <h3 class="ce-subtitle rt-espaco" id="rt-temas">Assuntos das propostas</h3>
+    <ul class="ce-bars rt-barras" aria-labelledby="rt-temas">
+      {% for t in r.temas %}<li><span class="ce-bar-label">{{ t.nome }}</span><span class="ce-bar-track"><span class="ce-bar-value" style="width: {{ t.largura }}%"></span></span><span class="ce-bar-number"><strong>{{ t.valor }}</strong></span></li>{% endfor %}
+    </ul>
+    <p class="ce-section-note">Desde {{ perfil.propostas.ano_inicial }}. Uma proposta pode ter mais de um assunto.</p>
+    {% endif %}
+  </section>
+</div>
+
+{% if r.cota_total or r.emendas_pago %}
+<section class="ce-section" aria-labelledby="rt-dinheiro">
+  <div class="ce-section-header"><h2 class="ce-display ce-section-title" id="rt-dinheiro">Dinheiro público na legislatura</h2></div>
+  <div class="rt-numeros rt-numeros--dois">
+    {% if r.cota_total %}<div class="rt-num"><strong>{{ r.cota_total|milhoes }}</strong><span class="rt-rot">em cota parlamentar</span><span class="rt-cmp">{% if r.cota_percentuais %}Entre {{ ('%.1f'|format(r.cota_percentuais|min))|replace('.', ',') }}% e {{ ('%.1f'|format(r.cota_percentuais|max))|replace('.', ',') }}% da cota disponível nos anos completos. {% endif %}Usar a cota não indica irregularidade.</span></div>{% endif %}
+    {% if r.emendas_pago %}<div class="rt-num"><strong>{{ r.emendas_pago|milhoes }}</strong><span class="rt-rot">pagos em emendas individuais</span><span class="rt-cmp">{% if r.emendas_funcao %}{{ r.emendas_funcao.valor|milhoes }} para {{ r.emendas_funcao.nome }}. {% endif %}Pagamento não comprova a entrega.</span></div>{% endif %}
+  </div>
+</section>
+{% endif %}
+
+<section class="ce-section" id="imagens" aria-labelledby="rt-imagens">
+  <div class="ce-section-header"><h2 class="ce-display ce-section-title" id="rt-imagens">Para compartilhar</h2></div>
+  <p class="ce-section-note">Imagens com os números desta página, geradas no seu navegador. Inclua o link da página ao publicar.</p>
+  <div class="rt-imagens" id="rt-imagens-area"
+    data-nome="{{ d.nome }}" data-sub="{{ d.partido }}-{{ d.uf }} · {{ nome_casa }}" data-arquivo="retrospectiva-{{ d.nome|lower|replace(' ', '-') }}"
+    data-logo="{{ raiz }}/static/brand/svg/logo-primary.svg" data-coleta="{{ perfil.coleta_local|data_br }}"
+    data-numeros='{{ cartao|tojson }}' hidden>
+    <figure class="rt-imagem"><img id="rt-prev-feed" alt="Prévia da imagem para o feed" width="270" height="338"><figcaption>Feed (1080 × 1350)</figcaption><button type="button" class="ce-button ce-button--secondary" data-formato="feed">Baixar imagem do feed</button></figure>
+    <figure class="rt-imagem"><img id="rt-prev-story" alt="Prévia da imagem para stories" width="216" height="384"><figcaption>Stories (1080 × 1920)</figcaption><button type="button" class="ce-button ce-button--secondary" data-formato="story">Baixar imagem dos stories</button></figure>
+  </div>
+  <noscript><p class="pf-nota">As imagens precisam de JavaScript. O link desta página pode ser compartilhado normalmente.</p></noscript>
+  <div class="pf-compartilhar" id="compartilhar" data-texto="Retrospectiva da legislatura 2023–2027 de {{ d.nome }} ({{ d.partido }}-{{ d.uf }}), com dados oficiais, no Monitor Político." hidden>
+    <button class="ce-button ce-button--ghost" id="s-nativo" type="button" hidden>Compartilhar link</button>
+    <a class="ce-button ce-button--ghost" id="s-whatsapp" href="https://wa.me/">Compartilhar no WhatsApp</a>
+    <button class="ce-button ce-button--ghost" id="s-copiar" type="button">Copiar link</button>
+    <span class="pf-nota" id="s-aviso" aria-live="polite"></span>
+  </div>
+</section>
+{% endblock %}
+{% block scripts %}<script src="{{ raiz }}/static/perfil.js" defer></script><script src="{{ raiz }}/static/retrospectiva.js" defer></script>{% endblock %}

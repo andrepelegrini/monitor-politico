@@ -23,6 +23,7 @@
       <p class="pf-deck">{{ d.partido }}-{{ d.uf }}{% if d.situacao %} · {{ d.situacao }}{% endif %}{% if d.condicao %} · {{ d.condicao }}{% endif %}{% if perfil.legislatura_atual %} · Mandato atual: {{ perfil.legislatura_atual.inicio|data_br }} a {{ perfil.legislatura_atual.fim|data_br }}.{% endif %}{% if perfil.proximo_mandato %} Mandato renovado na eleição de {{ perfil.proximo_mandato.ano }}, para {{ perfil.proximo_mandato.inicio_ano }}–{{ perfil.proximo_mandato.fim_ano }}.{% endif %}</p>
       {% if fora_de_exercicio %}<p class="pf-nota">Fora de exercício{% if saiu_em %} desde {{ saiu_em|data_br }}{% endif %}{% if d.situacao %} · Situação oficial: {{ d.situacao }}{% endif %}. Estes são os dados do último registro, de {{ perfil.coleta_local|data_br }}.</p>
       {% else %}<p class="pf-nota">Dados deste perfil coletados em {{ perfil.coleta_local|data_br }}, de fontes oficiais.</p>{% endif %}
+      {% if perfil.retrospectiva %}<p class="rt-link"><a class="ce-button ce-button--secondary" href="retrospectiva/{{ d.id }}.html">Retrospectiva da legislatura 2023–2027</a></p>{% endif %}
     </header>
     {% if perfil.plenario or perfil.dinheiro or perfil.propostas %}
     <div class="pf-numeros">

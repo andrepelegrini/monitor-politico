@@ -17,6 +17,7 @@ from zoneinfo import ZoneInfo
 
 from jinja2 import Environment, PackageLoader, select_autoescape
 
+from monitor_politico import retrospectiva as modulo_retro
 from monitor_politico import estados as modulo_estados, legislatura as modulo_legislatura, mapa as modulo_mapa, metricas as modulo_metricas, painel, perfis, resumo
 from monitor_politico.lote_senado import ROTULOS_ELEITOS as ROTULOS_ELEITOS_SENADO
 from monitor_politico.models import Deputado, Senador
@@ -119,18 +120,23 @@ def _gerar_casa(
     )
     modelo = env.get_template(perfil)
     perfis_ampliados = perfis_ampliados or {}
+    # Retrospectiva da legislatura: só para quem tem perfil completo e números na lista comparável.
+    retro_ref = modulo_retro.referencias(contexto["metricas"], [p.id for p in parlamentares]) if contexto.get("metricas") and perfis_ampliados else None
+    if retro_ref:
+        (pasta / "retrospectiva").mkdir()
     for p in parlamentares:
         caminho = f"{pasta.name}/{p.id}.html"
         ampliado = perfis_ampliados.get(p.id)
         if ampliado:
-            pagina = _gerar_perfil_ampliado(env, pasta.parent, p, ampliado, {**contexto, "caminho": caminho, "d": p}, slugs or {}, pasta_imagens)
+            pagina = _gerar_perfil_ampliado(env, pasta.parent, p, ampliado, {**contexto, "caminho": caminho, "d": p}, slugs or {}, pasta_imagens, retro_ref, pasta)
         else:
             pagina = modelo.render(**contexto, caminho=caminho, **{variavel: p})
         (pasta / f"{p.id}.html").write_text(pagina, encoding="utf-8")
 
 
 def _gerar_perfil_ampliado(
-    env: Environment, saida: Path, deputado: Deputado, doc: dict[str, Any], contexto: dict[str, Any], slugs: dict[str, str], pasta_imagens: Optional[Path]
+    env: Environment, saida: Path, deputado: Deputado, doc: dict[str, Any], contexto: dict[str, Any], slugs: dict[str, str], pasta_imagens: Optional[Path],
+    retro_ref: Optional[dict[str, Any]] = None, pasta_casa: Optional[Path] = None,
 ) -> str:
     """Página do perfil completo e os arquivos com as listas longas, baixados só quando alguém as usa."""
     visao = perfis.visao(doc, slugs=slugs)
@@ -158,6 +164,17 @@ def _gerar_perfil_ampliado(
     if doc.get("dinheiro"):
         (pasta / f"{arquivo}-comprovantes.json").write_text(
             json.dumps(comprovantes_compactos(doc["dinheiro"]["cota"]["comprovantes"]), ensure_ascii=False, separators=(",", ":")), encoding="utf-8"
+        )
+    if retro_ref and pasta_casa:
+        visao["retrospectiva"] = True
+        retro = modulo_retro.visao(visao, modulo_metricas.do_deputado(contexto["metricas"], deputado.id), retro_ref)
+        situacao = (contexto.get("situacoes_eleitorais") or {}).get(str(deputado.id))
+        (pasta_casa / "retrospectiva" / f"{deputado.id}.html").write_text(
+            env.get_template("retrospectiva.html").render(
+                **{**contexto, "raiz": "../..", "caminho": f"{pasta_casa.name}/retrospectiva/{deputado.id}.html"},
+                perfil=visao, retro=retro, cartao=retro["cartao"], situacao=situacao,
+            ),
+            encoding="utf-8",
         )
     return env.get_template("perfil_ampliado.html").render(**contexto, perfil=visao)
 
