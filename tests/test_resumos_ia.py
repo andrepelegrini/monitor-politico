@@ -154,3 +154,52 @@ def test_mudar_a_instrucao_refaz_os_resumos(monkeypatch):
     antes = resumos_ia.impressao_digital(PROP)
     monkeypatch.setattr(resumos_ia, "VERSAO_INSTRUCOES", resumos_ia.VERSAO_INSTRUCOES + 1)
     assert resumos_ia.impressao_digital(PROP) != antes
+
+
+class LeitorFalso:
+    def __init__(self, paginas):
+        self.pages = [SimpleNamespace(extract_text=lambda t=t: t) for t in paginas]
+
+
+def test_pdf_com_texto_vai_como_texto_e_digitalizado_vai_inteiro(monkeypatch):
+    import pypdf
+    monkeypatch.setattr(pypdf, "PdfReader", lambda _: LeitorFalso(["Art. 1º " + "texto " * 100, "Art. 2º " + "texto " * 100]))
+    assert resumos_ia.texto_do_pdf(b"%PDF").startswith("Art. 1º")
+    monkeypatch.setattr(pypdf, "PdfReader", lambda _: LeitorFalso(["", "  "]))
+    assert resumos_ia.texto_do_pdf(b"%PDF") is None
+    assert resumos_ia.texto_do_pdf(None) is None
+
+
+def test_envia_o_texto_com_esforco_baixo_e_registra_o_consumo(tmp_path, monkeypatch):
+    monkeypatch.setattr(resumos_ia, "texto_do_pdf", lambda pdf: "Art. 1º O limite passa a ser de R$ 110 mil.")
+    com_uso = resposta()
+    com_uso.usage = SimpleNamespace(input_tokens=4000, output_tokens=800)
+    com_uso.model = "claude-opus-5-5"
+    cliente = ClienteFalso([com_uso])
+    saida = tmp_path / "resumos.json"
+    resumos_ia.atualizar(doc(PROP), saida, cliente, http_falso())
+    pedido = cliente.pedidos[0]
+    blocos = pedido["messages"][0]["content"]
+    assert [b["type"] for b in blocos] == ["text", "text"] and "<texto_oficial>" in blocos[0]["text"]
+    assert pedido["output_config"]["effort"] == "low"
+    guardado = json.loads(saida.read_text(encoding="utf-8"))["resumos"]["PLP 186/2026"]
+    assert guardado["entrada"] == "texto"
+    assert guardado["uso"] == {"modelo": "claude-opus-5-5", "entrada": 4000, "saida": 800}
+    assert resumos_ia.custo(guardado["uso"]) == (4000 * 4 + 800 * 20) / 1_000_000
+
+
+def test_haiku_vai_sem_a_reserva_do_servidor():
+    cliente = ClienteFalso([resposta()])
+    resumos_ia.gerar(cliente, PROP, None, None, modelo="claude-haiku-5-5")
+    assert "fallbacks" not in cliente.pedidos[0] and "betas" not in cliente.pedidos[0]
+    cliente = ClienteFalso([resposta()])
+    resumos_ia.gerar(cliente, PROP, None, None, modelo="claude-sonnet-5-5")
+    assert cliente.pedidos[0]["fallbacks"] == "default"
+
+
+def test_comparar_roda_cada_modelo_e_nao_para_no_erro(monkeypatch):
+    monkeypatch.setattr(resumos_ia, "texto_do_pdf", lambda pdf: None)
+    cliente = ClienteFalso([resposta(), RuntimeError("falhou"), resposta()])
+    linhas = resumos_ia.comparar(doc(PROP), cliente, http_falso(), chaves=("PLP 186/2026",))
+    assert [l["modelo"] for l in linhas] == ["claude-opus-5-5", "claude-sonnet-5-5", "claude-haiku-5-5"]
+    assert "erro" in linhas[1] and linhas[2]["titulo"] == RESUMO["titulo"]

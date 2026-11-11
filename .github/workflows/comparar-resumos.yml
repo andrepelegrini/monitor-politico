@@ -1,0 +1,29 @@
+name: Comparar modelos de resumo
+
+# Gera os resumos de 8 proposições com Opus, Sonnet e Haiku, para comparar qualidade e custo.
+# Só roda à mão e não altera data/resumos.json: o resultado fica como arquivo da execução.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  comparar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e ".[ia]"
+      - name: Gerar os resumos com cada modelo
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python -m monitor_politico.resumos_ia comparar comparacao-resumos.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: comparacao-resumos
+          path: comparacao-resumos.json
