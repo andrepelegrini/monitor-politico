@@ -32,7 +32,8 @@ import httpx
 
 CONGRESSO_PADRAO = Path("data/congresso.json")
 SAIDA_PADRAO = Path("data/resumos.json")
-MODELO = os.environ.get("RESUMOS_MODELO") or "claude-opus-5-5"
+# Sonnet 5.5: no teste de 11/11/2026 (8 proposições), resumos equivalentes aos do Opus pela metade do custo.
+MODELO = os.environ.get("RESUMOS_MODELO") or "claude-sonnet-5-5"
 ESFORCO = "low"  # resumir um texto não pede raciocínio longo, e o raciocínio é cobrado como saída
 MIN_CARACTERES_POR_PAGINA = 200  # abaixo disso, o PDF é tratado como digitalizado
 # Dólares por milhão de tokens (entrada, saída), para a estimativa no fim de cada execução.
