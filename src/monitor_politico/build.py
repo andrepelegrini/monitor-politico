@@ -34,6 +34,7 @@ PERFIS_SENADO_PADRAO = PERFIS_PADRAO / "senado"
 METRICAS_SENADO_PADRAO = Path("data/metricas_senadores.json")
 LEGISLATURA_SENADO_PADRAO = Path("data/legislatura_senado.json")
 ARQUIVO_SENADO_PADRAO = Path("data/arquivo_senadores.json")
+HISTORICO_PADRAO = Path("data/historico.json")
 NOME_DA_IMAGEM = "{id}-compartilhar.jpg"
 PREFIXO_COMPROVANTE = "https://www.camara.leg.br/cota-parlamentar/documentos/publ/"
 SAIDA_PADRAO = Path("site")
@@ -250,6 +251,7 @@ def construir(
     legislatura_senado: Optional[dict[str, Any]] = None,
     arquivo_senadores: Optional[list[dict[str, Any]]] = None,
     pasta_imagens_senado: Optional[Path] = None,
+    historico: Optional[dict[str, Any]] = None,
 ) -> None:
     env = Environment(
         loader=PackageLoader("monitor_politico", "templates"),
@@ -276,6 +278,19 @@ def construir(
         "proposicoes": {k: {**p, "resumo": resumos.get(k)} for k, p in doc_congresso["proposicoes"].items()},
     }
     dados_inicio = painel.inicio(doc_congresso)
+    # Projetos votados desde 2023 (coleta semanal): ganham página, entram na busca e na lista de votações.
+    # A coleta diária, mais completa (voto de cada um, orientações), vale quando a mesma proposição está nas duas.
+    doc_completo = doc_congresso
+    if historico:
+        antigas = {k: {**p, "resumo": resumos.get(k)} for k, p in historico["proposicoes"].items()}
+        periodo = doc_congresso.get("periodo") or {}
+        doc_completo = {
+            **doc_congresso,
+            "proposicoes": {**antigas, **doc_congresso["proposicoes"]},
+            "periodo": {**periodo, "votacoes_desde": historico["desde"], "recentes_desde": periodo.get("votacoes_desde", historico["desde"])},
+        }
+    dados_votacoes = painel.inicio(doc_completo)
+    dados_votacoes["anos_votadas"] = sorted({v["ano"] for v in dados_votacoes["votadas"]}, reverse=True)
     malha = modulo_mapa._malha()
     mapa_estados = [
         {"uf": uf, "slug": uf.lower(), "nome": forma["nome"], "d": forma["d"], "rotulo": forma["rotulo"]}
@@ -290,7 +305,7 @@ def construir(
     )
     (saida / "votacoes.html").write_text(
         env.get_template("votacoes.html").render(
-            raiz=".", casa=None, caminho="votacoes.html", atualizado_congresso=atualizado_congresso, **dados_inicio
+            raiz=".", casa=None, caminho="votacoes.html", atualizado_congresso=atualizado_congresso, **dados_votacoes
         ),
         encoding="utf-8",
     )
@@ -315,7 +330,7 @@ def construir(
     eleitos_senado = (legislatura_senado or {}).get("eleitos_novos", [])
     situacoes_senado = (legislatura_senado or {}).get("situacoes", {})
     ids_senadores = ids_senado_em_exercicio | {s.id for s in senadores_anteriores}
-    for prop in doc_congresso["proposicoes"].values():
+    for prop in doc_completo["proposicoes"].values():
         (saida / "proposicoes" / f"{prop['slug']}.html").write_text(
             modelo.render(
                 raiz="..",
@@ -336,10 +351,10 @@ def construir(
         encoding="utf-8",
     )
     (saida / "static" / "busca.json").write_text(
-        json.dumps(indice_de_busca(deputados, senadores, doc_congresso["proposicoes"], anteriores, eleitos, senadores_anteriores, eleitos_senado), ensure_ascii=False, separators=(",", ":")),
+        json.dumps(indice_de_busca(deputados, senadores, doc_completo["proposicoes"], anteriores, eleitos, senadores_anteriores, eleitos_senado), ensure_ascii=False, separators=(",", ":")),
         encoding="utf-8",
     )
-    slugs = {p["chave"]: p["slug"] for p in doc_congresso["proposicoes"].values()}
+    slugs = {p["chave"]: p["slug"] for p in doc_completo["proposicoes"].values()}
     # Deputado sem registro nas métricas é parte da coleta só se ela existir; o template trata a ausência.
     leis_na_lista = {d.id: modulo_metricas.do_deputado(metricas, d.id) for d in deputados} if metricas else None
     _gerar_casa(
@@ -412,6 +427,7 @@ if __name__ == "__main__":
         metricas_senado=modulo_metricas.ler(METRICAS_SENADO_PADRAO),
         legislatura_senado=modulo_legislatura.ler(LEGISLATURA_SENADO_PADRAO),
         arquivo_senadores=(modulo_legislatura.ler(ARQUIVO_SENADO_PADRAO) or {}).get("senadores"),
+        historico=modulo_legislatura.ler(HISTORICO_PADRAO),
     )
     print(
         f"Site gerado em {destino}/ ({len(doc_dep['deputados'])} deputados, {len(doc_sen['senadores'])} senadores, "

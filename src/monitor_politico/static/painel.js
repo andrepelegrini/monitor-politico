@@ -10,6 +10,7 @@
   // Página principal: filtros das votações recentes e chips de tema.
   var lista = document.getElementById("lista-votadas");
   if (lista) {
+    var periodo = document.getElementById("f-periodo");
     var casa = document.getElementById("f-casa");
     var tema = document.getElementById("f-tema");
     var resultado = document.getElementById("f-resultado");
@@ -21,7 +22,8 @@
     var aplicar = function () {
       var visiveis = 0;
       itens.forEach(function (li) {
-        var ok = (!casa.value || li.dataset.casas.split("|").indexOf(casa.value) !== -1) &&
+        var ok = (!periodo || !periodo.value || (periodo.value === "recente" ? li.dataset.recente === "1" : li.dataset.ano === periodo.value)) &&
+          (!casa.value || li.dataset.casas.split("|").indexOf(casa.value) !== -1) &&
           (!tema.value || li.dataset.temas.indexOf("|" + tema.value + "|") !== -1) &&
           (!resultado.value || li.dataset.resultados.split("|").indexOf(resultado.value) !== -1) &&
           (!nominal.checked || li.dataset.nominal === "1");
@@ -31,7 +33,8 @@
       contagem.textContent = visiveis;
       vazio.hidden = visiveis !== 0;
     };
-    [casa, tema, resultado, nominal].forEach(function (el) { el.addEventListener("input", aplicar); });
+    [periodo, casa, tema, resultado, nominal].forEach(function (el) { if (el) el.addEventListener("input", aplicar); });
+    aplicar();  // a lista abre no período escolhido (os últimos 30 dias)
 
     // Vindo de "Assuntos do mês" na página inicial: votacoes.html?tema=Saúde já abre filtrada.
     var temaPedido = new URLSearchParams(location.search).get("tema");
@@ -51,6 +54,7 @@
     Array.prototype.forEach.call(document.querySelectorAll("[data-limpar-filtros]"), function (botao) {
       botao.addEventListener("click", function () {
         casa.value = tema.value = resultado.value = "";
+        if (periodo) periodo.value = "recente";
         nominal.checked = false;
         aplicar();
         casa.focus();

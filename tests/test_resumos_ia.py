@@ -203,3 +203,12 @@ def test_comparar_roda_cada_modelo_e_nao_para_no_erro(monkeypatch):
     linhas = resumos_ia.comparar(doc(PROP), cliente, http_falso(), chaves=("PLP 186/2026",))
     assert [l["modelo"] for l in linhas] == ["claude-opus-5-5", "claude-sonnet-5-5", "claude-haiku-5-5"]
     assert "erro" in linhas[1] and linhas[2]["titulo"] == RESUMO["titulo"]
+
+
+def test_do_historico_so_as_pecs_entram_nos_resumos():
+    recentes = {"proposicoes": {"PL 1/2026": {"sigla": "PL"}}}
+    historico = {"proposicoes": {"PEC 45/2019": {"sigla": "PEC"}, "PL 2/2023": {"sigla": "PL"}, "PL 1/2026": {"sigla": "PL", "antigo": True}}}
+    juntas = resumos_ia.com_historico(recentes, historico)["proposicoes"]
+    assert sorted(juntas) == ["PEC 45/2019", "PL 1/2026"]
+    assert "antigo" not in juntas["PL 1/2026"]  # a coleta diária vale sobre o histórico
+    assert resumos_ia.com_historico(recentes, None)["proposicoes"] == recentes["proposicoes"]

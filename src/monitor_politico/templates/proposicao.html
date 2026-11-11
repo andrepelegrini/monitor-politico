@@ -178,6 +178,8 @@
     </div>
   </div>
   {% endfor %}
+  {% elif votacoes.nominal_sem_lista %}
+  <p class="ce-state-box ce-muted ce-after-header">Esta proposição teve votação nominal, com o placar mostrado acima. A lista de quem votou como fica guardada aqui só para as votações dos últimos 30 dias; nas anteriores, o voto aparece no perfil de cada parlamentar. <a href="../entenda.html#nominal">Entenda</a></p>
   {% else %}
   <p class="ce-state-box ce-muted ce-after-header">Nenhuma votação desta proposição no período foi nominal, então não há registro do voto de cada parlamentar. <a href="../entenda.html#nominal">Entenda</a></p>
   {% endif %}

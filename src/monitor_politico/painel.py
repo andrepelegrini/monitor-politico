@@ -114,6 +114,8 @@ def votadas(doc: dict[str, Any]) -> list[dict[str, Any]]:
                 for v in ultimas
             ],
             "_ordem": ultimas[0]["data_hora"][:10],
+            "ano": ultimas[0]["data_hora"][:4],
+            "recente": ultimas[0]["data_hora"][:10] >= doc["periodo"].get("recentes_desde", desde),
         })
     linhas.sort(key=lambda l: l["_ordem"], reverse=True)  # estável: empates mantêm a ordem por chave
     return linhas
@@ -290,7 +292,7 @@ def votacoes_da_pagina(prop: dict[str, Any], deputados: set[int], senadores: set
             "sem_orientacao": [s for s, o in v.get("orientacoes") or [] if o is None],
         }
         cards.append(card)
-        if v["nominal"]:
+        if v["nominal"] and v["votos"]:
             perfis, pasta = (deputados, "deputados") if v["casa"] == "Câmara" else (senadores, "senadores")
             nominais.append({
                 "id": re.sub(r"[^A-Za-z0-9_-]", "-", v["id"]),
@@ -316,4 +318,6 @@ def votacoes_da_pagina(prop: dict[str, Any], deputados: set[int], senadores: set
         "rito": [c for c in cards if c["procedimento"]],
         "nominais": sorted(nominais, key=lambda n: n["rito"]),  # mérito primeiro; sort estável mantém a ordem cronológica
         "tem_simbolica": any(not c["nominal"] for c in cards),
+        # Votações antigas guardam só o placar: a lista de quem votou como fica no perfil de cada parlamentar.
+        "nominal_sem_lista": any(c["nominal"] and not c["votos"] for c in cards),
     }

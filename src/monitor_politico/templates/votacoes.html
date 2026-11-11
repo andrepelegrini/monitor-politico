@@ -1,6 +1,6 @@
 {% extends "base.html" %}
-{% block titulo %}Votações dos últimos 30 dias · Monitor Político{% endblock %}
-{% block descricao %}Todas as proposições votadas nos plenários da Câmara e do Senado nos últimos 30 dias, com resultado, placar e filtros por casa, tema e resultado.{% endblock %}
+{% block titulo %}Votações no Plenário · Monitor Político{% endblock %}
+{% block descricao %}As proposições votadas nos plenários da Câmara e do Senado desde fevereiro de 2023, com resultado, placar e filtros por período, casa, tema e resultado.{% endblock %}
 {% block conteudo %}
 <nav class="ce-breadcrumb" aria-label="Trilha de navegação">
   <ol>
@@ -10,15 +10,15 @@
 </nav>
 <header class="ce-page-head">
   <p class="ce-eyebrow">Plenários da Câmara e do Senado</p>
-  <h1>Votações dos últimos 30 dias</h1>
-  <p class="ce-deck">Cada proposição votada no período, com o resultado e o placar da votação mais recente em cada casa.</p>
+  <h1>Votações no Plenário</h1>
+  <p class="ce-deck">Cada proposição que teve o texto votado no Plenário desde fevereiro de 2023, com o resultado e o placar da votação mais recente em cada casa. A lista abre nos últimos 30 dias; escolha outro período para ver as anteriores.</p>
 </header>
 {% if temas %}
     <section class="ce-section" aria-labelledby="temas-titulo">
       <div class="ce-section-header">
         <h2 class="ce-display ce-section-title" id="temas-titulo">Temas em destaque</h2>
       </div>
-      <p class="ce-section-note">Temas oficiais das proposições em pauta ou votadas no período. Clique para filtrar a lista.</p>
+      <p class="ce-section-note">Temas oficiais das proposições votadas desde 2023 ou em pauta. Clique para filtrar a lista.</p>
       <div class="chips">
         {% for nome, qtd in temas %}
         <button type="button" class="chip" data-tema="{{ nome }}">{{ nome }} <span class="qtd">{{ qtd }}</span></button>
@@ -34,6 +34,13 @@
   <p class="ce-section-note">Uma linha por proposição, com a votação de mérito mais recente em cada casa. Votações de rito (requerimentos, redação final) ficam na página de cada uma. <a href="entenda.html#rito">O que é votação de rito?</a></p>
 
   <form class="ce-filters" aria-label="Filtrar votações" onsubmit="return false">
+    <label class="ce-field"><span class="ce-control-label">Período</span>
+      <select class="ce-select" id="f-periodo">
+        <option value="recente" selected>Últimos 30 dias</option>
+        {% for ano in anos_votadas %}<option value="{{ ano }}">{{ ano }}</option>{% endfor %}
+        <option value="">Desde 2023</option>
+      </select>
+    </label>
     <label class="ce-field"><span class="ce-control-label">Casa</span>
       <select class="ce-select" id="f-casa">
         <option value="">Câmara e Senado</option>
@@ -60,7 +67,7 @@
   <p class="ce-count" aria-live="polite"><span id="contagem">{{ votadas|length }}</span> de {{ votadas|length }} proposições</p>
   <ul class="ce-vote-list" id="lista-votadas">
     {% for v in votadas %}
-    <li data-casas="{{ v.casas|join('|') }}" data-temas="|{{ v.temas|join('|') }}|" data-resultados="{{ v.resultados|join('|') }}" data-nominal="{{ 1 if v.nominal else 0 }}">
+    <li data-ano="{{ v.ano }}" data-recente="{{ 1 if v.recente else 0 }}" data-casas="{{ v.casas|join('|') }}" data-temas="|{{ v.temas|join('|') }}|" data-resultados="{{ v.resultados|join('|') }}" data-nominal="{{ 1 if v.nominal else 0 }}">
       <a href="proposicoes/{{ v.slug }}.html">
         <div class="ce-vote-text">
           <span class="ce-meta">{{ v.sigla }}{% if v.temas %} · {{ v.temas[:3]|join(" · ") }}{% endif %}</span>

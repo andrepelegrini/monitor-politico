@@ -34,6 +34,10 @@ jobs:
         # Se o Senado falhar, os perfis do Senado da semana anterior seguem no pacote.
         continue-on-error: true
         run: python -m monitor_politico.lote_senado
+      - name: Coletar o histórico de votações desde 2023
+        # Se falhar, o histórico da semana anterior continua valendo.
+        continue-on-error: true
+        run: python -m monitor_politico.historico
       - name: Gerar as imagens de compartilhamento
         continue-on-error: true
         run: |
@@ -52,7 +56,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/perfis_versao.json data/metricas_deputados.json data/metricas_senadores.json data/legislatura_senado.json data/arquivo_senadores.json
+          git add data/perfis_versao.json data/metricas_deputados.json data/metricas_senadores.json data/legislatura_senado.json data/arquivo_senadores.json data/historico.json
           git diff --cached --quiet && exit 0
           git commit -m "Atualiza perfis completos ($(date -u +%F))"
           git pull --rebase

@@ -31,6 +31,9 @@ from typing import Any, Callable, Optional
 import httpx
 
 CONGRESSO_PADRAO = Path("data/congresso.json")
+HISTORICO_PADRAO = Path("data/historico.json")
+# Do histórico desde 2023, só as PECs ganham resumo: as demais ficam com a ementa oficial.
+TIPOS_DO_HISTORICO = ("PEC",)
 SAIDA_PADRAO = Path("data/resumos.json")
 # Sonnet 5.5: no teste de 11/11/2026 (8 proposições), resumos equivalentes aos do Opus pela metade do custo.
 MODELO = os.environ.get("RESUMOS_MODELO") or "claude-sonnet-5-5"
@@ -215,6 +218,12 @@ def custo(uso: dict[str, Any]) -> float:
     return (uso["entrada"] * entrada + uso["saida"] * saida) / 1_000_000
 
 
+def com_historico(doc_congresso: dict[str, Any], historico: Optional[dict[str, Any]]) -> dict[str, Any]:
+    """As proposições recentes mais as do histórico dos tipos que ganham resumo (hoje, só PEC)."""
+    antigas = {k: p for k, p in ((historico or {}).get("proposicoes") or {}).items() if p.get("sigla") in TIPOS_DO_HISTORICO}
+    return {**doc_congresso, "proposicoes": {**antigas, **doc_congresso["proposicoes"]}}
+
+
 def atualizar(
     doc_congresso: dict[str, Any],
     saida: Path,
@@ -295,4 +304,5 @@ if __name__ == "__main__":
         else:
             entrada = Path(sys.argv[1]) if len(sys.argv) > 1 else CONGRESSO_PADRAO
             destino = Path(sys.argv[2]) if len(sys.argv) > 2 else SAIDA_PADRAO
-            atualizar(json.loads(entrada.read_text(encoding="utf-8")), destino, anthropic.Anthropic(), http)
+            historico = json.loads(HISTORICO_PADRAO.read_text(encoding="utf-8")) if HISTORICO_PADRAO.exists() else None
+            atualizar(com_historico(json.loads(entrada.read_text(encoding="utf-8")), historico), destino, anthropic.Anthropic(), http)
