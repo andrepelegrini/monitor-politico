@@ -1,27 +1,28 @@
 # Próximos passos
 
-Onde o projeto está e o que vem depois. Atualizado em 04/11/2026.
+Onde o projeto está e o que vem depois. Atualizado em 11/11/2026.
 
 Ideias soltas anotadas durante o uso ficam em [notes.txt](../notes.txt).
 
 ## Já no ar
 
-- **Deputados e senadores**: lista por Casa com filtros e resumo (partidos, estados, quem conduz a Casa) e perfil de cada parlamentar com contato oficial. Gênero aparece só como contagem agregada.
-- **Página inicial**: temas em destaque, pauta dos próximos dias e o que foi votado nos últimos 30 dias.
-- **Página de cada proposição**: ementa, linha do tempo, votações, orientação dos partidos e voto de cada parlamentar (só nas votações nominais).
-- **Busca única no topo** (parlamentares e proposições), **página "Entenda os dados"** e **pré-visualização ao compartilhar** (Open Graph).
-- **Resumos por IA das proposições**: o código está pronto (`resumos_ia.py` → `data/resumos.json`), mas ainda não rodou. Veja as pendências.
+- **Página inicial**: destaques por regra fixa com resumo em linguagem simples, pauta dos próximos dias, assuntos do mês e entrada por estado (mapa e 27 páginas de estado).
+- **Votações**: todos os projetos com o texto votado no Plenário desde fevereiro de 2023, com filtro de período, e uma página para cada um.
+- **Deputados e senadores**: lista comparável (leis, votos, presença ou participação, relatorias), mapa das bancadas, perfil completo, retrospectiva da legislatura 2023–2027, eleitos para 2027, badges da eleição de 2026 e quem está fora de exercício.
+- **Resumos por IA**: Sonnet 5.5, só o texto do PDF, para as proposições dos últimos 30 dias e da pauta e para as PECs do histórico.
+- **Busca única no topo**, página **"Entenda os dados"**, **identidade visual** (logo, cabeçalho azul-marinho) e **pré-visualização ao compartilhar**.
 
 ## Pendências
 
-- [ ] Cadastrar o secret `ANTHROPIC_API_KEY` no GitHub (Settings → Secrets and variables → Actions) para os resumos por IA serem gerados na coleta diária. A IA ficou para depois, talvez numa versão paga, então isso não é urgente.
 - [ ] Conferir a pré-visualização ao compartilhar: colar o link de uma página no WhatsApp. Se não aparecer imagem, cadastrar `SITE_URL` com o domínio do site nas variáveis de ambiente do projeto na Vercel.
+- [ ] Testar no celular o botão de baixar a imagem da retrospectiva (deve abrir o compartilhamento do sistema).
+- [ ] Conferir os 10 senadores marcados como "Sem candidatura em 2026" e testar o site com leitor de tela.
 
 ## Em andamento: perfil completo para todos
 
 - [x] Piloto com Tabata Amaral e publicação, em 05/11/2026.
 - [x] 6C, legislatura de 2027: badges, eleitos e quem está fora de exercício.
-- [ ] 6A, perfil completo para os deputados em exercício (branch `rollout-6a`). Aguardando validação.
+- [x] 6A, perfil completo para os deputados em exercício: publicado em 06/11/2026.
 - [x] 6B, senadores: publicado em 07/11/2026. Conferir a primeira coleta automática do Senado (segunda, 09/11) e os 10 marcados como "Sem candidatura em 2026". Perfil completo, lista comparável, eleitos e badges. Coleta em `lote_senado.py`.
 - [x] Página inicial v2 (10/11/2026): destaques por regra fixa, pauta com títulos simples, assuntos do mês, entrada por estado, 27 páginas de estado e a lista completa em votacoes.html. Resumos por IA ligados (segredo ANTHROPIC_API_KEY). Próximas etapas do plano: assuntos agrupados, busca simples, comparar lado a lado e custo do mandato, acompanhar temas.
 - [x] Custo dos resumos por IA (11/11/2026): só o texto do PDF, raciocínio baixo, consumo registrado em cada resumo e modelo trocado para o Sonnet 5.5 após teste com 8 proposições (Opus US$ 0,082, Sonnet US$ 0,041, Haiku US$ 0,002 por resumo; Haiku falhou em 2 de 8). Estimativa: US$ 3 a 5 por mês. Para cortar mais: limitar o texto de proposições muito longas.
@@ -45,9 +46,9 @@ Na posse, em 01/02/2027: trocar `INICIO_MANDATO` em `metricas.py` e `LEGISLATURA
 
 Ordem combinada: 5 (feito) → 1 junto com 4 → 2 → 3. Antes de cada uma, fazer um mock para aprovação.
 
-1. **Atuação no perfil do parlamentar** (em andamento no piloto acima): votos nas votações nominais e presença (a coleta é nova: `data/congresso.json` só tem 30 dias e nenhuma presença); proposições de autoria (Câmara `/proposicoes?idDeputadoAutor`, Senado `/processo` por autor); gastos da cota parlamentar (Câmara `/deputados/{id}/despesas`; o Senado publica a CEAPS em arquivo).
+1. ~~**Atuação no perfil do parlamentar**~~ (entregue: perfil completo, 6A e 6B).
 2. ~~**Retrospectiva do mandato compartilhável**~~ (entregue em 11/11/2026): página por parlamentar com os números do mandato e uma imagem para redes gerada na coleta. Os mandatos atuais terminam em 31/01/2027, então o ideal é lançar antes. Depende do item 1.
-3. **Resultado eleitoral (TSE)**: votos em 2022 e resultado de 2026 (reeleito, não concorreu, não eleito). Os arquivos são grandes e separados por UF; confirmar o que o TSE já publicou de 2026.
+3. ~~**Resultado eleitoral (TSE)**~~ (entregue: eleições 2018–2026 no perfil, badges de 2026 e eleitos para 2027).
 4. **"Acompanhar" sem servidor próprio**: feeds RSS por parlamentar e por proposição, gerados no build. Alertas por e-mail exigem servidor e ficam como candidatos à versão paga.
 6. **Avisos da nova legislatura e contato**: mock aprovado em 07/11/2026, nas posições Eleitos para 2027, perfil de quem chega e página inicial, mais "Encontrou um erro?" nos perfis e no rodapé. Falta criar um Gmail do projeto e um Google Forms com planilha privada (nunca um link direto para a planilha), e definir o nome do responsável para a política de privacidade. Na hora de enviar: cópia oculta, atenção ao limite diário do Gmail e apagar a lista depois, como o texto promete.
 7. **Domínio próprio**: comprar antes da divulgação ampla, apontar o site e redirecionar os links do endereço `vercel.app`.
