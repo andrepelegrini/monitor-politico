@@ -57,6 +57,21 @@
    "modelo": "claude-opus-5-5",
    "gerado_em": "2026-11-10T12:19:03+00:00"
   },
+  "PDL 557/2026": {
+   "titulo": "Adesão do Brasil à Convenção de Hong Kong sobre reciclagem segura de navios",
+   "o_que_muda": "O Congresso aprova o texto da Convenção de Hong Kong de 2009, que trata da reciclagem segura e ambientalmente adequada de navios, para o Brasil poder aderir a ela. Atos que possam levar à denúncia (saída) ou à revisão da Convenção, e ajustes que criem encargos gravosos ao patrimônio nacional, precisarão de nova aprovação do Congresso. O decreto vale a partir da publicação.",
+   "quem_e_afetado": "O texto não detalha as regras da Convenção. A aprovação diz respeito ao Brasil como país que pretende aderir ao tratado, e ao Congresso, que passa a analisar mudanças futuras nele.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 1703,
+    "saida": 290
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "806adb74743986fc",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-12T17:32:37+00:00"
+  },
   "PDL 934/2025": {
    "titulo": "Aprovação do Acordo de Escazú sobre informação e participação em temas ambientais",
    "o_que_muda": "Aprova o Acordo de Escazú, tratado da América Latina e Caribe sobre acesso à informação, participação pública e acesso à Justiça em temas ambientais. O acordo foi assinado em Nova York em 27/09/2018. O texto declara que o acordo será aplicado conforme a Constituição e as leis brasileiras, incluindo a Lei Geral de Proteção de Dados, com proteção dos dados de produtores rurais e suas propriedades. Saída do acordo, revisão ou ajustes com encargos ao país dependem de aprovação do Congresso.",
@@ -95,6 +110,36 @@
    "fonte_hash": "c03820f8465fe94d",
    "modelo": "claude-sonnet-5-5",
    "gerado_em": "2026-11-11T17:02:45+00:00"
+  },
+  "PEC 16/2021": {
+   "titulo": "Perda da nacionalidade brasileira: fim da perda por adquirir outra cidadania",
+   "o_que_muda": "Brasileiros deixam de perder a nacionalidade apenas por adquirirem outra nacionalidade. A perda continua para quem tiver a naturalização cancelada por sentença judicial, por fraude no processo ou por atentado contra a ordem constitucional e o Estado Democrático. Passa a ser possível pedir expressamente a perda da própria nacionalidade a autoridade brasileira, exceto se isso deixar a pessoa sem nenhuma nacionalidade (apatridia). Quem renunciar poderá readquirir a nacionalidade originária, nos termos da lei.",
+   "quem_e_afetado": "Brasileiros que adquirem outra nacionalidade, brasileiros naturalizados que tenham a naturalização cancelada pela Justiça e pessoas que queiram renunciar à nacionalidade brasileira.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 1632,
+    "saida": 335
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "df7a21a4e6e99eff",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-12T17:34:50+00:00"
+  },
+  "PEC 162/2019": {
+   "titulo": "Permuta de juízes de direito entre tribunais de justiça de diferentes estados",
+   "o_que_muda": "Muda o artigo 93 da Constituição para permitir que juízes de direito vinculados a diferentes tribunais de justiça troquem de lugar entre si (permuta). A permuta valeria entre comarcas de igual entrância, que é o mesmo nível na carreira. Continuam valendo, no que couber, as regras já previstas nas alíneas a, b, c e e do inciso II do mesmo artigo. A emenda entra em vigor na data de sua publicação.",
+   "quem_e_afetado": "Juízes de direito dos tribunais de justiça dos estados e do Distrito Federal, que poderão pedir permuta com colegas de outro tribunal, e os tribunais envolvidos nesses pedidos.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 7088,
+    "saida": 288
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "f2e6963b65ae3c0a",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-12T17:35:12+00:00"
   },
   "PEC 169/2019": {
    "titulo": "Permite acumular cargo de professor com outro cargo público de qualquer tipo",
@@ -279,6 +324,21 @@
    "modelo": "claude-sonnet-5-5",
    "gerado_em": "2026-11-11T17:02:52+00:00"
   },
+  "PEC 43/2022": {
+   "titulo": "Prazo adicional para permissões de loterias em vigor",
+   "o_que_muda": "Cria o art. 121 no Ato das Disposições Constitucionais Transitórias, parte da Constituição com regras de transição. Garante prazo de vigência adicional a credenciamentos, contratos, aditivos e outros ajustes de permissão lotérica em vigor na data de publicação da emenda. O prazo extra é contado a partir do fim do prazo do instrumento vigente, qualquer que seja a data de início. O texto não informa a duração desse prazo adicional.",
+   "quem_e_afetado": "Quem tem permissão lotérica para vender serviços lotéricos, como credenciados e contratados, com instrumento em vigor na data de publicação da emenda.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 1842,
+    "saida": 264
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "89a1f53e56b23358",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-12T17:35:07+00:00"
+  },
   "PEC 44/2023": {
    "titulo": "Reserva de 5% das emendas de parlamentares para catástrofes e emergências naturais",
    "o_que_muda": "Cada deputado ou senador poderá reservar 5% do valor de suas emendas ao orçamento para enfrentar catástrofes e emergências naturais. O dinheiro iria para o órgão federal competente, que o repassaria imediatamente aos estados e ao Distrito Federal no momento do desastre, até o valor reservado. Se não houver ocorrências que justifiquem o uso, o valor volta ao parlamentar no quarto ano da legislatura. A mudança valeria a partir da promulgação.",
@@ -293,6 +353,36 @@
    "fonte_hash": "5612941726bdd9e3",
    "modelo": "claude-sonnet-5-5",
    "gerado_em": "2026-11-11T17:04:21+00:00"
+  },
+  "PEC 45/2019": {
+   "titulo": "Reforma tributária: novos impostos sobre consumo e fim de tributos atuais",
+   "o_que_muda": "Cria um imposto sobre bens e serviços (IBS), de Estados e Municípios, e uma contribuição federal (CBS), que substituem ICMS, ISS, PIS, Cofins e IPI. A transição começa em 2026 e os tributos antigos acabam em 2033. Cria um Comitê Gestor do IBS, um imposto sobre bens prejudiciais à saúde e ao meio ambiente, a Cesta Básica Nacional com alíquota zero e redução de 60% para saúde e educação. Cria fundos de R$ 8 bi a R$ 60 bi por ano (valores de 2023, corrigidos pela inflação).",
+   "quem_e_afetado": "Contribuintes, empresas, consumidores, produtores rurais, Estados, Municípios e o Distrito Federal, a União, a Zona Franca de Manaus e beneficiários de incentivos fiscais do ICMS.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 45717,
+    "saida": 359
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "64501869af8ca8cc",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-12T17:34:41+00:00"
+  },
+  "PEC 45/2023": {
+   "titulo": "Posse e porte de drogas como crime na Constituição, com penas alternativas ao usuário",
+   "o_que_muda": "Acrescenta o inciso LXXX ao art. 5º da Constituição, determinando que a lei considere crime a posse e o porte de drogas sem autorização, independentemente da quantidade. O texto mantém a distinção entre traficante e usuário, a ser feita pelas circunstâncias do caso concreto. Ao usuário se aplicam penas alternativas à prisão e tratamento contra a dependência. A mudança vale a partir da publicação.",
+   "quem_e_afetado": "Usuários e traficantes de drogas, além de juízes, policiais e demais agentes que precisam distinguir um do outro em cada caso. Também afeta quem é flagrado com qualquer quantidade de droga.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 1578,
+    "saida": 286
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "517736c4bf3c16a5",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-12T17:32:54+00:00"
   },
   "PEC 48/2023": {
    "titulo": "Novas regras para a demarcação de terras indígenas na Constituição",
@@ -354,6 +444,21 @@
    "modelo": "claude-sonnet-5-5",
    "gerado_em": "2026-11-11T17:03:29+00:00"
   },
+  "PEC 7/2018": {
+   "titulo": "Inclusão de servidores dos ex-Territórios do AP, RR e RO em quadro federal",
+   "o_que_muda": "Permite que servidores, policiais e outros trabalhadores dos ex-Territórios do Amapá, Roraima e Rondônia optem por entrar em quadro em extinção da União, desde que comprovem vínculo de pelo menos 90 dias. Os períodos cobertos vão até outubro de 1998 (AP e RR) e dezembro de 1991 (RO). Policiais e bombeiros militares do quadro não poderão receber menos que os do Distrito Federal. A União tem 180 dias para regulamentar, e o servidor tem mais 180 dias para optar.",
+   "quem_e_afetado": "Servidores, policiais civis e militares, bombeiros e outros trabalhadores dos ex-Territórios e dos Estados do Amapá, Roraima e Rondônia, de suas prefeituras, além de aposentados e pensionistas.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 12380,
+    "saida": 340
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "430d63f738d22cd0",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-12T17:35:01+00:00"
+  },
   "PEC 72/2023": {
    "titulo": "Isenção de IPVA para veículos com 20 anos ou mais de fabricação",
    "o_que_muda": "A proposta cria imunidade do IPVA, imposto estadual sobre veículos, para veículos com 20 anos ou mais de fabricação. Vale para veículos terrestres de passageiros, caminhonetes e veículos mistos. Ficam de fora micro-ônibus, ônibus, reboques e semirreboques. Mudaria o art. 155 da Constituição e valeria na data da publicação.",
@@ -383,6 +488,21 @@
    "fonte_hash": "68512c79416b603d",
    "modelo": "claude-sonnet-5-5",
    "gerado_em": "2026-11-11T17:03:00+00:00"
+  },
+  "PEC 8/2021": {
+   "titulo": "Limita decisões individuais de ministros que suspendem leis e atos dos Poderes",
+   "o_que_muda": "Proíbe decisão individual (de um só ministro) de tribunal que suspenda a eficácia de lei ou ato do Presidente da República ou dos presidentes da Câmara, do Senado e do Congresso. Em recesso, só o presidente do tribunal pode decidir sozinho, em caso de grave urgência, e o plenário deve analisar em 30 dias corridos após a volta. Deferida a cautelar, o STF deve julgar o mérito em até 6 meses, ou a decisão perde a eficácia. A emenda vale 180 dias após a publicação.",
+   "quem_e_afetado": "Ministros do STF e demais tribunais, o Presidente da República, o Congresso Nacional, os Estados e quem move ações de inconstitucionalidade, inclusive em processos já em andamento.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 3277,
+    "saida": 319
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "02f4073862fb386e",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-12T17:34:46+00:00"
   },
   "PEC 81/2015": {
    "titulo": "Torna o homicídio doloso um crime que nunca prescreve",
@@ -431,6 +551,21 @@
    "fonte_hash": "2a43e0ea09a19f78",
    "modelo": "claude-opus-5-5",
    "gerado_em": "2026-11-10T12:20:01+00:00"
+  },
+  "PL 2475/2025": {
+   "titulo": "Maus-tratos a animais com morte passam a ser crime hediondo",
+   "o_que_muda": "O projeto inclui na Lei dos Crimes Hediondos o crime de maus-tratos aos animais, quando o animal morrer. O crime está previsto no art. 32 da Lei 9.605/1998 (Lei de Crimes Ambientais). A lei passaria a valer na data de sua publicação.",
+   "quem_e_afetado": "Pessoas acusadas ou condenadas por maus-tratos que causem a morte de animais, que passariam a responder por crime hediondo. Também envolve animais e o Poder Público, responsável por protegê-los.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 2421,
+    "saida": 230
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "48436d7fe0167fac",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-12T17:32:28+00:00"
   },
   "PL 2829/2024": {
    "titulo": "Dá o nome de Viaduto Severo Eulálio Filho a viaduto da BR-343 em Teresina",
@@ -519,6 +654,21 @@
    "modelo": "claude-sonnet-5-5",
    "gerado_em": "2026-11-11T17:02:17+00:00"
   },
+  "PL 464/2026": {
+   "titulo": "Interdição abusiva exclui da herança e pena maior para desvio de bens de idosos",
+   "o_que_muda": "Quem promover ou tentar promover interdição abusiva contra alguém poderá ser excluído da herança dessa pessoa. A interdição é abusiva quando proposta ou conduzida de modo temerário, fraudulento ou com desvio de finalidade, o que precisa ser reconhecido por decisão judicial definitiva. A pena do crime do art. 102 do Estatuto da Pessoa Idosa passa a ser reclusão de 2 a 5 anos, e multa. A lei entra em vigor na data de sua publicação.",
+   "quem_e_afetado": "Pessoas que pedem ou conduzem interdição de outra pessoa e podem perder o direito à herança, além de quem pratica o crime do art. 102 do Estatuto da Pessoa Idosa. Também envolve pessoas idosas e seus herdeiros.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 4628,
+    "saida": 332
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "86fad387f778bc79",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-12T17:32:41+00:00"
+  },
   "PL 4674/2024": {
    "titulo": "Ultrassom morfológico gratuito para gestantes na rede pública",
    "o_que_muda": "Garante às gestantes o direito de fazer de graça, na rede pública de saúde, a ultrassonografia morfológica, exame de imagem que avalia a formação do bebê. O exame será feito conforme indicação médica, para acompanhar o desenvolvimento do feto e identificar cedo malformações e riscos. Não fazer o exame quando indicado será considerado negligência médica, sujeita às punições do Código de Ética Médica. O Ministério da Saúde deverá informar as gestantes com folhetos, cartazes, vídeos e campanhas.",
@@ -542,6 +692,21 @@
    "fonte_hash": "4212f5c294a24480",
    "modelo": "claude-sonnet-5-5",
    "gerado_em": "2026-11-11T17:02:13+00:00"
+  },
+  "PL 504/2021": {
+   "titulo": "Política Nacional de Residência em Área Profissional da Saúde",
+   "o_que_muda": "Cria regras nacionais para a residência em saúde de profissões não médicas, com duração de 2 a 3 anos e dedicação exclusiva, de 40 a 44 horas semanais. Muda o nome da comissão nacional para CNRAPS, ligada ao Ministério da Educação. Prevê bolsa ao residente, equivalente à da residência médica, e bolsas a tutores, preceptores e coordenadores. A lei entraria em vigor 90 dias após a publicação.",
+   "quem_e_afetado": "Residentes de 20 profissões da saúde, tutores, preceptores, coordenadores, instituições que oferecem programas, Ministérios da Saúde e da Educação, e estados e municípios.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 26360,
+    "saida": 283
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "48ac013daae75780",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-12T17:32:33+00:00"
   },
   "PL 5239/2025": {
    "titulo": "Primeira consulta ginecológica no SUS para meninas a partir dos 10 anos",
@@ -633,6 +798,231 @@
    "modelo": "claude-opus-5-5",
    "gerado_em": "2026-11-10T12:22:10+00:00"
   },
+  "PLN 1/2026": {
+   "titulo": "Altera autorizações de despesa com pessoal no Orçamento de 2026",
+   "o_que_muda": "Substitui o Anexo V do Orçamento de 2026, que lista as autorizações para criar cargos e funções e conceder aumentos de remuneração no serviço público federal. A mudança inclui no Poder Executivo a criação de 1.821 cargos comissionados e funções na Receita Federal, com a transformação de Funções Gratificadas em Funções Comissionadas Executivas. Segundo a exposição de motivos, não há aumento da despesa total, pois os valores vêm de recursos já existentes sob supervisão do Ministério do Planejamento e Orçamento. Os demais itens do Anexo V permanecem iguais. A lei entra em vigor na data da publicação.",
+   "quem_e_afetado": "Servidores e ocupantes de funções na Secretaria Especial da Receita Federal do Brasil, além do Ministério da Fazenda e dos órgãos que administram o Orçamento federal.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 14715,
+    "saida": 353
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "c8ce66ba8c6878c8",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-12T17:35:17+00:00"
+  },
+  "PLN 11/2026": {
+   "titulo": "Crédito de R$ 56,2 milhões para Justiça Federal, Justiça do Trabalho e MPU",
+   "o_que_muda": "Abre crédito suplementar de R$ 56.250.092,00 no Orçamento de 2026 para a Justiça Federal, a Justiça do Trabalho e o Ministério Público da União. O dinheiro vem do cancelamento de outras dotações do próprio orçamento. Os valores são: R$ 41.892.000 à Justiça Federal, R$ 14.254.425 ao Ministério Público Federal e R$ 103.667 à Justiça do Trabalho. Serve a obras de edifícios-sede, climatização, publicidade, moradia de servidores e contratações.",
+   "quem_e_afetado": "Justiça Federal (TRFs da 1ª, 4ª e 6ª Região e varas de primeiro grau), Justiça do Trabalho (TRTs de Alagoas e Piauí) e Ministério Público Federal, além de servidores que recebem auxílio-moradia.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 10592,
+    "saida": 363
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "a31fb4428365b070",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-12T17:35:32+00:00"
+  },
+  "PLN 12/2026": {
+   "titulo": "Crédito de R$ 543 milhões para reforço do orçamento de cinco áreas do governo",
+   "o_que_muda": "Abre crédito suplementar de R$ 543.145.850,00 no Orçamento Fiscal de 2026 para reforçar verbas de quatro ministérios e de Operações Oficiais de Crédito. O valor original era R$ 563.492.379,00; caiu R$ 20.346.529,00 com a retirada de verba do Ministério da Justiça e Segurança Pública para ação contra o tráfico de drogas. Os recursos vêm de R$ 135.844.459,00 de superávit financeiro de 2025 e de R$ 407.301.391,00 de anulação de outras dotações. A lei vale a partir da publicação.",
+   "quem_e_afetado": "Ministérios da Justiça e Segurança Pública, das Comunicações, da Cultura e da Integração e do Desenvolvimento Regional, e as Operações Oficiais de Crédito, que recebem o reforço ou têm dotações anuladas.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 17954,
+    "saida": 365
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "cb83e6a096c2a3f8",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-12T17:35:37+00:00"
+  },
+  "PLN 13/2026": {
+   "titulo": "Crédito de R$ 488 milhões para pagar cotas em fundo e banco internacionais",
+   "o_que_muda": "Abre crédito suplementar de R$ 488.112.855,00 no Orçamento de 2026 para Encargos Financeiros da União. O dinheiro será usado na integralização de cotas (pagamento da participação do Brasil) no FONPLATA e no BID-Invest, parcelas de 2026. Os recursos vêm do cancelamento de outras dotações: R$ 288.112.855 da Receita Federal (soluções de informática), R$ 100 milhões de remuneração de agentes financeiros e R$ 100 milhões do seguro de crédito à exportação.",
+   "quem_e_afetado": "A União, que paga as parcelas de 2026 ao FONPLATA e ao BID-Invest. Também são afetadas a Receita Federal e as ações orçamentárias que tiveram dotação cancelada.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 22865,
+    "saida": 327
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "f0634591cfc3b076",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-12T17:35:43+00:00"
+  },
+  "PLN 14/2026": {
+   "titulo": "Crédito de R$ 3 milhões ao Ministério da Saúde para compensação previdenciária",
+   "o_que_muda": "Abre crédito especial de R$ 3.000.000,00 no Orçamento da Seguridade Social de 2026, em favor do Ministério da Saúde (Fundo Nacional de Saúde). O dinheiro vem do cancelamento de R$ 3.000.000,00 da Reserva de Contingência, sem aumentar o total de gastos. Cria a ação orçamentária de compensação financeira entre o regime de previdência dos servidores da União e os de estados e municípios, ligada ao sistema COMPREV. A lei vale a partir da publicação.",
+   "quem_e_afetado": "Ministério da Saúde e Fundo Nacional de Saúde, que recebem o crédito. Também envolve os regimes próprios de previdência da União, de estados e de municípios, na compensação financeira entre eles.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 5359,
+    "saida": 327
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "c6f5da035ac247a8",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-12T17:35:47+00:00"
+  },
+  "PLN 15/2026": {
+   "titulo": "Crédito de R$ 24,4 milhões para agências reguladoras federais",
+   "o_que_muda": "Abre crédito suplementar de R$ 24.431.895,00 no Orçamento da União de 2026 para reforçar o orçamento de agências reguladoras. O dinheiro vem do cancelamento de verba da ANTT, do Ministério dos Transportes, na ação de fiscalização de transporte terrestre. Os valores são: ANVISA, R$ 4,2 milhões; ANAC, R$ 5,05 milhões; ANTAQ, R$ 6,3 milhões; ANM, R$ 3,78 milhões; ANA, R$ 3,4 milhões; ANEEL, R$ 1,7 milhão. A lei vale a partir da publicação.",
+   "quem_e_afetado": "Seis agências reguladoras ligadas aos Ministérios de Minas e Energia, da Saúde, da Integração e do Desenvolvimento Regional e de Portos e Aeroportos, que recebem o reforço. A ANTT, do Ministério dos Transportes, tem a dotação reduzida.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 9625,
+    "saida": 391
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "080909fb1e264ed9",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-12T17:35:52+00:00"
+  },
+  "PLN 16/2026": {
+   "titulo": "Crédito de R$ 45.369 ao Ministério da Educação para benefícios de legislação especial",
+   "o_que_muda": "Abre crédito especial de R$ 45.369,00 no Orçamento da Seguridade Social de 2026 para o Ministério da Educação. O valor é dividido entre a Universidade Federal da Paraíba (R$ 12.968), o Instituto Federal do Pará (R$ 11.328) e o Instituto Federal de Goiás (R$ 21.073). Os recursos vêm do cancelamento de verba de mesmo valor em Encargos Financeiros da União, e a lei vale na data de sua publicação.",
+   "quem_e_afetado": "A Universidade Federal da Paraíba e os Institutos Federais do Pará e de Goiás, que passam a ter dotação para pagar despesas de legislação especial ou decisões judiciais.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 6073,
+    "saida": 307
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "4b38bf1629f245d5",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-12T17:35:56+00:00"
+  },
+  "PLN 18/2026": {
+   "titulo": "Mudança nas regras de remanejamento de verbas do Orçamento de 2026",
+   "o_que_muda": "Altera o art. 4º da Lei Orçamentária de 2026 para ampliar as situações em que o governo pode suplementar e remanejar verbas sem nova lei. Acrescenta despesas de defesa nacional (Lei Complementar 221/2025) e de fiscalização e preservação ambiental no Ministério do Meio Ambiente. Também permite remanejar valores entre o Pronaf (agricultura familiar) e o Proex (exportações) e ajusta a redação sobre anulação de dotações e receitas de órgãos com autonomia financeira. A lei vale a partir da publicação.",
+   "quem_e_afetado": "Afetam-se diretamente o Poder Executivo, os Ministérios da Defesa, do Meio Ambiente e das Relações Exteriores, e órgãos com autonomia financeira. Também são atingidos os programas Pronaf e Proex.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 3694,
+    "saida": 347
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "7a36615c58cf3a20",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-12T17:36:00+00:00"
+  },
+  "PLN 19/2026": {
+   "titulo": "Crédito de R$ 130 milhões para presídios federais, pesagem de caminhões e ponte na Bahia",
+   "o_que_muda": "Abre crédito especial de R$ 130.041.737,00 no Orçamento da União para os Ministérios da Educação, da Justiça e Segurança Pública e dos Transportes. O dinheiro vem do cancelamento de outras dotações do orçamento, e não de novos recursos. Há R$ 40,2 milhões para presídios federais, R$ 39,9 milhões para postos de pesagem rodoviária, R$ 50 milhões para a ponte Salvador–Ilha de Itaparica e R$ 13 mil para uma contribuição internacional.",
+   "quem_e_afetado": "Ministérios da Educação, da Justiça e Segurança Pública e dos Transportes, Fundo Penitenciário Nacional, DNIT e Estado da Bahia. Perdem dotações o Ministério da Saúde (R$ 50 milhões), o DNIT e o Fundo Penitenciário Nacional.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 11687,
+    "saida": 370
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "8eb213729a49ac0d",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-12T17:36:06+00:00"
+  },
+  "PLN 20/2026": {
+   "titulo": "Crédito de R$ 520,5 milhões para ministérios e fundos regionais no orçamento de 2026",
+   "o_que_muda": "Abre crédito suplementar de R$ 520.535.876,00 no Orçamento Fiscal de 2026 para quatro ministérios e para Operações Oficiais de Crédito. Os recursos vêm de superávit financeiro de 2025 (R$ 507.255.616,00) e do cancelamento de outras dotações (R$ 13.280.260,00). Quase todo o valor vai para financiar projetos do setor produtivo pelos fundos do Nordeste (R$ 109,3 milhões) e do Centro-Oeste (R$ 397,9 milhões). A lei vale desde a publicação.",
+   "quem_e_afetado": "Ministérios da Justiça e Segurança Pública (ANPD), da Cultura (Biblioteca Nacional), da Integração e Desenvolvimento Regional e dos Direitos Humanos, além de projetos financiados pelos fundos do Nordeste e do Centro-Oeste.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 11930,
+    "saida": 374
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "9f80368f154cef3c",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-12T17:36:11+00:00"
+  },
+  "PLN 22/2026": {
+   "titulo": "Crédito de R$ 34,9 milhões para o Serpro manter e adequar imóveis",
+   "o_que_muda": "Abre crédito suplementar de R$ 34.941.713,00 no Orçamento de Investimento de 2026 para o Serpro, empresa federal de processamento de dados. O dinheiro vem de recursos próprios da empresa e reforça a ação \"Manutenção e Adequação de Bens Imóveis\". Segundo a exposição de motivos, o valor atende o contrato do Datacenter Modular de São Paulo (etapas 6 e 7) e um aditivo de serviços. A lei vale a partir da publicação.",
+   "quem_e_afetado": "O Serpro, empresa pública vinculada ao Ministério da Fazenda, que recebe a ampliação da dotação. Também envolve o contrato do Datacenter Modular de São Paulo.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 6161,
+    "saida": 309
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "92dace4571095a36",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-12T17:36:16+00:00"
+  },
+  "PLN 23/2026": {
+   "titulo": "Crédito de R$ 185,5 bilhões para benefícios previdenciários, BPC e Bolsa Família",
+   "o_que_muda": "Abre crédito suplementar de R$ 185.555.629.364,00 no Orçamento da Seguridade Social de 2026 para os Ministérios da Previdência Social e do Desenvolvimento e Assistência Social. O valor é dividido em R$ 150,99 bilhões para benefícios previdenciários, R$ 26 bilhões para o Bolsa Família e R$ 8,56 bilhões para o BPC e a Renda Mensal Vitalícia. Autoriza emitir títulos do Tesouro Nacional até esse valor, e os recursos vêm do cancelamento de dotações já previstas. A lei vale a partir da publicação.",
+   "quem_e_afetado": "Beneficiários da Previdência Social, do BPC (idosos e pessoas com deficiência), da Renda Mensal Vitalícia e do Bolsa Família, além dos dois ministérios e do Tesouro Nacional.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 12031,
+    "saida": 370
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "1043830b46f7093a",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-12T17:36:21+00:00"
+  },
+  "PLN 25/2026": {
+   "titulo": "Crédito de R$ 290 milhões para a Eletronuclear aplicar na usina Angra III",
+   "o_que_muda": "Abre crédito suplementar de R$ 290.058.339,00 no Orçamento de Investimento de 2026 em favor da Eletronuclear S.A. O dinheiro reforça a ação de implantação da Usina Termonuclear Angra III, no Rio de Janeiro. Os recursos vêm da geração própria da empresa, não de outras fontes. A lei entra em vigor na data de sua publicação.",
+   "quem_e_afetado": "A Eletronuclear S.A., empresa estatal responsável pela obra de Angra III, e o Ministério de Minas e Energia, ao qual ela está ligada.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 16750,
+    "saida": 261
+   },
+   "fonte": "texto integral",
+   "entrada": "pdf",
+   "fonte_hash": "35f9fa808de51559",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-12T17:36:29+00:00"
+  },
+  "PLN 26/2026": {
+   "titulo": "Crédito especial de R$ 4,8 milhões para Justiça, ABIN, Anvisa e órgãos do Meio Ambiente",
+   "o_que_muda": "Abre crédito especial de R$ 4.856.104,00 no Orçamento de 2026 para a Justiça Federal, a Justiça do Trabalho, a Presidência da República e os Ministérios da Saúde e do Meio Ambiente. O dinheiro vem do cancelamento de outras dotações do próprio orçamento: R$ 3.810.104 de encargos financeiros da União, R$ 546.000 da Justiça Federal e R$ 500.000 da Justiça do Trabalho. Valores: R$ 546.000 para o TRF da 1ª Região, R$ 500.000 para o TRT da 12ª Região, R$ 250.000 para a ABIN, R$ 140.140 para a Anvisa e R$ 3.419.964 para o Meio Ambiente.",
+   "quem_e_afetado": "Órgãos que recebem os recursos: TRF da 1ª Região, TRT da 12ª Região (SC), ABIN, Anvisa, Serviço Florestal Brasileiro, Ibama e Instituto Chico Mendes. Também servidores que recebem aposentadorias e adicional de fronteira.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 18354,
+    "saida": 454
+   },
+   "fonte": "texto integral",
+   "entrada": "pdf",
+   "fonte_hash": "cc0a4b7dab3c7afa",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-12T17:36:37+00:00"
+  },
+  "PLN 27/2026": {
+   "titulo": "Crédito de R$ 115 milhões para compensar Roraima por fluxo migratório",
+   "o_que_muda": "Abre crédito especial de R$ 115 milhões no Orçamento da União de 2026 para a União repassar recursos ao Estado de Roraima, por causa do fluxo migratório. O valor vai para Educação (R$ 10 milhões), Justiça e Segurança Pública (R$ 69 milhões) e Saúde (R$ 36 milhões). O dinheiro vem do cancelamento de R$ 46 milhões do Ministério das Cidades e de R$ 69 milhões da reserva de contingência. A lei vale desde a publicação.",
+   "quem_e_afetado": "O Estado de Roraima, que receberá os recursos, e os Ministérios da Educação, da Justiça e Segurança Pública, da Saúde e das Cidades, cujas dotações são ajustadas.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 9499,
+    "saida": 318
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "8d5aa07b4826f01b",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-12T17:36:42+00:00"
+  },
   "PLP 109/2025": {
    "titulo": "ANP poderá acessar notas fiscais eletrônicas de empresas de combustíveis",
    "o_que_muda": "Autoriza a ANP a obter dos órgãos fazendários dados de notas fiscais eletrônicas das empresas que ela regula. Os dados tratam de produção, venda, transporte, estoques e preços de derivados de petróleo, gás natural, combustíveis fósseis, biocombustíveis e combustíveis sintéticos. O acesso vale para a concessão e a autorização de operação dessas atividades, e a ANP deve manter o sigilo fiscal das informações. A lei entra em vigor na data de publicação.",
@@ -652,13 +1042,19 @@
    "gerado_em": "2026-11-10T12:20:32+00:00"
   },
   "PLP 230/2025": {
-   "titulo": "Impede bloqueio de verbas do fundo de telecomunicações e amplia desconto a operadoras",
-   "o_que_muda": "O projeto proíbe o contingenciamento, ou seja, o bloqueio temporário de gastos pelo governo, das despesas com programas e ações aprovados pelo Conselho Gestor do Fust (Fundo de Universalização dos Serviços de Telecomunicações). Também proíbe impor limites à execução dos recursos do fundo, exceto quando a arrecadação ficar abaixo do previsto, e proíbe reservar esses valores como reserva de contingência no orçamento. Pelo menos 50% das receitas do Fust em cada ano deverão ser usadas em uma modalidade específica de aplicação já prevista na lei do fundo. As operadoras de telecomunicações que executarem com recursos próprios projetos aprovados pelo Conselho Gestor poderão reduzir sua contribuição ao Fust em valor igual ao aprovado, limitado a 50% do que teriam de pagar, com esse benefício valendo por 5 anos a partir do ano fiscal seguinte à publicação da lei.",
-   "quem_e_afetado": "São afetados o governo federal, que deixa de poder bloquear os recursos do Fust, e as prestadoras de serviços de telecomunicações que contribuem para o fundo. Também são alcançados os programas financiados pelo fundo, como os de acesso à internet em escolas públicas e de cobertura de telefonia móvel em áreas sem atendimento.",
+   "titulo": "Proíbe bloqueio de verbas do Fust, fundo de telecomunicações, e prorroga desconto",
+   "o_que_muda": "Proíbe o bloqueio (contingenciamento) das despesas do Fust aprovadas pelo seu Conselho Gestor e de limites à execução financeira, salvo frustração na arrecadação. Os recursos do Fust não poderão ir para reservas de contingência. Ao menos 50% das receitas do ano deverão ir para a modalidade do art. 1º, § 3º, inciso I. Operadoras que investirem recursos próprios em projetos aprovados terão redução de até 50% da contribuição ao Fust, por 5 anos.",
+   "quem_e_afetado": "Operadoras de telecomunicações que contribuem ao Fust, o Conselho Gestor do fundo e o governo federal, responsável pela execução do orçamento. Também os beneficiários dos programas de conectividade financiados pelo Fust.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 4141,
+    "saida": 337
+   },
    "fonte": "texto integral",
-   "fonte_hash": "d58f83d16d1ce7d0",
-   "modelo": "claude-opus-5-5",
-   "gerado_em": "2026-11-10T12:12:46+00:00"
+   "entrada": "texto",
+   "fonte_hash": "bfdfea0069a20938",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-12T17:32:50+00:00"
   },
   "PLP 281/2019": {
    "titulo": "Novas regras para lidar com bancos, seguradoras e bolsas em crise",
@@ -677,6 +1073,21 @@
    "fonte_hash": "d55e35dc1a35ef3c",
    "modelo": "claude-opus-5-5",
    "gerado_em": "2026-11-10T12:17:15+00:00"
+  },
+  "REC 1/2026": {
+   "titulo": "Recurso para que o projeto que revoga a Lei de Alienação Parental vá ao Plenário",
+   "o_que_muda": "O recurso pede que o projeto que revoga a Lei de Alienação Parental seja votado no Plenário da Câmara, e não apenas em comissão. Hoje o projeto está sujeito à apreciação conclusiva, em que a comissão decide sem passar pelo Plenário. O recurso não altera a lei: só pede que o Plenário debata o projeto. Os autores defendem aperfeiçoar a lei, e citam os PLs 6351/2025 e 5899/2025.",
+   "quem_e_afetado": "Deputados que votariam o projeto no Plenário. Indiretamente, pais, mães e crianças em disputas de guarda, que são alcançados pela Lei de Alienação Parental (Lei 12.318/2010).",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 7122,
+    "saida": 303
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "2fef9688792895f3",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-12T17:32:45+00:00"
   },
   "REC 19/2022": {
    "titulo": "Pedido para levar ao Plenário projeto sobre penhora do faturamento de empresas",
