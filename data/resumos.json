@@ -234,6 +234,21 @@
    "modelo": "claude-sonnet-5-5",
    "gerado_em": "2026-11-11T17:04:12+00:00"
   },
+  "PEC 293/2004": {
+   "titulo": "Reforma tributária: controle da carga, ICMS, partilha e política industrial",
+   "o_que_muda": "Muda o Sistema Tributário e cria um controle da carga tributária nacional, com limites ligados a receita, PIB e dívida pública. Isenta de imposto de importação obras de arte de artistas brasileiros e de estrangeiros sobre temas brasileiros. Prevê programa de renda mínima da União e eleva de 22 para 25% a cota-parte dos Municípios no ICMS. O Poder Executivo deve propor política de desenvolvimento industrial em 120 dias e o Senado, revisão do sistema para 2007.",
+   "quem_e_afetado": "Contribuintes, artistas e importadores de obras de arte, proprietários rurais, Municípios e Estados, famílias de baixa renda, empresas e o Poder Público.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 561924,
+    "saida": 300
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "059cdbeff7d81fda",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-13T17:05:37+00:00"
+  },
   "PEC 3/2020": {
    "titulo": "Segurança cibernética e de bancos: só a União faz leis; todos os entes cuidam",
    "o_que_muda": "Passa a ser competência privativa da União fazer leis sobre transporte e transferência de valores, defesa cibernética, segurança de instituições financeiras e segurança cibernética em serviços públicos. Também passa a ser dever comum de União, estados, Distrito Federal e municípios zelar pela segurança cibernética dos serviços públicos. A emenda vale desde a data de sua publicação.",
@@ -1064,6 +1079,21 @@
    "fonte_hash": "854780798921977b",
    "modelo": "claude-opus-5-5",
    "gerado_em": "2026-11-10T12:20:58+00:00"
+  },
+  "PLP 299/2026": {
+   "titulo": "Novas regras de contenção de gastos e de benefícios fiscais no orçamento federal",
+   "o_que_muda": "Autoriza o governo federal a bloquear despesas e limitar o crescimento real do gasto a 2,0% ao ano a partir de 2027, nos anos em que adotar medidas de contenção. Reduz benefícios tributários em 20% e limita a compensação de tributos. Fixa tetos para algumas despesas até 2030 e permite desvincular até 40% do superávit financeiro de fundos. Autoriza deduzir da meta fiscal de 2026 até R$ 10,5 bilhões do subsídio ao diesel.",
+   "quem_e_afetado": "Governo federal e órgãos que executam o orçamento da União, empresas com benefícios tributários ou compensações de tributos, exportadores do PROEX e beneficiários de programas e fundos citados.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 8168,
+    "saida": 309
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "a7b4cc77a0e04388",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-13T17:04:39+00:00"
   },
   "PRC 113/2023": {
    "titulo": "Túnel entre os anexos II e IV da Câmara passa a se chamar José Richa",

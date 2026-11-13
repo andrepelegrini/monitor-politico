@@ -1,165 +1,10 @@
 {
- "coletado_em": "2026-11-12T17:32:14+00:00",
+ "coletado_em": "2026-11-13T17:04:27+00:00",
  "periodo": {
-  "votacoes_desde": "2026-10-13",
-  "pauta_ate": "2026-11-18"
+  "votacoes_desde": "2026-10-14",
+  "pauta_ate": "2026-11-19"
  },
- "pauta": [
-  {
-   "casa": "Senado",
-   "data_hora": "2026-11-12T16:00",
-   "sessao": "Sessão deliberativa ordinária",
-   "itens": [
-    {
-     "chave": "PL 6461/2019",
-     "ementa": "Institui o Estatuto do Aprendiz; e altera a Consolidação das Leis do Trabalho, aprovada pelo Decreto-Lei nº 5.452, de 1º de maio de 1943 (CLT), e as Leis nºs 6.019, de 3 de janeiro de 1974, e 14.601, de 19 de junho de 2023.",
-     "fase": null
-    },
-    {
-     "chave": "PL 6683/2025",
-     "ementa": "Dispõe sobre os requisitos essenciais relativos aos implantes cirúrgicos; e estabelece a notificação compulsória das falhas detectadas em implantes.",
-     "fase": "Discussão, em turno único"
-    }
-   ]
-  },
-  {
-   "casa": "Senado",
-   "data_hora": "2026-11-12T9:00",
-   "sessao": "Sessão conjunta",
-   "itens": [
-    {
-     "chave": "PLN 1/2026",
-     "ementa": "Altera o Anexo V à Lei nº 15.346, de 14 de janeiro de 2026, que estima a receita e fixa a despesa da União para o exercício financeiro de 2026.",
-     "fase": "Discussão, em turno único"
-    },
-    {
-     "chave": "PLN 3/2026",
-     "ementa": "Abre ao Orçamento Fiscal da União, em favor do Ministério da Ciência, Tecnologia e Inovação, crédito suplementar no valor de R$ 13.186.131,00, para reforço de dotação constante da Lei Orçamentária vigente.",
-     "fase": "Discussão, em turno único"
-    },
-    {
-     "chave": "PLN 4/2026",
-     "ementa": "Abre ao Orçamento Fiscal da União, em favor do Ministério da Fazenda, crédito suplementar no valor de R$ 34.000.000,00, para reforço de dotação constante da Lei Orçamentária vigente. (alteração proposta pela Mensagem presidencial nº 803/2026)",
-     "fase": "Discussão, em turno único"
-    },
-    {
-     "chave": "PLN 6/2026",
-     "ementa": "Abre ao Orçamento Fiscal da União, em favor dos Ministérios da Justiça e Segurança Pública e de Minas e Energia, e de Operações Oficiais de Crédito, crédito suplementar no valor de R$ 543.681.108,00, para reforço de dotações constantes da Lei Orçamentária vigente.",
-     "fase": "Discussão, em turno único"
-    },
-    {
-     "chave": "PLN 7/2026",
-     "ementa": "Altera a Lei nº 15.321, de 31 de dezembro de 2025, que dispõe sobre as diretrizes para a elaboração e a execução da Lei Orçamentária de 2026.",
-     "fase": "Discussão, em turno único"
-    },
-    {
-     "chave": "PLN 8/2026",
-     "ementa": "Abre ao Orçamento da Seguridade Social da União, em favor das Justiças Federal e do Trabalho, crédito especial no valor de R$ 21.557.807,00, para os fins que especifica.",
-     "fase": "Discussão, em turno único"
-    },
-    {
-     "chave": "PLN 10/2026",
-     "ementa": "Abre ao Orçamento Fiscal da União, em favor dos Ministérios da Educação, do Planejamento e Orçamento, do Desenvolvimento, Indústria, Comércio e Serviços e da Justiça e Segurança Pública, crédito especial no valor de R$ 11.528.608,00, para os fins que especifica (alteração proposta pela Mensagem presidencial nº 636/2026).",
-     "fase": "Discussão, em turno único"
-    },
-    {
-     "chave": "PLN 11/2026",
-     "ementa": "Abre ao Orçamento Fiscal da União, em favor da Justiça Federal, da Justiça do Trabalho, e do Ministério Público da União, crédito suplementar no valor de R$ 56.250.092,00, para reforço de dotações constantes da Lei Orçamentária vigente.",
-     "fase": "Discussão, em turno único"
-    },
-    {
-     "chave": "PLN 12/2026",
-     "ementa": "Abre ao Orçamento Fiscal da União, em favor dos Ministérios da Justiça e Segurança Pública, das Comunicações, da Cultura e da Integração e do Desenvolvimento Regional, e de Operações Oficiais de Crédito, crédito suplementar no valor de R$ 168.145.850,00, para reforço de dotações constantes da Lei  Orçamentária vigente (alteração proposta pela Mensagem presidencial nº 763/2026).",
-     "fase": "Discussão, em turno único"
-    },
-    {
-     "chave": "PLN 13/2026",
-     "ementa": "Abre ao Orçamento Fiscal da União, em favor de Encargos Financeiros da União, crédito suplementar no valor de R$ 488.112.855,00, para reforço de dotação constante da Lei Orçamentária vigente.",
-     "fase": "Discussão, em turno único"
-    },
-    {
-     "chave": "PLN 14/2026",
-     "ementa": "Abre ao Orçamento da Seguridade Social da União, em favor do Ministério da Saúde, crédito especial no valor de R$ 3.000.000,00, para os fins que especifica",
-     "fase": "Discussão, em turno único"
-    },
-    {
-     "chave": "PLN 15/2026",
-     "ementa": "Abre aos Orçamentos Fiscal e da Seguridade Social da União, em favor dos MME, MS, MIDR, e Portos, crédito suplementar no valor de R$ 24.431.895,00.",
-     "fase": "Discussão, em turno único"
-    },
-    {
-     "chave": "PLN 16/2026",
-     "ementa": "Abre ao Orçamento da Seguridade Social da União, em favor do Ministério da Educação, crédito especial no valor de R$ 45.369,00, para os fins que especifica.",
-     "fase": "Discussão, em turno único"
-    },
-    {
-     "chave": "PLN 18/2026",
-     "ementa": "Altera o art. 4º da Lei nº 15.346, de 14 de janeiro de 2026, que estima a receita e fixa a despesa da União para o exercício financeiro de 2026.",
-     "fase": "Discussão, em turno único"
-    },
-    {
-     "chave": "PLN 19/2026",
-     "ementa": "Abre ao Orçamento Fiscal da União, em favor dos Ministérios da Educação, da Justiça e Segurança Pública e dos Transportes, crédito especial no valor de R$ 130.041.737,00, para os fins que especifica (alteração proposta pela Mensagem presidencial nº 841/2026).",
-     "fase": "Discussão, em turno único"
-    },
-    {
-     "chave": "PLN 20/2026",
-     "ementa": "Abre ao Orçamento Fiscal da União, em favor dos Ministérios da Justiça e Segurança Pública, da Cultura, da Integração e do Desenvolvimento Regional e dos Direitos Humanos e da Cidadania, e de Operações Oficiais de Crédito, crédito suplementar no valor de R$ 520.535.876,00, para reforço de dotações constantes da Lei Orçamentária vigente.",
-     "fase": "Discussão, em turno único"
-    },
-    {
-     "chave": "PLN 22/2026",
-     "ementa": "Abre ao Orçamento de Investimento da União, em favor do Serviço Federal de Processamento de Dados, crédito suplementar no valor de R$ 34.941.713,00.",
-     "fase": "Discussão, em turno único"
-    },
-    {
-     "chave": "PLN 23/2026",
-     "ementa": "Abre ao Orçamento da Seguridade Social da União, em favor do Ministérios da Previdência Social e do Desenvolvimento e Assistência Social, Família e Combate à Fome, crédito suplementar no valor de R$ 185.555.629.364,00.",
-     "fase": "Discussão, em turno único"
-    },
-    {
-     "chave": "PLN 25/2026",
-     "ementa": "Abre ao Orçamento de Investimento da União, em favor da Eletronuclear S.A., crédito suplementar no valor de R$ 290.058.339,00, para reforço de dotação orçamentária constante da Lei Orçamentária vigente.",
-     "fase": "Discussão, em turno único"
-    },
-    {
-     "chave": "PLN 26/2026",
-     "ementa": "Abre aos Orçamentos Fiscal e da Seguridade Social da União, em favor das Justiças Federal e do Trabalho, da Presidência da República e dos Ministérios da Saúde e do Meio Ambiente e Mudança do Clima, crédito especial no valor de R$ 4.856.104,00, para os fins que especifica.",
-     "fase": "Discussão, em turno único"
-    },
-    {
-     "chave": "PLN 27/2026",
-     "ementa": "Abre aos Orçamentos Fiscal e da Seguridade Social da União, em favor dos Ministérios da Educação, da Justiça e Segurança Pública e da Saúde, crédito especial no valor de R$ 115.000.000,00, para os fins que especifica.",
-     "fase": "Discussão, em turno único"
-    },
-    {
-     "chave": "PLN 28/2026",
-     "ementa": "Abre aos Orçamentos Fiscal e da Seguridade Social da União, em favor de diversos órgãos do Poder Executivo federal e de Transferências a Estados, Distrito Federal e Municípios, crédito suplementar no valor de R$ 39.002.919,00,para reforço de dotações constantes da Lei Orçamentária vigente.",
-     "fase": "Discussão, em turno único"
-    },
-    {
-     "chave": "PLN 29/2026",
-     "ementa": "Abre ao Orçamento Fiscal da União, em favor do Superior Tribunal de Justiça, da Justiça Federal e da Justiça Militar da União, crédito suplementar no valor de R$ 11.785.853,00, para reforço de dotações constantes da Lei Orçamentária vigente.",
-     "fase": "Discussão, em turno único"
-    },
-    {
-     "chave": "PLN 30/2026",
-     "ementa": "Abre ao Orçamento Fiscal da União, em favor dos Ministérios da Fazenda, da Justiça e Segurança Pública, dos Transportes, da Cultura, da Integração e do Desenvolvimento Regional, e de Operações Oficiais de Crédito, crédito suplementar no valor de R$ 420.770.561,00, para reforço de dotações constantes da Lei Orçamentária vigente.",
-     "fase": "Discussão, em turno único"
-    },
-    {
-     "chave": "PLN 33/2026",
-     "ementa": "Abre ao Orçamento de Investimento da União, em favor da Companhia das Docas do Estado da Bahia, crédito especial no valor de R$ 700.000,00, para os fins que especifica.",
-     "fase": "Discussão, em turno único"
-    },
-    {
-     "chave": "PLN 35/2026",
-     "ementa": "Abre ao Orçamento Fiscal da União, em favor do TCU, das Justiças Federal, Eleitoral e do Trabalho, da DPU, e do MPU crédito especial no valor de R$ 114.969.959,00, para os fins que especifica.",
-     "fase": "Discussão, em turno único"
-    }
-   ]
-  }
- ],
+ "pauta": [],
  "proposicoes": {
   "MPV 1370/2026": {
    "chave": "MPV 1370/2026",
@@ -539,13 +384,13 @@
     "Viação, Transporte e Mobilidade"
    ],
    "situacao": {
-    "descricao": "Aguardando Envio ao Senado Federal",
-    "data": "2026-11-11",
-    "casa": "Câmara",
+    "descricao": "Aguardando despacho",
+    "data": "2026-11-13",
+    "casa": "Senado",
     "norma": null
    },
    "url_camara": "https://www.camara.leg.br/propostas-legislativas/2629310",
-   "url_senado": null,
+   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/176367",
    "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3139887",
    "votacoes": [
     {
@@ -4362,7 +4207,7 @@
     "Direito Penal e Processual Penal"
    ],
    "situacao": {
-    "descricao": "Aguardando Envio ao Senado Federal",
+    "descricao": "Aguardando Autógrafos na Mesa",
     "data": "2026-11-11",
     "casa": "Câmara",
     "norma": null
@@ -5026,59 +4871,6 @@
     }
    ]
   },
-  "PL 5538/2019": {
-   "chave": "PL 5538/2019",
-   "slug": "pl-5538-2019",
-   "sigla": "PL",
-   "numero": 5538,
-   "ano": 2019,
-   "tipo": "Projeto de Lei",
-   "ementa": "Institui o Programa Nacional de Assistência Integral às Pessoas com Epilepsia.",
-   "apelido": null,
-   "autores": [
-    "Ruy Carneiro"
-   ],
-   "data_apresentacao": "2019-10-16",
-   "casa_inicial": "Câmara",
-   "temas": [
-    "Saúde"
-   ],
-   "situacao": {
-    "descricao": "Aguardando despacho",
-    "data": "2026-10-20",
-    "casa": "Senado",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2225432",
-   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175995",
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1821308",
-   "votacoes": [
-    {
-     "id": "2225432-103",
-     "casa": "Câmara",
-     "data_hora": "2026-10-13T17:50:41",
-     "descricao": "Aprovada a Subemenda Substitutiva ao Projeto de Lei nº 5.538, de 2019, adotada pela relatora da Comissão de Saúde.",
-     "resultado": "aprovada",
-     "procedimento": false,
-     "nominal": false,
-     "placar": null,
-     "orientacoes": null,
-     "votos": []
-    },
-    {
-     "id": "2225432-106",
-     "casa": "Câmara",
-     "data_hora": "2026-10-13T17:52:13",
-     "descricao": "Aprovada a Redação Final assinada pela relatora, Dep. Laura Carneiro (PSD/RJ).",
-     "resultado": "aprovada",
-     "procedimento": true,
-     "nominal": false,
-     "placar": null,
-     "orientacoes": null,
-     "votos": []
-    }
-   ]
-  },
   "PL 5649/2026": {
    "chave": "PL 5649/2026",
    "slug": "pl-5649-2026",
@@ -5152,8 +4944,8 @@
     "Saúde"
    ],
    "situacao": {
-    "descricao": "Aguardando Designação de Relator(a)",
-    "data": "2026-11-06",
+    "descricao": "Aguardando Parecer",
+    "data": "2026-11-12",
     "casa": "Câmara",
     "norma": null
    },
@@ -5349,814 +5141,6 @@
      "votos": []
     }
    ]
-  },
-  "PL 6461/2019": {
-   "chave": "PL 6461/2019",
-   "slug": "pl-6461-2019",
-   "sigla": "PL",
-   "numero": 6461,
-   "ano": 2019,
-   "tipo": "Projeto de Lei",
-   "ementa": "Institui o Estatuto do Aprendiz e dá outras providências.",
-   "apelido": "Estatuto do Aprendiz",
-   "autores": [
-    "André de Paula",
-    "André Figueiredo",
-    "Arthur Lira",
-    "Augusto Coutinho",
-    "Baleia Rossi",
-    "Carlos Sampaio",
-    "Célio Studart",
-    "Daniel Almeida",
-    "Daniel Coelho",
-    "Eduardo Braide",
-    "Elmar Nascimento",
-    "Fred Costa",
-    "Jhonatan de Jesus",
-    "Joice Hasselmann",
-    "José Nelto",
-    "Mariana Carvalho",
-    "Pedro Cunha Lima",
-    "Pedro Lucas Fernandes",
-    "Rafael Motta",
-    "Raul Henry",
-    "Rose Modesto",
-    "Tabata Amaral",
-    "Tadeu Alencar",
-    "Toninho Wandscheer",
-    "Wellington Roberto"
-   ],
-   "data_apresentacao": "2019-12-16",
-   "casa_inicial": "Câmara",
-   "temas": [
-    "Trabalho e Emprego"
-   ],
-   "situacao": {
-    "descricao": "Aguardando Apreciação pelo Senado Federal",
-    "data": "2026-08-28",
-    "casa": "Câmara",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2234260",
-   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174061",
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1847157",
-   "votacoes": []
-  },
-  "PL 6683/2025": {
-   "chave": "PL 6683/2025",
-   "slug": "pl-6683-2025",
-   "sigla": "PL",
-   "numero": 6683,
-   "ano": 2025,
-   "tipo": "Projeto de Lei Ordinária",
-   "ementa": "Dispõe sobre os requisitos essenciais relativos aos implantes cirúrgicos; e estabelece a notificação compulsória das falhas detectadas em implantes.",
-   "apelido": null,
-   "autores": [
-    "Câmara dos Deputados"
-   ],
-   "data_apresentacao": "2025-12-19",
-   "casa_inicial": "Senado",
-   "temas": [
-    "Saúde"
-   ],
-   "situacao": {
-    "descricao": "Incluída em ordem do dia",
-    "data": "2026-11-07",
-    "casa": "Senado",
-    "norma": null
-   },
-   "url_camara": null,
-   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172286",
-   "url_inteiro_teor": "https://legis.senado.gov.br/sdleg-getter/dadosabertos/documento/f877de0c-ba69-463d-8144-0257efd23b89",
-   "votacoes": []
-  },
-  "PLN 1/2026": {
-   "chave": "PLN 1/2026",
-   "slug": "pln-1-2026",
-   "sigla": "PLN",
-   "numero": 1,
-   "ano": 2026,
-   "tipo": "Projeto de Lei (CN) de Alteração da LOA",
-   "ementa": "Altera o Anexo V à Lei nº 15.346, de 14 de janeiro de 2026, que estima a receita e fixa a despesa da União para o exercício financeiro de 2026.",
-   "apelido": "Receita Federal do Brasil e outros servidores federais.",
-   "autores": [
-    "Presidência da República"
-   ],
-   "data_apresentacao": "2026-03-30",
-   "casa_inicial": "Câmara",
-   "temas": [
-    "Orçamento Anual"
-   ],
-   "situacao": {
-    "descricao": "Aprovada",
-    "data": "2026-11-12",
-    "casa": "Senado",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2612637",
-   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/173378",
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3106436",
-   "votacoes": []
-  },
-  "PLN 10/2026": {
-   "chave": "PLN 10/2026",
-   "slug": "pln-10-2026",
-   "sigla": "PLN",
-   "numero": 10,
-   "ano": 2026,
-   "tipo": "Projeto de Lei (CN) de Crédito Especial",
-   "ementa": "Abre ao Orçamento Fiscal da União, em favor dos Ministérios da Educação, do Planejamento e Orçamento, do Desenvolvimento, Indústria, Comércio e Serviços e da Justiça e Segurança Pública, crédito especial no valor de R$ 11.528.608,00, para os fins que especifica (alteração proposta pela Mensagem presidencial nº 636/2026).",
-   "apelido": "Ministérios da Educação, do Planejamento, do Desenvolvimento, e da Justiça e Segurança Pública",
-   "autores": [
-    "Presidência da República"
-   ],
-   "data_apresentacao": "2026-05-08",
-   "casa_inicial": "Senado",
-   "temas": [
-    "Crédito Adicional"
-   ],
-   "situacao": {
-    "descricao": "Aprovada",
-    "data": "2026-11-12",
-    "casa": "Senado",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2623363",
-   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174076",
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3168834",
-   "votacoes": []
-  },
-  "PLN 11/2026": {
-   "chave": "PLN 11/2026",
-   "slug": "pln-11-2026",
-   "sigla": "PLN",
-   "numero": 11,
-   "ano": 2026,
-   "tipo": "Projeto de Lei (CN) de Crédito Suplementar",
-   "ementa": "Abre ao Orçamento Fiscal da União, em favor da Justiça Federal, da Justiça do Trabalho, e do Ministério Público da União, crédito suplementar no valor de R$ 56.250.092,00, para reforço de dotações constantes da Lei Orçamentária vigente.",
-   "apelido": "Justiça Federal, do Trabalho e MPU",
-   "autores": [
-    "Presidência da República"
-   ],
-   "data_apresentacao": "2026-05-08",
-   "casa_inicial": "Senado",
-   "temas": [
-    "Crédito Adicional"
-   ],
-   "situacao": {
-    "descricao": "Aprovada",
-    "data": "2026-11-12",
-    "casa": "Senado",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2623364",
-   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174077",
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3126713",
-   "votacoes": []
-  },
-  "PLN 12/2026": {
-   "chave": "PLN 12/2026",
-   "slug": "pln-12-2026",
-   "sigla": "PLN",
-   "numero": 12,
-   "ano": 2026,
-   "tipo": "Projeto de Lei (CN) de Crédito Suplementar",
-   "ementa": "Abre ao Orçamento Fiscal da União, em favor dos Ministérios da Justiça e Segurança Pública, das Comunicações, da Cultura e da Integração e do Desenvolvimento Regional, e de Operações Oficiais de Crédito, crédito suplementar no valor de R$ 543.145.850,00, para reforço de dotações constantes da Lei Orçamentária vigente (alteração proposta pela Mensagem presidencial nº 584/2026).",
-   "apelido": "Operações Oficiais de Crédito, Ministérios da Justiça, Comunicações, Cultura e Integração",
-   "autores": [
-    "Presidência da República"
-   ],
-   "data_apresentacao": "2026-05-08",
-   "casa_inicial": "Senado",
-   "temas": [
-    "Crédito Adicional"
-   ],
-   "situacao": {
-    "descricao": "Aprovada",
-    "data": "2026-11-12",
-    "casa": "Senado",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2623368",
-   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174078",
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3159095",
-   "votacoes": []
-  },
-  "PLN 13/2026": {
-   "chave": "PLN 13/2026",
-   "slug": "pln-13-2026",
-   "sigla": "PLN",
-   "numero": 13,
-   "ano": 2026,
-   "tipo": "Projeto de Lei (CN) de Crédito Suplementar",
-   "ementa": "Abre ao Orçamento Fiscal da União, em favor de Encargos Financeiros da União, crédito suplementar no valor de R$ 488.112.855,00, para reforço de dotação constante da Lei Orçamentária vigente.",
-   "apelido": "FONPLATA e BID-Invest",
-   "autores": [
-    "Presidência da República"
-   ],
-   "data_apresentacao": "2026-05-08",
-   "casa_inicial": "Senado",
-   "temas": [
-    "Crédito Adicional"
-   ],
-   "situacao": {
-    "descricao": "Aprovada",
-    "data": "2026-11-12",
-    "casa": "Senado",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2623370",
-   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174079",
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3126717",
-   "votacoes": []
-  },
-  "PLN 14/2026": {
-   "chave": "PLN 14/2026",
-   "slug": "pln-14-2026",
-   "sigla": "PLN",
-   "numero": 14,
-   "ano": 2026,
-   "tipo": "Projeto de Lei (CN) de Crédito Especial",
-   "ementa": "Abre ao Orçamento da Seguridade Social da União, em favor do Ministério da Saúde, crédito especial no valor de R$ 3.000.000,00, para os fins que especifica",
-   "apelido": "Fundo Nacional de Saúde COMPREV",
-   "autores": [
-    "Presidência da República"
-   ],
-   "data_apresentacao": "2026-05-27",
-   "casa_inicial": "Câmara",
-   "temas": [
-    "Crédito Adicional"
-   ],
-   "situacao": {
-    "descricao": "Aprovada",
-    "data": "2026-11-12",
-    "casa": "Senado",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2628096",
-   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174331",
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3137847",
-   "votacoes": []
-  },
-  "PLN 15/2026": {
-   "chave": "PLN 15/2026",
-   "slug": "pln-15-2026",
-   "sigla": "PLN",
-   "numero": 15,
-   "ano": 2026,
-   "tipo": "Projeto de Lei (CN) de Crédito Suplementar",
-   "ementa": "Abre aos Orçamentos Fiscal e da Seguridade Social da União, em favor dos MME, MS, MIDR, e Portos, crédito suplementar no valor de R$ 24.431.895,00.",
-   "apelido": "Agências - ANTAQ, ANAC, ANEEL, ANM e outras",
-   "autores": [
-    "Presidência da República"
-   ],
-   "data_apresentacao": "2026-06-16",
-   "casa_inicial": "Câmara",
-   "temas": [
-    "Crédito Adicional"
-   ],
-   "situacao": {
-    "descricao": "Aprovada",
-    "data": "2026-11-12",
-    "casa": "Senado",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2632542",
-   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174653",
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3147062",
-   "votacoes": []
-  },
-  "PLN 16/2026": {
-   "chave": "PLN 16/2026",
-   "slug": "pln-16-2026",
-   "sigla": "PLN",
-   "numero": 16,
-   "ano": 2026,
-   "tipo": "Projeto de Lei (CN) de Crédito Especial",
-   "ementa": "Abre ao Orçamento da Seguridade Social da União, em favor do Ministério da Educação, crédito especial no valor de R$ 45.369,00, para os fins que especifica.",
-   "apelido": "Universidade e Institutos Federais",
-   "autores": [
-    "Presidência da República"
-   ],
-   "data_apresentacao": "2026-06-16",
-   "casa_inicial": "Câmara",
-   "temas": [
-    "Crédito Adicional"
-   ],
-   "situacao": {
-    "descricao": "Aprovada",
-    "data": "2026-11-12",
-    "casa": "Senado",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2632543",
-   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174654",
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3147063",
-   "votacoes": []
-  },
-  "PLN 18/2026": {
-   "chave": "PLN 18/2026",
-   "slug": "pln-18-2026",
-   "sigla": "PLN",
-   "numero": 18,
-   "ano": 2026,
-   "tipo": "Projeto de Lei (CN) de Alteração da LOA",
-   "ementa": "Altera o art. 4º da Lei nº 15.346, de 14 de janeiro de 2026, que estima a receita e fixa a despesa da União para o exercício financeiro de 2026.",
-   "apelido": "Altera LOA 2026 - ajustar autorizações de suplementação e remanejamento",
-   "autores": [
-    "Presidência da República"
-   ],
-   "data_apresentacao": "2026-06-17",
-   "casa_inicial": "Senado",
-   "temas": [
-    "Orçamento Anual"
-   ],
-   "situacao": {
-    "descricao": "Aprovada",
-    "data": "2026-11-12",
-    "casa": "Senado",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2634107",
-   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174743",
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3149930",
-   "votacoes": []
-  },
-  "PLN 19/2026": {
-   "chave": "PLN 19/2026",
-   "slug": "pln-19-2026",
-   "sigla": "PLN",
-   "numero": 19,
-   "ano": 2026,
-   "tipo": "Projeto de Lei (CN) de Crédito Especial",
-   "ementa": "Abre ao Orçamento Fiscal da União, em favor dos Ministérios da Educação, da Justiça e Segurança Pública e dos Transportes, crédito especial no valor de R$ 130.041.737,00, para os fins que especifica (alteração proposta pela Mensagem presidencial nº 841/2026).",
-   "apelido": "Fundo Penitenciário Nacional, DNIT e Instituto Federal do Amazonas",
-   "autores": [
-    "Presidência da República"
-   ],
-   "data_apresentacao": "2026-07-07",
-   "casa_inicial": "Câmara",
-   "temas": [
-    "Crédito Adicional"
-   ],
-   "situacao": {
-    "descricao": "Aprovada",
-    "data": "2026-11-12",
-    "casa": "Senado",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2637682",
-   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174975",
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3191738",
-   "votacoes": []
-  },
-  "PLN 20/2026": {
-   "chave": "PLN 20/2026",
-   "slug": "pln-20-2026",
-   "sigla": "PLN",
-   "numero": 20,
-   "ano": 2026,
-   "tipo": "Projeto de Lei (CN) de Crédito Suplementar",
-   "ementa": "Abre ao Orçamento Fiscal da União, em favor dos Ministérios da Justiça e Segurança Pública, da Cultura, da Integração e do Desenvolvimento Regional e dos Direitos Humanos e da Cidadania, e de Operações Oficiais de Crédito, crédito suplementar no valor de R$ 520.535.876,00, para reforço de dotações constantes da Lei Orçamentária vigente.",
-   "apelido": "FDNE, FDCO, Ministério da Integração e do Desenvolvimento, da Cultura e outros.",
-   "autores": [
-    "Presidência da República"
-   ],
-   "data_apresentacao": "2026-07-08",
-   "casa_inicial": "Câmara",
-   "temas": [
-    "Crédito Adicional"
-   ],
-   "situacao": {
-    "descricao": "Aprovada",
-    "data": "2026-11-12",
-    "casa": "Senado",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2638410",
-   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175088",
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3159499",
-   "votacoes": []
-  },
-  "PLN 22/2026": {
-   "chave": "PLN 22/2026",
-   "slug": "pln-22-2026",
-   "sigla": "PLN",
-   "numero": 22,
-   "ano": 2026,
-   "tipo": "Projeto de Lei (CN)",
-   "ementa": "Abre ao Orçamento de Investimento da União, em favor do Serviço Federal de Processamento de Dados, crédito suplementar no valor de R$ 34.941.713,00.",
-   "apelido": "Orçamento de Investimento do SERPRO",
-   "autores": [
-    "Presidência da República"
-   ],
-   "data_apresentacao": "2026-07-17",
-   "casa_inicial": "Senado",
-   "temas": [
-    "Crédito Adicional"
-   ],
-   "situacao": {
-    "descricao": "Aprovada",
-    "data": "2026-11-12",
-    "casa": "Senado",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2641294",
-   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175220",
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3165201",
-   "votacoes": []
-  },
-  "PLN 23/2026": {
-   "chave": "PLN 23/2026",
-   "slug": "pln-23-2026",
-   "sigla": "PLN",
-   "numero": 23,
-   "ano": 2026,
-   "tipo": "Projeto de Lei (CN)",
-   "ementa": "Abre ao Orçamento da Seguridade Social da União, em favor do Ministérios da Previdência Social e do Desenvolvimento e Assistência Social, Família e Combate à Fome, crédito suplementar no valor de R$ 185.555.629.364,00.",
-   "apelido": "Benefícios - Previdência Social e do Desenvolvimento e Assistência Social, Família e Combate à Fome",
-   "autores": [
-    "Presidência da República"
-   ],
-   "data_apresentacao": "2026-07-17",
-   "casa_inicial": "Senado",
-   "temas": [
-    "Crédito Adicional"
-   ],
-   "situacao": {
-    "descricao": "Aprovado o substitutivo",
-    "data": "2026-11-12",
-    "casa": "Senado",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2641296",
-   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175221",
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3165204",
-   "votacoes": []
-  },
-  "PLN 25/2026": {
-   "chave": "PLN 25/2026",
-   "slug": "pln-25-2026",
-   "sigla": "PLN",
-   "numero": 25,
-   "ano": 2026,
-   "tipo": "Projeto de Lei (CN) de Crédito Suplementar",
-   "ementa": "Abre ao Orçamento de Investimento da União, em favor da Eletronuclear S.A., crédito suplementar no valor de R$ 290.058.339,00, para reforço de dotação orçamentária constante da Lei Orçamentária vigente.",
-   "apelido": "Eletronuclear S.A.",
-   "autores": [
-    "Presidência da República"
-   ],
-   "data_apresentacao": "2026-10-13",
-   "casa_inicial": "Senado",
-   "temas": [
-    "Crédito Adicional"
-   ],
-   "situacao": {
-    "descricao": "Aprovada",
-    "data": "2026-11-12",
-    "casa": "Senado",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2651425",
-   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175939",
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3191472",
-   "votacoes": []
-  },
-  "PLN 26/2026": {
-   "chave": "PLN 26/2026",
-   "slug": "pln-26-2026",
-   "sigla": "PLN",
-   "numero": 26,
-   "ano": 2026,
-   "tipo": "Projeto de Lei (CN) de Crédito Especial",
-   "ementa": "Abre aos Orçamentos Fiscal e da Seguridade Social da União, em favor das Justiças Federal e do Trabalho, da Presidência da República e dos Ministérios da Saúde e do Meio Ambiente e Mudança do Clima, crédito especial no valor de R$ 4.856.104,00, para os fins que especifica.",
-   "apelido": "Justiças Federal e do Trabalho, Presidência da República e Ministérios da Saúde e do Meio Ambiente",
-   "autores": [
-    "Presidência da República"
-   ],
-   "data_apresentacao": "2026-10-13",
-   "casa_inicial": "Senado",
-   "temas": [
-    "Crédito Adicional"
-   ],
-   "situacao": {
-    "descricao": "Aprovada",
-    "data": "2026-11-12",
-    "casa": "Senado",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2651662",
-   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175940",
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3191751",
-   "votacoes": []
-  },
-  "PLN 27/2026": {
-   "chave": "PLN 27/2026",
-   "slug": "pln-27-2026",
-   "sigla": "PLN",
-   "numero": 27,
-   "ano": 2026,
-   "tipo": "Projeto de Lei (CN) de Crédito Especial",
-   "ementa": "Abre aos Orçamentos Fiscal e da Seguridade Social da União, em favor dos Ministérios da Educação, da Justiça e Segurança Pública e da Saúde, crédito especial no valor de R$ 115.000.000,00, para os fins que especifica.",
-   "apelido": "Ministérios da Educação, da Justiça e da Saúde",
-   "autores": [
-    "Presidência da República"
-   ],
-   "data_apresentacao": "2026-10-13",
-   "casa_inicial": "Senado",
-   "temas": [
-    "Crédito Adicional"
-   ],
-   "situacao": {
-    "descricao": "Aprovada",
-    "data": "2026-11-12",
-    "casa": "Senado",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2649555",
-   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175941",
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3187564",
-   "votacoes": []
-  },
-  "PLN 28/2026": {
-   "chave": "PLN 28/2026",
-   "slug": "pln-28-2026",
-   "sigla": "PLN",
-   "numero": 28,
-   "ano": 2026,
-   "tipo": "Projeto de Lei (CN) de Crédito Suplementar",
-   "ementa": "Abre aos Orçamentos Fiscal e da Seguridade Social da União, em favor de diversos órgãos do Poder Executivo federal e de Transferências a Estados, Distrito Federal e Municípios, crédito suplementar no valor de R$ 39.002.919,00,para reforço de dotações constantes da Lei Orçamentária vigente.",
-   "apelido": "Saúde, Assistência Social, Desenvolvimento Agrário, Integração, Empreendedorismo, Cultura, Esporte, Ciência, Turismo, Meio Ambiente e outros",
-   "autores": [
-    "Presidência da República"
-   ],
-   "data_apresentacao": "2026-10-13",
-   "casa_inicial": "Senado",
-   "temas": [
-    "Crédito Adicional"
-   ],
-   "situacao": {
-    "descricao": "Aprovada",
-    "data": "2026-11-12",
-    "casa": "Senado",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2651656",
-   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175942",
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3191739",
-   "votacoes": []
-  },
-  "PLN 29/2026": {
-   "chave": "PLN 29/2026",
-   "slug": "pln-29-2026",
-   "sigla": "PLN",
-   "numero": 29,
-   "ano": 2026,
-   "tipo": "Projeto de Lei (CN) de Crédito Suplementar",
-   "ementa": "Abre ao Orçamento Fiscal da União, em favor do Superior Tribunal de Justiça, da Justiça Federal e da Justiça Militar da União, crédito suplementar no valor de R$ 11.785.853,00, para reforço de dotações constantes da Lei Orçamentária vigente.",
-   "apelido": "Superior Tribunal de Justiça, Justiça Federal e Justiça Militar da União",
-   "autores": [
-    "Presidência da República"
-   ],
-   "data_apresentacao": "2026-10-13",
-   "casa_inicial": "Senado",
-   "temas": [
-    "Crédito Adicional"
-   ],
-   "situacao": {
-    "descricao": "Aprovada",
-    "data": "2026-11-12",
-    "casa": "Senado",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2651657",
-   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175943",
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3191740",
-   "votacoes": []
-  },
-  "PLN 3/2026": {
-   "chave": "PLN 3/2026",
-   "slug": "pln-3-2026",
-   "sigla": "PLN",
-   "numero": 3,
-   "ano": 2026,
-   "tipo": "Projeto de Lei (CN)",
-   "ementa": "Abre ao Orçamento Fiscal da União, em favor do Ministério da Ciência, Tecnologia e Inovação, crédito suplementar no valor de R$ 13.186.131,00, para reforço de dotação constante da Lei Orçamentária vigente.",
-   "apelido": "Ministério da Ciência, Tecnologia e Inovação",
-   "autores": [
-    "Presidência da República"
-   ],
-   "data_apresentacao": "2026-04-24",
-   "casa_inicial": "Senado",
-   "temas": [
-    "Crédito Adicional"
-   ],
-   "situacao": {
-    "descricao": "Aprovada",
-    "data": "2026-11-12",
-    "casa": "Senado",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2618616",
-   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/173739",
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3118517",
-   "votacoes": []
-  },
-  "PLN 30/2026": {
-   "chave": "PLN 30/2026",
-   "slug": "pln-30-2026",
-   "sigla": "PLN",
-   "numero": 30,
-   "ano": 2026,
-   "tipo": "Projeto de Lei (CN) de Crédito Suplementar",
-   "ementa": "Abre ao Orçamento Fiscal da União, em favor dos Ministérios da Fazenda, da Justiça e Segurança Pública, dos Transportes, da Cultura, da Integração e do Desenvolvimento Regional, e de Operações Oficiais de Crédito, crédito suplementar no valor de R$ 420.770.561,00, para reforço de dotações constantes da Lei Orçamentária vigente.",
-   "apelido": " Ministérios da Fazenda, da Justiça, dos Transportes, da Cultura, da Integração, e Operações Oficiais de Crédito",
-   "autores": [
-    "Presidência da República"
-   ],
-   "data_apresentacao": "2026-10-13",
-   "casa_inicial": "Senado",
-   "temas": [
-    "Crédito Adicional"
-   ],
-   "situacao": {
-    "descricao": "Aprovada",
-    "data": "2026-11-12",
-    "casa": "Senado",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2650867",
-   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175944",
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3189785",
-   "votacoes": []
-  },
-  "PLN 33/2026": {
-   "chave": "PLN 33/2026",
-   "slug": "pln-33-2026",
-   "sigla": "PLN",
-   "numero": 33,
-   "ano": 2026,
-   "tipo": "Projeto de Lei (CN) de Crédito Especial",
-   "ementa": "Abre ao Orçamento de Investimento da União, em favor da Companhia das Docas do Estado da Bahia, crédito especial no valor de R$ 700.000,00, para os fins que especifica.",
-   "apelido": "Companhia das Docas do Estado da Bahia",
-   "autores": [
-    "Presidência da República"
-   ],
-   "data_apresentacao": "2026-10-15",
-   "casa_inicial": "Senado",
-   "temas": [
-    "Crédito Adicional"
-   ],
-   "situacao": {
-    "descricao": "Aprovada",
-    "data": "2026-11-12",
-    "casa": "Senado",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2650394",
-   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175979",
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3189063",
-   "votacoes": []
-  },
-  "PLN 35/2026": {
-   "chave": "PLN 35/2026",
-   "slug": "pln-35-2026",
-   "sigla": "PLN",
-   "numero": 35,
-   "ano": 2026,
-   "tipo": "Projeto de Lei (CN) de Crédito Especial",
-   "ementa": "Abre ao Orçamento Fiscal da União, em favor do TCU, das Justiças Federal, Eleitoral e do Trabalho, da DPU, e do MPU crédito especial no valor de R$ 114.969.959,00, para os fins que especifica.",
-   "apelido": "Tribunal de Contas da União, Justiças Federal, Eleitoral e do Trabalho, Defensoria Pública da União e Ministério Público da União",
-   "autores": [
-    "Presidência da República"
-   ],
-   "data_apresentacao": "2026-10-15",
-   "casa_inicial": "Senado",
-   "temas": [
-    "Crédito Adicional"
-   ],
-   "situacao": {
-    "descricao": "Aprovada",
-    "data": "2026-11-12",
-    "casa": "Senado",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2650424",
-   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175981",
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3189106",
-   "votacoes": []
-  },
-  "PLN 4/2026": {
-   "chave": "PLN 4/2026",
-   "slug": "pln-4-2026",
-   "sigla": "PLN",
-   "numero": 4,
-   "ano": 2026,
-   "tipo": "Projeto de Lei (CN)",
-   "ementa": "Abre ao Orçamento Fiscal da União, em favor do Ministério da Fazenda, crédito suplementar no valor de R$ 240.000.000,00, para reforço de dotações constantes da Lei Orçamentária vigente.",
-   "apelido": "   PROFISCO III",
-   "autores": [
-    "Presidência da República"
-   ],
-   "data_apresentacao": "2026-04-24",
-   "casa_inicial": "Senado",
-   "temas": [
-    "Crédito Adicional"
-   ],
-   "situacao": {
-    "descricao": "Incluída em ordem do dia",
-    "data": "2026-11-11",
-    "casa": "Senado",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2618621",
-   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/173740",
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3118524",
-   "votacoes": []
-  },
-  "PLN 6/2026": {
-   "chave": "PLN 6/2026",
-   "slug": "pln-6-2026",
-   "sigla": "PLN",
-   "numero": 6,
-   "ano": 2026,
-   "tipo": "Projeto de Lei (CN)",
-   "ementa": "Abre ao Orçamento Fiscal da União, em favor dos Ministérios da Justiça e Segurança Pública e de Minas e Energia, e de Operações Oficiais de Crédito, crédito suplementar no valor de R$ 543.681.108,00, para reforço de dotações constantes da Lei Orçamentária vigente.",
-   "apelido": "FDNE, Ministérios da Justiça e Segurança Pública e de Minas e Energia",
-   "autores": [
-    "Presidência da República"
-   ],
-   "data_apresentacao": "2026-04-24",
-   "casa_inicial": "Senado",
-   "temas": [
-    "Crédito Adicional"
-   ],
-   "situacao": {
-    "descricao": "Aprovada",
-    "data": "2026-11-12",
-    "casa": "Senado",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2618625",
-   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/173742",
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3118528",
-   "votacoes": []
-  },
-  "PLN 7/2026": {
-   "chave": "PLN 7/2026",
-   "slug": "pln-7-2026",
-   "sigla": "PLN",
-   "numero": 7,
-   "ano": 2026,
-   "tipo": "Projeto de Lei (CN)",
-   "ementa": "Altera a Lei nº 15.321, de 31 de dezembro de 2025, que dispõe sobre as diretrizes para a elaboração e a execução da Lei Orçamentária de 2026.",
-   "apelido": "Copa do Mundo Feminina da FIFA 2027 e Primeiro Hospital Inteligente do Brasil",
-   "autores": [
-    "Presidência da República"
-   ],
-   "data_apresentacao": "2026-04-24",
-   "casa_inicial": "Senado",
-   "temas": [
-    "Diretrizes Orçamentárias"
-   ],
-   "situacao": {
-    "descricao": "Aprovada",
-    "data": "2026-11-12",
-    "casa": "Senado",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2618626",
-   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/173743",
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3118529",
-   "votacoes": []
-  },
-  "PLN 8/2026": {
-   "chave": "PLN 8/2026",
-   "slug": "pln-8-2026",
-   "sigla": "PLN",
-   "numero": 8,
-   "ano": 2026,
-   "tipo": "Projeto de Lei (CN) de Crédito Especial",
-   "ementa": "Abre ao Orçamento da Seguridade Social da União, em favor das Justiças Federal e do Trabalho, crédito especial no valor de R$ 21.557.807,00, para os fins que especifica.",
-   "apelido": "Aposentadoria compulsória Poder Judiciário",
-   "autores": [
-    "Presidência da República"
-   ],
-   "data_apresentacao": "2026-05-08",
-   "casa_inicial": "Câmara",
-   "temas": [
-    "Crédito Adicional"
-   ],
-   "situacao": {
-    "descricao": "Aprovado o substitutivo",
-    "data": "2026-11-12",
-    "casa": "Senado",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2623361",
-   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174074",
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3126702",
-   "votacoes": []
   },
   "PLP 109/2025": {
    "chave": "PLP 109/2025",
@@ -13699,7 +12683,7 @@
       "abstencao": 0,
       "outros": [
        [
-        "Não Compareceu",
+        "Presente – Não registrou voto",
         5
        ],
        [
@@ -13744,7 +12728,7 @@
        "nome": "Angelo Coronel",
        "partido": "REPUBLICANOS",
        "uf": "BA",
-       "voto": "Não Compareceu"
+       "voto": "Presente – Não registrou voto"
       },
       {
        "id": 6009,
@@ -13856,7 +12840,7 @@
        "nome": "Dra. Eudócia",
        "partido": "PSDB",
        "uf": "AL",
-       "voto": "Não Compareceu"
+       "voto": "Presente – Não registrou voto"
       },
       {
        "id": 4994,
@@ -13947,7 +12931,7 @@
        "nome": "Irajá",
        "partido": "PSD",
        "uf": "TO",
-       "voto": "Não Compareceu"
+       "voto": "Presente – Não registrou voto"
       },
       {
        "id": 6010,
@@ -13989,7 +12973,7 @@
        "nome": "Jayme Campos",
        "partido": "UNIÃO",
        "uf": "MT",
-       "voto": "Não Compareceu"
+       "voto": "Presente – Não registrou voto"
       },
       {
        "id": 5895,
@@ -14171,7 +13155,7 @@
        "nome": "Rogerio Marinho",
        "partido": "PL",
        "uf": "RN",
-       "voto": "Não Compareceu"
+       "voto": "Presente – Não registrou voto"
       },
       {
        "id": 5352,
@@ -17419,6 +16403,1234 @@
     }
    ]
   },
+  "PLP 299/2026": {
+   "chave": "PLP 299/2026",
+   "slug": "plp-299-2026",
+   "sigla": "PLP",
+   "numero": 299,
+   "ano": 2026,
+   "tipo": "Projeto de Lei Complementar",
+   "ementa": "Altera a Lei Complementar nº 200, de 30 de agosto de 2023, para conferir ao Poder Executivo federal novos instrumentos de gestão com vistas a garantir a estabilidade macroeconômica do País e criar as condições adequadas ao crescimento socioeconômico; e dá outras providências.",
+   "apelido": "Ajuste fiscal",
+   "autores": [
+    "Senador Jaques Wagner (PT/BA)"
+   ],
+   "data_apresentacao": "2026-11-11",
+   "casa_inicial": "Senado",
+   "temas": [
+    "Tributos",
+    "Ciência, Tecnologia e Informática",
+    "Orçamento Anual",
+    "Previdência Social"
+   ],
+   "situacao": {
+    "descricao": "Pronto para deliberação do plenário",
+    "data": "2026-11-12",
+    "casa": "Senado",
+    "norma": null
+   },
+   "url_camara": null,
+   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/176328",
+   "url_inteiro_teor": "https://legis.senado.gov.br/sdleg-getter/dadosabertos/documento/38df22dd-1022-46cf-ac9d-d24f038d1d0d",
+   "votacoes": [
+    {
+     "id": "SF-7115",
+     "casa": "Senado",
+     "data_hora": "2026-11-12",
+     "descricao": "Votação nominal do Requerimento n° 770, de 2026, de Líderes.",
+     "resultado": "aprovada",
+     "procedimento": true,
+     "nominal": true,
+     "placar": {
+      "sim": 40,
+      "nao": 38,
+      "abstencao": 0,
+      "outros": [
+       [
+        "Não Compareceu",
+        1
+       ],
+       [
+        "Presidente (art. 51 RISF)",
+        1
+       ],
+       [
+        "Missão da Casa no País/exterior",
+        1
+       ]
+      ]
+     },
+     "orientacoes": null,
+     "votos": [
+      {
+       "id": 5672,
+       "nome": "Alan Rick",
+       "partido": "REPUBLICANOS",
+       "uf": "AC",
+       "voto": "Não"
+      },
+      {
+       "id": 5982,
+       "nome": "Alessandro Vieira",
+       "partido": "MDB",
+       "uf": "SE",
+       "voto": "Não"
+      },
+      {
+       "id": 6358,
+       "nome": "Ana Paula Lobato",
+       "partido": "PSB",
+       "uf": "MA",
+       "voto": "Sim"
+      },
+      {
+       "id": 5967,
+       "nome": "Angelo Coronel",
+       "partido": "REPUBLICANOS",
+       "uf": "BA",
+       "voto": "Não Compareceu"
+      },
+      {
+       "id": 6009,
+       "nome": "Astronauta Marcos Pontes",
+       "partido": "PL",
+       "uf": "SP",
+       "voto": "Não"
+      },
+      {
+       "id": 4639,
+       "nome": "Beto Faro",
+       "partido": "PT",
+       "uf": "PA",
+       "voto": "Sim"
+      },
+      {
+       "id": 6336,
+       "nome": "Camilo Santana",
+       "partido": "PT",
+       "uf": "CE",
+       "voto": "Sim"
+      },
+      {
+       "id": 6295,
+       "nome": "Carlos Fávaro",
+       "partido": "PSD",
+       "uf": "MT",
+       "voto": "Sim"
+      },
+      {
+       "id": 5936,
+       "nome": "Carlos Portinho",
+       "partido": "PL",
+       "uf": "RJ",
+       "voto": "Não"
+      },
+      {
+       "id": 5990,
+       "nome": "Carlos Viana",
+       "partido": "PSD",
+       "uf": "MG",
+       "voto": "Não"
+      },
+      {
+       "id": 470,
+       "nome": "Chico Rodrigues",
+       "partido": "PSB",
+       "uf": "RR",
+       "voto": "Sim"
+      },
+      {
+       "id": 5973,
+       "nome": "Cid Gomes",
+       "partido": "PSB",
+       "uf": "CE",
+       "voto": "Sim"
+      },
+      {
+       "id": 739,
+       "nome": "Ciro Nogueira",
+       "partido": "PP",
+       "uf": "PI",
+       "voto": "Não"
+      },
+      {
+       "id": 6337,
+       "nome": "Cleitinho",
+       "partido": "REPUBLICANOS",
+       "uf": "MG",
+       "voto": "Não"
+      },
+      {
+       "id": 475,
+       "nome": "Confúcio Moura",
+       "partido": "MDB",
+       "uf": "RO",
+       "voto": "Sim"
+      },
+      {
+       "id": 6335,
+       "nome": "Damares Alves",
+       "partido": "REPUBLICANOS",
+       "uf": "DF",
+       "voto": "Não"
+      },
+      {
+       "id": 5998,
+       "nome": "Daniella Ribeiro",
+       "partido": "PP",
+       "uf": "PB",
+       "voto": "Sim"
+      },
+      {
+       "id": 3830,
+       "nome": "Davi Alcolumbre",
+       "partido": "UNIÃO",
+       "uf": "AP",
+       "voto": "Presidente (art. 51 RISF)"
+      },
+      {
+       "id": 5793,
+       "nome": "Dr. Hiran",
+       "partido": "PP",
+       "uf": "RR",
+       "voto": "Não"
+      },
+      {
+       "id": 5906,
+       "nome": "Dra. Eudócia",
+       "partido": "PSDB",
+       "uf": "AL",
+       "voto": "Sim"
+      },
+      {
+       "id": 4994,
+       "nome": "Eduardo Braga",
+       "partido": "MDB",
+       "uf": "AM",
+       "voto": "Sim"
+      },
+      {
+       "id": 3777,
+       "nome": "Eduardo Gomes",
+       "partido": "PL",
+       "uf": "TO",
+       "voto": "Não"
+      },
+      {
+       "id": 4642,
+       "nome": "Efraim Filho",
+       "partido": "PL",
+       "uf": "PB",
+       "voto": "Não"
+      },
+      {
+       "id": 5718,
+       "nome": "Eliziane Gama",
+       "partido": "PSD",
+       "uf": "MA",
+       "voto": "Sim"
+      },
+      {
+       "id": 22,
+       "nome": "Esperidião Amin",
+       "partido": "PP",
+       "uf": "SC",
+       "voto": "Não"
+      },
+      {
+       "id": 5953,
+       "nome": "Fabiano Contarato",
+       "partido": "PT",
+       "uf": "ES",
+       "voto": "Sim"
+      },
+      {
+       "id": 5917,
+       "nome": "Fernando Dueire",
+       "partido": "PSD",
+       "uf": "PE",
+       "voto": "Sim"
+      },
+      {
+       "id": 345,
+       "nome": "Flávio Arns",
+       "partido": "PSB",
+       "uf": "PR",
+       "voto": "Não"
+      },
+      {
+       "id": 5894,
+       "nome": "Flávio Bolsonaro",
+       "partido": "PL",
+       "uf": "RJ",
+       "voto": "Não"
+      },
+      {
+       "id": 6008,
+       "nome": "Giordano",
+       "partido": "PODE",
+       "uf": "SP",
+       "voto": "Missão da Casa no País/exterior"
+      },
+      {
+       "id": 6341,
+       "nome": "Hamilton Mourão",
+       "partido": "REPUBLICANOS",
+       "uf": "RS",
+       "voto": "Não"
+      },
+      {
+       "id": 5008,
+       "nome": "Humberto Costa",
+       "partido": "PT",
+       "uf": "PE",
+       "voto": "Sim"
+      },
+      {
+       "id": 5385,
+       "nome": "Irajá",
+       "partido": "PSD",
+       "uf": "TO",
+       "voto": "Sim"
+      },
+      {
+       "id": 6010,
+       "nome": "Ivete da Silveira",
+       "partido": "MDB",
+       "uf": "SC",
+       "voto": "Sim"
+      },
+      {
+       "id": 4770,
+       "nome": "Izalci Lucas",
+       "partido": "PL",
+       "uf": "DF",
+       "voto": "Não"
+      },
+      {
+       "id": 35,
+       "nome": "Jader Barbalho",
+       "partido": "MDB",
+       "uf": "PA",
+       "voto": "Sim"
+      },
+      {
+       "id": 6340,
+       "nome": "Jaime Bagattoli",
+       "partido": "PL",
+       "uf": "RO",
+       "voto": "Não"
+      },
+      {
+       "id": 581,
+       "nome": "Jaques Wagner",
+       "partido": "PT",
+       "uf": "BA",
+       "voto": "Sim"
+      },
+      {
+       "id": 4531,
+       "nome": "Jayme Campos",
+       "partido": "UNIÃO",
+       "uf": "MT",
+       "voto": "Sim"
+      },
+      {
+       "id": 5895,
+       "nome": "Jorge Kajuru",
+       "partido": "PSB",
+       "uf": "GO",
+       "voto": "Sim"
+      },
+      {
+       "id": 6342,
+       "nome": "Jorge Seif",
+       "partido": "PL",
+       "uf": "SC",
+       "voto": "Não"
+      },
+      {
+       "id": 6369,
+       "nome": "Jussara Lima",
+       "partido": "PSD",
+       "uf": "PI",
+       "voto": "Sim"
+      },
+      {
+       "id": 4811,
+       "nome": "Laércio Oliveira",
+       "partido": "PP",
+       "uf": "SE",
+       "voto": "Não"
+      },
+      {
+       "id": 5977,
+       "nome": "Leany Lemos",
+       "partido": "PSB",
+       "uf": "DF",
+       "voto": "Sim"
+      },
+      {
+       "id": 5926,
+       "nome": "Lucas Barreto",
+       "partido": "PSD",
+       "uf": "AP",
+       "voto": "Não"
+      },
+      {
+       "id": 1186,
+       "nome": "Luis Carlos Heinze",
+       "partido": "PP",
+       "uf": "RS",
+       "voto": "Não"
+      },
+      {
+       "id": 631,
+       "nome": "Magno Malta",
+       "partido": "PL",
+       "uf": "ES",
+       "voto": "Não"
+      },
+      {
+       "id": 5376,
+       "nome": "Mara Gabrilli",
+       "partido": "PSD",
+       "uf": "SP",
+       "voto": "Não"
+      },
+      {
+       "id": 742,
+       "nome": "Marcelo Castro",
+       "partido": "MDB",
+       "uf": "PI",
+       "voto": "Sim"
+      },
+      {
+       "id": 285,
+       "nome": "Marcio Bittar",
+       "partido": "PL",
+       "uf": "AC",
+       "voto": "Não"
+      },
+      {
+       "id": 5422,
+       "nome": "Marcos Rogério",
+       "partido": "PL",
+       "uf": "RO",
+       "voto": "Não"
+      },
+      {
+       "id": 5942,
+       "nome": "Marcos do Val",
+       "partido": "AVANTE",
+       "uf": "ES",
+       "voto": "Não"
+      },
+      {
+       "id": 5985,
+       "nome": "Nelsinho Trad",
+       "partido": "PSD",
+       "uf": "MS",
+       "voto": "Não"
+      },
+      {
+       "id": 5525,
+       "nome": "Omar Aziz",
+       "partido": "PSD",
+       "uf": "AM",
+       "voto": "Sim"
+      },
+      {
+       "id": 5924,
+       "nome": "Oriovisto Guimarães",
+       "partido": "PSDB",
+       "uf": "PR",
+       "voto": "Não"
+      },
+      {
+       "id": 5523,
+       "nome": "Otto Alencar",
+       "partido": "PSD",
+       "uf": "BA",
+       "voto": "Sim"
+      },
+      {
+       "id": 825,
+       "nome": "Paulo Paim",
+       "partido": "PT",
+       "uf": "RS",
+       "voto": "Sim"
+      },
+      {
+       "id": 5502,
+       "nome": "Plínio Valério",
+       "partido": "PSDB",
+       "uf": "AM",
+       "voto": "Sim"
+      },
+      {
+       "id": 5386,
+       "nome": "Professora Dorinha Seabra",
+       "partido": "UNIÃO",
+       "uf": "TO",
+       "voto": "Sim"
+      },
+      {
+       "id": 5012,
+       "nome": "Randolfe Rodrigues",
+       "partido": "PT",
+       "uf": "AP",
+       "voto": "Sim"
+      },
+      {
+       "id": 70,
+       "nome": "Renan Calheiros",
+       "partido": "MDB",
+       "uf": "AL",
+       "voto": "Sim"
+      },
+      {
+       "id": 5207,
+       "nome": "Renan Filho",
+       "partido": "MDB",
+       "uf": "AL",
+       "voto": "Sim"
+      },
+      {
+       "id": 5257,
+       "nome": "Renzo Braz",
+       "partido": "PP",
+       "uf": "MG",
+       "voto": "Não"
+      },
+      {
+       "id": 6025,
+       "nome": "Roberta Acioly",
+       "partido": "REPUBLICANOS",
+       "uf": "RR",
+       "voto": "Não"
+      },
+      {
+       "id": 4694,
+       "nome": "Rogerio Marinho",
+       "partido": "PL",
+       "uf": "RN",
+       "voto": "Não"
+      },
+      {
+       "id": 5352,
+       "nome": "Rogério Carvalho",
+       "partido": "PT",
+       "uf": "SE",
+       "voto": "Sim"
+      },
+      {
+       "id": 5322,
+       "nome": "Romário",
+       "partido": "S/Partido",
+       "uf": "RJ",
+       "voto": "Sim"
+      },
+      {
+       "id": 5974,
+       "nome": "Sargento Reginauro",
+       "partido": "PSDB",
+       "uf": "CE",
+       "voto": "Não"
+      },
+      {
+       "id": 6331,
+       "nome": "Sergio Moro",
+       "partido": "PL",
+       "uf": "PR",
+       "voto": "Não"
+      },
+      {
+       "id": 5988,
+       "nome": "Soraya Thronicke",
+       "partido": "PSB",
+       "uf": "MS",
+       "voto": "Sim"
+      },
+      {
+       "id": 5959,
+       "nome": "Styvenson Valentim",
+       "partido": "PODE",
+       "uf": "RN",
+       "voto": "Sim"
+      },
+      {
+       "id": 4560,
+       "nome": "Sérgio Petecão",
+       "partido": "PSD",
+       "uf": "AC",
+       "voto": "Sim"
+      },
+      {
+       "id": 6338,
+       "nome": "Teresa Leitão",
+       "partido": "PT",
+       "uf": "PE",
+       "voto": "Sim"
+      },
+      {
+       "id": 5736,
+       "nome": "Tereza Cristina",
+       "partido": "PP",
+       "uf": "MS",
+       "voto": "Não"
+      },
+      {
+       "id": 5899,
+       "nome": "Vanderlan Cardoso",
+       "partido": "PSD",
+       "uf": "GO",
+       "voto": "Não"
+      },
+      {
+       "id": 5748,
+       "nome": "Veneziano Vital do Rêgo",
+       "partido": "MDB",
+       "uf": "PB",
+       "voto": "Sim"
+      },
+      {
+       "id": 1173,
+       "nome": "Wellington Fagundes",
+       "partido": "PL",
+       "uf": "MT",
+       "voto": "Não"
+      },
+      {
+       "id": 5411,
+       "nome": "Weverton",
+       "partido": "PDT",
+       "uf": "MA",
+       "voto": "Sim"
+      },
+      {
+       "id": 5070,
+       "nome": "Wilder Morais",
+       "partido": "PL",
+       "uf": "GO",
+       "voto": "Não"
+      },
+      {
+       "id": 5783,
+       "nome": "Zenaide Maia",
+       "partido": "PSD",
+       "uf": "RN",
+       "voto": "Sim"
+      },
+      {
+       "id": 3806,
+       "nome": "Zequinha Marinho",
+       "partido": "PODE",
+       "uf": "PA",
+       "voto": "Não"
+      }
+     ]
+    },
+    {
+     "id": "SF-7116",
+     "casa": "Senado",
+     "data_hora": "2026-11-12",
+     "descricao": "Votação nominal da Emenda nº 75 (Substitutivo) ao PLP nº 299/2026, nos termos do parecer, ressalvados os destaques.",
+     "resultado": "aprovada",
+     "procedimento": false,
+     "nominal": true,
+     "placar": {
+      "sim": 45,
+      "nao": 31,
+      "abstencao": 0,
+      "outros": [
+       [
+        "Missão da Casa no País/exterior",
+        3
+       ],
+       [
+        "Presidente (art. 51 RISF)",
+        1
+       ],
+       [
+        "Atividade parlamentar",
+        1
+       ]
+      ]
+     },
+     "orientacoes": null,
+     "votos": [
+      {
+       "id": 5672,
+       "nome": "Alan Rick",
+       "partido": "REPUBLICANOS",
+       "uf": "AC",
+       "voto": "Não"
+      },
+      {
+       "id": 5982,
+       "nome": "Alessandro Vieira",
+       "partido": "MDB",
+       "uf": "SE",
+       "voto": "Não"
+      },
+      {
+       "id": 6358,
+       "nome": "Ana Paula Lobato",
+       "partido": "PSB",
+       "uf": "MA",
+       "voto": "Sim"
+      },
+      {
+       "id": 5967,
+       "nome": "Angelo Coronel",
+       "partido": "REPUBLICANOS",
+       "uf": "BA",
+       "voto": "Não"
+      },
+      {
+       "id": 6009,
+       "nome": "Astronauta Marcos Pontes",
+       "partido": "PL",
+       "uf": "SP",
+       "voto": "Não"
+      },
+      {
+       "id": 4639,
+       "nome": "Beto Faro",
+       "partido": "PT",
+       "uf": "PA",
+       "voto": "Sim"
+      },
+      {
+       "id": 6336,
+       "nome": "Camilo Santana",
+       "partido": "PT",
+       "uf": "CE",
+       "voto": "Sim"
+      },
+      {
+       "id": 6295,
+       "nome": "Carlos Fávaro",
+       "partido": "PSD",
+       "uf": "MT",
+       "voto": "Sim"
+      },
+      {
+       "id": 5936,
+       "nome": "Carlos Portinho",
+       "partido": "PL",
+       "uf": "RJ",
+       "voto": "Não"
+      },
+      {
+       "id": 5990,
+       "nome": "Carlos Viana",
+       "partido": "PSD",
+       "uf": "MG",
+       "voto": "Não"
+      },
+      {
+       "id": 470,
+       "nome": "Chico Rodrigues",
+       "partido": "PSB",
+       "uf": "RR",
+       "voto": "Sim"
+      },
+      {
+       "id": 5973,
+       "nome": "Cid Gomes",
+       "partido": "PSB",
+       "uf": "CE",
+       "voto": "Sim"
+      },
+      {
+       "id": 739,
+       "nome": "Ciro Nogueira",
+       "partido": "PP",
+       "uf": "PI",
+       "voto": "Missão da Casa no País/exterior"
+      },
+      {
+       "id": 6337,
+       "nome": "Cleitinho",
+       "partido": "REPUBLICANOS",
+       "uf": "MG",
+       "voto": "Não"
+      },
+      {
+       "id": 475,
+       "nome": "Confúcio Moura",
+       "partido": "MDB",
+       "uf": "RO",
+       "voto": "Sim"
+      },
+      {
+       "id": 6335,
+       "nome": "Damares Alves",
+       "partido": "REPUBLICANOS",
+       "uf": "DF",
+       "voto": "Sim"
+      },
+      {
+       "id": 5998,
+       "nome": "Daniella Ribeiro",
+       "partido": "PP",
+       "uf": "PB",
+       "voto": "Sim"
+      },
+      {
+       "id": 3830,
+       "nome": "Davi Alcolumbre",
+       "partido": "UNIÃO",
+       "uf": "AP",
+       "voto": "Presidente (art. 51 RISF)"
+      },
+      {
+       "id": 5793,
+       "nome": "Dr. Hiran",
+       "partido": "PP",
+       "uf": "RR",
+       "voto": "Não"
+      },
+      {
+       "id": 5906,
+       "nome": "Dra. Eudócia",
+       "partido": "PSDB",
+       "uf": "AL",
+       "voto": "Sim"
+      },
+      {
+       "id": 4994,
+       "nome": "Eduardo Braga",
+       "partido": "MDB",
+       "uf": "AM",
+       "voto": "Sim"
+      },
+      {
+       "id": 3777,
+       "nome": "Eduardo Gomes",
+       "partido": "PL",
+       "uf": "TO",
+       "voto": "Sim"
+      },
+      {
+       "id": 4642,
+       "nome": "Efraim Filho",
+       "partido": "PL",
+       "uf": "PB",
+       "voto": "Não"
+      },
+      {
+       "id": 5718,
+       "nome": "Eliziane Gama",
+       "partido": "PSD",
+       "uf": "MA",
+       "voto": "Sim"
+      },
+      {
+       "id": 22,
+       "nome": "Esperidião Amin",
+       "partido": "PP",
+       "uf": "SC",
+       "voto": "Não"
+      },
+      {
+       "id": 5953,
+       "nome": "Fabiano Contarato",
+       "partido": "PT",
+       "uf": "ES",
+       "voto": "Sim"
+      },
+      {
+       "id": 5917,
+       "nome": "Fernando Dueire",
+       "partido": "PSD",
+       "uf": "PE",
+       "voto": "Sim"
+      },
+      {
+       "id": 345,
+       "nome": "Flávio Arns",
+       "partido": "PSB",
+       "uf": "PR",
+       "voto": "Sim"
+      },
+      {
+       "id": 5894,
+       "nome": "Flávio Bolsonaro",
+       "partido": "PL",
+       "uf": "RJ",
+       "voto": "Não"
+      },
+      {
+       "id": 6008,
+       "nome": "Giordano",
+       "partido": "PODE",
+       "uf": "SP",
+       "voto": "Missão da Casa no País/exterior"
+      },
+      {
+       "id": 6341,
+       "nome": "Hamilton Mourão",
+       "partido": "REPUBLICANOS",
+       "uf": "RS",
+       "voto": "Não"
+      },
+      {
+       "id": 5008,
+       "nome": "Humberto Costa",
+       "partido": "PT",
+       "uf": "PE",
+       "voto": "Sim"
+      },
+      {
+       "id": 5385,
+       "nome": "Irajá",
+       "partido": "PSD",
+       "uf": "TO",
+       "voto": "Não"
+      },
+      {
+       "id": 6010,
+       "nome": "Ivete da Silveira",
+       "partido": "MDB",
+       "uf": "SC",
+       "voto": "Sim"
+      },
+      {
+       "id": 4770,
+       "nome": "Izalci Lucas",
+       "partido": "PL",
+       "uf": "DF",
+       "voto": "Sim"
+      },
+      {
+       "id": 35,
+       "nome": "Jader Barbalho",
+       "partido": "MDB",
+       "uf": "PA",
+       "voto": "Sim"
+      },
+      {
+       "id": 6340,
+       "nome": "Jaime Bagattoli",
+       "partido": "PL",
+       "uf": "RO",
+       "voto": "Não"
+      },
+      {
+       "id": 581,
+       "nome": "Jaques Wagner",
+       "partido": "PT",
+       "uf": "BA",
+       "voto": "Sim"
+      },
+      {
+       "id": 4531,
+       "nome": "Jayme Campos",
+       "partido": "UNIÃO",
+       "uf": "MT",
+       "voto": "Sim"
+      },
+      {
+       "id": 5895,
+       "nome": "Jorge Kajuru",
+       "partido": "PSB",
+       "uf": "GO",
+       "voto": "Não"
+      },
+      {
+       "id": 6342,
+       "nome": "Jorge Seif",
+       "partido": "PL",
+       "uf": "SC",
+       "voto": "Atividade parlamentar"
+      },
+      {
+       "id": 6369,
+       "nome": "Jussara Lima",
+       "partido": "PSD",
+       "uf": "PI",
+       "voto": "Sim"
+      },
+      {
+       "id": 4811,
+       "nome": "Laércio Oliveira",
+       "partido": "PP",
+       "uf": "SE",
+       "voto": "Sim"
+      },
+      {
+       "id": 5977,
+       "nome": "Leany Lemos",
+       "partido": "PSB",
+       "uf": "DF",
+       "voto": "Sim"
+      },
+      {
+       "id": 5926,
+       "nome": "Lucas Barreto",
+       "partido": "PSD",
+       "uf": "AP",
+       "voto": "Não"
+      },
+      {
+       "id": 1186,
+       "nome": "Luis Carlos Heinze",
+       "partido": "PP",
+       "uf": "RS",
+       "voto": "Não"
+      },
+      {
+       "id": 631,
+       "nome": "Magno Malta",
+       "partido": "PL",
+       "uf": "ES",
+       "voto": "Não"
+      },
+      {
+       "id": 5376,
+       "nome": "Mara Gabrilli",
+       "partido": "PSD",
+       "uf": "SP",
+       "voto": "Não"
+      },
+      {
+       "id": 742,
+       "nome": "Marcelo Castro",
+       "partido": "MDB",
+       "uf": "PI",
+       "voto": "Sim"
+      },
+      {
+       "id": 285,
+       "nome": "Marcio Bittar",
+       "partido": "PL",
+       "uf": "AC",
+       "voto": "Não"
+      },
+      {
+       "id": 5422,
+       "nome": "Marcos Rogério",
+       "partido": "PL",
+       "uf": "RO",
+       "voto": "Não"
+      },
+      {
+       "id": 5942,
+       "nome": "Marcos do Val",
+       "partido": "AVANTE",
+       "uf": "ES",
+       "voto": "Não"
+      },
+      {
+       "id": 5985,
+       "nome": "Nelsinho Trad",
+       "partido": "PSD",
+       "uf": "MS",
+       "voto": "Sim"
+      },
+      {
+       "id": 5525,
+       "nome": "Omar Aziz",
+       "partido": "PSD",
+       "uf": "AM",
+       "voto": "Sim"
+      },
+      {
+       "id": 5924,
+       "nome": "Oriovisto Guimarães",
+       "partido": "PSDB",
+       "uf": "PR",
+       "voto": "Não"
+      },
+      {
+       "id": 5523,
+       "nome": "Otto Alencar",
+       "partido": "PSD",
+       "uf": "BA",
+       "voto": "Sim"
+      },
+      {
+       "id": 825,
+       "nome": "Paulo Paim",
+       "partido": "PT",
+       "uf": "RS",
+       "voto": "Sim"
+      },
+      {
+       "id": 5502,
+       "nome": "Plínio Valério",
+       "partido": "PSDB",
+       "uf": "AM",
+       "voto": "Sim"
+      },
+      {
+       "id": 5386,
+       "nome": "Professora Dorinha Seabra",
+       "partido": "UNIÃO",
+       "uf": "TO",
+       "voto": "Sim"
+      },
+      {
+       "id": 5012,
+       "nome": "Randolfe Rodrigues",
+       "partido": "PT",
+       "uf": "AP",
+       "voto": "Sim"
+      },
+      {
+       "id": 70,
+       "nome": "Renan Calheiros",
+       "partido": "MDB",
+       "uf": "AL",
+       "voto": "Sim"
+      },
+      {
+       "id": 5207,
+       "nome": "Renan Filho",
+       "partido": "MDB",
+       "uf": "AL",
+       "voto": "Sim"
+      },
+      {
+       "id": 5257,
+       "nome": "Renzo Braz",
+       "partido": "PP",
+       "uf": "MG",
+       "voto": "Sim"
+      },
+      {
+       "id": 6025,
+       "nome": "Roberta Acioly",
+       "partido": "REPUBLICANOS",
+       "uf": "RR",
+       "voto": "Sim"
+      },
+      {
+       "id": 4694,
+       "nome": "Rogerio Marinho",
+       "partido": "PL",
+       "uf": "RN",
+       "voto": "Não"
+      },
+      {
+       "id": 5352,
+       "nome": "Rogério Carvalho",
+       "partido": "PT",
+       "uf": "SE",
+       "voto": "Missão da Casa no País/exterior"
+      },
+      {
+       "id": 5322,
+       "nome": "Romário",
+       "partido": "S/Partido",
+       "uf": "RJ",
+       "voto": "Sim"
+      },
+      {
+       "id": 5974,
+       "nome": "Sargento Reginauro",
+       "partido": "PSDB",
+       "uf": "CE",
+       "voto": "Não"
+      },
+      {
+       "id": 6331,
+       "nome": "Sergio Moro",
+       "partido": "PL",
+       "uf": "PR",
+       "voto": "Não"
+      },
+      {
+       "id": 5988,
+       "nome": "Soraya Thronicke",
+       "partido": "PSB",
+       "uf": "MS",
+       "voto": "Sim"
+      },
+      {
+       "id": 5959,
+       "nome": "Styvenson Valentim",
+       "partido": "PODE",
+       "uf": "RN",
+       "voto": "Sim"
+      },
+      {
+       "id": 4560,
+       "nome": "Sérgio Petecão",
+       "partido": "PSD",
+       "uf": "AC",
+       "voto": "Sim"
+      },
+      {
+       "id": 6338,
+       "nome": "Teresa Leitão",
+       "partido": "PT",
+       "uf": "PE",
+       "voto": "Sim"
+      },
+      {
+       "id": 5736,
+       "nome": "Tereza Cristina",
+       "partido": "PP",
+       "uf": "MS",
+       "voto": "Não"
+      },
+      {
+       "id": 5899,
+       "nome": "Vanderlan Cardoso",
+       "partido": "PSD",
+       "uf": "GO",
+       "voto": "Não"
+      },
+      {
+       "id": 5748,
+       "nome": "Veneziano Vital do Rêgo",
+       "partido": "MDB",
+       "uf": "PB",
+       "voto": "Sim"
+      },
+      {
+       "id": 1173,
+       "nome": "Wellington Fagundes",
+       "partido": "PL",
+       "uf": "MT",
+       "voto": "Não"
+      },
+      {
+       "id": 5411,
+       "nome": "Weverton",
+       "partido": "PDT",
+       "uf": "MA",
+       "voto": "Sim"
+      },
+      {
+       "id": 5070,
+       "nome": "Wilder Morais",
+       "partido": "PL",
+       "uf": "GO",
+       "voto": "Não"
+      },
+      {
+       "id": 5783,
+       "nome": "Zenaide Maia",
+       "partido": "PSD",
+       "uf": "RN",
+       "voto": "Sim"
+      },
+      {
+       "id": 3806,
+       "nome": "Zequinha Marinho",
+       "partido": "PODE",
+       "uf": "PA",
+       "voto": "Não"
+      }
+     ]
+    }
+   ]
+  },
   "PRC 113/2023": {
    "chave": "PRC 113/2023",
    "slug": "prc-113-2023",
@@ -17438,7 +17650,7 @@
     "Processo Legislativo e Atuação Parlamentar"
    ],
    "situacao": {
-    "descricao": "Aguardando Autógrafos na Mesa",
+    "descricao": "Transformado em Norma Jurídica",
     "data": "2026-11-10",
     "casa": "Câmara",
     "norma": null
