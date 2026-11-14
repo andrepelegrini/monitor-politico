@@ -91,7 +91,7 @@ def svg_do_perfil(deputado: Any, visao: dict[str, Any], foto_base64: Optional[st
   <text class="rotulo" x="310" y="104" font-size="20" fill="#B75131">{"SENADO FEDERAL" if senado else "CÂMARA DOS DEPUTADOS"}</text>
   <text class="titulo" x="310" y="190" font-size="{_tamanho_do_nome(deputado.nome)}" fill="#26221E">{escape(deputado.nome)}</text>
   <text class="texto" x="310" y="248" font-size="30" fill="#62594F">{escape(deputado.partido)}-{escape(deputado.uf)}</text>
-  <text class="texto" x="310" y="302" font-size="24" font-weight="500" fill="#513C2D">Monitor Político</text>
+  <text class="texto" x="310" y="302" font-size="24" font-weight="500" fill="#513C2D">Na Galeria</text>
   <rect x="60" y="358" width="1080" height="1" fill="#D9D2C8"/>
   {"".join(blocos)}
   <text class="texto" x="60" y="602" font-size="19" fill="#62594F">Dados oficiais {"do Senado" if senado else "da Câmara"}, do TSE e do Portal da Transparência. Coleta em {visao_data(visao)}.</text>

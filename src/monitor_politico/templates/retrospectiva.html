@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% set r = retro %}{% set n = r.numeros %}
-{% block titulo %}Retrospectiva 2023–2027: {{ d.nome }} ({{ d.partido }}-{{ d.uf }}) · Monitor Político{% endblock %}
+{% block titulo %}Retrospectiva 2023–2027: {{ d.nome }} ({{ d.partido }}-{{ d.uf }}) · Na Galeria{% endblock %}
 {% block og_titulo %}Retrospectiva da legislatura 2023–2027: {{ d.nome }} ({{ d.partido }}-{{ d.uf }}){% endblock %}
 {% block descricao %}{{ d.nome }} ({{ d.partido }}-{{ d.uf }}) na legislatura 2023–2027: {{ n.principal }} {{ "lei" if n.principal == 1 else "leis" }} de autoria principal, {{ n.votos|numero }} votos no Plenário e {% if r.senado %}participação em {{ n.presencas|numero }} de {{ n.dias|numero }} votações{% else %}presença em {{ n.presencas|numero }} de {{ n.dias|numero }} dias com sessão{% endif %}, com dados oficiais.{% endblock %}
 {% block og_imagem %}{% if perfil.imagem %}perfis/{{ perfil.arquivo }}-compartilhar.jpg{% else %}brand/social/open-graph-1200x630.png{% endif %}{% endblock %}
@@ -119,7 +119,7 @@
     <figure class="rt-imagem"><img id="rt-prev-story" alt="Prévia da imagem para stories" width="216" height="384"><figcaption>Stories (1080 × 1920)</figcaption><button type="button" class="ce-button ce-button--secondary" data-formato="story">Baixar imagem dos stories</button></figure>
   </div>
   <noscript><p class="pf-nota">As imagens precisam de JavaScript. O link desta página pode ser compartilhado normalmente.</p></noscript>
-  <div class="pf-compartilhar" id="compartilhar" data-texto="Retrospectiva da legislatura 2023–2027 de {{ d.nome }} ({{ d.partido }}-{{ d.uf }}), com dados oficiais, no Monitor Político." hidden>
+  <div class="pf-compartilhar" id="compartilhar" data-texto="Retrospectiva da legislatura 2023–2027 de {{ d.nome }} ({{ d.partido }}-{{ d.uf }}), com dados oficiais, no site Na Galeria." hidden>
     <button class="ce-button ce-button--ghost" id="s-nativo" type="button" hidden>Compartilhar link</button>
     <a class="ce-button ce-button--ghost" id="s-whatsapp" href="https://wa.me/">Compartilhar no WhatsApp</a>
     <button class="ce-button ce-button--ghost" id="s-copiar" type="button">Copiar link</button>

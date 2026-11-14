@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block titulo %}{{ e.nome|nome_proprio }} ({{ e.partido }}-{{ e.uf }}) · Monitor Político{% endblock %}
+{% block titulo %}{{ e.nome|nome_proprio }} ({{ e.partido }}-{{ e.uf }}) · Na Galeria{% endblock %}
 {% block og_titulo %}{{ e.nome|nome_proprio }} ({{ e.partido }}-{{ e.uf }}) · Eleição para {{ "o Senado" if casa == "senado" else "a Câmara" }} em {{ legislatura.ano_da_eleicao }}{% endblock %}
 {% block descricao %}{{ e.nome|nome_proprio }} ({{ e.partido }}-{{ e.uf }}): {{ e.votos|numero }} votos na eleição de {{ legislatura.ano_da_eleicao }} para {{ "o Senado Federal" if casa == "senado" else "a Câmara dos Deputados" }}, com dados oficiais do TSE.{% endblock %}
 {% block conteudo %}

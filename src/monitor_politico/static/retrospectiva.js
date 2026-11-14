@@ -39,7 +39,7 @@
     ctx.fillStyle = CORES.marinho; ctx.fillRect(0, 0, f.largura, 150);
     if (logo) ctx.drawImage(logo, margem, 35, 80, 80);
     ctx.fillStyle = "#FFFFFF"; ctx.font = "600 40px " + SERIFA; ctx.textBaseline = "middle";
-    ctx.fillText("MONITOR POLÍTICO", margem + 104, 77);
+    ctx.fillText("NA GALERIA", margem + 104, 77);
 
     ctx.textBaseline = "alphabetic";
     var y = formato === "story" ? 300 : 260;

@@ -1,4 +1,4 @@
-/* Monitor Político — camada da aplicação sobre o design system Civic Editorial.
+/* Na Galeria — camada da aplicação sobre o design system Civic Editorial.
    Ordem de carga: ce-tokens.css, ce-base.css, ce-components.css (cópias exatas de
    design-system/) e, por último, este arquivo. Só usa tokens --ce-*. */
 

@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% block titulo %}Monitor Político{% endblock %}</title>
-  <meta name="description" content="{% block descricao %}Pauta, votações e parlamentares da Câmara e do Senado, a partir dos dados abertos oficiais.{% endblock %}">
+  <title>{% block titulo %}Na Galeria{% endblock %}</title>
+  <meta name="description" content="{% block descricao %}O Congresso visto de perto: pauta, votações e parlamentares da Câmara e do Senado, a partir dos dados abertos oficiais.{% endblock %}">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
-  <meta property="og:site_name" content="Monitor Político">
+  <meta property="og:site_name" content="Na Galeria">
   <meta property="og:title" content="{% block og_titulo %}{{ self.titulo() }}{% endblock %}">
   <meta property="og:description" content="{{ self.descricao() }}">
   {% if site_url %}
@@ -19,8 +19,8 @@
   <link rel="canonical" href="{{ site_url }}/{{ caminho }}">
   {% endif %}
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="application-name" content="Monitor Político">
-  <meta name="apple-mobile-web-app-title" content="Monitor Político">
+  <meta name="application-name" content="Na Galeria">
+  <meta name="apple-mobile-web-app-title" content="Na Galeria">
   <meta name="theme-color" content="#14263D">
   <link rel="icon" type="image/svg+xml" href="{{ raiz }}/static/brand/favicon/favicon.svg">
   <link rel="icon" sizes="any" href="{{ raiz }}/static/brand/favicon/favicon.ico">
@@ -40,7 +40,7 @@
   <a class="ce-skip" href="#conteudo">Pular para o conteúdo</a>
   <header class="ce-topbar">
     <div class="ce-container ce-topbar-inner">
-      <a class="ce-brand" href="{{ raiz }}/index.html"><img class="ce-brand-logo" src="{{ raiz }}/static/brand/svg/logo-primary.svg" alt="" width="36" height="36">Monitor Político</a>
+      <a class="ce-brand" href="{{ raiz }}/index.html"><img class="ce-brand-logo" src="{{ raiz }}/static/brand/svg/logo-primary.svg" alt="" width="36" height="36">Na Galeria</a>
       <nav class="ce-nav" aria-label="Navegação principal">
         <a href="{{ raiz }}/index.html"{% if casa == "inicio" %} aria-current="page"{% endif %}>Início</a>
         <a href="{{ raiz }}/deputados/index.html"{% if casa == "camara" %} aria-current="page"{% endif %}>Deputados</a>

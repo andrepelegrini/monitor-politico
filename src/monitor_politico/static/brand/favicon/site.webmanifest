@@ -1,11 +1,21 @@
 {
-  "name": "Monitor Político",
-  "short_name": "Monitor",
-  "description": "Pauta, votações e parlamentares da Câmara e do Senado, a partir dos dados abertos oficiais.",
+  "name": "Na Galeria",
+  "short_name": "Na Galeria",
+  "description": "O Congresso visto de perto: pauta, votações e parlamentares da Câmara e do Senado, a partir dos dados abertos oficiais.",
   "lang": "pt-BR",
   "icons": [
-    { "src": "pwa-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
-    { "src": "pwa-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+    {
+      "src": "pwa-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "pwa-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
   ],
   "theme_color": "#14263D",
   "background_color": "#FAF8F4",

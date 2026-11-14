@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block titulo %}{{ p.chave }}{% if p.apelido %} — {{ p.apelido }}{% endif %} · Monitor Político{% endblock %}
+{% block titulo %}{{ p.chave }}{% if p.apelido %} — {{ p.apelido }}{% endif %} · Na Galeria{% endblock %}
 {% block og_titulo %}{{ p.chave }}{% set t = (p.resumo and p.resumo.titulo) or p.apelido %}{% if t %} · {{ t }}{% endif %}{% endblock %}
 {% block descricao %}{% if p.situacao and p.situacao.norma %}Virou {{ p.situacao.norma }}. {% elif p.situacao %}Situação: {{ p.situacao.descricao }}. {% endif %}Tramitação, votações em plenário e voto de cada parlamentar, com dados oficiais da Câmara e do Senado.{% endblock %}
 {% block conteudo %}

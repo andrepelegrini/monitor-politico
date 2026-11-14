@@ -30,7 +30,7 @@ def test_perfil_sem_todas_as_secoes():
 def test_svg_escapa_texto_e_traz_a_data():
     svg = compartilhar.svg_do_perfil(DEPUTADO, VISAO)
     assert "Fulana &amp; Cia" in svg and "Fulana & Cia" not in svg
-    assert "05/11/2026" in svg and "Monitor Político" in svg
+    assert "05/11/2026" in svg and "Na Galeria" in svg
     assert "<image" not in svg
 
 

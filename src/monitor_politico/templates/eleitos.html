@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block titulo %}Eleitos para 2027 · Monitor Político{% endblock %}
+{% block titulo %}Eleitos para 2027 · Na Galeria{% endblock %}
 {% block descricao %}{% if casa == "senado" %}Os {{ resumo_legislatura.total_eleitos }} eleitos para o Senado em {{ legislatura.ano_da_eleicao }}: quem continua, quem chega e o que aconteceu com quem tem mandato até 2027.{% else %}Os {{ resumo_legislatura.total_eleitos }} deputados federais eleitos em {{ legislatura.ano_da_eleicao }}: quem volta, quem chega pela primeira vez e o que aconteceu com quem está no mandato atual.{% endif %}{% endblock %}
 {% block conteudo %}
 <nav class="ce-breadcrumb" aria-label="Trilha de navegação">

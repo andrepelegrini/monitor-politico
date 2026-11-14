@@ -2,6 +2,19 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
   "installCommand": "python3 -m venv .venv && .venv/bin/pip install .",
-  "buildCommand": ".venv/bin/python -m monitor_politico.pacote baixar && .venv/bin/python -m monitor_politico.build",
-  "outputDirectory": "site"
+  "buildCommand": ".venv/bin/python -m monitor_politico.pacote baixar && SITE_URL=https://www.nagaleria.com.br .venv/bin/python -m monitor_politico.build",
+  "outputDirectory": "site",
+  "redirects": [
+    {
+      "source": "/:caminho*",
+      "has": [
+        {
+          "type": "host",
+          "value": "monitor-politico-eight.vercel.app"
+        }
+      ],
+      "destination": "https://www.nagaleria.com.br/:caminho*",
+      "permanent": true
+    }
+  ]
 }
