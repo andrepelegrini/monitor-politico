@@ -1,6 +1,8 @@
 # Próximos passos
 
-Onde o projeto está e o que vem depois. Atualizado em 11/11/2026.
+Onde o projeto está e o que vem depois. Atualizado em 14/11/2026.
+
+O site se chama **Na Galeria** e está em https://www.nagaleria.com.br (domínio na GoDaddy, DNS na Cloudflare, hospedagem na Vercel). O endereço antigo `monitor-politico-eight.vercel.app` redireciona para o novo. O repositório continua `monitor-politico`.
 
 Ideias soltas anotadas durante o uso ficam em [notes.txt](../notes.txt).
 
@@ -51,7 +53,7 @@ Ordem combinada: 5 (feito) → 1 junto com 4 → 2 → 3. Antes de cada uma, faz
 3. ~~**Resultado eleitoral (TSE)**~~ (entregue: eleições 2018–2026 no perfil, badges de 2026 e eleitos para 2027).
 4. **"Acompanhar" sem servidor próprio**: feeds RSS por parlamentar e por proposição, gerados no build. Alertas por e-mail exigem servidor e ficam como candidatos à versão paga.
 6. **Avisos da nova legislatura e contato**: mock aprovado em 07/11/2026, nas posições Eleitos para 2027, perfil de quem chega e página inicial, mais "Encontrou um erro?" nos perfis e no rodapé. Falta criar um Gmail do projeto e um Google Forms com planilha privada (nunca um link direto para a planilha), e definir o nome do responsável para a política de privacidade. Na hora de enviar: cópia oculta, atenção ao limite diário do Gmail e apagar a lista depois, como o texto promete.
-7. **Domínio próprio**: comprar antes da divulgação ampla, apontar o site e redirecionar os links do endereço `vercel.app`.
+7. ~~**Domínio próprio**~~ (entregue em 14/11/2026: nagaleria.com.br). Falta o e-mail `contato@nagaleria.com.br` pelo Email Routing da Cloudflare, encaminhando para o Gmail do projeto.
 5. ~~**Melhorias rápidas**: busca única, "Entenda os dados", Open Graph.~~ Entregue em 03/11/2026.
 
 Fora do escopo por enquanto: deputados estaduais e governadores (27 assembleias com formatos diferentes) e contador de visitantes (se quiser, usar o Vercel Analytics).
