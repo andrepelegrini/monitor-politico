@@ -856,25 +856,6 @@
    "saiu_em": "2025-01-01"
   },
   {
-   "id": 74383,
-   "nome": "Giacobo",
-   "partido": "PSD",
-   "uf": "PR",
-   "url_foto": "https://www.camara.leg.br/internet/deputado/bandep/74383.jpg",
-   "situacao": "Licença",
-   "condicao_eleitoral": "Titular",
-   "gabinete": {
-    "predio": null,
-    "sala": null,
-    "andar": null,
-    "telefone": null,
-    "email": null
-   },
-   "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/74383",
-   "url_site": "https://www.camara.leg.br/deputados/74383",
-   "saiu_em": "2026-05-05"
-  },
-  {
    "id": 220531,
    "nome": "Gilvan Maximo",
    "partido": "REPUBLICANOS",
@@ -1082,6 +1063,25 @@
    "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/235620",
    "url_site": "https://www.camara.leg.br/deputados/235620",
    "saiu_em": "2026-07-25"
+  },
+  {
+   "id": 225846,
+   "nome": "Itamar Paim",
+   "partido": "PL",
+   "uf": "PR",
+   "url_foto": "https://www.camara.leg.br/internet/deputado/bandep/225846.jpg",
+   "situacao": "Exercício",
+   "condicao_eleitoral": "Suplente",
+   "gabinete": {
+    "predio": "4",
+    "sala": "629",
+    "andar": "6",
+    "telefone": "3215-5629",
+    "email": "dep.itamarpaim@camara.leg.br"
+   },
+   "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/225846",
+   "url_site": "https://www.camara.leg.br/deputados/225846",
+   "saiu_em": "2026-11-16"
   },
   {
    "id": 230764,

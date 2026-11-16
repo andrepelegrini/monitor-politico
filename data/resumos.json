@@ -639,6 +639,21 @@
    "modelo": "claude-opus-5-5",
    "gerado_em": "2026-11-10T12:17:05+00:00"
   },
+  "PL 4035/2023": {
+   "titulo": "Agosto como mês de combate às desigualdades",
+   "o_que_muda": "Institui Agosto como mês de combate às desigualdades. Nesse mês, o Congresso Nacional analisará as políticas públicas do governo federal. O objetivo é fiscalizar a implementação, a consolidação e a expansão de políticas públicas sociais de caráter nacional. A lei vale a partir da data de sua publicação.",
+   "quem_e_afetado": "O Congresso Nacional, que passaria a analisar as políticas públicas sociais do governo federal em agosto, e o governo federal, que teria essas políticas analisadas.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 2770,
+    "saida": 218
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "4d984209db6eb10e",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-16T19:28:56+00:00"
+  },
   "PL 4159/2025": {
    "titulo": "Padre Inácio de Sousa Rolim no Livro dos Heróis e Heroínas da Pátria",
    "o_que_muda": "O projeto inscreve o nome de Padre Inácio de Sousa Rolim no Livro dos Heróis e Heroínas da Pátria. O livro fica no Panteão da Pátria e da Liberdade Tancredo Neves, em Brasília. A lei passa a valer na data de sua publicação. O texto não cria despesas, prazos ou obrigações.",
@@ -653,6 +668,21 @@
    "fonte_hash": "73af3e4986f62219",
    "modelo": "claude-sonnet-5-5",
    "gerado_em": "2026-11-11T17:02:28+00:00"
+  },
+  "PL 4186/2021": {
+   "titulo": "Prazo de 20 anos para vítima de crime sexual na infância pedir indenização",
+   "o_que_muda": "O projeto fixa em 20 anos o prazo para vítimas de crimes sexuais cometidos contra crianças e adolescentes pedirem reparação civil na Justiça. O prazo passa a contar da data em que a vítima completa 18 anos. Hoje, o Código Civil prevê 3 anos para esse tipo de pedido. A lei passa a valer na data de sua publicação.",
+   "quem_e_afetado": "Vítimas de crimes contra a dignidade sexual cometidos quando eram crianças ou adolescentes, que poderão pedir reparação civil por mais tempo, e as pessoas apontadas como autoras desses crimes.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 3334,
+    "saida": 268
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "bac06c3fd17ea4cd",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-16T19:28:59+00:00"
   },
   "PL 4480/2025": {
    "titulo": "Habite Seguro: crédito para policiais ameaçados e com restrição de crédito",
@@ -768,6 +798,21 @@
    "modelo": "claude-opus-5-5",
    "gerado_em": "2026-11-10T12:17:10+00:00"
   },
+  "PL 5756/2026": {
+   "titulo": "Mais prazo para estados usarem verba de internet nas escolas públicas",
+   "o_que_muda": "Prorroga para 31 de dezembro de 2028 o prazo para estados e Distrito Federal aplicarem os recursos da Lei 14.172/2021, destinados a internet com fins educacionais. O prazo atual é 31 de dezembro de 2026. O que não for aplicado, ou for usado fora da lei, deve ser devolvido à União até 31 de março de 2029, em vez de 31 de março de 2027.",
+   "quem_e_afetado": "Estados e Distrito Federal, que recebem e aplicam os recursos, além de escolas, alunos e professores da rede pública beneficiados pelas ações de acesso à internet. A União recebe eventuais devoluções.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 4627,
+    "saida": 274
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "d990cc99d8cc2a18",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-16T19:29:05+00:00"
+  },
   "PL 5815/2025": {
    "titulo": "Acompanhamento médico e psicológico anual obrigatório para crianças",
    "o_que_muda": "Cria acompanhamento médico e psicológico anual, obrigatório e gratuito, para todas as crianças de até 12 anos, pago pelo poder público, para prevenir abuso, violência e negligência. Se os responsáveis não levarem a criança em até 60 dias, o Ministério Público e o conselho tutelar são avisados, e benefícios como o Bolsa Família podem ser suspensos. A matrícula escolar exigirá as avaliações. Deixar de comunicar violência contra criança vira crime, com detenção de 6 meses a 3 anos, e é criado um cadastro público de condenados por abuso infantil.",
@@ -794,6 +839,21 @@
    "fonte_hash": "df33d0893bdc66dc",
    "modelo": "claude-opus-5-5",
    "gerado_em": "2026-11-10T12:16:59+00:00"
+  },
+  "PL 6222/2025": {
+   "titulo": "Cria os 21 Dias de Ativismo pelo Fim da Violência contra as Mulheres",
+   "o_que_muda": "Institui, todo ano, de 20 de novembro a 10 de dezembro, a Mobilização Nacional dos 21 Dias de Ativismo pelo Fim da Violência contra as Mulheres. O órgão federal da política para as mulheres coordena a mobilização e define um tema a cada ano. Estados, Distrito Federal e Municípios podem aderir. Inclui no calendário nacional o 25 de novembro e o 10 de dezembro.",
+   "quem_e_afetado": "O órgão federal responsável pela política para as mulheres e a administração pública federal. Estados, Distrito Federal, Municípios, entidades da sociedade civil e organismos internacionais podem participar.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 8573,
+    "saida": 286
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "8430771d33a0535d",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-16T19:29:08+00:00"
   },
   "PL 6461/2019": {
    "titulo": "Cria o Estatuto do Aprendiz com novas regras para contratar aprendizes",
