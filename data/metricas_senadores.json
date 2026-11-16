@@ -1,237 +1,237 @@
 {
- "coletado_em": "2026-11-09T18:34:20+00:00",
+ "coletado_em": "2026-11-16T18:10:06+00:00",
  "inicio": "2023-02-01",
  "por_deputado": {
   "5672": {
    "principal": 2,
    "coautoria": 3,
-   "votos": 165,
-   "presencas": 319,
-   "dias": 430,
+   "votos": 168,
+   "presencas": 322,
+   "dias": 434,
    "relatorias": 20
   },
   "5982": {
    "principal": 1,
    "coautoria": 3,
-   "votos": 154,
-   "presencas": 249,
-   "dias": 430,
-   "relatorias": 82
+   "votos": 158,
+   "presencas": 253,
+   "dias": 434,
+   "relatorias": 79
   },
   "6358": {
    "principal": 0,
    "coautoria": 1,
-   "votos": 140,
-   "presencas": 273,
-   "dias": 423,
+   "votos": 144,
+   "presencas": 277,
+   "dias": 427,
    "relatorias": 25
   },
   "5967": {
    "principal": 1,
    "coautoria": 2,
-   "votos": 157,
-   "presencas": 304,
-   "dias": 430,
+   "votos": 159,
+   "presencas": 306,
+   "dias": 434,
    "relatorias": 12
   },
   "6009": {
    "principal": 3,
    "coautoria": 2,
-   "votos": 152,
-   "presencas": 306,
-   "dias": 430,
-   "relatorias": 104
+   "votos": 156,
+   "presencas": 310,
+   "dias": 434,
+   "relatorias": 98
   },
   "4639": {
    "principal": 1,
    "coautoria": 2,
-   "votos": 183,
-   "presencas": 400,
-   "dias": 430,
-   "relatorias": 62
+   "votos": 187,
+   "presencas": 404,
+   "dias": 434,
+   "relatorias": 60
   },
   "6336": {
    "principal": 1,
    "coautoria": 0,
-   "votos": 18,
-   "presencas": 63,
-   "dias": 75,
+   "votos": 22,
+   "presencas": 67,
+   "dias": 79,
    "relatorias": 7
   },
   "6295": {
    "principal": 0,
    "coautoria": 0,
-   "votos": 32,
-   "presencas": 63,
-   "dias": 87,
-   "relatorias": 2
+   "votos": 36,
+   "presencas": 67,
+   "dias": 91,
+   "relatorias": 1
   },
   "5936": {
    "principal": 3,
    "coautoria": 2,
-   "votos": 142,
-   "presencas": 252,
-   "dias": 430,
-   "relatorias": 41
+   "votos": 146,
+   "presencas": 256,
+   "dias": 434,
+   "relatorias": 34
   },
   "5990": {
    "principal": 1,
    "coautoria": 1,
-   "votos": 144,
-   "presencas": 273,
-   "dias": 415,
+   "votos": 147,
+   "presencas": 276,
+   "dias": 419,
    "relatorias": 18
   },
   "470": {
    "principal": 0,
    "coautoria": 2,
-   "votos": 150,
-   "presencas": 338,
-   "dias": 430,
+   "votos": 154,
+   "presencas": 342,
+   "dias": 434,
    "relatorias": 16
   },
   "5973": {
    "principal": 0,
    "coautoria": 0,
-   "votos": 97,
-   "presencas": 209,
-   "dias": 430,
+   "votos": 101,
+   "presencas": 213,
+   "dias": 434,
    "relatorias": 57
   },
   "739": {
    "principal": 1,
    "coautoria": 0,
-   "votos": 161,
-   "presencas": 264,
-   "dias": 430,
+   "votos": 164,
+   "presencas": 267,
+   "dias": 434,
    "relatorias": 2
   },
   "6337": {
    "principal": 1,
    "coautoria": 0,
-   "votos": 185,
-   "presencas": 390,
-   "dias": 430,
+   "votos": 189,
+   "presencas": 394,
+   "dias": 434,
    "relatorias": 1
   },
   "475": {
    "principal": 3,
    "coautoria": 3,
-   "votos": 157,
-   "presencas": 340,
-   "dias": 430,
-   "relatorias": 44
+   "votos": 161,
+   "presencas": 344,
+   "dias": 434,
+   "relatorias": 43
   },
   "6335": {
    "principal": 5,
    "coautoria": 2,
-   "votos": 179,
-   "presencas": 394,
-   "dias": 430,
-   "relatorias": 71
+   "votos": 183,
+   "presencas": 398,
+   "dias": 434,
+   "relatorias": 65
   },
   "5998": {
    "principal": 3,
    "coautoria": 1,
-   "votos": 116,
-   "presencas": 201,
-   "dias": 430,
-   "relatorias": 65
+   "votos": 120,
+   "presencas": 205,
+   "dias": 434,
+   "relatorias": 61
   },
   "3830": {
    "principal": 3,
    "coautoria": 2,
    "votos": 104,
-   "presencas": 314,
-   "dias": 430,
+   "presencas": 318,
+   "dias": 434,
    "relatorias": 2
   },
   "5793": {
    "principal": 0,
    "coautoria": 1,
-   "votos": 150,
-   "presencas": 300,
-   "dias": 430,
-   "relatorias": 79
+   "votos": 154,
+   "presencas": 304,
+   "dias": 434,
+   "relatorias": 76
   },
   "5906": {
    "principal": 1,
    "coautoria": 0,
-   "votos": 69,
-   "presencas": 162,
-   "dias": 194,
+   "votos": 72,
+   "presencas": 165,
+   "dias": 198,
    "relatorias": 25
   },
   "4994": {
    "principal": 0,
    "coautoria": 3,
-   "votos": 138,
-   "presencas": 261,
-   "dias": 430,
+   "votos": 142,
+   "presencas": 265,
+   "dias": 434,
    "relatorias": 20
   },
   "3777": {
    "principal": 2,
    "coautoria": 3,
-   "votos": 145,
-   "presencas": 283,
-   "dias": 430,
+   "votos": 149,
+   "presencas": 287,
+   "dias": 434,
    "relatorias": 17
   },
   "4642": {
    "principal": 2,
    "coautoria": 7,
-   "votos": 166,
-   "presencas": 308,
-   "dias": 403,
-   "relatorias": 79
+   "votos": 170,
+   "presencas": 312,
+   "dias": 407,
+   "relatorias": 76
   },
   "5718": {
    "principal": 1,
    "coautoria": 1,
-   "votos": 114,
-   "presencas": 195,
-   "dias": 417,
+   "votos": 118,
+   "presencas": 199,
+   "dias": 421,
    "relatorias": 30
   },
   "22": {
    "principal": 5,
    "coautoria": 3,
-   "votos": 177,
-   "presencas": 406,
-   "dias": 430,
-   "relatorias": 34
+   "votos": 181,
+   "presencas": 410,
+   "dias": 434,
+   "relatorias": 32
   },
   "5953": {
    "principal": 3,
    "coautoria": 0,
-   "votos": 179,
-   "presencas": 324,
-   "dias": 430,
-   "relatorias": 113
+   "votos": 181,
+   "presencas": 326,
+   "dias": 434,
+   "relatorias": 115
   },
   "5917": {
    "principal": 1,
    "coautoria": 1,
-   "votos": 150,
-   "presencas": 265,
-   "dias": 430,
+   "votos": 154,
+   "presencas": 269,
+   "dias": 434,
    "relatorias": 15
   },
   "345": {
    "principal": 10,
    "coautoria": 5,
-   "votos": 153,
-   "presencas": 332,
-   "dias": 430,
-   "relatorias": 73
+   "votos": 157,
+   "presencas": 336,
+   "dias": 434,
+   "relatorias": 65
   },
   "5894": {
    "principal": 0,
    "coautoria": 2,
-   "votos": 152,
-   "presencas": 333,
-   "dias": 430,
+   "votos": 156,
+   "presencas": 337,
+   "dias": 434,
    "relatorias": 24
   },
   "6008": {
@@ -239,415 +239,415 @@
    "coautoria": 1,
    "votos": 99,
    "presencas": 199,
-   "dias": 430,
+   "dias": 434,
    "relatorias": 14
   },
   "6341": {
    "principal": 1,
    "coautoria": 3,
-   "votos": 182,
-   "presencas": 399,
-   "dias": 430,
-   "relatorias": 58
+   "votos": 186,
+   "presencas": 403,
+   "dias": 434,
+   "relatorias": 57
   },
   "5008": {
    "principal": 1,
    "coautoria": 2,
-   "votos": 151,
-   "presencas": 277,
-   "dias": 430,
+   "votos": 154,
+   "presencas": 280,
+   "dias": 434,
    "relatorias": 94
   },
   "5385": {
    "principal": 0,
    "coautoria": 1,
-   "votos": 99,
-   "presencas": 170,
-   "dias": 430,
+   "votos": 102,
+   "presencas": 173,
+   "dias": 434,
    "relatorias": 14
   },
   "6010": {
    "principal": 0,
    "coautoria": 2,
-   "votos": 153,
-   "presencas": 340,
-   "dias": 411,
-   "relatorias": 41
+   "votos": 157,
+   "presencas": 344,
+   "dias": 415,
+   "relatorias": 37
   },
   "4770": {
    "principal": 1,
    "coautoria": 3,
-   "votos": 169,
-   "presencas": 364,
-   "dias": 430,
-   "relatorias": 35
+   "votos": 173,
+   "presencas": 368,
+   "dias": 434,
+   "relatorias": 31
   },
   "35": {
    "principal": 3,
    "coautoria": 1,
-   "votos": 105,
-   "presencas": 204,
-   "dias": 430,
+   "votos": 109,
+   "presencas": 208,
+   "dias": 434,
    "relatorias": 0
   },
   "6340": {
    "principal": 1,
    "coautoria": 2,
-   "votos": 164,
-   "presencas": 338,
-   "dias": 430,
-   "relatorias": 23
+   "votos": 168,
+   "presencas": 342,
+   "dias": 434,
+   "relatorias": 24
   },
   "581": {
    "principal": 2,
    "coautoria": 0,
-   "votos": 176,
-   "presencas": 360,
-   "dias": 430,
+   "votos": 180,
+   "presencas": 364,
+   "dias": 434,
    "relatorias": 30
   },
   "4531": {
    "principal": 1,
    "coautoria": 1,
-   "votos": 164,
-   "presencas": 350,
-   "dias": 430,
+   "votos": 167,
+   "presencas": 353,
+   "dias": 434,
    "relatorias": 18
   },
   "5895": {
    "principal": 0,
    "coautoria": 3,
-   "votos": 163,
-   "presencas": 283,
-   "dias": 430,
+   "votos": 167,
+   "presencas": 287,
+   "dias": 434,
    "relatorias": 9
   },
   "6342": {
    "principal": 1,
    "coautoria": 3,
-   "votos": 141,
-   "presencas": 294,
-   "dias": 407,
-   "relatorias": 20
+   "votos": 144,
+   "presencas": 297,
+   "dias": 411,
+   "relatorias": 21
   },
   "6369": {
    "principal": 0,
    "coautoria": 0,
-   "votos": 178,
-   "presencas": 353,
-   "dias": 405,
-   "relatorias": 26
+   "votos": 182,
+   "presencas": 357,
+   "dias": 409,
+   "relatorias": 24
   },
   "4811": {
    "principal": 0,
    "coautoria": 3,
-   "votos": 164,
-   "presencas": 345,
-   "dias": 422,
-   "relatorias": 32
+   "votos": 168,
+   "presencas": 349,
+   "dias": 426,
+   "relatorias": 31
   },
   "5977": {
    "principal": 0,
    "coautoria": 0,
-   "votos": 7,
-   "presencas": 7,
-   "dias": 7,
+   "votos": 9,
+   "presencas": 9,
+   "dias": 11,
    "relatorias": 5
   },
   "5926": {
    "principal": 0,
    "coautoria": 2,
-   "votos": 163,
-   "presencas": 335,
-   "dias": 430,
+   "votos": 167,
+   "presencas": 339,
+   "dias": 434,
    "relatorias": 28
   },
   "1186": {
    "principal": 1,
    "coautoria": 4,
-   "votos": 143,
-   "presencas": 314,
-   "dias": 394,
+   "votos": 147,
+   "presencas": 318,
+   "dias": 398,
    "relatorias": 32
   },
   "631": {
    "principal": 0,
    "coautoria": 1,
-   "votos": 123,
-   "presencas": 235,
-   "dias": 430,
+   "votos": 127,
+   "presencas": 239,
+   "dias": 434,
    "relatorias": 20
   },
   "5376": {
    "principal": 2,
    "coautoria": 2,
-   "votos": 130,
-   "presencas": 167,
-   "dias": 430,
-   "relatorias": 46
+   "votos": 134,
+   "presencas": 171,
+   "dias": 434,
+   "relatorias": 44
   },
   "742": {
    "principal": 1,
    "coautoria": 0,
-   "votos": 179,
-   "presencas": 330,
-   "dias": 423,
+   "votos": 183,
+   "presencas": 334,
+   "dias": 427,
    "relatorias": 13
   },
   "285": {
    "principal": 0,
    "coautoria": 1,
-   "votos": 150,
-   "presencas": 255,
-   "dias": 430,
-   "relatorias": 5
+   "votos": 154,
+   "presencas": 259,
+   "dias": 434,
+   "relatorias": 7
   },
   "5422": {
    "principal": 0,
    "coautoria": 1,
-   "votos": 149,
-   "presencas": 331,
-   "dias": 398,
+   "votos": 153,
+   "presencas": 335,
+   "dias": 402,
    "relatorias": 15
   },
   "5942": {
    "principal": 0,
    "coautoria": 1,
-   "votos": 103,
-   "presencas": 239,
-   "dias": 430,
+   "votos": 107,
+   "presencas": 243,
+   "dias": 434,
    "relatorias": 65
   },
   "5985": {
    "principal": 4,
    "coautoria": 3,
-   "votos": 137,
-   "presencas": 286,
-   "dias": 430,
+   "votos": 141,
+   "presencas": 290,
+   "dias": 434,
    "relatorias": 38
   },
   "5525": {
    "principal": 0,
    "coautoria": 0,
-   "votos": 145,
-   "presencas": 309,
-   "dias": 430,
+   "votos": 149,
+   "presencas": 313,
+   "dias": 434,
    "relatorias": 5
   },
   "5924": {
    "principal": 0,
    "coautoria": 0,
-   "votos": 155,
-   "presencas": 255,
-   "dias": 430,
+   "votos": 159,
+   "presencas": 259,
+   "dias": 434,
    "relatorias": 12
   },
   "5523": {
    "principal": 1,
    "coautoria": 3,
-   "votos": 174,
-   "presencas": 385,
-   "dias": 430,
+   "votos": 178,
+   "presencas": 389,
+   "dias": 434,
    "relatorias": 50
   },
   "825": {
    "principal": 7,
    "coautoria": 6,
-   "votos": 180,
-   "presencas": 384,
-   "dias": 430,
+   "votos": 184,
+   "presencas": 388,
+   "dias": 434,
    "relatorias": 86
   },
   "5502": {
    "principal": 1,
    "coautoria": 4,
-   "votos": 178,
-   "presencas": 359,
-   "dias": 429,
-   "relatorias": 19
+   "votos": 182,
+   "presencas": 363,
+   "dias": 433,
+   "relatorias": 20
   },
   "5386": {
    "principal": 2,
    "coautoria": 5,
-   "votos": 176,
-   "presencas": 351,
-   "dias": 430,
-   "relatorias": 90
+   "votos": 180,
+   "presencas": 355,
+   "dias": 434,
+   "relatorias": 88
   },
   "5012": {
    "principal": 3,
    "coautoria": 4,
-   "votos": 174,
-   "presencas": 379,
-   "dias": 430,
+   "votos": 178,
+   "presencas": 383,
+   "dias": 434,
    "relatorias": 27
   },
   "70": {
    "principal": 0,
    "coautoria": 1,
-   "votos": 117,
-   "presencas": 229,
-   "dias": 430,
+   "votos": 121,
+   "presencas": 233,
+   "dias": 434,
    "relatorias": 9
   },
   "5207": {
    "principal": 0,
    "coautoria": 0,
-   "votos": 14,
-   "presencas": 45,
-   "dias": 77,
+   "votos": 18,
+   "presencas": 49,
+   "dias": 81,
    "relatorias": 0
   },
   "5257": {
    "principal": 0,
    "coautoria": 0,
-   "votos": 7,
-   "presencas": 7,
-   "dias": 7,
+   "votos": 11,
+   "presencas": 11,
+   "dias": 11,
    "relatorias": 0
   },
   "6025": {
    "principal": 0,
    "coautoria": 0,
-   "votos": 20,
-   "presencas": 56,
-   "dias": 63,
-   "relatorias": 8
+   "votos": 24,
+   "presencas": 60,
+   "dias": 67,
+   "relatorias": 5
   },
   "4694": {
    "principal": 0,
    "coautoria": 0,
-   "votos": 134,
-   "presencas": 274,
-   "dias": 396,
+   "votos": 137,
+   "presencas": 277,
+   "dias": 400,
    "relatorias": 18
   },
   "5352": {
    "principal": 2,
    "coautoria": 1,
-   "votos": 174,
-   "presencas": 354,
-   "dias": 430,
-   "relatorias": 92
+   "votos": 176,
+   "presencas": 356,
+   "dias": 434,
+   "relatorias": 89
   },
   "5322": {
    "principal": 1,
    "coautoria": 4,
-   "votos": 138,
-   "presencas": 251,
-   "dias": 411,
+   "votos": 142,
+   "presencas": 255,
+   "dias": 415,
    "relatorias": 6
   },
   "5974": {
    "principal": 0,
    "coautoria": 0,
-   "votos": 10,
-   "presencas": 10,
-   "dias": 12,
-   "relatorias": 9
+   "votos": 14,
+   "presencas": 14,
+   "dias": 16,
+   "relatorias": 6
   },
   "6331": {
    "principal": 1,
    "coautoria": 1,
-   "votos": 175,
-   "presencas": 367,
-   "dias": 430,
+   "votos": 178,
+   "presencas": 370,
+   "dias": 434,
    "relatorias": 25
   },
   "5988": {
    "principal": 1,
    "coautoria": 2,
-   "votos": 155,
-   "presencas": 301,
-   "dias": 430,
+   "votos": 157,
+   "presencas": 303,
+   "dias": 434,
    "relatorias": 11
   },
   "5959": {
    "principal": 2,
    "coautoria": 4,
-   "votos": 159,
-   "presencas": 330,
-   "dias": 430,
+   "votos": 163,
+   "presencas": 334,
+   "dias": 434,
    "relatorias": 14
   },
   "4560": {
    "principal": 0,
    "coautoria": 2,
-   "votos": 158,
-   "presencas": 314,
-   "dias": 430,
-   "relatorias": 17
+   "votos": 162,
+   "presencas": 318,
+   "dias": 434,
+   "relatorias": 14
   },
   "6338": {
    "principal": 3,
    "coautoria": 1,
-   "votos": 155,
-   "presencas": 353,
-   "dias": 430,
-   "relatorias": 100
+   "votos": 159,
+   "presencas": 357,
+   "dias": 434,
+   "relatorias": 94
   },
   "5736": {
    "principal": 1,
    "coautoria": 4,
-   "votos": 167,
-   "presencas": 348,
-   "dias": 430,
-   "relatorias": 19
+   "votos": 171,
+   "presencas": 352,
+   "dias": 434,
+   "relatorias": 15
   },
   "5899": {
    "principal": 0,
    "coautoria": 1,
-   "votos": 148,
-   "presencas": 237,
-   "dias": 366,
+   "votos": 152,
+   "presencas": 241,
+   "dias": 370,
    "relatorias": 89
   },
   "5748": {
    "principal": 3,
    "coautoria": 1,
-   "votos": 157,
-   "presencas": 327,
-   "dias": 430,
+   "votos": 159,
+   "presencas": 329,
+   "dias": 434,
    "relatorias": 67
   },
   "1173": {
    "principal": 1,
    "coautoria": 4,
-   "votos": 138,
-   "presencas": 231,
-   "dias": 351,
-   "relatorias": 48
+   "votos": 142,
+   "presencas": 235,
+   "dias": 355,
+   "relatorias": 47
   },
   "5411": {
    "principal": 1,
    "coautoria": 2,
-   "votos": 150,
-   "presencas": 309,
-   "dias": 430,
+   "votos": 154,
+   "presencas": 313,
+   "dias": 434,
    "relatorias": 35
   },
   "5070": {
    "principal": 0,
    "coautoria": 3,
-   "votos": 166,
-   "presencas": 255,
-   "dias": 430,
+   "votos": 170,
+   "presencas": 259,
+   "dias": 434,
    "relatorias": 14
   },
   "5783": {
    "principal": 0,
    "coautoria": 1,
-   "votos": 175,
-   "presencas": 386,
-   "dias": 422,
+   "votos": 179,
+   "presencas": 390,
+   "dias": 426,
    "relatorias": 35
   },
   "3806": {
    "principal": 2,
    "coautoria": 3,
-   "votos": 140,
-   "presencas": 339,
-   "dias": 430,
+   "votos": 144,
+   "presencas": 343,
+   "dias": 434,
    "relatorias": 16
   }
  }
