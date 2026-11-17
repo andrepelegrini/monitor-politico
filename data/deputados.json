@@ -1,5 +1,5 @@
 {
-  "coletado_em": "2026-11-16T19:27:43+00:00",
+  "coletado_em": "2026-11-17T18:20:22+00:00",
   "fonte": "https://dadosabertos.camara.leg.br/api/v2",
   "resumo": {
     "sexo": {
@@ -3878,10 +3878,10 @@
       "situacao": "Exercício",
       "condicao_eleitoral": "Titular",
       "gabinete": {
-        "predio": null,
-        "sala": null,
-        "andar": null,
-        "telefone": null,
+        "predio": "4",
+        "sala": "629",
+        "andar": "6",
+        "telefone": "3215-5629",
         "email": "dep.giacobo@camara.leg.br"
       },
       "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/74383",

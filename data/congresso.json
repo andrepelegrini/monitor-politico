@@ -1,8 +1,8 @@
 {
- "coletado_em": "2026-11-16T19:28:44+00:00",
+ "coletado_em": "2026-11-17T18:21:44+00:00",
  "periodo": {
-  "votacoes_desde": "2026-10-17",
-  "pauta_ate": "2026-11-22"
+  "votacoes_desde": "2026-10-18",
+  "pauta_ate": "2026-11-23"
  },
  "pauta": [
   {
@@ -26,6 +26,12 @@
      "fase": "Discussão, em turno único"
     }
    ]
+  },
+  {
+   "casa": "Câmara",
+   "data_hora": "2026-11-17T14:32",
+   "sessao": "Sessão Deliberativa",
+   "itens": []
   },
   {
    "casa": "Senado",
@@ -2848,8 +2854,8 @@
     "Direito Penal e Processual Penal"
    ],
    "situacao": {
-    "descricao": "Aguardando Autógrafos na Mesa",
-    "data": "2026-11-11",
+    "descricao": "Aguardando Apreciação pelo Senado Federal",
+    "data": "2026-11-17",
     "casa": "Câmara",
     "norma": null
    },
@@ -3480,8 +3486,8 @@
     "Trabalho e Emprego"
    ],
    "situacao": {
-    "descricao": "Aguardando Envio ao Senado Federal",
-    "data": "2026-11-11",
+    "descricao": "Aguardando Apreciação pelo Senado Federal",
+    "data": "2026-11-17",
     "casa": "Câmara",
     "norma": null
    },
@@ -3589,9 +3595,9 @@
     "Economia"
    ],
    "situacao": {
-    "descricao": "Transformada em norma jurídica",
-    "data": "2026-11-12",
-    "casa": "Senado",
+    "descricao": "Transformado em Norma Jurídica",
+    "data": "2026-11-17",
+    "casa": "Câmara",
     "norma": "Lei nº 15.528 de 11/11/2026"
    },
    "url_camara": "https://www.camara.leg.br/propostas-legislativas/2648807",
@@ -3643,8 +3649,8 @@
     "Saúde"
    ],
    "situacao": {
-    "descricao": "Aguardando Parecer",
-    "data": "2026-11-12",
+    "descricao": "Pronta para Pauta",
+    "data": "2026-11-17",
     "casa": "Câmara",
     "norma": null
    },
