@@ -306,7 +306,8 @@ def construir(
         env.get_template("inicio.html").render(
             raiz=".", casa="inicio", caminho="index.html", atualizado_congresso=atualizado_congresso, **dados_inicio,
             mapa_estados=mapa_estados, mapa_dim=(malha["largura"], malha["altura"]),
-            nova_legislatura=legislatura and {"posse": legislatura.get("posse"), "novos": len(legislatura.get("eleitos_novos", []))},
+            nova_legislatura=legislatura and {"posse": legislatura.get("posse"), "novos": len(legislatura.get("eleitos_novos", [])),
+                                             "novos_senado": len((legislatura_senado or {}).get("eleitos_novos", []))},
         ),
         encoding="utf-8",
     )

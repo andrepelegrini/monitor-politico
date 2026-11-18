@@ -223,7 +223,7 @@ def test_avisos_de_2027_e_encontrou_um_erro(tmp_path, docs):
     assert "aviso-convite" in indice and f'href="{FORM_AVISO}"' in indice and "com 1 nome novo na Câmara" in indice
     assert f'href="{FORM_AVISO}"' in ler("deputados/eleitos/S40.html")
     inicio = ler("index.html")
-    assert "aviso-faixa" in inicio and "Chega 1 nome novo na Câmara" in inicio
+    assert "aviso-faixa" in inicio and "É 1 deputado que não está no cargo hoje" in inicio and "Um novo Congresso começa em 01/02/2027" in inicio
     assert f'href="{FORM_AVISO}"' in inicio and 'href="deputados/eleitos/index.html"' in inicio
 
     # "Encontrou um erro?" leva o endereço da página e aparece uma vez só, no fim do perfil.

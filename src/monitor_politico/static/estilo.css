@@ -513,8 +513,16 @@ body { margin: 0; }
 .ce-app .aviso-convite h2{font:480 1.375rem/1.2 var(--ce-font-display);letter-spacing:-.02em}
 .aviso-convite p{margin-top:var(--ce-space-2);color:var(--ce-text-secondary);max-width:62ch;font-size:.9375rem}
 .aviso-convite .aviso-nota{font-size:.875rem}
-.aviso-faixa{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--ce-space-2) var(--ce-space-6);margin-top:var(--ce-space-5);padding:var(--ce-space-3) var(--ce-space-4);background:var(--ce-sand);border-radius:var(--ce-radius-sm);font-size:.9375rem}
-.aviso-links{display:flex;flex-wrap:wrap;gap:var(--ce-space-4)}
 .aviso-compacto{display:flex;flex-wrap:wrap;align-items:center;gap:var(--ce-space-2) var(--ce-space-4);margin-top:var(--ce-space-4)}
 .aviso-erro{margin-top:var(--ce-space-8);padding-top:var(--ce-space-4);border-top:1px solid var(--ce-border);font-size:.875rem;color:var(--ce-text-secondary)}
+.aviso-faixa{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--ce-space-5) var(--ce-space-10);margin-top:var(--ce-space-5);padding:var(--ce-space-6);background:var(--mp-marinho-campo);color:#FFFFFF;border-radius:var(--ce-radius-md)}
+.aviso-faixa-texto{flex:1 1 34rem;min-width:0}
+.aviso-faixa-eyebrow{font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mp-amarelo)}
+.aviso-faixa-titulo{margin-top:var(--ce-space-2);font:480 clamp(1.375rem,2.4vw,1.75rem)/1.15 var(--ce-font-display);letter-spacing:-.02em;text-wrap:balance}
+.aviso-faixa-texto p:last-child{margin-top:var(--ce-space-2);color:var(--mp-marinho-texto);max-width:62ch}
+.aviso-faixa-acoes{display:flex;flex-wrap:wrap;align-items:center;gap:var(--ce-space-3) var(--ce-space-5)}
+.ce-app .aviso-faixa-botao{display:inline-flex;align-items:center;min-height:44px;padding:0 var(--ce-space-5);border-radius:var(--ce-radius-sm);background:var(--mp-amarelo);color:var(--mp-marinho);font-weight:700;text-decoration:none}
+.ce-app .aviso-faixa-botao:hover{background:#FFD84F}
+.ce-app .aviso-faixa-link{color:#FFFFFF;font-weight:600}
+.aviso-faixa :focus-visible{outline:3px solid var(--mp-amarelo);outline-offset:2px}
 @media (max-width:640px){.aviso-convite{grid-template-columns:minmax(0,1fr)}.aviso-convite .ce-button{justify-self:start}}

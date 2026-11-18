@@ -17,10 +17,25 @@
 {% endmacro %}
 
 {% macro faixa(nova) %}
-<aside class="aviso-faixa" aria-label="Nova legislatura">
-  <p><strong>Nova legislatura em {{ nova.posse|data_br }}.</strong> {{ "Chega" if nova.novos == 1 else "Chegam" }} {{ nova.novos|numero }} {{ "nome novo" if nova.novos == 1 else "nomes novos" }} na Câmara.</p>
-  <p class="aviso-links"><a href="deputados/eleitos/index.html">Ver os eleitos</a><a href="{{ form_aviso }}">Receber um aviso</a></p>
+<aside class="aviso-faixa" aria-labelledby="aviso-faixa-titulo">
+  <div class="aviso-faixa-texto">
+    <p class="aviso-faixa-eyebrow">Nova legislatura<span id="aviso-contagem" data-posse="{{ nova.posse }}"></span></p>
+    <p class="aviso-faixa-titulo" id="aviso-faixa-titulo">Um novo Congresso começa em {{ nova.posse|data_br }}</p>
+    <p>{{ "É" if nova.novos + nova.novos_senado == 1 else "São" }} {{ nova.novos|numero }} {{ "deputado" if nova.novos == 1 else "deputados" }}{% if nova.novos_senado %} e {{ nova.novos_senado|numero }} {{ "senador" if nova.novos_senado == 1 else "senadores" }}{% endif %} que não {{ "está" if nova.novos + nova.novos_senado == 1 else "estão" }} no cargo hoje. Deixe seu e-mail e avisamos uma única vez, quando votos, presença e gastos dos novos mandatos estiverem aqui.</p>
+  </div>
+  <div class="aviso-faixa-acoes">
+    <a class="aviso-faixa-botao" href="{{ form_aviso }}">Quero receber o aviso</a>
+    <a class="aviso-faixa-link" href="deputados/eleitos/index.html">Conhecer os eleitos →</a>
+  </div>
 </aside>
+<script>
+(function () {
+  var alvo = document.getElementById("aviso-contagem");
+  var p = alvo.dataset.posse.split("-"), hoje = new Date();
+  var dias = Math.round((new Date(p[0], p[1] - 1, p[2]) - new Date(hoje.getFullYear(), hoje.getMonth(), hoje.getDate())) / 864e5);
+  if (dias > 0) alvo.textContent = " · " + (dias === 1 ? "falta 1 dia" : "faltam " + dias + " dias");
+})();
+</script>
 {% endmacro %}
 
 {% macro link_erro(texto="Conte pelo formulário") %}<a href="{{ form_erro }}{{ ((site_url or 'https://www.nagaleria.com.br') ~ '/' ~ caminho)|urlencode }}">{{ texto }}</a>{% endmacro %}
