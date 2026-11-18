@@ -5,8 +5,6 @@ name: Classificar votações por área
 
 on:
   workflow_dispatch:
-  push:  # temporário: primeira classificação no branch de pré-visualização
-    branches: [areas]
 
 permissions:
   contents: write
