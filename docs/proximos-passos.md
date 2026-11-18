@@ -1,6 +1,6 @@
 # Próximos passos
 
-Onde o projeto está e o que vem depois. Atualizado em 14/11/2026.
+Onde o projeto está e o que vem depois. Atualizado em 18/11/2026.
 
 O site se chama **Na Galeria** e está em https://www.nagaleria.com.br (domínio na GoDaddy, DNS na Cloudflare, hospedagem na Vercel). O endereço antigo `monitor-politico-eight.vercel.app` redireciona para o novo. O repositório continua `monitor-politico`.
 
@@ -30,7 +30,8 @@ Ideias soltas anotadas durante o uso ficam em [notes.txt](../notes.txt).
 - [x] Custo dos resumos por IA (11/11/2026): só o texto do PDF, raciocínio baixo, consumo registrado em cada resumo e modelo trocado para o Sonnet 5.5 após teste com 8 proposições (Opus US$ 0,082, Sonnet US$ 0,041, Haiku US$ 0,002 por resumo; Haiku falhou em 2 de 8). Estimativa: US$ 3 a 5 por mês. Para cortar mais: limitar o texto de proposições muito longas.
 - [x] Retrospectiva da legislatura 2023–2027 (11/11/2026): uma página por parlamentar em `deputados/retrospectiva/` e `senadores/retrospectiva/`, com referências da Casa (mediana e contagens só entre quem exerceu ao menos 3/4 do período) e imagens de feed e stories desenhadas no navegador. Os números se atualizam toda semana; na posse, fechar a versão final.
 - [x] Histórico de votações (11/11/2026): `historico.py`, na coleta semanal, gera `data/historico.json` com os 946 projetos com o texto votado no Plenário desde 01/02/2023. Cada um tem página, entra na busca e na página de Votações (filtro de período). Só as PECs do histórico ganham resumo por IA. A lista de quem votou como, nas votações antigas, fica só nos perfis. Votações simbólicas do Senado não existem na fonte.
-- [ ] Etapa 2, assuntos agrupados: a base agora existe (histórico acima). Falta decidir o agrupamento, por palavras-chave revisadas pelo usuário ou por IA a partir das ementas, e fazer o mock.
+- [x] Etapa 2, votações por área (18/11/2026): `areas.py` classifica por IA (Sonnet, só ementa e nome popular) cada proposição votada em 1 a 3 assuntos de uma lista fechada, em nove áreas mais a Rotina do Congresso. Resultado em `data/areas.json`; correção à mão com `"manual": true`. Primeira classificação: 957 projetos, US$ 0,78. A coleta diária classifica as novas; `areas.yml` roda tudo à mão. Páginas em `areas/`, e a página inicial troca "Assuntos do mês" pelas áreas. Mudar a lista de assuntos exige subir `VERSAO`, o que refaz tudo (cerca de US$ 1).
+- [ ] Etapa 3, busca por assunto: usar as áreas e assuntos na busca do topo.
 
 Como funciona: `lote.py` coleta todos numa passada só e `pacote.py` empacota em um anexo da release `dados-perfis`, porque são centenas de MB que mudam toda semana. O Git guarda só `data/perfis_versao.json`, com o nome e o checksum. O build da Vercel baixa essa versão, e se o download falhar o build falha e o site continua como está. O robô `perfis.yml` faz isso toda segunda. Rodar à mão: `gh workflow run perfis.yml`.
 
