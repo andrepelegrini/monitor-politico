@@ -83,9 +83,11 @@
     </form>
   </div>
   <svg class="ini-mapa" viewBox="0 0 {{ mapa_dim[0] }} {{ mapa_dim[1] }}" role="group" aria-label="Mapa do Brasil: escolha um estado">
-    {% for e in mapa_estados %}<a href="estados/{{ e.slug }}.html" aria-label="{{ e.nome }}"><path d="{{ e.d }}"/></a>{% endfor %}
-    <g aria-hidden="true">{% for e in mapa_estados if e.rotulo %}<text x="{{ e.rotulo[0] }}" y="{{ e.rotulo[1] }}">{{ e.uf }}</text>{% endfor %}</g>
+    {% for e in mapa_estados %}<a href="estados/{{ e.slug }}.html" aria-label="{{ e.nome }}" data-uf="{{ e.uf }}"><path d="{{ e.d }}"/></a>{% endfor %}
+    <g aria-hidden="true">{% for e in mapa_estados if e.rotulo %}<text x="{{ e.rotulo[0] }}" y="{{ e.rotulo[1] }}" data-uf="{{ e.uf }}">{{ e.uf }}</text>{% endfor %}</g>
   </svg>
+  {# A sigla fica numa camada própria, acima de todos os estados; aqui ela acompanha o realce do estado. #}
+  <style>{% for e in mapa_estados if e.rotulo %}.ce-app .ini-mapa:has(a[data-uf="{{ e.uf }}"]:is(:hover, :focus-visible)) text[data-uf="{{ e.uf }}"]{{ "," if not loop.last }}{% endfor %} { fill: #FFFFFF; }</style>
 </section>
 
 <section class="ce-section ini-final" aria-label="Mais páginas">
