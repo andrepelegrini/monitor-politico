@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block titulo %}{{ a.nome }}: votações · Na Galeria{% endblock %}
+{% block descricao %}{{ a.total }} projetos de {{ a.nome|lower }} votados nos plenários da Câmara e do Senado desde fevereiro de 2023: {{ a.descricao|lower }}{% endblock %}
+{% block conteudo %}
+<nav class="ce-breadcrumb" aria-label="Trilha de navegação">
+  <ol>
+    <li><a href="../index.html">Início</a></li>
+    <li><a href="index.html">Votações por área</a></li>
+    <li aria-current="page">{{ a.nome }}</li>
+  </ol>
+</nav>
+<header class="ce-page-head">
+  <p class="ce-eyebrow">Votações desde fevereiro de 2023</p>
+  <h1>{{ a.nome }}</h1>
+  <p class="ce-deck">{{ a.descricao }}</p>
+</header>
+
+<section class="ce-section" aria-labelledby="ar-titulo">
+  {% if a.filtros|length > 1 %}
+  <div class="chips ar-chips" id="ar-chips" role="group" aria-label="Assuntos de {{ a.nome }}" hidden>
+    <button type="button" class="chip" data-assunto="" aria-pressed="true">Todos <span class="qtd">{{ a.total|numero }}</span></button>
+    {% for nome, qtd in a.filtros %}<button type="button" class="chip" data-assunto="{{ nome }}" aria-pressed="false">{{ nome }} <span class="qtd">{{ qtd|numero }}</span></button>{% endfor %}
+  </div>
+  {% endif %}
+  <div class="ar-cab">
+    <h2 class="ce-display ce-section-title" id="ar-titulo" data-todos="Todos os assuntos">Todos os assuntos</h2>
+    <p class="ce-count" id="ar-conta" aria-live="polite">{{ a.total|numero }} {{ "projeto" if a.total == 1 else "projetos" }}, {{ a.leis|numero }} {{ "virou lei" if a.leis == 1 else "viraram lei" }}</p>
+  </div>
+  <ul class="ce-vote-list" id="ar-lista">
+    {% for v in a.itens %}
+    <li data-assuntos="|{{ v.assuntos|join('|') }}|" data-lei="{{ 1 if v.virou_lei else 0 }}">
+      <a href="../proposicoes/{{ v.slug }}.html">
+        <div class="ce-vote-text">
+          <span class="ce-meta">{{ v.sigla }} · {{ v.assuntos|join(" · ") }}</span>
+          <span class="ce-item-title ce-item-title--lg">{{ v.titulo }}</span>
+          {% if v.situacao %}<span class="ce-meta">Situação: {{ v.situacao }}</span>{% endif %}
+        </div>
+        <div class="ce-vote-results">
+          {% for x in v.votos %}
+          <div>
+            <span class="ce-meta">{{ x.casa }} · {{ x.data }} de {{ v.ano }}</span>
+            {% if x.resultado %}<span class="ce-badge resultado-{{ x.resultado }}">{{ x.resultado|capitalize }}</span>{% endif %}
+            <span class="ce-score">{{ x.placar }}</span>
+          </div>
+          {% endfor %}
+        </div>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+  <button type="button" class="ce-button ce-button--secondary ar-mais" id="ar-mais" hidden>Mostrar mais</button>
+</section>
+
+<nav class="ce-section ar-outras" aria-labelledby="outras-titulo">
+  <h2 class="ce-subtitle" id="outras-titulo">Outras áreas</h2>
+  <ul class="ini-temas">
+    {% for o in v.areas + [v.rotina] if o.slug != a.slug %}<li><a href="{{ o.slug }}.html">{{ o.nome }} <span class="qtd">{{ o.total|numero }}</span></a></li>{% endfor %}
+  </ul>
+  <p class="ce-section-note">Os assuntos de cada projeto são escolhidos por IA a partir da ementa oficial, numa lista fixa. <a href="../entenda.html#areas">Como fazemos</a>.</p>
+</nav>
+{% endblock %}
+{% block rodape %}
+<p>Votações atualizadas em {{ atualizado_congresso }}.</p>
+<p>Fontes: <a href="https://dadosabertos.camara.leg.br/">Dados Abertos da Câmara dos Deputados</a> e <a href="https://www12.senado.leg.br/dados-abertos">Dados Abertos do Senado Federal</a>. A classificação por assunto é gerada por IA a partir da ementa oficial. Este site reproduz informações públicas oficiais, sem avaliação ou opinião.</p>
+{% endblock %}
+{% block scripts %}<script src="{{ raiz }}/static/areas.js" defer></script>{% endblock %}

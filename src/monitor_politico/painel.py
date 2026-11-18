@@ -106,6 +106,7 @@ def votadas(doc: dict[str, Any]) -> list[dict[str, Any]]:
             "titulo": titulo(prop),
             "temas": prop["temas"],
             "situacao": texto_situacao(prop),
+            "virou_lei": bool((prop.get("situacao") or {}).get("norma")),
             "casas": sorted({v["casa"] for v in recentes}),
             "resultados": sorted({v["resultado"] for v in recentes if v["resultado"]}),
             "nominal": any(v["nominal"] for v in prop["votacoes"]),

@@ -18,7 +18,7 @@ from zoneinfo import ZoneInfo
 from jinja2 import Environment, PackageLoader, select_autoescape
 
 from monitor_politico import retrospectiva as modulo_retro
-from monitor_politico import estados as modulo_estados, legislatura as modulo_legislatura, mapa as modulo_mapa, metricas as modulo_metricas, painel, perfis, resumo
+from monitor_politico import areas as modulo_areas, estados as modulo_estados, legislatura as modulo_legislatura, mapa as modulo_mapa, metricas as modulo_metricas, painel, perfis, resumo
 from monitor_politico.lote_senado import ROTULOS_ELEITOS as ROTULOS_ELEITOS_SENADO
 from monitor_politico.models import Deputado, Senador
 
@@ -29,6 +29,7 @@ RESUMOS_PADRAO = Path("data/resumos.json")
 PERFIS_PADRAO = Path("data/perfis")
 METRICAS_PADRAO = Path("data/metricas_deputados.json")
 LEGISLATURA_PADRAO = Path("data/legislatura.json")
+AREAS_PADRAO = Path("data/areas.json")
 # Formulários do Google (respostas numa planilha privada do projeto) e e-mail de contato.
 FORM_AVISO = "https://docs.google.com/forms/d/e/1FAIpQLSc6a1RL5gWtaGAByD30kfTHXLuFn0emS0oWWuAOCzoT5zcXIg/viewform"
 # O campo "Em qual página?" já vem preenchido com o endereço da página de onde a pessoa veio.
@@ -257,6 +258,7 @@ def construir(
     arquivo_senadores: Optional[list[dict[str, Any]]] = None,
     pasta_imagens_senado: Optional[Path] = None,
     historico: Optional[dict[str, Any]] = None,
+    areas: Optional[dict[str, Any]] = None,
 ) -> None:
     env = Environment(
         loader=PackageLoader("monitor_politico", "templates"),
@@ -297,6 +299,20 @@ def construir(
         }
     dados_votacoes = painel.inicio(doc_completo)
     dados_votacoes["anos_votadas"] = sorted({v["ano"] for v in dados_votacoes["votadas"]}, reverse=True)
+    # Votações por área: só com a classificação por IA (data/areas.json); sem ela, a página inicial mostra os temas oficiais.
+    classificacoes = (areas or {}).get("classificacoes") or {}
+    vis_areas = modulo_areas.paginas(dados_votacoes["votadas"], classificacoes) if classificacoes else None
+    if vis_areas:
+        (saida / "areas").mkdir()
+        comum_areas = {"raiz": "..", "casa": None, "atualizado_congresso": atualizado_congresso, "v": vis_areas}
+        (saida / "areas" / "index.html").write_text(
+            env.get_template("areas.html").render(**comum_areas, caminho="areas/index.html"), encoding="utf-8"
+        )
+        modelo_area = env.get_template("area.html")
+        for area in vis_areas["areas"] + [vis_areas["rotina"]]:
+            (saida / "areas" / f"{area['slug']}.html").write_text(
+                modelo_area.render(**comum_areas, caminho=f"areas/{area['slug']}.html", a=area), encoding="utf-8"
+            )
     malha = modulo_mapa._malha()
     mapa_estados = [
         {"uf": uf, "slug": uf.lower(), "nome": forma["nome"], "d": forma["d"], "rotulo": forma["rotulo"]}
@@ -305,7 +321,7 @@ def construir(
     (saida / "index.html").write_text(
         env.get_template("inicio.html").render(
             raiz=".", casa="inicio", caminho="index.html", atualizado_congresso=atualizado_congresso, **dados_inicio,
-            mapa_estados=mapa_estados, mapa_dim=(malha["largura"], malha["altura"]),
+            mapa_estados=mapa_estados, mapa_dim=(malha["largura"], malha["altura"]), areas=vis_areas,
             nova_legislatura=legislatura and {"posse": legislatura.get("posse"), "novos": len(legislatura.get("eleitos_novos", [])),
                                              "novos_senado": len((legislatura_senado or {}).get("eleitos_novos", []))},
         ),
@@ -313,7 +329,7 @@ def construir(
     )
     (saida / "votacoes.html").write_text(
         env.get_template("votacoes.html").render(
-            raiz=".", casa=None, caminho="votacoes.html", atualizado_congresso=atualizado_congresso, **dados_votacoes
+            raiz=".", casa=None, caminho="votacoes.html", atualizado_congresso=atualizado_congresso, tem_areas=bool(vis_areas), **dados_votacoes
         ),
         encoding="utf-8",
     )
@@ -354,7 +370,7 @@ def construir(
     (saida / "entenda.html").write_text(
         env.get_template("entenda.html").render(
             raiz=".", casa=None, caminho="entenda.html", atualizado_congresso=atualizado_congresso,
-            numeros=numeros_do_periodo(doc_congresso), tem_resumos=bool(resumos),
+            numeros=numeros_do_periodo(doc_congresso), tem_resumos=bool(resumos), tem_areas=bool(vis_areas),
         ),
         encoding="utf-8",
     )
@@ -436,6 +452,7 @@ if __name__ == "__main__":
         legislatura_senado=modulo_legislatura.ler(LEGISLATURA_SENADO_PADRAO),
         arquivo_senadores=(modulo_legislatura.ler(ARQUIVO_SENADO_PADRAO) or {}).get("senadores"),
         historico=modulo_legislatura.ler(HISTORICO_PADRAO),
+        areas=modulo_legislatura.ler(AREAS_PADRAO),
     )
     print(
         f"Site gerado em {destino}/ ({len(doc_dep['deputados'])} deputados, {len(doc_sen['senadores'])} senadores, "

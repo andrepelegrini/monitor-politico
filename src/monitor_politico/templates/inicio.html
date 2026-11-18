@@ -57,7 +57,16 @@
     {% if not pauta["Câmara"] %}<p class="ce-section-note">A Câmara costuma publicar a pauta na véspera ou no próprio dia. Evento programado: a agenda pode mudar.</p>{% endif %}
   </section>
 
-  {% if temas %}
+  {% if areas %}
+  <section aria-labelledby="areas-titulo">
+    <div class="ce-section-header"><h2 class="ce-display ce-section-title" id="areas-titulo">Votações por área</h2></div>
+    <p class="ce-section-note">Tudo o que o Plenário votou desde 2023, organizado em nove áreas.</p>
+    <ul class="ini-temas">
+      {% for a in areas.areas %}<li><a href="areas/{{ a.slug }}.html">{{ a.nome }} <span class="qtd">{{ a.total|numero }}</span></a></li>{% endfor %}
+    </ul>
+    <p class="ini-mais-areas"><a class="ini-mais" href="areas/index.html">Ver todas as áreas →</a></p>
+  </section>
+  {% elif temas %}
   <section aria-labelledby="temas-titulo">
     <div class="ce-section-header"><h2 class="ce-display ce-section-title" id="temas-titulo">Assuntos do mês</h2></div>
     <p class="ce-section-note">Temas oficiais das proposições em pauta ou votadas no período.</p>

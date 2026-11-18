@@ -1,0 +1,35 @@
+name: Classificar votações por área
+
+# Manual: classifica de uma vez as proposições votadas que ainda não têm área (ou cuja ementa mudou)
+# e faz commit de data/areas.json no branch escolhido. A coleta diária já faz isso com as novas.
+
+on:
+  workflow_dispatch:
+  push:  # temporário: primeira classificação no branch de pré-visualização
+    branches: [areas]
+
+permissions:
+  contents: write
+
+jobs:
+  classificar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e ".[ia]"
+      - name: Classificar
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python -m monitor_politico.areas
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/areas.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Classifica votações por área ($(date -u +%F))"
+          git pull --rebase
+          git push

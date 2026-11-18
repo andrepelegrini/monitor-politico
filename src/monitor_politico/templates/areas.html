@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block titulo %}Votações por área · Na Galeria{% endblock %}
+{% block descricao %}Os projetos votados nos plenários da Câmara e do Senado desde fevereiro de 2023, organizados em nove áreas: economia, trabalho, saúde, educação, segurança, direitos, meio ambiente, infraestrutura e Estado.{% endblock %}
+{% block conteudo %}
+<nav class="ce-breadcrumb" aria-label="Trilha de navegação">
+  <ol>
+    <li><a href="../index.html">Início</a></li>
+    <li aria-current="page">Votações por área</li>
+  </ol>
+</nav>
+<header class="ce-page-head">
+  <p class="ce-eyebrow">Votações desde fevereiro de 2023</p>
+  <h1>Votações por área</h1>
+  <p class="ce-deck">Os projetos votados no Plenário da Câmara ou do Senado, organizados por área. Escolha uma para ver o que foi votado.</p>
+</header>
+
+<ul class="ar-grade">
+  {% for a in v.areas %}
+  <li>
+    <a class="ar-card" href="{{ a.slug }}.html">
+      <span class="ar-nome">{{ a.nome }}</span>
+      <span class="ar-num"><strong>{{ a.total|numero }}</strong> {{ "projeto" if a.total == 1 else "projetos" }} · {{ a.leis|numero }} {{ "virou lei" if a.leis == 1 else "viraram lei" }}</span>
+      {% if a.exemplos %}<span class="ar-ex">{% for t in a.exemplos %}<span>{{ t }}</span>{% endfor %}</span>{% endif %}
+      <span class="ar-ver" aria-hidden="true">Ver a área →</span>
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+
+<p class="ar-rotina">Também foram votados {{ v.rotina.total|numero }} projetos de rotina, como acordos internacionais, homenagens e créditos do orçamento: <a href="rotina.html">Rotina do Congresso</a>.</p>
+<p class="ce-section-note">A área de cada projeto é escolhida por IA a partir da ementa oficial, numa lista fixa de assuntos. Um projeto pode estar em mais de uma área. <a href="../entenda.html#areas">Como fazemos</a>.</p>
+{% endblock %}
+{% block rodape %}
+<p>Votações atualizadas em {{ atualizado_congresso }}.</p>
+<p>Fontes: <a href="https://dadosabertos.camara.leg.br/">Dados Abertos da Câmara dos Deputados</a> e <a href="https://www12.senado.leg.br/dados-abertos">Dados Abertos do Senado Federal</a>. A classificação por área é gerada por IA a partir da ementa oficial. Este site reproduz informações públicas oficiais, sem avaliação ou opinião.</p>
+{% endblock %}
