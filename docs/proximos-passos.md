@@ -53,7 +53,7 @@ Ordem combinada: 5 (feito) → 1 junto com 4 → 2 → 3. Antes de cada uma, faz
 3. ~~**Resultado eleitoral (TSE)**~~ (entregue: eleições 2018–2026 no perfil, badges de 2026 e eleitos para 2027).
 4. **"Acompanhar" sem servidor próprio**: feeds RSS por parlamentar e por proposição, gerados no build. Alertas por e-mail exigem servidor e ficam como candidatos à versão paga.
 6. **Avisos da nova legislatura e contato**: mock aprovado em 07/11/2026, nas posições Eleitos para 2027, perfil de quem chega e página inicial, mais "Encontrou um erro?" nos perfis e no rodapé. Falta criar um Gmail do projeto e um Google Forms com planilha privada (nunca um link direto para a planilha), e definir o nome do responsável para a política de privacidade. Na hora de enviar: cópia oculta, atenção ao limite diário do Gmail e apagar a lista depois, como o texto promete.
-7. ~~**Domínio próprio**~~ (entregue em 14/11/2026: nagaleria.com.br). Falta o e-mail `contato@nagaleria.com.br` pelo Email Routing da Cloudflare, encaminhando para o Gmail do projeto.
+7. ~~**Domínio próprio**~~ (entregue em 14/11/2026: nagaleria.com.br). E-mail `contato@nagaleria.com.br` ativo desde 18/11/2026 (Email Routing da Cloudflare, encaminha para o Gmail do projeto; só recebe).
 5. ~~**Melhorias rápidas**: busca única, "Entenda os dados", Open Graph.~~ Entregue em 03/11/2026.
 
 Fora do escopo por enquanto: deputados estaduais e governadores (27 assembleias com formatos diferentes) e contador de visitantes (se quiser, usar o Vercel Analytics).
