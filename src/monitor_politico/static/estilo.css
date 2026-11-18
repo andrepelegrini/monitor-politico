@@ -507,3 +507,14 @@ body { margin: 0; }
 .ce-app .rt-imagem { display: grid; gap: var(--ce-space-2); justify-items: start; margin: 0; }
 .ce-app .rt-imagem img { display: block; height: auto; max-width: 100%; border: 1px solid var(--ce-border); border-radius: var(--ce-radius-md); box-shadow: var(--ce-shadow-float); }
 .ce-app .rt-imagem figcaption { font-size: var(--ce-text-sm); color: var(--ce-text-secondary); }
+
+/* Avisos da nova legislatura e "Encontrou um erro?" */
+.aviso-convite{display:grid;grid-template-columns:minmax(0,1fr) max-content;gap:var(--ce-space-4) var(--ce-space-8);align-items:center;margin-block:var(--ce-space-6);padding:var(--ce-space-6);background:var(--ce-surface);border:1px solid var(--ce-border);border-radius:var(--ce-radius-md)}
+.ce-app .aviso-convite h2{font:480 1.375rem/1.2 var(--ce-font-display);letter-spacing:-.02em}
+.aviso-convite p{margin-top:var(--ce-space-2);color:var(--ce-text-secondary);max-width:62ch;font-size:.9375rem}
+.aviso-convite .aviso-nota{font-size:.875rem}
+.aviso-faixa{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--ce-space-2) var(--ce-space-6);margin-top:var(--ce-space-5);padding:var(--ce-space-3) var(--ce-space-4);background:var(--ce-sand);border-radius:var(--ce-radius-sm);font-size:.9375rem}
+.aviso-links{display:flex;flex-wrap:wrap;gap:var(--ce-space-4)}
+.aviso-compacto{display:flex;flex-wrap:wrap;align-items:center;gap:var(--ce-space-2) var(--ce-space-4);margin-top:var(--ce-space-4)}
+.aviso-erro{margin-top:var(--ce-space-8);padding-top:var(--ce-space-4);border-top:1px solid var(--ce-border);font-size:.875rem;color:var(--ce-text-secondary)}
+@media (max-width:640px){.aviso-convite{grid-template-columns:minmax(0,1fr)}.aviso-convite .ce-button{justify-self:start}}

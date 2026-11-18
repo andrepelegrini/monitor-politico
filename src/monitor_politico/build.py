@@ -29,6 +29,11 @@ RESUMOS_PADRAO = Path("data/resumos.json")
 PERFIS_PADRAO = Path("data/perfis")
 METRICAS_PADRAO = Path("data/metricas_deputados.json")
 LEGISLATURA_PADRAO = Path("data/legislatura.json")
+# Formulários do Google (respostas numa planilha privada do projeto) e e-mail de contato.
+FORM_AVISO = "https://docs.google.com/forms/d/e/1FAIpQLSc6a1RL5gWtaGAByD30kfTHXLuFn0emS0oWWuAOCzoT5zcXIg/viewform"
+# O campo "Em qual página?" já vem preenchido com o endereço da página de onde a pessoa veio.
+FORM_ERRO = "https://docs.google.com/forms/d/e/1FAIpQLSecoJ-1-JVcO0LnFrXoDZzMIZ9jOsuHW6EsJFGStCIwNDJRHw/viewform?usp=pp_url&entry.1937396789="
+CONTATO = "contato@nagaleria.com.br"
 ARQUIVO_PADRAO = Path("data/arquivo_deputados.json")
 PERFIS_SENADO_PADRAO = PERFIS_PADRAO / "senado"
 METRICAS_SENADO_PADRAO = Path("data/metricas_senadores.json")
@@ -261,6 +266,7 @@ def construir(
     for nome in ("numero", "moeda", "milhoes", "percentual", "diferenca", "nome_proprio", "partir"):
         env.filters[nome] = getattr(perfis, nome)
     env.globals["site_url"] = url_do_site() if site_url is None else site_url.rstrip("/")
+    env.globals.update(form_aviso=FORM_AVISO, form_erro=FORM_ERRO, contato=CONTATO)
     deputados = sorted((Deputado.de_dict(d) for d in doc_deputados["deputados"]), key=lambda d: chave_alfabetica(d.nome))
     senadores = sorted((Senador.de_dict(s) for s in doc_senadores["senadores"]), key=lambda s: chave_alfabetica(s.nome))
     atualizado_camara = _formatar_data(doc_deputados["coletado_em"])
@@ -300,6 +306,7 @@ def construir(
         env.get_template("inicio.html").render(
             raiz=".", casa="inicio", caminho="index.html", atualizado_congresso=atualizado_congresso, **dados_inicio,
             mapa_estados=mapa_estados, mapa_dim=(malha["largura"], malha["altura"]),
+            nova_legislatura=legislatura and {"posse": legislatura.get("posse"), "novos": len(legislatura.get("eleitos_novos", []))},
         ),
         encoding="utf-8",
     )

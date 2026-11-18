@@ -1,4 +1,5 @@
 <!doctype html>
+{% import "_avisos.html" as avisos with context %}
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
@@ -64,6 +65,7 @@
       <p>Fonte: <a href="{{ fonte_url }}">{{ fonte_nome }}</a>. Este site reproduz informações públicas oficiais, sem avaliação ou opinião.</p>
       {% endblock %}
       {% if caminho != "entenda.html" %}<p><a href="{{ raiz }}/entenda.html">Entenda os dados</a>: de onde vêm, quando são atualizados e o que cada termo quer dizer.</p>{% endif %}
+      {% block erro_rodape %}<p><strong>Encontrou um erro?</strong> {{ avisos.link_erro() }} ou escreva para <a href="mailto:{{ contato }}">{{ contato }}</a>. <a href="{{ raiz }}/entenda.html#privacidade">Privacidade</a>.</p>{% endblock %}
     </div>
   </footer>
   <script src="{{ raiz }}/static/busca.js" defer></script>

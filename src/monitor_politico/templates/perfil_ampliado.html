@@ -1,4 +1,6 @@
 {% extends "base.html" %}
+{% import "_avisos.html" as avisos with context %}
+{% block erro_rodape %}<p><a href="{{ raiz }}/entenda.html#privacidade">Privacidade</a>.</p>{% endblock %}
 {% block titulo %}{{ d.nome }} ({{ d.partido }}-{{ d.uf }}) · Na Galeria{% endblock %}
 {% block og_titulo %}{{ d.nome }} ({{ d.partido }}-{{ d.uf }}) · {{ nome_casa }}{% endblock %}
 {% block descricao %}{{ d.nome }} ({{ d.partido }}-{{ d.uf }}):{% if perfil.plenario %} {{ perfil.plenario.votos_registrados|numero }} votos registrados, {% if casa == "senado" %}participação em {{ perfil.plenario.participacao.total.votou|numero }} de {{ perfil.plenario.participacao.total.votacoes|numero }} votações nominais,{% else %}presença em {{ perfil.plenario.presenca.total.presencas|numero }} de {{ perfil.plenario.presenca.total.dias|numero }} dias com sessão,{% endif %}{% endif %}{% if perfil.dinheiro %} cota parlamentar, emendas,{% endif %}{% if perfil.propostas %} {{ perfil.propostas.total_autoria_propostas|numero }} {{ "proposta" if perfil.propostas.total_autoria_propostas == 1 else "propostas" }} de autoria, {{ perfil.propostas.normas|length }} {{ "virou" if perfil.propostas.normas|length == 1 else "viraram" }} {{ perfil.propostas.palavra_norma }},{% endif %} com dados abertos oficiais.{% endblock %}
@@ -215,4 +217,5 @@
   </div>
 </section>
 {% endblock %}
-{% block scripts %}<script src="{{ raiz }}/static/perfil.js" defer></script>{% endblock %}
+{% block scripts %}<script src="{{ raiz }}/static/perfil.js" defer></script>{{ avisos.erro() }}
+{% endblock %}

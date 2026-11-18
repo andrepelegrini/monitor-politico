@@ -1,4 +1,6 @@
 {% extends "base.html" %}
+{% import "_avisos.html" as avisos with context %}
+{% block erro_rodape %}<p><a href="{{ raiz }}/entenda.html#privacidade">Privacidade</a>.</p>{% endblock %}
 {% block titulo %}{{ d.nome }} ({{ d.partido }}-{{ d.uf }}) · Na Galeria{% endblock %}
 {% block og_titulo %}{{ d.nome }} ({{ d.partido }}-{{ d.uf }}) · Câmara dos Deputados{% endblock %}
 {% block descricao %}Partido, estado e contato oficial do gabinete de {{ d.nome }} na Câmara dos Deputados, com dados abertos oficiais.{% endblock %}
@@ -41,4 +43,5 @@
     </ul>
   </div>
 </article>
+{{ avisos.erro() }}
 {% endblock %}

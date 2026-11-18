@@ -1,8 +1,10 @@
 {% extends "base.html" %}
+{% import "_avisos.html" as avisos with context %}
 {% block titulo %}O que o Congresso decidiu · Na Galeria{% endblock %}
 {% block og_titulo %}O que o Congresso decidiu{% endblock %}
 {% block descricao %}As principais votações da Câmara e do Senado, o que entra em pauta e quem representa cada estado, a partir dos dados abertos oficiais.{% endblock %}
 {% block conteudo %}
+{% if nova_legislatura and nova_legislatura.novos %}{{ avisos.faixa(nova_legislatura) }}{% endif %}
 <header class="ce-page-head ce-page-head--editorial ini-topo">
   <p class="ce-eyebrow">Câmara e Senado</p>
   <h1>O que o Congresso decidiu</h1>

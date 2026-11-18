@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% import "_avisos.html" as avisos with context %}
 {% block titulo %}Eleitos para 2027 · Na Galeria{% endblock %}
 {% block descricao %}{% if casa == "senado" %}Os {{ resumo_legislatura.total_eleitos }} eleitos para o Senado em {{ legislatura.ano_da_eleicao }}: quem continua, quem chega e o que aconteceu com quem tem mandato até 2027.{% else %}Os {{ resumo_legislatura.total_eleitos }} deputados federais eleitos em {{ legislatura.ano_da_eleicao }}: quem volta, quem chega pela primeira vez e o que aconteceu com quem está no mandato atual.{% endif %}{% endblock %}
 {% block conteudo %}
@@ -14,6 +15,7 @@
   <h1>Eleitos para {{ "o Senado" if casa == "senado" else "a Câmara" }} em {{ legislatura.ano_da_eleicao }}</h1>
   <p class="ce-deck">Posse prevista para {{ legislatura.posse|data_br }}. Dados do TSE e {{ "do Senado" if casa == "senado" else "da Câmara" }}, coletados em {{ coleta_legislatura|data_br }}.</p>
 </header>
+{{ avisos.convite(eleitos|length) }}
 
 <section class="ce-section" aria-labelledby="renovacao-titulo">
   <div class="ce-section-header"><h2 class="ce-display ce-section-title" id="renovacao-titulo">Quem são os {{ resumo_legislatura.total_eleitos }} eleitos</h2></div>

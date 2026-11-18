@@ -212,6 +212,32 @@ def test_paginas_da_virada_de_legislatura(tmp_path, docs):
     assert "deputados/777.html" in enderecos and "deputados/eleitos/S40.html" in enderecos
 
 
+def test_avisos_de_2027_e_encontrou_um_erro(tmp_path, docs):
+    from monitor_politico.build import FORM_AVISO, FORM_ERRO
+    alvo = docs[0]["deputados"][0]["id"]
+    construir(*docs, tmp_path / "site", legislatura=LEGISLATURA, arquivo_deputados=[])
+    site = tmp_path / "site"
+    ler = lambda caminho: (site / caminho).read_text(encoding="utf-8")
+
+    indice = ler("deputados/eleitos/index.html")
+    assert "aviso-convite" in indice and f'href="{FORM_AVISO}"' in indice and "com 1 nome novo na Câmara" in indice
+    assert f'href="{FORM_AVISO}"' in ler("deputados/eleitos/S40.html")
+    inicio = ler("index.html")
+    assert "aviso-faixa" in inicio and "Chega 1 nome novo na Câmara" in inicio
+    assert f'href="{FORM_AVISO}"' in inicio and 'href="deputados/eleitos/index.html"' in inicio
+
+    # "Encontrou um erro?" leva o endereço da página e aparece uma vez só, no fim do perfil.
+    perfil = ler(f"deputados/{alvo}.html")
+    assert perfil.count("Encontrou um erro") == 1 and FORM_ERRO.replace("&", "&amp;") in perfil
+    assert f"deputados/{alvo}.html" in perfil.split(FORM_ERRO.split("?")[0], 1)[1].split('"', 1)[0]
+    assert "Encontrou um erro?" in ler("votacoes.html") and 'id="privacidade"' in ler("entenda.html")
+
+
+def test_sem_legislatura_nao_ha_convite(tmp_path, docs):
+    construir(*docs, tmp_path / "site")
+    assert "aviso-faixa" not in (tmp_path / "site" / "index.html").read_text(encoding="utf-8")
+
+
 def test_sem_dados_da_legislatura_as_paginas_nao_mudam(tmp_path, docs):
     construir(*docs, tmp_path / "site")
     assert not (tmp_path / "site" / "deputados" / "anteriores.html").exists()

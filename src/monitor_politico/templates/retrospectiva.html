@@ -1,4 +1,6 @@
 {% extends "base.html" %}
+{% import "_avisos.html" as avisos with context %}
+{% block erro_rodape %}<p><a href="{{ raiz }}/entenda.html#privacidade">Privacidade</a>.</p>{% endblock %}
 {% set r = retro %}{% set n = r.numeros %}
 {% block titulo %}Retrospectiva 2023–2027: {{ d.nome }} ({{ d.partido }}-{{ d.uf }}) · Na Galeria{% endblock %}
 {% block og_titulo %}Retrospectiva da legislatura 2023–2027: {{ d.nome }} ({{ d.partido }}-{{ d.uf }}){% endblock %}
@@ -127,4 +129,5 @@
   </div>
 </section>
 {% endblock %}
-{% block scripts %}<script src="{{ raiz }}/static/perfil.js" defer></script><script src="{{ raiz }}/static/retrospectiva.js" defer></script>{% endblock %}
+{% block scripts %}<script src="{{ raiz }}/static/perfil.js" defer></script><script src="{{ raiz }}/static/retrospectiva.js" defer></script>{{ avisos.erro() }}
+{% endblock %}

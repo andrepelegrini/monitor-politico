@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% import "_avisos.html" as avisos with context %}
 {% block titulo %}Entenda os dados · Na Galeria{% endblock %}
 {% block og_titulo %}Entenda os dados do site Na Galeria{% endblock %}
 {% block descricao %}De onde vêm as informações do site Na Galeria, quando são atualizadas e o que significa votação simbólica, nominal, de mérito e de rito.{% endblock %}
@@ -66,8 +67,25 @@
   <ul>
     <li>Mostramos o plenário. Comissões ficam de fora por enquanto.</li>
     <li>Se a fonte oficial corrigir um dado, a correção chega aqui na coleta seguinte.</li>
-    <li>Viu algo errado? <a href="https://github.com/andrepelegrini/monitor-politico/issues">Avise pelo GitHub</a>.</li>
+    <li>Viu algo errado? {{ avisos.link_erro("Conte pelo formulário") }} ou escreva para <a href="mailto:{{ contato }}">{{ contato }}</a>.</li>
   </ul>
+
+  <h2 class="ce-display ce-section-title" id="privacidade">Privacidade</h2>
+  <p>O site não tem cadastro, não pede login e não usa cookies de publicidade. Os dados pessoais que recebemos são só os que você escreve nos dois formulários abaixo.</p>
+  <dl class="ce-dl">
+    <dt>Aviso da nova legislatura</dt>
+    <dd>Guardamos só o e-mail informado, para enviar um único aviso quando os dados dos novos mandatos estiverem disponíveis. Depois do envio, a lista é apagada.</dd>
+    <dt>Encontrou um erro?</dt>
+    <dd>Guardamos o que você escreve e o endereço da página. O e-mail é opcional e só serve para responder.</dd>
+    <dt>O que não fazemos</dt>
+    <dd>Não usamos os e-mails em campanha ou comunicação política, não vendemos e não cedemos a ninguém. O envio é feito com os endereços ocultos, sem que uma pessoa veja o e-mail de outra.</dd>
+    <dt>Onde fica guardado</dt>
+    <dd>Nos Formulários Google, numa planilha privada a que só o responsável pelo site tem acesso.</dd>
+    <dt>Seus direitos</dt>
+    <dd>Você pode pedir acesso, correção ou exclusão a qualquer momento, por <a href="mailto:{{ contato }}">{{ contato }}</a>.</dd>
+    <dt>Quem é responsável</dt>
+    <dd>Na Galeria, pelo e-mail <a href="mailto:{{ contato }}">{{ contato }}</a>.</dd>
+  </dl>
 </article>
 {% endblock %}
 {% block rodape %}

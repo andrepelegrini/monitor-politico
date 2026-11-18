@@ -1,0 +1,30 @@
+{# Avisos da nova legislatura (formulário 1) e "Encontrou um erro?" (formulário 2). Importar "with context". #}
+{% macro nome_casa() %}{{ "no Senado" if casa == "senado" else "na Câmara" }}{% endmacro %}
+
+{% macro convite(novos) %}
+<aside class="aviso-convite" aria-labelledby="aviso-titulo">
+  <div>
+    <h2 id="aviso-titulo">Receba um aviso quando os novos mandatos começarem</h2>
+    <p>A nova legislatura começa em {{ legislatura.posse|data_br }}, com {{ novos|numero }} {{ "nome novo" if novos == 1 else "nomes novos" }} {{ nome_casa() }}. Enviamos um único e-mail quando votos, presença e gastos dos novos mandatos estiverem aqui.</p>
+    <p class="aviso-nota">O formulário fica no Google. <a href="{{ raiz }}/entenda.html#privacidade">Como usamos o e-mail</a>.</p>
+  </div>
+  <a class="ce-button" href="{{ form_aviso }}">Quero receber o aviso</a>
+</aside>
+{% endmacro %}
+
+{% macro compacto() %}
+<p class="aviso-compacto"><a class="ce-button ce-button--secondary" href="{{ form_aviso }}">Quero receber o aviso</a> <span class="pf-nota">Um único e-mail, quando os dados do mandato estiverem aqui. <a href="{{ raiz }}/entenda.html#privacidade">Como usamos o e-mail</a>.</span></p>
+{% endmacro %}
+
+{% macro faixa(nova) %}
+<aside class="aviso-faixa" aria-label="Nova legislatura">
+  <p><strong>Nova legislatura em {{ nova.posse|data_br }}.</strong> {{ "Chega" if nova.novos == 1 else "Chegam" }} {{ nova.novos|numero }} {{ "nome novo" if nova.novos == 1 else "nomes novos" }} na Câmara.</p>
+  <p class="aviso-links"><a href="deputados/eleitos/index.html">Ver os eleitos</a><a href="{{ form_aviso }}">Receber um aviso</a></p>
+</aside>
+{% endmacro %}
+
+{% macro link_erro(texto="Conte pelo formulário") %}<a href="{{ form_erro }}{{ ((site_url or 'https://www.nagaleria.com.br') ~ '/' ~ caminho)|urlencode }}">{{ texto }}</a>{% endmacro %}
+
+{% macro erro() %}
+<p class="aviso-erro"><strong>Encontrou um erro nesta página?</strong> {{ link_erro() }}, que já vai com o endereço da página, ou escreva para <a href="mailto:{{ contato }}">{{ contato }}</a>.</p>
+{% endmacro %}
