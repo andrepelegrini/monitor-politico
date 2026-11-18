@@ -48,6 +48,66 @@
    "modelo": "claude-sonnet-5-5",
    "gerado_em": "2026-11-11T17:02:36+00:00"
   },
+  "MPV 1383/2026": {
+   "titulo": "Crédito extraordinário de R$ 360 milhões para o Ministério da Integração",
+   "o_que_muda": "Abre um crédito extraordinário de R$ 360.000.000,00 em favor do Ministério da Integração e do Desenvolvimento Regional. Crédito extraordinário é um valor adicional ao orçamento do ano, liberado para uma despesa específica. O texto disponível não permite identificar a finalidade detalhada nem outras condições do crédito.",
+   "quem_e_afetado": "O Ministério da Integração e do Desenvolvimento Regional, que recebe o recurso. Os beneficiários finais dependem da finalidade do crédito, que não consta de forma legível no texto disponível.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 21855,
+    "saida": 250
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "5775c5bf6f3cbc87",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-18T17:57:21+00:00"
+  },
+  "MPV 1384/2026": {
+   "titulo": "Crédito extra de R$ 924,9 milhões para compra e distribuição de alimentos",
+   "o_que_muda": "Abre crédito extraordinário de R$ 924.985.960,00 para dois ministérios, para compra e distribuição de alimentos. A Conab, ligada ao Ministério do Desenvolvimento Agrário, recebe R$ 849.786.560 para formar estoques públicos, com meta de 490.350 toneladas de produto adquirido. O Ministério do Desenvolvimento e Assistência Social recebe R$ 75.199.400: R$ 61.969.400 para 140.000 famílias e R$ 13.230.000 para 1.323 famílias agricultoras. Vale desde a publicação.",
+   "quem_e_afetado": "Os dois ministérios e a Conab, que executam os recursos, além de famílias em insegurança alimentar, grupos tradicionais e famílias agricultoras beneficiadas.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 4160,
+    "saida": 329
+   },
+   "fonte": "texto integral",
+   "entrada": "pdf",
+   "fonte_hash": "2e5590e7e3efe5bb",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-18T17:57:14+00:00"
+  },
+  "MPV 1389/2026": {
+   "titulo": "Crédito extraordinário de R$ 6,6 bilhões para o Ministério de Minas e Energia",
+   "o_que_muda": "Abre crédito extraordinário de R$ 6.605.000.000,00 em favor do Ministério de Minas e Energia, para os fins que especifica. Crédito extraordinário é uma autorização para gastar fora do orçamento já aprovado, usada em despesas urgentes e imprevisíveis.",
+   "quem_e_afetado": "O Ministério de Minas e Energia, que recebe os recursos. Os detalhes sobre quem se beneficia dos gastos não constam do texto disponível.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 11844,
+    "saida": 223
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "c85cfe09044aae20",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-18T17:57:05+00:00"
+  },
+  "MPV 1398/2026": {
+   "titulo": "Crédito extraordinário de R$ 300 milhões para ações de Defesa Civil",
+   "o_que_muda": "Abre um crédito extraordinário de R$ 300.000.000,00 em favor do Ministério da Integração e do Desenvolvimento Regional. O dinheiro é destinado à ação \"Ações de Proteção e Defesa Civil\", dentro do programa \"Gestão de Riscos e de Desastres\". Crédito extraordinário é uma autorização de gasto que não estava prevista no orçamento. A medida provisória entra em vigor na data de sua publicação, em 20 de outubro de 2026.",
+   "quem_e_afetado": "O Ministério da Integração e do Desenvolvimento Regional, que recebe o crédito, e a área de proteção e defesa civil, que é a destinatária da verba.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 5940,
+    "saida": 292
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "9fc8dca162813365",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-18T17:56:57+00:00"
+  },
   "PDL 274/2026": {
    "titulo": "Acordo do Mercosul para reconhecer medidas de proteção a mulheres",
    "o_que_muda": "O Congresso aprova o acordo em que países do Mercosul reconhecem entre si as medidas de proteção a mulheres em situação de violência de gênero. O acordo foi assinado em Assunção, no Paraguai, em 20 de julho de 2022, pelos países do Mercosul e pelos Estados associados. Revisões do acordo, a saída do Brasil (chamada denúncia) ou ajustes que gerem custos ou compromissos pesados ao país precisarão de nova aprovação do Congresso. O decreto vale a partir da publicação.",
@@ -71,6 +131,21 @@
    "fonte_hash": "806adb74743986fc",
    "modelo": "claude-sonnet-5-5",
    "gerado_em": "2026-11-12T17:32:37+00:00"
+  },
+  "PDL 756/2025": {
+   "titulo": "Aprova tratado de cooperação jurídica em matéria penal entre Brasil e Japão",
+   "o_que_muda": "O Congresso aprova o texto do tratado de assistência jurídica mútua em matéria penal entre Brasil e Japão, assinado em Tóquio em 25 de janeiro de 2024. O decreto passa a valer na data de sua publicação. Atos que possam levar ao fim ou à revisão do tratado, e ajustes complementares que gerem encargos graves ao patrimônio nacional, também precisarão de aprovação do Congresso.",
+   "quem_e_afetado": "O Congresso Nacional e o governo brasileiro, que passam a seguir o tratado com o Japão. O texto fornecido não detalha outros grupos afetados.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 1653,
+    "saida": 269
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "01def8c9e820ac6a",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-18T17:57:24+00:00"
   },
   "PDL 934/2025": {
    "titulo": "Aprovação do Acordo de Escazú sobre informação e participação em temas ambientais",
@@ -639,6 +714,21 @@
    "modelo": "claude-opus-5-5",
    "gerado_em": "2026-11-10T12:17:05+00:00"
   },
+  "PL 3965/2024": {
+   "titulo": "Dia Nacional dos Professores e feriado escolar em 15 de outubro",
+   "o_que_muda": "Institui o Dia Nacional dos Professores, Professoras e Profissionais de Educação, comemorado todo ano em 15 de outubro. Declara o dia 15 de outubro feriado escolar em todo o país. Nessa data, ficam suspensas as atividades normais e não essenciais em todos os estabelecimentos e unidades de ensino. A lei passa a valer na data de sua publicação.",
+   "quem_e_afetado": "Escolas e demais unidades de ensino de todo o país, além de professores, professoras e profissionais de educação. Também são afetados os estudantes, que ficam sem atividades normais nessa data.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 3142,
+    "saida": 258
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "59aa355ce4c0558e",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-18T17:57:28+00:00"
+  },
   "PL 4035/2023": {
    "titulo": "Agosto como mês de combate às desigualdades",
    "o_que_muda": "Institui Agosto como mês de combate às desigualdades. Nesse mês, o Congresso Nacional analisará as políticas públicas do governo federal. O objetivo é fiscalizar a implementação, a consolidação e a expansão de políticas públicas sociais de caráter nacional. A lei vale a partir da data de sua publicação.",
@@ -738,6 +828,21 @@
    "modelo": "claude-sonnet-5-5",
    "gerado_em": "2026-11-11T17:02:13+00:00"
   },
+  "PL 479/2015": {
+   "titulo": "Educação em tempo integral na educação infantil, no fundamental e no médio",
+   "o_que_muda": "Altera a LDB para que a educação infantil seja dada preferencialmente em tempo integral e os ensinos fundamental e médio passem a ser em tempo integral de forma progressiva. As atividades poderão ocorrer dentro ou fora da escola e contar com outros profissionais além dos professores. O ensino médio terá ao menos 4 horas diárias de aula, com ampliação gradual da permanência, ressalvados o ensino noturno e outras formas de organização. A União complementará os recursos de estados e municípios, usando parte dos royalties do petróleo e gás destinada à educação.",
+   "quem_e_afetado": "Estudantes da educação infantil, do ensino fundamental e do médio, seus pais ou responsáveis, escolas, professores, estados e municípios, que receberiam complementação de recursos da União.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 4278,
+    "saida": 321
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "63297595875af33a",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-18T17:57:32+00:00"
+  },
   "PL 504/2021": {
    "titulo": "Política Nacional de Residência em Área Profissional da Saúde",
    "o_que_muda": "Cria regras nacionais para a residência em saúde de profissões não médicas, com duração de 2 a 3 anos e dedicação exclusiva, de 40 a 44 horas semanais. Muda o nome da comissão nacional para CNRAPS, ligada ao Ministério da Educação. Prevê bolsa ao residente, equivalente à da residência médica, e bolsas a tutores, preceptores e coordenadores. A lei entraria em vigor 90 dias após a publicação.",
@@ -752,6 +857,21 @@
    "fonte_hash": "48ac013daae75780",
    "modelo": "claude-sonnet-5-5",
    "gerado_em": "2026-11-12T17:32:33+00:00"
+  },
+  "PL 5127/2026": {
+   "titulo": "Romaria do Divino Pai Eterno é reconhecida como cultura nacional",
+   "o_que_muda": "A Romaria do Divino Pai Eterno, realizada todos os anos em Trindade (GO), passa a ser reconhecida por lei como manifestação da cultura nacional. A lei entra em vigor na data de sua publicação. O texto não cria obrigações, gastos nem benefícios específicos.",
+   "quem_e_afetado": "Não há pessoas ou grupos diretamente obrigados. O reconhecimento diz respeito à romaria, a seus participantes (romeiros) e ao Município de Trindade, em Goiás.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 3414,
+    "saida": 227
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "5dc818cea413944e",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-18T17:56:53+00:00"
   },
   "PL 5239/2025": {
    "titulo": "Primeira consulta ginecológica no SUS para meninas a partir dos 10 anos",
@@ -799,19 +919,19 @@
    "gerado_em": "2026-11-10T12:17:10+00:00"
   },
   "PL 5756/2026": {
-   "titulo": "Mais prazo para estados usarem verba de internet nas escolas públicas",
-   "o_que_muda": "Prorroga para 31 de dezembro de 2028 o prazo para estados e Distrito Federal aplicarem os recursos da Lei 14.172/2021, destinados a internet com fins educacionais. O prazo atual é 31 de dezembro de 2026. O que não for aplicado, ou for usado fora da lei, deve ser devolvido à União até 31 de março de 2029, em vez de 31 de março de 2027.",
-   "quem_e_afetado": "Estados e Distrito Federal, que recebem e aplicam os recursos, além de escolas, alunos e professores da rede pública beneficiados pelas ações de acesso à internet. A União recebe eventuais devoluções.",
+   "titulo": "Prorroga prazo para uso de recursos da internet nas escolas públicas",
+   "o_que_muda": "O prazo para Estados e Distrito Federal aplicarem os recursos federais de acesso à internet para fins educacionais passa para 31 de dezembro de 2028. O prazo para devolver à União o que não for aplicado passa para 31 de março de 2029. Hoje, esses prazos são 31 de dezembro de 2026 e 31 de março de 2027.",
+   "quem_e_afetado": "Estados e Distrito Federal, que receberam os recursos, e estabelecimentos de ensino, alunos e professores da rede pública, beneficiados pelas ações de acesso à internet.",
    "uso": {
     "modelo": "claude-sonnet-5-5",
     "entrada": 4627,
-    "saida": 274
+    "saida": 243
    },
    "fonte": "texto integral",
    "entrada": "texto",
-   "fonte_hash": "d990cc99d8cc2a18",
+   "fonte_hash": "06cfbdabd99c0882",
    "modelo": "claude-sonnet-5-5",
-   "gerado_em": "2026-11-16T19:29:05+00:00"
+   "gerado_em": "2026-11-18T17:57:41+00:00"
   },
   "PL 5815/2025": {
    "titulo": "Acompanhamento médico e psicológico anual obrigatório para crianças",
@@ -872,6 +992,21 @@
    "fonte_hash": "e61ff4a0106967ac",
    "modelo": "claude-opus-5-5",
    "gerado_em": "2026-11-10T12:22:10+00:00"
+  },
+  "PL 724/2003": {
+   "titulo": "Proíbe tratores após as 18h em rodovias federais e aumenta penas por dirigir embriagado",
+   "o_que_muda": "Proíbe a circulação de veículos de tração (caminhão-trator, trator de rodas, de esteiras e misto) nas rodovias federais após as 18 horas. Define pena de reclusão de 6 a 20 anos para quem praticar homicídio ao dirigir sob efeito de álcool ou substância semelhante. Define reclusão de 1 a 8 anos para lesão corporal nessa situação. Para dirigir sob essa influência, a pena passa a ser de 1 a 3 anos, com multa e suspensão ou proibição da habilitação.",
+   "quem_e_afetado": "Condutores de caminhões-trator e tratores que usam rodovias federais ao entardecer e à noite, e motoristas que dirigem sob influência de álcool ou substância de efeito parecido.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 2918,
+    "saida": 322
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "67e307fc684d56ea",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-18T17:57:45+00:00"
   },
   "PLN 1/2026": {
    "titulo": "Altera autorizações de despesa com pessoal no Orçamento de 2026",
@@ -1163,6 +1298,36 @@
    "fonte_hash": "d55e35dc1a35ef3c",
    "modelo": "claude-opus-5-5",
    "gerado_em": "2026-11-10T12:17:15+00:00"
+  },
+  "PRC 25/2026": {
+   "titulo": "Cria selo da Câmara para reconhecer boas práticas de escuta ao cidadão",
+   "o_que_muda": "Cria o \"Selo Câmara de Respeito à Voz do Cidadão\", concedido todo ano pela Câmara a iniciativas de ouvidoria, transparência e participação popular. A Ouvidoria Parlamentar coordena a concessão e pode propor critérios extras em regulamento. Entre os critérios estão a qualidade e o prazo das respostas aos cidadãos e a acessibilidade dos canais. A entrega ocorre em sessão solene, em data definida pela Mesa.",
+   "quem_e_afetado": "Podem receber o selo órgãos públicos de todos os Poderes e níveis de governo, ouvidorias legislativas e deputados federais. A Ouvidoria Parlamentar e a Mesa da Câmara organizam o processo.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 2902,
+    "saida": 313
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "c4e82acba37400df",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-18T17:57:48+00:00"
+  },
+  "PRC 50/2026": {
+   "titulo": "Prêmio anual da Câmara para instituições que apoiam alunos superdotados",
+   "o_que_muda": "A Câmara dos Deputados passa a conceder, todo ano, o Prêmio Trajetórias de Êxito na Superdotação e na Dupla Excepcionalidade a pessoas jurídicas. O prêmio é uma placa de homenagem e um diploma de menção honrosa, para até cinco agraciados por edição. Cada deputado pode indicar um candidato por edição, e um Conselho Deliberativo vota por maioria simples. A entrega pode ocorrer em sessão solene, preferencialmente em agosto.",
+   "quem_e_afetado": "Escolas, redes de ensino, universidades e outras pessoas jurídicas que atendem estudantes superdotados ou com dupla excepcionalidade, além de deputados, que podem indicar candidatos.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 5914,
+    "saida": 309
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "43e429ae7d4349fa",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-18T17:56:49+00:00"
   },
   "REC 1/2026": {
    "titulo": "Recurso para que o projeto que revoga a Lei de Alienação Parental vá ao Plenário",
