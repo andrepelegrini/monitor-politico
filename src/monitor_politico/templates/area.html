@@ -13,13 +13,14 @@
   <p class="ce-eyebrow">Votações desde fevereiro de 2023</p>
   <h1>{{ a.nome }}</h1>
   <p class="ce-deck">{{ a.descricao }}</p>
+  {% if feed %}{{ avisos.rss(feed) }}{% endif %}
 </header>
 
 <section class="ce-section" aria-labelledby="ar-titulo">
   {% if a.filtros|length > 1 %}
   <div class="chips ar-chips" id="ar-chips" role="group" aria-label="Assuntos de {{ a.nome }}" hidden>
-    <button type="button" class="chip" data-assunto="" aria-pressed="true">Todos <span class="qtd">{{ a.total|numero }}</span></button>
-    {% for nome, qtd in a.filtros %}<button type="button" class="chip" data-assunto="{{ nome }}" aria-pressed="false">{{ nome }} <span class="qtd">{{ qtd|numero }}</span></button>{% endfor %}
+    <button type="button" class="chip" data-assunto="" data-slug="" aria-pressed="true">Todos <span class="qtd">{{ a.total|numero }}</span></button>
+    {% for nome, qtd in a.filtros %}<button type="button" class="chip" data-assunto="{{ nome }}" data-slug="{{ nome|slug_assunto }}" aria-pressed="false">{{ nome }} <span class="qtd">{{ qtd|numero }}</span></button>{% endfor %}
   </div>
   {% endif %}
   <div class="ar-cab">

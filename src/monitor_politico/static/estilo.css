@@ -46,6 +46,11 @@ body { margin: 0; }
 .busca-res a > span:last-child { min-width: 0; }
 .busca-res .av { width: 2rem; height: 2rem; border-radius: 50%; background: var(--ce-sand); display: grid; place-items: center; font-size: var(--ce-text-xs); font-weight: 650; color: var(--ce-espresso); }
 .busca-res .av.prop { border-radius: var(--ce-radius-sm); font-size: .625rem; }
+.link-rss { display: flex; flex-wrap: wrap; align-items: center; gap: var(--ce-space-1) var(--ce-space-3); margin-top: var(--ce-space-2); font-size: var(--ce-text-sm); }
+.link-rss a:first-child { display: inline-flex; align-items: center; gap: var(--ce-space-1); font-weight: 600; min-height: 24px; }
+.link-rss svg { flex: none; }
+.link-rss-ajuda { color: var(--ce-text-secondary); }
+.busca-res .av.tema { border-radius: var(--ce-radius-sm); font-size: var(--ce-text-sm); }
 .busca-res .n { font-weight: 600; display: block; line-height: 1.25; }
 .busca-res .n mark { background: none; color: inherit; text-decoration: underline; text-underline-offset: .18em; }
 .busca-res .m { font-size: var(--ce-text-xs); color: var(--ce-text-secondary); display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }

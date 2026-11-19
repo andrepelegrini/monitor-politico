@@ -25,6 +25,7 @@
     {% for t in p.temas %}<span class="ce-badge ce-badge--outline">{{ t }}</span>{% endfor %}
   </div>
   {% if p.situacao and p.situacao.data %}<p class="ce-meta">Situação na fonte desde {{ p.situacao.data|data_br }}.</p>{% endif %}
+  {% if feed %}{{ avisos.rss(feed, "Acompanhar esta proposição por RSS") }}{% endif %}
 </header>
 
 <div class="ce-grid-main">

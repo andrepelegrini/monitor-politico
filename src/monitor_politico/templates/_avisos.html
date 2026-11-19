@@ -43,3 +43,6 @@
 {% macro erro() %}
 <p class="aviso-erro"><strong>Encontrou um erro nesta página?</strong> {{ link_erro() }}, que já vai com o endereço da página, ou escreva para <a href="mailto:{{ contato }}">{{ contato }}</a>.</p>
 {% endmacro %}
+
+{# Link visível para um feed RSS, com a explicação em Entenda. #}
+{% macro rss(feed, texto="Acompanhar por RSS") %}<p class="link-rss"><a href="{{ raiz }}/{{ feed.caminho }}" type="application/rss+xml"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><circle cx="3" cy="13" r="2"/><path d="M1 6.5v2.2A6.3 6.3 0 0 1 7.3 15h2.2A8.5 8.5 0 0 0 1 6.5Z"/><path d="M1 1.5v2.2A11.3 11.3 0 0 1 12.3 15h2.2A13.5 13.5 0 0 0 1 1.5Z"/></svg>{{ texto }}</a> <a class="link-rss-ajuda" href="{{ raiz }}/entenda.html#rss">O que é RSS?</a></p>{% endmacro %}

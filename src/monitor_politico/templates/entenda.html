@@ -64,6 +64,20 @@
     <div id="orientacao"><dt>Orientação do partido</dt><dd>Como o líder recomenda que a bancada vote. É uma recomendação: o voto de cada parlamentar pode ser diferente.</dd></div>
   </dl>
 
+  <h2 class="ce-display ce-section-title" id="rss">Acompanhar por RSS</h2>
+  <p>RSS é um formato aberto para acompanhar atualizações de um site sem cadastro e sem e-mail. Você copia o endereço do feed para um leitor de RSS, como Feedly, Inoreader ou NetNewsWire, e ele avisa quando aparece algo novo. Não sabemos quem assina: o leitor só baixa o arquivo público.</p>
+  <dl class="ce-dl">
+    <dt>Votações no Plenário</dt>
+    <dd>Cada projeto votado na Câmara ou no Senado, com o resultado e o placar. <a href="feeds/votacoes.xml" type="application/rss+xml">Endereço do feed</a>.</dd>
+    {% if tem_areas %}<dt>Por área</dt>
+    <dd>Os mesmos projetos, só de uma área, como Saúde ou Segurança e justiça. O link fica no topo de cada <a href="areas/index.html">página de área</a>.</dd>{% endif %}
+    <dt>Por parlamentar</dt>
+    <dd>Os votos nominais de um deputado ou senador no Plenário. O link fica na seção de Plenário do perfil.</dd>
+    <dt>Por proposição</dt>
+    <dd>Votações no Plenário e mudanças de situação de um projeto. O link fica no topo da página da proposição.</dd>
+  </dl>
+  <p>Cada feed é atualizado junto com a página de onde vem e traz os 50 itens mais recentes.</p>
+
   <h2 class="ce-display ce-section-title">Limites</h2>
   <ul>
     <li>Mostramos o plenário. Comissões ficam de fora por enquanto.</li>

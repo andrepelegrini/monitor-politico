@@ -14,7 +14,9 @@ from __future__ import annotations
 import hashlib
 import json
 import os
+import re
 import sys
+import unicodedata
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
@@ -57,6 +59,58 @@ ROTINA: dict[str, Any] = {
     "assuntos": ["Acordos internacionais", "Homenagens e datas", "Créditos orçamentários", OUTROS],
 }
 ASSUNTOS = [a for area in AREAS + [ROTINA] for a in area["assuntos"]]
+
+# Palavras que levam a cada assunto na busca do topo, além do próprio nome.
+# Só ajudam a achar a página; não mudam a classificação.
+TERMOS_DE_BUSCA: dict[str, str] = {
+    "Reforma tributária": "ibs cbs iva imposto seletivo",
+    "Impostos e contribuições": "imposto tributo tributos imposto de renda ir icms ipi iof taxa isenção",
+    "Orçamento e regras fiscais": "orçamento arcabouço fiscal ldo loa meta fiscal gasto público dívida pública",
+    "Empresas, crédito e dívidas": "empresa mei microempreendedor crédito banco juros dívida falência renegociação desenrola",
+    "Consumidor": "consumidor procon compras plano de saúde",
+    "Apostas e jogos": "bets apostas cassino loteria jogo do bicho",
+    "Trabalho e emprego": "trabalhador clt emprego desemprego jornada fgts sindicato",
+    "Salário mínimo": "piso salarial salário",
+    "Previdência e aposentadoria": "inss aposentado pensão benefício previdenciário",
+    "Programas sociais": "bolsa família auxílio assistência social cadúnico pé-de-meia fome",
+    "SUS e atendimento": "saúde hospital médico enfermagem atendimento saúde mental",
+    "Medicamentos e vacinas": "remédio remédios vacina vacinação anvisa farmácia",
+    "Escolas e educação básica": "escola professor ensino médio creche alfabetização fundeb",
+    "Universidades e pesquisa": "universidade faculdade ciência pesquisa bolsa fies prouni enem",
+    "Cultura": "cinema música livro patrimônio artes",
+    "Esporte": "futebol atleta olimpíadas",
+    "Crimes e penas": "crime pena prisão código penal violência estupro corrupção",
+    "Polícias e segurança pública": "polícia policial segurança guarda municipal facção crime organizado",
+    "Armas de fogo": "arma armas porte posse estatuto do desarmamento cac",
+    "Drogas": "maconha cannabis tráfico entorpecentes álcool",
+    "Forças Armadas e defesa": "exército marinha aeronáutica militar defesa nacional fronteira",
+    "Mulheres": "mulher violência doméstica feminicídio maria da penha igualdade salarial gestante",
+    "Crianças e adolescentes": "criança adolescente infância eca escola abuso",
+    "Pessoas com deficiência": "deficiência pcd autismo tea acessibilidade",
+    "Pessoas idosas": "idoso idosos terceira idade estatuto da pessoa idosa",
+    "Povos indígenas e quilombolas": "indígena indígenas marco temporal quilombo terra indígena",
+    "Meio ambiente e clima": "ambiente desmatamento floresta amazônia clima licenciamento ambiental",
+    "Agricultura e pesca": "agro agronegócio agricultor rural agrotóxico pesca pescador",
+    "Desastres e calamidades": "enchente chuva seca calamidade rio grande do sul defesa civil",
+    "Transporte e trânsito": "trânsito rodovia estrada ônibus aviação ferrovia cnh carteira de motorista",
+    "Energia e mineração": "energia elétrica conta de luz petróleo combustível gasolina mineração",
+    "Moradia e saneamento": "casa moradia habitação minha casa minha vida saneamento água esgoto",
+    "Internet e telecomunicações": "internet redes sociais big techs fake news inteligência artificial dados pessoais telefonia",
+    "Servidores e órgãos públicos": "servidor público concurso funcionalismo ministério autarquia",
+    "Justiça e tribunais": "stf supremo tribunal juiz judiciário ministério público defensoria",
+    "Eleições e partidos": "eleição eleitoral partido voto urna fundo eleitoral",
+    "Emendas parlamentares": "emenda pix orçamento secreto",
+    "Funcionamento do Congresso": "câmara senado regimento cpi comissão",
+    "Acordos internacionais": "tratado acordo convenção internacional",
+    "Homenagens e datas": "homenagem data comemorativa dia nacional",
+    "Créditos orçamentários": "crédito extraordinário crédito especial crédito suplementar",
+}
+
+
+def slug_assunto(nome: str) -> str:
+    """"Empresas, crédito e dívidas" → "empresas-credito-e-dividas", para o endereço do filtro."""
+    sem_acento = unicodedata.normalize("NFD", nome).encode("ascii", "ignore").decode().lower()
+    return re.sub(r"[^a-z0-9]+", "-", sem_acento).strip("-")
 
 INSTRUCOES = f"""\
 Você classifica proposições legislativas brasileiras votadas no Plenário da Câmara ou do Senado \
@@ -232,6 +286,23 @@ def paginas(linhas: list[dict[str, Any]], classificacoes: dict[str, dict[str, An
             "exemplos": [i["titulo"] for i in itens if len(i["titulo"]) <= 70][:exemplos],
         })
     return {"areas": resultado[:-1], "rotina": resultado[-1], "classificadas": sum(1 for l in linhas if l["sigla"] in classificacoes)}
+
+
+def indice_de_busca(vis: dict[str, Any]) -> list[list[Any]]:
+    """Áreas e assuntos para a busca do topo: [nome, área, endereço, projetos, palavras extras].
+
+    Só entram os que têm projetos. O endereço de um assunto abre a área já filtrada nele.
+    """
+    linhas: list[list[Any]] = []
+    for area in vis["areas"] + [vis["rotina"]]:
+        if not area["total"]:
+            continue
+        linhas.append([area["nome"], "", f"areas/{area['slug']}.html", area["total"], area["descricao"]])
+        for nome, qtd in area["filtros"]:
+            if nome == OUTROS:
+                continue
+            linhas.append([nome, area["nome"], f"areas/{area['slug']}.html#{slug_assunto(nome)}", qtd, TERMOS_DE_BUSCA.get(nome, "")])
+    return linhas
 
 
 if __name__ == "__main__":

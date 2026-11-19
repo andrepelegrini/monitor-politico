@@ -13,6 +13,7 @@
   <h1>Votações no Plenário</h1>
   <p class="ce-deck">Cada proposição que teve o texto votado no Plenário desde fevereiro de 2023, com o resultado e o placar da votação mais recente em cada casa. A lista abre nos últimos 30 dias; escolha outro período para ver as anteriores.</p>
   {% if tem_areas %}<p class="ce-section-note">Prefere navegar por assunto? <a href="areas/index.html">Veja as votações por área</a>.</p>{% endif %}
+  {% if feed %}{{ avisos.rss(feed) }}{% endif %}
 </header>
 {% if temas %}
     <section class="ce-section" aria-labelledby="temas-titulo">

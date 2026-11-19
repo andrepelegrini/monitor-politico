@@ -18,6 +18,7 @@ from zoneinfo import ZoneInfo
 from jinja2 import Environment, PackageLoader, select_autoescape
 
 from monitor_politico import retrospectiva as modulo_retro
+from monitor_politico import feeds as modulo_feeds
 from monitor_politico import areas as modulo_areas, estados as modulo_estados, legislatura as modulo_legislatura, mapa as modulo_mapa, metricas as modulo_metricas, painel, perfis, resumo
 from monitor_politico.lote_senado import ROTULOS_ELEITOS as ROTULOS_ELEITOS_SENADO
 from monitor_politico.models import Deputado, Senador
@@ -68,7 +69,8 @@ def indice_de_busca(
     deputados: Sequence[Deputado], senadores: Sequence[Senador], proposicoes: dict[str, dict[str, Any]],
     outros_deputados: Sequence[Deputado] = (), eleitos: Sequence[dict[str, Any]] = (),
     outros_senadores: Sequence[Senador] = (), eleitos_senado: Sequence[dict[str, Any]] = (),
-) -> dict[str, list[list[str]]]:
+    assuntos: Sequence[list[Any]] = (),
+) -> dict[str, list[list[Any]]]:
     """Índice compacto para a busca do topo: listas em vez de objetos, para o arquivo ficar pequeno."""
     pessoas = [[d.nome, "D", d.partido, d.uf, f"deputados/{d.id}.html"] for d in list(deputados) + list(outros_deputados)]
     pessoas += [[perfis.nome_proprio(e["nome"]), "D", e["partido"], e["uf"], f"deputados/eleitos/{e['sq']}.html"] for e in eleitos]
@@ -79,7 +81,7 @@ def indice_de_busca(
         [p["chave"], (p.get("resumo") or {}).get("titulo") or p.get("apelido") or p.get("ementa") or "", f"proposicoes/{p['slug']}.html"]
         for p in proposicoes.values()
     ]
-    return {"parlamentares": pessoas, "proposicoes": props}
+    return {"parlamentares": pessoas, "proposicoes": props, "assuntos": list(assuntos)}
 
 
 def numeros_do_periodo(doc_congresso: dict[str, Any]) -> dict[str, Any]:
@@ -172,6 +174,20 @@ def _gerar_perfil_ampliado(
         (pasta / f"{arquivo}-comprovantes.json").write_text(
             json.dumps(comprovantes_compactos(doc["dinheiro"]["cota"]["comprovantes"]), ensure_ascii=False, separators=(",", ":")), encoding="utf-8"
         )
+    feed = None
+    if visao.get("plenario"):
+        pasta_casa_feed = "senadores" if doc.get("casa") == "senado" else "deputados"
+        feed = {"caminho": f"feeds/{pasta_casa_feed}/{deputado.id}.xml", "titulo": f"Votos de {deputado.nome} no Plenário"}
+        site = modulo_feeds.endereco_do_site(env.globals.get("site_url"))
+        (saida / "feeds" / pasta_casa_feed).mkdir(parents=True, exist_ok=True)
+        (saida / feed["caminho"]).write_text(
+            modulo_feeds.documento(
+                f"{feed['titulo']} · Na Galeria", f"{site}/{pasta_casa_feed}/{deputado.id}.html#plenario", f"{site}/{feed['caminho']}",
+                f"Votos nominais de {deputado.nome} ({deputado.partido}-{deputado.uf}) no Plenário, a partir dos dados abertos oficiais.",
+                modulo_feeds.do_parlamentar(visao["plenario"]["votos"], site),
+            ),
+            encoding="utf-8",
+        )
     if retro_ref and pasta_casa:
         visao["retrospectiva"] = True
         retro = modulo_retro.visao(visao, modulo_metricas.do_deputado(contexto["metricas"], deputado.id), retro_ref)
@@ -183,7 +199,7 @@ def _gerar_perfil_ampliado(
             ),
             encoding="utf-8",
         )
-    return env.get_template("perfil_ampliado.html").render(**contexto, perfil=visao)
+    return env.get_template("perfil_ampliado.html").render(**contexto, perfil=visao, feed=feed)
 
 
 def comprovantes_compactos(comprovantes: Sequence[dict[str, Any]]) -> dict[str, Any]:
@@ -265,10 +281,11 @@ def construir(
         autoescape=select_autoescape(),
     )
     env.filters["data_br"] = painel.data_br
+    env.filters["slug_assunto"] = modulo_areas.slug_assunto
     for nome in ("numero", "moeda", "milhoes", "percentual", "diferenca", "nome_proprio", "partir"):
         env.filters[nome] = getattr(perfis, nome)
     env.globals["site_url"] = url_do_site() if site_url is None else site_url.rstrip("/")
-    env.globals.update(form_aviso=FORM_AVISO, form_erro=FORM_ERRO, contato=CONTATO)
+    env.globals.update(form_aviso=FORM_AVISO, form_erro=FORM_ERRO, contato=CONTATO, texto_busca="Buscar parlamentar ou proposição")
     deputados = sorted((Deputado.de_dict(d) for d in doc_deputados["deputados"]), key=lambda d: chave_alfabetica(d.nome))
     senadores = sorted((Senador.de_dict(s) for s in doc_senadores["senadores"]), key=lambda s: chave_alfabetica(s.nome))
     atualizado_camara = _formatar_data(doc_deputados["coletado_em"])
@@ -302,16 +319,39 @@ def construir(
     # Votações por área: só com a classificação por IA (data/areas.json); sem ela, a página inicial mostra os temas oficiais.
     classificacoes = (areas or {}).get("classificacoes") or {}
     vis_areas = modulo_areas.paginas(dados_votacoes["votadas"], classificacoes) if classificacoes else None
+    site = modulo_feeds.endereco_do_site(env.globals["site_url"])
+    feed_votacoes = {"caminho": "feeds/votacoes.xml", "titulo": "Votações no Plenário"}
+    (saida / "feeds").mkdir()
+    (saida / feed_votacoes["caminho"]).write_text(
+        modulo_feeds.documento(
+            "Votações no Plenário · Na Galeria", f"{site}/votacoes.html", f"{site}/{feed_votacoes['caminho']}",
+            "Proposições com o texto votado nos plenários da Câmara e do Senado, com resultado e placar.",
+            modulo_feeds.de_votadas(dados_votacoes["votadas"], site),
+        ),
+        encoding="utf-8",
+    )
+    env.globals["feed_geral"] = feed_votacoes
     if vis_areas:
+        env.globals["texto_busca"] = "Buscar parlamentar, proposição ou assunto"
         (saida / "areas").mkdir()
         comum_areas = {"raiz": "..", "casa": None, "atualizado_congresso": atualizado_congresso, "v": vis_areas}
         (saida / "areas" / "index.html").write_text(
             env.get_template("areas.html").render(**comum_areas, caminho="areas/index.html"), encoding="utf-8"
         )
         modelo_area = env.get_template("area.html")
+        (saida / "feeds" / "areas").mkdir()
         for area in vis_areas["areas"] + [vis_areas["rotina"]]:
+            feed_area = {"caminho": f"feeds/areas/{area['slug']}.xml", "titulo": f"Votações de {area['nome']}"}
+            (saida / feed_area["caminho"]).write_text(
+                modulo_feeds.documento(
+                    f"{area['nome']}: votações · Na Galeria", f"{site}/areas/{area['slug']}.html", f"{site}/{feed_area['caminho']}",
+                    f"Projetos de {area['nome'].lower()} votados nos plenários da Câmara e do Senado. Assuntos classificados por IA a partir da ementa oficial.",
+                    modulo_feeds.de_votadas(area["itens"], site),
+                ),
+                encoding="utf-8",
+            )
             (saida / "areas" / f"{area['slug']}.html").write_text(
-                modelo_area.render(**comum_areas, caminho=f"areas/{area['slug']}.html", a=area), encoding="utf-8"
+                modelo_area.render(**comum_areas, caminho=f"areas/{area['slug']}.html", a=area, feed=feed_area), encoding="utf-8"
             )
     malha = modulo_mapa._malha()
     mapa_estados = [
@@ -329,11 +369,13 @@ def construir(
     )
     (saida / "votacoes.html").write_text(
         env.get_template("votacoes.html").render(
-            raiz=".", casa=None, caminho="votacoes.html", atualizado_congresso=atualizado_congresso, tem_areas=bool(vis_areas), **dados_votacoes
+            raiz=".", casa=None, caminho="votacoes.html", atualizado_congresso=atualizado_congresso, tem_areas=bool(vis_areas), feed=feed_votacoes,
+            **dados_votacoes
         ),
         encoding="utf-8",
     )
     (saida / "proposicoes").mkdir()
+    (saida / "feeds" / "proposicoes").mkdir()
     modelo = env.get_template("proposicao.html")
     # Quem saiu mantém a página, então o voto continua ligado ao perfil na página da proposição.
     saidas = {d["id"]: d.get("saiu_em") for d in (arquivo_deputados or [])}
@@ -355,6 +397,14 @@ def construir(
     situacoes_senado = (legislatura_senado or {}).get("situacoes", {})
     ids_senadores = ids_senado_em_exercicio | {s.id for s in senadores_anteriores}
     for prop in doc_completo["proposicoes"].values():
+        feed_prop = {"caminho": f"feeds/proposicoes/{prop['slug']}.xml", "titulo": f"{prop['chave']}: votações e situação"}
+        (saida / feed_prop["caminho"]).write_text(
+            modulo_feeds.documento(
+                f"{prop['chave']} · Na Galeria", f"{site}/proposicoes/{prop['slug']}.html", f"{site}/{feed_prop['caminho']}",
+                f"Votações no Plenário e mudanças de situação de {prop['chave']}.", modulo_feeds.da_proposicao(prop, site),
+            ),
+            encoding="utf-8",
+        )
         (saida / "proposicoes" / f"{prop['slug']}.html").write_text(
             modelo.render(
                 raiz="..",
@@ -364,6 +414,7 @@ def construir(
                 p=prop,
                 etapas=painel.etapas(prop, doc_congresso["pauta"]),
                 votacoes=painel.votacoes_da_pagina(prop, ids_deputados, ids_senadores),
+                feed=feed_prop,
             ),
             encoding="utf-8",
         )
@@ -375,7 +426,8 @@ def construir(
         encoding="utf-8",
     )
     (saida / "static" / "busca.json").write_text(
-        json.dumps(indice_de_busca(deputados, senadores, doc_completo["proposicoes"], anteriores, eleitos, senadores_anteriores, eleitos_senado), ensure_ascii=False, separators=(",", ":")),
+        json.dumps(indice_de_busca(deputados, senadores, doc_completo["proposicoes"], anteriores, eleitos, senadores_anteriores, eleitos_senado,
+                                   modulo_areas.indice_de_busca(vis_areas) if vis_areas else ()), ensure_ascii=False, separators=(",", ":")),
         encoding="utf-8",
     )
     slugs = {p["chave"]: p["slug"] for p in doc_completo["proposicoes"].values()}

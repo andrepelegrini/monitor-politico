@@ -3,6 +3,7 @@
   <p class="ce-eyebrow">Atuação em Plenário</p>
   <h2 class="pf-h2">{{ p.votos_registrados|numero }} votos registrados, {{ p.total_texto|numero }} deles sobre o texto principal de uma proposta</h2>
   <p class="ce-section-note">Período: {{ p.inicio|data_br }} a {{ perfil.coleta_local|data_br }}. {% if casa == "senado" %}Votações simbólicas e secretas não têm voto individual publicado e não entram nesta conta.{% else %}Muitas votações do Plenário são simbólicas, sem registro individual de voto, e não entram nesta conta.{% endif %}</p>
+  {% if feed %}{{ avisos.rss(feed, "Acompanhar os votos por RSS") }}{% endif %}
 
   <div class="pf-duas pf-espaco">
     <div class="ce-vote-card">

@@ -219,6 +219,10 @@ def test_perfil_com_plenario(tmp_path, docs, doc):
     assert 'data-classe="texto"' in fragmento and 'href="../proposicoes/pec-18-2025.html"' in fragmento
     assert "o que não significa ausência" in pagina
     assert "nem a intenção do parlamentar" in pagina
+    # Feed RSS dos votos: link visível na seção, link no cabeçalho e o arquivo.
+    assert f'href="../feeds/deputados/{alvo}.xml"' in pagina and 'rel="alternate" type="application/rss+xml"' in pagina
+    feed = (tmp_path / "site" / "feeds" / "deputados" / f"{alvo}.xml").read_text(encoding="utf-8")
+    assert feed.count("<item>") == 1 and "https://www.nagaleria.com.br/proposicoes/pec-18-2025.html" in feed
 
 
 DINHEIRO = {

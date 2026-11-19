@@ -29,6 +29,8 @@
   <link rel="icon" type="image/png" sizes="16x16" href="{{ raiz }}/static/brand/favicon/favicon-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ raiz }}/static/brand/favicon/apple-touch-icon.png">
   <link rel="manifest" href="{{ raiz }}/static/brand/favicon/site.webmanifest">
+  {% if feed %}<link rel="alternate" type="application/rss+xml" title="{{ feed.titulo }} · Na Galeria" href="{{ raiz }}/{{ feed.caminho }}">{% endif %}
+  {% if feed_geral and (not feed or feed.caminho != feed_geral.caminho) %}<link rel="alternate" type="application/rss+xml" title="{{ feed_geral.titulo }} · Na Galeria" href="{{ raiz }}/{{ feed_geral.caminho }}">{% endif %}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Instrument+Sans:wght@400;500;600;700&display=swap">
@@ -50,8 +52,8 @@
       </nav>
       <div class="busca" id="busca" role="search" aria-label="Busca no site" data-raiz="{{ raiz }}">
         <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="6"/><path d="M13 13l5 5"/></svg>
-        <input class="ce-input" id="busca-q" type="search" autocomplete="off" placeholder="Buscar parlamentar ou proposição"
-          aria-label="Buscar parlamentar ou proposição" role="combobox" aria-expanded="false" aria-controls="busca-res" aria-autocomplete="list">
+        <input class="ce-input" id="busca-q" type="search" autocomplete="off" placeholder="{{ texto_busca }}"
+          aria-label="{{ texto_busca }}" role="combobox" aria-expanded="false" aria-controls="busca-res" aria-autocomplete="list">
         <ul class="busca-res" id="busca-res" role="listbox" aria-label="Resultados da busca" hidden></ul>
       </div>
     </div>
