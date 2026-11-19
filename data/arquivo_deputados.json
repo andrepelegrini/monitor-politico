@@ -39,25 +39,6 @@
    "saiu_em": "2025-01-01"
   },
   {
-   "id": 204571,
-   "nome": "Alex Santana",
-   "partido": "REPUBLICANOS",
-   "uf": "BA",
-   "url_foto": "https://www.camara.leg.br/internet/deputado/bandep/204571.jpg",
-   "situacao": "Licença",
-   "condicao_eleitoral": "Titular",
-   "gabinete": {
-    "predio": null,
-    "sala": null,
-    "andar": null,
-    "telefone": null,
-    "email": null
-   },
-   "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/204571",
-   "url_site": "https://www.camara.leg.br/deputados/204571",
-   "saiu_em": "2026-04-08"
-  },
-  {
    "id": 204503,
    "nome": "Alexandre Padilha",
    "partido": "PT",
@@ -1633,6 +1614,25 @@
    "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/220634",
    "url_site": "https://www.camara.leg.br/deputados/220634",
    "saiu_em": "2023-11-30"
+  },
+  {
+   "id": 204558,
+   "nome": "Marcelo Nilo",
+   "partido": "REPUBLICANOS",
+   "uf": "BA",
+   "url_foto": "https://www.camara.leg.br/internet/deputado/bandep/204558.jpg",
+   "situacao": "Exercício",
+   "condicao_eleitoral": "Suplente",
+   "gabinete": {
+    "predio": "4",
+    "sala": "541",
+    "andar": "5",
+    "telefone": "3215-5541",
+    "email": "dep.marcelonilo@camara.leg.br"
+   },
+   "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/204558",
+   "url_site": "https://www.camara.leg.br/deputados/204558",
+   "saiu_em": "2026-11-19"
   },
   {
    "id": 204522,

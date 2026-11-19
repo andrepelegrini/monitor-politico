@@ -1,5 +1,5 @@
 {
-  "coletado_em": "2026-11-18T17:55:15+00:00",
+  "coletado_em": "2026-11-19T18:05:06+00:00",
   "fonte": "https://dadosabertos.camara.leg.br/api/v2",
   "resumo": {
     "sexo": {
@@ -376,6 +376,24 @@
       },
       "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/178972",
       "url_site": "https://www.camara.leg.br/deputados/178972"
+    },
+    {
+      "id": 204571,
+      "nome": "Alex Santana",
+      "partido": "REPUBLICANOS",
+      "uf": "BA",
+      "url_foto": "https://www.camara.leg.br/internet/deputado/bandep/204571.jpg",
+      "situacao": "Exercício",
+      "condicao_eleitoral": "Titular",
+      "gabinete": {
+        "predio": "4",
+        "sala": "541",
+        "andar": "5",
+        "telefone": "3215-5541",
+        "email": "dep.alexsantana@camara.leg.br"
+      },
+      "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/204571",
+      "url_site": "https://www.camara.leg.br/deputados/204571"
     },
     {
       "id": 220542,
@@ -5884,24 +5902,6 @@
       },
       "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/133810",
       "url_site": "https://www.camara.leg.br/deputados/133810"
-    },
-    {
-      "id": 204558,
-      "nome": "Marcelo Nilo",
-      "partido": "REPUBLICANOS",
-      "uf": "BA",
-      "url_foto": "https://www.camara.leg.br/internet/deputado/bandep/204558.jpg",
-      "situacao": "Exercício",
-      "condicao_eleitoral": "Suplente",
-      "gabinete": {
-        "predio": "4",
-        "sala": "541",
-        "andar": "5",
-        "telefone": "3215-5541",
-        "email": "dep.marcelonilo@camara.leg.br"
-      },
-      "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/204558",
-      "url_site": "https://www.camara.leg.br/deputados/204558"
     },
     {
       "id": 160161,

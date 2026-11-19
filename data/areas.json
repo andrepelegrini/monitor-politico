@@ -711,6 +711,52 @@
    "modelo": "claude-sonnet-5-5",
    "gerado_em": "2026-11-18T17:45:31+00:00"
   },
+  "MPV 1383/2026": {
+   "assuntos": [
+    "Créditos orçamentários",
+    "Desastres e calamidades"
+   ],
+   "fonte_hash": "053091e4df9729d9",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-19T18:07:36+00:00"
+  },
+  "MPV 1384/2026": {
+   "assuntos": [
+    "Créditos orçamentários",
+    "Programas sociais",
+    "Agricultura e pesca"
+   ],
+   "fonte_hash": "91d8a6fa9df70a2f",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-19T18:07:36+00:00"
+  },
+  "MPV 1389/2026": {
+   "assuntos": [
+    "Créditos orçamentários",
+    "Energia e mineração"
+   ],
+   "fonte_hash": "40cfb2c40742589e",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-19T18:07:36+00:00"
+  },
+  "MPV 1397/2026": {
+   "assuntos": [
+    "Créditos orçamentários",
+    "Empresas, crédito e dívidas"
+   ],
+   "fonte_hash": "9a2518caa929d6fe",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-19T18:07:36+00:00"
+  },
+  "MPV 1398/2026": {
+   "assuntos": [
+    "Créditos orçamentários",
+    "Desastres e calamidades"
+   ],
+   "fonte_hash": "b13af8fd0e648bc5",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-19T18:07:36+00:00"
+  },
   "PDL 1020/2025": {
    "assuntos": [
     "Acordos internacionais",
@@ -1735,6 +1781,16 @@
    "fonte_hash": "05d2226e12ea67fd",
    "modelo": "claude-sonnet-5-5",
    "gerado_em": "2026-11-18T17:45:57+00:00"
+  },
+  "PDL 756/2025": {
+   "assuntos": [
+    "Acordos internacionais",
+    "Crimes e penas",
+    "Justiça e tribunais"
+   ],
+   "fonte_hash": "68d13fbdf2872224",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-19T18:07:36+00:00"
   },
   "PDL 776/2021": {
    "assuntos": [
@@ -3652,9 +3708,9 @@
     "Crianças e adolescentes",
     "Internet e telecomunicações"
    ],
-   "fonte_hash": "a9232d8ad2d63315",
+   "fonte_hash": "6d34940d25c0691a",
    "modelo": "claude-sonnet-5-5",
-   "gerado_em": "2026-11-18T17:46:48+00:00"
+   "gerado_em": "2026-11-19T18:07:36+00:00"
   },
   "PL 265/2020": {
    "assuntos": [
@@ -4033,11 +4089,12 @@
   },
   "PL 2951/2024": {
    "assuntos": [
-    "Agricultura e pesca"
+    "Agricultura e pesca",
+    "Empresas, crédito e dívidas"
    ],
-   "fonte_hash": "6bcbc6a9dd1e3d48",
+   "fonte_hash": "4a3f0c273f80769f",
    "modelo": "claude-sonnet-5-5",
-   "gerado_em": "2026-11-18T17:46:56+00:00"
+   "gerado_em": "2026-11-19T18:07:36+00:00"
   },
   "PL 2952/2022": {
    "assuntos": [
@@ -5163,6 +5220,14 @@
    "modelo": "claude-sonnet-5-5",
    "gerado_em": "2026-11-18T17:47:21+00:00"
   },
+  "PL 4035/2023": {
+   "assuntos": [
+    "Homenagens e datas"
+   ],
+   "fonte_hash": "82c01c73f0cef983",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-19T18:07:36+00:00"
+  },
   "PL 4043/2019": {
    "assuntos": [
     "Consumidor"
@@ -5293,6 +5358,15 @@
    "fonte_hash": "592757a9afc1e3ea",
    "modelo": "claude-sonnet-5-5",
    "gerado_em": "2026-11-18T17:47:21+00:00"
+  },
+  "PL 4186/2021": {
+   "assuntos": [
+    "Crianças e adolescentes",
+    "Crimes e penas"
+   ],
+   "fonte_hash": "3283f55fce18a2af",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-19T18:07:36+00:00"
   },
   "PL 4187/2024": {
    "assuntos": [
@@ -5490,6 +5564,14 @@
    "fonte_hash": "2c05e095213716c3",
    "modelo": "claude-sonnet-5-5",
    "gerado_em": "2026-11-18T17:47:30+00:00"
+  },
+  "PL 4396/2023": {
+   "assuntos": [
+    "Pessoas com deficiência"
+   ],
+   "fonte_hash": "34fb65809258eecd",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-19T18:07:36+00:00"
   },
   "PL 4397/2024": {
    "assuntos": [
@@ -6170,6 +6252,15 @@
    "fonte_hash": "21ccec355bd8d94e",
    "modelo": "claude-sonnet-5-5",
    "gerado_em": "2026-11-18T17:47:46+00:00"
+  },
+  "PL 5127/2026": {
+   "assuntos": [
+    "Homenagens e datas",
+    "Cultura"
+   ],
+   "fonte_hash": "7b7e3eb075386159",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-19T18:07:36+00:00"
   },
   "PL 5189/2019": {
    "assuntos": [
@@ -6862,6 +6953,15 @@
    "modelo": "claude-sonnet-5-5",
    "gerado_em": "2026-11-18T17:48:04+00:00"
   },
+  "PL 6222/2025": {
+   "assuntos": [
+    "Mulheres",
+    "Homenagens e datas"
+   ],
+   "fonte_hash": "a3a17251755c2c82",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-19T18:07:36+00:00"
+  },
   "PL 6231/2019": {
    "assuntos": [
     "SUS e atendimento",
@@ -6989,6 +7089,14 @@
    "fonte_hash": "7b995e0be49bf262",
    "modelo": "claude-sonnet-5-5",
    "gerado_em": "2026-11-18T17:48:04+00:00"
+  },
+  "PL 6461/2019": {
+   "assuntos": [
+    "Trabalho e emprego"
+   ],
+   "fonte_hash": "d5271facd63b0c92",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-19T18:07:36+00:00"
   },
   "PL 651/2023": {
    "assuntos": [
@@ -8009,9 +8117,9 @@
    "assuntos": [
     "Orçamento e regras fiscais"
    ],
-   "fonte_hash": "447140f79d31e7a7",
+   "fonte_hash": "c63e314bcff71f07",
    "modelo": "claude-sonnet-5-5",
-   "gerado_em": "2026-11-18T17:48:39+00:00"
+   "gerado_em": "2026-11-19T18:07:36+00:00"
   },
   "PLP 337/2017": {
    "assuntos": [
@@ -8314,6 +8422,15 @@
    "modelo": "claude-sonnet-5-5",
    "gerado_em": "2026-11-18T17:48:39+00:00"
   },
+  "PRC 25/2026": {
+   "assuntos": [
+    "Funcionamento do Congresso",
+    "Homenagens e datas"
+   ],
+   "fonte_hash": "b07aa81067dbecbd",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-19T18:07:36+00:00"
+  },
   "PRC 27/2025": {
    "assuntos": [
     "Homenagens e datas"
@@ -8411,6 +8528,15 @@
    "fonte_hash": "d0c6da0edd36003c",
    "modelo": "claude-sonnet-5-5",
    "gerado_em": "2026-11-18T17:48:39+00:00"
+  },
+  "PRC 50/2026": {
+   "assuntos": [
+    "Homenagens e datas",
+    "Escolas e educação básica"
+   ],
+   "fonte_hash": "e4031738279b6f49",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-19T18:07:36+00:00"
   },
   "PRC 55/2025": {
    "assuntos": [

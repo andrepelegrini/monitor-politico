@@ -93,6 +93,21 @@
    "modelo": "claude-sonnet-5-5",
    "gerado_em": "2026-11-18T17:57:05+00:00"
   },
+  "MPV 1397/2026": {
+   "titulo": "Crédito extraordinário de R$ 6,49 bilhões para financiar exportadoras",
+   "o_que_muda": "Abre crédito extraordinário de R$ 6.494.296.446,00 em favor de Encargos Financeiros da União. O crédito extraordinário é uma autorização para gastar fora do orçamento previsto. O valor se destina a financiamentos a pessoas físicas e empresas exportadoras de bens e serviços, e a seus fornecedores, abrangidos pelo Plano Brasil Soberano. A medida entra em vigor na data da publicação, em 20 de outubro de 2026.",
+   "quem_e_afetado": "Pessoas físicas e empresas exportadoras de bens e serviços, e seus fornecedores, abrangidos pelo Plano Brasil Soberano. Os recursos ficam no Fundo de Garantia à Exportação, sob supervisão do Ministério da Fazenda.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 3674,
+    "saida": 325
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "0e312080baa720ae",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-19T18:06:46+00:00"
+  },
   "MPV 1398/2026": {
    "titulo": "Crédito extraordinário de R$ 300 milhões para ações de Defesa Civil",
    "o_que_muda": "Abre um crédito extraordinário de R$ 300.000.000,00 em favor do Ministério da Integração e do Desenvolvimento Regional. O dinheiro é destinado à ação \"Ações de Proteção e Defesa Civil\", dentro do programa \"Gestão de Riscos e de Desastres\". Crédito extraordinário é uma autorização de gasto que não estava prevista no orçamento. A medida provisória entra em vigor na data de sua publicação, em 20 de outubro de 2026.",
@@ -108,6 +123,21 @@
    "modelo": "claude-sonnet-5-5",
    "gerado_em": "2026-11-18T17:56:57+00:00"
   },
+  "PDL 235/2025": {
+   "titulo": "Aprova tratado com a Guiana sobre cooperação jurídica em processos civis",
+   "o_que_muda": "O Congresso aprova o texto do tratado entre Brasil e Guiana sobre cooperação jurídica internacional em matéria civil, assinado em Georgetown em 6 de maio de 2022. Qualquer ato que possa levar à denúncia (saída) ou à revisão do tratado também precisará de aprovação do Congresso. O mesmo vale para ajustes complementares que criem encargos ou compromissos gravosos ao patrimônio nacional. O decreto vale a partir da publicação.",
+   "quem_e_afetado": "Os governos do Brasil e da Guiana, que assumem o tratado, e o Congresso Nacional, que deve aprovar eventuais mudanças ou a saída do acordo.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 1700,
+    "saida": 290
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "87f64574bc353edd",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-19T18:06:50+00:00"
+  },
   "PDL 274/2026": {
    "titulo": "Acordo do Mercosul para reconhecer medidas de proteção a mulheres",
    "o_que_muda": "O Congresso aprova o acordo em que países do Mercosul reconhecem entre si as medidas de proteção a mulheres em situação de violência de gênero. O acordo foi assinado em Assunção, no Paraguai, em 20 de julho de 2022, pelos países do Mercosul e pelos Estados associados. Revisões do acordo, a saída do Brasil (chamada denúncia) ou ajustes que gerem custos ou compromissos pesados ao país precisarão de nova aprovação do Congresso. O decreto vale a partir da publicação.",
@@ -116,6 +146,21 @@
    "fonte_hash": "653c569874271201",
    "modelo": "claude-opus-5-5",
    "gerado_em": "2026-11-10T12:19:03+00:00"
+  },
+  "PDL 366/2025": {
+   "titulo": "Aprova tratado de cooperação jurídica em casos criminais entre Brasil e Guiana",
+   "o_que_muda": "O Congresso aprova o tratado entre Brasil e Guiana sobre auxílio jurídico mútuo em matéria penal, assinado em Georgetown em 6 de maio de 2022. O texto exige nova aprovação do Congresso para atos que possam resultar em denúncia (saída do tratado) ou revisão dele. Também exige aprovação para ajustes complementares que tragam encargos ou compromissos gravosos ao patrimônio nacional. O decreto vale a partir da publicação.",
+   "quem_e_afetado": "O texto não detalha as regras do tratado. A aprovação envolve os governos do Brasil e da Guiana e o Congresso Nacional, que passa a analisar eventuais mudanças ou a saída do tratado.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 1701,
+    "saida": 306
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "8461eedc4394cf5c",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-19T18:06:54+00:00"
   },
   "PDL 557/2026": {
    "titulo": "Adesão do Brasil à Convenção de Hong Kong sobre reciclagem segura de navios",
@@ -642,6 +687,21 @@
    "modelo": "claude-opus-5-5",
    "gerado_em": "2026-11-10T12:20:01+00:00"
   },
+  "PL 1969/2022": {
+   "titulo": "Reparação às famílias das 11 vítimas da Chacina de Acari",
+   "o_que_muda": "Reconhece a responsabilidade do Estado pelo desaparecimento forçado de 11 vítimas da Chacina de Acari (RJ, 26/07/1990) e concede pensão mensal vitalícia de um salário mínimo a seus parentes de primeiro grau. A pensão vai prioritariamente à mãe; sem ela, ao pai; sem ambos, aos descendentes de primeiro grau, e em alguns casos aos irmãos. Também inscreve 12 mães no Livro dos Heróis e Heroínas da Pátria e cria divulgação anual em 26 de julho.",
+   "quem_e_afetado": "Parentes de primeiro grau das 11 vítimas de Acari, em especial as mães, que receberiam a pensão. Também envolve a União, os Estados e os Municípios, os Poderes e órgãos públicos, que deverão adotar medidas de reparação e não repetição.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 5267,
+    "saida": 353
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "8ccefc11ec7216ab",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-19T18:06:58+00:00"
+  },
   "PL 2475/2025": {
    "titulo": "Maus-tratos a animais com morte passam a ser crime hediondo",
    "o_que_muda": "O projeto inclui na Lei dos Crimes Hediondos o crime de maus-tratos aos animais, quando o animal morrer. O crime está previsto no art. 32 da Lei 9.605/1998 (Lei de Crimes Ambientais). A lei passaria a valer na data de sua publicação.",
@@ -657,6 +717,36 @@
    "modelo": "claude-sonnet-5-5",
    "gerado_em": "2026-11-12T17:32:28+00:00"
   },
+  "PL 2559/2022": {
+   "titulo": "Proíbe acordos que evitam pena em crimes de racismo e injúria racial",
+   "o_que_muda": "Crimes de racismo e injúria racial não poderão mais ter acordo de não persecução penal, transação penal ou suspensão condicional do processo. A regra vale para os crimes da Lei nº 7.716/1989 e para a injúria racial (art. 140, §3º, do Código Penal). Esses instrumentos permitem encerrar ou suspender o caso sem condenação, em geral com o cumprimento de condições. A lei entraria em vigor na data de sua publicação.",
+   "quem_e_afetado": "Pessoas investigadas ou acusadas de racismo e injúria racial, as vítimas desses crimes, o Ministério Público e a Justiça criminal, que não poderão usar esses acordos.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 9547,
+    "saida": 286
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "9401fc2f11105341",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-19T18:07:02+00:00"
+  },
+  "PL 2819/2020": {
+   "titulo": "Saúde da população negra em epidemias, pandemias e calamidade pública",
+   "o_que_muda": "União, estados e municípios deverão adotar medidas para garantir equidade no atendimento à saúde da população negra em epidemias, surtos e calamidade pública. Entre as medidas: registrar raça/cor em fichas e boletins de saúde, incluir doenças mais frequentes nessa população nos protocolos e fazer busca ativa de pessoas de risco. O governo federal deverá regulamentar a lei em até 15 dias após a publicação.",
+   "quem_e_afetado": "População negra, usuários do SUS, gestores e profissionais de saúde da União, dos estados e dos municípios, e comunidades quilombolas.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 8604,
+    "saida": 256
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "7385a774b88bf37e",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-19T18:07:06+00:00"
+  },
   "PL 2829/2024": {
    "titulo": "Dá o nome de Viaduto Severo Eulálio Filho a viaduto da BR-343 em Teresina",
    "o_que_muda": "O viaduto da BR-343, na Ladeira do Uruguai, Zona Leste de Teresina (PI), passa a se chamar \"Viaduto Severo Eulálio Filho\". A lei entra em vigor na data de sua publicação.",
@@ -671,6 +761,21 @@
    "fonte_hash": "b62cb62d881feb72",
    "modelo": "claude-sonnet-5-5",
    "gerado_em": "2026-11-11T17:02:24+00:00"
+  },
+  "PL 294/2015": {
+   "titulo": "Inclui ministros de religiões de matriz africana como segurados da Previdência",
+   "o_que_muda": "O projeto inclui expressamente o ministro de confissão religiosa de matriz africana entre os segurados individuais da Previdência Social. Para isso, altera a Lei 8.212/1991 (art. 12, inciso V, alínea c) e a Lei 8.213/1991 (art. 11, inciso V, alínea c). Os textos passam a citar \"o ministro de confissão religiosa, inclusive o de matriz africana\". A lei entraria em vigor na data de sua publicação.",
+   "quem_e_afetado": "Sacerdotes e sacerdotisas de religiões de matriz africana, que passam a constar expressamente como segurados individuais do Regime Geral de Previdência Social, assim como os ministros de outras confissões já previstos.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 2843,
+    "saida": 298
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "c4533983d80c284f",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-19T18:07:09+00:00"
   },
   "PL 3099/2019": {
    "titulo": "Cria o Dia Nacional do Autocuidado, em 24 de julho",
@@ -713,6 +818,21 @@
    "fonte_hash": "1900dd6d6efc4490",
    "modelo": "claude-opus-5-5",
    "gerado_em": "2026-11-10T12:17:05+00:00"
+  },
+  "PL 3944/2023": {
+   "titulo": "Crise climática e saúde da população negra no Estatuto da Igualdade Racial",
+   "o_que_muda": "Inclui a crise climática e o combate ao racismo ambiental nas regras de saúde da população negra do Estatuto da Igualdade Racial. O poder público deverá garantir acesso à atenção básica de saúde em tempo adequado em crises climáticas, calamidades e eventos extremos, com prioridade a mulheres e meninas negras. Também prevê pesquisas com dados desagregados, diagnósticos de vulnerabilidade, formação de profissionais do SUS e ações contra a mortalidade materna de mulheres negras. A lei entraria em vigor na data da publicação.",
+   "quem_e_afetado": "População negra, especialmente mulheres e meninas, e pessoas em áreas mais atingidas por eventos climáticos. Também o poder público e os profissionais e equipes de saúde do SUS.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 8262,
+    "saida": 324
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "9b6ac68ffdafb265",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-19T18:07:17+00:00"
   },
   "PL 3965/2024": {
    "titulo": "Dia Nacional dos Professores e feriado escolar em 15 de outubro",
@@ -842,6 +962,21 @@
    "fonte_hash": "63297595875af33a",
    "modelo": "claude-sonnet-5-5",
    "gerado_em": "2026-11-18T17:57:32+00:00"
+  },
+  "PL 4887/2023": {
+   "titulo": "Protocolo para atender vítimas de racismo em escolas públicas e privadas",
+   "o_que_muda": "Cria um protocolo obrigatório para escolas públicas e privadas atenderem casos de discriminação racial. A escola deve fazer relatório imediato, acionar a polícia no momento do fato e encaminhar o caso ao Ministério Público. Também deve oferecer apoio psicológico, fazer relatório anual e relatório semestral sobre o ensino de história e cultura afro-brasileira e indígena. A lei entra em vigor 180 dias após a publicação.",
+   "quem_e_afetado": "Escolas públicas e privadas, secretarias estaduais e municipais de educação, profissionais da educação, estudantes e suas famílias, em especial vítimas de racismo e autores de condutas discriminatórias.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 6343,
+    "saida": 289
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "a30692f786c8bc14",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-19T18:07:21+00:00"
   },
   "PL 504/2021": {
    "titulo": "Política Nacional de Residência em Área Profissional da Saúde",
@@ -992,6 +1127,21 @@
    "fonte_hash": "e61ff4a0106967ac",
    "modelo": "claude-opus-5-5",
    "gerado_em": "2026-11-10T12:22:10+00:00"
+  },
+  "PL 7103/2014": {
+   "titulo": "Quesito cor ou raça nos registros de saúde do SUS",
+   "o_que_muda": "Os prontuários, registros e cadastros individuais do Sistema de Informação em Saúde do SUS passam a ter, por lei, o campo cor ou raça. A regra seria um parágrafo único acrescentado ao artigo 7º do Estatuto da Igualdade Racial (Lei 12.288/2010). Esse artigo trata da Política Nacional de Saúde Integral da População Negra. A lei entra em vigor na data de sua publicação.",
+   "quem_e_afetado": "Usuários do SUS, que passariam a ter a cor ou raça registrada em seus cadastros e prontuários, e os serviços de saúde que fazem esses registros.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 2558,
+    "saida": 263
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "25ffd6e40e7dae59",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-19T18:07:28+00:00"
   },
   "PL 724/2003": {
    "titulo": "Proíbe tratores após as 18h em rodovias federais e aumenta penas por dirigir embriagado",
@@ -1276,19 +1426,19 @@
    "gerado_em": "2026-11-10T12:20:58+00:00"
   },
   "PLP 299/2026": {
-   "titulo": "Novas regras de contenção de gastos e de benefícios fiscais no orçamento federal",
-   "o_que_muda": "Autoriza o governo federal a bloquear despesas e limitar o crescimento real do gasto a 2,0% ao ano a partir de 2027, nos anos em que adotar medidas de contenção. Reduz benefícios tributários em 20% e limita a compensação de tributos. Fixa tetos para algumas despesas até 2030 e permite desvincular até 40% do superávit financeiro de fundos. Autoriza deduzir da meta fiscal de 2026 até R$ 10,5 bilhões do subsídio ao diesel.",
-   "quem_e_afetado": "Governo federal e órgãos que executam o orçamento da União, empresas com benefícios tributários ou compensações de tributos, exportadores do PROEX e beneficiários de programas e fundos citados.",
+   "titulo": "Novos instrumentos de gestão fiscal e redução de benefícios tributários da União",
+   "o_que_muda": "Autoriza o Executivo federal a limitar empenhos e a reduzir compensações tributárias para cumprir a meta fiscal, com crescimento real da despesa limitado a 2% ao ano a partir de 2027 nesses casos. Reduz benefícios tributários federais em 20% a partir de 2027. Fixa tetos: R$ 2 bilhões por ano (LC 176), R$ 3 bilhões por ano (2027-2030) em despesa da Lei 9.796 e R$ 1 bilhão por ano no Proex até 2030. Permite deduzir até R$ 10,5 bilhões da meta de 2026 com subvenção ao diesel.",
+   "quem_e_afetado": "Governo federal, empresas e contribuintes com benefícios tributários ou compensações de tributos, exportadores, o setor de ciência e pesquisa, pessoas com deficiência e autistas na compra de veículos, e Estados com repasses da LC 176.",
    "uso": {
     "modelo": "claude-sonnet-5-5",
-    "entrada": 8168,
-    "saida": 309
+    "entrada": 8938,
+    "saida": 374
    },
    "fonte": "texto integral",
    "entrada": "texto",
-   "fonte_hash": "a7b4cc77a0e04388",
+   "fonte_hash": "a971d429892d45ce",
    "modelo": "claude-sonnet-5-5",
-   "gerado_em": "2026-11-13T17:04:39+00:00"
+   "gerado_em": "2026-11-19T18:06:35+00:00"
   },
   "PRC 113/2023": {
    "titulo": "Túnel entre os anexos II e IV da Câmara passa a se chamar José Richa",
