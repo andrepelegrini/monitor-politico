@@ -186,9 +186,10 @@ def test_so_o_perfil_com_dados_ampliados_muda(tmp_path, docs, doc):
         c.relative_to(base) for c in base.rglob("*.html")
         if c.read_bytes() != (ampliado / c.relative_to(base)).read_bytes()
     ]
-    assert diferentes == [Path("deputados") / f"{alvo}.html"]
+    # Com perfil completo, a lista ganha a entrada para comparar lado a lado.
+    assert sorted(diferentes) == [Path("deputados") / f"{alvo}.html", Path("deputados") / "index.html"]
 
-    pagina = (ampliado / diferentes[0]).read_text(encoding="utf-8")
+    pagina = (ampliado / "deputados" / f"{alvo}.html").read_text(encoding="utf-8")
     assert 'id="quem-e"' in pagina and 'id="contato"' in pagina
     assert "2 eleições, de 100 a 100 votos" in pagina
     assert "+50,0% de 2022 para 2026" in pagina

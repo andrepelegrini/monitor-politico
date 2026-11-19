@@ -15,9 +15,10 @@
     <h2 class="ce-display ce-section-title" id="lista-titulo">Todos os {{ plural }}</h2>
   </div>
 
-{% if tem_legislatura %}  <ul class="ce-links pf-atalhos">
-    <li><a href="eleitos/index.html">Eleitos para 2027: quem chega e quem sai</a></li>
-    <li><a href="anteriores.html">Fora de exercício ({{ total_anteriores }})</a></li>
+{% if tem_legislatura or pode_comparar %}  <ul class="ce-links pf-atalhos">
+    {% if pode_comparar %}<li><a href="comparar.html">Comparar lado a lado</a></li>{% endif %}
+    {% if tem_legislatura %}<li><a href="eleitos/index.html">Eleitos para 2027: quem chega e quem sai</a></li>
+    <li><a href="anteriores.html">Fora de exercício ({{ total_anteriores }})</a></li>{% endif %}
   </ul>
 {% endif %}  <form class="ce-filters" role="search" aria-label="Filtrar {{ plural }}" onsubmit="return false">
     <label class="ce-field"><span class="ce-control-label">Nome</span>
@@ -72,14 +73,20 @@
         <span class="ce-people-leis"><strong>{{ leis_na_lista[d.id].principal }}</strong> {{ "lei" if leis_na_lista[d.id].principal == 1 else "leis" }} de autoria principal · {{ leis_na_lista[d.id].coautoria }} em coautoria</span>
         <span class="ce-people-leis"><strong>{{ leis_na_lista[d.id].votos|numero }}</strong> votos · <strong>{{ leis_na_lista[d.id].presencas|numero }}</strong> de {{ leis_na_lista[d.id].dias|numero }} {{ "votações" if casa == "senado" else "dias" }} · <strong>{{ leis_na_lista[d.id].relatorias|numero }}</strong> {{ "relatoria atual" if leis_na_lista[d.id].relatorias == 1 else "relatorias atuais" }}</span>{% endif %}{% if situacoes_eleitorais and situacoes_eleitorais.get(d.id|string) %}
         <span class="ce-people-leis"><span class="ce-badge badge-{{ situacoes_eleitorais[d.id|string].chave }}">{{ situacoes_eleitorais[d.id|string].rotulo }}</span></span>{% endif %}
-      </a>
+      </a>{% if pode_comparar %}
+      <label class="cmp-marca" hidden><input type="checkbox" value="{{ d.id }}" aria-label="Comparar {{ d.nome }}"> Comparar</label>{% endif %}
     </li>
     {% endfor %}
-  </ul>
+  </ul>{% if pode_comparar %}
+  <div class="cmp-barra" id="cmp-barra" hidden>
+    <span id="cmp-barra-texto" aria-live="polite"></span>
+    <button type="button" id="cmp-barra-limpar">Desmarcar</button>
+    <a id="cmp-barra-ir" href="comparar.html">Comparar</a>
+  </div>{% endif %}
   <div id="vazio" class="ce-state-box" hidden>
     <p>Nenhum {{ singular }} encontrado com esses filtros.</p>
     <button type="button" class="ce-button ce-button--secondary" data-limpar-filtros>Limpar filtros</button>
   </div>
 </section>
 {% endblock %}
-{% block scripts %}<script src="{{ raiz }}/static/filtro.js"></script>{% endblock %}
+{% block scripts %}<script src="{{ raiz }}/static/filtro.js"></script>{% if pode_comparar %}<script src="{{ raiz }}/static/lista-comparar.js" defer></script>{% endif %}{% endblock %}

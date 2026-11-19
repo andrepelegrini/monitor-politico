@@ -18,7 +18,7 @@ from zoneinfo import ZoneInfo
 from jinja2 import Environment, PackageLoader, select_autoescape
 
 from monitor_politico import retrospectiva as modulo_retro
-from monitor_politico import feeds as modulo_feeds
+from monitor_politico import comparar as modulo_comparar, feeds as modulo_feeds
 from monitor_politico import areas as modulo_areas, estados as modulo_estados, legislatura as modulo_legislatura, mapa as modulo_mapa, metricas as modulo_metricas, painel, perfis, resumo
 from monitor_politico.lote_senado import ROTULOS_ELEITOS as ROTULOS_ELEITOS_SENADO
 from monitor_politico.models import Deputado, Senador
@@ -124,6 +124,7 @@ def _gerar_casa(
             parlamentares=parlamentares,
             partidos=sorted({p.partido for p in parlamentares}),
             ufs=sorted({p.uf for p in parlamentares}),
+            pode_comparar=bool(perfis_ampliados),
         ),
         encoding="utf-8",
     )
@@ -133,14 +134,34 @@ def _gerar_casa(
     retro_ref = modulo_retro.referencias(contexto["metricas"], [p.id for p in parlamentares]) if contexto.get("metricas") and perfis_ampliados else None
     if retro_ref:
         (pasta / "retrospectiva").mkdir()
+    # Comparar lado a lado: só quem tem perfil completo, com os números da lista quando existem.
+    por_deputado = (contexto.get("metricas") or {}).get("por_deputado") or {}
+    ano_limite = int(((contexto.get("metricas") or {}).get("inicio") or modulo_metricas.INICIO_MANDATO)[:4]) - 1
+    comparaveis = []
+    pasta_votos = pasta.parent / "static" / "comparar" / pasta.name
     for p in parlamentares:
         caminho = f"{pasta.name}/{p.id}.html"
         ampliado = perfis_ampliados.get(p.id)
+        if ampliado:
+            comparaveis.append(modulo_comparar.resumo(p, ampliado, por_deputado.get(str(p.id)), ano_limite))
+            pasta_votos.mkdir(parents=True, exist_ok=True)
+            (pasta_votos / f"{p.id}.json").write_text(json.dumps(modulo_comparar.votos(ampliado), separators=(",", ":")), encoding="utf-8")
         if ampliado:
             pagina = _gerar_perfil_ampliado(env, pasta.parent, p, ampliado, {**contexto, "caminho": caminho, "d": p}, slugs or {}, pasta_imagens, retro_ref, pasta)
         else:
             pagina = modelo.render(**contexto, caminho=caminho, **{variavel: p})
         (pasta / f"{p.id}.html").write_text(pagina, encoding="utf-8")
+    if comparaveis:
+        (pasta.parent / "static" / "comparar" / f"{pasta.name}.json").write_text(
+            json.dumps({"pessoas": comparaveis}, ensure_ascii=False, separators=(",", ":")), encoding="utf-8"
+        )
+        (pasta / "comparar.html").write_text(
+            env.get_template("comparar.html").render(
+                **contexto, caminho=f"{pasta.name}/comparar.html", subsidio=modulo_comparar.SUBSIDIO, subsidio_desde=modulo_comparar.SUBSIDIO_DESDE,
+                maximo=modulo_comparar.MAX_PESSOAS, total_comparaveis=len(comparaveis), pasta_casa=pasta.name,
+            ),
+            encoding="utf-8",
+        )
 
 
 def _gerar_perfil_ampliado(

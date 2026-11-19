@@ -84,6 +84,19 @@ def ler_cota_da_pagina(pagina: str) -> dict[str, float]:
     return {"total": _virgula(achado[1]), "percentual": float(achado[2].replace(",", ".")), "nao_utilizado": _virgula(achado[3])}
 
 
+def ler_gabinete_da_pagina(pagina: str) -> dict[str, float]:
+    """Verba de gabinete do ano (salários dos secretários parlamentares): gasto, percentual e não utilizado."""
+    inicio = pagina.find('id="percentualgastoverbagabinete"')
+    if inicio < 0:
+        raise RelatorioInvalido("página do deputado sem o quadro da verba de gabinete")
+    tabela = pagina[inicio:pagina.find("</table>", inicio)]
+    texto = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", tabela)))
+    achado = re.search(r"Gasto ([\d.,]+) ([\d.,]+)% Não utilizado ([\d.,]+)", texto)
+    if achado is None:
+        raise RelatorioInvalido("quadro da verba de gabinete em formato desconhecido")
+    return {"total": _virgula(achado[1]), "percentual": float(achado[2].replace(",", ".")), "nao_utilizado": _virgula(achado[3])}
+
+
 def sem_cpf(nome: str) -> str:
     """Empresa individual costuma ter o CPF do dono no próprio nome, inclusive nos arquivos oficiais."""
     return CPF_NO_NOME.sub("", nome).strip()
@@ -242,6 +255,12 @@ class FonteDinheiro:
     def cota_oficial(self, id_: int, ano: int) -> dict[str, float]:
         return ler_cota_da_pagina(self.pagina_do_deputado(id_, ano))
 
+    def gabinete_oficial(self, id_: int, ano: int) -> Optional[dict[str, float]]:
+        try:
+            return ler_gabinete_da_pagina(self.pagina_do_deputado(id_, ano))
+        except RelatorioInvalido:
+            return None
+
     def _zip_emendas(self) -> zipfile.ZipFile:
         if self._emendas is None:
             self._emendas = zipfile.ZipFile(io.BytesIO(self.http.get(URL_EMENDAS).raise_for_status().content))
@@ -265,6 +284,7 @@ class FonteDinheiro:
 def coletar(fonte: Any, id_: int, nome: str, legislatura: int, ano_inicial: int, ano_final: int) -> dict[str, Any]:
     return {
         "cota": cota_do_mandato(fonte, id_, legislatura, range(ano_inicial, ano_final + 1)),
+        "gabinete": {"por_ano": [{"ano": ano, **quadro} for ano in range(ano_inicial, ano_final + 1) if (quadro := fonte.gabinete_oficial(id_, ano))]},
         "emendas": {**emendas_do_mandato(fonte.emendas(), fonte.favorecidos(), nome, ano_inicial), "arquivo_em": fonte.data_das_emendas()},
     }
 

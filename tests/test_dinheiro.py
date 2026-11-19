@@ -46,6 +46,9 @@ class FonteFalsa:
     def cota_oficial(self, _id, ano):
         return {"total": 250.25, "percentual": 99.5, "nao_utilizado": 3.0} if ano == 2023 else {"total": 0.0, "percentual": 0.0, "nao_utilizado": 0.0}
 
+    def gabinete_oficial(self, _id, ano):
+        return {"total": 1000.0, "percentual": 90.0, "nao_utilizado": 111.11} if ano == 2023 else None
+
     def emendas(self):
         return [linha_emenda(), linha_emenda(localidade="Nacional", funcao="Educação", pago="1,00", restos="0,00"), linha_emenda(ano="2022"), linha_emenda(autor="OUTRA PESSOA")]
 
@@ -71,6 +74,21 @@ PAGINA = """<div>Gastos e recursos 2023</div><script>var x = 1;</script><h4>Cota
 
 def test_le_quadro_oficial_da_cota():
     assert dinheiro.ler_cota_da_pagina(PAGINA) == {"total": 480571.79, "percentual": 99.34, "nao_utilizado": 3214.83}
+
+
+GABINETE = """<li class="gasto"><h3>Verba de gabinete <a data-content="limite mensal de R$ 165.806,07">?</a></h3>
+<table id="percentualgastoverbagabinete" class="js-chart"><thead><tr><th>Verba de gabinete</th><th>Total (R$)</th><th>Percentual</th></tr></thead>
+<tbody><tr><td>Gasto</td><td>1.527.930,81</td><td>96.07%</td></tr><tr><td>Não utilizado</td><td>62.423,82</td><td>3.93%</td></tr></tbody></table></li>"""
+
+
+def test_le_quadro_oficial_da_verba_de_gabinete():
+    assert dinheiro.ler_gabinete_da_pagina(PAGINA + GABINETE) == {"total": 1527930.81, "percentual": 96.07, "nao_utilizado": 62423.82}
+    with pytest.raises(RelatorioInvalido):
+        dinheiro.ler_gabinete_da_pagina(PAGINA)
+
+
+def test_gabinete_no_documento_so_nos_anos_com_quadro(doc):
+    assert doc["gabinete"] == {"por_ano": [{"ano": 2023, "total": 1000.0, "percentual": 90.0, "nao_utilizado": 111.11}]}
 
 
 def test_pagina_sem_quadro_interrompe_a_coleta():
