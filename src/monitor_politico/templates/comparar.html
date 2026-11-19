@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% set senado = casa == "senado" %}
+{% block titulo %}Comparar {{ plural }} · Na Galeria{% endblock %}
+{% block descricao %}Compare até {{ maximo }} {{ plural }} lado a lado: leis, votos, {{ "participação" if senado else "presença" }}, relatorias, quanto votam igual e o custo do mandato, com dados abertos oficiais.{% endblock %}
+{% block conteudo %}
+<nav class="ce-breadcrumb" aria-label="Trilha de navegação">
+  <ol>
+    <li><a href="../index.html">Início</a></li>
+    <li><a href="index.html">{{ titulo }}</a></li>
+    <li aria-current="page">Comparar</li>
+  </ol>
+</nav>
+<header class="ce-page-head">
+  <p class="ce-eyebrow">Comparar {{ plural }} · mandato atual</p>
+  <h1 id="cmp-titulo" data-padrao="Comparar {{ plural }}">Comparar {{ plural }}</h1>
+  <p class="ce-deck">Os mesmos números, lado a lado, desde {{ metricas.inicio|data_br if metricas else "o início do mandato" }}. Escolha até {{ maximo }} pessoas {{ "do Senado" if senado else "da Câmara" }}.</p>
+</header>
+
+<div class="cmp" id="cmp" data-dados="{{ raiz }}/static/comparar/{{ pasta_casa }}.json" data-votos="{{ raiz }}/static/comparar/{{ pasta_casa }}/" data-maximo="{{ maximo }}" data-casa="{{ casa }}" data-singular="{{ singular }}" data-plural="{{ plural }}" hidden>
+  <section class="cmp-escolha" aria-labelledby="cmp-escolha-titulo">
+    <h2 class="ce-sr-only" id="cmp-escolha-titulo">Pessoas comparadas</h2>
+    <ul class="cmp-chips" id="cmp-chips" aria-live="polite"></ul>
+    <label class="ce-field cmp-add" id="cmp-add-campo"><span class="ce-control-label">Adicionar {{ singular }}</span>
+      <select class="ce-select" id="cmp-add"><option value="">Escolha pelo nome</option></select>
+    </label>
+    <p class="ce-section-note" id="cmp-limite" hidden>Já há {{ maximo }} pessoas. Tire uma para escolher outra.</p>
+  </section>
+
+  <p class="ce-state-box" id="cmp-vazio">Escolha pelo menos duas pessoas para comparar. Também dá para marcar na <a href="index.html">lista de {{ plural }}</a> ou usar o botão "Comparar lado a lado" no perfil.</p>
+
+  <div id="cmp-resultado" hidden>
+    <div class="cmp-cabecas" id="cmp-cabecas"></div>
+
+    <section class="ce-section" aria-labelledby="cmp-atuacao">
+      <div class="ce-section-header"><h2 class="ce-display ce-section-title" id="cmp-atuacao">Atuação no mandato</h2></div>
+      <p class="ce-section-note">As mesmas métricas da <a href="index.html">lista de {{ plural }}</a>, com o mesmo critério para todos. Em cada linha, as barras usam a mesma escala. Quem entrou depois ou se licenciou teve menos tempo. Os números não medem qualidade. <a href="{{ raiz }}/entenda.html#{{ "numeros-no-senado" if senado else "numeros-na-lista" }}">Entenda a contagem</a>.</p>
+      <div class="cmp-metricas" id="cmp-linhas-atuacao"></div>
+    </section>
+
+    <section class="ce-section" aria-labelledby="cmp-igual" id="cmp-secao-igual">
+      <div class="ce-section-header"><h2 class="ce-display ce-section-title" id="cmp-igual">Quanto votam igual</h2></div>
+      <p class="ce-section-note">Votações nominais {{ "abertas do Senado" if senado else "do Plenário" }} em que as duas pessoas votaram Sim ou Não. Mostra só a coincidência dos votos, não uma posição sobre temas.</p>
+      <div class="cmp-pares" id="cmp-pares" aria-live="polite"></div>
+    </section>
+
+    <section class="ce-section" aria-labelledby="cmp-custo">
+      <div class="ce-section-header"><h2 class="ce-display ce-section-title" id="cmp-custo">Custo do mandato</h2></div>
+      <p class="ce-section-note">Valores desde o início do mandato, sem correção pela inflação. Gastar mais ou menos não indica irregularidade.</p>
+      <div class="cmp-igual"><span>Salário (subsídio), igual para {{ "todos os senadores" if senado else "todos os deputados" }}</span><strong>{{ subsidio|moeda }} por mês</strong></div>
+      <div class="cmp-metricas" id="cmp-linhas-custo"></div>
+      <div class="cmp-maiores" id="cmp-maiores"></div>
+      {% if senado %}<p class="ce-section-note">A verba de gabinete, para os salários da equipe, ainda não é coletada para o Senado.</p>{% endif %}
+    </section>
+  </div>
+</div>
+<noscript><p class="ce-state-box">A comparação precisa de JavaScript. Os mesmos números estão na <a href="index.html">lista de {{ plural }}</a> e em cada perfil.</p></noscript>
+{% endblock %}
+{% block rodape %}
+<p>Dados de {{ atualizado_em }}. Fonte: <a href="{{ fonte_url }}">{{ fonte_nome }}</a>{% if not senado %}; cota e verba de gabinete pela página oficial de cada deputado{% endif %}. Subsídio fixado pelo Decreto Legislativo 172/2022, em vigor desde {{ subsidio_desde|data_br }}. Este site reproduz informações públicas oficiais, sem avaliação ou opinião.</p>
+{% endblock %}
+{% block scripts %}<script src="{{ raiz }}/static/comparar.js" defer></script>{% endblock %}

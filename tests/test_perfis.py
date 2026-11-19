@@ -186,9 +186,10 @@ def test_so_o_perfil_com_dados_ampliados_muda(tmp_path, docs, doc):
         c.relative_to(base) for c in base.rglob("*.html")
         if c.read_bytes() != (ampliado / c.relative_to(base)).read_bytes()
     ]
-    assert diferentes == [Path("deputados") / f"{alvo}.html"]
+    # Com perfil completo, a lista ganha a entrada para comparar lado a lado.
+    assert sorted(diferentes) == [Path("deputados") / f"{alvo}.html", Path("deputados") / "index.html"]
 
-    pagina = (ampliado / diferentes[0]).read_text(encoding="utf-8")
+    pagina = (ampliado / "deputados" / f"{alvo}.html").read_text(encoding="utf-8")
     assert 'id="quem-e"' in pagina and 'id="contato"' in pagina
     assert "2 eleições, de 100 a 100 votos" in pagina
     assert "+50,0% de 2022 para 2026" in pagina
@@ -219,6 +220,10 @@ def test_perfil_com_plenario(tmp_path, docs, doc):
     assert 'data-classe="texto"' in fragmento and 'href="../proposicoes/pec-18-2025.html"' in fragmento
     assert "o que não significa ausência" in pagina
     assert "nem a intenção do parlamentar" in pagina
+    # Feed RSS dos votos: link visível na seção, link no cabeçalho e o arquivo.
+    assert f'href="../feeds/deputados/{alvo}.xml"' in pagina and 'rel="alternate" type="application/rss+xml"' in pagina
+    feed = (tmp_path / "site" / "feeds" / "deputados" / f"{alvo}.xml").read_text(encoding="utf-8")
+    assert feed.count("<item>") == 1 and "https://www.nagaleria.com.br/proposicoes/pec-18-2025.html" in feed
 
 
 DINHEIRO = {

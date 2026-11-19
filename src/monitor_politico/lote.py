@@ -97,7 +97,8 @@ def paginas_oficiais(
     financas: Any, arquivos: Any, ids: list[int], anos_por_pessoa: dict[int, list[int]], cache: dict[str, Any], ano_atual: int,
     salvar: Callable[[], None] = lambda: None,
 ) -> None:
-    """Preenche o cache com as páginas da Câmara. Ano passado não muda, então só o ano atual é consultado de novo.
+    """Preenche o cache com as páginas da Câmara. Ano passado não muda, então só o ano atual é consultado de novo,
+    além dos anos guardados antes de lermos a verba de gabinete (uma vez só).
 
     Ano sem exercício não tem quadro na página: fica registrado como None e não conta como falha.
     """
@@ -105,7 +106,8 @@ def paginas_oficiais(
     for id_ in ids:
         chave = str(id_)
         for ano in anos_por_pessoa[id_]:
-            if ano == ano_atual or str(ano) not in cache["pagina"].get(chave, {}):
+            guardado = cache["pagina"].get(chave, {})
+            if ano == ano_atual or str(ano) not in guardado or "gabinete" not in (guardado[str(ano)] or {}):
                 pendencias.append(("pagina", id_, ano))
             if ano >= anos_por_pessoa[id_][-1] - 7 and (ano == ano_atual or str(ano) not in cache["presenca"].get(chave, {})):
                 pendencias.append(("presenca", id_, ano))
@@ -120,7 +122,8 @@ def paginas_oficiais(
                     return tipo, id_, ano, None, None
             pagina = financas.pagina_do_deputado(id_, ano)
             valor: dict[str, Any] = {}
-            for nome, leitor in (("cota", dinheiro.ler_cota_da_pagina), ("atuacao", plenario.ler_atuacao_da_pagina)):
+            leitores = (("cota", dinheiro.ler_cota_da_pagina), ("gabinete", dinheiro.ler_gabinete_da_pagina), ("atuacao", plenario.ler_atuacao_da_pagina))
+            for nome, leitor in leitores:
                 try:
                     valor[nome] = leitor(pagina)
                 except RelatorioInvalido:
@@ -198,6 +201,10 @@ def montar_documentos(
             oficial = (cache["pagina"].get(chave, {}).get(str(ano)) or {}).get("cota")
             if oficial or detalhado.get(ano):
                 por_ano_cota.append({"ano": ano, **(oficial or {"total": detalhado[ano], "percentual": None, "nao_utilizado": None}), "detalhado": detalhado.get(ano, 0)})
+        gabinete = [
+            {"ano": ano, **quadro} for ano in anos_mandato
+            if (quadro := (cache["pagina"].get(chave, {}).get(str(ano)) or {}).get("gabinete"))
+        ]
         atuacao = []
         for ano in anos_por_pessoa[id_]:
             quadro = (cache["pagina"].get(chave, {}).get(str(ano)) or {}).get("atuacao")
@@ -212,7 +219,7 @@ def montar_documentos(
             "comissoes": pessoa["comissoes"],
             "plenario": {"votos": votos[id_], "presenca": {"por_ano": presencas}},
             "propostas": {"inicio": inicios[id_], "por_ano": atuacao, "propostas": lista_propostas[id_]},
-            "dinheiro": {"cota": {"por_ano": por_ano_cota, **cota}, "emendas": {**emendas.get(id_, dinheiro.emendas_de_todos([], [], {"": 0}, 0)[0]), "arquivo_em": arquivo_emendas}},
+            "dinheiro": {"cota": {"por_ano": por_ano_cota, **cota}, "gabinete": {"por_ano": gabinete}, "emendas": {**emendas.get(id_, dinheiro.emendas_de_todos([], [], {"": 0}, 0)[0]), "arquivo_em": arquivo_emendas}},
         }
     return documentos
 

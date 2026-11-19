@@ -96,3 +96,25 @@ def test_site_com_e_sem_areas(tmp_path, docs):  # noqa: F811
     assert 'href="areas/seguranca.html"' in (site / "index.html").read_text(encoding="utf-8")
     assert 'href="areas/index.html"' in (site / "votacoes.html").read_text(encoding="utf-8")
     assert 'id="areas"' in (site / "entenda.html").read_text(encoding="utf-8")
+    # Busca por assunto: a área e o assunto entram no índice; o assunto abre a área já filtrada.
+    busca = json.loads((site / "static" / "busca.json").read_text(encoding="utf-8"))
+    assert ["Drogas", "Segurança e justiça", "areas/seguranca.html#drogas", 1, areas.TERMOS_DE_BUSCA["Drogas"]] in busca["assuntos"]
+    assert any(a[0] == "Segurança e justiça" and a[2] == "areas/seguranca.html" for a in busca["assuntos"])
+    assert not any(a[0] == "Saúde" for a in busca["assuntos"])  # área sem projeto fica de fora
+    assert json.loads((tmp_path / "sem" / "static" / "busca.json").read_text(encoding="utf-8"))["assuntos"] == []
+    assert 'placeholder="Buscar parlamentar, proposição ou assunto"' in seguranca
+    assert 'placeholder="Buscar parlamentar ou proposição"' in (tmp_path / "sem" / "index.html").read_text(encoding="utf-8")
+    # Feed RSS da área.
+    assert 'href="../feeds/areas/seguranca.xml"' in seguranca
+    assert (site / "feeds" / "areas" / "seguranca.xml").read_text(encoding="utf-8").count("<item>") == 1
+    assert (site / "feeds" / "areas" / "saude.xml").read_text(encoding="utf-8").count("<item>") == 0
+
+
+def test_indice_de_busca_e_slug():
+    assert areas.slug_assunto("Empresas, crédito e dívidas") == "empresas-credito-e-dividas"
+    assert set(areas.TERMOS_DE_BUSCA) == set(areas.ASSUNTOS) - {areas.OUTROS}
+    v = areas.paginas([linha("A"), linha("B")], {"A": {"assuntos": ["Armas de fogo"]}})
+    indice = areas.indice_de_busca(v)
+    # "Outros assuntos" não vira resultado de busca; a Rotina, com projeto, entra como área.
+    assert [i[0] for i in indice] == ["Segurança e justiça", "Armas de fogo", "Rotina do Congresso"]
+    assert indice[1][2] == "areas/seguranca.html#armas-de-fogo" and "porte" in indice[1][4]

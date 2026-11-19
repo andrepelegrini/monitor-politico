@@ -54,7 +54,7 @@ class Arquivos:
 
 def test_ano_passado_vem_do_cache_e_o_atual_e_consultado():
     financas, arquivos = Financas(), Arquivos()
-    cache = {"normas": {}, "eleicoes": {}, "presenca": {"1": {"2025": {"dias": 1}}}, "pagina": {"1": {"2025": {"cota": {"total": 1}, "atuacao": None}}}}
+    cache = {"normas": {}, "eleicoes": {}, "presenca": {"1": {"2025": {"dias": 1}}}, "pagina": {"1": {"2025": {"cota": {"total": 1}, "gabinete": None, "atuacao": None}}}}
     lote.paginas_oficiais(financas, arquivos, [1], {1: [2025, 2026]}, cache, 2026)
     assert financas.paginas == [(1, 2026)] and arquivos.relatorios == [(1, 2026)]
     assert cache["pagina"]["1"]["2026"]["cota"]["total"] == 100.0
@@ -78,7 +78,17 @@ def test_ano_sem_quadro_nao_e_falha_para_uma_pessoa():
             return "<p>sem exercício</p>" if ano == 2025 else super().pagina_do_deputado(id_, ano)
     cache = {"normas": {}, "eleicoes": {}, "presenca": {}, "pagina": {}}
     lote.paginas_oficiais(Parcial(), Arquivos(), [1], {1: [2025, 2026]}, cache, 2026)
-    assert cache["pagina"]["1"]["2025"] == {"cota": None, "atuacao": None}
+    assert cache["pagina"]["1"]["2025"] == {"cota": None, "gabinete": None, "atuacao": None}
+
+
+def test_ano_guardado_antes_da_verba_de_gabinete_e_consultado_uma_vez():
+    financas, arquivos = Financas(), Arquivos()
+    cache = {"normas": {}, "eleicoes": {}, "presenca": {"1": {"2025": {"dias": 1}}}, "pagina": {"1": {"2025": {"cota": {"total": 1}, "atuacao": None}}}}
+    lote.paginas_oficiais(financas, arquivos, [1], {1: [2025, 2026]}, cache, 2026)
+    assert financas.paginas == [(1, 2025), (1, 2026)] and "gabinete" in cache["pagina"]["1"]["2025"]
+    financas.paginas.clear()
+    lote.paginas_oficiais(financas, arquivos, [1], {1: [2025, 2026]}, cache, 2026)
+    assert financas.paginas == [(1, 2026)]
 
 
 def proposta(id_, participacao, data):
