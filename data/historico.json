@@ -1,5 +1,5 @@
 {
- "coletado_em": "2026-11-16T18:27:15+00:00",
+ "coletado_em": "2026-11-19T03:22:54+00:00",
  "desde": "2023-02-01",
  "proposicoes": {
   "MPV 1138/2022": {
@@ -7575,7 +7575,7 @@
    ],
    "situacao": {
     "descricao": "Transformado em Norma Jurídica",
-    "data": "2026-09-16",
+    "data": "2026-11-17",
     "casa": "Câmara",
     "norma": "Lei nº 15.503 de 14/09/2026"
    },
@@ -8012,8 +8012,8 @@
     "Relações Internacionais e Comércio Exterior"
    ],
    "situacao": {
-    "descricao": "Aguardando Encaminhamento",
-    "data": "2026-11-11",
+    "descricao": "Aguardando Autógrafos na Mesa",
+    "data": "2026-11-17",
     "casa": "Câmara",
     "norma": null
    },
@@ -8052,6 +8052,341 @@
      "descricao": "Aprovada a Redação Final.",
      "resultado": "aprovada",
      "procedimento": true,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    }
+   ]
+  },
+  "MPV 1383/2026": {
+   "chave": "MPV 1383/2026",
+   "slug": "mpv-1383-2026",
+   "sigla": "MPV",
+   "numero": 1383,
+   "ano": 2026,
+   "tipo": "Medida Provisória",
+   "ementa": "Abre crédito extraordinário, em favor do Ministério da Integração e do Desenvolvimento Regional, no valor de R$ 360.000.000,00, para o fim que especifica.",
+   "apelido": "Crédito Extraordinário - Atendimento a população atingida por eventos climáticos extremos em todo país",
+   "autores": [
+    "Poder Executivo"
+   ],
+   "data_apresentacao": "2026-08-13",
+   "casa_inicial": "Câmara",
+   "temas": [
+    "Direitos Humanos e Minorias",
+    "Finanças Públicas e Orçamento",
+    "Meio Ambiente e Desenvolvimento Sustentável"
+   ],
+   "situacao": {
+    "descricao": "Aguardando Apreciação pelo Senado Federal",
+    "data": "2026-11-18",
+    "casa": "Câmara",
+    "norma": null
+   },
+   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2643429",
+   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175449",
+   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3171692",
+   "votacoes": [
+    {
+     "id": "2643429-28",
+     "casa": "Câmara",
+     "data_hora": "2026-11-17T16:43:29",
+     "descricao": "Aprovado, em apreciação preliminar, o Parecer da Comissão Mista de Planos, Orçamentos Públicos e Fiscalização, acerca dos pressupostos constitucionais de relevância e urgência e de sua adequação financeira e orçamentária, nos termos do artigo 8º da Resolução nº 01, de 2002-CN.",
+     "resultado": "aprovada",
+     "procedimento": true,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    },
+    {
+     "id": "2643429-30",
+     "casa": "Câmara",
+     "data_hora": "2026-11-17T16:46:27",
+     "descricao": "Aprovada a Medida Provisória nº 1.383, de 2026.",
+     "resultado": "aprovada",
+     "procedimento": false,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    },
+    {
+     "id": "2643429-32",
+     "casa": "Câmara",
+     "data_hora": "2026-11-17T16:46:52",
+     "descricao": "Aprovada a Redação Final assinada pelo relator, Dep. Mauro Benevides Filho (UNIÃO-CE).",
+     "resultado": "aprovada",
+     "procedimento": true,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    }
+   ]
+  },
+  "MPV 1384/2026": {
+   "chave": "MPV 1384/2026",
+   "slug": "mpv-1384-2026",
+   "sigla": "MPV",
+   "numero": 1384,
+   "ano": 2026,
+   "tipo": "Medida Provisória",
+   "ementa": "Abre crédito extraordinário, em favor dos Ministérios do Desenvolvimento Agrário e Agricultura Familiar e do Desenvolvimento e Assistência Social, Família e Combate à Fome, no valor de R$ 924.985.960,00, para os fins que especifica.",
+   "apelido": "Crédito Extraordinário - Ações de abastecimento e segurança alimentar para enfretamento ao \"El Niño\"",
+   "autores": [
+    "Poder Executivo"
+   ],
+   "data_apresentacao": "2026-08-13",
+   "casa_inicial": "Câmara",
+   "temas": [
+    "Finanças Públicas e Orçamento",
+    "Agricultura, Pecuária, Pesca e Extrativismo",
+    "Meio Ambiente e Desenvolvimento Sustentável",
+    "Previdência e Assistência Social"
+   ],
+   "situacao": {
+    "descricao": "Aguardando Apreciação pelo Senado Federal",
+    "data": "2026-11-18",
+    "casa": "Câmara",
+    "norma": null
+   },
+   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2643435",
+   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175455",
+   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3171701",
+   "votacoes": [
+    {
+     "id": "2643435-30",
+     "casa": "Câmara",
+     "data_hora": "2026-11-17T16:48:10",
+     "descricao": "Aprovado, em apreciação preliminar, o Parecer da Comissão Mista de Planos, Orçamentos Públicos e Fiscalização, acerca dos pressupostos constitucionais de relevância e urgência e de sua adequação financeira e orçamentária, nos termos do artigo 8º da Resolução nº 01, de 2002-CN.",
+     "resultado": "aprovada",
+     "procedimento": true,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    },
+    {
+     "id": "2643435-32",
+     "casa": "Câmara",
+     "data_hora": "2026-11-17T16:48:30",
+     "descricao": "Aprovada a Medida Provisória nº 1.384, de 2026.",
+     "resultado": "aprovada",
+     "procedimento": false,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    },
+    {
+     "id": "2643435-34",
+     "casa": "Câmara",
+     "data_hora": "2026-11-17T16:54:00",
+     "descricao": "Aprovada a Redação Final assinada pelo Dep. Aj Albuquerque (PP/CE).",
+     "resultado": "aprovada",
+     "procedimento": true,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    }
+   ]
+  },
+  "MPV 1389/2026": {
+   "chave": "MPV 1389/2026",
+   "slug": "mpv-1389-2026",
+   "sigla": "MPV",
+   "numero": 1389,
+   "ano": 2026,
+   "tipo": "Medida Provisória",
+   "ementa": "Abre crédito extraordinário, em favor do Ministério de Minas e Energia, no valor de R$ 6.605.000.000,00, para os fins que especifica.",
+   "apelido": "Crédito Extraordinário - Subsídios à produção e importação de combustíveis derivados do petróleo",
+   "autores": [
+    "Poder Executivo"
+   ],
+   "data_apresentacao": "2026-09-09",
+   "casa_inicial": "Câmara",
+   "temas": [
+    "Energia, Recursos Hídricos e Minerais",
+    "Economia",
+    "Finanças Públicas e Orçamento"
+   ],
+   "situacao": {
+    "descricao": "Aguardando Apreciação pelo Senado Federal",
+    "data": "2026-11-18",
+    "casa": "Câmara",
+    "norma": null
+   },
+   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2646241",
+   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175758",
+   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3179188",
+   "votacoes": [
+    {
+     "id": "2646241-30",
+     "casa": "Câmara",
+     "data_hora": "2026-11-17T16:54:40",
+     "descricao": "Aprovado, em apreciação preliminar, o Parecer da Comissão Mista de Planos, Orçamentos Públicos e Fiscalização, acerca dos pressupostos constitucionais de relevância e urgência e de sua adequação financeira e orçamentária, nos termos do artigo 8º da Resolução nº 01, de 2002-CN.",
+     "resultado": "aprovada",
+     "procedimento": true,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    },
+    {
+     "id": "2646241-32",
+     "casa": "Câmara",
+     "data_hora": "2026-11-17T16:55:20",
+     "descricao": "Aprovada a Medida Provisória nº 1.389, de 2026.",
+     "resultado": "aprovada",
+     "procedimento": false,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    },
+    {
+     "id": "2646241-34",
+     "casa": "Câmara",
+     "data_hora": "2026-11-17T16:55:47",
+     "descricao": "Aprovada a Redação Final assinada pelo Dep. Hugo Leal (PSD/RJ).",
+     "resultado": "aprovada",
+     "procedimento": true,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    }
+   ]
+  },
+  "MPV 1397/2026": {
+   "chave": "MPV 1397/2026",
+   "slug": "mpv-1397-2026",
+   "sigla": "MPV",
+   "numero": 1397,
+   "ano": 2026,
+   "tipo": "Medida Provisória",
+   "ementa": "Abre crédito extraordinário, em favor de Encargos Financeiros da União, no valor de R$6.494.296.446,00, para o fim que especifica.",
+   "apelido": "Crédito Extraordinário - Reforço ao financiamento de exportadores e seus fornecedores no âmbito do Plano Brasil Soberano",
+   "autores": [
+    "Poder Executivo"
+   ],
+   "data_apresentacao": "2026-10-21",
+   "casa_inicial": "Câmara",
+   "temas": [
+    "Finanças Públicas e Orçamento",
+    "Economia",
+    "Relações Internacionais e Comércio Exterior"
+   ],
+   "situacao": {
+    "descricao": "Aguardando Apreciação pelo Senado Federal",
+    "data": "2026-11-18",
+    "casa": "Câmara",
+    "norma": null
+   },
+   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2648606",
+   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/176004",
+   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3185390",
+   "votacoes": [
+    {
+     "id": "2648606-24",
+     "casa": "Câmara",
+     "data_hora": "2026-11-17T17:04:46",
+     "descricao": "Aprovado, em apreciação preliminar, o Parecer da Comissão Mista de Planos, Orçamentos Públicos e Fiscalização, acerca dos pressupostos constitucionais de relevância e urgência e de sua adequação financeira e orçamentária, nos termos do artigo 8º da Resolução nº 01, de 2002-CN.",
+     "resultado": "aprovada",
+     "procedimento": true,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    },
+    {
+     "id": "2648606-26",
+     "casa": "Câmara",
+     "data_hora": "2026-11-17T17:05:17",
+     "descricao": "Aprovada a Medida Provisória nº 1.397, de 2026.",
+     "resultado": "aprovada",
+     "procedimento": false,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    },
+    {
+     "id": "2648606-28",
+     "casa": "Câmara",
+     "data_hora": "2026-11-17T17:06:41",
+     "descricao": "Aprovada a Redação Final assinada pelo Dep. Mauro Benevides Filho (UNIÃO-CE).",
+     "resultado": "aprovada",
+     "procedimento": true,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    },
+    {
+     "id": "2648606-32",
+     "casa": "Câmara",
+     "data_hora": "2026-11-17T17:08:21",
+     "descricao": "Rejeitada a Emenda de Comissão nº 1.",
+     "resultado": "rejeitada",
+     "procedimento": false,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    }
+   ]
+  },
+  "MPV 1398/2026": {
+   "chave": "MPV 1398/2026",
+   "slug": "mpv-1398-2026",
+   "sigla": "MPV",
+   "numero": 1398,
+   "ano": 2026,
+   "tipo": "Medida Provisória",
+   "ementa": "Abre crédito extraordinário, em favor do Ministério da Integração e do Desenvolvimento Regional, no valor de R$ 300.000.000,00, para o fim que especifica.",
+   "apelido": "Crédito Extraordinário - Ações de proteção e defesa civil para a população atingida por desastres climáticos em todo país",
+   "autores": [
+    "Poder Executivo"
+   ],
+   "data_apresentacao": "2026-10-21",
+   "casa_inicial": "Câmara",
+   "temas": [
+    "Finanças Públicas e Orçamento",
+    "Administração Pública"
+   ],
+   "situacao": {
+    "descricao": "Aguardando Envio ao Senado Federal",
+    "data": "2026-11-17",
+    "casa": "Câmara",
+    "norma": null
+   },
+   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2648616",
+   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/176006",
+   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3185402",
+   "votacoes": [
+    {
+     "id": "2648616-26",
+     "casa": "Câmara",
+     "data_hora": "2026-11-17T17:20:11",
+     "descricao": "Aprovado, em apreciação preliminar, o Parecer da Comissão Mista de Planos, Orçamentos Públicos e Fiscalização, acerca dos pressupostos constitucionais de relevância e urgência e de sua adequação financeira e orçamentária, nos termos do artigo 8º da Resolução nº 01, de 2002-CN.",
+     "resultado": "aprovada",
+     "procedimento": true,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    },
+    {
+     "id": "2648616-28",
+     "casa": "Câmara",
+     "data_hora": "2026-11-17T17:20:56",
+     "descricao": "Aprovada a Medida Provisória nº 1.398, de 2026.",
+     "resultado": "aprovada",
+     "procedimento": false,
      "nominal": false,
      "placar": null,
      "orientacoes": null,
@@ -14299,8 +14634,8 @@
     "Viação, Transporte e Mobilidade"
    ],
    "situacao": {
-    "descricao": "Aguardando despacho",
-    "data": "2026-11-13",
+    "descricao": "Aguardando designação do relator",
+    "data": "2026-11-18",
     "casa": "Senado",
     "norma": null
    },
@@ -24264,8 +24599,8 @@
     "Direitos Humanos e Minorias"
    ],
    "situacao": {
-    "descricao": "Aguardando despacho",
-    "data": "2024-12-16",
+    "descricao": "Aguardando designação do relator",
+    "data": "2026-11-18",
     "casa": "Senado",
     "norma": null
    },
@@ -30406,8 +30741,8 @@
     "Homenagens e Datas Comemorativas"
    ],
    "situacao": {
-    "descricao": "Aguardando despacho",
-    "data": "2025-11-05",
+    "descricao": "Matéria despachada",
+    "data": "2026-11-18",
     "casa": "Senado",
     "norma": null
    },
@@ -33491,8 +33826,8 @@
     "Saúde"
    ],
    "situacao": {
-    "descricao": "Aguardando despacho",
-    "data": "2025-10-21",
+    "descricao": "Matéria despachada",
+    "data": "2026-11-18",
     "casa": "Senado",
     "norma": null
    },
@@ -34665,8 +35000,8 @@
     "Saúde"
    ],
    "situacao": {
-    "descricao": "Aguardando despacho",
-    "data": "2025-11-05",
+    "descricao": "Matéria despachada",
+    "data": "2026-11-18",
     "casa": "Senado",
     "norma": null
    },
@@ -34980,8 +35315,8 @@
     "Saúde"
    ],
    "situacao": {
-    "descricao": "Aguardando designação do relator",
-    "data": "2026-11-12",
+    "descricao": "Matéria com a relatoria",
+    "data": "2026-11-13",
     "casa": "Senado",
     "norma": null
    },
@@ -38427,8 +38762,8 @@
     "Meio Ambiente e Desenvolvimento Sustentável"
    ],
    "situacao": {
-    "descricao": "Aguardando despacho",
-    "data": "2025-09-08",
+    "descricao": "Matéria despachada",
+    "data": "2026-11-18",
     "casa": "Senado",
     "norma": null
    },
@@ -38577,13 +38912,13 @@
     "Direito Penal e Processual Penal"
    ],
    "situacao": {
-    "descricao": "Aguardando Autógrafos na Mesa",
-    "data": "2026-11-11",
-    "casa": "Câmara",
+    "descricao": "Aguardando despacho",
+    "data": "2026-11-18",
+    "casa": "Senado",
     "norma": null
    },
    "url_camara": "https://www.camara.leg.br/propostas-legislativas/2515534",
-   "url_senado": null,
+   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/176460",
    "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2916380",
    "votacoes": [
     {
@@ -39776,7 +40111,7 @@
    "ano": 2022,
    "tipo": "Projeto de Lei",
    "ementa": "Dispõe sobre a proteção de crianças e adolescentes em ambientes digitais.",
-   "apelido": null,
+   "apelido": "Estatuto Digital da Criança e do Adolescente (ECA Digital)",
    "autores": [
     "Senado Federal - Alessandro Vieira"
    ],
@@ -42751,9 +43086,9 @@
     "Defesa e Segurança"
    ],
    "situacao": {
-    "descricao": "Aguardando Apreciação pelo Senado Federal",
-    "data": "2025-06-13",
-    "casa": "Câmara",
+    "descricao": "Aguardando designação do relator",
+    "data": "2026-11-18",
+    "casa": "Senado",
     "norma": null
    },
    "url_camara": "https://www.camara.leg.br/propostas-legislativas/264726",
@@ -43603,8 +43938,8 @@
     "Finanças Públicas e Orçamento"
    ],
    "situacao": {
-    "descricao": "Matéria com a relatoria",
-    "data": "2026-11-11",
+    "descricao": "Pronta para a pauta na comissão",
+    "data": "2026-11-18",
     "casa": "Senado",
     "norma": null
    },
@@ -44064,7 +44399,7 @@
    "ano": 2024,
    "tipo": "Projeto de Lei",
    "ementa": "Altera a Lei nº 8.171, de 17 de janeiro de 1991, a Lei nº 10.823, de 19 de dezembro de 2003, e a Lei Complementar nº 137, de 26 de agosto de 2010, para aperfeiçoar os marcos legais do seguro rural.",
-   "apelido": null,
+   "apelido": "Novo marco do seguro rural",
    "autores": [
     "Senado Federal - Tereza Cristina"
    ],
@@ -46198,8 +46533,8 @@
     "Homenagens e Datas Comemorativas"
    ],
    "situacao": {
-    "descricao": "Aguardando Autógrafos na Mesa",
-    "data": "2026-11-10",
+    "descricao": "Aguardando Sanção",
+    "data": "2026-11-18",
     "casa": "Câmara",
     "norma": null
    },
@@ -47477,7 +47812,7 @@
    ],
    "situacao": {
     "descricao": "Aguardando Despacho do Presidente",
-    "data": "2026-05-12",
+    "data": "2026-11-17",
     "casa": "Câmara",
     "norma": null
    },
@@ -47690,9 +48025,9 @@
     "Saúde"
    ],
    "situacao": {
-    "descricao": "Aguardando Apreciação pelo Senado Federal",
-    "data": "2025-10-13",
-    "casa": "Câmara",
+    "descricao": "Matéria despachada",
+    "data": "2026-11-18",
+    "casa": "Senado",
     "norma": null
    },
    "url_camara": "https://www.camara.leg.br/propostas-legislativas/2453934",
@@ -48519,8 +48854,8 @@
     "Direitos Humanos e Minorias"
    ],
    "situacao": {
-    "descricao": "Aguardando despacho",
-    "data": "2025-10-27",
+    "descricao": "Matéria despachada",
+    "data": "2026-11-18",
     "casa": "Senado",
     "norma": null
    },
@@ -50318,8 +50653,8 @@
     "Esporte e Lazer"
    ],
    "situacao": {
-    "descricao": "Aguardando inclusão ordem do dia de requerimento",
-    "data": "2026-11-10",
+    "descricao": "Aprovada",
+    "data": "2026-11-18",
     "casa": "Senado",
     "norma": null
    },
@@ -50529,8 +50864,8 @@
     "Direito e Defesa do Consumidor"
    ],
    "situacao": {
-    "descricao": "Aguardando despacho",
-    "data": "2025-11-05",
+    "descricao": "Matéria despachada",
+    "data": "2026-11-18",
     "casa": "Senado",
     "norma": null
    },
@@ -53518,8 +53853,8 @@
     "Política, Partidos e Eleições"
    ],
    "situacao": {
-    "descricao": "Aguardando despacho",
-    "data": "2025-02-27",
+    "descricao": "Matéria despachada",
+    "data": "2026-11-18",
     "casa": "Senado",
     "norma": null
    },
@@ -55091,8 +55426,8 @@
     "Administração Pública"
    ],
    "situacao": {
-    "descricao": "Pronta para Pauta",
-    "data": "2026-11-09",
+    "descricao": "Aguardando Envio ao Senado Federal",
+    "data": "2026-11-18",
     "casa": "Câmara",
     "norma": null
    },
@@ -56441,8 +56776,8 @@
     "Homenagens e Datas Comemorativas"
    ],
    "situacao": {
-    "descricao": "Incluída em ordem do dia",
-    "data": "2026-11-13",
+    "descricao": "Aprovada",
+    "data": "2026-11-17",
     "casa": "Senado",
     "norma": null
    },
@@ -57887,9 +58222,9 @@
     "Direito Penal e Processual Penal"
    ],
    "situacao": {
-    "descricao": "Aguardando Apreciação pelo Senado Federal",
-    "data": "2025-11-06",
-    "casa": "Câmara",
+    "descricao": "Aguardando designação do relator",
+    "data": "2026-11-18",
+    "casa": "Senado",
     "norma": null
    },
    "url_camara": "https://www.camara.leg.br/propostas-legislativas/2551307",
@@ -57953,8 +58288,8 @@
     "Direito Civil e Processual Civil"
    ],
    "situacao": {
-    "descricao": "Incluída em ordem do dia",
-    "data": "2026-11-13",
+    "descricao": "Aprovada",
+    "data": "2026-11-18",
     "casa": "Senado",
     "norma": null
    },
@@ -63568,8 +63903,8 @@
     "Direitos Humanos e Minorias"
    ],
    "situacao": {
-    "descricao": "Aguardando Designação de Relator(a)",
-    "data": "2026-11-12",
+    "descricao": "Aguardando Parecer",
+    "data": "2026-11-18",
     "casa": "Câmara",
     "norma": null
    },
@@ -64276,8 +64611,8 @@
     "Política, Partidos e Eleições"
    ],
    "situacao": {
-    "descricao": "Aguardando Designação de Relator(a)",
-    "data": "2026-11-12",
+    "descricao": "Aguardando Parecer",
+    "data": "2026-11-18",
     "casa": "Câmara",
     "norma": null
    },
@@ -65846,8 +66181,8 @@
     "Trabalho e Emprego"
    ],
    "situacao": {
-    "descricao": "Pedido de vista concedido",
-    "data": "2026-11-11",
+    "descricao": "Aguardando recebimento de emendas",
+    "data": "2026-11-18",
     "casa": "Senado",
     "norma": null
    },
@@ -66518,8 +66853,8 @@
     "Viação, Transporte e Mobilidade"
    ],
    "situacao": {
-    "descricao": "Matéria com a relatoria",
-    "data": "2026-09-02",
+    "descricao": "Aguardando designação do relator",
+    "data": "2026-11-18",
     "casa": "Senado",
     "norma": null
    },
@@ -66862,13 +67197,13 @@
     "Trabalho e Emprego"
    ],
    "situacao": {
-    "descricao": "Aguardando Envio ao Senado Federal",
-    "data": "2026-11-11",
-    "casa": "Câmara",
+    "descricao": "Aguardando despacho",
+    "data": "2026-11-18",
+    "casa": "Senado",
     "norma": null
    },
    "url_camara": "https://www.camara.leg.br/propostas-legislativas/2270540",
-   "url_senado": null,
+   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/176459",
    "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1964794",
    "votacoes": [
     {
@@ -67418,6 +67753,72 @@
      "casa": "Câmara",
      "data_hora": "2025-07-16T22:54:39",
      "descricao": "Aprovada a Redação Final assinada pelo relator, Dep. Afonso Hamm (PP-RS).",
+     "resultado": "aprovada",
+     "procedimento": true,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    }
+   ]
+  },
+  "PL 5127/2026": {
+   "chave": "PL 5127/2026",
+   "slug": "pl-5127-2026",
+   "sigla": "PL",
+   "numero": 5127,
+   "ano": 2026,
+   "tipo": "Projeto de Lei",
+   "ementa": "Reconhece como manifestação da cultura nacional a Romaria do Divino Pai Eterno, realizada no Município de Trindade, no Estado de Goiás.",
+   "apelido": null,
+   "autores": [
+    "Flávia Morais"
+   ],
+   "data_apresentacao": "2026-08-19",
+   "casa_inicial": "Câmara",
+   "temas": [
+    "Arte, Cultura e Religião",
+    "Homenagens e Datas Comemorativas"
+   ],
+   "situacao": {
+    "descricao": "Aguardando Encaminhamento",
+    "data": "2026-11-18",
+    "casa": "Câmara",
+    "norma": null
+   },
+   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2644208",
+   "url_senado": null,
+   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3173788",
+   "votacoes": [
+    {
+     "id": "2647302-7",
+     "casa": "Câmara",
+     "data_hora": "2026-11-10T19:41:27",
+     "descricao": "Aprovado, por unanimidade, o Requerimento de Urgência (Art. 155 do RICD).",
+     "resultado": "aprovada",
+     "procedimento": true,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    },
+    {
+     "id": "2644208-16",
+     "casa": "Câmara",
+     "data_hora": "2026-11-17T17:34:41",
+     "descricao": "Aprovado o Projeto de Lei nº 5.127, de 2026.",
+     "resultado": "aprovada",
+     "procedimento": false,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    },
+    {
+     "id": "2644208-20",
+     "casa": "Câmara",
+     "data_hora": "2026-11-17T17:35:02",
+     "descricao": "Aprovada a Redação Final assinada pelo relator, Dep. Luiz Gastão (PSD/CE).",
      "resultado": "aprovada",
      "procedimento": true,
      "nominal": false,
@@ -68290,8 +68691,8 @@
     "Educação"
    ],
    "situacao": {
-    "descricao": "Aguardando designação do relator",
-    "data": "2026-08-11",
+    "descricao": "Matéria com a relatoria",
+    "data": "2026-11-16",
     "casa": "Senado",
     "norma": null
    },
@@ -70631,9 +71032,9 @@
     "Economia"
    ],
    "situacao": {
-    "descricao": "Transformada em norma jurídica",
-    "data": "2026-11-12",
-    "casa": "Senado",
+    "descricao": "Transformado em Norma Jurídica",
+    "data": "2026-11-17",
+    "casa": "Câmara",
     "norma": "Lei nº 15.528 de 11/11/2026"
    },
    "url_camara": "https://www.camara.leg.br/propostas-legislativas/2648807",
@@ -70697,8 +71098,8 @@
     "Saúde"
    ],
    "situacao": {
-    "descricao": "Aguardando Parecer",
-    "data": "2026-11-12",
+    "descricao": "Pronta para Pauta",
+    "data": "2026-11-17",
     "casa": "Câmara",
     "norma": null
    },
@@ -70883,8 +71284,8 @@
     "Saúde"
    ],
    "situacao": {
-    "descricao": "Aguardando despacho",
-    "data": "2025-10-27",
+    "descricao": "Aguardando designação do relator",
+    "data": "2026-11-18",
     "casa": "Senado",
     "norma": null
    },
@@ -72392,8 +72793,8 @@
     "Saúde"
    ],
    "situacao": {
-    "descricao": "Incluída na pauta da reunião",
-    "data": "2026-11-13",
+    "descricao": "Pronta para a pauta na comissão",
+    "data": "2026-11-18",
     "casa": "Senado",
     "norma": null
    },
@@ -74675,8 +75076,8 @@
     "Direitos Humanos e Minorias"
    ],
    "situacao": {
-    "descricao": "Incluída em ordem do dia",
-    "data": "2026-11-13",
+    "descricao": "Aprovada",
+    "data": "2026-11-18",
     "casa": "Senado",
     "norma": null
    },
@@ -75439,8 +75840,8 @@
     "Trabalho e Emprego"
    ],
    "situacao": {
-    "descricao": "Aguardando despacho",
-    "data": "2025-10-21",
+    "descricao": "Matéria despachada",
+    "data": "2026-11-18",
     "casa": "Senado",
     "norma": null
    },
@@ -75777,8 +76178,8 @@
     "Defesa e Segurança"
    ],
    "situacao": {
-    "descricao": "Encerramentos",
-    "data": "2026-11-11",
+    "descricao": "Recebimento - Relator(a)",
+    "data": "2026-11-16",
     "casa": "Câmara",
     "norma": null
    },
@@ -75852,8 +76253,8 @@
     "Homenagens e Datas Comemorativas"
    ],
    "situacao": {
-    "descricao": "Aguardando despacho",
-    "data": "2025-06-02",
+    "descricao": "Matéria despachada",
+    "data": "2026-11-18",
     "casa": "Senado",
     "norma": null
    },
@@ -76070,8 +76471,8 @@
     "Economia"
    ],
    "situacao": {
-    "descricao": "Aguardando despacho",
-    "data": "2025-07-08",
+    "descricao": "Matéria despachada",
+    "data": "2026-11-18",
     "casa": "Senado",
     "norma": null
    },
@@ -76369,9 +76770,9 @@
     "Trabalho e Emprego"
    ],
    "situacao": {
-    "descricao": "Aguardando Apreciação pelo Senado Federal",
-    "data": "2026-08-28",
-    "casa": "Câmara",
+    "descricao": "Pronto para deliberação do plenário",
+    "data": "2026-11-18",
+    "casa": "Senado",
     "norma": null
    },
    "url_camara": "https://www.camara.leg.br/propostas-legislativas/2234260",
@@ -78132,8 +78533,8 @@
     "Direito Penal e Processual Penal"
    ],
    "situacao": {
-    "descricao": "Matéria com a relatoria",
-    "data": "2026-11-11",
+    "descricao": "Pronta para a pauta na comissão",
+    "data": "2026-11-18",
     "casa": "Senado",
     "norma": null
    },
@@ -80527,8 +80928,8 @@
     "Administração Pública"
    ],
    "situacao": {
-    "descricao": "Pronta para Pauta",
-    "data": "2026-11-09",
+    "descricao": "Aguardando Envio ao Senado Federal",
+    "data": "2026-11-18",
     "casa": "Câmara",
     "norma": null
    },
@@ -82146,8 +82547,8 @@
     "Direito e Justiça"
    ],
    "situacao": {
-    "descricao": "Pronta para Pauta",
-    "data": "2026-11-09",
+    "descricao": "Aguardando Envio ao Senado Federal",
+    "data": "2026-11-18",
     "casa": "Câmara",
     "norma": null
    },
@@ -84547,8 +84948,8 @@
     "Finanças Públicas e Orçamento"
    ],
    "situacao": {
-    "descricao": "Aguardando despacho",
-    "data": "2024-12-16",
+    "descricao": "Matéria despachada",
+    "data": "2026-11-18",
     "casa": "Senado",
     "norma": null
    },
@@ -88640,16 +89041,16 @@
       "abstencao": 0,
       "outros": [
        [
-        "Presente – Não registrou voto",
-        5
-       ],
-       [
         "Missão da Casa no País/exterior",
         5
        ],
        [
+        "Presente – Não registrou voto",
+        4
+       ],
+       [
         "Atividade parlamentar",
-        2
+        3
        ],
        [
         "Presidente (art. 51 RISF)",
@@ -94601,6 +95002,73 @@
      "casa": "Câmara",
      "data_hora": "2023-10-18T20:33:53",
      "descricao": "Aprovada a Redação Final assinada pelo relator, Dep. Marcos Pereira (Republicanos-SP).",
+     "resultado": "aprovada",
+     "procedimento": true,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    }
+   ]
+  },
+  "PRC 50/2026": {
+   "chave": "PRC 50/2026",
+   "slug": "prc-50-2026",
+   "sigla": "PRC",
+   "numero": 50,
+   "ano": 2026,
+   "tipo": "Projeto de Resolução",
+   "ementa": "Institui o Prêmio Trajetórias de Êxito na Superdotação e na Dupla Excepcionalidade.",
+   "apelido": null,
+   "autores": [
+    "Soraya Santos"
+   ],
+   "data_apresentacao": "2026-11-10",
+   "casa_inicial": "Câmara",
+   "temas": [
+    "Educação",
+    "Direitos Humanos e Minorias",
+    "Homenagens e Datas Comemorativas"
+   ],
+   "situacao": {
+    "descricao": "Aguardando Encaminhamento",
+    "data": "2026-11-18",
+    "casa": "Câmara",
+    "norma": null
+   },
+   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2652524",
+   "url_senado": null,
+   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3193174",
+   "votacoes": [
+    {
+     "id": "2654009-7",
+     "casa": "Câmara",
+     "data_hora": "2026-11-17T16:35:03",
+     "descricao": "Aprovado, por unanimidade, o Requerimento de Urgência (Art. 155 do RICD).",
+     "resultado": "aprovada",
+     "procedimento": true,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    },
+    {
+     "id": "2652524-16",
+     "casa": "Câmara",
+     "data_hora": "2026-11-17T17:40:26",
+     "descricao": "Aprovado o Projeto de Resolução nº 50, de 2026.",
+     "resultado": "aprovada",
+     "procedimento": false,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    },
+    {
+     "id": "2652524-18",
+     "casa": "Câmara",
+     "data_hora": "2026-11-17T17:41:23",
+     "descricao": "Aprovada a Redação Final, assinada pelo relator, Dep. Lula da Fonte (PP/PE).",
      "resultado": "aprovada",
      "procedimento": true,
      "nominal": false,
