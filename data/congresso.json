@@ -1,8 +1,8 @@
 {
- "coletado_em": "2026-11-19T18:06:23+00:00",
+ "coletado_em": "2026-11-20T17:42:17+00:00",
  "periodo": {
-  "votacoes_desde": "2026-10-20",
-  "pauta_ate": "2026-11-25"
+  "votacoes_desde": "2026-10-21",
+  "pauta_ate": "2026-11-26"
  },
  "pauta": [
   {
@@ -13,7 +13,7 @@
     {
      "chave": "PLP 299/2026",
      "ementa": "Altera a Lei Complementar nº?200, de 30 de agosto de 2023, a Lei Complementar nº?176, de 29 de dezembro de 2020, a Lei Complementar nº?235, de 27 de agosto de 2026, a Lei Complementar nº?224, de 26 de dezembro de 2025, a Lei nº?11.540, de 12 de novembro de 2007, e a Lei nº?9.796, de 5 de maio de 1999, para conferir ao Poder Executivo federal novos instrumentos de gestão, com vistas a garantir a estabilidade macroeconômica do País e criar as condições adequadas ao desenvolvimento socioeconômico; e dá outras providências.",
-     "fase": "Discussão"
+     "fase": "Requerimentos de Urgência Art. 155"
     },
     {
      "chave": "PL 724/2003",
@@ -262,8 +262,8 @@
     "Relações Internacionais e Comércio Exterior"
    ],
    "situacao": {
-    "descricao": "Aguardando Autógrafos na Mesa",
-    "data": "2026-11-17",
+    "descricao": "Aguardando Apreciação pelo Senado Federal",
+    "data": "2026-11-19",
     "casa": "Câmara",
     "norma": null
    },
@@ -761,7 +761,7 @@
     "Relações Internacionais e Comércio Exterior"
    ],
    "situacao": {
-    "descricao": "Publicação de Proposição",
+    "descricao": "Pronta para Pauta",
     "data": "2026-11-19",
     "casa": "Câmara",
     "norma": null
@@ -3631,7 +3631,7 @@
    ],
    "situacao": {
     "descricao": "Aguardando Autógrafos na Mesa",
-    "data": "2026-11-10",
+    "data": "2026-11-19",
     "casa": "Câmara",
     "norma": null
    },
@@ -3973,7 +3973,7 @@
     "Direitos Humanos e Minorias"
    ],
    "situacao": {
-    "descricao": "Pronta para Pauta",
+    "descricao": "Aguardando Deliberação",
     "data": "2026-11-19",
     "casa": "Câmara",
     "norma": null
@@ -4069,7 +4069,7 @@
     "Política, Partidos e Eleições"
    ],
    "situacao": {
-    "descricao": "Pronta para Pauta",
+    "descricao": "Aguardando Deliberação",
     "data": "2026-11-19",
     "casa": "Câmara",
     "norma": null
@@ -4418,7 +4418,7 @@
     "Saúde"
    ],
    "situacao": {
-    "descricao": "Pronta para Pauta",
+    "descricao": "Aguardando Deliberação",
     "data": "2026-11-17",
     "casa": "Câmara",
     "norma": null
@@ -9616,8 +9616,8 @@
     "Homenagens e Datas Comemorativas"
    ],
    "situacao": {
-    "descricao": "Aguardando Autógrafos na Mesa",
-    "data": "2026-11-18",
+    "descricao": "Aguardando Encaminhamento",
+    "data": "2026-11-19",
     "casa": "Câmara",
     "norma": null
    },
