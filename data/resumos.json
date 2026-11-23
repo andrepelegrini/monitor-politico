@@ -678,6 +678,36 @@
    "modelo": "claude-opus-5-5",
    "gerado_em": "2026-11-10T12:19:46+00:00"
   },
+  "PL 1134/2025": {
+   "titulo": "Padrões de segurança de veículos de motoristas profissionais seguem o fabricante",
+   "o_que_muda": "Acrescenta ao Código de Trânsito Brasileiro o artigo 67-F. Ele diz que os padrões de segurança e saúde dos motoristas profissionais, em relação aos veículos que conduzem, seguirão exclusivamente as especificações dos fabricantes. Essas especificações devem estar de acordo com o que a autoridade competente homologou. A lei entra em vigor na data de sua publicação.",
+   "quem_e_afetado": "Motoristas profissionais, em relação aos veículos que conduzem. Também são afetados os fabricantes, cujas especificações homologadas passam a ser a referência.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 1821,
+    "saida": 257
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "3deff5a83760c2bf",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-23T21:03:00+00:00"
+  },
+  "PL 1257/2021": {
+   "titulo": "Acesso de idosos a tecnologias para preservar a saúde mental e cognitiva",
+   "o_que_muda": "Inclui no Estatuto do Idoso a previsão de que a preservação da saúde mental envolve o acesso e a capacitação no uso de tecnologias de informação e comunicação. Essas ações valem para promoção, prevenção e atenção a transtornos mentais e cognitivos, conforme normas regulamentadoras. A lei entraria em vigor 180 dias após a publicação.",
+   "quem_e_afetado": "Pessoas idosas, que passam a ter essa previsão no Estatuto do Idoso, e os órgãos e serviços públicos responsáveis por ações de saúde e inclusão digital, conforme a regulamentação.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 3056,
+    "saida": 266
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "9d86a74d9cec5983",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-23T21:03:04+00:00"
+  },
   "PL 1435/2023": {
    "titulo": "Campanha Recrutando Anjos e cartazes sobre como socorrer pessoas engasgadas",
    "o_que_muda": "Cria a campanha nacional permanente Recrutando Anjos e obriga estabelecimentos a afixar cartazes sobre manobras para desobstruir as vias respiratórias de pessoas engasgadas. Os cartazes devem ficar em local visível e mostrar, com ilustrações, o passo a passo da Manobra de Heimlich (compressões no abdômen para expulsar o objeto que causa o engasgo) em adultos e bebês, além dos telefones 192 (Samu) e 193. A proposta também altera o Estatuto da Criança e do Adolescente.",
@@ -818,6 +848,21 @@
    "fonte_hash": "1900dd6d6efc4490",
    "modelo": "claude-opus-5-5",
    "gerado_em": "2026-11-10T12:17:05+00:00"
+  },
+  "PL 351/2019": {
+   "titulo": "Cria por lei a Força Nacional do SUS para emergências em saúde",
+   "o_que_muda": "Institui em lei a Força Nacional do SUS (FN-SUS), programa de cooperação para prevenção, assistência e resposta a epidemias, desastres e falta de assistência à população. A FN-SUS é convocada em emergências em saúde pública, com limites e prazo de atuação definidos no ato de convocação. Pode reunir servidores, contratados temporários e voluntários da saúde. Prevê recursos orçamentários específicos, e diárias e passagens pagas pelo Ministério da Saúde.",
+   "quem_e_afetado": "Profissionais de saúde que integrarem a FN-SUS, estados, municípios e Distrito Federal que aderirem ou pedirem apoio, e a população atendida em emergências. Também Forças Armadas, hospitais do PROADI-SUS e órgãos federais, que poderão colaborar.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 4964,
+    "saida": 331
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "0df1e02eb54fcc14",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-23T21:03:08+00:00"
   },
   "PL 3944/2023": {
    "titulo": "Crise climática e saúde da população negra no Estatuto da Igualdade Racial",
@@ -978,6 +1023,21 @@
    "modelo": "claude-sonnet-5-5",
    "gerado_em": "2026-11-19T18:07:21+00:00"
   },
+  "PL 4921/2026": {
+   "titulo": "Aumento de 14 para 18 desembargadores no TRT da 18ª Região (Goiás)",
+   "o_que_muda": "O Tribunal Regional do Trabalho da 18ª Região, em Goiânia, passa a ter 18 desembargadores. Para isso, 7 cargos vagos de juiz do trabalho substituto viram 4 cargos de desembargador. As sobras do orçamento criam 5 cargos em comissão CJ-3 e 3 funções comissionadas (1 FC-6 e 2 FC-5). As despesas saem do orçamento já destinado ao tribunal.",
+   "quem_e_afetado": "O Tribunal Regional do Trabalho da 18ª Região (Goiás), seus magistrados e servidores, e as pessoas com processos trabalhistas em segunda instância nesse tribunal.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 5336,
+    "saida": 293
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "36e560d8fece095a",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-23T21:03:13+00:00"
+  },
   "PL 504/2021": {
    "titulo": "Política Nacional de Residência em Área Profissional da Saúde",
    "o_que_muda": "Cria regras nacionais para a residência em saúde de profissões não médicas, com duração de 2 a 3 anos e dedicação exclusiva, de 40 a 44 horas semanais. Muda o nome da comissão nacional para CNRAPS, ligada ao Ministério da Educação. Prevê bolsa ao residente, equivalente à da residência médica, e bolsas a tutores, preceptores e coordenadores. A lei entraria em vigor 90 dias após a publicação.",
@@ -1068,6 +1128,21 @@
    "modelo": "claude-sonnet-5-5",
    "gerado_em": "2026-11-18T17:57:41+00:00"
   },
+  "PL 5807/2025": {
+   "titulo": "Adulteração de alimentos passa a ser crime hediondo",
+   "o_que_muda": "Inclui na Lei dos Crimes Hediondos a adulteração de alimentos pela adição de ingredientes que possam causar risco à vida ou grave ameaça à saúde. Crimes hediondos são os que a lei trata com maior rigor. A lei entra em vigor na data de sua publicação.",
+   "quem_e_afetado": "Quem adultera alimentos, como produtores, cooperativas e fornecedores, e os consumidores, que compram esses produtos.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 1981,
+    "saida": 198
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "730aa52c573f5569",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-23T21:03:20+00:00"
+  },
   "PL 5815/2025": {
    "titulo": "Acompanhamento médico e psicológico anual obrigatório para crianças",
    "o_que_muda": "Cria acompanhamento médico e psicológico anual, obrigatório e gratuito, para todas as crianças de até 12 anos, pago pelo poder público, para prevenir abuso, violência e negligência. Se os responsáveis não levarem a criança em até 60 dias, o Ministério Público e o conselho tutelar são avisados, e benefícios como o Bolsa Família podem ser suspensos. A matrícula escolar exigirá as avaliações. Deixar de comunicar violência contra criança vira crime, com detenção de 6 meses a 3 anos, e é criado um cadastro público de condenados por abuso infantil.",
@@ -1076,6 +1151,21 @@
    "fonte_hash": "b9764e8bbe76549b",
    "modelo": "claude-opus-5-5",
    "gerado_em": "2026-11-10T12:17:37+00:00"
+  },
+  "PL 5894/2025": {
+   "titulo": "Novo Plano Nacional de Cultura para os anos de 2025 a 2035",
+   "o_que_muda": "Institui o Plano Nacional de Cultura para 2025-2035, com princípios, diretrizes e oito eixos de ação, como fomento, patrimônio, formação e cultura digital. As metas serão definidas pelo Ministério da Cultura e publicadas por ato do Executivo em até 90 dias após a lei. Cria o Comitê de Governança do Plano e prevê monitoramento e avaliação periódicos.",
+   "quem_e_afetado": "Ministério da Cultura, estados, Distrito Federal e municípios, que deverão elaborar ou adequar seus planos de cultura. Também envolve trabalhadores e agentes culturais e os conselhos de cultura.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 12482,
+    "saida": 278
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "1f49995c43bdb93b",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-23T21:03:25+00:00"
   },
   "PL 5902/2023": {
    "titulo": "Crime de usar drone para entregar objetos a presos em presídios",

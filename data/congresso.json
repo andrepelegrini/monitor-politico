@@ -1,8 +1,8 @@
 {
- "coletado_em": "2026-11-20T17:42:17+00:00",
+ "coletado_em": "2026-11-23T21:02:49+00:00",
  "periodo": {
-  "votacoes_desde": "2026-10-21",
-  "pauta_ate": "2026-11-26"
+  "votacoes_desde": "2026-10-24",
+  "pauta_ate": "2026-11-29"
  },
  "pauta": [
   {
@@ -79,6 +79,55 @@
      "chave": "PDL 366/2025",
      "ementa": "Aprova o texto do Tratado entre a República Federativa do Brasil e a República Cooperativa da Guiana sobre Auxílio Jurídico Mútuo em Matéria Penal, assinado em Georgetown, em 6 de maio de 2022.",
      "fase": "Discussão"
+    }
+   ]
+  },
+  {
+   "casa": "Senado",
+   "data_hora": "2026-11-24T14:00",
+   "sessao": "Sessão deliberativa ordinária",
+   "itens": [
+    {
+     "chave": "PL 6461/2019",
+     "ementa": "Institui o Estatuto do Aprendiz; e altera a Consolidação das Leis do Trabalho, aprovada pelo Decreto-Lei nº 5.452, de 1º de maio de 1943 (CLT), e as Leis nºs 6.019, de 3 de janeiro de 1974, e 14.601, de 19 de junho de 2023.",
+     "fase": null
+    },
+    {
+     "chave": "PL 5894/2025",
+     "ementa": "Institui o Plano Nacional de Cultura (PNC) para o decênio 2026-2036; e altera a Lei nº 14.399, de 8 de julho de 2022.",
+     "fase": null
+    },
+    {
+     "chave": "PL 1134/2025",
+     "ementa": "Altera a Lei nº 9.503, de 23 de setembro de 1997 (Código de Trânsito Brasileiro), para dispor sobre os padrões de segurança e de saúde dos motoristas profissionais em relação aos veículos por eles conduzidos.",
+     "fase": null
+    },
+    {
+     "chave": "PL 4921/2026",
+     "ementa": "Dispõe sobre a transformação de cargos vagos no quadro permanente do Tribunal Regional do Trabalho da 18ª Região, sem aumento de despesas.",
+     "fase": null
+    }
+   ]
+  },
+  {
+   "casa": "Senado",
+   "data_hora": "2026-11-25T14:00",
+   "sessao": "Sessão deliberativa ordinária",
+   "itens": [
+    {
+     "chave": "PL 351/2019",
+     "ementa": "Institui a Força Nacional do Sistema Único de Saúde (FN-SUS).",
+     "fase": null
+    },
+    {
+     "chave": "PL 5807/2025",
+     "ementa": "Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para tipificar o crime de posse de artefatos e embalagens para falsificação de produtos alimentícios, bebidas ou suplementos alimentares, incluir bebidas e suplementos alimentares no tipo penal previsto no art. 272 e estabelecer qualificadora para o resultado morte ou lesão corporal grave ou gravíssima nesse crime; altera a Lei nº 8.072, de 25 de julho de 1990 (Lei dos Crimes Hediondos), para incluir entre os crimes hediondos o crime de falsificação, corrupção, adulteração ou alteração de substâncias, produtos alimentícios, bebidas ou suplementos alimentares na sua forma qualificada; e altera as Leis nºs 8.176, de 8 de fevereiro de 1991, 12.305, de 2 de agosto de 2010, e 9.478, de 6 de agosto de 1997.",
+     "fase": null
+    },
+    {
+     "chave": "PL 1257/2021",
+     "ementa": "Altera a Lei nº 10.741, de 1º de outubro de 2003 (Estatuto da Pessoa Idosa), para assegurar o acesso a tecnologias direcionadas à preservação da saúde mental e cognitiva da pessoa idosa.",
+     "fase": "Discussão, em turno único"
     }
    ]
   }
@@ -695,8 +744,8 @@
     "Relações Internacionais e Comércio Exterior"
    ],
    "situacao": {
-    "descricao": "Matéria com a relatoria",
-    "data": "2026-11-04",
+    "descricao": "Pronta para a pauta na comissão",
+    "data": "2026-11-23",
     "casa": "Senado",
     "norma": null
    },
@@ -791,8 +840,8 @@
     "Viação, Transporte e Mobilidade"
    ],
    "situacao": {
-    "descricao": "Aguardando designação do relator",
-    "data": "2026-11-18",
+    "descricao": "Matéria com a relatoria",
+    "data": "2026-11-23",
     "casa": "Senado",
     "norma": null
    },
@@ -3302,6 +3351,68 @@
     }
    ]
   },
+  "PL 1134/2025": {
+   "chave": "PL 1134/2025",
+   "slug": "pl-1134-2025",
+   "sigla": "PL",
+   "numero": 1134,
+   "ano": 2025,
+   "tipo": "Projeto de Lei",
+   "ementa": "Altera a Lei 9.503/1997 - Código de Trânsito Brasileiro – e dá outras providências.",
+   "apelido": null,
+   "autores": [
+    "Reginaldo Lopes"
+   ],
+   "data_apresentacao": "2025-03-19",
+   "casa_inicial": "Câmara",
+   "temas": [
+    "Cidades e Desenvolvimento Urbano",
+    "Defesa e Segurança",
+    "Indústria, Comércio e Serviços",
+    "Trabalho e Emprego",
+    "Viação, Transporte e Mobilidade"
+   ],
+   "situacao": {
+    "descricao": "Incluída em ordem do dia",
+    "data": "2026-11-20",
+    "casa": "Senado",
+    "norma": null
+   },
+   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2487944",
+   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/173897",
+   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2869689",
+   "votacoes": []
+  },
+  "PL 1257/2021": {
+   "chave": "PL 1257/2021",
+   "slug": "pl-1257-2021",
+   "sigla": "PL",
+   "numero": 1257,
+   "ano": 2021,
+   "tipo": "Projeto de Lei",
+   "ementa": "Altera a Lei 10.741, de 1º de outubro de 2003, para assegurar o acesso a tecnologias para preservação da saúde mental e cognitiva.",
+   "apelido": null,
+   "autores": [
+    "Paula Belmonte"
+   ],
+   "data_apresentacao": "2021-04-07",
+   "casa_inicial": "Câmara",
+   "temas": [
+    "Ciência, Tecnologia e Inovação",
+    "Direitos Humanos e Minorias",
+    "Saúde"
+   ],
+   "situacao": {
+    "descricao": "Incluída em ordem do dia",
+    "data": "2026-11-20",
+    "casa": "Senado",
+    "norma": null
+   },
+   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2277100",
+   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172474",
+   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1986601",
+   "votacoes": []
+  },
   "PL 1969/2022": {
    "chave": "PL 1969/2022",
    "slug": "pl-1969-2022",
@@ -3323,7 +3434,7 @@
    ],
    "situacao": {
     "descricao": "Aguardando Deliberação",
-    "data": "2026-11-17",
+    "data": "2026-11-23",
     "casa": "Câmara",
     "norma": null
    },
@@ -3445,7 +3556,7 @@
    ],
    "situacao": {
     "descricao": "Aguardando Deliberação",
-    "data": "2026-11-17",
+    "data": "2026-11-23",
     "casa": "Câmara",
     "norma": null
    },
@@ -3477,7 +3588,7 @@
    ],
    "situacao": {
     "descricao": "Aguardando Designação de Relator(a)",
-    "data": "2026-05-07",
+    "data": "2026-11-23",
     "casa": "Câmara",
     "norma": null
    },
@@ -3546,7 +3657,7 @@
    ],
    "situacao": {
     "descricao": "Aguardando Deliberação",
-    "data": "2026-11-17",
+    "data": "2026-11-23",
     "casa": "Câmara",
     "norma": null
    },
@@ -3573,9 +3684,9 @@
     "Homenagens e Datas Comemorativas"
    ],
    "situacao": {
-    "descricao": "Aguardando Sanção",
-    "data": "2026-11-18",
-    "casa": "Câmara",
+    "descricao": "Remetida à sanção",
+    "data": "2026-11-19",
+    "casa": "Senado",
     "norma": null
    },
    "url_camara": "https://www.camara.leg.br/propostas-legislativas/2204495",
@@ -3783,6 +3894,35 @@
      "votos": []
     }
    ]
+  },
+  "PL 351/2019": {
+   "chave": "PL 351/2019",
+   "slug": "pl-351-2019",
+   "sigla": "PL",
+   "numero": 351,
+   "ano": 2019,
+   "tipo": "Projeto de Lei",
+   "ementa": "Cria a Força Nacional do Sistema Único de Saúde (FN-SUS) e dá outras providências.",
+   "apelido": null,
+   "autores": [
+    "Alexandre Padilha"
+   ],
+   "data_apresentacao": "2019-02-04",
+   "casa_inicial": "Câmara",
+   "temas": [
+    "Defesa e Segurança",
+    "Saúde"
+   ],
+   "situacao": {
+    "descricao": "Incluída em ordem do dia",
+    "data": "2026-11-20",
+    "casa": "Senado",
+    "norma": null
+   },
+   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2190908",
+   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/169659",
+   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1707269",
+   "votacoes": []
   },
   "PL 3944/2023": {
    "chave": "PL 3944/2023",
@@ -4111,8 +4251,8 @@
     "Finanças Públicas e Orçamento"
    ],
    "situacao": {
-    "descricao": "Aguardando Deliberação",
-    "data": "2026-11-18",
+    "descricao": "Aguardando Encaminhamento",
+    "data": "2026-11-23",
     "casa": "Câmara",
     "norma": null
    },
@@ -4141,14 +4281,45 @@
     "Educação"
    ],
    "situacao": {
-    "descricao": "Pronta para Pauta",
-    "data": "2026-10-28",
+    "descricao": "Aguardando Deliberação",
+    "data": "2026-11-23",
     "casa": "Câmara",
     "norma": null
    },
    "url_camara": "https://www.camara.leg.br/propostas-legislativas/2394518",
    "url_senado": null,
    "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2341913",
+   "votacoes": []
+  },
+  "PL 4921/2026": {
+   "chave": "PL 4921/2026",
+   "slug": "pl-4921-2026",
+   "sigla": "PL",
+   "numero": 4921,
+   "ano": 2026,
+   "tipo": "Projeto de Lei",
+   "ementa": "Dispõe sobre a transformação de cargos vagos no quadro permanente do Tribunal Regional do Trabalho da 18 Região, sem aumento de despesas.",
+   "apelido": null,
+   "autores": [
+    "Tribunal Superior do Trabalho"
+   ],
+   "data_apresentacao": "2026-08-06",
+   "casa_inicial": "Câmara",
+   "temas": [
+    "Administração Pública",
+    "Direito e Justiça",
+    "Finanças Públicas e Orçamento",
+    "Trabalho e Emprego"
+   ],
+   "situacao": {
+    "descricao": "Incluída em ordem do dia",
+    "data": "2026-11-20",
+    "casa": "Senado",
+    "norma": null
+   },
+   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2642167",
+   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175741",
+   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3169104",
    "votacoes": []
   },
   "PL 504/2021": {
@@ -4453,6 +4624,36 @@
     }
    ]
   },
+  "PL 5807/2025": {
+   "chave": "PL 5807/2025",
+   "slug": "pl-5807-2025",
+   "sigla": "PL",
+   "numero": 5807,
+   "ano": 2025,
+   "tipo": "Projeto de Lei",
+   "ementa": "Inclui inciso VIII na Lei dos Crimes Hediondos, Lei nº 8.072, de 25 de julho 1990, classificando como crime hediondo a adulteração de alimentos como especifica.",
+   "apelido": null,
+   "autores": [
+    "Otavio Leite"
+   ],
+   "data_apresentacao": "2007-10-30",
+   "casa_inicial": "Câmara",
+   "temas": [
+    "Direito e Defesa do Consumidor",
+    "Direito Penal e Processual Penal",
+    "Saúde"
+   ],
+   "situacao": {
+    "descricao": "Incluída em ordem do dia",
+    "data": "2026-11-20",
+    "casa": "Senado",
+    "norma": null
+   },
+   "url_camara": "https://www.camara.leg.br/propostas-legislativas/374450",
+   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/171596",
+   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=518137",
+   "votacoes": []
+  },
   "PL 5815/2025": {
    "chave": "PL 5815/2025",
    "slug": "pl-5815-2025",
@@ -4507,6 +4708,36 @@
      "votos": []
     }
    ]
+  },
+  "PL 5894/2025": {
+   "chave": "PL 5894/2025",
+   "slug": "pl-5894-2025",
+   "sigla": "PL",
+   "numero": 5894,
+   "ano": 2025,
+   "tipo": "Projeto de Lei",
+   "ementa": "Institui o Plano Nacional de Cultura para o decênio 2025-2035.",
+   "apelido": null,
+   "autores": [
+    "Poder Executivo"
+   ],
+   "data_apresentacao": "2025-11-18",
+   "casa_inicial": "Câmara",
+   "temas": [
+    "Administração Pública",
+    "Arte, Cultura e Religião",
+    "Direitos Humanos e Minorias"
+   ],
+   "situacao": {
+    "descricao": "Incluída em ordem do dia",
+    "data": "2026-11-20",
+    "casa": "Senado",
+    "norma": null
+   },
+   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2586419",
+   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175950",
+   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3049235",
+   "votacoes": []
   },
   "PL 5902/2023": {
    "chave": "PL 5902/2023",
@@ -4616,6 +4847,58 @@
     }
    ]
   },
+  "PL 6461/2019": {
+   "chave": "PL 6461/2019",
+   "slug": "pl-6461-2019",
+   "sigla": "PL",
+   "numero": 6461,
+   "ano": 2019,
+   "tipo": "Projeto de Lei",
+   "ementa": "Institui o Estatuto do Aprendiz e dá outras providências.",
+   "apelido": "Estatuto do Aprendiz",
+   "autores": [
+    "André de Paula",
+    "André Figueiredo",
+    "Arthur Lira",
+    "Augusto Coutinho",
+    "Baleia Rossi",
+    "Carlos Sampaio",
+    "Célio Studart",
+    "Daniel Almeida",
+    "Daniel Coelho",
+    "Eduardo Braide",
+    "Elmar Nascimento",
+    "Fred Costa",
+    "Jhonatan de Jesus",
+    "Joice Hasselmann",
+    "José Nelto",
+    "Mariana Carvalho",
+    "Pedro Cunha Lima",
+    "Pedro Lucas Fernandes",
+    "Rafael Motta",
+    "Raul Henry",
+    "Rose Modesto",
+    "Tabata Amaral",
+    "Tadeu Alencar",
+    "Toninho Wandscheer",
+    "Wellington Roberto"
+   ],
+   "data_apresentacao": "2019-12-16",
+   "casa_inicial": "Câmara",
+   "temas": [
+    "Trabalho e Emprego"
+   ],
+   "situacao": {
+    "descricao": "Incluída em ordem do dia",
+    "data": "2026-11-20",
+    "casa": "Senado",
+    "norma": null
+   },
+   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2234260",
+   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174061",
+   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1847157",
+   "votacoes": []
+  },
   "PL 7103/2014": {
    "chave": "PL 7103/2014",
    "slug": "pl-7103-2014",
@@ -4635,7 +4918,7 @@
    ],
    "situacao": {
     "descricao": "Aguardando Deliberação",
-    "data": "2026-11-17",
+    "data": "2026-11-23",
     "casa": "Câmara",
     "norma": null
    },
