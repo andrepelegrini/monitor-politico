@@ -18,7 +18,7 @@ from zoneinfo import ZoneInfo
 from jinja2 import Environment, PackageLoader, select_autoescape
 
 from monitor_politico import retrospectiva as modulo_retro
-from monitor_politico import comparar as modulo_comparar, feeds as modulo_feeds
+from monitor_politico import apoio as modulo_apoio, comparar as modulo_comparar, feeds as modulo_feeds
 from monitor_politico import areas as modulo_areas, estados as modulo_estados, legislatura as modulo_legislatura, mapa as modulo_mapa, metricas as modulo_metricas, painel, perfis, resumo
 from monitor_politico.lote_senado import ROTULOS_ELEITOS as ROTULOS_ELEITOS_SENADO
 from monitor_politico.models import Deputado, Senador
@@ -439,6 +439,12 @@ def construir(
             ),
             encoding="utf-8",
         )
+    (saida / "apoie.html").write_text(
+        env.get_template("apoie.html").render(
+            raiz=".", casa="apoie", caminho="apoie.html", pix_chave=modulo_apoio.PIX_CHAVE, pix_nome=modulo_apoio.PIX_NOME,
+        ),
+        encoding="utf-8",
+    )
     (saida / "entenda.html").write_text(
         env.get_template("entenda.html").render(
             raiz=".", casa=None, caminho="entenda.html", atualizado_congresso=atualizado_congresso,

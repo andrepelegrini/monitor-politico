@@ -49,6 +49,7 @@
         <a href="{{ raiz }}/deputados/index.html"{% if casa == "camara" %} aria-current="page"{% endif %}>Deputados</a>
         <a href="{{ raiz }}/senadores/index.html"{% if casa == "senado" %} aria-current="page"{% endif %}>Senadores</a>
         <span class="nav-breve" aria-disabled="true">Newsletter <span class="nav-breve-selo">Em breve</span></span>
+        <a href="{{ raiz }}/apoie.html"{% if casa == "apoie" %} aria-current="page"{% endif %}>Apoie</a>
       </nav>
       <div class="busca" id="busca" role="search" aria-label="Busca no site" data-raiz="{{ raiz }}">
         <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="6"/><path d="M13 13l5 5"/></svg>
@@ -69,6 +70,7 @@
       {% endblock %}
       {% if caminho != "entenda.html" %}<p><a href="{{ raiz }}/entenda.html">Entenda os dados</a>: de onde vêm, quando são atualizados e o que cada termo quer dizer.</p>{% endif %}
       {% block erro_rodape %}<p><strong>Encontrou um erro?</strong> {{ avisos.link_erro() }} ou escreva para <a href="mailto:{{ contato }}">{{ contato }}</a>. <a href="{{ raiz }}/entenda.html#privacidade">Privacidade</a>.</p>{% endblock %}
+      {% if caminho != "apoie.html" %}<p>O Na Galeria é gratuito e sem anúncios. <a href="{{ raiz }}/apoie.html">Apoie o site</a>.</p>{% endif %}
     </div>
   </footer>
   <script src="{{ raiz }}/static/busca.js" defer></script>

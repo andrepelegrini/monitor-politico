@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block titulo %}Apoie · Na Galeria{% endblock %}
+{% block descricao %}Ajude a manter o Na Galeria aberto, gratuito e sem anúncios, com um Pix de qualquer valor.{% endblock %}
+{% block conteudo %}
+<header class="ce-page-head">
+  <p class="ce-eyebrow">Apoie</p>
+  <h1>Ajude a manter o Na Galeria aberto</h1>
+  <p class="ce-deck">O site reúne votações, gastos e mandatos a partir de dados oficiais. Tudo é gratuito, sem anúncios e sem cadastro. O apoio é livre e não muda o que você vê aqui.</p>
+</header>
+<section class="ap-pix" aria-labelledby="ap-titulo">
+  <img class="ap-qr" src="{{ raiz }}/static/pix.svg" width="200" height="200" alt="QR Code do Pix para {{ pix_nome }}. A mesma chave está ao lado, em texto.">
+  <div class="ap-texto">
+    <h2 id="ap-titulo">Pix, de qualquer valor</h2>
+    <p>Leia o QR Code no app do seu banco ou copie a chave.</p>
+    <code id="ap-chave">{{ pix_chave }}</code>
+    <button type="button" id="ap-copiar" hidden>Copiar chave Pix</button>
+    <p id="ap-aviso" role="status"></p>
+    <p>Confira o nome antes de confirmar: <strong>{{ pix_nome }}</strong>.</p>
+  </div>
+</section>
+{% endblock %}
+{% block rodape %}<p>O pagamento é feito no app do seu banco.</p>{% endblock %}
+{% block scripts %}<script src="{{ raiz }}/static/apoie.js" defer></script>{% endblock %}
