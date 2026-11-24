@@ -1,5 +1,5 @@
 {
-  "coletado_em": "2026-11-23T21:00:39+00:00",
+  "coletado_em": "2026-11-24T20:03:35+00:00",
   "fonte": "https://dadosabertos.camara.leg.br/api/v2",
   "resumo": {
     "sexo": {
@@ -3888,24 +3888,6 @@
       "url_site": "https://www.camara.leg.br/deputados/204394"
     },
     {
-      "id": 74383,
-      "nome": "Giacobo",
-      "partido": "PSD",
-      "uf": "PR",
-      "url_foto": "https://www.camara.leg.br/internet/deputado/bandep/74383.jpg",
-      "situacao": "Exercício",
-      "condicao_eleitoral": "Titular",
-      "gabinete": {
-        "predio": "4",
-        "sala": "629",
-        "andar": "6",
-        "telefone": "3215-5629",
-        "email": "dep.giacobo@camara.leg.br"
-      },
-      "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/74383",
-      "url_site": "https://www.camara.leg.br/deputados/74383"
-    },
-    {
       "id": 204491,
       "nome": "Gilberto Abramo",
       "partido": "REPUBLICANOS",
@@ -4446,6 +4428,24 @@
       "url_site": "https://www.camara.leg.br/deputados/204436"
     },
     {
+      "id": 225846,
+      "nome": "Itamar Paim",
+      "partido": "PL",
+      "uf": "PR",
+      "url_foto": "https://www.camara.leg.br/internet/deputado/bandep/225846.jpg",
+      "situacao": "Exercício",
+      "condicao_eleitoral": "Suplente",
+      "gabinete": {
+        "predio": null,
+        "sala": null,
+        "andar": null,
+        "telefone": null,
+        "email": "dep.itamarpaim@camara.leg.br"
+      },
+      "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/225846",
+      "url_site": "https://www.camara.leg.br/deputados/225846"
+    },
+    {
       "id": 220696,
       "nome": "Ivoneide Caetano",
       "partido": "PT",
@@ -4796,10 +4796,10 @@
       "situacao": "Exercício",
       "condicao_eleitoral": "Titular",
       "gabinete": {
-        "predio": null,
-        "sala": null,
-        "andar": null,
-        "telefone": null,
+        "predio": "4",
+        "sala": "306",
+        "andar": "3",
+        "telefone": "3215-5306",
         "email": "dep.joseguimaraes@camara.leg.br"
       },
       "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/141470",

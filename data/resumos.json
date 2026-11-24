@@ -1086,6 +1086,21 @@
    "modelo": "claude-opus-5-5",
    "gerado_em": "2026-11-10T12:21:18+00:00"
   },
+  "PL 5542/2026": {
+   "titulo": "Regras mínimas para a tornozeleira eletrônica na Lei Maria da Penha",
+   "o_que_muda": "O projeto fixa regras mínimas para a monitoração eletrônica de agressores como medida protetiva, com alerta sonoro e luminoso no aparelho de quem é monitorado ao se aproximar da vítima. O perímetro de exclusão terá referência mínima de 100 metros, podendo ser maior ou diferente por decisão fundamentada do juiz. Permite, só excepcionalmente e com autorização judicial, um mecanismo de contenção física remota, que a vítima não poderá acionar. Entra em vigor 90 dias após a publicação.",
+   "quem_e_afetado": "Mulheres com medidas protetivas, pessoas monitoradas eletronicamente, juízes e órgãos de segurança pública e de monitoração dos Estados e do Distrito Federal.",
+   "uso": {
+    "modelo": "claude-sonnet-5-5",
+    "entrada": 9702,
+    "saida": 316
+   },
+   "fonte": "texto integral",
+   "entrada": "texto",
+   "fonte_hash": "709dd34954056fb1",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-24T20:06:21+00:00"
+  },
   "PL 5608/2023": {
    "titulo": "Programa e selo para empresas que empreguem mulheres com câncer de mama",
    "o_que_muda": "Cria o programa Empresa Rosa, para empresas que aderirem, com o objetivo de contratar e manter no emprego mulheres com diagnóstico ou em tratamento de câncer de mama. Essas empresas poderão oferecer trabalho remoto, jornada reduzida, horários flexíveis e estabilidade no emprego, sem redução de salário. Empresas com mais de 10 empregados podem receber o Selo Rosa, válido por 2 anos e renovável, com incentivos fiscais e de crédito definidos em regulamento. O selo pode ser retirado se a empresa descumprir a legislação trabalhista.",
