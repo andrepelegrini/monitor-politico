@@ -6,7 +6,7 @@ from monitor_politico.build import construir
 def test_crc_e_codigo_do_qr():
     assert apoio._crc16("123456789") == "29B1"  # valor de referência do CRC-16/CCITT-FALSE
     # static/pix.svg foi gerado deste texto. Se o código mudar, gere o desenho de novo.
-    assert apoio.codigo_pix() == "00020126580014br.gov.bcb.pix0136f71cf5e1-5b06-462d-a6cd-f925d7b6fd0f5204000053039865802BR5913CADENZIA TECH6009SAO PAULO62070503***6304E720"
+    assert apoio.codigo_pix() == "00020126580014br.gov.bcb.pix0136f71cf5e1-5b06-462d-a6cd-f925d7b6fd0f5204000053039865802BR5908CADENZIA6009SAO PAULO62070503***63046C31"
 
 
 def test_pagina_apoie_e_links(tmp_path, docs):  # noqa: F811

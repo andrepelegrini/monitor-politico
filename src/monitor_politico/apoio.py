@@ -7,7 +7,7 @@ O desenho fica em static/pix.svg. Se a chave, o nome ou a cidade mudarem, gere o
 from __future__ import annotations
 
 PIX_CHAVE = "f71cf5e1-5b06-462d-a6cd-f925d7b6fd0f"  # chave aleatória ligada ao CNPJ; nunca usar CPF
-PIX_NOME = "CADENZIA TECH"
+PIX_NOME = "CADENZIA"  # como o banco mostra a quem paga
 PIX_CIDADE = "SAO PAULO"  # o padrão pede texto sem acento
 
 
