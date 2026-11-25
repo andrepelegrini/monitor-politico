@@ -1,5 +1,5 @@
 {
-  "coletado_em": "2026-11-24T20:03:35+00:00",
+  "coletado_em": "2026-11-25T19:03:23+00:00",
   "fonte": "https://dadosabertos.camara.leg.br/api/v2",
   "resumo": {
     "sexo": {
@@ -4436,10 +4436,10 @@
       "situacao": "Exercício",
       "condicao_eleitoral": "Suplente",
       "gabinete": {
-        "predio": null,
-        "sala": null,
-        "andar": null,
-        "telefone": null,
+        "predio": "4",
+        "sala": "629",
+        "andar": "6",
+        "telefone": "3215-5629",
         "email": "dep.itamarpaim@camara.leg.br"
       },
       "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/225846",
@@ -6248,7 +6248,7 @@
     {
       "id": 204566,
       "nome": "Marreca Filho",
-      "partido": "PRD",
+      "partido": "PODE",
       "uf": "MA",
       "url_foto": "https://www.camara.leg.br/internet/deputado/bandep/204566.jpg",
       "situacao": "Exercício",

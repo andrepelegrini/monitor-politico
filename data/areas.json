@@ -3120,6 +3120,15 @@
    "modelo": "claude-sonnet-5-5",
    "gerado_em": "2026-11-18T17:46:31+00:00"
   },
+  "PL 1969/2022": {
+   "assuntos": [
+    "Crimes e penas",
+    "Polícias e segurança pública"
+   ],
+   "fonte_hash": "096dddfb1a0b5724",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-25T19:06:12+00:00"
+  },
   "PL 1971/2025": {
    "assuntos": [
     "Crianças e adolescentes",
@@ -3915,6 +3924,15 @@
    "fonte_hash": "295da27fc2225340",
    "modelo": "claude-sonnet-5-5",
    "gerado_em": "2026-11-18T17:46:48+00:00"
+  },
+  "PL 2819/2020": {
+   "assuntos": [
+    "SUS e atendimento",
+    "Desastres e calamidades"
+   ],
+   "fonte_hash": "31352ba50965ea9f",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-25T19:06:12+00:00"
   },
   "PL 2825/2022": {
    "assuntos": [
@@ -7231,6 +7249,14 @@
    "fonte_hash": "a99966c09b57d42c",
    "modelo": "claude-sonnet-5-5",
    "gerado_em": "2026-11-18T17:48:13+00:00"
+  },
+  "PL 7103/2014": {
+   "assuntos": [
+    "SUS e atendimento"
+   ],
+   "fonte_hash": "ee597d9bad8b0152",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-25T19:06:12+00:00"
   },
   "PL 7108/2017": {
    "assuntos": [
