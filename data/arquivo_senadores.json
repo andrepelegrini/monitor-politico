@@ -226,23 +226,6 @@
    "saiu_em": null
   },
   {
-   "id": 6369,
-   "nome": "Jussara Lima",
-   "partido": "PSD",
-   "uf": "PI",
-   "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador6369.jpg",
-   "condicao": "1º Suplente",
-   "bloco": "Bloco Parlamentar da Resistência Democrática",
-   "fim_mandato": "2031-01-31",
-   "email": "sen.jussaralima@senado.leg.br",
-   "telefones": [
-    "3303-5800"
-   ],
-   "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/6369",
-   "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/6369",
-   "saiu_em": "2026-11-20"
-  },
-  {
    "id": 5979,
    "nome": "Leila Barros",
    "partido": "PDT",
@@ -376,6 +359,23 @@
    "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/6363",
    "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/6363",
    "saiu_em": null
+  },
+  {
+   "id": 5016,
+   "nome": "Wellington Dias",
+   "partido": "PT",
+   "uf": "PI",
+   "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5016.jpg",
+   "condicao": "Titular",
+   "bloco": "Bloco Parlamentar Pelo Brasil",
+   "fim_mandato": "2031-01-31",
+   "email": "wellington.dias@senador.leg.br",
+   "telefones": [
+    "3303-5800"
+   ],
+   "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/5016",
+   "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5016",
+   "saiu_em": "2026-11-26"
   }
  ]
 }

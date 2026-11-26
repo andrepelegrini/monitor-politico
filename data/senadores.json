@@ -1,13 +1,13 @@
 {
-  "coletado_em": "2026-11-25T19:03:24+00:00",
+  "coletado_em": "2026-11-26T18:55:16+00:00",
   "fonte": "https://legis.senado.leg.br/dadosabertos",
   "resumo": {
     "sexo": {
-      "mulheres": 14,
-      "homens": 67,
+      "mulheres": 15,
+      "homens": 66,
       "mulheres_por_partido": {
+        "PSD": 4,
         "PSB": 3,
-        "PSD": 3,
         "PP": 2,
         "REPUBLICANOS": 2,
         "MDB": 1,
@@ -747,6 +747,20 @@
       "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/6342"
     },
     {
+      "id": 6369,
+      "nome": "Jussara Lima",
+      "partido": "PSD",
+      "uf": "PI",
+      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador6369.jpg",
+      "condicao": "1º Suplente",
+      "bloco": "Bloco Parlamentar da Resistência Democrática",
+      "fim_mandato": "2031-01-31",
+      "email": "sen.jussaralima@senado.leg.br",
+      "telefones": [],
+      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/6369",
+      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/6369"
+    },
+    {
       "id": 4811,
       "nome": "Laércio Oliveira",
       "partido": "PP",
@@ -1322,22 +1336,6 @@
       ],
       "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/5748",
       "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5748"
-    },
-    {
-      "id": 5016,
-      "nome": "Wellington Dias",
-      "partido": "PT",
-      "uf": "PI",
-      "url_foto": "https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5016.jpg",
-      "condicao": "Titular",
-      "bloco": "Bloco Parlamentar Pelo Brasil",
-      "fim_mandato": "2031-01-31",
-      "email": "wellington.dias@senador.leg.br",
-      "telefones": [
-        "3303-5800"
-      ],
-      "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/5016",
-      "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5016"
     },
     {
       "id": 1173,

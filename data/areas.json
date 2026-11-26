@@ -3629,6 +3629,15 @@
    "modelo": "claude-sonnet-5-5",
    "gerado_em": "2026-11-18T17:46:40+00:00"
   },
+  "PL 2559/2022": {
+   "assuntos": [
+    "Crimes e penas",
+    "Justiça e tribunais"
+   ],
+   "fonte_hash": "b0a1b5e8bebceaed",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-26T18:57:20+00:00"
+  },
   "PL 2562/2025": {
    "assuntos": [
     "Homenagens e datas",
@@ -6014,6 +6023,14 @@
    "modelo": "claude-sonnet-5-5",
    "gerado_em": "2026-11-18T17:47:37+00:00"
   },
+  "PL 479/2015": {
+   "assuntos": [
+    "Escolas e educação básica"
+   ],
+   "fonte_hash": "2a891f7ed39b8668",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-26T18:57:20+00:00"
+  },
   "PL 481/2025": {
    "assuntos": [
     "Mulheres"
@@ -6071,6 +6088,16 @@
    "fonte_hash": "eb4b8cae7fd9c111",
    "modelo": "claude-sonnet-5-5",
    "gerado_em": "2026-11-18T17:47:37+00:00"
+  },
+  "PL 4887/2023": {
+   "assuntos": [
+    "Escolas e educação básica",
+    "Crianças e adolescentes",
+    "Crimes e penas"
+   ],
+   "fonte_hash": "59c24267c7e0751d",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-26T18:57:20+00:00"
   },
   "PL 490/2007": {
    "assuntos": [
@@ -6467,6 +6494,16 @@
    "fonte_hash": "92df227ab9e55b2f",
    "modelo": "claude-sonnet-5-5",
    "gerado_em": "2026-11-18T17:47:46+00:00"
+  },
+  "PL 5542/2026": {
+   "assuntos": [
+    "Mulheres",
+    "Crimes e penas",
+    "Polícias e segurança pública"
+   ],
+   "fonte_hash": "bb0d9406abcd15af",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-26T18:57:20+00:00"
   },
   "PL 5543/2020": {
    "assuntos": [
