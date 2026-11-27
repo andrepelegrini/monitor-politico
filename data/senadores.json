@@ -1,5 +1,5 @@
 {
-  "coletado_em": "2026-11-26T18:55:16+00:00",
+  "coletado_em": "2026-11-27T18:47:19+00:00",
   "fonte": "https://legis.senado.leg.br/dadosabertos",
   "resumo": {
     "sexo": {
@@ -756,7 +756,9 @@
       "bloco": "Bloco Parlamentar da Resistência Democrática",
       "fim_mandato": "2031-01-31",
       "email": "sen.jussaralima@senado.leg.br",
-      "telefones": [],
+      "telefones": [
+        "3303-5800"
+      ],
       "uri_api": "https://legis.senado.leg.br/dadosabertos/senador/6369",
       "url_site": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/6369"
     },

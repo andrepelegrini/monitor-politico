@@ -1,5 +1,5 @@
 {
-  "coletado_em": "2026-11-26T18:55:14+00:00",
+  "coletado_em": "2026-11-27T18:47:17+00:00",
   "fonte": "https://dadosabertos.camara.leg.br/api/v2",
   "resumo": {
     "sexo": {
@@ -4392,6 +4392,24 @@
       "url_site": "https://www.camara.leg.br/deputados/204508"
     },
     {
+      "id": 74295,
+      "nome": "Inácio Arruda",
+      "partido": "PCdoB",
+      "uf": "CE",
+      "url_foto": "https://www.camara.leg.br/internet/deputado/bandep/74295.jpg",
+      "situacao": "Exercício",
+      "condicao_eleitoral": "Suplente",
+      "gabinete": {
+        "predio": "4",
+        "sala": "306",
+        "andar": "3",
+        "telefone": "3215-5306",
+        "email": "dep.inacioarruda@camara.leg.br"
+      },
+      "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/74295",
+      "url_site": "https://www.camara.leg.br/deputados/74295"
+    },
+    {
       "id": 98615,
       "nome": "Ismael",
       "partido": "PL",
@@ -4786,24 +4804,6 @@
       },
       "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/141464",
       "url_site": "https://www.camara.leg.br/deputados/141464"
-    },
-    {
-      "id": 141470,
-      "nome": "José Guimarães",
-      "partido": "PT",
-      "uf": "CE",
-      "url_foto": "https://www.camara.leg.br/internet/deputado/bandep/141470.jpg",
-      "situacao": "Exercício",
-      "condicao_eleitoral": "Titular",
-      "gabinete": {
-        "predio": "4",
-        "sala": "306",
-        "andar": "3",
-        "telefone": "3215-5306",
-        "email": "dep.joseguimaraes@camara.leg.br"
-      },
-      "uri_api": "https://dadosabertos.camara.leg.br/api/v2/deputados/141470",
-      "url_site": "https://www.camara.leg.br/deputados/141470"
     },
     {
       "id": 204472,

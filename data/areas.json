@@ -1120,6 +1120,15 @@
    "modelo": "claude-sonnet-5-5",
    "gerado_em": "2026-11-18T17:45:40+00:00"
   },
+  "PDL 235/2025": {
+   "assuntos": [
+    "Acordos internacionais",
+    "Justiça e tribunais"
+   ],
+   "fonte_hash": "6cdff339b85a1ff7",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-27T18:48:58+00:00"
+  },
   "PDL 242/2025": {
    "assuntos": [
     "Acordos internacionais",
@@ -1438,6 +1447,16 @@
    "fonte_hash": "f1edbe597c63ec60",
    "modelo": "claude-sonnet-5-5",
    "gerado_em": "2026-11-18T17:45:48+00:00"
+  },
+  "PDL 366/2025": {
+   "assuntos": [
+    "Acordos internacionais",
+    "Crimes e penas",
+    "Justiça e tribunais"
+   ],
+   "fonte_hash": "ae70864b00ecd7d4",
+   "modelo": "claude-sonnet-5-5",
+   "gerado_em": "2026-11-27T18:48:58+00:00"
   },
   "PDL 380/2021": {
    "assuntos": [

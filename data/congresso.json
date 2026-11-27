@@ -1,140 +1,11 @@
 {
- "coletado_em": "2026-11-26T18:57:07+00:00",
+ "coletado_em": "2026-11-27T18:48:46+00:00",
  "periodo": {
-  "votacoes_desde": "2026-10-27",
-  "pauta_ate": "2026-12-02"
+  "votacoes_desde": "2026-10-28",
+  "pauta_ate": "2026-12-03"
  },
- "pauta": [
-  {
-   "casa": "Câmara",
-   "data_hora": "2026-11-26T11:08",
-   "sessao": "Sessão Deliberativa",
-   "itens": [
-    {
-     "chave": "PL 724/2003",
-     "ementa": "Altera a Lei nº 9.503, de 23 de setembro de 1997, que \"Institui o Código de Trânsito Brasileiro\", para dispor sobre circulação de veículos de tração e crimes de trânsito.",
-     "fase": "Discussão"
-    },
-    {
-     "chave": "PL 294/2015",
-     "ementa": "Altera as Leis nos 8.212 e 8.213, ambas de 24 de julho de 1991, que dispõem sobre os Planos de Custeio e de Benefícios da Previdência Social, para incluir o ministro de confissão religiosa de matriz africana como segurado individual.",
-     "fase": "Discussão"
-    },
-    {
-     "chave": "PL 3944/2023",
-     "ementa": "Altera a Lei nº 12.288, de 20 de julho de 2010, para reconhecer os impactos desproporcionais da crise climática na saúde da população negra, especialmente sobre mulheres e outras pessoas em áreas mais afetadas.",
-     "fase": "Discussão"
-    },
-    {
-     "chave": "PL 3965/2024",
-     "ementa": "Institui o feriado escolar e o dia nacional dos professores, professoras e profissionais de educação",
-     "fase": "Discussão"
-    },
-    {
-     "chave": "PDL 235/2025",
-     "ementa": "Aprova o texto do Tratado entre a República Federativa do Brasil e a República Cooperativa da Guiana sobre Cooperação Jurídica Internacional em Matéria Civil, assinado em Georgetown, em 6 de maio de 2022.",
-     "fase": "Discussão"
-    },
-    {
-     "chave": "PDL 366/2025",
-     "ementa": "Aprova o texto do Tratado entre a República Federativa do Brasil e a República Cooperativa da Guiana sobre Auxílio Jurídico Mútuo em Matéria Penal, assinado em Georgetown, em 6 de maio de 2022.",
-     "fase": "Discussão"
-    }
-   ]
-  }
- ],
+ "pauta": [],
  "proposicoes": {
-  "MPV 1375/2026": {
-   "chave": "MPV 1375/2026",
-   "slug": "mpv-1375-2026",
-   "sigla": "MPV",
-   "numero": 1375,
-   "ano": 2026,
-   "tipo": "Medida Provisória",
-   "ementa": "Amplia o rol de Carreiras e Planos Especiais de Cargos cujos ocupantes fazem jus à indenização de que trata a Lei nº 12.855, de 2 de setembro de 2013, altera a Lei nº 15.367, de 30 de março de 2026, para admitir que as pessoas de que tratam o art. 6º da Emenda Constitucional nº 79, de 27 de maio de 2014, e o art. 6º da Emenda Constitucional nº 98, de 6 de dezembro de 2017, exerçam o direito de opção de que tratam os art. 52 a art. 54 da referida Lei, e transforma cargos efetivos vagos.",
-   "apelido": "Adicional de fronteira a servidores que atuam em localidades estratégicas",
-   "autores": [
-    "Poder Executivo"
-   ],
-   "data_apresentacao": "2026-07-03",
-   "casa_inicial": "Câmara",
-   "temas": [
-    "Administração Pública",
-    "Defesa e Segurança",
-    "Trabalho e Emprego"
-   ],
-   "situacao": {
-    "descricao": "Aguardando Apreciação pelo Senado Federal",
-    "data": "2026-11-11",
-    "casa": "Câmara",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2637101",
-   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/174944",
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3157732",
-   "votacoes": [
-    {
-     "id": "2637101-40",
-     "casa": "Câmara",
-     "data_hora": "2026-10-27T21:34:40",
-     "descricao": "Aprovado, em apreciação preliminar, o Parecer da Comissão Mista acerca dos pressupostos constitucionais de relevância e urgência e de sua adequação financeira e orçamentária, nos termos do artigo 8º da Resolução nº 01, de 2002-CN.",
-     "resultado": "aprovada",
-     "procedimento": true,
-     "nominal": false,
-     "placar": null,
-     "orientacoes": null,
-     "votos": []
-    },
-    {
-     "id": "2637101-42",
-     "casa": "Câmara",
-     "data_hora": "2026-10-27T21:41:06",
-     "descricao": "Aprovada a Medida Provisória nº 1.375, de 2026, na forma do Projeto de Lei de Conversão, ressalvado o destaque.",
-     "resultado": "aprovada",
-     "procedimento": false,
-     "nominal": false,
-     "placar": null,
-     "orientacoes": null,
-     "votos": []
-    },
-    {
-     "id": "2637101-44",
-     "casa": "Câmara",
-     "data_hora": "2026-10-27T21:43:13",
-     "descricao": "Mantido o texto.",
-     "resultado": null,
-     "procedimento": true,
-     "nominal": false,
-     "placar": null,
-     "orientacoes": null,
-     "votos": []
-    },
-    {
-     "id": "2637101-46",
-     "casa": "Câmara",
-     "data_hora": "2026-10-27T21:43:44",
-     "descricao": "Aprovada a Emenda de Redação nº 1.",
-     "resultado": "aprovada",
-     "procedimento": true,
-     "nominal": false,
-     "placar": null,
-     "orientacoes": null,
-     "votos": []
-    },
-    {
-     "id": "2637101-50",
-     "casa": "Câmara",
-     "data_hora": "2026-10-27T21:44:49",
-     "descricao": "Aprovada a Redação Final.",
-     "resultado": "aprovada",
-     "procedimento": true,
-     "nominal": false,
-     "placar": null,
-     "orientacoes": null,
-     "votos": []
-    }
-   ]
-  },
   "MPV 1376/2026": {
    "chave": "MPV 1376/2026",
    "slug": "mpv-1376-2026",
@@ -626,7 +497,7 @@
     "Relações Internacionais e Comércio Exterior"
    ],
    "situacao": {
-    "descricao": "Aguardando Envio ao Senado Federal",
+    "descricao": "Aguardando Autógrafos na Mesa",
     "data": "2026-11-26",
     "casa": "Câmara",
     "norma": null
@@ -634,7 +505,32 @@
    "url_camara": "https://www.camara.leg.br/propostas-legislativas/2516578",
    "url_senado": null,
    "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2918125",
-   "votacoes": []
+   "votacoes": [
+    {
+     "id": "2516578-33",
+     "casa": "Câmara",
+     "data_hora": "2026-11-26T11:44:26",
+     "descricao": "Aprovado o Projeto de Decreto Legislativo nº 235, de 2025.",
+     "resultado": "aprovada",
+     "procedimento": false,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    },
+    {
+     "id": "2516578-35",
+     "casa": "Câmara",
+     "data_hora": "2026-11-26T11:44:52",
+     "descricao": "Aprovada a Redação Final assinada pelo Dep. Ricardo Ayres (Republicanos/TO).",
+     "resultado": "aprovada",
+     "procedimento": true,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    }
+   ]
   },
   "PDL 274/2026": {
    "chave": "PDL 274/2026",
@@ -729,7 +625,32 @@
    "url_camara": "https://www.camara.leg.br/propostas-legislativas/2532113",
    "url_senado": null,
    "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2949443",
-   "votacoes": []
+   "votacoes": [
+    {
+     "id": "2532113-37",
+     "casa": "Câmara",
+     "data_hora": "2026-11-26T11:51:47",
+     "descricao": "Aprovada a Subemenda Substitutiva ao Projeto de Decreto Legislativo nº 366, de 2025, adotada pelo relator da Comissão de Constituição e Justiça e de Cidadania.",
+     "resultado": "aprovada",
+     "procedimento": false,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    },
+    {
+     "id": "2532113-40",
+     "casa": "Câmara",
+     "data_hora": "2026-11-26T11:53:03",
+     "descricao": "Aprovada a Redação Final assinada pelo Dep. Afonso Florence (PT-BA).",
+     "resultado": "aprovada",
+     "procedimento": true,
+     "nominal": false,
+     "placar": null,
+     "orientacoes": null,
+     "votos": []
+    }
+   ]
   },
   "PDL 557/2026": {
    "chave": "PDL 557/2026",
@@ -3282,7 +3203,7 @@
     "Homenagens e Datas Comemorativas"
    ],
    "situacao": {
-    "descricao": "Aguardando Envio ao Senado Federal",
+    "descricao": "Aguardando Autógrafos na Mesa",
     "data": "2026-11-24",
     "casa": "Câmara",
     "norma": null
@@ -6676,7 +6597,7 @@
     "Saúde"
    ],
    "situacao": {
-    "descricao": "Aguardando Envio ao Senado Federal",
+    "descricao": "Aguardando Autógrafos na Mesa",
     "data": "2026-11-24",
     "casa": "Câmara",
     "norma": null
@@ -6751,34 +6672,6 @@
      "votos": []
     }
    ]
-  },
-  "PL 294/2015": {
-   "chave": "PL 294/2015",
-   "slug": "pl-294-2015",
-   "sigla": "PL",
-   "numero": 294,
-   "ano": 2015,
-   "tipo": "Projeto de Lei",
-   "ementa": "Altera as Leis nos 8.212 e 8.213, ambas de 24 de julho de 1991, que dispõem sobre os Planos de Custeio e de Benefícios da Previdência Social, para incluir o ministro de confissão religiosa de matriz africana como segurado individual.",
-   "apelido": null,
-   "autores": [
-    "Valmir Assunção"
-   ],
-   "data_apresentacao": "2015-02-10",
-   "casa_inicial": "Câmara",
-   "temas": [
-    "Previdência e Assistência Social"
-   ],
-   "situacao": {
-    "descricao": "Aguardando Deliberação",
-    "data": "2026-11-26",
-    "casa": "Câmara",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/946429",
-   "url_senado": null,
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1299646",
-   "votacoes": []
   },
   "PL 3099/2019": {
    "chave": "PL 3099/2019",
@@ -7009,65 +6902,6 @@
     }
    ]
   },
-  "PL 3944/2023": {
-   "chave": "PL 3944/2023",
-   "slug": "pl-3944-2023",
-   "sigla": "PL",
-   "numero": 3944,
-   "ano": 2023,
-   "tipo": "Projeto de Lei",
-   "ementa": "Altera a Lei nº 12.288, de 20 de julho de 2010, para reconhecer os impactos desproporcionais da crise climática na saúde da população negra, especialmente sobre mulheres e outras pessoas em áreas mais afetadas.",
-   "apelido": null,
-   "autores": [
-    "Erika Hilton"
-   ],
-   "data_apresentacao": "2023-08-16",
-   "casa_inicial": "Câmara",
-   "temas": [
-    "Direitos Humanos e Minorias",
-    "Meio Ambiente e Desenvolvimento Sustentável"
-   ],
-   "situacao": {
-    "descricao": "Aguardando Deliberação",
-    "data": "2026-11-26",
-    "casa": "Câmara",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2380144",
-   "url_senado": null,
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2313609",
-   "votacoes": []
-  },
-  "PL 3965/2024": {
-   "chave": "PL 3965/2024",
-   "slug": "pl-3965-2024",
-   "sigla": "PL",
-   "numero": 3965,
-   "ano": 2024,
-   "tipo": "Projeto de Lei",
-   "ementa": "Institui o feriado escolar e o dia nacional dos professores, professoras e profissionais de educação",
-   "apelido": null,
-   "autores": [
-    "Tarcísio Motta"
-   ],
-   "data_apresentacao": "2024-10-15",
-   "casa_inicial": "Câmara",
-   "temas": [
-    "Educação",
-    "Homenagens e Datas Comemorativas",
-    "Trabalho e Emprego"
-   ],
-   "situacao": {
-    "descricao": "Aguardando Deliberação",
-    "data": "2026-11-26",
-    "casa": "Câmara",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2462635",
-   "url_senado": null,
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2485562",
-   "votacoes": []
-  },
   "PL 4159/2025": {
    "chave": "PL 4159/2025",
    "slug": "pl-4159-2025",
@@ -7199,7 +7033,7 @@
    ],
    "situacao": {
     "descricao": "Aguardando Encaminhamento",
-    "data": "2026-11-24",
+    "data": "2026-11-26",
     "casa": "Câmara",
     "norma": null
    },
@@ -7294,8 +7128,8 @@
     "Política, Partidos e Eleições"
    ],
    "situacao": {
-    "descricao": "Recusado",
-    "data": "2026-11-24",
+    "descricao": "Aguardando Encaminhamento",
+    "data": "2026-11-26",
     "casa": "Câmara",
     "norma": null
    },
@@ -10568,61 +10402,6 @@
     }
    ]
   },
-  "PL 5239/2025": {
-   "chave": "PL 5239/2025",
-   "slug": "pl-5239-2025",
-   "sigla": "PL",
-   "numero": 5239,
-   "ano": 2025,
-   "tipo": "Projeto de Lei",
-   "ementa": "Dispõe sobre a viabilização da primeira consulta ginecológica a partir dos 10 anos de idade no âmbito do Sistema Único de Saúde – SUS, visando à promoção da saúde reprodutiva e preventiva de meninas.",
-   "apelido": null,
-   "autores": [
-    "Adriana Ventura",
-    "Greyce Elias"
-   ],
-   "data_apresentacao": "2025-10-16",
-   "casa_inicial": "Câmara",
-   "temas": [
-    "Direitos Humanos e Minorias",
-    "Saúde"
-   ],
-   "situacao": {
-    "descricao": "Aguardando despacho",
-    "data": "2026-11-03",
-    "casa": "Senado",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2572799",
-   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/176160",
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3023773",
-   "votacoes": [
-    {
-     "id": "2572799-46",
-     "casa": "Câmara",
-     "data_hora": "2026-10-27T22:07:24",
-     "descricao": "Aprovado o Substitutivo ao Projeto de Lei nº 5.239, de 2025, adotado pela relatora da Comissão de Saúde.",
-     "resultado": "aprovada",
-     "procedimento": false,
-     "nominal": false,
-     "placar": null,
-     "orientacoes": null,
-     "votos": []
-    },
-    {
-     "id": "2572799-49",
-     "casa": "Câmara",
-     "data_hora": "2026-10-27T22:08:21",
-     "descricao": "Aprovada a Redação Final assinada pela relatora, Dep. Flávia Morais (MDB-GO).",
-     "resultado": "aprovada",
-     "procedimento": true,
-     "nominal": false,
-     "placar": null,
-     "orientacoes": null,
-     "votos": []
-    }
-   ]
-  },
   "PL 5542/2026": {
    "chave": "PL 5542/2026",
    "slug": "pl-5542-2026",
@@ -10643,7 +10422,7 @@
     "Direito Penal e Processual Penal"
    ],
    "situacao": {
-    "descricao": "Aguardando Envio ao Senado Federal",
+    "descricao": "Aguardando Autógrafos na Mesa",
     "data": "2026-11-25",
     "casa": "Câmara",
     "norma": null
@@ -10678,60 +10457,6 @@
     }
    ]
   },
-  "PL 5649/2026": {
-   "chave": "PL 5649/2026",
-   "slug": "pl-5649-2026",
-   "sigla": "PL",
-   "numero": 5649,
-   "ano": 2026,
-   "tipo": "Projeto de Lei",
-   "ementa": "Autoriza a concessão de apoio financeiro aos produtores independentes de cana-de-açúcar da Região Nordeste no exercício de 2026 e a destinação de recursos para linhas de financiamento reembolsável destinadas à renovação de frota e altera as Leis nºs 9.818, de 23 de agosto de 1999, 11.540, de 12 de novembro de 2007, e 14.947, de 2 de agosto de 2024.",
-   "apelido": null,
-   "autores": [
-    "Augusto Coutinho"
-   ],
-   "data_apresentacao": "2026-10-22",
-   "casa_inicial": "Câmara",
-   "temas": [
-    "Finanças Públicas e Orçamento",
-    "Economia"
-   ],
-   "situacao": {
-    "descricao": "Transformado em Norma Jurídica",
-    "data": "2026-11-17",
-    "casa": "Câmara",
-    "norma": "Lei nº 15.528 de 11/11/2026"
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/2648807",
-   "url_senado": "https://www25.senado.leg.br/web/atividade/materias/-/materia/176118",
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3185833",
-   "votacoes": [
-    {
-     "id": "2648807-19",
-     "casa": "Câmara",
-     "data_hora": "2026-10-27T21:03:30",
-     "descricao": "Aprovado o Substitutivo ao Projeto de Lei nº 5.649, de 2026, adotado pelo relator da Comissão de Ciência, Tecnologia e Inovação.",
-     "resultado": "aprovada",
-     "procedimento": false,
-     "nominal": false,
-     "placar": null,
-     "orientacoes": null,
-     "votos": []
-    },
-    {
-     "id": "2648807-22",
-     "casa": "Câmara",
-     "data_hora": "2026-10-27T21:04:56",
-     "descricao": "Aprovada a Redação Final assinada pelo relator, Dep. Lula da Fonte (PP/PE).",
-     "resultado": "aprovada",
-     "procedimento": true,
-     "nominal": false,
-     "placar": null,
-     "orientacoes": null,
-     "votos": []
-    }
-   ]
-  },
   "PL 565/2020": {
    "chave": "PL 565/2020",
    "slug": "pl-565-2020",
@@ -10751,8 +10476,8 @@
     "Saúde"
    ],
    "situacao": {
-    "descricao": "Recusado",
-    "data": "2026-11-24",
+    "descricao": "Aguardando Encaminhamento",
+    "data": "2026-11-26",
     "casa": "Câmara",
     "norma": null
    },
@@ -10914,8 +10639,8 @@
     "Direitos Humanos e Minorias"
    ],
    "situacao": {
-    "descricao": "Aguardando Designação de Relator(a)",
-    "data": "2026-11-06",
+    "descricao": "Aguardando Deliberação",
+    "data": "2026-11-27",
     "casa": "Câmara",
     "norma": null
    },
@@ -11013,34 +10738,6 @@
      "votos": []
     }
    ]
-  },
-  "PL 724/2003": {
-   "chave": "PL 724/2003",
-   "slug": "pl-724-2003",
-   "sigla": "PL",
-   "numero": 724,
-   "ano": 2003,
-   "tipo": "Projeto de Lei",
-   "ementa": "Altera a Lei nº 9.503, de 23 de setembro de 1997, que \"Institui o Código de Trânsito Brasileiro\", para dispor sobre circulação de veículos de tração e crimes de trânsito.",
-   "apelido": null,
-   "autores": [
-    "Milton Monti"
-   ],
-   "data_apresentacao": "2003-04-09",
-   "casa_inicial": "Câmara",
-   "temas": [
-    "Viação, Transporte e Mobilidade"
-   ],
-   "situacao": {
-    "descricao": "Aguardando Deliberação",
-    "data": "2026-11-26",
-    "casa": "Câmara",
-    "norma": null
-   },
-   "url_camara": "https://www.camara.leg.br/propostas-legislativas/110593",
-   "url_senado": null,
-   "url_inteiro_teor": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=124587",
-   "votacoes": []
   },
   "PLP 109/2025": {
    "chave": "PLP 109/2025",
